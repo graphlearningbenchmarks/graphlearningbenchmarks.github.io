@@ -1,0 +1,6633 @@
+---
+title: Local Virtual Nodes for Alleviating Over-Squashing in Graph Neural Networks
+arxiv_id: '2508.20597'
+source_url: ''
+authors:
+- name: Tugrul Hasan Karabulut
+  orcid: null
+  s2_author_id: '2346545000'
+  s2_url: null
+- name: Inci M. Baytas
+  orcid: null
+  s2_author_id: '2366891257'
+  s2_url: null
+published_date: Aug 28, 2025
+published_date_iso: '2025-08-28'
+published_venue: ''
+published_conference: ''
+published_conference_short: ''
+published_conference_slug: ''
+abstract: Over-squashing is a challenge in training graph neural networks for tasks
+  involving long-range dependencies. In such tasks, a GNN's receptive field should
+  be large enough to enable communication between distant nodes. However, gathering
+  information from a wide range of neighborhoods and squashing its content into fixed-size
+  node representations makes message-passing vulnerable to bottlenecks. Graph rewiring
+  and adding virtual nodes are commonly studied remedies that create additional pathways
+  around bottlenecks to mitigate over-squashing. However, these techniques alter the
+  input graph's global topology and disrupt the domain knowledge encoded in the original
+  graph structure, both of which could be essential to specific tasks and domains.
+  This study presents Local Virtual Nodes (LVN) with trainable embeddings to alleviate
+  the effects of over-squashing without significantly corrupting the global structure
+  of the input graph. The position of the LVNs is determined by the node centrality,
+  which indicates the existence of potential bottlenecks. Thus, the proposed approach
+  aims to improve the connectivity in the regions with likely bottlenecks. Furthermore,
+  trainable LVN embeddings shared across selected central regions facilitate communication
+  between distant nodes without adding more layers. Extensive experiments on benchmark
+  datasets demonstrate that LVNs can enhance structural connectivity and significantly
+  improve performance on graph and node classification tasks. The code can be found
+  at https://github.com/ALLab-Boun/LVN/.
+codebase_url: https://github.com/ALLab-Boun/LVN
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: method
+proposed_models:
+- LVN
+mrr: 0.007
+adjusted_mrr: 0.007
+mrr_dataset_count: 10
+benchmark_categories:
+- Classic
+- TU Dortmund
+- Heterophilic Graphs
+benchmark_coverage:
+- benchmark: Classic
+  benchmark_slug: classic
+  evaluated: 2
+  total: 12
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 5
+  total: 11
+- benchmark: Heterophilic Graphs
+  benchmark_slug: heterophilic-graphs
+  evaluated: 3
+  total: 13
+task_categories:
+- graph_classification
+- node_classification
+experiment_scopes:
+- graph-level
+- node-level
+results:
+- &id004
+  dataset: COLLAB
+  rows:
+  - model: ORC
+    model_key: msh-gnn
+    model_plain: ORC
+    value: 0.964
+    std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.964
+    sort_std: 0.007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ORC
+    model_key: cocn
+    model_plain: ORC
+    value: 0.8722
+    std: 0.0013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.18480'
+    title: Scalable Graph Compressed Convolutions
+    date: Jul 26, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-26'
+    venue: arXiv.org
+    codebase_url: https://github.com/sunjss/CoCN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: use the one-hot encoding of node degrees as node features
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8722
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ORC
+    model_key: n^2
+    model_plain: ORC
+    value: 0.867
+    std: 0.016
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.867
+    sort_std: 0.016
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.48556
+    std: 0.02339
+    paper_value: 0.48556
+    paper_std: 0.02339
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.826
+    at_pub_std: 0.022
+    at_pub_source_arxiv: '2406.11714'
+    at_pub_source_title: Scalable Expressiveness through Preprocessed Graph Perturbations
+    at_pub_source_date_iso: '2024-06-17'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.34043999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.826
+    true_std: 0.022
+    value_gap_source_arxiv: '2406.11714'
+    value_gap_source_title: Scalable Expressiveness through Preprocessed Graph Perturbations
+    value_gap_source_is_current_paper: false
+    value_gap: 0.34043999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.826
+    sort_std: 0.022
+    global_rank: 28
+    paper_rank: 358
+    rank_delta: 330
+    rank_delta_abs: 330
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Scalable Expressiveness through Preprocessed Graph Perturbations
+    comparison_source_arxiv: '2406.11714'
+    is_best: false
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.48772
+    std: 0.02308
+    paper_value: 0.48772
+    paper_std: 0.02308
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.76806
+    at_pub_std: 0.00451
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.28034
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.76806
+    true_std: 0.00451
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.28034
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.76806
+    sort_std: 0.00451
+    global_rank: 219
+    paper_rank: 357
+    rank_delta: 138
+    rank_delta_abs: 138
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.46548
+    std: 0.02576
+    paper_value: 0.46548
+    paper_std: 0.02576
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7648
+    at_pub_std: 0.00388
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.29932000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7648
+    true_std: 0.00388
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.29932000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7648
+    sort_std: 0.00388
+    global_rank: 225
+    paper_rank: 369
+    rank_delta: 144
+    rank_delta_abs: 144
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: Last layer FA
+    model_key: last layer fa
+    model_plain: Last layer FA
+    value: 0.5114
+    std: 0.01107
+    paper_value: 0.5114
+    paper_std: 0.01107
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: alon2021on
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.75434
+    at_pub_std: 0.00491
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.24294000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.75434
+    true_std: 0.00491
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.24294000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.75434
+    sort_std: 0.00491
+    global_rank: 245
+    paper_rank: 356
+    rank_delta: 111
+    rank_delta_abs: 111
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: LASER
+    model_key: laser
+    model_plain: LASER
+    value: 0.7188
+    std: 0.00567
+    paper_value: 0.7188
+    paper_std: 0.00567
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: barbero2024localityaware
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.70923
+    at_pub_std: 0.02538
+    at_pub_source_arxiv: '2310.01668'
+    at_pub_source_title: Locality-Aware Graph Rewiring in GNNs
+    at_pub_source_date_iso: '2023-10-02'
+    at_pub_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.009569999999999967
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7188
+    true_std: 0.00567
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7188
+    sort_std: 0.00567
+    global_rank: 286
+    paper_rank: 286
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.7152
+    std: 0.00661
+    paper_value: 0.7152
+    paper_std: 0.00661
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: trainable embeddings to LVNs shared across selected central
+      regions
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7152
+    true_std: 0.00661
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7152
+    sort_std: 0.00661
+    global_rank: 288
+    paper_rank: 288
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.6806
+    std: 0.00616
+    paper_value: 0.6806
+    paper_std: 0.00616
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6806
+    true_std: 0.00616
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6806
+    sort_std: 0.00616
+    global_rank: 312
+    paper_rank: 312
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.3292
+    std: 0.05231
+    paper_value: 0.3292
+    paper_std: 0.05231
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5751
+    at_pub_std: 0.059
+    at_pub_source_arxiv: '2206.07369'
+    at_pub_source_title: 'DiffWire: Inductive Graph Rewiring via the Lovász Bound'
+    at_pub_source_date_iso: '2022-06-15'
+    at_pub_source_date_label: LoG 2022
+    value_gap_source_date_iso: '2022-06-15'
+    value_gap_source_date_label: LoG 2022
+    gap_vs_at_pub: 0.24589999999999995
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5751
+    true_std: 0.059
+    value_gap_source_arxiv: '2206.07369'
+    value_gap_source_title: 'DiffWire: Inductive Graph Rewiring via the Lovász Bound'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.24589999999999995
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5751
+    sort_std: 0.059
+    global_rank: 345
+    paper_rank: 384
+    rank_delta: 39
+    rank_delta_abs: 39
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'DiffWire: Inductive Graph Rewiring via the Lovász Bound'
+    comparison_source_arxiv: '2206.07369'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id010
+  dataset: Chameleon
+  rows:
+  - model: Random
+    model_key: hetero-s (gat 8-layer)
+    model_plain: Random
+    value: 0.8693
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2406.12539'
+    title: 'The Heterophilic Snowflake Hypothesis: Training and Empowering GNNs for
+      Heterophilic Graphs'
+    date: Jun 18, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-18'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/bingreeky/HeteroSnoH
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8693
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Random
+    model_key: trans.conv+cna
+    model_plain: Random
+    value: 0.8586
+    std: 0.018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2412.04064'
+    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
+    date: Dec 5, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-05'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/ml-research/cna_modules
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8586
+    sort_std: 0.018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Random
+    model_key: gat
+    model_plain: Random
+    value: 0.856
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.12539'
+    title: 'The Heterophilic Snowflake Hypothesis: Training and Empowering GNNs for
+      Heterophilic Graphs'
+    date: Jun 18, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-18'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/bingreeky/HeteroSnoH
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.856
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6112
+    std: 0.0046
+    paper_value: 0.6112
+    paper_std: 0.0046
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7033
+    at_pub_std: null
+    at_pub_source_arxiv: '2401.09125'
+    at_pub_source_title: Understanding Heterophily for Graph Neural Networks
+    at_pub_source_date_iso: '2024-01-17'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-01-17'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.09210000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7033
+    true_std: null
+    value_gap_source_arxiv: '2401.09125'
+    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09210000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7033
+    sort_std: null
+    global_rank: 60
+    paper_rank: 141
+    rank_delta: 81
+    rank_delta_abs: 81
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Understanding Heterophily for Graph Neural Networks
+    comparison_source_arxiv: '2401.09125'
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.6208
+    std: 0.0054
+    paper_value: 0.6208
+    paper_std: 0.0054
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4202
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2210.09789'
+    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
+      Networks'
+    at_pub_source_date_iso: '2022-10-18'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.2006
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6208
+    true_std: 0.0054
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6208
+    sort_std: 0.0054
+    global_rank: 134
+    paper_rank: 134
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
+      Networks'
+    comparison_source_arxiv: '2210.09789'
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.6149
+    std: 0.0053
+    paper_value: 0.6149
+    paper_std: 0.0053
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nguyen2023revisiting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6149
+    true_std: 0.0053
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6149
+    sort_std: 0.0053
+    global_rank: 137
+    paper_rank: 137
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.6123
+    std: 0.0053
+    paper_value: 0.6123
+    paper_std: 0.0053
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6123
+    true_std: 0.0053
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6123
+    sort_std: 0.0053
+    global_rank: 139
+    paper_rank: 139
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.6119
+    std: 0.0055
+    paper_value: 0.6119
+    paper_std: 0.0055
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4273
+    at_pub_std: 0.0015
+    at_pub_source_arxiv: '2111.14522'
+    at_pub_source_title: Understanding over-squashing and bottlenecks on graphs via
+      curvature
+    at_pub_source_date_iso: '2021-11-29'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.1846
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6119
+    true_std: 0.0055
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6119
+    sort_std: 0.0055
+    global_rank: 141
+    paper_rank: 141
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Understanding over-squashing and bottlenecks on graphs
+      via curvature
+    comparison_source_arxiv: '2111.14522'
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.6043
+    std: 0.0067
+    paper_value: 0.6043
+    paper_std: 0.0067
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6043
+    true_std: 0.0067
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6043
+    sort_std: 0.0067
+    global_rank: 150
+    paper_rank: 150
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.5055
+    std: 0.007
+    paper_value: 0.5055
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5055
+    true_std: 0.007
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5055
+    sort_std: 0.007
+    global_rank: 205
+    paper_rank: 205
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: CiteSeer
+  rows:
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: cna
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9575
+    std: 0.0058
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.04064'
+    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
+    date: Dec 5, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-05'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/ml-research/cna_modules
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9575
+    sort_std: 0.0058
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: is-gib
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.939
+    std: 0.0187
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2306.15902'
+    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
+      Generalization
+    date: Jun 28, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-28'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/YangLing0818/GraphOOD
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.939
+    sort_std: 0.0187
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: eerm
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9112
+    std: 0.0145
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2306.15902'
+    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
+      Generalization
+    date: Jun 28, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-28'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/YangLing0818/GraphOOD
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9112
+    sort_std: 0.0145
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7358
+    std: 0.0027
+    paper_value: 0.7358
+    paper_std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) as per canonical
+      definition for CiteSeer node classification.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8033
+    at_pub_std: 0.0088
+    at_pub_source_arxiv: '2406.19249'
+    at_pub_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer for
+      Node Classification'
+    at_pub_source_date_iso: '2024-06-27'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-06-27'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.0675
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8033
+    true_std: 0.0088
+    value_gap_source_arxiv: '2406.19249'
+    value_gap_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer
+      for Node Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0675
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8033
+    sort_std: 0.0088
+    global_rank: 37
+    paper_rank: 255
+    rank_delta: 218
+    rank_delta_abs: 218
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer
+      for Node Classification'
+    comparison_source_arxiv: '2406.19249'
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.7498
+    std: 0.0048
+    paper_value: 0.7498
+    paper_std: 0.0048
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) as per canonical
+      definition for CiteSeer node classification.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7498
+    true_std: 0.0048
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7498
+    sort_std: 0.0048
+    global_rank: 176
+    paper_rank: 176
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.7497
+    std: 0.0048
+    paper_value: 0.7497
+    paper_std: 0.0048
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) as per canonical
+      definition for CiteSeer node classification.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7497
+    true_std: 0.0048
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7497
+    sort_std: 0.0048
+    global_rank: 177
+    paper_rank: 177
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.7388
+    std: 0.0032
+    paper_value: 0.7388
+    paper_std: 0.0032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) as per canonical
+      definition for CiteSeer node classification.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7388
+    true_std: 0.0032
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7388
+    sort_std: 0.0032
+    global_rank: 228
+    paper_rank: 228
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.7376
+    std: 0.0035
+    paper_value: 0.7376
+    paper_std: 0.0035
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) as per canonical
+      definition for CiteSeer node classification.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7376
+    true_std: 0.0035
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7376
+    sort_std: 0.0035
+    global_rank: 234
+    paper_rank: 234
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.7374
+    std: 0.0034
+    paper_value: 0.7374
+    paper_std: 0.0034
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) as per canonical
+      definition for CiteSeer node classification.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.726
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2302.08727'
+    at_pub_source_title: Building Shortcuts between Distant Nodes with Biaffine Mapping
+      for Graph Convolutional Networks
+    at_pub_source_date_iso: '2023-02-17'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.011400000000000077
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7374
+    true_std: 0.0034
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7374
+    sort_std: 0.0034
+    global_rank: 235
+    paper_rank: 235
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Building Shortcuts between Distant Nodes with Biaffine
+      Mapping for Graph Convolutional Networks
+    comparison_source_arxiv: '2302.08727'
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.7332
+    std: 0.0028
+    paper_value: 0.7332
+    paper_std: 0.0028
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nguyen2023revisiting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) as per canonical
+      definition for CiteSeer node classification.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7332
+    true_std: 0.0028
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7332
+    sort_std: 0.0028
+    global_rank: 279
+    paper_rank: 279
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id001
+  dataset: Cora
+  rows:
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: exphormer
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9635
+    std: 0.0019
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9635
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: sgformer
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9629
+    std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9629
+    sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: coral
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9574
+    std: 0.0039
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9574
+    sort_std: 0.0039
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8759
+    std: 0.0022
+    paper_value: 0.8759
+    paper_std: 0.0022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+      as per canonical definition.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9004
+    at_pub_std: null
+    at_pub_source_arxiv: '2401.09125'
+    at_pub_source_title: Understanding Heterophily for Graph Neural Networks
+    at_pub_source_date_iso: '2024-01-17'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-01-17'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.024499999999999966
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9004
+    true_std: null
+    value_gap_source_arxiv: '2401.09125'
+    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.024499999999999966
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9004
+    sort_std: null
+    global_rank: 27
+    paper_rank: 136
+    rank_delta: 109
+    rank_delta_abs: 109
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Understanding Heterophily for Graph Neural Networks
+    comparison_source_arxiv: '2401.09125'
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.8761
+    std: 0.0029
+    paper_value: 0.8761
+    paper_std: 0.0029
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+      as per canonical definition.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8761
+    true_std: 0.0029
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8761
+    sort_std: 0.0029
+    global_rank: 134
+    paper_rank: 134
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.8758
+    std: 0.0033
+    paper_value: 0.8758
+    paper_std: 0.0033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nguyen2023revisiting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+      as per canonical definition.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8758
+    true_std: 0.0033
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8758
+    sort_std: 0.0033
+    global_rank: 137
+    paper_rank: 137
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.8751
+    std: 0.0029
+    paper_value: 0.8751
+    paper_std: 0.0029
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+      as per canonical definition.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.828
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2302.08727'
+    at_pub_source_title: Building Shortcuts between Distant Nodes with Biaffine Mapping
+      for Graph Convolutional Networks
+    at_pub_source_date_iso: '2023-02-17'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.04710000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8751
+    true_std: 0.0029
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8751
+    sort_std: 0.0029
+    global_rank: 140
+    paper_rank: 140
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Building Shortcuts between Distant Nodes with Biaffine
+      Mapping for Graph Convolutional Networks
+    comparison_source_arxiv: '2302.08727'
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.869
+    std: 0.0038
+    paper_value: 0.869
+    paper_std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+      as per canonical definition.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.869
+    true_std: 0.0038
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.869
+    sort_std: 0.0038
+    global_rank: 179
+    paper_rank: 179
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.8688
+    std: 0.0031
+    paper_value: 0.8688
+    paper_std: 0.0031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+      as per canonical definition.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8688
+    true_std: 0.0031
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8688
+    sort_std: 0.0031
+    global_rank: 181
+    paper_rank: 181
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.8669
+    std: 0.0043
+    paper_value: 0.8669
+    paper_std: 0.0043
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+      as per canonical definition.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8669
+    true_std: 0.0043
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8669
+    sort_std: 0.0043
+    global_rank: 195
+    paper_rank: 195
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id009
+  dataset: Cornell
+  rows:
+  - model: Kron
+    model_key: p^2gnn
+    model_plain: Kron
+    value: 0.9541
+    std: 0.0272
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2603.09195'
+    title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    date: Mar 10, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-10'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9541
+    sort_std: 0.0272
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Kron
+    model_key: acm-gcn
+    model_plain: Kron
+    value: 0.948
+    std: 0.038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.19785'
+    title: Heterophily-informed Message Passing
+    date: Apr 28, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-28'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/AaltoML/heterophily-imp
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.948
+    sort_std: 0.038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Kron
+    model_key: rf-gcn
+    model_plain: Kron
+    value: 0.9429
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9429
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.4827
+    std: 0.0182
+    paper_value: 0.4827
+    paper_std: 0.0182
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8082
+    at_pub_std: 0.036
+    at_pub_source_arxiv: '2602.05358'
+    at_pub_source_title: Bayesian Neighborhood Adaptation for Graph Neural Networks
+    at_pub_source_date_iso: '2025-07-01'
+    at_pub_source_date_label: TMLR 2025
+    value_gap_source_date_iso: '2024-05-25'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.3255
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8015
+    true_std: 0.0037
+    value_gap_source_arxiv: '2405.16185'
+    value_gap_source_title: Differentiable Cluster Graph Neural Network
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3188
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8015
+    sort_std: 0.0037
+    global_rank: 183
+    paper_rank: 487
+    rank_delta: 304
+    rank_delta_abs: 304
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Bayesian Neighborhood Adaptation for Graph Neural Networks
+    comparison_source_arxiv: '2602.05358'
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.4865
+    std: 0.015
+    paper_value: 0.4865
+    paper_std: 0.015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5826
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2210.09789'
+    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
+      Networks'
+    at_pub_source_date_iso: '2022-10-18'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2026-03-27'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.09610000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5826
+    true_std: 0.005
+    value_gap_source_arxiv: '2603.26178'
+    value_gap_source_title: 'Geometric Evolution Graph Convolutional Networks: Enhancing
+      Graph Representation Learning via Ricci Flow'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09610000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5826
+    sort_std: 0.005
+    global_rank: 397
+    paper_rank: 487
+    rank_delta: 90
+    rank_delta_abs: 90
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
+      Networks'
+    comparison_source_arxiv: '2210.09789'
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.4762
+    std: 0.0175
+    paper_value: 0.4762
+    paper_std: 0.0175
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.546
+    at_pub_std: 0.0039
+    at_pub_source_arxiv: '2111.14522'
+    at_pub_source_title: Understanding over-squashing and bottlenecks on graphs via
+      curvature
+    at_pub_source_date_iso: '2021-11-29'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2021-11-29'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.06980000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.546
+    true_std: 0.0039
+    value_gap_source_arxiv: '2111.14522'
+    value_gap_source_title: Understanding over-squashing and bottlenecks on graphs
+      via curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06980000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.546
+    sort_std: 0.0039
+    global_rank: 429
+    paper_rank: 490
+    rank_delta: 61
+    rank_delta_abs: 61
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Understanding over-squashing and bottlenecks on graphs
+      via curvature
+    comparison_source_arxiv: '2111.14522'
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.5065
+    std: 0.0162
+    paper_value: 0.5065
+    paper_std: 0.0162
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nguyen2023revisiting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.508
+    at_pub_std: 0.011
+    at_pub_source_arxiv: '2506.16110'
+    at_pub_source_title: Mitigating Over-Squashing in Graph Neural Networks by Spectrum-Preserving
+      Sparsification
+    at_pub_source_date_iso: '2025-06-19'
+    at_pub_source_date_label: ICML 2025
+    value_gap_source_date_iso: '2025-06-19'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.0015000000000000568
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.508
+    true_std: 0.011
+    value_gap_source_arxiv: '2506.16110'
+    value_gap_source_title: Mitigating Over-Squashing in Graph Neural Networks by
+      Spectrum-Preserving Sparsification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0015000000000000568
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.508
+    sort_std: 0.011
+    global_rank: 472
+    paper_rank: 473
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.4921
+    std: 0.0189
+    paper_value: 0.4921
+    paper_std: 0.0189
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: The proposed framework... LVNs excel on social network
+      datasets... trainable LVN embeddings are particularly important for learning
+      distinct features on social graph datasets, which lack input node features.
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4921
+    true_std: 0.0189
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4921
+    sort_std: 0.0189
+    global_rank: 484
+    paper_rank: 484
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.4416
+    std: 0.0146
+    paper_value: 0.4416
+    paper_std: 0.0146
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.483
+    at_pub_std: 0.0161
+    at_pub_source_arxiv: '2508.19071'
+    at_pub_source_title: Dynamic Triangulation-Based Graph Rewiring for Graph Neural
+      Networks
+    at_pub_source_date_iso: '2025-08-26'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.04139999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4416
+    true_std: 0.0146
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4416
+    sort_std: 0.0146
+    global_rank: 510
+    paper_rank: 510
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Dynamic Triangulation-Based Graph Rewiring for Graph
+      Neural Networks
+    comparison_source_arxiv: '2508.19071'
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.4249
+    std: 0.0259
+    paper_value: 0.4249
+    paper_std: 0.0259
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4249
+    true_std: 0.0259
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4249
+    sort_std: 0.0259
+    global_rank: 522
+    paper_rank: 522
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id005
+  dataset: ENZYMES
+  rows:
+  - model: 3WLGNN
+    model_key: msa-aud
+    model_plain: 3WLGNN
+    value: 0.892
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2312.10943'
+    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
+      and Diversity
+    date: Dec 18, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.892
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: 3WLGNN
+    model_key: msa-ad
+    model_plain: 3WLGNN
+    value: 0.89
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.10943'
+    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
+      and Diversity
+    date: Dec 18, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.89
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: 3WLGNN
+    model_key: msa-au
+    model_plain: 3WLGNN
+    value: 0.854
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.10943'
+    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
+      and Diversity
+    date: Dec 18, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.854
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.28033
+    std: 0.02019
+    paper_value: 0.28033
+    paper_std: 0.02019
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.665
+    at_pub_std: 0.0691
+    at_pub_source_arxiv: '2012.08734'
+    at_pub_source_title: Hierarchical Graph Capsule Network
+    at_pub_source_date_iso: '2020-12-16'
+    at_pub_source_date_label: AAAI 2020
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: 0.38467
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.665
+    true_std: 0.0691
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: false
+    value_gap: 0.38467
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.665
+    sort_std: 0.0691
+    global_rank: 55
+    paper_rank: 251
+    rank_delta: 196
+    rank_delta_abs: 196
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hierarchical Graph Capsule Network
+    comparison_source_arxiv: '2012.08734'
+    is_best: false
+    is_std_outlier: false
+  - model: Last layer FA
+    model_key: last layer fa
+    model_plain: Last layer FA
+    value: 0.27267
+    std: 0.0181
+    paper_value: 0.27267
+    paper_std: 0.0181
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: alon2021on
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.48183
+    at_pub_std: 0.01401
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.20915999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.48183
+    true_std: 0.01401
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.20915999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.48183
+    sort_std: 0.01401
+    global_rank: 182
+    paper_rank: 255
+    rank_delta: 73
+    rank_delta_abs: 73
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.23567
+    std: 0.01313
+    paper_value: 0.23567
+    paper_std: 0.01313
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4555
+    at_pub_std: 0.01258
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.21983000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4555
+    true_std: 0.01258
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.21983000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4555
+    sort_std: 0.01258
+    global_rank: 188
+    paper_rank: 267
+    rank_delta: 79
+    rank_delta_abs: 79
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.28533
+    std: 0.01616
+    paper_value: 0.28533
+    paper_std: 0.01616
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.39583
+    at_pub_std: 0.01333
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.11050000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.39583
+    true_std: 0.01333
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11050000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.39583
+    sort_std: 0.01333
+    global_rank: 208
+    paper_rank: 248
+    rank_delta: 40
+    rank_delta_abs: 40
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.27467
+    std: 0.01682
+    paper_value: 0.27467
+    paper_std: 0.01682
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.376
+    at_pub_std: 0.01198
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.10132999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.376
+    true_std: 0.01198
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10132999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.376
+    sort_std: 0.01198
+    global_rank: 217
+    paper_rank: 253
+    rank_delta: 36
+    rank_delta_abs: 36
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: LASER
+    model_key: laser
+    model_plain: LASER
+    value: 0.338
+    std: 0.01758
+    paper_value: 0.338
+    paper_std: 0.01758
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: barbero2024localityaware
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.353
+    at_pub_std: 0.013
+    at_pub_source_arxiv: '2506.16110'
+    at_pub_source_title: Mitigating Over-Squashing in Graph Neural Networks by Spectrum-Preserving
+      Sparsification
+    at_pub_source_date_iso: '2025-06-19'
+    at_pub_source_date_label: ICML 2025
+    value_gap_source_date_iso: '2025-06-19'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.014999999999999958
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.353
+    true_std: 0.013
+    value_gap_source_arxiv: '2506.16110'
+    value_gap_source_title: Mitigating Over-Squashing in Graph Neural Networks by
+      Spectrum-Preserving Sparsification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.014999999999999958
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.353
+    sort_std: 0.013
+    global_rank: 221
+    paper_rank: 225
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.32067
+    std: 0.01856
+    paper_value: 0.32067
+    paper_std: 0.01856
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.32067
+    true_std: 0.01856
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.32067
+    sort_std: 0.01856
+    global_rank: 231
+    paper_rank: 231
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.314
+    std: 0.02095
+    paper_value: 0.314
+    paper_std: 0.02095
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.314
+    true_std: 0.02095
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.314
+    sort_std: 0.02095
+    global_rank: 233
+    paper_rank: 233
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.25767
+    std: 0.01711
+    paper_value: 0.25767
+    paper_std: 0.01711
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nguyen2023revisiting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.319
+    at_pub_std: 0.012
+    at_pub_source_arxiv: '2309.09384'
+    at_pub_source_title: Mitigating Over-Smoothing and Over-Squashing using Augmentations
+      of Forman-Ricci Curvature
+    at_pub_source_date_iso: '2023-09-17'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-19'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.061329999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.314
+    true_std: 0.015
+    value_gap_source_arxiv: '2506.16110'
+    value_gap_source_title: Mitigating Over-Squashing in Graph Neural Networks by
+      Spectrum-Preserving Sparsification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05632999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.314
+    sort_std: 0.015
+    global_rank: 232
+    paper_rank: 260
+    rank_delta: 28
+    rank_delta_abs: 28
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Mitigating Over-Smoothing and Over-Squashing using Augmentations
+      of Forman-Ricci Curvature
+    comparison_source_arxiv: '2309.09384'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id006
+  dataset: IMDB-BINARY
+  rows:
+  - model: Diverse B12C3
+    model_key: gat +del-f
+    model_plain: Diverse B12C3
+    value: 0.7863
+    std: 0.0054
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.16402'
+    title: Graph Learning with Distributional Edge Layouts
+    date: Feb 26, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-26'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7863
+    sort_std: 0.0054
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diverse B12C3
+    model_key: graph transformer +del-f
+    model_plain: Diverse B12C3
+    value: 0.7828
+    std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2402.16402'
+    title: Graph Learning with Distributional Edge Layouts
+    date: Feb 26, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-26'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.7828
+    sort_std: 0.0027
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diverse B12C3
+    model_key: graph transformer + del-k
+    model_plain: Diverse B12C3
+    value: 0.7765
+    std: 0.0049
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2402.16402'
+    title: Graph Learning with Distributional Edge Layouts
+    date: Feb 26, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-26'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7765
+    sort_std: 0.0049
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.5002
+    std: 0.01309
+    paper_value: 0.5002
+    paper_std: 0.01309
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.798
+    at_pub_std: 0.023
+    at_pub_source_arxiv: '2503.01079'
+    at_pub_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    at_pub_source_date_iso: '2025-03-03'
+    at_pub_source_date_label: KDD 2025
+    value_gap_source_date_iso: '2023-02-17'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: 0.29780000000000006
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.738
+    true_std: 0.0513
+    value_gap_source_arxiv: '2302.08671'
+    value_gap_source_title: Search to Capture Long-range Dependency with Stacking
+      GNNs for Graph Classification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2378
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.738
+    sort_std: 0.0513
+    global_rank: 46
+    paper_rank: 140
+    rank_delta: 94
+    rank_delta_abs: 94
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    comparison_source_arxiv: '2503.01079'
+    is_best: true
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.5012
+    std: 0.01263
+    paper_value: 0.5012
+    paper_std: 0.01263
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7181
+    at_pub_std: 0.0088
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.21689999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7181
+    true_std: 0.0088
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.21689999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7181
+    sort_std: 0.0088
+    global_rank: 99
+    paper_rank: 140
+    rank_delta: 41
+    rank_delta_abs: 41
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: Last layer FA
+    model_key: last layer fa
+    model_plain: Last layer FA
+    value: 0.499
+    std: 0.01574
+    paper_value: 0.499
+    paper_std: 0.01574
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: alon2021on
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7091
+    at_pub_std: 0.00788
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.21009999999999995
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7091
+    true_std: 0.00788
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.21009999999999995
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7091
+    sort_std: 0.00788
+    global_rank: 119
+    paper_rank: 140
+    rank_delta: 21
+    rank_delta_abs: 21
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.4976
+    std: 0.01338
+    paper_value: 0.4976
+    paper_std: 0.01338
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7021
+    at_pub_std: 0.00806
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.20449999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7021
+    true_std: 0.00806
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.20449999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7021
+    sort_std: 0.00806
+    global_rank: 124
+    paper_rank: 140
+    rank_delta: 16
+    rank_delta_abs: 16
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.6872
+    std: 0.01477
+    paper_value: 0.6872
+    paper_std: 0.01477
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: trainable embeddings are particularly important for learning
+      distinct features on social graph datasets, which lack input node features.
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6872
+    true_std: 0.01477
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6872
+    sort_std: 0.01477
+    global_rank: 126
+    paper_rank: 126
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.5028
+    std: 0.01261
+    paper_value: 0.5028
+    paper_std: 0.01261
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6439
+    at_pub_std: 0.00907
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.1411
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6439
+    true_std: 0.00907
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1411
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6439
+    sort_std: 0.00907
+    global_rank: 133
+    paper_rank: 140
+    rank_delta: 7
+    rank_delta_abs: 7
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: LASER
+    model_key: laser
+    model_plain: LASER
+    value: 0.5752
+    std: 0.01438
+    paper_value: 0.5752
+    paper_std: 0.01438
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: barbero2024localityaware
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.64333
+    at_pub_std: 0.03298
+    at_pub_source_arxiv: '2310.01668'
+    at_pub_source_title: Locality-Aware Graph Rewiring in GNNs
+    at_pub_source_date_iso: '2023-10-02'
+    at_pub_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2023-10-02'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: 0.06812999999999991
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.64333
+    true_std: 0.03298
+    value_gap_source_arxiv: '2310.01668'
+    value_gap_source_title: Locality-Aware Graph Rewiring in GNNs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06812999999999991
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.64333
+    sort_std: 0.03298
+    global_rank: 134
+    paper_rank: 138
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Locality-Aware Graph Rewiring in GNNs
+    comparison_source_arxiv: '2310.01668'
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.6408
+    std: 0.01319
+    paper_value: 0.6408
+    paper_std: 0.01319
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6408
+    true_std: 0.01319
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6408
+    sort_std: 0.01319
+    global_rank: 135
+    paper_rank: 135
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.4728
+    std: 0.01473
+    paper_value: 0.4728
+    paper_std: 0.01473
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nguyen2023revisiting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6082
+    at_pub_std: 0.03877
+    at_pub_source_arxiv: '2310.01668'
+    at_pub_source_title: Locality-Aware Graph Rewiring in GNNs
+    at_pub_source_date_iso: '2023-10-02'
+    at_pub_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2023-10-02'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: 0.13539999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6082
+    true_std: 0.03877
+    value_gap_source_arxiv: '2310.01668'
+    value_gap_source_title: Locality-Aware Graph Rewiring in GNNs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.13539999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6082
+    sort_std: 0.03877
+    global_rank: 137
+    paper_rank: 141
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Locality-Aware Graph Rewiring in GNNs
+    comparison_source_arxiv: '2310.01668'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: MUTAG
+  rows:
+  - model: R-GCN
+    model_key: msh-gnn
+    model_plain: R-GCN
+    value: 0.991
+    std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.991
+    sort_std: 0.003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-GCN
+    model_key: supcosine
+    model_plain: R-GCN
+    value: 0.983
+    std: 0.025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.07691'
+    title: Supervised Contrastive Learning with Structure Inference for Graph Classification
+    date: Mar 15, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-15'
+    venue: IEEE Transactions on Network Science and Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.025
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-GCN
+    model_key: cauemo
+    model_plain: R-GCN
+    value: 0.9692
+    std: 0.0136
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2505.06283'
+    title: 'Soft causal learning for generalized molecule property prediction: An
+      environment modeling perspective'
+    date: May 7, 2025
+    date_display: May 2025
+    date_iso: '2025-05-07'
+    venue: Knowledge and Information Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9692
+    sort_std: 0.0136
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.714
+    std: 0.03125
+    paper_value: 0.714
+    paper_std: 0.03125
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits as per caption
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.922
+    at_pub_std: 0.044
+    at_pub_source_arxiv: '2503.01079'
+    at_pub_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    at_pub_source_date_iso: '2025-03-03'
+    at_pub_source_date_label: KDD 2025
+    value_gap_source_date_iso: '2023-08-16'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.20800000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.891
+    true_std: 0.058
+    value_gap_source_arxiv: '2308.08235'
+    value_gap_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.17700000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.891
+    sort_std: 0.058
+    global_rank: 239
+    paper_rank: 715
+    rank_delta: 476
+    rank_delta_abs: 476
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    comparison_source_arxiv: '2503.01079'
+    is_best: false
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.804
+    std: 0.0243
+    paper_value: 0.804
+    paper_std: 0.0243
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits as per caption
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8615
+    at_pub_std: 0.01492
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.057499999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8615
+    true_std: 0.01492
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.057499999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8615
+    sort_std: 0.01492
+    global_rank: 375
+    paper_rank: 579
+    rank_delta: 204
+    rank_delta_abs: 204
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.84778
+    std: 0.02902
+    paper_value: 0.84778
+    paper_std: 0.02902
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits as per caption
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.84778
+    true_std: 0.02902
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.84778
+    sort_std: 0.02902
+    global_rank: 420
+    paper_rank: 420
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Last layer FA
+    model_key: last layer fa
+    model_plain: Last layer FA
+    value: 0.694
+    std: 0.03245
+    paper_value: 0.694
+    paper_std: 0.03245
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: alon2021on
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits as per caption
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8345
+    at_pub_std: 0.01742
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.14050000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8345
+    true_std: 0.01742
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.14050000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8345
+    sort_std: 0.01742
+    global_rank: 485
+    paper_rank: 720
+    rank_delta: 235
+    rank_delta_abs: 235
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.83
+    std: 0.01876
+    paper_value: 0.83
+    paper_std: 0.01876
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits as per caption
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.83
+    true_std: 0.01876
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.83
+    sort_std: 0.01876
+    global_rank: 498
+    paper_rank: 498
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.733
+    std: 0.02617
+    paper_value: 0.733
+    paper_std: 0.02617
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits as per caption
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.827
+    at_pub_std: 0.01782
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.09399999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.827
+    true_std: 0.01782
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09399999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.827
+    sort_std: 0.01782
+    global_rank: 509
+    paper_rank: 697
+    rank_delta: 188
+    rank_delta_abs: 188
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: LASER
+    model_key: laser
+    model_plain: LASER
+    value: 0.76842
+    std: 0.02459
+    paper_value: 0.76842
+    paper_std: 0.02459
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: barbero2024localityaware
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits as per caption
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.82204
+    at_pub_std: 0.06728
+    at_pub_source_arxiv: '2310.01668'
+    at_pub_source_title: Locality-Aware Graph Rewiring in GNNs
+    at_pub_source_date_iso: '2023-10-02'
+    at_pub_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2023-10-02'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: 0.05362
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.82204
+    true_std: 0.06728
+    value_gap_source_arxiv: '2310.01668'
+    value_gap_source_title: Locality-Aware Graph Rewiring in GNNs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05362
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.82204
+    sort_std: 0.06728
+    global_rank: 535
+    paper_rank: 651
+    rank_delta: 116
+    rank_delta_abs: 116
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.765
+    std: 0.03397
+    paper_value: 0.765
+    paper_std: 0.03397
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nguyen2023revisiting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits as per caption
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.81684
+    at_pub_std: 0.07964
+    at_pub_source_arxiv: '2310.01668'
+    at_pub_source_title: Locality-Aware Graph Rewiring in GNNs
+    at_pub_source_date_iso: '2023-10-02'
+    at_pub_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2023-10-02'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: 0.05184
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.81684
+    true_std: 0.07964
+    value_gap_source_arxiv: '2310.01668'
+    value_gap_source_title: Locality-Aware Graph Rewiring in GNNs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05184
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.81684
+    sort_std: 0.07964
+    global_rank: 551
+    paper_rank: 654
+    rank_delta: 103
+    rank_delta_abs: 103
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.76
+    std: 0.03072
+    paper_value: 0.76
+    paper_std: 0.03072
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 50 random splits as per caption
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8145
+    at_pub_std: 0.01488
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.05449999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8145
+    true_std: 0.01488
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05449999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8145
+    sort_std: 0.01488
+    global_rank: 558
+    paper_rank: 660
+    rank_delta: 102
+    rank_delta_abs: 102
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id007
+  dataset: REDDIT-BINARY
+  rows:
+  - model: topk
+    model_key: dmon
+    model_plain: topk
+    value: 0.91
+    std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2512.12642'
+    title: 'Torch Geometric Pool: the Pytorch library for pooling in Graph Neural
+      Networks'
+    date: Dec 14, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-14'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.91
+    sort_std: 0.01
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: topk
+    model_key: bnpool
+    model_plain: topk
+    value: 0.91
+    std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2512.12642'
+    title: 'Torch Geometric Pool: the Pytorch library for pooling in Graph Neural
+      Networks'
+    date: Dec 14, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-14'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.91
+    sort_std: 0.02
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: topk
+    model_key: hosc
+    model_plain: topk
+    value: 0.91
+    std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2512.12642'
+    title: 'Torch Geometric Pool: the Pytorch library for pooling in Graph Neural
+      Networks'
+    date: Dec 14, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-14'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.91
+    sort_std: 0.01
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Last layer FA
+    model_key: last layer fa
+    model_plain: Last layer FA
+    value: 0.5868
+    std: 0.02421
+    paper_value: 0.5868
+    paper_std: 0.02421
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: alon2021on
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9022
+    at_pub_std: 0.00475
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.3154
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9022
+    true_std: 0.00475
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3154
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9022
+    sort_std: 0.00475
+    global_rank: 6
+    paper_rank: 38
+    rank_delta: 32
+    rank_delta_abs: 32
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: true
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.7002
+    std: 0.00911
+    paper_value: 0.7002
+    paper_std: 0.00911
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.89665
+    at_pub_std: 0.00416
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.1964499999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.89665
+    true_std: 0.00416
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1964499999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.89665
+    sort_std: 0.00416
+    global_rank: 15
+    paper_rank: 38
+    rank_delta: 23
+    rank_delta_abs: 23
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: true
+    is_std_outlier: false
+  - model: LASER
+    model_key: laser
+    model_plain: LASER
+    value: 0.8813
+    std: 0.00547
+    paper_value: 0.8813
+    paper_std: 0.00547
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: barbero2024localityaware
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.85458
+    at_pub_std: 0.02827
+    at_pub_source_arxiv: '2310.01668'
+    at_pub_source_title: Locality-Aware Graph Rewiring in GNNs
+    at_pub_source_date_iso: '2023-10-02'
+    at_pub_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.026719999999999966
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8813
+    true_std: 0.00547
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8813
+    sort_std: 0.00547
+    global_rank: 19
+    paper_rank: 19
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.6272
+    std: 0.02701
+    paper_value: 0.6272
+    paper_std: 0.02701
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.86825
+    at_pub_std: 0.00523
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.24105
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.86825
+    true_std: 0.00523
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.24105
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.86825
+    sort_std: 0.00523
+    global_rank: 28
+    paper_rank: 38
+    rank_delta: 10
+    rank_delta_abs: 10
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.8562
+    std: 0.0099
+    paper_value: 0.8562
+    paper_std: 0.0099
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: trainable embeddings are particularly important for learning
+      distinct features on social graph datasets, which lack input node features.
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8562
+    true_std: 0.0099
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8562
+    sort_std: 0.0099
+    global_rank: 33
+    paper_rank: 33
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.8008
+    std: 0.01241
+    paper_value: 0.8008
+    paper_std: 0.01241
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8008
+    true_std: 0.01241
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8008
+    sort_std: 0.01241
+    global_rank: 37
+    paper_rank: 37
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.5044
+    std: 0.00938
+    paper_value: 0.5044
+    paper_std: 0.00938
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.76035
+    at_pub_std: 0.00774
+    at_pub_source_arxiv: '2210.11790'
+    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    at_pub_source_date_iso: '2022-10-21'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-21'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.25595
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.76035
+    true_std: 0.00774
+    value_gap_source_arxiv: '2210.11790'
+    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.25595
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.76035
+    sort_std: 0.00774
+    global_rank: 38
+    paper_rank: 40
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
+      in GNNs'
+    comparison_source_arxiv: '2210.11790'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.5653
+    std: 0.02603
+    paper_value: 0.5653
+    paper_std: 0.02603
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: mean test accuracy across 50 random splits
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5
+    at_pub_std: 0.0
+    at_pub_source_arxiv: '2006.05582'
+    at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
+    at_pub_source_date_iso: '2020-06-01'
+    at_pub_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.06530000000000002
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5653
+    true_std: 0.02603
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5653
+    sort_std: 0.02603
+    global_rank: 40
+    paper_rank: 40
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Contrastive Multi-View Representation Learning on Graphs
+    comparison_source_arxiv: '2006.05582'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id008
+  dataset: Texas
+  rows:
+  - model: DoG
+    model_key: p^2gnn
+    model_plain: DoG
+    value: 0.9672
+    std: 0.0147
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2603.09195'
+    title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    date: Mar 10, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-10'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9672
+    sort_std: 0.0147
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DoG
+    model_key: dog
+    model_plain: DoG
+    value: 0.966
+    std: 0.021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.966
+    sort_std: 0.021
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DoG
+    model_key: gpf-plus
+    model_plain: DoG
+    value: 0.9583
+    std: 0.0419
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.05346'
+    title: 'ProG: A Graph Prompt Learning Benchmark'
+    date: Jun 8, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-08'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/sheldonresearch/ProG
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9583
+    sort_std: 0.0419
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.52
+    std: 0.021
+    paper_value: 0.52
+    paper_std: 0.021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semisupervised
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7933
+    at_pub_std: 0.0447
+    at_pub_source_arxiv: '2505.20034'
+    at_pub_source_title: Graph Wave Networks
+    at_pub_source_date_iso: '2025-04-22'
+    at_pub_source_date_label: WWW 2025
+    value_gap_source_date_iso: '2025-04-22'
+    value_gap_source_date_label: WWW 2025
+    gap_vs_at_pub: 0.2733
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7933
+    true_std: 0.0447
+    value_gap_source_arxiv: '2505.20034'
+    value_gap_source_title: Graph Wave Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2733
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7933
+    sort_std: 0.0447
+    global_rank: 287
+    paper_rank: 594
+    rank_delta: 307
+    rank_delta_abs: 307
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph Wave Networks
+    comparison_source_arxiv: '2505.20034'
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.5151
+    std: 0.0171
+    paper_value: 0.5151
+    paper_std: 0.0171
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: topping2022understanding
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6446
+    at_pub_std: 0.0038
+    at_pub_source_arxiv: '2111.14522'
+    at_pub_source_title: Understanding over-squashing and bottlenecks on graphs via
+      curvature
+    at_pub_source_date_iso: '2021-11-29'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2026-03-27'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.12949999999999995
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6446
+    true_std: 0.0038
+    value_gap_source_arxiv: '2603.26178'
+    value_gap_source_title: 'Geometric Evolution Graph Convolutional Networks: Enhancing
+      Graph Representation Learning via Ricci Flow'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.12949999999999995
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6446
+    sort_std: 0.0038
+    global_rank: 459
+    paper_rank: 594
+    rank_delta: 135
+    rank_delta_abs: 135
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Understanding over-squashing and bottlenecks on graphs
+      via curvature
+    comparison_source_arxiv: '2111.14522'
+    is_best: false
+    is_std_outlier: false
+  - model: DIGL
+    model_key: digl
+    model_plain: DIGL
+    value: 0.5157
+    std: 0.0178
+    paper_value: 0.5157
+    paper_std: 0.0178
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2019diffusion
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6203
+    at_pub_std: 0.0043
+    at_pub_source_arxiv: '2210.09789'
+    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
+      Networks'
+    at_pub_source_date_iso: '2022-10-18'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2026-03-27'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.10459999999999992
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6203
+    true_std: 0.0043
+    value_gap_source_arxiv: '2603.26178'
+    value_gap_source_title: 'Geometric Evolution Graph Convolutional Networks: Enhancing
+      Graph Representation Learning via Ricci Flow'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10459999999999992
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6203
+    sort_std: 0.0043
+    global_rank: 486
+    paper_rank: 594
+    rank_delta: 108
+    rank_delta_abs: 108
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
+      Networks'
+    comparison_source_arxiv: '2210.09789'
+    is_best: false
+    is_std_outlier: false
+  - model: LVN
+    model_key: lvn
+    model_plain: LVN
+    value: 0.6137
+    std: 0.0203
+    paper_value: 0.6137
+    paper_std: 0.0203
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6137
+    true_std: 0.0203
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6137
+    sort_std: 0.0203
+    global_rank: 489
+    paper_rank: 489
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PANDA
+    model_key: panda
+    model_plain: PANDA
+    value: 0.5411
+    std: 0.0215
+    paper_value: 0.5411
+    paper_std: 0.0215
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: choi2024panda
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5411
+    true_std: 0.0215
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5411
+    sort_std: 0.0215
+    global_rank: 590
+    paper_rank: 590
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.5286
+    std: 0.0172
+    paper_value: 0.5286
+    paper_std: 0.0172
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: karhadkar2023fosr
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6185
+    at_pub_std: 0.0141
+    at_pub_source_arxiv: '2508.19071'
+    at_pub_source_title: Dynamic Triangulation-Based Graph Rewiring for Graph Neural
+      Networks
+    at_pub_source_date_iso: '2025-08-26'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.08990000000000009
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5286
+    true_std: 0.0172
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5286
+    sort_std: 0.0172
+    global_rank: 594
+    paper_rank: 594
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Dynamic Triangulation-Based Graph Rewiring for Graph
+      Neural Networks
+    comparison_source_arxiv: '2508.19071'
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.4995
+    std: 0.0143
+    paper_value: 0.4995
+    paper_std: 0.0143
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: nguyen2023revisiting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Mean test accuracy across 50 random splits.
+    date: Aug 28, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-28'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.623
+    at_pub_std: 0.02
+    at_pub_source_arxiv: '2309.09384'
+    at_pub_source_title: Mitigating Over-Smoothing and Over-Squashing using Augmentations
+      of Forman-Ricci Curvature
+    at_pub_source_date_iso: '2023-09-17'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.1235
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4995
+    true_std: 0.0143
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4995
+    sort_std: 0.0143
+    global_rank: 599
+    paper_rank: 599
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Mitigating Over-Smoothing and Over-Squashing using Augmentations
+      of Forman-Ricci Curvature
+    comparison_source_arxiv: '2309.09384'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+results_grouped:
+- benchmark: Classic
+  datasets:
+  - *id001
+  - *id002
+- benchmark: TU Dortmund
+  datasets:
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+- benchmark: Heterophilic Graphs
+  datasets:
+  - *id008
+  - *id009
+  - *id010
+datasets_by_scope:
+- scope: node-level
+  label: Node-level
+  benchmarks:
+  - benchmark: Classic
+    benchmark_slug: classic
+    datasets:
+    - dataset: Cora
+      dataset_slug: cora
+    - dataset: CiteSeer
+      dataset_slug: citeseer
+  - benchmark: Heterophilic Graphs
+    benchmark_slug: heterophilic-graphs
+    datasets:
+    - dataset: Texas
+      dataset_slug: texas
+    - dataset: Cornell
+      dataset_slug: cornell
+    - dataset: Chameleon
+      dataset_slug: chameleon
+- scope: graph-level
+  label: Graph-level
+  benchmarks:
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: MUTAG
+      dataset_slug: mutag
+    - dataset: COLLAB
+      dataset_slug: collab
+    - dataset: ENZYMES
+      dataset_slug: enzymes
+    - dataset: IMDB-BINARY
+      dataset_slug: imdb-binary
+    - dataset: REDDIT-BINARY
+      dataset_slug: reddit-binary
+single_proposed_model: LVN
+---
+

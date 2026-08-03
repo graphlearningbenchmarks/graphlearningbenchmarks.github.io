@@ -1,0 +1,25 @@
+{
+  "scanned_at": "2026-07-01T12:14:57.545366+00:00",
+  "paper_count": 1,
+  "papers": [
+    {
+      "arxiv_id": "2411.05274",
+      "title": "Distributed-Order Fractional Graph Operating Network",
+      "latex_path": "papers/2411.05274/latex/expanded.tex",
+      "issues": [
+        {
+          "kind": "wraptable",
+          "detail": "Contains 2 wraptable environment(s); parsed 2. Papers processed before wraptable support need full LLM re-extraction.",
+          "sample_lines": []
+        },
+        {
+          "kind": "unparsed_tabular_lines",
+          "detail": "Found lines with two or more '&' column separators outside parsed table environments (possible standalone tabular or unsupported layout).",
+          "sample_lines": [
+            "y_j(0)= \\begin{cases}y_0^{[j / M]}, & \\text { if } j / M \\in \\mathbb{N}_0, \\\\ 0, & \\text { else },\\end{cases}"
+          ]
+        }
+      ]
+    }
+  ]
+}

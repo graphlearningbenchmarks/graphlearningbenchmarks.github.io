@@ -1,0 +1,5399 @@
+---
+title: Hierarchical Graph Capsule Network
+arxiv_id: '2012.08734'
+source_url: ''
+authors:
+- name: Jinyu Yang
+  orcid: null
+  s2_author_id: '7788324'
+  s2_url: null
+- name: P. Zhao
+  orcid: null
+  s2_author_id: '144259957'
+  s2_url: null
+- name: Yu Rong
+  orcid: null
+  s2_author_id: '48537464'
+  s2_url: null
+- name: Chao-chao Yan
+  orcid: null
+  s2_author_id: '7590092'
+  s2_url: null
+- name: Chunyuan Li
+  orcid: null
+  s2_author_id: '2109737569'
+  s2_url: null
+- name: Hehuan Ma
+  orcid: null
+  s2_author_id: '51091763'
+  s2_url: null
+- name: Junzhou Huang
+  orcid: null
+  s2_author_id: '1768190'
+  s2_url: null
+published_date: Dec 16, 2020
+published_date_iso: '2020-12-16'
+published_venue: AAAI 2020
+published_conference: AAAI 2020
+published_conference_short: AAAI
+published_conference_slug: aaai
+abstract: 'Graph Neural Networks (GNNs) draw their strength from explicitly modeling
+  the topological information of structured data. However, existing GNNs suffer from
+  limited capability in capturing the hierarchical graph representation which plays
+  an important role in graph classification. In this paper, we innovatively propose
+  hierarchical graph capsule network (HGCN) that can jointly learn node embeddings
+  and extract graph hierarchies. Specifically, disentangled graph capsules are established
+  by identifying heterogeneous factors underlying each node, such that their instantiation
+  parameters represent different properties of the same entity. To learn the hierarchical
+  representation, HGCN characterizes the part-whole relationship between lower-level
+  capsules (part) and higher-level capsules (whole) by explicitly considering the
+  structure information among the parts. Experimental studies demonstrate the effectiveness
+  of HGCN and the contribution of each component. Code: https://github.com/uta-smile/HGCN'
+codebase_url: https://github.com/uta-smile/HGCN
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: method
+proposed_models:
+- CapsNets
+mrr: 0.0324
+adjusted_mrr: 0.0216
+mrr_dataset_count: 2
+benchmark_categories:
+- TU Dortmund
+benchmark_coverage:
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 5
+  total: 11
+task_categories:
+- graph_classification
+experiment_scopes:
+- graph-level
+results:
+- &id005
+  dataset: D&D
+  rows:
+  - model: DiffPool-det +Both (GAT)
+    model_key: gc-gnn (graphsage)
+    model_plain: DiffPool-det +Both (GAT)
+    value: 0.921
+    std: 0.081
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2309.00738'
+    title: Rethinking the Power of Graph Canonization in Graph Representation Learning
+      with Stability
+    date: Sep 1, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-01'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.921
+    sort_std: 0.081
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DiffPool-det +Both (GAT)
+    model_key: sugar
+    model_plain: DiffPool-det +Both (GAT)
+    value: 0.8403
+    std: 0.0133
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2101.08170'
+    title: 'SUGAR: Subgraph Neural Network with Reinforcement Pooling and Self-Supervised
+      Mutual Information Mechanism'
+    date: Jan 20, 2021
+    date_display: Jan 2021
+    date_iso: '2021-01-20'
+    venue: The Web Conference
+    codebase_url: https://github.com/RingBDStack/SUGAR
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8403
+    sort_std: 0.0133
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DiffPool-det +Both (GAT)
+    model_key: ortho-g-u-nets
+    model_plain: DiffPool-det +Both (GAT)
+    value: 0.8387
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2109.11338'
+    title: Orthogonal Graph Neural Networks
+    date: Sep 23, 2021
+    date_display: Sep 2021
+    date_iso: '2021-09-23'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8387
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DiffPool
+    model_key: diffpool
+    model_plain: DiffPool
+    value: 0.8064
+    std: null
+    paper_value: 0.8064
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.8064
+    at_pub_std: null
+    at_pub_source_arxiv: '2007.11202'
+    at_pub_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
+      Graph Representation and Learning'
+    at_pub_source_date_iso: '2020-07-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-07-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8064
+    true_std: null
+    value_gap_source_arxiv: '2007.11202'
+    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
+      Graph Representation and Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8064
+    sort_std: null
+    global_rank: 21
+    paper_rank: 21
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: WL
+    model_key: wl
+    model_plain: WL
+    value: 0.7978
+    std: 0.0036
+    paper_value: 0.7978
+    paper_std: 0.0036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7978
+    at_pub_std: null
+    at_pub_source_arxiv: '1704.02901'
+    at_pub_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    at_pub_source_date_iso: '2017-04-10'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2017-04-10'
+    value_gap_source_date_label: '2017'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7978
+    true_std: null
+    value_gap_source_arxiv: '1704.02901'
+    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7978
+    sort_std: null
+    global_rank: 28
+    paper_rank: 28
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ASAP
+    model_key: asap
+    model_plain: ASAP
+    value: 0.7687
+    std: 0.007
+    paper_value: 0.7687
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.795
+    at_pub_std: 0.018
+    at_pub_source_arxiv: '2010.00238'
+    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    at_pub_source_date_iso: '2020-10-01'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-10-01'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.02629999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.795
+    true_std: 0.018
+    value_gap_source_arxiv: '2010.00238'
+    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.02629999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.795
+    sort_std: 0.018
+    global_rank: 35
+    paper_rank: 108
+    rank_delta: 73
+    rank_delta_abs: 73
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    comparison_source_arxiv: '2010.00238'
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: dgcnn
+    model_plain: DGCNN
+    value: 0.7937
+    std: 0.0094
+    paper_value: 0.7937
+    paper_std: 0.0094
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7937
+    at_pub_std: 0.0094
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2020-07-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7937
+    true_std: null
+    value_gap_source_arxiv: '2007.11202'
+    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
+      Graph Representation and Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7937
+    sort_std: null
+    global_rank: 40
+    paper_rank: 40
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7912
+    std: 0.0307
+    paper_value: 0.7912
+    paper_std: 0.0307
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.759
+    at_pub_std: null
+    at_pub_source_arxiv: '1904.13107'
+    at_pub_source_title: Graph Convolutional Networks with EigenPooling
+    at_pub_source_date_iso: '2019-04-30'
+    at_pub_source_date_label: KDD 2019
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: 0.032200000000000006
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7912
+    true_std: 0.0307
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7912
+    sort_std: 0.0307
+    global_rank: 46
+    paper_rank: 46
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Graph Convolutional Networks with EigenPooling
+    comparison_source_arxiv: '1904.13107'
+    is_best: false
+    is_std_outlier: false
+  - model: GFN
+    model_key: gfn
+    model_plain: GFN
+    value: 0.7878
+    std: 0.0349
+    paper_value: 0.7878
+    paper_std: 0.0349
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7878
+    true_std: 0.0349
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7878
+    sort_std: 0.0349
+    global_rank: 56
+    paper_rank: 56
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGPool
+    model_key: sagpool
+    model_plain: SAGPool
+    value: 0.7645
+    std: 0.0097
+    paper_value: 0.7645
+    paper_std: 0.0097
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.787
+    at_pub_std: 0.0229
+    at_pub_source_arxiv: '2009.05923'
+    at_pub_source_title: Contrastive Self-supervised Learning for Graph Classification
+    at_pub_source_date_iso: '2020-09-13'
+    at_pub_source_date_label: AAAI 2020
+    value_gap_source_date_iso: '2020-09-13'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: 0.022500000000000075
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.787
+    true_std: 0.0229
+    value_gap_source_arxiv: '2009.05923'
+    value_gap_source_title: Contrastive Self-supervised Learning for Graph Classification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.022500000000000075
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.787
+    sort_std: 0.0229
+    global_rank: 60
+    paper_rank: 110
+    rank_delta: 50
+    rank_delta_abs: 50
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GK
+    model_key: gk
+    model_plain: GK
+    value: 0.7845
+    std: 0.0026
+    paper_value: 0.7845
+    paper_std: 0.0026
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7845
+    at_pub_std: 0.0026
+    at_pub_source_arxiv: '1605.05273'
+    at_pub_source_title: Learning Convolutional Neural Networks for Graphs
+    at_pub_source_date_iso: '2016-05-17'
+    at_pub_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7845
+    true_std: 0.0026
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7845
+    sort_std: 0.0026
+    global_rank: 66
+    paper_rank: 66
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCAPS-CNN
+    model_key: gcaps-cnn
+    model_plain: GCAPS-CNN
+    value: 0.7762
+    std: 0.0499
+    paper_value: 0.7762
+    paper_std: 0.0499
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7762
+    true_std: 0.0499
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7762
+    sort_std: 0.0499
+    global_rank: 88
+    paper_rank: 88
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CliquePool
+    model_key: cliquepool
+    model_plain: CliquePool
+    value: 0.7733
+    std: null
+    paper_value: 0.7733
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7733
+    true_std: null
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7733
+    sort_std: null
+    global_rank: 99
+    paper_rank: 99
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PSCN
+    model_key: pscn
+    model_plain: PSCN
+    value: 0.7627
+    std: 0.0264
+    paper_value: 0.7627
+    paper_std: 0.0264
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7712
+    at_pub_std: null
+    at_pub_source_arxiv: '1704.02901'
+    at_pub_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    at_pub_source_date_iso: '2017-04-10'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2017-04-10'
+    value_gap_source_date_label: '2017'
+    gap_vs_at_pub: 0.008499999999999952
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7712
+    true_std: null
+    value_gap_source_arxiv: '1704.02901'
+    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.008499999999999952
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7712
+    sort_std: null
+    global_rank: 103
+    paper_rank: 115
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CapsGNN
+    model_key: capsgnn
+    model_plain: CapsGNN
+    value: 0.7538
+    std: 0.0417
+    paper_value: 0.7538
+    paper_std: 0.0417
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7538
+    true_std: 0.0417
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7538
+    sort_std: 0.0417
+    global_rank: 133
+    paper_rank: 133
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGK
+    model_key: dgk
+    model_plain: DGK
+    value: 0.735
+    std: 0.0101
+    paper_value: 0.735
+    paper_std: 0.0101
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.735
+    at_pub_std: 0.0101
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.735
+    true_std: 0.0101
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.735
+    sort_std: 0.0101
+    global_rank: 155
+    paper_rank: 155
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AWE
+    model_key: awe
+    model_plain: AWE
+    value: 0.7151
+    std: 0.0402
+    paper_value: 0.7151
+    paper_std: 0.0402
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7151
+    true_std: 0.0402
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7151
+    sort_std: 0.0402
+    global_rank: 170
+    paper_rank: 170
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id004
+  dataset: ENZYMES
+  rows:
+  - model: 3WLGNN
+    model_key: msa-aud
+    model_plain: 3WLGNN
+    value: 0.892
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2312.10943'
+    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
+      and Diversity
+    date: Dec 18, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.892
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: 3WLGNN
+    model_key: msa-ad
+    model_plain: 3WLGNN
+    value: 0.89
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.10943'
+    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
+      and Diversity
+    date: Dec 18, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.89
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: 3WLGNN
+    model_key: msa-au
+    model_plain: 3WLGNN
+    value: 0.854
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.10943'
+    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
+      and Diversity
+    date: Dec 18, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.854
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GFN
+    model_key: gfn
+    model_plain: GFN
+    value: 0.7017
+    std: 0.0558
+    paper_value: 0.7017
+    paper_std: 0.0558
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7017
+    true_std: 0.0558
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7017
+    sort_std: 0.0558
+    global_rank: 33
+    paper_rank: 33
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: WL
+    model_key: wl
+    model_plain: WL
+    value: 0.5222
+    std: 0.0126
+    paper_value: 0.5222
+    paper_std: 0.0126
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.5905
+    at_pub_std: null
+    at_pub_source_arxiv: '1704.02901'
+    at_pub_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    at_pub_source_date_iso: '2017-04-10'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2022-05-31'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: 0.06830000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.695
+    true_std: 0.032
+    value_gap_source_arxiv: '2205.15733'
+    value_gap_source_title: Template based Graph Neural Network with Optimal Transport
+      Distances
+    value_gap_source_is_current_paper: false
+    value_gap: 0.17279999999999995
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.695
+    sort_std: 0.032
+    global_rank: 37
+    paper_rank: 170
+    rank_delta: 133
+    rank_delta_abs: 133
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    comparison_source_arxiv: '1704.02901'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.665
+    std: 0.0691
+    paper_value: 0.665
+    paper_std: 0.0691
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.591
+    at_pub_std: 0.047
+    at_pub_source_arxiv: '2009.10564'
+    at_pub_source_title: 'GraphCrop: Subgraph Cropping for Graph Classification'
+    at_pub_source_date_iso: '2020-09-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: 0.07400000000000007
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.665
+    true_std: 0.0691
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.665
+    sort_std: 0.0691
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: EigenPooling
+    model_key: eigenpooling
+    model_plain: EigenPooling
+    value: 0.645
+    std: null
+    paper_value: 0.645
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.645
+    true_std: null
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.645
+    sort_std: null
+    global_rank: 75
+    paper_rank: 75
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DiffPool
+    model_key: diffpool
+    model_plain: DiffPool
+    value: 0.6253
+    std: null
+    paper_value: 0.6253
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.6253
+    at_pub_std: null
+    at_pub_source_arxiv: '2007.11202'
+    at_pub_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
+      Graph Representation and Learning'
+    at_pub_source_date_iso: '2020-07-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6253
+    true_std: null
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6253
+    sort_std: null
+    global_rank: 91
+    paper_rank: 91
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCAPS-CNN
+    model_key: gcaps-cnn
+    model_plain: GCAPS-CNN
+    value: 0.6183
+    std: 0.0539
+    paper_value: 0.6183
+    paper_std: 0.0539
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.6183
+    at_pub_std: 0.0539
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6183
+    true_std: 0.0539
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6183
+    sort_std: 0.0539
+    global_rank: 98
+    paper_rank: 98
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CliquePool
+    model_key: cliquepool
+    model_plain: CliquePool
+    value: 0.6071
+    std: null
+    paper_value: 0.6071
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.6071
+    at_pub_std: null
+    at_pub_source_arxiv: '2002.09518'
+    at_pub_source_title: Memory-Based Graph Networks
+    at_pub_source_date_iso: '2020-02-21'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2020-02-21'
+    value_gap_source_date_label: ICLR 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6071
+    true_std: null
+    value_gap_source_arxiv: '2002.09518'
+    value_gap_source_title: Memory-Based Graph Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6071
+    sort_std: null
+    global_rank: 112
+    paper_rank: 112
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: dgcnn
+    model_plain: DGCNN
+    value: 0.51
+    std: 0.0729
+    paper_value: 0.51
+    paper_std: 0.0729
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.5712
+    at_pub_std: null
+    at_pub_source_arxiv: '2007.11202'
+    at_pub_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
+      Graph Representation and Learning'
+    at_pub_source_date_iso: '2020-07-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-07-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.06120000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.5712
+    true_std: null
+    value_gap_source_arxiv: '2007.11202'
+    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
+      Graph Representation and Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06120000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5712
+    sort_std: null
+    global_rank: 140
+    paper_rank: 173
+    rank_delta: 33
+    rank_delta_abs: 33
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CapsGNN
+    model_key: capsgnn
+    model_plain: CapsGNN
+    value: 0.5467
+    std: 0.0567
+    paper_value: 0.5467
+    paper_std: 0.0567
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.547
+    at_pub_std: 0.057
+    at_pub_source_arxiv: '2006.09430'
+    at_pub_source_title: Wasserstein Embedding for Graph Learning
+    at_pub_source_date_iso: '2020-06-16'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2022-09-30'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.000300000000000078
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.5531
+    true_std: 0.0423
+    value_gap_source_arxiv: '2210.00084'
+    value_gap_source_title: Contrastive Graph Few-Shot Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006400000000000072
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5531
+    sort_std: 0.0423
+    global_rank: 147
+    paper_rank: 156
+    rank_delta: 9
+    rank_delta_abs: 9
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGK
+    model_key: dgk
+    model_plain: DGK
+    value: 0.5343
+    std: 0.0091
+    paper_value: 0.5343
+    paper_std: 0.0091
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.5343
+    at_pub_std: 0.0091
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5343
+    true_std: 0.0091
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5343
+    sort_std: 0.0091
+    global_rank: 165
+    paper_rank: 165
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AWE
+    model_key: awe
+    model_plain: AWE
+    value: 0.3577
+    std: 0.0593
+    paper_value: 0.3577
+    paper_std: 0.0593
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.358
+    at_pub_std: 0.059
+    at_pub_source_arxiv: '2006.09430'
+    at_pub_source_title: Wasserstein Embedding for Graph Learning
+    at_pub_source_date_iso: '2020-06-16'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2022-09-30'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.00029999999999996696
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4558
+    true_std: 0.0211
+    value_gap_source_arxiv: '2210.00084'
+    value_gap_source_title: Contrastive Graph Few-Shot Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09809999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4558
+    sort_std: 0.0211
+    global_rank: 187
+    paper_rank: 219
+    rank_delta: 32
+    rank_delta_abs: 32
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GK
+    model_key: gk
+    model_plain: GK
+    value: 0.327
+    std: 0.012
+    paper_value: 0.327
+    paper_std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.327
+    at_pub_std: 0.012
+    at_pub_source_arxiv: '1805.11921'
+    at_pub_source_title: Anonymous Walk Embeddings
+    at_pub_source_date_iso: '2018-05-30'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.327
+    true_std: 0.012
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.327
+    sort_std: 0.012
+    global_rank: 228
+    paper_rank: 228
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id001
+  dataset: MUTAG
+  rows:
+  - model: R-GCN
+    model_key: msh-gnn
+    model_plain: R-GCN
+    value: 0.991
+    std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.991
+    sort_std: 0.003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-GCN
+    model_key: supcosine
+    model_plain: R-GCN
+    value: 0.983
+    std: 0.025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.07691'
+    title: Supervised Contrastive Learning with Structure Inference for Graph Classification
+    date: Mar 15, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-15'
+    venue: IEEE Transactions on Network Science and Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.025
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-GCN
+    model_key: cauemo
+    model_plain: R-GCN
+    value: 0.9692
+    std: 0.0136
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2505.06283'
+    title: 'Soft causal learning for generalized molecule property prediction: An
+      environment modeling perspective'
+    date: May 7, 2025
+    date_display: May 2025
+    date_iso: '2025-05-07'
+    venue: Knowledge and Information Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9692
+    sort_std: 0.0136
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.894
+    std: 0.056
+    paper_value: 0.894
+    paper_std: 0.056
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.894
+    at_pub_std: 0.056
+    at_pub_source_arxiv: '1905.11136'
+    at_pub_source_title: Provably Powerful Graph Networks
+    at_pub_source_date_iso: '2019-05-27'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.933
+    true_std: 0.029
+    value_gap_source_arxiv: '2112.00911'
+    value_gap_source_title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.039000000000000035
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.933
+    sort_std: 0.029
+    global_rank: 34
+    paper_rank: 207
+    rank_delta: 173
+    rank_delta_abs: 173
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CapsNets
+    model_key: capsnets
+    model_plain: CapsNets
+    value: 0.9316
+    std: 0.061
+    paper_value: 0.9316
+    paper_std: 0.061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9316
+    true_std: 0.061
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9316
+    sort_std: 0.061
+    global_rank: 36
+    paper_rank: 36
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PSCN
+    model_key: pscn
+    model_plain: PSCN
+    value: 0.8895
+    std: 0.0437
+    paper_value: 0.8895
+    paper_std: 0.0437
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.9263
+    at_pub_std: null
+    at_pub_source_arxiv: '1704.02901'
+    at_pub_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    at_pub_source_date_iso: '2017-04-10'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2017-04-10'
+    value_gap_source_date_label: '2017'
+    gap_vs_at_pub: 0.036800000000000055
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.9263
+    true_std: null
+    value_gap_source_arxiv: '1704.02901'
+    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.036800000000000055
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9263
+    sort_std: null
+    global_rank: 42
+    paper_rank: 246
+    rank_delta: 204
+    rank_delta_abs: 204
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GFN
+    model_key: gfn
+    model_plain: GFN
+    value: 0.9084
+    std: 0.0722
+    paper_value: 0.9084
+    paper_std: 0.0722
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.9084
+    at_pub_std: 0.0722
+    at_pub_source_arxiv: '1909.11855'
+    at_pub_source_title: Universal Graph Transformer Self-Attention Networks
+    at_pub_source_date_iso: '2019-09-26'
+    at_pub_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9084
+    true_std: 0.0722
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9084
+    sort_std: 0.0722
+    global_rank: 111
+    paper_rank: 111
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: WL
+    model_key: wl
+    model_plain: WL
+    value: 0.8205
+    std: 0.0036
+    paper_value: 0.8205
+    paper_std: 0.0036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.904
+    at_pub_std: 0.057
+    at_pub_source_arxiv: '1912.06058'
+    at_pub_source_title: Coloring graph neural networks for node disambiguation
+    at_pub_source_date_iso: '2019-12-12'
+    at_pub_source_date_label: IJCAI 2019
+    value_gap_source_date_iso: '2022-05-26'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: 0.08350000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.904
+    true_std: 0.057
+    value_gap_source_arxiv: '2205.13328'
+    value_gap_source_title: How Powerful are $K$-hop Message Passing Graph Neural
+      Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08350000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.904
+    sort_std: 0.057
+    global_rank: 135
+    paper_rank: 537
+    rank_delta: 402
+    rank_delta_abs: 402
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Coloring graph neural networks for node disambiguation
+    comparison_source_arxiv: '1912.06058'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.872
+    std: 0.0511
+    paper_value: 0.872
+    paper_std: 0.0511
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.857
+    at_pub_std: 0.066
+    at_pub_source_arxiv: '1901.01343'
+    at_pub_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    at_pub_source_date_iso: '2019-01-05'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2023-08-16'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.015000000000000013
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.891
+    true_std: 0.058
+    value_gap_source_arxiv: '2308.08235'
+    value_gap_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.019000000000000017
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.891
+    sort_std: 0.058
+    global_rank: 239
+    paper_rank: 341
+    rank_delta: 102
+    rank_delta_abs: 102
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CapsGNN
+    model_key: capsgnn
+    model_plain: CapsGNN
+    value: 0.8667
+    std: 0.0688
+    paper_value: 0.8667
+    paper_std: 0.0688
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.8667
+    at_pub_std: 0.0688
+    at_pub_source_arxiv: '1909.11855'
+    at_pub_source_title: Universal Graph Transformer Self-Attention Networks
+    at_pub_source_date_iso: '2019-09-26'
+    at_pub_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.8867
+    true_std: 0.0688
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.020000000000000018
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8867
+    sort_std: 0.0688
+    global_rank: 268
+    paper_rank: 364
+    rank_delta: 96
+    rank_delta_abs: 96
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AWE
+    model_key: awe
+    model_plain: AWE
+    value: 0.8787
+    std: 0.0976
+    paper_value: 0.8787
+    paper_std: 0.0976
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.8787
+    at_pub_std: 0.0976
+    at_pub_source_arxiv: '1805.11921'
+    at_pub_source_title: Anonymous Walk Embeddings
+    at_pub_source_date_iso: '2018-05-30'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8787
+    true_std: 0.0976
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8787
+    sort_std: 0.0976
+    global_rank: 304
+    paper_rank: 304
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGK
+    model_key: dgk
+    model_plain: DGK
+    value: 0.8744
+    std: 0.0272
+    paper_value: 0.8744
+    paper_std: 0.0272
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.8744
+    at_pub_std: 0.027
+    at_pub_source_arxiv: '1905.11136'
+    at_pub_source_title: Provably Powerful Graph Networks
+    at_pub_source_date_iso: '2019-05-27'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8744
+    true_std: 0.0272
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8744
+    sort_std: 0.0272
+    global_rank: 324
+    paper_rank: 324
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: dgcnn
+    model_plain: DGCNN
+    value: 0.8583
+    std: 0.0166
+    paper_value: 0.8583
+    paper_std: 0.0166
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.8583
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '1905.11136'
+    at_pub_source_title: Provably Powerful Graph Networks
+    at_pub_source_date_iso: '2019-05-27'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8583
+    true_std: 0.0166
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8583
+    sort_std: 0.0166
+    global_rank: 387
+    paper_rank: 387
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GK
+    model_key: gk
+    model_plain: GK
+    value: 0.8158
+    std: 0.0211
+    paper_value: 0.8158
+    paper_std: 0.0211
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.817
+    at_pub_std: 0.021
+    at_pub_source_arxiv: '2006.05582'
+    at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
+    at_pub_source_date_iso: '2020-06-01'
+    at_pub_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2022-03-15'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.0011999999999999789
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.835
+    true_std: 0.006
+    value_gap_source_arxiv: '2203.07691'
+    value_gap_source_title: Supervised Contrastive Learning with Structure Inference
+      for Graph Classification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.019199999999999995
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.835
+    sort_std: 0.006
+    global_rank: 480
+    paper_rank: 554
+    rank_delta: 74
+    rank_delta_abs: 74
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: EigenPooling
+    model_key: eigenpooling
+    model_plain: EigenPooling
+    value: 0.795
+    std: null
+    paper_value: 0.795
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.795
+    true_std: null
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.795
+    sort_std: null
+    global_rank: 607
+    paper_rank: 607
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HaarPool
+    model_key: haarpool
+    model_plain: HaarPool
+    value: 0.776
+    std: 0.0894
+    paper_value: 0.776
+    paper_std: 0.0894
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.776
+    true_std: 0.0894
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.776
+    sort_std: 0.0894
+    global_rank: 640
+    paper_rank: 640
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: NCI1
+  rows:
+  - model: Diverse B12C3
+    model_key: msa-aud
+    model_plain: Diverse B12C3
+    value: 0.969
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2312.10943'
+    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
+      and Diversity
+    date: Dec 18, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.969
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diverse B12C3
+    model_key: msa-au
+    model_plain: Diverse B12C3
+    value: 0.966
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.10943'
+    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
+      and Diversity
+    date: Dec 18, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.966
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Diverse B12C3
+    model_key: msa-ad
+    model_plain: Diverse B12C3
+    value: 0.963
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.10943'
+    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
+      and Diversity
+    date: Dec 18, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.963
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: WL
+    model_key: wl
+    model_plain: WL
+    value: 0.8219
+    std: 0.0018
+    paper_value: 0.8219
+    paper_std: 0.0018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.859
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1410.3314'
+    at_pub_source_title: Propagation Kernels
+    at_pub_source_date_iso: '2014-10-13'
+    at_pub_source_date_label: '2014'
+    value_gap_source_date_iso: '2022-05-28'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: 0.03710000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.86
+    true_std: 0.018
+    value_gap_source_arxiv: '2205.14368'
+    value_gap_source_title: Going Deeper into Permutation-Sensitive Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03810000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.86
+    sort_std: 0.018
+    global_rank: 13
+    paper_rank: 118
+    rank_delta: 105
+    rank_delta_abs: 105
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Propagation Kernels
+    comparison_source_arxiv: '1410.3314'
+    is_best: false
+    is_std_outlier: false
+  - model: CapsNets
+    model_key: capsnets
+    model_plain: CapsNets
+    value: 0.8487
+    std: 0.0168
+    paper_value: 0.8487
+    paper_std: 0.0168
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8487
+    true_std: 0.0168
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8487
+    sort_std: 0.0168
+    global_rank: 27
+    paper_rank: 27
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8365
+    std: 0.0169
+    paper_value: 0.8365
+    paper_std: 0.0169
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.802
+    at_pub_std: 0.02
+    at_pub_source_arxiv: '1905.13192'
+    at_pub_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
+      with Graph Kernels'
+    at_pub_source_date_iso: '2019-05-30'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2021-07-08'
+    value_gap_source_date_label: NeurIPS 2021
+    gap_vs_at_pub: 0.034499999999999975
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.84
+    true_std: null
+    value_gap_source_arxiv: '2107.04086'
+    value_gap_source_title: Robust Counterfactual Explanations on Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0034999999999999476
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.84
+    sort_std: null
+    global_rank: 39
+    paper_rank: 47
+    rank_delta: 8
+    rank_delta_abs: 8
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.827
+    std: 0.017
+    paper_value: 0.827
+    paper_std: 0.017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.827
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '1905.11136'
+    at_pub_source_title: Provably Powerful Graph Networks
+    at_pub_source_date_iso: '2019-05-27'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2023-10-03'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.8365
+    true_std: 0.0201
+    value_gap_source_arxiv: '2310.01794'
+    value_gap_source_title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based
+      Gnn Explainers through In-depth Benchmarking'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.009500000000000064
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8365
+    sort_std: 0.0201
+    global_rank: 48
+    paper_rank: 92
+    rank_delta: 44
+    rank_delta_abs: 44
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GFN
+    model_key: gfn
+    model_plain: GFN
+    value: 0.8277
+    std: 0.0149
+    paper_value: 0.8277
+    paper_std: 0.0149
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8277
+    true_std: 0.0149
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8277
+    sort_std: 0.0149
+    global_rank: 90
+    paper_rank: 90
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCAPS-CNN
+    model_key: gcaps-cnn
+    model_plain: GCAPS-CNN
+    value: 0.8272
+    std: 0.0238
+    paper_value: 0.8272
+    paper_std: 0.0238
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.8272
+    at_pub_std: 0.0238
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8272
+    true_std: 0.0238
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8272
+    sort_std: 0.0238
+    global_rank: 92
+    paper_rank: 92
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGK
+    model_key: dgk
+    model_plain: DGK
+    value: 0.8031
+    std: 0.0046
+    paper_value: 0.8031
+    paper_std: 0.0046
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.8031
+    at_pub_std: 0.0046
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8031
+    true_std: 0.0046
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8031
+    sort_std: 0.0046
+    global_rank: 208
+    paper_rank: 208
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HaarPool
+    model_key: haarpool
+    model_plain: HaarPool
+    value: 0.8017
+    std: 0.0229
+    paper_value: 0.8017
+    paper_std: 0.0229
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8017
+    true_std: 0.0229
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8017
+    sort_std: 0.0229
+    global_rank: 217
+    paper_rank: 217
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGPool
+    model_key: sagpool
+    model_plain: SAGPool
+    value: 0.6745
+    std: 0.0111
+    paper_value: 0.6745
+    paper_std: 0.0111
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7788
+    at_pub_std: 0.0159
+    at_pub_source_arxiv: '2009.05923'
+    at_pub_source_title: Contrastive Self-supervised Learning for Graph Classification
+    at_pub_source_date_iso: '2020-09-13'
+    at_pub_source_date_label: AAAI 2020
+    value_gap_source_date_iso: '2023-04-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.10430000000000006
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.791
+    true_std: 0.03
+    value_gap_source_arxiv: '2304.01575'
+    value_gap_source_title: The expressive power of pooling in Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11650000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.791
+    sort_std: 0.03
+    global_rank: 260
+    paper_rank: 508
+    rank_delta: 248
+    rank_delta_abs: 248
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Contrastive Self-supervised Learning for Graph Classification
+    comparison_source_arxiv: '2009.05923'
+    is_best: false
+    is_std_outlier: false
+  - model: PSCN
+    model_key: pscn
+    model_plain: PSCN
+    value: 0.7634
+    std: 0.0168
+    paper_value: 0.7634
+    paper_std: 0.0168
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7859
+    at_pub_std: null
+    at_pub_source_arxiv: '1704.02901'
+    at_pub_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    at_pub_source_date_iso: '2017-04-10'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2017-04-10'
+    value_gap_source_date_label: '2017'
+    gap_vs_at_pub: 0.022500000000000075
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7859
+    true_std: null
+    value_gap_source_arxiv: '1704.02901'
+    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.022500000000000075
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7859
+    sort_std: null
+    global_rank: 293
+    paper_rank: 384
+    rank_delta: 91
+    rank_delta_abs: 91
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
+      Networks on Graphs
+    comparison_source_arxiv: '1704.02901'
+    is_best: false
+    is_std_outlier: false
+  - model: CapsGNN
+    model_key: capsgnn
+    model_plain: CapsGNN
+    value: 0.7835
+    std: 0.0155
+    paper_value: 0.7835
+    paper_std: 0.0155
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-01'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.784
+    true_std: 0.016
+    value_gap_source_arxiv: '2202.00529'
+    value_gap_source_title: Molecular Representation Learning via Heterogeneous Motif
+      Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.000500000000000056
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.784
+    sort_std: 0.016
+    global_rank: 302
+    paper_rank: 304
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ASAP
+    model_key: asap
+    model_plain: ASAP
+    value: 0.7148
+    std: 0.0042
+    paper_value: 0.7148
+    paper_std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7821
+    at_pub_std: 0.0175
+    at_pub_source_arxiv: '2010.00238'
+    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    at_pub_source_date_iso: '2020-10-01'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-10-01'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.06730000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7821
+    true_std: 0.0175
+    value_gap_source_arxiv: '2010.00238'
+    value_gap_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06730000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7821
+    sort_std: 0.0175
+    global_rank: 309
+    paper_rank: 468
+    rank_delta: 159
+    rank_delta_abs: 159
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    comparison_source_arxiv: '2010.00238'
+    is_best: false
+    is_std_outlier: false
+  - model: EigenPooling
+    model_key: eigenpooling
+    model_plain: EigenPooling
+    value: 0.77
+    std: null
+    paper_value: 0.77
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.77
+    true_std: null
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.77
+    sort_std: null
+    global_rank: 363
+    paper_rank: 363
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: dgcnn
+    model_plain: DGCNN
+    value: 0.7444
+    std: 0.0047
+    paper_value: 0.7444
+    paper_std: 0.0047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.765
+    at_pub_std: 0.019
+    at_pub_source_arxiv: '2009.10564'
+    at_pub_source_title: 'GraphCrop: Subgraph Cropping for Graph Classification'
+    at_pub_source_date_iso: '2020-09-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-09-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.020600000000000063
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.765
+    true_std: 0.019
+    value_gap_source_arxiv: '2009.10564'
+    value_gap_source_title: 'GraphCrop: Subgraph Cropping for Graph Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.020600000000000063
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.765
+    sort_std: 0.019
+    global_rank: 377
+    paper_rank: 426
+    rank_delta: 49
+    rank_delta_abs: 49
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GK
+    model_key: gk
+    model_plain: GK
+    value: 0.6249
+    std: 0.0027
+    paper_value: 0.6249
+    paper_std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.625
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2009.06211'
+    at_pub_source_title: Implicit Graph Neural Networks
+    at_pub_source_date_iso: '2020-09-14'
+    at_pub_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2024-01-29'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 9.999999999998899e-05
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.66
+    true_std: 0.001
+    value_gap_source_arxiv: '2401.16011'
+    value_gap_source_title: 'GPS: graph contrastive learning via multi-scale augmented
+      views from adversarial pooling'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03510000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.66
+    sort_std: 0.001
+    global_rank: 518
+    paper_rank: 538
+    rank_delta: 20
+    rank_delta_abs: 20
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: PROTEINS
+  rows:
+  - model: 3WLGNN
+    model_key: gmn
+    model_plain: 3WLGNN
+    value: 0.8225
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8225
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: 3WLGNN
+    model_key: ci-gnn
+    model_plain: 3WLGNN
+    value: 0.82
+    std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2301.01642'
+    title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network for Interpretable
+      Brain Network-Based Psychiatric Diagnosis'
+    date: Jan 4, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-04'
+    venue: Neural Networks
+    codebase_url: https://github.com/ZKZ-Brain/CI-GNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.82
+    sort_std: 0.02
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: 3WLGNN
+    model_key: diffpool+gpl
+    model_plain: 3WLGNN
+    value: 0.8196
+    std: 0.0286
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.11361'
+    title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
+      of Graph Neural Networks'
+    date: Jul 16, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-16'
+    venue: Applied intelligence (Boston)
+    codebase_url: https://github.com/PreckLi/graph_prompt_learning
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8196
+    sort_std: 0.0286
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DiffPool
+    model_key: diffpool
+    model_plain: DiffPool
+    value: 0.7625
+    std: null
+    paper_value: 0.7625
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7625
+    at_pub_std: null
+    at_pub_source_arxiv: '2002.09518'
+    at_pub_source_title: Memory-Based Graph Networks
+    at_pub_source_date_iso: '2020-02-21'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-07-16'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8161
+    true_std: 0.0232
+    value_gap_source_arxiv: '2407.11361'
+    value_gap_source_title: 'Graph Structure Prompt Learning: A Novel Methodology
+      to Improve Performance of Graph Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05360000000000009
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8161
+    sort_std: 0.0232
+    global_rank: 4
+    paper_rank: 119
+    rank_delta: 115
+    rank_delta_abs: 115
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.762
+    std: 0.028
+    paper_value: 0.762
+    paper_std: 0.028
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.762
+    at_pub_std: 0.028
+    at_pub_source_arxiv: '1905.12560'
+    at_pub_source_title: On the Equivalence between Graph Isomorphism Testing and
+      Function Approximation with GNNs
+    at_pub_source_date_iso: '2019-05-29'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2023-12-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.788
+    true_std: 0.041
+    value_gap_source_arxiv: '2312.08671'
+    value_gap_source_title: 'Permutation-Invariant graph partitioning: How graph neural
+      networks capture structural interactions?'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.026000000000000023
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.788
+    sort_std: 0.041
+    global_rank: 23
+    paper_rank: 122
+    rank_delta: 99
+    rank_delta_abs: 99
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: EigenPooling
+    model_key: eigenpooling
+    model_plain: EigenPooling
+    value: 0.766
+    std: null
+    paper_value: 0.766
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.766
+    true_std: null
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.766
+    sort_std: null
+    global_rank: 88
+    paper_rank: 88
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GFN
+    model_key: gfn
+    model_plain: GFN
+    value: 0.7646
+    std: 0.0406
+    paper_value: 0.7646
+    paper_std: 0.0406
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7646
+    at_pub_std: 0.0406
+    at_pub_source_arxiv: '1909.11855'
+    at_pub_source_title: Universal Graph Transformer Self-Attention Networks
+    at_pub_source_date_iso: '2019-09-26'
+    at_pub_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7646
+    true_std: 0.0406
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7646
+    sort_std: 0.0406
+    global_rank: 99
+    paper_rank: 99
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCAPS-CNN
+    model_key: gcaps-cnn
+    model_plain: GCAPS-CNN
+    value: 0.764
+    std: 0.0417
+    paper_value: 0.764
+    paper_std: 0.0417
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.764
+    at_pub_std: 0.0417
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.764
+    true_std: 0.0417
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.764
+    sort_std: 0.0417
+    global_rank: 106
+    paper_rank: 106
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CapsGNN
+    model_key: capsgnn
+    model_plain: CapsGNN
+    value: 0.7628
+    std: 0.0363
+    paper_value: 0.7628
+    paper_std: 0.0363
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.763
+    at_pub_std: 0.036
+    at_pub_source_arxiv: '2006.09430'
+    at_pub_source_title: Wasserstein Embedding for Graph Learning
+    at_pub_source_date_iso: '2020-06-16'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2020-06-16'
+    value_gap_source_date_label: ICLR 2020
+    gap_vs_at_pub: 0.00019999999999997797
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.763
+    true_std: 0.036
+    value_gap_source_arxiv: '2006.09430'
+    value_gap_source_title: Wasserstein Embedding for Graph Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00019999999999997797
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.763
+    sort_std: 0.036
+    global_rank: 114
+    paper_rank: 116
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: dgcnn
+    model_plain: DGCNN
+    value: 0.7554
+    std: 0.0094
+    paper_value: 0.7554
+    paper_std: 0.0094
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7554
+    at_pub_std: 0.0094
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2021-09-23'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7626
+    true_std: null
+    value_gap_source_arxiv: '2109.11338'
+    value_gap_source_title: Orthogonal Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.007199999999999984
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7626
+    sort_std: null
+    global_rank: 119
+    paper_rank: 178
+    rank_delta: 59
+    rank_delta_abs: 59
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7565
+    std: 0.0324
+    paper_value: 0.7565
+    paper_std: 0.0324
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.76
+    at_pub_std: 0.032
+    at_pub_source_arxiv: '1909.11855'
+    at_pub_source_title: Universal Graph Transformer Self-Attention Networks
+    at_pub_source_date_iso: '2019-09-26'
+    at_pub_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2023-01-04'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.0035000000000000586
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.76
+    true_std: 0.03
+    value_gap_source_arxiv: '2301.01642'
+    value_gap_source_title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network
+      for Interpretable Brain Network-Based Psychiatric Diagnosis'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0035000000000000586
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.76
+    sort_std: 0.03
+    global_rank: 135
+    paper_rank: 170
+    rank_delta: 35
+    rank_delta_abs: 35
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGPool
+    model_key: sagpool
+    model_plain: SAGPool
+    value: 0.7186
+    std: 0.0097
+    paper_value: 0.7186
+    paper_std: 0.0097
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7186
+    at_pub_std: 0.0097
+    at_pub_source_arxiv: '1909.11855'
+    at_pub_source_title: Universal Graph Transformer Self-Attention Networks
+    at_pub_source_date_iso: '2019-09-26'
+    at_pub_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2022-05-01'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7595
+    true_std: 0.0452
+    value_gap_source_arxiv: '2205.15068'
+    value_gap_source_title: Embedding Graphs on Grassmann Manifold
+    value_gap_source_is_current_paper: false
+    value_gap: 0.040899999999999936
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7595
+    sort_std: 0.0452
+    global_rank: 143
+    paper_rank: 382
+    rank_delta: 239
+    rank_delta_abs: 239
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PSCN
+    model_key: pscn
+    model_plain: PSCN
+    value: 0.75
+    std: 0.0251
+    paper_value: 0.75
+    paper_std: 0.0251
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7589
+    at_pub_std: 0.0276
+    at_pub_source_arxiv: '1904.05003'
+    at_pub_source_title: 'Semi-Supervised Graph Classification: A Hierarchical Graph
+      Perspective'
+    at_pub_source_date_iso: '2019-04-10'
+    at_pub_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2019-04-10'
+    value_gap_source_date_label: WWW 2019
+    gap_vs_at_pub: 0.008900000000000019
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7589
+    true_std: 0.0276
+    value_gap_source_arxiv: '1904.05003'
+    value_gap_source_title: 'Semi-Supervised Graph Classification: A Hierarchical
+      Graph Perspective'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.008900000000000019
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7589
+    sort_std: 0.0276
+    global_rank: 151
+    paper_rank: 232
+    rank_delta: 81
+    rank_delta_abs: 81
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGK
+    model_key: dgk
+    model_plain: DGK
+    value: 0.7568
+    std: 0.0054
+    paper_value: 0.7568
+    paper_std: 0.0054
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7568
+    at_pub_std: 0.0255
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7568
+    true_std: 0.005
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7568
+    sort_std: 0.005
+    global_rank: 169
+    paper_rank: 169
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: WL
+    model_key: wl
+    model_plain: WL
+    value: 0.7468
+    std: 0.0049
+    paper_value: 0.7468
+    paper_std: 0.0049
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.756
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '1606.01141'
+    at_pub_source_title: On Valid Optimal Assignment Kernels and Applications to Graph
+      Classification
+    at_pub_source_date_iso: '2016-06-03'
+    at_pub_source_date_label: NeurIPS 2016
+    value_gap_source_date_iso: '2016-06-03'
+    value_gap_source_date_label: NeurIPS 2016
+    gap_vs_at_pub: 0.009199999999999986
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.756
+    true_std: 0.004
+    value_gap_source_arxiv: '1606.01141'
+    value_gap_source_title: On Valid Optimal Assignment Kernels and Applications to
+      Graph Classification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.009199999999999986
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.756
+    sort_std: 0.004
+    global_rank: 173
+    paper_rank: 260
+    rank_delta: 87
+    rank_delta_abs: 87
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: On Valid Optimal Assignment Kernels and Applications
+      to Graph Classification
+    comparison_source_arxiv: '1606.01141'
+    is_best: false
+    is_std_outlier: false
+  - model: ASAP
+    model_key: asap
+    model_plain: ASAP
+    value: 0.7419
+    std: 0.0079
+    paper_value: 0.7419
+    paper_std: 0.0079
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7419
+    at_pub_std: 0.0079
+    at_pub_source_arxiv: '1911.07979'
+    at_pub_source_title: 'ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical
+      Graph Representations'
+    at_pub_source_date_iso: '2019-11-18'
+    at_pub_source_date_label: AAAI 2019
+    value_gap_source_date_iso: '2021-08-24'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7493
+    true_std: 0.0357
+    value_gap_source_arxiv: '2108.10587'
+    value_gap_source_title: Pooling Architecture Search for Graph Classification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.007399999999999962
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7493
+    sort_std: 0.0357
+    global_rank: 243
+    paper_rank: 291
+    rank_delta: 48
+    rank_delta_abs: 48
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HaarPool
+    model_key: haarpool
+    model_plain: HaarPool
+    value: 0.7323
+    std: 0.0251
+    paper_value: 0.7323
+    paper_std: 0.0251
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7323
+    true_std: 0.0251
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7323
+    sort_std: 0.0251
+    global_rank: 335
+    paper_rank: 335
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CliquePool
+    model_key: cliquepool
+    model_plain: CliquePool
+    value: 0.7259
+    std: null
+    paper_value: 0.7259
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7259
+    at_pub_std: null
+    at_pub_source_arxiv: '2002.09518'
+    at_pub_source_title: Memory-Based Graph Networks
+    at_pub_source_date_iso: '2020-02-21'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2020-02-21'
+    value_gap_source_date_label: ICLR 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7259
+    true_std: null
+    value_gap_source_arxiv: '2002.09518'
+    value_gap_source_title: Memory-Based Graph Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7259
+    sort_std: null
+    global_rank: 357
+    paper_rank: 357
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GK
+    model_key: gk
+    model_plain: GK
+    value: 0.7167
+    std: 0.0055
+    paper_value: 0.7167
+    paper_std: 0.0055
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.7167
+    at_pub_std: 0.0055
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2020-12-16'
+    value_gap_source_date_label: AAAI 2020
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7167
+    true_std: 0.0055
+    value_gap_source_arxiv: '2012.08734'
+    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7167
+    sort_std: 0.0055
+    global_rank: 390
+    paper_rank: 390
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+results_grouped:
+- benchmark: TU Dortmund
+  datasets:
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+datasets_by_scope:
+- scope: graph-level
+  label: Graph-level
+  benchmarks:
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: MUTAG
+      dataset_slug: mutag
+    - dataset: NCI1
+      dataset_slug: nci1
+    - dataset: PROTEINS
+      dataset_slug: proteins
+    - dataset: ENZYMES
+      dataset_slug: enzymes
+    - dataset: D&D
+      dataset_slug: d-d
+single_proposed_model: CapsNets
+---
+

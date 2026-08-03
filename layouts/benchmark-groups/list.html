@@ -1,0 +1,73 @@
+{{ define "main" }}
+{{ $groups := hugo.Data.benchmarks }}
+{{ $datasetPages := dict }}
+{{ range where .Site.RegularPages "Section" "datasets" }}
+  {{ $datasetPages = merge $datasetPages (dict .Params.slug .) }}
+{{ end }}
+{{ $groupCount := len $groups }}
+{{ $datasetCount := 0 }}
+{{ $resultCount := 0 }}
+{{ $paperIds := slice }}
+{{ range $groups }}
+  {{ $datasetCount = add $datasetCount (len .datasets) }}
+  {{ range .datasets }}
+    {{ $resultCount = add $resultCount .result_count }}
+    {{ with index $datasetPages .slug }}
+      {{ range .Params.variants }}
+        {{ range .rows }}
+          {{ with .arxiv_id }}
+            {{ $paperIds = $paperIds | append . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $paperCount := len ($paperIds | uniq) }}
+
+<div class="overview-hero">
+  <p class="overview-kicker">Overview</p>
+  <h1>{{ .Title }}</h1>
+  <div class="overview-intro">{{ .Content }}</div>
+  <div class="dataset-stats overview-stats">
+    <a class="stat-item stat-link" href="{{ "benchmark-groups/" | relURL }}"><span class="stat-value">{{ $groupCount }}</span><span class="stat-label">groups</span></a>
+    <a class="stat-item stat-link" href="{{ "datasets/" | relURL }}"><span class="stat-value">{{ $datasetCount }}</span><span class="stat-label">datasets</span></a>
+    <a class="stat-item stat-link" href="{{ "papers/" | relURL }}"><span class="stat-value">{{ $paperCount }}</span><span class="stat-label">papers</span></a>
+    <a class="stat-item stat-link" href="{{ "results/" | relURL }}"><span class="stat-value">{{ $resultCount }}</span><span class="stat-label">results</span></a>
+  </div>
+</div>
+
+<section class="overview-section">
+  <div class="overview-grid" id="benchmark-groups-container" data-benchmark-item=".benchmark-overview-card">
+    {{ range $groups }}
+    {{ $recentPerDataset := float (.recent_results_per_dataset | default 0) }}
+    {{ $totalResults := .total_result_count | default 0 }}
+    <article class="overview-card benchmark-overview-card benchmark-sort-item"
+      data-is-legacy="{{ if .is_legacy }}1{{ else }}0{{ end }}">
+      <h2>{{ .name }}{{ if .is_legacy }} <span class="badge legacy-badge" title="Established benchmark suite with less recent leaderboard activity">Legacy</span>{{ end }}</h2>
+      {{ with .description }}<p class="overview-card-copy">{{ . }}</p>{{ end }}
+      <div class="overview-card-meta">
+        <span class="badge muted">{{ len .datasets }} dataset{{ if ne (len .datasets) 1 }}s{{ end }}</span>
+        <span class="badge muted">{{ printf "%.1f" $recentPerDataset }} recent results per dataset</span>
+        <span class="badge muted">{{ $totalResults }} total results</span>
+      </div>
+      {{ if and .source_papers (le (len .source_papers) 3) }}
+      <p class="overview-card-intro">
+        Sources:
+        {{ range $index, $source := .source_papers }}{{ if gt $index 0 }}, {{ end }}<a href="{{ if $source.is_local }}{{ $source.url | relURL }}{{ else }}{{ $source.url }}{{ end }}" title="{{ $source.role }}"><strong>{{ $source.title }}</strong></a>{{ end }}.
+      </p>
+      {{ else if .no_single_introduction_paper }}
+      <p class="overview-card-intro">No single introduction paper.</p>
+      {{ end }}
+      <p class="home-benchmark-datasets">
+        {{ range $index, $dataset := first 4 .datasets }}{{ if gt $index 0 }}, {{ end }}<a href="{{ printf "datasets/%s/" $dataset.slug | relURL }}">{{ $dataset.name }}</a>{{ end }}
+        {{ if gt (len .datasets) 4 }} and {{ sub (len .datasets) 4 }} more{{ end }}
+      </p>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ define "scripts" }}
+{{ end }}

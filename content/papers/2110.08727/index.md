@@ -1,0 +1,1291 @@
+---
+title: 'Graph-less Neural Networks: Teaching Old MLPs New Tricks via Distillation'
+arxiv_id: '2110.08727'
+source_url: ''
+authors:
+- name: Shichang Zhang
+  orcid: null
+  s2_author_id: '2145408511'
+  s2_url: null
+- name: Yozen Liu
+  orcid: null
+  s2_author_id: '152891495'
+  s2_url: null
+- name: Yizhou Sun
+  orcid: null
+  s2_author_id: '2279734673'
+  s2_url: null
+- name: Neil Shah
+  orcid: null
+  s2_author_id: '145474474'
+  s2_url: null
+published_date: Oct 17, 2021
+published_date_iso: '2021-10-17'
+published_venue: ICLR 2021
+published_conference: ICLR 2021
+published_conference_short: ICLR
+published_conference_slug: iclr
+abstract: Graph Neural Networks (GNNs) are popular for graph machine learning and
+  have shown great results on wide node classification tasks. Yet, they are less popular
+  for practical deployments in the industry owing to their scalability challenges
+  incurred by data dependency. Namely, GNN inference depends on neighbor nodes multiple
+  hops away from the target, and fetching them burdens latency-constrained applications.
+  Existing inference acceleration methods like pruning and quantization can speed
+  up GNNs by reducing Multiplication-and-ACcumulation (MAC) operations, but the improvements
+  are limited given the data dependency is not resolved. Conversely, multi-layer perceptrons
+  (MLPs) have no graph dependency and infer much faster than GNNs, even though they
+  are less accurate than GNNs for node classification in general. Motivated by these
+  complementary strengths and weaknesses, we bring GNNs and MLPs together via knowledge
+  distillation (KD). Our work shows that the performance of MLPs can be improved by
+  large margins with GNN KD. We call the distilled MLPs Graph-less Neural Networks
+  (GLNN s) as they have no inference graph dependency. We show that GLNN s with competitive
+  accuracy infer faster than GNNs by 146-273 and faster than other acceleration methods
+  by 14-27. Under a production setting involving both transductive and inductive predictions
+  across 7 datasets, GLNN accuracies improve over stand-alone MLPs by 12.36\
+codebase_url: https://github.com/snap-research/graphless-neural-networks
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: method
+proposed_models:
+- GLNN
+mrr: 0.0033
+adjusted_mrr: 0.0033
+mrr_dataset_count: 4
+benchmark_categories:
+- Classic
+benchmark_coverage:
+- benchmark: Classic
+  benchmark_slug: classic
+  evaluated: 4
+  total: 12
+task_categories:
+- node_classification
+experiment_scopes:
+- node-level
+results:
+- &id004
+  dataset: Amazon-Computers
+  rows:
+  - model: Matrix-valued
+    model_key: graphtarif
+    model_plain: Matrix-valued
+    value: 0.9461
+    std: 0.0017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9461
+    sort_std: 0.0017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Matrix-valued
+    model_key: gcn
+    model_plain: Matrix-valued
+    value: 0.9412
+    std: 0.0008
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9412
+    sort_std: 0.0008
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Matrix-valued
+    model_key: gat
+    model_plain: Matrix-valued
+    value: 0.9398
+    std: 0.0022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9398
+    sort_std: 0.0022
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8297
+    std: 0.0216
+    paper_value: 0.8297
+    paper_std: 0.0216
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to amazon-computers (score=77)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive setting on A-computer
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.789
+    at_pub_std: 0.021
+    at_pub_source_arxiv: '2006.10222'
+    at_pub_source_title: Class-Attentive Diffusion Network for Semi-Supervised Classification
+    at_pub_source_date_iso: '2020-06-18'
+    at_pub_source_date_label: AAAI 2020
+    value_gap_source_date_iso: '2026-05-18'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.04069999999999996
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9351
+    true_std: 0.0006
+    value_gap_source_arxiv: '2605.20248'
+    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
+      in Node Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10540000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9351
+    sort_std: 0.0006
+    global_rank: 8
+    paper_rank: 421
+    rank_delta: 413
+    rank_delta_abs: 413
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GLNN
+    model_key: glnn
+    model_plain: GLNN
+    value: 0.8303
+    std: 0.0187
+    paper_value: 0.8303
+    paper_std: 0.0187
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to amazon-computers (score=77)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive setting on A-computer
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-02-14'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.875
+    true_std: 0.006
+    value_gap_source_arxiv: '2412.03864'
+    value_gap_source_title: Training MLPs on Graphs without Supervision
+    value_gap_source_is_current_paper: false
+    value_gap: 0.04469999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.875
+    sort_std: 0.006
+    global_rank: 284
+    paper_rank: 420
+    rank_delta: 136
+    rank_delta_abs: 136
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.678
+    std: 0.0106
+    paper_value: 0.678
+    paper_std: 0.0106
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to amazon-computers (score=77)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive setting on A-computer
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.8042
+    at_pub_std: 0.0073
+    at_pub_source_arxiv: '2011.10988'
+    at_pub_source_title: Adaptive Stacked Graph Filter
+    at_pub_source_date_iso: '2020-11-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2024-07-16'
+    value_gap_source_date_label: TMLR 2024
+    gap_vs_at_pub: 0.12619999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8463
+    true_std: null
+    value_gap_source_arxiv: '2407.11907'
+    value_gap_source_title: 'GraphFM: A generalist graph transformer that learns transferable
+      representations across diverse domains'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1683
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8463
+    sort_std: null
+    global_rank: 362
+    paper_rank: 518
+    rank_delta: 156
+    rank_delta_abs: 156
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Adaptive Stacked Graph Filter
+    comparison_source_arxiv: '2011.10988'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: CiteSeer
+  rows:
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: cna
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9575
+    std: 0.0058
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.04064'
+    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
+    date: Dec 5, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-05'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/ml-research/cna_modules
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9575
+    sort_std: 0.0058
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: is-gib
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.939
+    std: 0.0187
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2306.15902'
+    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
+      Generalization
+    date: Jun 28, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-28'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/YangLing0818/GraphOOD
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.939
+    sort_std: 0.0187
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: eerm
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9112
+    std: 0.0145
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2306.15902'
+    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
+      Generalization
+    date: Jun 28, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-28'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/YangLing0818/GraphOOD
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9112
+    sort_std: 0.0145
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GLNN
+    model_key: glnn
+    model_plain: GLNN
+    value: 0.7177
+    std: 0.020099999999999996
+    paper_value: 0.7177
+    paper_std: 0.020099999999999996
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive setting on Planetoid split (Yang et al. 2016)
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-13'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.74
+    true_std: 0.0002
+    value_gap_source_arxiv: '2307.06631'
+    value_gap_source_title: Frameless Graph Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: 0.022299999999999986
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.74
+    sort_std: 0.0002
+    global_rank: 221
+    paper_rank: 467
+    rank_delta: 246
+    rank_delta_abs: 246
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7033
+    std: 0.0197
+    paper_value: 0.7033
+    paper_std: 0.0197
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive setting on Planetoid split (Yang et al. 2016)
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.7171
+    at_pub_std: null
+    at_pub_source_arxiv: '2103.02885'
+    at_pub_source_title: 'Extract the Knowledge of Graph Neural Networks and Go Beyond
+      it: An Effective Knowledge Distillation Framework'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2024-01-28'
+    value_gap_source_date_label: IJCAI 2024
+    gap_vs_at_pub: 0.013799999999999923
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.7361
+    true_std: 0.019
+    value_gap_source_arxiv: '2401.15569'
+    value_gap_source_title: Efficient Tuning and Inference for Large Language Models
+      on Textual Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03279999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7361
+    sort_std: 0.019
+    global_rank: 245
+    paper_rank: 585
+    rank_delta: 340
+    rank_delta_abs: 340
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.5961
+    std: 0.0288
+    paper_value: 0.5961
+    paper_std: 0.0288
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive setting on Planetoid split (Yang et al. 2016)
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.7087
+    at_pub_std: null
+    at_pub_source_arxiv: '2010.00238'
+    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    at_pub_source_date_iso: '2020-10-01'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2025-08-24'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.11260000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7289
+    true_std: 0.001
+    value_gap_source_arxiv: '2508.17531'
+    value_gap_source_title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.13280000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7289
+    sort_std: 0.001
+    global_rank: 338
+    paper_rank: 788
+    rank_delta: 450
+    rank_delta_abs: 450
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    comparison_source_arxiv: '2010.00238'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id001
+  dataset: Cora
+  rows:
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: exphormer
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9635
+    std: 0.0019
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9635
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: sgformer
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9629
+    std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9629
+    sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: coral
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9574
+    std: 0.0039
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9574
+    sort_std: 0.0039
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GLNN
+    model_key: glnn
+    model_plain: GLNN
+    value: 0.8054
+    std: 0.0135
+    paper_value: 0.8054
+    paper_std: 0.0135
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive setting; Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split)
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-13'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.836
+    true_std: 0.0022
+    value_gap_source_arxiv: '2307.06631'
+    value_gap_source_title: Frameless Graph Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03059999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.836
+    sort_std: 0.0022
+    global_rank: 396
+    paper_rank: 648
+    rank_delta: 252
+    rank_delta_abs: 252
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.5922
+    std: 0.0131
+    paper_value: 0.5922
+    paper_std: 0.0131
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive setting; Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split)
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.7504
+    at_pub_std: 0.0197
+    at_pub_source_arxiv: '2106.06134'
+    at_pub_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    at_pub_source_date_iso: '2021-06-11'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2024-01-17'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.1582
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7768
+    true_std: null
+    value_gap_source_arxiv: '2401.09125'
+    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1846000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7768
+    sort_std: null
+    global_rank: 720
+    paper_rank: 849
+    rank_delta: 129
+    rank_delta_abs: 129
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Is Homophily a Necessity for Graph Neural Networks?
+    comparison_source_arxiv: '2106.06134'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: PubMed
+  rows:
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: sagn
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9517
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9517
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: mixhop (lo)
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9513
+    std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/QiaoYRan/LOGIN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9513
+    sort_std: 0.0038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_key: graphsage (lo)
+    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    value: 0.9511
+    std: 0.0036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/QiaoYRan/LOGIN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9511
+    sort_std: 0.0036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7539
+    std: 0.0209
+    paper_value: 0.7539
+    paper_std: 0.0209
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive setting on Planetoid split (Yang et al. 2016).
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.7736
+    at_pub_std: null
+    at_pub_source_arxiv: '2103.02885'
+    at_pub_source_title: 'Extract the Knowledge of Graph Neural Networks and Go Beyond
+      it: An Effective Knowledge Distillation Framework'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2025-06-08'
+    value_gap_source_date_label: TMLR 2025
+    gap_vs_at_pub: 0.01969999999999994
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8881
+    true_std: 0.0015
+    value_gap_source_arxiv: '2506.07168'
+    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
+      Annotation and Graph Alignment
+    value_gap_source_is_current_paper: false
+    value_gap: 0.13419999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8881
+    sort_std: 0.0015
+    global_rank: 109
+    paper_rank: 686
+    rank_delta: 577
+    rank_delta_abs: 577
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6755
+    std: 0.0231
+    paper_value: 0.6755
+    paper_std: 0.0231
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive setting on Planetoid split (Yang et al. 2016).
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: 0.8341
+    at_pub_std: null
+    at_pub_source_arxiv: '2010.00238'
+    at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    at_pub_source_date_iso: '2020-10-01'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-09-29'
+    value_gap_source_date_label: TMLR 2023
+    gap_vs_at_pub: 0.15859999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.869
+    true_std: 0.0074
+    value_gap_source_arxiv: '2310.00183'
+    value_gap_source_title: On the Equivalence of Graph Convolution and Mixup
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1935
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.869
+    sort_std: 0.0074
+    global_rank: 192
+    paper_rank: 752
+    rank_delta: 560
+    rank_delta_abs: 560
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-grained Semantics-aware Graph Neural Networks
+    comparison_source_arxiv: '2010.00238'
+    is_best: false
+    is_std_outlier: false
+  - model: GLNN
+    model_key: glnn
+    model_plain: GLNN
+    value: 0.7542
+    std: 0.0231
+    paper_value: 0.7542
+    paper_std: 0.0231
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive setting on Planetoid split (Yang et al. 2016).
+    date: Oct 17, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-17'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-06'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8027
+    true_std: 0.0036
+    value_gap_source_arxiv: '2405.03401'
+    value_gap_source_title: 'E2GNN: Efficient Graph Neural Network Ensembles for Semi-Supervised
+      Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.04849999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8027
+    sort_std: 0.0036
+    global_rank: 379
+    paper_rank: 685
+    rank_delta: 306
+    rank_delta_abs: 306
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+results_grouped:
+- benchmark: Classic
+  datasets:
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+datasets_by_scope:
+- scope: node-level
+  label: Node-level
+  benchmarks:
+  - benchmark: Classic
+    benchmark_slug: classic
+    datasets:
+    - dataset: Cora
+      dataset_slug: cora
+    - dataset: CiteSeer
+      dataset_slug: citeseer
+    - dataset: PubMed
+      dataset_slug: pubmed
+    - dataset: Amazon-Computers
+      dataset_slug: amazon-computers
+single_proposed_model: GLNN
+---
+

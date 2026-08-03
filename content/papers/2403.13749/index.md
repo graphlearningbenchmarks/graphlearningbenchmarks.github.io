@@ -1,0 +1,422 @@
+---
+title: 'Weisfeiler and Leman Go Loopy: A New Hierarchy for Graph Representational
+  Learning'
+arxiv_id: '2403.13749'
+source_url: ''
+authors:
+- name: Raffaele Paolino
+  orcid: null
+  s2_author_id: '2187930583'
+  s2_url: null
+- name: Sohir Maskey
+  orcid: null
+  s2_author_id: '2127602704'
+  s2_url: null
+- name: Pascal Welke
+  orcid: null
+  s2_author_id: '2305682691'
+  s2_url: null
+- name: Gitta Kutyniok
+  orcid: null
+  s2_author_id: '3125779'
+  s2_url: null
+published_date: Mar 20, 2024
+published_date_iso: '2024-03-20'
+published_venue: NeurIPS 2024
+published_conference: NeurIPS 2024
+published_conference_short: NeurIPS
+published_conference_slug: neurips
+abstract: We introduce $r$-loopy Weisfeiler-Leman ($r$-$ $WL), a novel hierarchy of
+  graph isomorphism tests and a corresponding GNN framework, $r$-$ $MPNN, that can
+  count cycles up to length $r+2$. Most notably, we show that $r$-$ $WL can count
+  homomorphisms of cactus graphs. This extends 1-WL, which can only count homomorphisms
+  of trees and, in fact, we prove that $r$-$ $WL is incomparable to $k$-WL for any
+  fixed $k$. We empirically validate the expressive and counting power of $r$-$ $MPNN
+  on several synthetic datasets and demonstrate the scalability and strong performance
+  on various real-world datasets, particularly on sparse graphs. Our code is available.
+codebase_url: https://github.com/RPaolino/loopy
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: method
+proposed_models:
+- GIN
+mrr: 0.0556
+adjusted_mrr: 0.0185
+mrr_dataset_count: 1
+benchmark_categories:
+- LRGB
+benchmark_coverage:
+- benchmark: LRGB
+  benchmark_slug: lrgb
+  evaluated: 1
+  total: 5
+task_categories:
+- graph_classification
+experiment_scopes:
+- graph-level
+results:
+- &id001
+  dataset: Peptides-func
+  rows:
+  - model: SAN+RWSE
+    model_key: s^2gcn
+    model_plain: SAN+RWSE
+    value: 0.7311
+    std: 0.0066
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.12732'
+    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    date: Nov 19, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-19'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7311
+    sort_std: 0.0066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.593
+    std: 0.0023
+    paper_value: 0.593
+    paper_std: 0.0023
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 12
+    source_ref: Kipf & Welling 2017
+    variant_inference_reason: 'dataset: fuzzy match to peptides-func (score=76)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test set results for FUNC task (AP)
+    date: Mar 20, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-20'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: 0.593
+    at_pub_std: 0.0023
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7261
+    true_std: 0.0011
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1331
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7261
+    sort_std: 0.0011
+    global_rank: 2
+    paper_rank: 114
+    rank_delta: 112
+    rank_delta_abs: 112
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SAN+RWSE
+    model_key: mpnns
+    model_plain: SAN+RWSE
+    value: 0.725
+    std: 0.0023
+    metric: AP
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2510.08450'
+    title: 'gLSTM: Mitigating Over-Squashing by Increasing Storage Capacity'
+    date: Oct 9, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-09'
+    venue: arXiv.org
+    codebase_url: https://github.com/HughBlayney/gLSTM
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.725
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.593
+    std: 0.0023
+    paper_value: 0.593
+    paper_std: 0.0023
+    metric: AP
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 12
+    source_ref: Hu* 2020
+    variant_inference_reason: 'dataset: fuzzy match to peptides-func (score=76)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test set results for FUNC task (AP)
+    date: Mar 20, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-20'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: 0.5498
+    at_pub_std: 0.0079
+    at_pub_source_arxiv: '2310.07430'
+    at_pub_source_title: Non-backtracking Graph Neural Networks
+    at_pub_source_date_iso: '2023-10-11'
+    at_pub_source_date_label: TMLR 2023
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.043200000000000016
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7059
+    true_std: 0.0089
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1129
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7059
+    sort_std: 0.0089
+    global_rank: 18
+    paper_rank: 114
+    rank_delta: 96
+    rank_delta_abs: 96
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Non-backtracking Graph Neural Networks
+    comparison_source_arxiv: '2310.07430'
+    is_best: false
+    is_std_outlier: false
+  - model: 7-ℓGIN
+    model_key: 7-ℓgin
+    model_plain: 7-ℓGIN
+    value: 0.657
+    std: 0.006
+    paper_value: 0.657
+    paper_std: 0.006
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 12
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to peptides-func (score=76)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test set results for FUNC task (AP)
+    date: Mar 20, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-20'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-20'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.657
+    true_std: 0.006
+    value_gap_source_arxiv: '2403.13749'
+    value_gap_source_title: 'Weisfeiler and Leman Go Loopy: A New Hierarchy for Graph
+      Representational Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.657
+    sort_std: 0.006
+    global_rank: 66
+    paper_rank: 66
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPR-GNN
+    model_key: gpr-gnn
+    model_plain: GPR-GNN
+    value: 0.5864
+    std: 0.0077
+    paper_value: 0.5864
+    paper_std: 0.0077
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 12
+    source_ref: Bresson et al. 2017
+    variant_inference_reason: 'dataset: fuzzy match to peptides-func (score=76)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test set results for FUNC task (AP)
+    date: Mar 20, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-20'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-20'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5864
+    true_std: 0.0077
+    value_gap_source_arxiv: '2403.13749'
+    value_gap_source_title: 'Weisfeiler and Leman Go Loopy: A New Hierarchy for Graph
+      Representational Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5864
+    sort_std: 0.0077
+    global_rank: 122
+    paper_rank: 122
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: AP
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: AP
+  paper_metrics:
+  - AP
+  metric: AP
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+results_grouped:
+- benchmark: LRGB
+  datasets:
+  - *id001
+datasets_by_scope:
+- scope: graph-level
+  label: Graph-level
+  benchmarks:
+  - benchmark: LRGB
+    benchmark_slug: lrgb
+    datasets:
+    - dataset: Peptides-func
+      dataset_slug: peptides-func
+single_proposed_model: GIN
+main_figure: /figures/2403.13749/main_figure.jpegoptim.jpg
+---
+

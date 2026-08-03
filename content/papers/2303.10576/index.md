@@ -1,0 +1,2161 @@
+---
+title: An Efficient Subgraph GNN with Provable Substructure Counting Power
+arxiv_id: '2303.10576'
+source_url: ''
+authors:
+- name: Zuoyu Yan
+  orcid: null
+  s2_author_id: '2783105'
+  s2_url: null
+- name: Junru Zhou
+  orcid: null
+  s2_author_id: '30887404'
+  s2_url: null
+- name: Liangcai Gao
+  orcid: null
+  s2_author_id: '2165982472'
+  s2_url: null
+- name: Zhi Tang
+  orcid: null
+  s2_author_id: '143830636'
+  s2_url: null
+- name: Muhan Zhang
+  orcid: null
+  s2_author_id: '1390814008'
+  s2_url: null
+published_date: Mar 19, 2023
+published_date_iso: '2023-03-19'
+published_venue: KDD 2023
+published_conference: KDD 2023
+published_conference_short: KDD
+published_conference_slug: kdd
+abstract: 'We investigate the enhancement of graph neural networks'' (GNNs) representation
+  power through their ability in substructure counting. Recent advances have seen
+  the adoption of subgraph GNNs, which partition an input graph into numerous subgraphs,
+  subsequently applying GNNs to each to augment the graph''s overall representation.
+  Despite their ability to identify various substructures, subgraph GNNs are hindered
+  by significant computational and memory costs. In this paper, we tackle a critical
+  question: Is it possible for GNNs to count substructures both efficiently and provably?
+  Our approach begins with a theoretical demonstration that the distance to rooted
+  nodes in subgraphs is key to boosting the counting power of subgraph GNNs. To avoid
+  the need for repetitively applying GNN across all subgraphs, we introduce precomputed
+  structural embeddings that encapsulate this crucial distance information. Experiments
+  validate that our proposed model retains the counting power of subgraph GNNs while
+  achieving significantly faster performance.'
+codebase_url: https://github.com/pkuyzy/ESC-GNN
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: method
+proposed_models:
+- ESC-GNN
+mrr: 0.0305
+adjusted_mrr: 0.0204
+mrr_dataset_count: 2
+benchmark_categories:
+- OGB
+- Quantum Chemistry
+- GNNBenchmark
+benchmark_coverage:
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
+- benchmark: Quantum Chemistry
+  benchmark_slug: quantum-chemistry
+  evaluated: 1
+  total: 3
+- benchmark: GNNBenchmark
+  benchmark_slug: gnnbenchmark
+  evaluated: 1
+  total: 6
+task_categories:
+- graph_classification
+- graph_regression
+experiment_scopes:
+- graph-level
+results:
+- &id003
+  dataset: CSL
+  rows:
+  - model: ESC-GNN
+    model_key: esc-gnn
+    model_plain: ESC-GNN
+    value: 1.0
+    std: null
+    paper_value: 1.0
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on synthetic CSL dataset
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 1.0
+    true_std: null
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 1.0
+    sort_std: null
+    global_rank: 22
+    paper_rank: 22
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: I^2-GNN
+    model_key: i^2-gnn
+    model_plain: I^2-GNN
+    value: 1.0
+    std: null
+    paper_value: 1.0
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on synthetic CSL dataset
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 1.0
+    true_std: null
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 1.0
+    sort_std: null
+    global_rank: 21
+    paper_rank: 21
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN (Abs(EigVecs))
+    model_key: ppgn
+    model_plain: GatedGCN (Abs(EigVecs))
+    value: 1.0
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.01214'
+    title: Revisiting Random Walks for Learning on Graphs
+    date: Jul 1, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-01'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/jw9730/random-walk
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 1.0
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN (Abs(EigVecs))
+    model_key: rw-agentnet
+    model_plain: GatedGCN (Abs(EigVecs))
+    value: 1.0
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2407.01214'
+    title: Revisiting Random Walks for Learning on Graphs
+    date: Jul 1, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-01'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/jw9730/random-walk
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 1.0
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN (Abs(EigVecs))
+    model_key: agentnet
+    model_plain: GatedGCN (Abs(EigVecs))
+    value: 1.0
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.01214'
+    title: Revisiting Random Walks for Learning on Graphs
+    date: Jul 1, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-01'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/jw9730/random-walk
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 1.0
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: 3-GNN
+    model_key: 3-gnn
+    model_plain: 3-GNN
+    value: 0.957
+    std: null
+    paper_value: 0.957
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on synthetic CSL dataset
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.957
+    true_std: null
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.957
+    sort_std: null
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MPNN
+    model_key: mpnn
+    model_plain: MPNN
+    value: 0.1
+    std: null
+    paper_value: 0.1
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on synthetic CSL dataset
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-15'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1
+    true_std: null
+    value_gap_source_arxiv: '2510.13615'
+    value_gap_source_title: 'Message Passing on the Edge: Towards Scalable and Expressive
+      GNNs'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1
+    sort_std: null
+    global_rank: 70
+    paper_rank: 70
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: QM9
+  is_multi_metric: true
+  rows:
+  - model: DimeNet++
+    model_key: equiformer v2
+    model_plain: DimeNet++
+    metric_values:
+    - 0.01
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.23086'
+    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
+    published_venue: ''
+    date: May 29, 2025
+    date_display: May 2025
+    date_iso: '2025-05-29'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 1
+    is_best: true
+    sort_value: 0.01
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: DimeNet++
+    model_key: eqgat
+    model_plain: DimeNet++
+    metric_values:
+    - 0.011
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.23086'
+    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
+    published_venue: ''
+    date: May 29, 2025
+    date_display: May 2025
+    date_iso: '2025-05-29'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 2
+    is_best: false
+    sort_value: 0.011
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: DimeNet++
+    model_key: equiformer
+    model_plain: DimeNet++
+    metric_values:
+    - 0.011
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.23086'
+    title: Equivariant Spherical Transformer for Efficient Molecular Modeling
+    published_venue: ''
+    date: May 29, 2025
+    date_display: May 2025
+    date_iso: '2025-05-29'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 3
+    is_best: false
+    sort_value: 0.011
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: 1-2-3-GNN
+    model_key: 1-2-3-gnn
+    model_plain: 1-2-3-GNN
+    metric_values:
+    - null
+    - 0.476
+    - 0.27
+    - 0.0427
+    - 0.0419
+    - 0.0469
+    - 0.0944
+    - 0.00337
+    - 0.00351
+    - 0.00019
+    - 0.111
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.062
+    sort_std: 0.001
+    true_value: 0.062
+    true_std: 0.001
+    paper_value: 0.476
+    paper_std: null
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.414
+    value_gap_source_arxiv: '2401.17752'
+    value_gap_source_title: 'PF-GNN: Differentiable particle filtering based approximation
+      of universal graph representations'
+    value_note: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-31'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2023
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 35
+  - model: ESC-GNN
+    model_key: esc-gnn
+    model_plain: ESC-GNN
+    metric_values:
+    - null
+    - 0.231
+    - 0.265
+    - 0.645
+    - 0.427
+    - 0.384
+    - 0.105
+    - 0.00221
+    - 0.00204
+    - 0.00033
+    - 0.38
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.231
+    sort_std: null
+    true_value: 0.231
+    true_std: null
+    paper_value: 0.231
+    paper_std: null
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
+    value_note: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2023
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 43
+  - model: NGNN
+    model_key: ngnn
+    model_plain: NGNN
+    metric_values:
+    - null
+    - 0.428
+    - 0.29
+    - 0.295
+    - 0.305
+    - 0.489
+    - 0.174
+    - 0.00265
+    - 0.00297
+    - 0.0002
+    - 0.361
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.428
+    sort_std: null
+    true_value: 0.428
+    true_std: null
+    paper_value: 0.428
+    paper_std: null
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2310.19142'
+    value_gap_source_title: 'MAG-GNN: Reinforcement Learning Boosted Graph Neural
+      Network'
+    value_note: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-29'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2023
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 68
+  - model: I^2-GNN
+    model_key: i^2-gnn
+    model_plain: I^2-GNN
+    metric_values:
+    - null
+    - 0.428
+    - 0.23
+    - 0.211
+    - 0.269
+    - 0.261
+    - 0.073
+    - 0.00261
+    - 0.00267
+    - 0.00014
+    - 0.206
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.428
+    sort_std: null
+    true_value: 0.428
+    true_std: null
+    paper_value: 0.428
+    paper_std: null
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2310.19142'
+    value_gap_source_title: 'MAG-GNN: Reinforcement Learning Boosted Graph Neural
+      Network'
+    value_note: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-29'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2023
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 69
+  - model: 1-GNN
+    model_key: 1-gnn
+    model_plain: 1-GNN
+    metric_values:
+    - null
+    - 0.493
+    - 0.78
+    - 2.32
+    - 2.23
+    - 1.94
+    - 0.27
+    - 0.00321
+    - 0.00355
+    - 0.00124
+    - 2.08
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.493
+    sort_std: null
+    true_value: 0.493
+    true_std: null
+    paper_value: 0.493
+    paper_std: null
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2111.06283'
+    value_gap_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness
+      of Graph Neural Networks'
+    value_note: ''
+    at_pub_value: 0.493
+    at_pub_std: null
+    at_pub_source_arxiv: '2111.06283'
+    at_pub_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness of
+      Graph Neural Networks'
+    at_pub_source_date_iso: '2021-11-11'
+    at_pub_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2021-11-11'
+    value_gap_source_date_label: NeurIPS 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    arxiv_id: ''
+    title: ''
+    published_venue: KDD 2023
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 78
+  metrics:
+  - gap
+  - mu
+  - alpha
+  - U0
+  - H
+  - G
+  - Cv
+  - HOMO
+  - LUMO
+  - zpve
+  - U
+  primary_metric: gap
+  rank_metric: mu
+  higher_is_better: false
+  experiment_scope: graph-level
+  dataset_primary_metric: gap
+  paper_metrics:
+  - mu
+  - alpha
+  - U0
+  - H
+  - G
+  - Cv
+  - HOMO
+  - LUMO
+  - zpve
+  - U
+  metric: mu
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
+- &id001
+  dataset: ogbg-molhiv
+  rows:
+  - model: MEG
+    model_key: clear
+    model_plain: MEG
+    value: 0.997
+    std: 0.002
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2210.08443'
+    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
+    date: Oct 16, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-16'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.997
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MEG
+    model_key: random
+    model_plain: MEG
+    value: 0.897
+    std: 0.004
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2210.08443'
+    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
+    date: Oct 16, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-16'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.897
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MEG
+    model_key: eg-ist
+    model_plain: MEG
+    value: 0.897
+    std: 0.004
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2210.08443'
+    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
+    date: Oct 16, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-16'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.897
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CIN
+    model_key: cin
+    model_plain: CIN
+    value: 0.8094
+    std: 0.0057
+    paper_value: 0.8094
+    paper_std: 0.0057
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: bodnar2021weisfeiler1
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: 0.8094
+    at_pub_std: 0.0057
+    at_pub_source_arxiv: '2210.13978'
+    at_pub_source_title: Boosting the Cycle Counting Power of Graph Neural Networks
+      with I$^2$-GNNs
+    at_pub_source_date_iso: '2022-10-22'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-12-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8094
+    true_std: 0.006
+    value_gap_source_arxiv: '2312.08671'
+    value_gap_source_title: 'Permutation-Invariant graph partitioning: How graph neural
+      networks capture structural interactions?'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8094
+    sort_std: 0.006
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GSN
+    model_key: gsn
+    model_plain: GSN
+    value: 0.7799
+    std: 0.0001
+    paper_value: 0.7799
+    paper_std: 0.0001
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: bouritsas2022improving
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: 0.8039
+    at_pub_std: 0.009
+    at_pub_source_arxiv: '2210.13978'
+    at_pub_source_title: Boosting the Cycle Counting Power of Graph Neural Networks
+      with I$^2$-GNNs
+    at_pub_source_date_iso: '2022-10-22'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-10-22'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.02399999999999991
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8039
+    true_std: 0.009
+    value_gap_source_arxiv: '2210.13978'
+    value_gap_source_title: Boosting the Cycle Counting Power of Graph Neural Networks
+      with I$^2$-GNNs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.02399999999999991
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8039
+    sort_std: 0.009
+    global_rank: 26
+    paper_rank: 115
+    rank_delta: 89
+    rank_delta_abs: 89
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Boosting the Cycle Counting Power of Graph Neural Networks
+      with I$^2$-GNNs
+    comparison_source_arxiv: '2210.13978'
+    is_best: false
+    is_std_outlier: false
+  - model: SUN
+    model_key: sun
+    model_plain: SUN
+    value: 0.8003
+    std: 0.0055
+    paper_value: 0.8003
+    paper_std: 0.0055
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: frascaunderstanding2022
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: 0.8003
+    at_pub_std: 0.0055
+    at_pub_source_arxiv: '2302.07090'
+    at_pub_source_title: A Complete Expressiveness Hierarchy for Subgraph GNNs via
+      Subgraph Weisfeiler-Lehman Tests
+    at_pub_source_date_iso: '2023-02-14'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-02-14'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8003
+    true_std: 0.0055
+    value_gap_source_arxiv: '2302.07090'
+    value_gap_source_title: A Complete Expressiveness Hierarchy for Subgraph GNNs
+      via Subgraph Weisfeiler-Lehman Tests
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8003
+    sort_std: 0.0055
+    global_rank: 40
+    paper_rank: 40
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGN
+    model_key: dgn
+    model_plain: DGN
+    value: 0.797
+    std: 0.0097
+    paper_value: 0.797
+    paper_std: 0.0097
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: beaini2021directional
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: 0.797
+    at_pub_std: 0.0097
+    at_pub_source_arxiv: '2103.16584'
+    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
+      Classification
+    at_pub_source_date_iso: '2021-03-30'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.797
+    true_std: 0.0097
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.797
+    sort_std: 0.0097
+    global_rank: 48
+    paper_rank: 48
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN-AK+
+    model_key: gin-ak+
+    model_plain: GIN-AK+
+    value: 0.7961
+    std: 0.0119
+    paper_value: 0.7961
+    paper_std: 0.0119
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: zhao2022stars
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: 0.7822
+    at_pub_std: 0.0075
+    at_pub_source_arxiv: '2210.02636'
+    at_pub_source_title: Geodesic Graph Neural Network for Efficient Graph Representation
+      Learning
+    at_pub_source_date_iso: '2022-10-06'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-12-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.013900000000000023
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7961
+    true_std: 0.011
+    value_gap_source_arxiv: '2312.08671'
+    value_gap_source_title: 'Permutation-Invariant graph partitioning: How graph neural
+      networks capture structural interactions?'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7961
+    sort_std: 0.011
+    global_rank: 49
+    paper_rank: 49
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ESC-GNN
+    model_key: esc-gnn
+    model_plain: ESC-GNN
+    value: 0.7921
+    std: 0.0084
+    paper_value: 0.7921
+    paper_std: 0.0084
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7921
+    true_std: 0.0084
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7921
+    sort_std: 0.0084
+    global_rank: 64
+    paper_rank: 64
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PNA
+    model_key: pna
+    model_plain: PNA
+    value: 0.7905
+    std: 0.0132
+    paper_value: 0.7905
+    paper_std: 0.0132
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: corso2020principal
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: 0.7905
+    at_pub_std: 0.0132
+    at_pub_source_arxiv: '2103.16584'
+    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
+      Classification
+    at_pub_source_date_iso: '2021-03-30'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2024-03-19'
+    value_gap_source_date_label: TMLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7905
+    true_std: 0.0132
+    value_gap_source_arxiv: '2403.12529'
+    value_gap_source_title: Contextualized Messages Boost Graph Representations
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7905
+    sort_std: 0.0132
+    global_rank: 73
+    paper_rank: 73
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: I^2-GNN
+    model_key: i^2-gnn
+    model_plain: I^2-GNN
+    value: 0.7868
+    std: 0.0093
+    paper_value: 0.7868
+    paper_std: 0.0093
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: huang2023boosting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-05-08'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7868
+    true_std: 0.0093
+    value_gap_source_arxiv: '2305.04963'
+    value_gap_source_title: 'From Relational Pooling to Subgraph GNNs: A Universal
+      Framework for More Expressive Graph Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7868
+    sort_std: 0.0093
+    global_rank: 84
+    paper_rank: 84
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PL-GNN
+    model_key: pl-gnn
+    model_plain: PL-GNN
+    value: 0.7849
+    std: 0.0101
+    paper_value: 0.7849
+    paper_std: 0.0101
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: bevilacqua2024efficient
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7849
+    true_std: 0.0101
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7849
+    sort_std: 0.0101
+    global_rank: 93
+    paper_rank: 93
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NGNN
+    model_key: ngnn
+    model_plain: NGNN
+    value: 0.7834
+    std: 0.0186
+    paper_value: 0.7834
+    paper_std: 0.0186
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: zhang2021nested
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-05-08'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7834
+    true_std: 0.0186
+    value_gap_source_arxiv: '2305.04963'
+    value_gap_source_title: 'From Relational Pooling to Subgraph GNNs: A Universal
+      Framework for More Expressive Graph Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7834
+    sort_std: 0.0186
+    global_rank: 97
+    paper_rank: 97
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OSAN
+    model_key: osan
+    model_plain: OSAN
+    value: 0.7801
+    std: 0.0104
+    paper_value: 0.7801
+    paper_std: 0.0104
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: qianordered2022
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7801
+    true_std: 0.0104
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7801
+    sort_std: 0.0104
+    global_rank: 114
+    paper_rank: 114
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7707
+    std: 0.0149
+    paper_value: 0.7707
+    paper_std: 0.0149
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: xu2018powerful
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: 0.778
+    at_pub_std: 0.0182
+    at_pub_source_arxiv: '2201.12787'
+    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    at_pub_source_date_iso: '2022-01-30'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-01-30'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.007299999999999973
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.778
+    true_std: 0.0182
+    value_gap_source_arxiv: '2201.12787'
+    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.007299999999999973
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.778
+    sort_std: 0.0182
+    global_rank: 124
+    paper_rank: 164
+    rank_delta: 40
+    rank_delta_abs: 40
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Graphtransformer
+    model_key: graphtransformer
+    model_plain: Graphtransformer
+    value: 0.774
+    std: 0.0177
+    paper_value: 0.774
+    paper_std: 0.0177
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: rampavsek2022recipe
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.774
+    true_std: 0.0177
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.774
+    sort_std: 0.0177
+    global_rank: 147
+    paper_rank: 147
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DSS-GNN
+    model_key: dss-gnn
+    model_plain: DSS-GNN
+    value: 0.7678
+    std: 0.0166
+    paper_value: 0.7678
+    paper_std: 0.0166
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: bevilacqua2022equivariant
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard OGB scaffold split for HIV classification task.
+    date: Mar 19, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-19'
+    published_venue: KDD 2023
+    published_conference: KDD 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7678
+    true_std: 0.0166
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7678
+    sort_std: 0.0166
+    global_rank: 181
+    paper_rank: 181
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: ROC-AUC
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: ROC-AUC
+  paper_metrics:
+  - ROC-AUC
+  metric: ROC-AUC
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+results_grouped:
+- benchmark: OGB
+  datasets:
+  - *id001
+- benchmark: Quantum Chemistry
+  datasets:
+  - *id002
+- benchmark: GNNBenchmark
+  datasets:
+  - *id003
+datasets_by_scope:
+- scope: graph-level
+  label: Graph-level
+  benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+  - benchmark: Quantum Chemistry
+    benchmark_slug: quantum-chemistry
+    datasets:
+    - dataset: QM9
+      dataset_slug: qm9
+  - benchmark: GNNBenchmark
+    benchmark_slug: gnnbenchmark
+    datasets:
+    - dataset: CSL
+      dataset_slug: csl
+single_proposed_model: ESC-GNN
+---
+

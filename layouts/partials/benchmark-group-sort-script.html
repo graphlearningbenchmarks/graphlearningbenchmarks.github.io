@@ -1,0 +1,38 @@
+<script>
+(function () {
+  var sortButtons = document.querySelectorAll("[data-benchmark-sort]");
+  var container = document.getElementById("benchmark-groups-container");
+  if (!sortButtons.length || !container) return;
+
+  var sortMode = "papers";
+  var itemSelector = container.dataset.benchmarkItem || ".benchmark-sort-item";
+
+  function parseNum(value) {
+    var n = parseFloat(value);
+    return isNaN(n) ? 0 : n;
+  }
+
+  function sortItems() {
+    var items = Array.from(container.querySelectorAll(itemSelector));
+    items.sort(function (a, b) {
+      var legacyA = a.dataset.isLegacy === "1";
+      var legacyB = b.dataset.isLegacy === "1";
+      if (legacyA !== legacyB) return legacyA ? 1 : -1;
+      return parseNum(b.dataset.paperCount) - parseNum(a.dataset.paperCount);
+    });
+    items.forEach(function (el) { container.appendChild(el); });
+  }
+
+  sortButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      sortMode = btn.dataset.benchmarkSort || "papers";
+      sortButtons.forEach(function (b) {
+        var active = b === btn;
+        b.classList.toggle("active", active);
+        b.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      sortItems();
+    });
+  });
+})();
+</script>

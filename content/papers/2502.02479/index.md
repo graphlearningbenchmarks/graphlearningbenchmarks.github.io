@@ -1,0 +1,2552 @@
+---
+title: Using Random Noise Equivariantly to Boost Graph Neural Networks Universally
+arxiv_id: '2502.02479'
+source_url: ''
+authors:
+- name: Xiyuan Wang
+  orcid: null
+  s2_author_id: '2167480960'
+  s2_url: null
+- name: Muhan Zhang
+  orcid: null
+  s2_author_id: '2264103931'
+  s2_url: null
+published_date: Feb 4, 2025
+published_date_iso: '2025-02-04'
+published_venue: ''
+published_conference: ''
+published_conference_short: ''
+published_conference_slug: ''
+abstract: Recent advances in Graph Neural Networks (GNNs) have explored the potential
+  of random noise as an input feature to enhance expressivity across diverse tasks.
+  However, naively incorporating noise can degrade performance, while architectures
+  tailored to exploit noise for specific tasks excel yet lack broad applicability.
+  This paper tackles these issues by laying down a theoretical framework that elucidates
+  the increased sample complexity when introducing random noise into GNNs without
+  careful design. We further propose Equivariant Noise GNN (ENGNN), a novel architecture
+  that harnesses the symmetrical properties of noise to mitigate sample complexity
+  and bolster generalization. Our experiments demonstrate that using noise equivariantly
+  significantly enhances performance on node-level, link-level, subgraph, and graph-level
+  tasks and achieves comparable performance to models designed for specific tasks,
+  thereby offering a general method to boost expressivity across various graph tasks.
+codebase_url: ''
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: method
+proposed_models:
+- ENGNN
+mrr: 0.0
+adjusted_mrr: 0.0
+mrr_dataset_count: 0
+benchmark_categories:
+- Classic
+- OGB
+benchmark_coverage:
+- benchmark: Classic
+  benchmark_slug: classic
+  evaluated: 1
+  total: 12
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 2
+  total: 16
+task_categories:
+- graph_regression
+- link_prediction
+experiment_scopes:
+- edge-level
+- graph-level
+results:
+- &id001
+  dataset: ZINC
+  rows:
+  - model: Subgraphormer
+    model_key: ppgn++
+    model_plain: Subgraphormer
+    value: 0.02
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.11556'
+    title: Equivariant Polynomials for Graph Neural Networks
+    date: Feb 22, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-22'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.02
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Subgraphormer
+    model_key: subgraphormer
+    model_plain: Subgraphormer
+    value: 0.02
+    std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2406.09291'
+    title: A Flexible, Equivariant Framework for Subgraph GNNs via Graph Products
+      and Graph Coarsening
+    date: Jun 13, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-13'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/BarSGuy/Efficient-Subgraph-GNNs
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.02
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: CIN
+    model_key: cin
+    model_plain: CIN
+    value: 0.022
+    std: 0.002
+    paper_value: 0.022
+    paper_std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.021
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2306.03561'
+    at_pub_source_title: 'CIN++: Enhancing Topological Message Passing'
+    at_pub_source_date_iso: '2023-06-06'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-06-06'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.0009999999999999974
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.021
+    true_std: 0.001
+    value_gap_source_arxiv: '2306.03561'
+    value_gap_source_title: 'CIN++: Enhancing Topological Message Passing'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0009999999999999974
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.021
+    sort_std: 0.001
+    global_rank: 3
+    paper_rank: 4
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SSWL+
+    model_key: sswl+
+    model_plain: SSWL+
+    value: 0.022
+    std: 0.002
+    paper_value: 0.022
+    paper_std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.022
+    sort_std: 0.002
+    global_rank: 6
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SUN
+    model_key: sun
+    model_plain: SUN
+    value: 0.024
+    std: 0.003
+    paper_value: 0.024
+    paper_std: 0.003
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.024
+    sort_std: 0.003
+    global_rank: 9
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DRFWL
+    model_key: drfwl
+    model_plain: DRFWL
+    value: 0.025
+    std: 0.003
+    paper_value: 0.025
+    paper_std: 0.003
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.025
+    sort_std: 0.003
+    global_rank: 9
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ESAN
+    model_key: esan
+    model_plain: ESAN
+    value: 0.029
+    std: 0.003
+    paper_value: 0.029
+    paper_std: 0.003
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.029
+    sort_std: 0.003
+    global_rank: 13
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NGNN
+    model_key: ngnn
+    model_plain: NGNN
+    value: 0.029
+    std: 0.001
+    paper_value: 0.029
+    paper_std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.029
+    sort_std: 0.001
+    global_rank: 13
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ENGNN
+    model_key: engnn
+    model_plain: ENGNN
+    value: 0.044
+    std: 0.002
+    paper_value: 0.044
+    paper_std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.044
+    sort_std: 0.002
+    global_rank: 19
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MPNN
+    model_key: mpnn
+    model_plain: MPNN
+    value: 0.046
+    std: 0.002
+    paper_value: 0.046
+    paper_std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.046
+    sort_std: 0.002
+    global_rank: 20
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NMPNN
+    model_key: nmpnn
+    model_plain: NMPNN
+    value: 0.051
+    std: 0.004
+    paper_value: 0.051
+    paper_std: 0.004
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.051
+    sort_std: 0.004
+    global_rank: 21
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.088
+    std: 0.002
+    paper_value: 0.088
+    paper_std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.088
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2023-02-22'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.088
+    true_std: 0.002
+    value_gap_source_arxiv: '2302.11556'
+    value_gap_source_title: Equivariant Polynomials for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.088
+    sort_std: 0.002
+    global_rank: 27
+    paper_rank: 27
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: MAE
+  higher_is_better: false
+  experiment_scope: graph-level
+  dataset_primary_metric: MAE
+  paper_metrics:
+  - MAE
+  metric: MAE
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: ogbl-ddi
+  rows:
+  - model: MPNNs
+    model_key: elgnn
+    model_plain: MPNNs
+    value: 0.9777
+    std: 0.0037
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2310.14166'
+    title: Ensemble Learning for Graph Neural Networks
+    date: Oct 22, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-22'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: mixed
+    feature_source_evidence: construct an ensemble of graph neural networks by utilizing
+      both input features and graph structures
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9777
+    sort_std: 0.0037
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MPNNs
+    model_key: gidn
+    model_plain: MPNNs
+    value: 0.9542
+    std: 0.0
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.14166'
+    title: Ensemble Learning for Graph Neural Networks
+    date: Oct 22, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-22'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9542
+    sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MPNNs
+    model_key: agdn
+    model_plain: MPNNs
+    value: 0.9538
+    std: 0.0094
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.14166'
+    title: Ensemble Learning for Graph Neural Networks
+    date: Oct 22, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-22'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9538
+    sort_std: 0.0094
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BUDDY
+    model_key: buddy
+    model_plain: BUDDY
+    value: 0.7851
+    std: 0.0136
+    paper_value: 0.7851
+    paper_std: 0.0136
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7851
+    at_pub_std: 0.0136
+    at_pub_source_arxiv: '2209.15486'
+    at_pub_source_title: Graph Neural Networks for Link Prediction with Subgraph Sketching
+    at_pub_source_date_iso: '2022-09-30'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-10-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7851
+    true_std: 0.0136
+    value_gap_source_arxiv: '2310.09516'
+    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
+      Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7851
+    sort_std: 0.0136
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ENGNN
+    model_key: engnn
+    model_plain: ENGNN
+    value: 0.7761
+    std: 0.045
+    paper_value: 0.7761
+    paper_std: 0.045
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.7761
+    sort_std: 0.045
+    global_rank: 15
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Neo-GNN
+    model_key: neo-gnn
+    model_plain: Neo-GNN
+    value: 0.6357
+    std: 0.0352
+    paper_value: 0.6357
+    paper_std: 0.0352
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6357
+    at_pub_std: 0.0352
+    at_pub_source_arxiv: '2206.04216'
+    at_pub_source_title: 'Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks
+      for Link Prediction'
+    at_pub_source_date_iso: '2022-06-09'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-06-09'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6357
+    true_std: 0.0352
+    value_gap_source_arxiv: '2206.04216'
+    value_gap_source_title: 'Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks
+      for Link Prediction'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6357
+    sort_std: 0.0352
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.539
+    std: 0.0474
+    paper_value: 0.539
+    paper_std: 0.0474
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6719
+    at_pub_std: 0.0118
+    at_pub_source_arxiv: '2406.16687'
+    at_pub_source_title: Link Prediction with Untrained Message Passing Layers
+    at_pub_source_date_iso: '2024-06-24'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.13290000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.539
+    true_std: 0.0474
+    value_gap_source_arxiv: '2310.09516'
+    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
+      Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.539
+    sort_std: 0.0474
+    global_rank: 22
+    paper_rank: 22
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Link Prediction with Untrained Message Passing Layers
+    comparison_source_arxiv: '2406.16687'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.3707
+    std: 0.0507
+    paper_value: 0.3707
+    paper_std: 0.0507
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6476
+    at_pub_std: 0.0145
+    at_pub_source_arxiv: '2406.16687'
+    at_pub_source_title: Link Prediction with Untrained Message Passing Layers
+    at_pub_source_date_iso: '2024-06-24'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-01'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: 0.2769
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.499
+    true_std: 0.0723
+    value_gap_source_arxiv: '2310.00793'
+    value_gap_source_title: 'Revisiting Link Prediction: a data perspective'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.12830000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.499
+    sort_std: 0.0723
+    global_rank: 23
+    paper_rank: 26
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Link Prediction with Untrained Message Passing Layers
+    comparison_source_arxiv: '2406.16687'
+    is_best: false
+    is_std_outlier: false
+  - model: SEAL
+    model_key: seal
+    model_plain: SEAL
+    value: 0.3056
+    std: 0.0386
+    paper_value: 0.3056
+    paper_std: 0.0386
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4974
+    at_pub_std: 0.0239
+    at_pub_source_arxiv: '2406.16687'
+    at_pub_source_title: Link Prediction with Untrained Message Passing Layers
+    at_pub_source_date_iso: '2024-06-24'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.19180000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3056
+    true_std: 0.0386
+    value_gap_source_arxiv: '2310.09516'
+    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
+      Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3056
+    sort_std: 0.0386
+    global_rank: 31
+    paper_rank: 31
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Link Prediction with Untrained Message Passing Layers
+    comparison_source_arxiv: '2406.16687'
+    is_best: false
+    is_std_outlier: false
+  - model: RA
+    model_key: ra
+    model_plain: RA
+    value: 0.276
+    std: 0.0
+    paper_value: 0.276
+    paper_std: 0.0
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4401
+    at_pub_std: null
+    at_pub_source_arxiv: '2406.16687'
+    at_pub_source_title: Link Prediction with Untrained Message Passing Layers
+    at_pub_source_date_iso: '2024-06-24'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.16409999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.276
+    true_std: 0.0
+    value_gap_source_arxiv: '2310.09516'
+    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
+      Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.276
+    sort_std: 0.0
+    global_rank: 34
+    paper_rank: 34
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Link Prediction with Untrained Message Passing Layers
+    comparison_source_arxiv: '2406.16687'
+    is_best: false
+    is_std_outlier: false
+  - model: MPNN
+    model_key: mpnn
+    model_plain: MPNN
+    value: 0.2476
+    std: 0.1529
+    paper_value: 0.2476
+    paper_std: 0.1529
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.2476
+    sort_std: 0.1529
+    global_rank: 38
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NMPNN
+    model_key: nmpnn
+    model_plain: NMPNN
+    value: 0.2308
+    std: 0.0589
+    paper_value: 0.2308
+    paper_std: 0.0589
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.2308
+    sort_std: 0.0589
+    global_rank: 41
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AA
+    model_key: aa
+    model_plain: AA
+    value: 0.1861
+    std: 0.0
+    paper_value: 0.1861
+    paper_std: 0.0
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3975
+    at_pub_std: null
+    at_pub_source_arxiv: '2406.16687'
+    at_pub_source_title: Link Prediction with Untrained Message Passing Layers
+    at_pub_source_date_iso: '2024-06-24'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.21140000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1861
+    true_std: 0.0
+    value_gap_source_arxiv: '2310.09516'
+    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
+      Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1861
+    sort_std: 0.0
+    global_rank: 45
+    paper_rank: 45
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Link Prediction with Untrained Message Passing Layers
+    comparison_source_arxiv: '2406.16687'
+    is_best: false
+    is_std_outlier: false
+  - model: CN
+    model_key: cn
+    model_plain: CN
+    value: 0.1773
+    std: 0.0
+    paper_value: 0.1773
+    paper_std: 0.0
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3869
+    at_pub_std: null
+    at_pub_source_arxiv: '2406.16687'
+    at_pub_source_title: Link Prediction with Untrained Message Passing Layers
+    at_pub_source_date_iso: '2024-06-24'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.2096
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1773
+    true_std: 0.0
+    value_gap_source_arxiv: '2310.09516'
+    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
+      Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1773
+    sort_std: 0.0
+    global_rank: 48
+    paper_rank: 48
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Link Prediction with Untrained Message Passing Layers
+    comparison_source_arxiv: '2406.16687'
+    is_best: false
+    is_std_outlier: false
+  - model: NBFnet
+    model_key: nbfnet
+    model_plain: NBFnet
+    value: 0.04
+    std: 0.0058
+    paper_value: 0.04
+    paper_std: 0.0058
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.04
+    at_pub_std: 0.0058
+    at_pub_source_arxiv: '2209.15486'
+    at_pub_source_title: Graph Neural Networks for Link Prediction with Subgraph Sketching
+    at_pub_source_date_iso: '2022-09-30'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-10-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.04
+    true_std: 0.0058
+    value_gap_source_arxiv: '2310.09516'
+    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
+      Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.04
+    sort_std: 0.0058
+    global_rank: 58
+    paper_rank: 58
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Hits@20
+  higher_is_better: true
+  experiment_scope: edge-level
+  dataset_primary_metric: Hits@20
+  paper_metrics:
+  - Hits@20
+  metric: Hits@20
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: ogbl-ppa
+  rows:
+  - model: SEAL-RS
+    model_key: mplp
+    model_plain: SEAL-RS
+    value: 0.6524
+    std: 0.015
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.00976'
+    title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
+    date: Sep 2, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-02'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/Barcavin/efficient-node-labelling
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.6524
+    sort_std: 0.015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SEAL-RS
+    model_key: ogb leader
+    model_plain: SEAL-RS
+    value: 0.6524
+    std: 0.015
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2410.01802'
+    title: 'PROXI: Challenging the GNNs for Link Prediction'
+    date: Oct 2, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-02'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/workrep20232/PROXI
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.6524
+    sort_std: 0.015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SEAL-RS
+    model_key: prb
+    model_plain: SEAL-RS
+    value: 0.6347
+    std: 0.0175
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2411.01410'
+    title: PageRank Bandits for Link Prediction
+    date: Nov 3, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-03'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/jiaruzouu/PRB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.6347
+    sort_std: 0.0175
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.1655
+    std: 0.024
+    paper_value: 0.1655
+    paper_std: 0.024
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5013
+    at_pub_std: 0.0055
+    at_pub_source_arxiv: '2303.00170'
+    at_pub_source_title: Asymmetric Learning for Graph Neural Network based Link Prediction
+    at_pub_source_date_iso: '2023-03-01'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-03-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.3358
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5013
+    true_std: 0.0055
+    value_gap_source_arxiv: '2303.00170'
+    value_gap_source_title: Asymmetric Learning for Graph Neural Network based Link
+      Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3358
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5013
+    sort_std: 0.0055
+    global_rank: 12
+    paper_rank: 58
+    rank_delta: 46
+    rank_delta_abs: 46
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Asymmetric Learning for Graph Neural Network based Link
+      Prediction
+    comparison_source_arxiv: '2303.00170'
+    is_best: false
+    is_std_outlier: false
+  - model: BUDDY
+    model_key: buddy
+    model_plain: BUDDY
+    value: 0.4985
+    std: 0.002
+    paper_value: 0.4985
+    paper_std: 0.002
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4985
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2209.15486'
+    at_pub_source_title: Graph Neural Networks for Link Prediction with Subgraph Sketching
+    at_pub_source_date_iso: '2022-09-30'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-09-30'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4985
+    true_std: 0.002
+    value_gap_source_arxiv: '2209.15486'
+    value_gap_source_title: Graph Neural Networks for Link Prediction with Subgraph
+      Sketching
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4985
+    sort_std: 0.002
+    global_rank: 13
+    paper_rank: 13
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: RA
+    model_key: ra
+    model_plain: RA
+    value: 0.4933
+    std: 0.0
+    paper_value: 0.4933
+    paper_std: 0.0
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4933
+    at_pub_std: 0.0
+    at_pub_source_arxiv: '2112.02936'
+    at_pub_source_title: Pairwise Learning for Neural Link Prediction
+    at_pub_source_date_iso: '2021-12-06'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-09-30'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4933
+    true_std: 0.0
+    value_gap_source_arxiv: '2209.15486'
+    value_gap_source_title: Graph Neural Networks for Link Prediction with Subgraph
+      Sketching
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4933
+    sort_std: 0.0
+    global_rank: 16
+    paper_rank: 16
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Neo-GNN
+    model_key: neo-gnn
+    model_plain: Neo-GNN
+    value: 0.4913
+    std: 0.006
+    paper_value: 0.4913
+    paper_std: 0.006
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4913
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2206.04216'
+    at_pub_source_title: 'Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks
+      for Link Prediction'
+    at_pub_source_date_iso: '2022-06-09'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-09-30'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4913
+    true_std: 0.006
+    value_gap_source_arxiv: '2209.15486'
+    value_gap_source_title: Graph Neural Networks for Link Prediction with Subgraph
+      Sketching
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4913
+    sort_std: 0.006
+    global_rank: 18
+    paper_rank: 18
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SEAL
+    model_key: seal
+    model_plain: SEAL
+    value: 0.488
+    std: 0.0316
+    paper_value: 0.488
+    paper_std: 0.0316
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.488
+    at_pub_std: 0.0316
+    at_pub_source_arxiv: '2010.16103'
+    at_pub_source_title: 'Labeling Trick: A Theory of Using Graph Neural Networks
+      for Multi-Node Representation Learning'
+    at_pub_source_date_iso: '2020-10-30'
+    at_pub_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2023-03-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.488
+    true_std: 0.0316
+    value_gap_source_arxiv: '2303.00170'
+    value_gap_source_title: Asymmetric Learning for Graph Neural Network based Link
+      Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.488
+    sort_std: 0.0316
+    global_rank: 19
+    paper_rank: 19
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ENGNN
+    model_key: engnn
+    model_plain: ENGNN
+    value: 0.4497
+    std: 0.0074
+    paper_value: 0.4497
+    paper_std: 0.0074
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.4497
+    sort_std: 0.0074
+    global_rank: 28
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NMPNN
+    model_key: nmpnn
+    model_plain: NMPNN
+    value: 0.399
+    std: 0.0552
+    paper_value: 0.399
+    paper_std: 0.0552
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.399
+    sort_std: 0.0552
+    global_rank: 31
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AA
+    model_key: aa
+    model_plain: AA
+    value: 0.3245
+    std: 0.0
+    paper_value: 0.3245
+    paper_std: 0.0
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3245
+    at_pub_std: 0.0
+    at_pub_source_arxiv: '2010.16103'
+    at_pub_source_title: 'Labeling Trick: A Theory of Using Graph Neural Networks
+      for Multi-Node Representation Learning'
+    at_pub_source_date_iso: '2020-10-30'
+    at_pub_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2023-03-01'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3245
+    true_std: 0.0
+    value_gap_source_arxiv: '2303.00170'
+    value_gap_source_title: Asymmetric Learning for Graph Neural Network based Link
+      Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3245
+    sort_std: 0.0
+    global_rank: 36
+    paper_rank: 36
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.1867
+    std: 0.0132
+    paper_value: 0.1867
+    paper_std: 0.0132
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3084
+    at_pub_std: 0.0178
+    at_pub_source_arxiv: '2406.16687'
+    at_pub_source_title: Link Prediction with Untrained Message Passing Layers
+    at_pub_source_date_iso: '2024-06-24'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-10-01'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: 0.1217
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2957
+    true_std: 0.029
+    value_gap_source_arxiv: '2310.00793'
+    value_gap_source_title: 'Revisiting Link Prediction: a data perspective'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10900000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2957
+    sort_std: 0.029
+    global_rank: 41
+    paper_rank: 55
+    rank_delta: 14
+    rank_delta_abs: 14
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Link Prediction with Untrained Message Passing Layers
+    comparison_source_arxiv: '2406.16687'
+    is_best: false
+    is_std_outlier: false
+  - model: CN
+    model_key: cn
+    model_plain: CN
+    value: 0.2765
+    std: 0.0
+    paper_value: 0.2765
+    paper_std: 0.0
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.2765
+    at_pub_std: 0.0
+    at_pub_source_arxiv: '2112.02936'
+    at_pub_source_title: Pairwise Learning for Neural Link Prediction
+    at_pub_source_date_iso: '2021-12-06'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-09-30'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2765
+    true_std: 0.0
+    value_gap_source_arxiv: '2209.15486'
+    value_gap_source_title: Graph Neural Networks for Link Prediction with Subgraph
+      Sketching
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2765
+    sort_std: 0.0
+    global_rank: 45
+    paper_rank: 45
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MPNN
+    model_key: mpnn
+    model_plain: MPNN
+    value: 0.0562
+    std: 0.0252
+    paper_value: 0.0562
+    paper_std: 0.0252
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    sort_value: 0.0562
+    sort_std: 0.0252
+    global_rank: 63
+    has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Hits@100
+  higher_is_better: true
+  experiment_scope: edge-level
+  dataset_primary_metric: Hits@100
+  paper_metrics:
+  - Hits@100
+  metric: Hits@100
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+results_grouped:
+- benchmark: Classic
+  datasets:
+  - *id001
+- benchmark: OGB
+  datasets:
+  - *id002
+  - *id003
+datasets_by_scope:
+- scope: graph-level
+  label: Graph-level
+  benchmarks:
+  - benchmark: Classic
+    benchmark_slug: classic
+    datasets:
+    - dataset: ZINC
+      dataset_slug: zinc
+- scope: edge-level
+  label: Edge-level
+  benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbl-ppa
+      dataset_slug: ogbl-ppa
+    - dataset: ogbl-ddi
+      dataset_slug: ogbl-ddi
+single_proposed_model: ENGNN
+---
+

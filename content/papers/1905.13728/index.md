@@ -1,0 +1,443 @@
+---
+title: Pre-Training Graph Neural Networks for Generic Structural Feature Extraction
+arxiv_id: '1905.13728'
+source_url: ''
+authors:
+- name: Ziniu Hu
+  orcid: null
+  s2_author_id: '3407296'
+  s2_url: null
+- name: Changjun Fan
+  orcid: null
+  s2_author_id: '1729964'
+  s2_url: null
+- name: Ting Chen
+  orcid: null
+  s2_author_id: '145358498'
+  s2_url: null
+- name: Kai-Wei Chang
+  orcid: null
+  s2_author_id: '2782886'
+  s2_url: null
+- name: Yizhou Sun
+  orcid: null
+  s2_author_id: '2367272188'
+  s2_url: null
+published_date: May 31, 2019
+published_date_iso: '2019-05-31'
+published_venue: ''
+published_conference: ''
+published_conference_short: ''
+published_conference_slug: ''
+abstract: 'Graph neural networks (GNNs) are shown to be successful in modeling applications
+  with graph structures. However, training an accurate GNN model requires a large
+  collection of labeled data and expressive features, which might be inaccessible
+  for some applications. To tackle this problem, we propose a pre-training framework
+  that captures generic graph structural information that is transferable across tasks.
+  Our framework can leverage the following three tasks: 1) denoising link reconstruction,
+  2) centrality score ranking, and 3) cluster preserving. The pre-training procedure
+  can be conducted purely on the synthetic graphs, and the pre-trained GNN is then
+  adapted for downstream applications. With the proposed pre-training procedure, the
+  generic structural information is learned and preserved, thus the pre-trained GNN
+  requires less amount of labeled data and fewer domain-specific features to achieve
+  high performance on different downstream tasks. Comprehensive experiments demonstrate
+  that our proposed framework can significantly enhance the performance of various
+  tasks at the level of node, link, and graph.'
+codebase_url: ''
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: dataset
+proposed_models: []
+mrr: null
+adjusted_mrr: null
+mrr_dataset_count: 0
+benchmark_categories:
+- Classic
+benchmark_coverage:
+- benchmark: Classic
+  benchmark_slug: classic
+  evaluated: 2
+  total: 12
+task_categories:
+- node_classification
+experiment_scopes:
+- node-level
+results:
+- &id001
+  dataset: Cora
+  rows:
+  - model: FPS-T
+    model_key: acm-gcn
+    model_plain: FPS-T
+    value: 0.8894
+    std: 0.0054
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.05894'
+    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
+    date: Feb 8, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-08'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8894
+    sort_std: 0.0054
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: FPS-T
+    model_key: bernnet
+    model_plain: FPS-T
+    value: 0.8796
+    std: 0.0085
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.05894'
+    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
+    date: Feb 8, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-08'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8796
+    sort_std: 0.0085
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: FPS-T
+    model_key: fagcn
+    model_plain: FPS-T
+    value: 0.8792
+    std: 0.0065
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.05894'
+    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
+    date: Feb 8, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-08'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8792
+    sort_std: 0.0065
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Pre-train (Cluster)
+    model_key: pre-train (cluster)
+    model_plain: Pre-train (Cluster)
+    value: 0.679
+    std: 0.008
+    paper_value: 0.679
+    paper_std: 0.008
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split);
+      results reported in F1-score.
+    date: May 31, 2019
+    date_display: May 2019
+    date_iso: '2019-05-31'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2019-05-31'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.679
+    true_std: 0.008
+    value_gap_source_arxiv: '1905.13728'
+    value_gap_source_title: Pre-Training Graph Neural Networks for Generic Structural
+      Feature Extraction
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.679
+    sort_std: 0.008
+    global_rank: 21
+    paper_rank: 21
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - F1
+  metric: F1
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
+- &id002
+  dataset: PubMed
+  rows:
+  - model: Pre-train (All Tasks)
+    model_key: nigcn
+    model_plain: Pre-train (All Tasks)
+    value: 0.809
+    std: 0.0202
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.14000'
+    title: Node-wise Diffusion for Scalable Graph Learning
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    venue: The Web Conference
+    codebase_url: https://github.com/kkhuang81/NIGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.809
+    sort_std: 0.0202
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Pre-train (All Tasks)
+    model_key: ndls
+    model_plain: Pre-train (All Tasks)
+    value: 0.8038
+    std: 0.0141
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.14000'
+    title: Node-wise Diffusion for Scalable Graph Learning
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    venue: The Web Conference
+    codebase_url: https://github.com/kkhuang81/NIGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8038
+    sort_std: 0.0141
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Pre-train (All Tasks)
+    model_key: appnp
+    model_plain: Pre-train (All Tasks)
+    value: 0.8021
+    std: 0.0179
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.14000'
+    title: Node-wise Diffusion for Scalable Graph Learning
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    venue: The Web Conference
+    codebase_url: https://github.com/kkhuang81/NIGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8021
+    sort_std: 0.0179
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Pre-train (All Tasks)
+    model_key: pre-train (all tasks)
+    model_plain: Pre-train (All Tasks)
+    value: 0.66
+    std: 0.014
+    paper_value: 0.66
+    paper_std: 0.014
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016) as per canonical definition;
+      task is node classification.
+    date: May 31, 2019
+    date_display: May 2019
+    date_iso: '2019-05-31'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2019-05-31'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.66
+    true_std: 0.014
+    value_gap_source_arxiv: '1905.13728'
+    value_gap_source_title: Pre-Training Graph Neural Networks for Generic Structural
+      Feature Extraction
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.66
+    sort_std: 0.014
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - F1
+  metric: F1
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
+results_grouped:
+- benchmark: Classic
+  datasets:
+  - *id001
+  - *id002
+datasets_by_scope:
+- scope: node-level
+  label: Node-level
+  benchmarks:
+  - benchmark: Classic
+    benchmark_slug: classic
+    datasets:
+    - dataset: Cora
+      dataset_slug: cora
+    - dataset: PubMed
+      dataset_slug: pubmed
+---
+

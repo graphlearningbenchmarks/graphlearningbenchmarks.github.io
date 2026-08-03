@@ -1,0 +1,110 @@
+{{ define "main" }}
+{{ $papers := where .Site.RegularPages "Section" "papers" }}
+{{ $papersWithResults := where $papers "Params.has_results" true }}
+{{ $sortedPapers := sort $papersWithResults "Params.published_date_iso" "asc" }}
+{{ $months := slice }}
+{{ $monthCounts := newScratch }}
+
+{{ range $sortedPapers }}
+  {{ $iso := default "" .Params.published_date_iso }}
+  {{ if ge (len $iso) 7 }}
+    {{ $month := substr $iso 0 7 }}
+    {{ $months = $months | append $month }}
+    {{ $monthCounts.Set $month (add ($monthCounts.Get $month | default 0) 1) }}
+  {{ end }}
+{{ end }}
+{{ $months = $months | uniq }}
+{{ $chartCounts := slice }}
+{{ range $months }}
+  {{ $chartCounts = $chartCounts | append ($monthCounts.Get . | default 0) }}
+{{ end }}
+
+{{ $paperCount := len $papersWithResults }}
+{{ $firstDate := "" }}
+{{ $lastDate := "" }}
+{{ $firstPaperTitle := "" }}
+{{ $lastPaperTitle := "" }}
+{{ $firstPaperLink := "" }}
+{{ $lastPaperLink := "" }}
+{{ if gt $paperCount 0 }}
+  {{ $firstPaper := index $sortedPapers 0 }}
+  {{ $lastPaper := index $sortedPapers (sub $paperCount 1) }}
+  {{ $firstDate = $firstPaper.Params.published_date }}
+  {{ $lastDate = $lastPaper.Params.published_date }}
+  {{ $firstPaperTitle = $firstPaper.Title }}
+  {{ $lastPaperTitle = $lastPaper.Title }}
+  {{ $firstPaperLink = $firstPaper.RelPermalink }}
+  {{ $lastPaperLink = $lastPaper.RelPermalink }}
+{{ end }}
+
+<div class="overview-hero">
+  <h1>{{ .Title }}</h1>
+  <div class="overview-intro">{{ .Content }}</div>
+  <div class="dataset-stats overview-stats">
+    <a class="stat-item stat-link" href="{{ "papers/" | relURL }}"><span class="stat-value">{{ $paperCount }}</span><span class="stat-label">papers</span></a>
+    <a class="stat-item stat-link" href="#papers-month-chart"><span class="stat-value">{{ len $months }}</span><span class="stat-label">months</span></a>
+  </div>
+  <div class="overview-paper-notes">
+    {{ if $firstPaperLink }}
+      <p><strong>First paper:</strong> <a href="{{ $firstPaperLink }}">{{ $firstPaperTitle }}</a> ({{ $firstDate }})</p>
+    {{ end }}
+    {{ if $lastPaperLink }}
+      <p><strong>Latest paper:</strong> <a href="{{ $lastPaperLink }}">{{ $lastPaperTitle }}</a> ({{ $lastDate }})</p>
+    {{ end }}
+  </div>
+  <div class="dataset-stats overview-stats overview-secondary-links">
+    <a class="stat-item stat-link" href="{{ "datasets/" | relURL }}"><span class="stat-value">Datasets</span><span class="stat-label">browse</span></a>
+    <a class="stat-item stat-link" href="{{ "papers/" | relURL }}"><span class="stat-value">Papers</span><span class="stat-label">browse</span></a>
+    <a class="stat-item stat-link" href="{{ "results/" | relURL }}"><span class="stat-value">Results</span><span class="stat-label">browse</span></a>
+  </div>
+</div>
+
+<section class="overview-section">
+  <div class="overview-chart-wrap">
+    <h2>Publications per month</h2>
+    <canvas
+      id="papers-month-chart"
+      height="300"
+      data-chart-labels="{{ $months | jsonify | safeHTMLAttr }}"
+      data-chart-values="{{ $chartCounts | jsonify | safeHTMLAttr }}"
+    ></canvas>
+  </div>
+</section>
+
+<div class="home-nav">
+  <a href="{{ "datasets/" | relURL }}" class="btn-primary">Browse Datasets</a>
+  <a href="{{ "papers/" | relURL }}" class="btn-primary">Browse Papers</a>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+(function () {
+  var canvas = document.getElementById("papers-month-chart");
+  if (!canvas || typeof Chart === "undefined") return;
+  var labels = JSON.parse(canvas.dataset.chartLabels || "[]");
+  var counts = JSON.parse(canvas.dataset.chartValues || "[]");
+  new Chart(canvas, {
+    type: "bar",
+    data: {
+      labels: labels,
+      datasets: [{
+        label: "Papers",
+        data: counts,
+        backgroundColor: "rgba(37, 99, 235, 0.65)",
+        borderColor: "#2563eb",
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: { ticks: { maxRotation: 45, minRotation: 45 } },
+        y: { beginAtZero: true, ticks: { precision: 0 } }
+      }
+    }
+  });
+})();
+</script>
+{{ end }}

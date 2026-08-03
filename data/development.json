@@ -1,0 +1,20 @@
+{
+  "paper_status": {
+    "total": 2740,
+    "by_status": {
+      "extracted": 1504,
+      "quarantined_extraction_quality": 590,
+      "failed": 318,
+      "quarantined_method_name": 279,
+      "downloaded": 38,
+      "quarantined_yaml_parse": 11
+    }
+  },
+  "skipped": {
+    "stage1_count": 265,
+    "stage2_count": 0
+  },
+  "date_refinement": {
+    "missing_daily_count": 4
+  }
+}

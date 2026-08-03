@@ -1,0 +1,553 @@
+---
+title: Shanghai
+slug: shanghai
+benchmark: City-Networks
+task_type: node_classification
+description: Shanghai road-network node classification from the City-Networks benchmark.
+  Labels are derived from long-range accessibility statistics on the city graph.
+primary_metric: Accuracy
+higher_is_better: true
+pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.CityNetwork.html
+stats:
+  num_graphs: 1
+  avg_nodes: 184000.0
+  avg_edges: 263000.0
+  num_classes: null
+result_count: 18
+best_model:
+  model: GAT
+  value: 0.7253
+  metric: Accuracy
+  arxiv_id: '2604.03815'
+  paper_title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+    Power of GraphGPS
+papers:
+- arxiv_id: '2604.03815'
+  title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+    Power of GraphGPS
+  date_iso: '2026-04-04'
+  venue: ICLR 2026
+- arxiv_id: '2503.09008'
+  title: City-Networks
+  date_iso: '2025-03-12'
+  venue: ICLR 2025
+variants:
+- slug: standard-split
+  name: Standard split
+  notes: ''
+  is_standard: true
+  primary_metric: Accuracy
+  default_metric: Accuracy
+  higher_is_better: true
+  stats:
+    num_graphs: 1
+    avg_nodes: 184000.0
+    avg_edges: 263000.0
+    num_classes: null
+  metrics:
+  - Accuracy
+  metric_display_names:
+  - Accuracy
+  show_all_metrics_desktop: false
+  chart_default_log_scale: false
+  chart_hidden_models: []
+  rows:
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_iso: '2026-04-04'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ICLR 2026
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2026
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.7253
+    metric_stds:
+    - 0.0023
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.702
+    metric_stds:
+    - 0.004
+  - model: GatedGCN
+    model_plain: GatedGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_iso: '2026-04-04'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ICLR 2026
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2026
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.688
+    metric_stds:
+    - 0.0021
+  - model: GraphSAGE
+    model_plain: GraphSAGE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.683
+    metric_stds:
+    - 0.005
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.68
+    metric_stds:
+    - 0.005
+  - model: GPS + Performer
+    model_plain: GPS + Performer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_iso: '2026-04-04'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ICLR 2026
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2026
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6727
+    metric_stds:
+    - 0.0017
+  - model: GPS + k-MIP
+    model_plain: GPS + k-MIP
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_iso: '2026-04-04'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ICLR 2026
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2026
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6694
+    metric_stds:
+    - 0.0044
+  - model: ChebNet
+    model_plain: ChebNet
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.665
+    metric_stds:
+    - 0.001
+  - model: GPS + BigBird
+    model_plain: GPS + BigBird
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_iso: '2026-04-04'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ICLR 2026
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2026
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6524
+    metric_stds:
+    - 0.0017
+  - model: SGFormer
+    model_plain: SGFormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.641
+    metric_stds:
+    - 0.003
+  - model: GINE
+    model_plain: GINE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_iso: '2026-04-04'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ICLR 2026
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2026
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6335
+    metric_stds:
+    - 0.002
+  - model: GraphGPS
+    model_plain: GraphGPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.63
+    metric_stds:
+    - 0.005
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_iso: '2026-04-04'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ICLR 2026
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2026
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6233
+    metric_stds:
+    - 0.0016
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.621
+    metric_stds:
+    - 0.002
+  - model: GCNII
+    model_plain: GCNII
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.615
+    metric_stds:
+    - 0.004
+  - model: DropEdge
+    model_plain: DropEdge
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.608
+    metric_stds:
+    - 0.004
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_iso: '2026-04-04'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ICLR 2026
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2026
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5775
+    metric_stds:
+    - 0.0024
+  - model: MLP
+    model_plain: MLP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_iso: '2025-03-12'
+    date_display: Mar 2025
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    published_conference: ICLR 2025
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.284
+    metric_stds:
+    - 0.006
+  row_count: 18
+  rows_json: ''
+  chart_json: /data/datasets/shanghai/standard-split-chart.json
+  arch_counts:
+    gnn: 9
+    hybrid: 4
+    graph_transformer: 3
+    llm: 0
+    walk: 0
+    traditional: 2
+  metric_counts:
+  - 18
+  milestones: &id001
+  - value: 0.702
+    std: 0.004
+    model: Exphormer
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: '2025-03-12'
+  milestones_by_metric:
+    Accuracy: *id001
+---
+

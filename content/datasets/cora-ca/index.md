@@ -1,0 +1,1203 @@
+---
+title: Cora-CA
+slug: cora-ca
+benchmark: Hypergraph Benchmarks
+task_type: node_classification
+description: Cora co-authorship hypergraph node classification (7 subject classes).
+primary_metric: Accuracy
+higher_is_better: true
+pyg_url: ''
+stats:
+  num_graphs: 1
+  avg_nodes: null
+  avg_edges: null
+  num_classes: 7
+result_count: 42
+best_model:
+  model: HAN (full batch)
+  value: 0.8404
+  metric: Accuracy
+  arxiv_id: '2106.13264'
+  paper_title: Hypergraph Benchmarks
+papers:
+- arxiv_id: '2406.06642'
+  title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+  date_iso: '2024-06-09'
+  venue: ''
+- arxiv_id: '2305.18965'
+  title: Node Embedding from Neural Hamiltonian Orbits in Graph Neural Networks
+  date_iso: '2023-05-30'
+  venue: ICML 2023
+- arxiv_id: '2210.03801'
+  title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+  date_iso: '2022-10-07'
+  venue: NeurIPS 2022
+- arxiv_id: '2206.04739'
+  title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning on
+    Hypergraphs'
+  date_iso: '2022-06-09'
+  venue: AAAI 2022
+- arxiv_id: '2106.13264'
+  title: Hypergraph Benchmarks
+  date_iso: '2021-06-24'
+  venue: ICLR 2021
+variants:
+- slug: standard-split
+  name: Standard split
+  notes: ''
+  is_standard: true
+  primary_metric: Accuracy
+  default_metric: Accuracy
+  higher_is_better: true
+  stats:
+    num_graphs: 1
+    avg_nodes: null
+    avg_edges: null
+    num_classes: 7
+  metrics:
+  - Accuracy
+  metric_display_names:
+  - Accuracy
+  show_all_metrics_desktop: false
+  chart_default_log_scale: false
+  chart_hidden_models: []
+  rows:
+  - model: HAN (full batch)
+    model_plain: HAN (full batch)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8404
+    metric_stds:
+    - 0.0102
+  - model: AllSetTransformer
+    model_plain: AllSetTransformer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8363
+    metric_stds:
+    - 0.0147
+  - model: UniGCNII
+    model_plain: UniGCNII
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.836
+    metric_stds:
+    - 0.0114
+  - model: HGNN
+    model_plain: HGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8264
+    metric_stds:
+    - 0.0165
+  - model: HCHA
+    model_plain: HCHA
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8255
+    metric_stds:
+    - 0.0097
+  - model: EDGNN
+    model_plain: EDGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.06642'
+    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+    date: Jun 9, 2024
+    date_iso: '2024-06-09'
+    date_display: Jun 2024
+    codebase_url: https://github.com/geometric-intelligence/topobench
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8236
+    metric_stds:
+    - 0.0072
+  - model: TriCL
+    model_plain: TriCL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8215
+    metric_stds:
+    - 0.009
+  - model: GIL
+    model_plain: GIL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.18965'
+    title: Node Embedding from Neural Hamiltonian Orbits in Graph Neural Networks
+    date: May 30, 2023
+    date_iso: '2023-05-30'
+    date_display: May 2023
+    codebase_url: https://github.com/zknus/Hamiltonian-GNN
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8204
+    metric_stds:
+    - 0.0127
+  - model: TriCL-NG
+    model_plain: TriCL-NG
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.82
+    metric_stds:
+    - 0.01
+  - model: AllDeepSets
+    model_plain: AllDeepSets
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8197
+    metric_stds:
+    - 0.015
+  - model: TriCL-N
+    model_plain: TriCL-N
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8194
+    metric_stds:
+    - 0.011
+  - model: UniGNN2
+    model_plain: UniGNN2
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.06642'
+    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+    date: Jun 9, 2024
+    date_iso: '2024-06-09'
+    date_display: Jun 2024
+    codebase_url: https://github.com/geometric-intelligence/topobench
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8171
+    metric_stds:
+    - 0.0142
+  - model: HyperGCN
+    model_plain: HyperGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7948
+    metric_stds:
+    - 0.0208
+  - model: HGCN
+    model_plain: HGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.18965'
+    title: Node Embedding from Neural Hamiltonian Orbits in Graph Neural Networks
+    date: May 30, 2023
+    date_iso: '2023-05-30'
+    date_display: May 2023
+    codebase_url: https://github.com/zknus/Hamiltonian-GNN
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7872
+    metric_stds:
+    - 0.0042
+  - model: S2-HHGR
+    model_plain: S2-HHGR
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7815
+    metric_stds:
+    - 0.011
+  - model: UniGCN
+    model_plain: UniGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.773
+    metric_stds:
+    - 0.014
+  - model: HNHN
+    model_plain: HNHN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7719
+    metric_stds:
+    - 0.0149
+  - model: CECGN
+    model_plain: CECGN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7705
+    metric_stds:
+    - 0.0126
+  - model: AllSet
+    model_plain: AllSet
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7694
+    metric_stds:
+    - 0.013
+  - model: DGI
+    model_plain: DGI
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7694
+    metric_stds:
+    - 0.011
+  - model: GRACE
+    model_plain: GRACE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7659
+    metric_stds:
+    - 0.01
+  - model: A6
+    model_plain: A6
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7621
+    metric_stds:
+    - 0.0126
+  - model: CEGAT
+    model_plain: CEGAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7616
+    metric_stds:
+    - 0.0119
+  - model: A2
+    model_plain: A2
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7562
+    metric_stds:
+    - 0.0142
+  - model: A1
+    model_plain: A1
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7545
+    metric_stds:
+    - 0.0154
+  - model: A3
+    model_plain: A3
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7534
+    metric_stds:
+    - 0.014
+  - model: A4
+    model_plain: A4
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7529
+    metric_stds:
+    - 0.0156
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7452
+    metric_stds:
+    - 0.013
+  - model: HGNN
+    model_plain: HGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7438
+    metric_stds:
+    - 0.012
+  - model: MLP
+    model_plain: MLP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_iso: '2021-06-24'
+    date_display: Jun 2021
+    codebase_url: https://github.com/jianhao2016/AllSet
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7431
+    metric_stds:
+    - 0.0189
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7366
+    metric_stds:
+    - 0.013
+  - model: HyperConv
+    model_plain: HyperConv
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7352
+    metric_stds:
+    - 0.01
+  - model: Con
+    model_plain: Con
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7322
+    metric_stds:
+    - 0.0165
+  - model: Self
+    model_plain: Self
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7274
+    metric_stds:
+    - 0.0153
+  - model: A5
+    model_plain: A5
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7261
+    metric_stds:
+    - 0.0186
+  - model: SetGNN
+    model_plain: SetGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7221
+    metric_stds:
+    - 0.0151
+  - model: A0
+    model_plain: A0
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03801'
+    title: 'Augmentations in Hypergraph Contrastive Learning: Fabricated and Generative'
+    date: Oct 7, 2022
+    date_iso: '2022-10-07'
+    date_display: Oct 2022
+    codebase_url: https://github.com/weitianxin/HyperGCL
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7185
+    metric_stds:
+    - 0.0162
+  - model: Random-Init
+    model_plain: Random-Init
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6627
+    metric_stds:
+    - 0.022
+  - model: HyperSAGE
+    model_plain: HyperSAGE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6459
+    metric_stds:
+    - 0.043
+  - model: MLP
+    model_plain: MLP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6405
+    metric_stds:
+    - 0.014
+  - model: HyperGCN
+    model_plain: HyperGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6065
+    metric_stds:
+    - 0.092
+  - model: Node2Vec
+    model_plain: Node2Vec
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_iso: '2022-06-09'
+    date_display: Jun 2022
+    codebase_url: https://github.com/wooner49/TriCL
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.585
+    metric_stds:
+    - 0.021
+  row_count: 42
+  rows_json: ''
+  chart_json: /data/datasets/cora-ca/standard-split-chart.json
+  arch_counts:
+    gnn: 34
+    hybrid: 3
+    graph_transformer: 1
+    llm: 0
+    walk: 1
+    traditional: 2
+  metric_counts:
+  - 42
+  milestones: &id001
+  - value: 0.8215
+    std: 0.009
+    model: TriCL
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: '2022-06-09'
+  - value: 0.8236
+    std: 0.0072
+    model: EDGNN
+    arxiv_id: '2406.06642'
+    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
+    date: '2024-06-09'
+  milestones_by_metric:
+    Accuracy: *id001
+---
+

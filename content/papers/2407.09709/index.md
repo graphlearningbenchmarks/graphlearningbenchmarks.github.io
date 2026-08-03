@@ -1,0 +1,2981 @@
+---
+title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
+arxiv_id: '2407.09709'
+source_url: ''
+authors:
+- name: Lecheng Kong
+  orcid: null
+  s2_author_id: '2164063663'
+  s2_url: null
+- name: Jiarui Feng
+  orcid: null
+  s2_author_id: '2239091724'
+  s2_url: null
+- name: Hao Liu
+  orcid: null
+  s2_author_id: '2264134998'
+  s2_url: null
+- name: Chengsong Huang
+  orcid: null
+  s2_author_id: '31937655'
+  s2_url: null
+- name: Jiaxin Huang
+  orcid: null
+  s2_author_id: '2300246276'
+  s2_url: null
+- name: Yixin Chen
+  orcid: null
+  s2_author_id: '2266810999'
+  s2_url: null
+- name: Muhan Zhang
+  orcid: null
+  s2_author_id: '2239188141'
+  s2_url: null
+published_date: Jul 12, 2024
+published_date_iso: '2024-07-12'
+published_venue: ICLR 2024
+published_conference: ICLR 2024
+published_conference_short: ICLR
+published_conference_slug: iclr
+abstract: 'Foundation models, such as Large Language Models (LLMs) or Large Vision
+  Models (LVMs), have emerged as one of the most powerful tools in the respective
+  fields. However, unlike text and image data, graph data do not have a definitive
+  structure, posing great challenges to developing a Graph Foundation Model (GFM).
+  For example, current attempts at designing general graph models either transform
+  graph data into a language format for LLM-based prediction or still train a GNN
+  model with LLM as an assistant. The former can handle unlimited tasks, while the
+  latter captures graph structure much better---yet, no existing work can achieve
+  both simultaneously. In this paper, we first identify three key desirable properties
+  of a GFM: self-supervised pretraining, fluidity in tasks, and graph awareness. To
+  account for these properties, we extend the conventional language modeling to the
+  graph domain and propose a novel generative graph language model GOFA. The model
+  interleaves randomly initialized GNN layers into a frozen pre-trained LLM so that
+  the semantic and structural modeling abilities are organically combined. GOFA\ is
+  pre-trained on newly proposed graph-level next-word prediction, question-answering,
+  structural understanding, and information retrieval tasks to obtain the above GFM
+  properties. The pre-trained model is further instruction fine-tuned to obtain the
+  task-solving ability. Our GOFA\ model is evaluated on various downstream datasets
+  unseen during the pre-training and fine-tuning phases, demonstrating a strong ability
+  to solve structural and contextual problems in zero-shot scenarios. The code is
+  available at.'
+codebase_url: https://github.com/JiaruiFeng/GOFA
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: method
+proposed_models:
+- GOFA
+- GOFA-T
+- GOFA-F
+mrr: 0.0068
+adjusted_mrr: 0.0068
+mrr_dataset_count: 5
+benchmark_categories:
+- Classic
+- OGB
+- MoleculeNet
+benchmark_coverage:
+- benchmark: Classic
+  benchmark_slug: classic
+  evaluated: 1
+  total: 12
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 2
+  total: 16
+- benchmark: MoleculeNet
+  benchmark_slug: moleculenet
+  evaluated: 1
+  total: 9
+task_categories:
+- graph_classification
+- node_classification
+experiment_scopes:
+- graph-level
+- node-level
+results:
+- &id004
+  dataset: BBBP
+  rows:
+  - model: UnifiedMolPretrain
+    model_key: cams-llama
+    model_plain: UnifiedMolPretrain
+    value: 0.942
+    std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 100.0
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    arxiv_id: '2601.02530'
+    title: 'Multi-scale Graph Autoregressive Modeling: Molecular Property Prediction
+      via Next Token Prediction'
+    date: Jan 5, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-05'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.942
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: UnifiedMolPretrain
+    model_key: se(3)-i mpph
+    model_plain: UnifiedMolPretrain
+    value: 0.94
+    std: 0.021
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.07633'
+    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
+      Molecular Property Prediction
+    date: Dec 12, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-12'
+    venue: NeurIPS 2023 AI for Science Workshop
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
+      homology
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.94
+    sort_std: 0.021
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: UnifiedMolPretrain
+    model_key: masking node + supervised
+    model_plain: UnifiedMolPretrain
+    value: 0.9343
+    std: 0.025
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2207.06010'
+    title: Does GNN Pretraining Help Molecular Representation?
+    date: Jul 13, 2022
+    date_display: Jul 2022
+    date_iso: '2022-07-13'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9343
+    sort_std: 0.025
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: gimlet
+    model_key: gimlet
+    model_plain: gimlet
+    value: 0.5939
+    std: null
+    paper_value: 0.5939
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 6
+    source_ref: GIMLET
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation following GIMLET setting, results referred
+      from GIMLET.
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.5939
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.13089'
+    at_pub_source_title: 'gimlet: A Unified Graph-Text Model for Instruction-Based
+      Molecule Zero-Shot Learning'
+    at_pub_source_date_iso: '2023-05-28'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.594
+    true_std: null
+    value_gap_source_arxiv: '2602.01771'
+    value_gap_source_title: '<SO$ _k$>: One LLM Token for Explicit Graph Structural
+      Understanding'
+    value_gap_source_is_current_paper: false
+    value_gap: 9.999999999998899e-05
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.594
+    sort_std: null
+    global_rank: 314
+    paper_rank: 314
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GOFA
+    model_key: gofa
+    model_plain: GOFA
+    value: 0.5491
+    std: null
+    paper_value: 0.5491
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 6
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation following GIMLET setting, fine-tuned on 100k
+      Chembl QA pairs.
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5491
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5491
+    sort_std: null
+    global_rank: 323
+    paper_rank: 323
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Galactica
+    model_key: galactica
+    model_plain: Galactica
+    value: 0.5394
+    std: null
+    paper_value: 0.5394
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 6
+    source_ref: GIMLET
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation following GIMLET setting, results referred
+      from GIMLET.
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5394
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5394
+    sort_std: null
+    global_rank: 325
+    paper_rank: 325
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MoMu
+    model_key: momu
+    model_plain: MoMu
+    value: 0.4981
+    std: null
+    paper_value: 0.4981
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 6
+    source_ref: GIMLET
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation following GIMLET setting, results referred
+      from GIMLET.
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.4981
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.13089'
+    at_pub_source_title: 'gimlet: A Unified Graph-Text Model for Instruction-Based
+      Molecule Zero-Shot Learning'
+    at_pub_source_date_iso: '2023-05-28'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-05-28'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4981
+    true_std: null
+    value_gap_source_arxiv: '2306.13089'
+    value_gap_source_title: 'gimlet: A Unified Graph-Text Model for Instruction-Based
+      Molecule Zero-Shot Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4981
+    sort_std: null
+    global_rank: 331
+    paper_rank: 331
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: ROC-AUC
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: ROC-AUC
+  paper_metrics:
+  - ROC-AUC
+  metric: ROC-AUC
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id001
+  dataset: WikiCS
+  rows:
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.77
+    std: 0.006
+    paper_value: 0.77
+    paper_std: 0.006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning experiment
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.9302
+    at_pub_std: 0.0011
+    at_pub_source_arxiv: '2204.04874'
+    at_pub_source_title: Augmentation-Free Graph Contrastive Learning with Performance
+      Guarantee
+    at_pub_source_date_iso: '2022-04-11'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-04-11'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.1602
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9302
+    true_std: 0.0011
+    value_gap_source_arxiv: '2204.04874'
+    value_gap_source_title: Augmentation-Free Graph Contrastive Learning with Performance
+      Guarantee
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1602
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9302
+    sort_std: 0.0011
+    global_rank: 1
+    paper_rank: 139
+    rank_delta: 138
+    rank_delta_abs: 138
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Augmentation-Free Graph Contrastive Learning with Performance
+      Guarantee
+    comparison_source_arxiv: '2204.04874'
+    is_best: true
+    is_std_outlier: false
+  - model: GraphAny
+    model_key: graphssr
+    model_plain: GraphAny
+    value: 0.8793
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.02938'
+    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
+      Learning with Large Language Models'
+    date: Mar 3, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-03'
+    venue: null
+    codebase_url: https://github.com/mysteriouslfz/GraphSSR
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8793
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphAny
+    model_key: graph-r1
+    model_plain: GraphAny
+    value: 0.8689
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    arxiv_id: '2603.02938'
+    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
+      Learning with Large Language Models'
+    date: Mar 3, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-03'
+    venue: null
+    codebase_url: https://github.com/mysteriouslfz/GraphSSR
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8689
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.798
+    std: 0.005
+    paper_value: 0.798
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning experiment
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.8279
+    at_pub_std: 0.0016
+    at_pub_source_arxiv: '2405.18581'
+    at_pub_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
+    at_pub_source_date_iso: '2024-05-28'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2026-05-18'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.029899999999999927
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8103
+    true_std: 0.0092
+    value_gap_source_arxiv: '2605.20248'
+    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
+      in Node Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.012299999999999978
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8103
+    sort_std: 0.0092
+    global_rank: 29
+    paper_rank: 56
+    rank_delta: 27
+    rank_delta_abs: 27
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Unleashing the Potential of Text-attributed Graphs:
+      Automatic Relation Decomposition via Large Language Models'
+    comparison_source_arxiv: '2405.18581'
+    is_best: false
+    is_std_outlier: false
+  - model: GOFA-T
+    model_key: gofa-t
+    model_plain: GOFA-T
+    value: 0.8093
+    std: null
+    paper_value: 0.8093
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation with instruction tuning
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8093
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8093
+    sort_std: null
+    global_rank: 31
+    paper_rank: 31
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GOFA-F
+    model_key: gofa-f
+    model_plain: GOFA-F
+    value: 0.8062
+    std: null
+    paper_value: 0.8062
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation with instruction tuning
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8062
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8062
+    sort_std: null
+    global_rank: 35
+    paper_rank: 35
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BGRL
+    model_key: bgrl
+    model_plain: BGRL
+    value: 0.7012
+    std: 0.0015
+    paper_value: 0.7012
+    paper_std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning experiment
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.8
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2201.09830'
+    at_pub_source_title: Learning Graph Augmentations to Learn Graph Representations
+    at_pub_source_date_iso: '2022-01-24'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-12-30'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.0988
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8
+    true_std: 0.001
+    value_gap_source_arxiv: '2412.21151'
+    value_gap_source_title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0988
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8
+    sort_std: 0.001
+    global_rank: 50
+    paper_rank: 194
+    rank_delta: 144
+    rank_delta_abs: 144
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Learning Graph Augmentations to Learn Graph Representations
+    comparison_source_arxiv: '2201.09830'
+    is_best: false
+    is_std_outlier: false
+  - model: UniGraph
+    model_key: unigraph
+    model_plain: UniGraph
+    value: 0.7998
+    std: 0.0121
+    paper_value: 0.7998
+    paper_std: 0.0121
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning experiment
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7998
+    true_std: 0.0121
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7998
+    sort_std: 0.0121
+    global_rank: 51
+    paper_rank: 51
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GOFA
+    model_key: gofa
+    model_plain: GOFA
+    value: 0.7996
+    std: null
+    paper_value: 0.7996
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning experiment
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7996
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7996
+    sort_std: null
+    global_rank: 52
+    paper_rank: 52
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ZeroG
+    model_key: zerog
+    model_plain: ZeroG
+    value: 0.4825
+    std: null
+    paper_value: 0.4825
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation with instruction tuning
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-03-20'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7882
+    true_std: null
+    value_gap_source_arxiv: '2603.19596'
+    value_gap_source_title: 'CO-EVOLVE: Bidirectional Co-Evolution of Graph Structure
+      and Semantics for Heterophilous Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3057
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7882
+    sort_std: null
+    global_rank: 82
+    paper_rank: 256
+    rank_delta: 174
+    rank_delta_abs: 174
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OFA
+    model_key: ofa
+    model_plain: OFA
+    value: 0.7762
+    std: null
+    paper_value: 0.7762
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning experiment
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.7734
+    at_pub_std: null
+    at_pub_source_arxiv: '2407.07457'
+    at_pub_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
+      Language Models'
+    at_pub_source_date_iso: '2024-07-10'
+    at_pub_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: NeurIPS 2025
+    gap_vs_at_pub: 0.0028000000000000247
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7855
+    true_std: 0.0037
+    value_gap_source_arxiv: '2505.12684'
+    value_gap_source_title: Towards Effective Federated Graph Foundation Model via
+      Mitigating Knowledge Entanglement
+    value_gap_source_is_current_paper: false
+    value_gap: 0.009299999999999975
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7855
+    sort_std: 0.0037
+    global_rank: 97
+    paper_rank: 123
+    rank_delta: 26
+    rank_delta_abs: 26
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
+      Language Models'
+    comparison_source_arxiv: '2407.07457'
+    is_best: false
+    is_std_outlier: false
+  - model: DGI
+    model_key: dgi
+    model_plain: DGI
+    value: 0.6711
+    std: 0.0012
+    paper_value: 0.6711
+    paper_std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning experiment
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.754
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2201.09830'
+    at_pub_source_title: Learning Graph Augmentations to Learn Graph Representations
+    at_pub_source_date_iso: '2022-01-24'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-08-09'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.08289999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7825
+    true_std: 0.0056
+    value_gap_source_arxiv: '2408.05087'
+    value_gap_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
+      Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11139999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7825
+    sort_std: 0.0056
+    global_rank: 108
+    paper_rank: 218
+    rank_delta: 110
+    rank_delta_abs: 110
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Learning Graph Augmentations to Learn Graph Representations
+    comparison_source_arxiv: '2201.09830'
+    is_best: false
+    is_std_outlier: false
+  - model: Mistral-7B
+    model_key: mistral-7b
+    model_plain: Mistral-7B
+    value: 0.719
+    std: null
+    paper_value: 0.719
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation with instruction tuning
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.719
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.719
+    sort_std: null
+    global_rank: 183
+    paper_rank: 183
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LLama2-7B
+    model_key: llama2-7b
+    model_plain: LLama2-7B
+    value: 0.5877
+    std: null
+    paper_value: 0.5877
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation with instruction tuning
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5877
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5877
+    sort_std: null
+    global_rank: 250
+    paper_rank: 250
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OFA-Llama2
+    model_key: ofa-llama2
+    model_plain: OFA-Llama2
+    value: 0.3515
+    std: null
+    paper_value: 0.3515
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation with instruction tuning
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3515
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3515
+    sort_std: null
+    global_rank: 258
+    paper_rank: 258
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: ogbg-molhiv
+  rows:
+  - model: MEG
+    model_key: clear
+    model_plain: MEG
+    value: 0.997
+    std: 0.002
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2210.08443'
+    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
+    date: Oct 16, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-16'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.997
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MEG
+    model_key: random
+    model_plain: MEG
+    value: 0.897
+    std: 0.004
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2210.08443'
+    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
+    date: Oct 16, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-16'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.897
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MEG
+    model_key: eg-ist
+    model_plain: MEG
+    value: 0.897
+    std: 0.004
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2210.08443'
+    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
+    date: Oct 16, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-16'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.897
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MoMu
+    model_key: momu
+    model_plain: MoMu
+    value: 0.5026
+    std: null
+    paper_value: 0.5026
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: momu
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation after instruction tuning on 100k Chembl samples.
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-29'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7592
+    true_std: 0.0085
+    value_gap_source_arxiv: '2410.22372'
+    value_gap_source_title: A Hierarchical Language Model For Interpretable Graph
+      Reasoning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.25659999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7592
+    sort_std: 0.0085
+    global_rank: 224
+    paper_rank: 323
+    rank_delta: 99
+    rank_delta_abs: 99
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: gimlet
+    model_key: gimlet
+    model_plain: gimlet
+    value: 0.6624
+    std: null
+    paper_value: 0.6624
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: gimlet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation after instruction tuning on 100k Chembl samples.
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6624
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6624
+    sort_std: null
+    global_rank: 314
+    paper_rank: 314
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GOFA
+    model_key: gofa
+    model_plain: GOFA
+    value: 0.5302
+    std: null
+    paper_value: 0.5302
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation after instruction tuning on 100k Chembl samples.
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5302
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5302
+    sort_std: null
+    global_rank: 323
+    paper_rank: 323
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OFA
+    model_key: ofa
+    model_plain: OFA
+    value: 0.3567
+    std: null
+    paper_value: 0.3567
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: ofa
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation after instruction tuning on 100k Chembl samples.
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3567
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3567
+    sort_std: null
+    global_rank: 324
+    paper_rank: 324
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Galactica
+    model_key: galactica
+    model_plain: Galactica
+    value: 0.3385
+    std: null
+    paper_value: 0.3385
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: galactica
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation after instruction tuning on 100k Chembl samples.
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3385
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3385
+    sort_std: null
+    global_rank: 325
+    paper_rank: 325
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: ROC-AUC
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: ROC-AUC
+  paper_metrics:
+  - ROC-AUC
+  metric: ROC-AUC
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: ogbn-products
+  rows:
+  - model: LD
+    model_key: advsyngnn
+    model_plain: LD
+    value: 0.8931
+    std: 0.0013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.17071'
+    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
+      and Self-Corrective Propagation'
+    date: Feb 19, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-19'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8931
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GOFA-F
+    model_key: gofa-f
+    model_plain: GOFA-F
+    value: 0.8834
+    std: null
+    paper_value: 0.8834
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8834
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8834
+    sort_std: null
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LD
+    model_key: llms
+    model_plain: LD
+    value: 0.882
+    std: 0.0005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    arxiv_id: '2412.16441'
+    title: 'Towards Graph Foundation Models: Learning Generalities Across Graphs via
+      Task-Trees'
+    date: Dec 21, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-21'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/Zehong-Wang/GIT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.882
+    sort_std: 0.0005
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.814
+    std: 0.002
+    paper_value: 0.814
+    paper_std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.801
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2203.00638'
+    at_pub_source_title: 'PaSca: a Graph Neural Architecture Search System under the
+      Scalable Paradigm'
+    at_pub_source_date_iso: '2022-03-01'
+    at_pub_source_date_label: WWW 2022
+    value_gap_source_date_iso: '2024-12-21'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.0129999999999999
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8722
+    true_std: 0.0005
+    value_gap_source_arxiv: '2412.16441'
+    value_gap_source_title: 'Towards Graph Foundation Models: Learning Generalities
+      Across Graphs via Task-Trees'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05820000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8722
+    sort_std: 0.0005
+    global_rank: 8
+    paper_rank: 106
+    rank_delta: 98
+    rank_delta_abs: 98
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'PaSca: a Graph Neural Architecture Search System under
+      the Scalable Paradigm'
+    comparison_source_arxiv: '2203.00638'
+    is_best: false
+    is_std_outlier: false
+  - model: GOFA-T
+    model_key: gofa-t
+    model_plain: GOFA-T
+    value: 0.8713
+    std: null
+    paper_value: 0.8713
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8713
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8713
+    sort_std: null
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8
+    std: 0.007
+    paper_value: 0.8
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.824
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2203.00638'
+    at_pub_source_title: 'PaSca: a Graph Neural Architecture Search System under the
+      Scalable Paradigm'
+    at_pub_source_date_iso: '2022-03-01'
+    at_pub_source_date_label: WWW 2022
+    value_gap_source_date_iso: '2024-12-21'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.02399999999999991
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8691
+    true_std: 0.0005
+    value_gap_source_arxiv: '2412.16441'
+    value_gap_source_title: 'Towards Graph Foundation Models: Learning Generalities
+      Across Graphs via Task-Trees'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06909999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8691
+    sort_std: 0.0005
+    global_rank: 11
+    paper_rank: 137
+    rank_delta: 126
+    rank_delta_abs: 126
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'PaSca: a Graph Neural Architecture Search System under
+      the Scalable Paradigm'
+    comparison_source_arxiv: '2203.00638'
+    is_best: false
+    is_std_outlier: false
+  - model: DGI
+    model_key: dgi
+    model_plain: DGI
+    value: 0.6421
+    std: 0.0032
+    paper_value: 0.6421
+    paper_std: 0.0032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: he2024unigraph
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.8637
+    at_pub_std: 0.0019
+    at_pub_source_arxiv: '2101.11525'
+    at_pub_source_title: Calibrating and Improving Graph Contrastive Learning
+    at_pub_source_date_iso: '2021-01-27'
+    at_pub_source_date_label: TMLR 2021
+    value_gap_source_date_iso: '2021-01-27'
+    value_gap_source_date_label: TMLR 2021
+    gap_vs_at_pub: 0.22160000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8637
+    true_std: 0.0019
+    value_gap_source_arxiv: '2101.11525'
+    value_gap_source_title: Calibrating and Improving Graph Contrastive Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.22160000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8637
+    sort_std: 0.0019
+    global_rank: 15
+    paper_rank: 343
+    rank_delta: 328
+    rank_delta_abs: 328
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Calibrating and Improving Graph Contrastive Learning
+    comparison_source_arxiv: '2101.11525'
+    is_best: false
+    is_std_outlier: false
+  - model: UniGraph
+    model_key: unigraph
+    model_plain: UniGraph
+    value: 0.8011
+    std: 0.0023
+    paper_value: 0.8011
+    paper_std: 0.0023
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: he2024unigraph
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8011
+    true_std: 0.0023
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8011
+    sort_std: 0.0023
+    global_rank: 134
+    paper_rank: 134
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GOFA
+    model_key: gofa
+    model_plain: GOFA
+    value: 0.7998
+    std: null
+    paper_value: 0.7998
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7998
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7998
+    sort_std: null
+    global_rank: 139
+    paper_rank: 139
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Mistral-7B
+    model_key: mistral-7b
+    model_plain: Mistral-7B
+    value: 0.7494
+    std: null
+    paper_value: 0.7494
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7494
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7494
+    sort_std: null
+    global_rank: 250
+    paper_rank: 250
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BGRL
+    model_key: bgrl
+    model_plain: BGRL
+    value: 0.6377
+    std: 0.0023
+    paper_value: 0.6377
+    paper_std: 0.0023
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: he2024unigraph
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.7397
+    at_pub_std: 0.0005
+    at_pub_source_arxiv: '2312.02619'
+    at_pub_source_title: Rethinking and Simplifying Bootstrapped Graph Latents
+    at_pub_source_date_iso: '2023-12-05'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-12-05'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.10199999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7397
+    true_std: 0.0005
+    value_gap_source_arxiv: '2312.02619'
+    value_gap_source_title: Rethinking and Simplifying Bootstrapped Graph Latents
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10199999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7397
+    sort_std: 0.0005
+    global_rank: 276
+    paper_rank: 345
+    rank_delta: 69
+    rank_delta_abs: 69
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Rethinking and Simplifying Bootstrapped Graph Latents
+    comparison_source_arxiv: '2312.02619'
+    is_best: false
+    is_std_outlier: false
+  - model: ZeroG
+    model_key: zerog
+    model_plain: ZeroG
+    value: 0.7129
+    std: null
+    paper_value: 0.7129
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7129
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7129
+    sort_std: null
+    global_rank: 310
+    paper_rank: 310
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LLama2-7B
+    model_key: llama2-7b
+    model_plain: LLama2-7B
+    value: 0.6433
+    std: null
+    paper_value: 0.6433
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6433
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6433
+    sort_std: null
+    global_rank: 343
+    paper_rank: 343
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LLaGA
+    model_key: llaga
+    model_plain: LLaGA
+    value: 0.3972
+    std: null
+    paper_value: 0.3972
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3972
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3972
+    sort_std: null
+    global_rank: 365
+    paper_rank: 365
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OFA-Llama2
+    model_key: ofa-llama2
+    model_plain: OFA-Llama2
+    value: 0.3931
+    std: null
+    paper_value: 0.3931
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3931
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3931
+    sort_std: null
+    global_rank: 366
+    paper_rank: 366
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphGPT
+    model_key: graphgpt
+    model_plain: GraphGPT
+    value: 0.1884
+    std: null
+    paper_value: 0.1884
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot evaluation on Products node classification
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-07-12'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1884
+    true_std: null
+    value_gap_source_arxiv: '2407.09709'
+    value_gap_source_title: 'GOFA: A Generative One-For-All Model for Joint Graph
+      Language Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1884
+    sort_std: null
+    global_rank: 370
+    paper_rank: 370
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+results_grouped:
+- benchmark: Classic
+  datasets:
+  - *id001
+- benchmark: OGB
+  datasets:
+  - *id002
+  - *id003
+- benchmark: MoleculeNet
+  datasets:
+  - *id004
+datasets_by_scope:
+- scope: node-level
+  label: Node-level
+  benchmarks:
+  - benchmark: Classic
+    benchmark_slug: classic
+    datasets:
+    - dataset: WikiCS
+      dataset_slug: wikics
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbn-products
+      dataset_slug: ogbn-products
+- scope: graph-level
+  label: Graph-level
+  benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+  - benchmark: MoleculeNet
+    benchmark_slug: moleculenet
+    datasets:
+    - dataset: BBBP
+      dataset_slug: bbbp
+---
+

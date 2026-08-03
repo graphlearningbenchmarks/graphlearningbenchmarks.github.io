@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ $papers := where .Site.RegularPages "Section" "papers" }}
+{{ $papersWithResults := where $papers "Params.has_results" true }}
+{{ $snapshot := hugo.Data.export_snapshot }}
+{{ $paperCount := $snapshot.counts.papers | default (len $papersWithResults) }}
+{{ $totalResults := $snapshot.counts.results | default 0 }}
+
+<div class="overview-hero">
+  <p class="overview-kicker">Overview</p>
+  <h1>{{ .Title }}</h1>
+  <div class="overview-intro">{{ .Content }}</div>
+  <div class="dataset-stats overview-stats">
+    <a class="stat-item stat-link" href="{{ "datasets/" | relURL }}"><span class="stat-value">{{ $totalResults }}</span><span class="stat-label">leaderboard results</span></a>
+    <a class="stat-item stat-link" href="{{ "papers/" | relURL }}"><span class="stat-value">{{ $paperCount }}</span><span class="stat-label">papers</span></a>
+  </div>
+</div>
+<section class="overview-section">
+  <p>Monthly trends are withheld until they can be generated from this same protocol-compatible snapshot.</p>
+</section>
+{{ end }}

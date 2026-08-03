@@ -1,0 +1,161 @@
+{{ define "main" }}
+<div class="home-hero">
+  <h1>Datasets</h1>
+  <p>Browse current and legacy datasets by benchmark group; linked dataset pages include result tables and SOTA progression plots.</p>
+  {{ $datasets := where .Site.RegularPages "Section" "datasets" }}
+  {{ $stats := newScratch }}
+  {{ $stats.Set "resultCount" 0 }}
+  {{ range $datasets }}
+    {{ with .Params.result_count }}
+      {{ $stats.Add "resultCount" . }}
+    {{ end }}
+  {{ end }}
+  <div class="dataset-stats">
+    <a class="stat-item stat-link" href="{{ "benchmark-groups/" | relURL }}"><span class="stat-value">{{ len hugo.Data.benchmarks }}</span><span class="stat-label">benchmark groups</span></a>
+    <a class="stat-item stat-link" href="{{ "datasets/" | relURL }}"><span class="stat-value">{{ len $datasets }}</span><span class="stat-label">datasets</span></a>
+    <a class="stat-item stat-link" href="{{ "results/" | relURL }}"><span class="stat-value">{{ $stats.Get "resultCount" }}</span><span class="stat-label">results</span></a>
+  </div>
+</div>
+
+<nav class="benchmark-index" aria-label="Benchmark group index">
+  <span class="benchmark-index-label">Jump to:</span>
+  <div class="benchmark-index-section">
+    <span class="benchmark-index-heading">Current</span>
+    {{ range hugo.Data.benchmarks }}
+    {{ if not .is_legacy }}<a href="#benchmark-{{ .slug }}">{{ .name }}</a>{{ end }}
+    {{ end }}
+  </div>
+  <div class="benchmark-index-section">
+    <span class="benchmark-index-heading">Legacy</span>
+    {{ range hugo.Data.benchmarks }}
+    {{ if .is_legacy }}<a href="#benchmark-{{ .slug }}">{{ .name }}</a>{{ end }}
+    {{ end }}
+  </div>
+</nav>
+
+{{/* Collect distinct task types across all dataset pages */}}
+{{ $tasks := slice }}
+{{ range $.Site.Pages }}
+{{ if eq .Section "datasets" }}{{ with .Params.task_type }}{{ $tasks = $tasks | append . }}{{ end }}{{ end }}
+{{ end }}
+{{ $tasks = $tasks | uniq }}
+
+{{ if gt (len $tasks) 1 }}
+<div class="filter-bar task-filter-bar">
+  <span class="filter-label">Filter by task:</span>
+  <button class="task-filter active" data-task="">All</button>
+  {{ range $tasks }}
+  <button class="task-filter" data-task="{{ . }}">{{ replace . "_" " " | title }}</button>
+  {{ end }}
+</div>
+{{ end }}
+
+<div class="filter-bar dataset-search-bar">
+  <label class="filter-label" for="dataset-search">Search datasets:</label>
+  <input id="dataset-search" type="search" placeholder="Type a dataset name..." autocomplete="off">
+</div>
+
+<div id="benchmark-groups-container" data-benchmark-item=".benchmark-group">
+{{ range hugo.Data.benchmarks }}
+<section class="benchmark-group benchmark-sort-item" id="benchmark-{{ .slug }}"
+  data-is-legacy="{{ if .is_legacy }}1{{ else }}0{{ end }}">
+  <div class="benchmark-header">
+    <h2>{{ .name }}</h2>
+    {{ if .is_legacy }}<span class="badge legacy-badge" title="Established benchmark suite with less recent leaderboard activity">Legacy</span>{{ end }}
+    {{ if and .source_papers (le (len .source_papers) 3) }}
+    <span class="benchmark-paper">
+      Sources:
+      {{ range $index, $source := .source_papers }}{{ if gt $index 0 }}, {{ end }}<a href="{{ if $source.is_local }}{{ $source.url | relURL }}{{ else }}{{ $source.url }}{{ end }}" title="{{ $source.role }}">{{ $source.title }}</a>{{ end }}
+    </span>
+    {{ else if .no_single_introduction_paper }}
+    <span class="benchmark-paper">No single introduction paper</span>
+    {{ end }}
+  </div>
+  <div class="dataset-grid">
+    {{ range .datasets }}
+    {{ $ds := . }}
+    {{ range $.Site.Pages }}
+    {{ if and (eq .Section "datasets") (eq .Params.slug $ds.slug) }}
+    {{ $page := . }}
+    <div class="dataset-card" data-task="{{ .Params.task_type }}" data-name="{{ .Title | lower }}">
+      <h3>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h3>
+      <div class="paper-meta">
+        {{ with .Params.task_type }}<span class="badge">{{ replace . "_" " " }}</span>{{ end }}
+        {{ with .Params.result_count }}<span class="badge muted">{{ . }} results</span>{{ end }}
+      </div>
+      {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+      {{ with .Params.best_model }}
+      {{ $bestArxiv := .arxiv_id }}
+      {{ $bestTitle := .paper_title }}
+      {{ if not $bestArxiv }}
+      {{ with index $page.Params.variants 0 }}
+      {{ with index .rows 0 }}
+      {{ $bestArxiv = .arxiv_id }}
+      {{ $bestTitle = .title }}
+      {{ end }}
+      {{ end }}
+      {{ end }}
+      <p class="dataset-card-best">
+        <span class="best-label">Best:</span>
+        {{ if $bestArxiv }}
+        <strong><a href="{{ printf "papers/%s/" $bestArxiv | relURL }}" title="{{ with $bestTitle }}{{ . }}{{ else }}arXiv:{{ $bestArxiv }}{{ end }}">{{ .model }}</a></strong>
+        {{ else }}
+        <strong>{{ .model }}</strong>
+        {{ end }}
+        <span class="best-value">{{ .metric }}: {{ printf "%.2g" .value }}</span>
+      </p>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+</div>
+
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+(function () {
+  var activeTask = "";
+  var query = "";
+  var btns = document.querySelectorAll(".task-filter");
+  var searchInput = document.getElementById("dataset-search");
+
+  function applyFilters() {
+    document.querySelectorAll(".dataset-card").forEach(function (card) {
+      var taskMatch = !activeTask || card.dataset.task === activeTask;
+      var name = (card.dataset.name || "").toLowerCase();
+      var queryMatch = !query || name.indexOf(query) !== -1;
+      card.style.display = (taskMatch && queryMatch) ? "" : "none";
+    });
+
+    document.querySelectorAll(".benchmark-group").forEach(function (section) {
+      var anyVisible = Array.from(section.querySelectorAll(".dataset-card"))
+        .some(function (c) { return c.style.display !== "none"; });
+      section.style.display = anyVisible ? "" : "none";
+    });
+  }
+
+  btns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      activeTask = this.dataset.task;
+      btns.forEach(function (b) { b.classList.remove("active"); });
+      this.classList.add("active");
+      applyFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener("input", function () {
+      query = (this.value || "").trim().toLowerCase();
+      applyFilters();
+    });
+  }
+})();
+</script>
+{{ end }}

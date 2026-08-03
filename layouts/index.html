@@ -1,0 +1,86 @@
+{{ define "main" }}
+{{ partial "site-banner.html" (dict
+  "variant" "info"
+  "message" "This page is under development. If you have any questions, improvement ideas, spotted errors/inconsistencies, or want to collaborate, please reach out to <a href=\"mailto:graphlearningbenchmarks@proton.me\">graphlearningbenchmarks@proton.me</a>. Please also write such emails for small improvements."
+) }}
+<div class="home-hero">
+  <h1>Graph Learning Leaderboards</h1>
+  <p>Quickly identify the SOTA for common graph-learning benchmarks. Identify core baselines to test against. </p>
+  {{ $datasets := where .Site.RegularPages "Section" "datasets" }}
+  {{ $papers := where .Site.RegularPages "Section" "papers" }}
+  {{ $papersWithResults := where $papers "Params.has_results" true }}
+  {{ $benchmarks := hugo.Data.benchmarks }}
+  {{ $snapshot := hugo.Data.export_snapshot }}
+  {{ $benchmarkCount := 0 }}
+  {{ if $benchmarks }}
+    {{ $benchmarkCount = len $benchmarks }}
+  {{ else }}
+    {{ $benchmarkNames := slice }}
+    {{ range $datasets }}
+      {{ with .Params.benchmark }}
+        {{ $benchmarkNames = $benchmarkNames | append . }}
+      {{ end }}
+    {{ end }}
+    {{ $benchmarkCount = len ($benchmarkNames | uniq) }}
+  {{ end }}
+  <div class="dataset-stats home-overview-links">
+    <a class="stat-item stat-link" href="{{ "benchmark-groups/" | relURL }}"><span class="stat-value">{{ $benchmarkCount }}</span><span class="stat-label">benchmark groups</span></a>
+    <a class="stat-item stat-link" href="{{ "datasets/" | relURL }}"><span class="stat-value">{{ len $datasets }}</span><span class="stat-label">datasets</span></a>
+    <a class="stat-item stat-link" href="{{ "papers-overview/" | relURL }}"><span class="stat-value">{{ $snapshot.counts.papers | default (len $papersWithResults) }}</span><span class="stat-label">papers</span></a>
+    <a class="stat-item stat-link" href="{{ "results/" | relURL }}"><span class="stat-value">{{ $snapshot.counts.results | default 0 }}</span><span class="stat-label">results</span></a>
+  </div>
+
+  <div class="home-nav">
+    <a href="{{ "datasets/" | relURL }}" class="btn-primary">Browse Datasets</a>
+    <a href="{{ "papers-overview/" | relURL }}" class="btn-primary">Paper Statistics</a>
+  </div>
+</div>
+
+<section class="home-section">
+  <h2>Core Features</h2>
+  <div class="home-guide-grid">
+    <article class="home-guide-card">
+      <h3>SOTA over time</h3>
+      <p>For each benchmark, plots how the SOTA developed over time.</p>
+    </article>
+    <article class="home-guide-card">
+      <h3>Explicit lower bounds</h3>
+      <p>GCN/GIN and MLP performance is specifically highlighted to see lower bounds.</p>
+    </article>
+    <article class="home-guide-card">
+      <h3>Baselines included</h3>
+      <p>Benchmark list also contains baseline results from the papers.</p>
+    </article>
+    <article class="home-guide-card">
+      <h3>Papers in context</h3>
+      <p>Paper pages present reported results in context of current SOTA and selected simple baselines.</p>
+    </article>
+  </div>
+</section>
+
+{{ $activeBenchmarks := where $benchmarks "is_legacy" false }}
+{{ with first 6 $activeBenchmarks }}
+<section class="home-section">
+  <h2>Recently active benchmark groups</h2>
+  <div class="benchmark-list">
+    {{ range . }}
+    {{ $bmStats := newScratch }}
+    {{ $bmStats.Set "resultCount" 0 }}
+    {{ range .datasets }}
+      {{ $bmStats.Add "resultCount" .result_count }}
+    {{ end }}
+    <article class="benchmark-card">
+      <h3><a href="{{ printf "datasets/#benchmark-%s" .slug | relURL }}">{{ .name }}</a></h3>
+      <p class="home-benchmark-meta">{{ len .datasets }} datasets · {{ printf "%.1f" (.recent_results_per_dataset | default 0) }} recent results/dataset · {{ $bmStats.Get "resultCount" }} total</p>
+      {{ with .description }}<p>{{ . }}</p>{{ end }}
+      <p class="home-benchmark-datasets">
+        {{ range $index, $dataset := first 3 .datasets }}{{ if gt $index 0 }}, {{ end }}<a href="{{ printf "datasets/%s/" $dataset.slug | relURL }}">{{ $dataset.name }}</a>{{ end }}
+        {{ if gt (len .datasets) 3 }} and {{ sub (len .datasets) 3 }} more{{ end }}
+      </p>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
