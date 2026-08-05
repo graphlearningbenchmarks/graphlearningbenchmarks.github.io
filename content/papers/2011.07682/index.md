@@ -56,7 +56,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 task_categories:
 - graph_classification
 experiment_scopes:
@@ -65,100 +65,100 @@ results:
 - &id001
   dataset: MalNet-Tiny
   rows:
-  - model: EB-GNN
-    model_key: dag+graphgps
-    model_plain: EB-GNN
-    value: 0.9345
-    std: 0.0041
+  - model: GMN
+    model_key: gmn
+    model_plain: GMN
+    value: 0.9415
+    std: 0.002
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2210.13148'
-    title: Transformers over Directed Acyclic Graphs
-    date: Oct 24, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-24'
-    venue: Neural Information Processing Systems
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9345
-    sort_std: 0.0041
+    sort_value: 0.9415
+    sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EB-GNN
-    model_key: eb-gnn
-    model_plain: EB-GNN
-    value: 0.933
-    std: 0.0066
+  - model: GMN
+    model_key: dirgraphssm
+    model_plain: GMN
+    value: 0.9409
+    std: 0.0023
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.13615'
-    title: 'Message Passing on the Edge: Towards Scalable and Expressive GNNs'
-    date: Oct 15, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-15'
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.933
-    sort_std: 0.0066
+    sort_value: 0.9409
+    sort_std: 0.0023
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EB-GNN
-    model_key: hymn
-    model_plain: EB-GNN
-    value: 0.9284
-    std: 0.0052
+  - model: GMN
+    model_key: dag+sat-plus
+    model_plain: GMN
+    value: 0.9407
+    std: 0.002
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.13615'
-    title: 'Message Passing on the Edge: Towards Scalable and Expressive GNNs'
-    date: Oct 15, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-15'
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
     venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9284
-    sort_std: 0.0052
+    sort_value: 0.9407
+    sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -212,7 +212,7 @@ results:
     today_delta_significant: false
     sort_value: 0.86
     sort_std: null
-    global_rank: 8
+    global_rank: 22
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -274,7 +274,7 @@ results:
     today_delta_significant: false
     sort_value: 0.86
     sort_std: null
-    global_rank: 8
+    global_rank: 22
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -310,5 +310,6 @@ datasets_by_scope:
     datasets:
     - dataset: MalNet-Tiny
       dataset_slug: malnet-tiny
+main_figure: /figures/2011.07682/main_figure.jpegoptim.jpg
 ---
 

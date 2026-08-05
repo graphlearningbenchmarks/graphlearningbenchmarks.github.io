@@ -45,8 +45,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - PHC-GNN
-mrr: 0.0348
-adjusted_mrr: 0.0232
+mrr: 0.0343
+adjusted_mrr: 0.0228
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -68,9 +68,9 @@ results:
 - &id005
   dataset: CIFAR10
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: randalign
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.7942
     std: 0.00072
     metric: Accuracy
@@ -79,9 +79,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2404.09774'
     title: 'RandAlign: A Parameter-Free Method for Regularizing Graph Convolutional
       Networks'
@@ -102,45 +102,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: tau-grit
-    model_plain: 3WLGNN
-    value: 0.77784
-    std: 0.0049
+  - model: Tango_GPS
+    model_key: differential encoding
+    model_plain: Tango_GPS
+    value: 0.79067
+    std: 0.00269
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.12369'
-    title: A Hierarchical Quantized Tokenization Framework for Task-Adaptive Graph
-      Representation Learning
-    date: Oct 14, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-14'
-    venue: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: Jul 3, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-03'
+    venue: IEEE Transactions on Big Data
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.77784
-    sort_std: 0.0049
+    sort_value: 0.79067
+    sort_std: 0.00269
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: degta
-    model_plain: 3WLGNN
-    value: 0.76756
-    std: 0.00927
+  - model: Tango_GPS
+    model_key: ppgt
+    model_plain: Tango_GPS
+    value: 0.7856
+    std: 0.007
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -150,20 +149,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2408.07654'
-    title: 'Graph Triple Attention Network: A Decoupled Perspective'
-    date: Aug 14, 2024
-    date_display: Aug 2024
-    date_iso: '2024-08-14'
-    venue: arXiv.org
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.76756
-    sort_std: 0.00927
+    sort_value: 0.7856
+    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -193,7 +192,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy on the test dataset for CIFAR10 graph representation.
+    protocol_note: Accuracy on the test dataset for CIFAR10
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -226,8 +225,8 @@ results:
     value_note: ''
     sort_value: 0.668
     sort_std: 0.0023
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -261,7 +260,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy on the test dataset for CIFAR10 graph representation.
+    protocol_note: Accuracy on the test dataset for CIFAR10
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -294,8 +293,8 @@ results:
     value_note: ''
     sort_value: 0.6679
     sort_std: 0.001
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -329,7 +328,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy on the test dataset for CIFAR10 graph representation.
+    protocol_note: Accuracy on the test dataset for CIFAR10
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -362,8 +361,8 @@ results:
     value_note: ''
     sort_value: 0.6647
     sort_std: 0.0046
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -397,7 +396,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy on the test dataset for CIFAR10 graph representation.
+    protocol_note: Accuracy on the test dataset for CIFAR10
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -430,8 +429,8 @@ results:
     value_note: ''
     sort_value: 0.6642
     sort_std: 0.0027
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -465,7 +464,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Accuracy on the test dataset for CIFAR10 graph representation.
+    protocol_note: Accuracy on the test dataset for CIFAR10
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -498,8 +497,8 @@ results:
     value_note: ''
     sort_value: 0.6632
     sort_std: 0.0015
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -521,77 +520,44 @@ results:
 - &id004
   dataset: MNIST
   rows:
-  - model: 3WLGNN
-    model_key: graphcon-gat
-    model_plain: 3WLGNN
-    value: 0.9891
-    std: null
+  - model: Tango_GPS
+    model_key: schrödinger gnn
+    model_plain: Tango_GPS
+    value: 0.9913
+    std: 0.0004
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2202.02296'
-    title: Graph-Coupled Oscillator Networks
-    date: Feb 4, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-04'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/tk-rusch/GraphCON
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9891
-    sort_std: null
+    sort_value: 0.9913
+    sort_std: 0.0004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: gig-gatedgcn
-    model_plain: 3WLGNN
-    value: 0.988
-    std: 0.0003
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.00696'
-    title: Graph in Graph Neural Network
-    date: Jun 30, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-30'
-    venue: International Journal of Computer Vision
-    codebase_url: https://github.com/wangjs96/Graph-in-Graph-Neural-Network
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.988
-    sort_std: 0.0003
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: 3WLGNN
-    model_key: pncnn
-    model_plain: 3WLGNN
-    value: 0.9876
-    std: null
+  - model: Tango_GPS
+    model_key: cnn
+    model_plain: Tango_GPS
+    value: 0.9907
+    std: 0.0007
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -601,20 +567,53 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2202.02296'
-    title: Graph-Coupled Oscillator Networks
-    date: Feb 4, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-04'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/tk-rusch/GraphCON
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9907
+    sort_std: 0.0007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: mpnn
+    model_plain: Tango_GPS
+    value: 0.9895
+    std: 0.0006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9876
-    sort_std: null
+    sort_value: 0.9895
+    sort_std: 0.0006
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -644,7 +643,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on MNIST graph classification task
+    protocol_note: Accuracy on the MNIST test dataset
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -677,8 +676,8 @@ results:
     value_note: ''
     sort_value: 0.9736
     sort_std: 0.0006
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -712,7 +711,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on MNIST graph classification task
+    protocol_note: Accuracy on the MNIST test dataset
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -745,8 +744,8 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0008
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -780,7 +779,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on MNIST graph classification task
+    protocol_note: Accuracy on the MNIST test dataset
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -813,8 +812,8 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0005
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -848,7 +847,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on MNIST graph classification task
+    protocol_note: Accuracy on the MNIST test dataset
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -881,8 +880,8 @@ results:
     value_note: ''
     sort_value: 0.9724
     sort_std: 0.0017
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -916,7 +915,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on MNIST graph classification task
+    protocol_note: Accuracy on the MNIST test dataset
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -949,8 +948,8 @@ results:
     value_note: ''
     sort_value: 0.9708
     sort_std: 0.001
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -972,100 +971,101 @@ results:
 - &id001
   dataset: ogbg-molhiv
   rows:
-  - model: MEG
-    model_key: clear
-    model_plain: MEG
-    value: 0.997
-    std: 0.002
+  - model: SigGate-GT
+    model_key: multi-rf fusion with multi-gnn blending
+    model_plain: SigGate-GT
+    value: 0.8476
+    std: 0.0002
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Mixing pharmacophoric (FCFP) and structural (ECFP) fingerprints...
+      GNNs contributing only 12%
     is_global_top: true
     global_rank: 1
-    sort_value: 0.997
-    sort_std: 0.002
+    sort_value: 0.8476
+    sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MEG
-    model_key: random
-    model_plain: MEG
-    value: 0.897
-    std: 0.004
+  - model: SigGate-GT
+    model_key: hyperfusion
+    model_plain: SigGate-GT
+    value: 0.8475
+    std: 0.0003
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.897
-    sort_std: 0.004
+    sort_value: 0.8475
+    sort_std: 0.0003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: MEG
-    model_key: eg-ist
-    model_plain: MEG
-    value: 0.897
-    std: 0.004
+  - model: SigGate-GT
+    model_key: pas+fps
+    model_plain: SigGate-GT
+    value: 0.842
+    std: 0.0015
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.897
-    sort_std: 0.004
+    sort_value: 0.842
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1095,7 +1095,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1128,8 +1128,8 @@ results:
     value_note: ''
     sort_value: 0.797
     sort_std: 0.0097
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1155,16 +1155,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: mixed
-    feature_source_evidence: Model performances marked with * include a virtual-node
-      in their underlying method.
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
     table_ref: Table 2
     source_ref: kong2020flag
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1197,8 +1196,8 @@ results:
     value_note: ''
     sort_value: 0.7942
     sort_std: 0.012
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1232,7 +1231,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1264,8 +1263,8 @@ results:
     value_note: ''
     sort_value: 0.7934
     sort_std: 0.0116
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1299,7 +1298,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1332,8 +1331,8 @@ results:
     value_note: ''
     sort_value: 0.7934
     sort_std: 0.0116
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1367,7 +1366,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1400,8 +1399,8 @@ results:
     value_note: ''
     sort_value: 0.7925
     sort_std: 0.0107
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1435,7 +1434,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1468,8 +1467,8 @@ results:
     value_note: ''
     sort_value: 0.7913
     sort_std: 0.0087
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1503,7 +1502,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1536,8 +1535,8 @@ results:
     value_note: ''
     sort_value: 0.7907
     sort_std: 0.0116
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1571,7 +1570,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1603,8 +1602,8 @@ results:
     value_note: ''
     sort_value: 0.7905
     sort_std: 0.0132
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1638,7 +1637,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1671,8 +1670,8 @@ results:
     value_note: ''
     sort_value: 0.7904
     sort_std: 0.0189
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1706,7 +1705,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1738,8 +1737,8 @@ results:
     value_note: ''
     sort_value: 0.786
     sort_std: 0.012
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1773,7 +1772,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1806,8 +1805,8 @@ results:
     value_note: ''
     sort_value: 0.7834
     sort_std: 0.0164
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1841,7 +1840,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1874,8 +1873,8 @@ results:
     value_note: ''
     sort_value: 0.7818
     sort_std: 0.0094
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1901,16 +1900,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: mixed
-    feature_source_evidence: Model performances marked with * include a virtual-node
-      in their underlying method.
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
     table_ref: Table 2
     source_ref: hu2020open; dwivedi2020benchmarking
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -1943,10 +1941,10 @@ results:
     value_note: ''
     sort_value: 0.778
     sort_std: 0.0182
-    global_rank: 124
-    paper_rank: 164
-    rank_delta: 40
-    rank_delta_abs: 40
+    global_rank: 120
+    paper_rank: 162
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1970,16 +1968,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: mixed
-    feature_source_evidence: Model performances marked with * include a virtual-node
-      in their underlying method.
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
     table_ref: Table 2
     source_ref: kong2020flag
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2012,8 +2009,8 @@ results:
     value_note: ''
     sort_value: 0.7748
     sort_std: 0.0096
-    global_rank: 138
-    paper_rank: 138
+    global_rank: 134
+    paper_rank: 134
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2047,7 +2044,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split
+    protocol_note: ROC-AUC on OGB scaffold split
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2080,8 +2077,8 @@ results:
     value_note: ''
     sort_value: 0.763
     sort_std: 0.003
-    global_rank: 204
-    paper_rank: 217
+    global_rank: 203
+    paper_rank: 216
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -2103,9 +2100,9 @@ results:
 - &id002
   dataset: ogbg-molpcba
   rows:
-  - model: UnifiedMolPretrain
+  - model: SigGate-GT
     model_key: hig with graphormer
-    model_plain: UnifiedMolPretrain
+    model_plain: SigGate-GT
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -2136,9 +2133,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: SigGate-GT
     model_key: grpe-large
-    model_plain: UnifiedMolPretrain
+    model_plain: SigGate-GT
     value: 0.315
     std: 0.001
     metric: AP
@@ -2169,9 +2166,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: SigGate-GT
     model_key: graphormer
-    model_plain: UnifiedMolPretrain
+    model_plain: SigGate-GT
     value: 0.314
     std: null
     metric: AP
@@ -2226,7 +2223,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2258,8 +2255,8 @@ results:
     value_note: ''
     sort_value: 0.2947
     sort_std: 0.0026
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2293,7 +2290,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2326,8 +2323,8 @@ results:
     value_note: ''
     sort_value: 0.2947
     sort_std: 0.0026
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2361,7 +2358,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2394,8 +2391,8 @@ results:
     value_note: ''
     sort_value: 0.2941
     sort_std: 0.0015
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2429,7 +2426,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2462,8 +2459,8 @@ results:
     value_note: ''
     sort_value: 0.2935
     sort_std: 0.0028
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2497,7 +2494,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2530,8 +2527,8 @@ results:
     value_note: ''
     sort_value: 0.293
     sort_std: 0.0016
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2565,7 +2562,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2598,8 +2595,8 @@ results:
     value_note: ''
     sort_value: 0.2921
     sort_std: 0.0023
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2633,7 +2630,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2666,8 +2663,8 @@ results:
     value_note: ''
     sort_value: 0.2917
     sort_std: 0.0016
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2701,7 +2698,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2734,8 +2731,8 @@ results:
     value_note: ''
     sort_value: 0.2913
     sort_std: 0.0024
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2769,7 +2766,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2801,10 +2798,10 @@ results:
     value_note: ''
     sort_value: 0.2902
     sort_std: 0.0017
-    global_rank: 30
-    paper_rank: 49
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 32
+    paper_rank: 54
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2836,7 +2833,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2869,8 +2866,8 @@ results:
     value_note: ''
     sort_value: 0.2885
     sort_std: 0.003
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2904,7 +2901,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -2936,8 +2933,8 @@ results:
     value_note: ''
     sort_value: 0.2842
     sort_std: 0.0043
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2971,7 +2968,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3004,8 +3001,8 @@ results:
     value_note: ''
     sort_value: 0.2838
     sort_std: 0.0035
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3039,7 +3036,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3072,8 +3069,8 @@ results:
     value_note: ''
     sort_value: 0.2834
     sort_std: 0.0038
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3107,7 +3104,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3140,8 +3137,8 @@ results:
     value_note: ''
     sort_value: 0.2781
     sort_std: 0.0038
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3175,7 +3172,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    protocol_note: OGB scaffold split; AP averaged over 5 runs.
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3208,8 +3205,8 @@ results:
     value_note: ''
     sort_value: 0.269
     sort_std: 0.002
-    global_rank: 53
-    paper_rank: 79
+    global_rank: 59
+    paper_rank: 85
     rank_delta: 26
     rank_delta_abs: 26
     rank_delta_direction: worse
@@ -3231,9 +3228,9 @@ results:
 - &id003
   dataset: ogbg-ppa
   rows:
-  - model: MLAP
+  - model: differential encoding
     model_key: a-nlsf
-    model_plain: MLAP
+    model_plain: differential encoding
     value: 0.8149
     std: 0.0067
     metric: Accuracy
@@ -3265,11 +3262,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MLAP
-    model_key: cnns
-    model_plain: MLAP
-    value: 0.8017
-    std: null
+  - model: differential encoding
+    model_key: differential encoding
+    model_plain: differential encoding
+    value: 0.8096
+    std: 0.0029
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: Jul 3, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-03'
+    venue: IEEE Transactions on Big Data
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8096
+    sort_std: 0.0029
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: differential encoding
+    model_key: mpnn + vn + nope
+    model_plain: differential encoding
+    value: 0.8055
+    std: 0.0038
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -3279,58 +3309,24 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2407.00696'
-    title: Graph in Graph Neural Network
-    date: Jun 30, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-30'
-    venue: International Journal of Computer Vision
-    codebase_url: https://github.com/wangjs96/Graph-in-Graph-Neural-Network
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8017
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLAP
-    model_key: gps
-    model_plain: MLAP
-    value: 0.8015
-    std: 0.0033
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2509.24886'
-    title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
-      Networks
-    date: Sep 29, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-29'
-    venue: arXiv.org
-    codebase_url: https://github.com/ywelld/_ac
-    uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8015
-    sort_std: 0.0033
+    sort_value: 0.8055
+    sort_std: 0.0038
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: DeeperGCN+FLAG
     model_key: deepergcn+flag
@@ -3356,7 +3352,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB species split
+    protocol_note: Test split, species split (OGB species split)
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3389,8 +3385,8 @@ results:
     value_note: ''
     sort_value: 0.7752
     sort_std: 0.0069
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3424,7 +3420,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB species split
+    protocol_note: Test split, species split (OGB species split)
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3457,8 +3453,8 @@ results:
     value_note: ''
     sort_value: 0.7712
     sort_std: 0.0071
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3492,7 +3488,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB species split
+    protocol_note: Test split, species split (OGB species split)
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3525,8 +3521,8 @@ results:
     value_note: ''
     sort_value: 0.7561
     sort_std: null
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3560,7 +3556,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB species split
+    protocol_note: Test split, species split (OGB species split)
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3593,8 +3589,8 @@ results:
     value_note: ''
     sort_value: 0.7245
     sort_std: 0.0114
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3628,7 +3624,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB species split
+    protocol_note: Test split, species split (OGB species split)
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3661,8 +3657,8 @@ results:
     value_note: ''
     sort_value: 0.7037
     sort_std: 0.0107
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3696,7 +3692,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB species split
+    protocol_note: Test split, species split (OGB species split)
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3729,10 +3725,10 @@ results:
     value_note: ''
     sort_value: 0.7037
     sort_std: 0.0107
-    global_rank: 28
-    paper_rank: 33
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 33
+    paper_rank: 39
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3764,7 +3760,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: OGB species split
+    protocol_note: Test split, species split (OGB species split)
     date: Mar 30, 2021
     date_display: Mar 2021
     date_iso: '2021-03-30'
@@ -3797,11 +3793,11 @@ results:
     value_note: ''
     sort_value: 0.6857
     sort_std: 0.0061
-    global_rank: 34
-    paper_rank: 34
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    global_rank: 40
+    paper_rank: 42
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -3848,5 +3844,6 @@ datasets_by_scope:
     - dataset: CIFAR10
       dataset_slug: cifar10
 single_proposed_model: PHC-GNN
+main_figure: /figures/2103.16584/main_figure.jpegoptim.jpg
 ---
 

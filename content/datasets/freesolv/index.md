@@ -8,7 +8,7 @@ primary_metric: RMSE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
 stats: null
-result_count: 179
+result_count: 163
 best_model:
   model: 10% ZINC + 10% PubChem
   value: 0.205
@@ -70,10 +70,6 @@ papers:
     Property Prediction
   date_iso: '2023-12-12'
   venue: NeurIPS 2023
-- arxiv_id: '2311.04837'
-  title: Identifying Semantic Component for Robust Molecular Property Prediction
-  date_iso: '2023-11-08'
-  venue: ''
 - arxiv_id: '2310.16401'
   title: Graph Neural Networks with a Distribution of Parametrized Graphs
   date_iso: '2023-10-25'
@@ -1342,34 +1338,6 @@ variants:
     metric_stds:
     - 0.15
     - null
-  - model: OOD-GNN
-    model_plain: OOD-GNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_iso: '2023-11-08'
-    date_display: Nov 2023
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 1.81
-    - null
-    metric_stds:
-    - 0.14
-    - null
   - model: MoleBlend
     model_plain: MoleBlend
     is_baseline: true
@@ -1571,18 +1539,47 @@ variants:
     metric_stds:
     - 0.094
     - null
-  row_count: 179
+  - model: Graph
+    model_plain: Graph
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2106.06130'
+    title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning for Property
+      Prediction'
+    date: Jun 11, 2021
+    date_iso: '2021-06-11'
+    date_display: Jun 2021
+    codebase_url: https://github.com/PaddlePaddle/PaddleHelix
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 1.95
+    - null
+    metric_stds:
+    - 0.069
+    - null
+  row_count: 163
   rows_json: /data/datasets/freesolv/scaffold-split-rows.json
   chart_json: /data/datasets/freesolv/scaffold-split-chart.json
   arch_counts:
-    gnn: 118
-    hybrid: 33
+    gnn: 103
+    hybrid: 32
     graph_transformer: 8
     llm: 6
     walk: 1
     traditional: 10
   metric_counts:
-  - 168
+  - 152
   - 11
   milestones: &id001
   - value: 1.701

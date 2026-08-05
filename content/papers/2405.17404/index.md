@@ -67,9 +67,9 @@ results:
 - &id001
   dataset: PascalVOC-SP
   rows:
-  - model: SAN+RWSE
+  - model: CR-TAS
     model_key: gcn
-    model_plain: SAN+RWSE
+    model_plain: CR-TAS
     value: 0.78
     std: 0.31
     metric: F1
@@ -100,72 +100,73 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: true
-  - model: SAN+RWSE
-    model_key: crawl
-    model_plain: SAN+RWSE
-    value: 0.4588
-    std: 0.79
+  - model: CR-TAS
+    model_key: neuralwalker
+    model_plain: CR-TAS
+    value: 0.4912
+    std: 0.0042
     metric: F1
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-14'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/goombalab/chimera
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.4588
-    sort_std: 0.79
+    sort_value: 0.4912
+    sort_std: 0.0042
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: true
-  - model: SAN+RWSE
-    model_key: graphgps
-    model_plain: SAN+RWSE
-    value: 0.4538
-    std: 0.83
+    is_std_outlier: false
+  - model: CR-TAS
+    model_key: ppgt
+    model_plain: CR-TAS
+    value: 0.4641
+    std: 0.0033
     metric: F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: utilize relative random walk probabilities (RRWP) as
+      our demonstrating example of graph PE
     is_global_top: true
     global_rank: 3
-    sort_value: 0.4538
-    sort_std: 0.83
+    sort_value: 0.4641
+    sort_std: 0.0033
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
+    is_best: false
+    is_std_outlier: false
   - model: Full Graph (Oracle)
     model_key: full graph (oracle)
     model_plain: Full Graph (Oracle)
@@ -214,7 +215,7 @@ results:
     today_delta_significant: false
     sort_value: 0.263
     sort_std: 0.006
-    global_rank: 74
+    global_rank: 88
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -276,7 +277,7 @@ results:
     today_delta_significant: false
     sort_value: 0.08
     sort_std: 0.008
-    global_rank: 84
+    global_rank: 116
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -338,7 +339,7 @@ results:
     today_delta_significant: false
     sort_value: 0.073
     sort_std: 0.018
-    global_rank: 84
+    global_rank: 116
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -400,7 +401,7 @@ results:
     today_delta_significant: false
     sort_value: 0.068
     sort_std: 0.009
-    global_rank: 84
+    global_rank: 116
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -462,7 +463,7 @@ results:
     today_delta_significant: false
     sort_value: 0.062
     sort_std: 0.016
-    global_rank: 84
+    global_rank: 116
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -524,7 +525,7 @@ results:
     today_delta_significant: false
     sort_value: 0.051
     sort_std: 0.004
-    global_rank: 84
+    global_rank: 116
     has_value_gap: false
     has_value_note: false
     value_gap: null

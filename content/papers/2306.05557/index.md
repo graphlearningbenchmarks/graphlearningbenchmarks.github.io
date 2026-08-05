@@ -70,7 +70,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 2
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -499,9 +499,9 @@ results:
 - &id002
   dataset: Cornell
   rows:
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -532,9 +532,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: acm-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.948
     std: 0.038
     metric: Accuracy
@@ -565,9 +565,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: rf-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -654,10 +654,10 @@ results:
     value_note: ''
     sort_value: 0.9136
     sort_std: 0.007
-    global_rank: 24
-    paper_rank: 213
-    rank_delta: 189
-    rank_delta_abs: 189
+    global_rank: 25
+    paper_rank: 221
+    rank_delta: 196
+    rank_delta_abs: 196
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -722,10 +722,10 @@ results:
     value_note: ''
     sort_value: 0.8918
     sort_std: 0.0396
-    global_rank: 40
-    paper_rank: 423
-    rank_delta: 383
-    rank_delta_abs: 383
+    global_rank: 41
+    paper_rank: 451
+    rank_delta: 410
+    rank_delta_abs: 410
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -790,10 +790,10 @@ results:
     value_note: ''
     sort_value: 0.8623
     sort_std: 0.0471
-    global_rank: 79
-    paper_rank: 293
-    rank_delta: 214
-    rank_delta_abs: 214
+    global_rank: 82
+    paper_rank: 305
+    rank_delta: 223
+    rank_delta_abs: 223
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -859,10 +859,10 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.054
-    global_rank: 165
-    paper_rank: 369
-    rank_delta: 204
-    rank_delta_abs: 204
+    global_rank: 171
+    paper_rank: 394
+    rank_delta: 223
+    rank_delta_abs: 223
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -928,10 +928,10 @@ results:
     value_note: ''
     sort_value: 0.8015
     sort_std: 0.0037
-    global_rank: 183
-    paper_rank: 400
-    rank_delta: 217
-    rank_delta_abs: 217
+    global_rank: 190
+    paper_rank: 427
+    rank_delta: 237
+    rank_delta_abs: 237
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -996,10 +996,10 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.061
-    global_rank: 188
-    paper_rank: 439
-    rank_delta: 251
-    rank_delta_abs: 251
+    global_rank: 195
+    paper_rank: 469
+    rank_delta: 274
+    rank_delta_abs: 274
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1460,5 +1460,6 @@ datasets_by_scope:
       dataset_slug: cornell
     - dataset: Squirrel
       dataset_slug: squirrel
+main_figure: /figures/2306.05557/main_figure.jpegoptim.jpg
 ---
 

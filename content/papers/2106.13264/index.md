@@ -51,8 +51,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MPNN
-mrr: 0.0014
-adjusted_mrr: 0.0009
+mrr: 0.0012
+adjusted_mrr: 0.0008
 mrr_dataset_count: 2
 benchmark_categories:
 - Hypergraph Benchmarks

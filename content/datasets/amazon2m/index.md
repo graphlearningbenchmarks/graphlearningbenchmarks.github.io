@@ -15,7 +15,7 @@ stats:
   avg_nodes: 2000000.0
   avg_edges: 61000000.0
   num_classes: null
-result_count: 306
+result_count: 283
 best_model:
   model: GAT
   value: 0.953
@@ -78,10 +78,6 @@ papers:
   title: Partitioning Message Passing for Graph Fraud Detection
   date_iso: '2024-11-16'
   venue: ICLR 2024
-- arxiv_id: '2411.06427'
-  title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-  date_iso: '2024-11-10'
-  venue: NeurIPS 2024
 - arxiv_id: '2410.02158'
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
   date_iso: '2024-10-03'
@@ -161,10 +157,6 @@ papers:
     Networks'
   date_iso: '2019-05-20'
   venue: KDD 2019
-- arxiv_id: '1902.08730'
-  title: 'AliGraph: A Comprehensive Graph Neural Network Platform'
-  date_iso: '2019-02-23'
-  venue: ''
 variants:
 - slug: standard-split
   name: Standard split
@@ -2416,22 +2408,22 @@ variants:
     - null
     - null
     - null
-  row_count: 306
+  row_count: 283
   rows_json: /data/datasets/amazon2m/standard-split-rows.json
   chart_json: /data/datasets/amazon2m/standard-split-chart.json
   arch_counts:
-    gnn: 229
-    hybrid: 21
-    graph_transformer: 17
+    gnn: 217
+    hybrid: 19
+    graph_transformer: 16
     llm: 5
-    walk: 11
-    traditional: 18
+    walk: 4
+    traditional: 17
   metric_counts:
   - 144
   - 35
   - 25
-  - 38
-  - 20
+  - 26
+  - 9
   - 12
   - 8
   - 7
@@ -2468,12 +2460,19 @@ variants:
       title: 'GADBench: Revisiting and Benchmarking Supervised Graph Anomaly Detection'
       date: '2023-06-21'
     AUROC:
-    - value: 0.9784
+    - value: 0.9443
       std: null
-      model: UniGAD - BWG
-      arxiv_id: '2411.06427'
-      title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-      date: '2024-11-10'
+      model: GGAD
+      arxiv_id: '2506.15448'
+      title: Semi-supervised Graph Anomaly Detection via Robust Homophily Learning
+      date: '2025-06-18'
+    - value: 0.969
+      std: 0.01
+      model: weakly supervised graph anomaly detection method
+      arxiv_id: '2605.11749'
+      title: Learning Feature Encoder with Synthetic Anomalies for Weakly Supervised
+        Graph Anomaly Detection
+      date: '2026-04-01'
     F1:
     - value: 0.9041
       std: null

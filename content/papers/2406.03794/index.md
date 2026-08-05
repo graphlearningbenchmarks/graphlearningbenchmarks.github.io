@@ -451,5 +451,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: DEQHNet
+main_figure: /figures/2406.03794/main_figure.jpegoptim.jpg
 ---
 

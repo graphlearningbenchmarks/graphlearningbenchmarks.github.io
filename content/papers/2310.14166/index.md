@@ -447,8 +447,8 @@ results:
     value_note: ''
     sort_value: 0.8781
     sort_std: 0.0474
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -514,8 +514,8 @@ results:
     value_note: ''
     sort_value: 0.6056
     sort_std: 0.0869
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -582,8 +582,8 @@ results:
     value_note: ''
     sort_value: 0.539
     sort_std: 0.0474
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -649,10 +649,10 @@ results:
     value_note: ''
     sort_value: 0.499
     sort_std: 0.0723
-    global_rank: 23
-    paper_rank: 26
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 28
+    paper_rank: 32
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -683,5 +683,6 @@ datasets_by_scope:
     - dataset: ogbl-ddi
       dataset_slug: ogbl-ddi
 single_proposed_model: ELGNN
+main_figure: /figures/2310.14166/main_figure.jpegoptim.jpg
 ---
 

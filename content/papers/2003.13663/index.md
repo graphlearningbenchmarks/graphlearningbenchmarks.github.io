@@ -62,9 +62,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -96,9 +96,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -130,9 +130,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -220,8 +220,8 @@ results:
     value_note: ''
     sort_value: 0.8123
     sort_std: null
-    global_rank: 611
-    paper_rank: 611
+    global_rank: 712
+    paper_rank: 712
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -287,8 +287,8 @@ results:
     value_note: ''
     sort_value: 0.7549
     sort_std: null
-    global_rank: 748
-    paper_rank: 748
+    global_rank: 876
+    paper_rank: 876
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -320,5 +320,6 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
+main_figure: /figures/2003.13663/main_figure.jpegoptim.jpg
 ---
 

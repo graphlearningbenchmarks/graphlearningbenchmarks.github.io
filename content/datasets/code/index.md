@@ -12,14 +12,22 @@ stats:
   avg_nodes: 125.2
   avg_edges: 124.2
   num_classes: 1
-result_count: 17
+result_count: 47
 best_model:
-  model: K-Subtree SAT
-  value: 0.1937
+  model: GMN
+  value: 0.206
   metric: F1
-  arxiv_id: '2406.12059'
-  paper_title: A Scalable and Effective Alternative to Graph Transformers
+  arxiv_id: '2509.13735'
+  paper_title: State Space Models over Directed Graphs
 papers:
+- arxiv_id: '2511.08028'
+  title: Generalizable Insights for Graph Transformers in Theory and Practice
+  date_iso: '2025-11-11'
+  venue: NeurIPS 2025
+- arxiv_id: '2509.13735'
+  title: State Space Models over Directed Graphs
+  date_iso: '2025-09-17'
+  venue: ''
 - arxiv_id: '2406.12059'
   title: A Scalable and Effective Alternative to Graph Transformers
   date_iso: '2024-06-17'
@@ -28,10 +36,18 @@ papers:
   title: Higher-Order Expander Graph Propagation
   date_iso: '2023-11-14'
   venue: ''
+- arxiv_id: '2301.11956'
+  title: On the Connection Between MPNN and Graph Transformer
+  date_iso: '2023-01-27'
+  venue: ICML 2023
 - arxiv_id: '2206.02886'
   title: Graph Rationalization with Environment-based Augmentations
   date_iso: '2022-06-06'
   venue: KDD 2022
+- arxiv_id: '2201.08821'
+  title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+  date_iso: '2022-01-21'
+  venue: NeurIPS 2022
 variants:
 - slug: standard-split
   name: Standard split
@@ -55,6 +71,258 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
+  - model: GMN
+    model_plain: GMN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.206
+    - null
+    metric_stds:
+    - 0.002
+    - null
+  - model: DirGraphSSM
+    model_plain: DirGraphSSM
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.205
+    - null
+    metric_stds:
+    - 0.0023
+    - null
+  - model: Graph-Mamba
+    model_plain: Graph-Mamba
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.203
+    - null
+    metric_stds:
+    - 0.0023
+    - null
+  - model: DAG+SAT
+    model_plain: DAG+SAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.202
+    - null
+    metric_stds:
+    - 0.002
+    - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.199
+    - null
+    metric_stds:
+    - 0.002
+    - null
+  - model: LPE
+    model_plain: LPE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 16.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2511.08028'
+    title: Generalizable Insights for Graph Transformers in Theory and Practice
+    date: Nov 11, 2025
+    date_iso: '2025-11-11'
+    date_display: Nov 2025
+    codebase_url: https://github.com/GraphPKU/BREC
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1948
+    - null
+    metric_stds:
+    - 0.0021
+    - null
+  - model: RRWP
+    model_plain: RRWP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 16.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2511.08028'
+    title: Generalizable Insights for Graph Transformers in Theory and Practice
+    date: Nov 11, 2025
+    date_iso: '2025-11-11'
+    date_display: Nov 2025
+    codebase_url: https://github.com/GraphPKU/BREC
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1942
+    - null
+    metric_stds:
+    - 0.001
+    - null
+  - model: SAT
+    model_plain: SAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.194
+    - null
+    metric_stds:
+    - 0.003
+    - null
+  - model: RWSE
+    model_plain: RWSE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 16.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2511.08028'
+    title: Generalizable Insights for Graph Transformers in Theory and Practice
+    date: Nov 11, 2025
+    date_iso: '2025-11-11'
+    date_display: Nov 2025
+    codebase_url: https://github.com/GraphPKU/BREC
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1939
+    - null
+    metric_stds:
+    - 0.0047
+    - null
   - model: K-Subtree SAT
     model_plain: K-Subtree SAT
     is_baseline: true
@@ -64,24 +332,80 @@ variants:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.1937
     - null
     metric_stds:
     - 0.0028
+    - null
+  - model: SPE
+    model_plain: SPE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 16.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2511.08028'
+    title: Generalizable Insights for Graph Transformers in Theory and Practice
+    date: Nov 11, 2025
+    date_iso: '2025-11-11'
+    date_display: Nov 2025
+    codebase_url: https://github.com/GraphPKU/BREC
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1935
+    - null
+    metric_stds:
+    - 0.0021
+    - null
+  - model: NoPE
+    model_plain: NoPE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 16.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2511.08028'
+    title: Generalizable Insights for Graph Transformers in Theory and Practice
+    date: Nov 11, 2025
+    date_iso: '2025-11-11'
+    date_display: Nov 2025
+    codebase_url: https://github.com/GraphPKU/BREC
+    published_conference: NeurIPS 2025
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1927
+    - null
+    metric_stds:
+    - 0.002
     - null
   - model: GECO
     model_plain: GECO
@@ -103,7 +427,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2024
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.1915
@@ -120,24 +444,80 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.1894
     - null
     metric_stds:
     - 0.0024
+    - null
+  - model: GraphGPS
+    model_plain: GraphGPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.189
+    - null
+    metric_stds:
+    - 0.002
+    - null
+  - model: DAG+Transformer
+    model_plain: DAG+Transformer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.188
+    - null
+    metric_stds:
+    - 0.002
     - null
   - model: GraphTrans (GCN-Virtual)
     model_plain: GraphTrans (GCN-Virtual)
@@ -148,16 +528,16 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -166,6 +546,426 @@ variants:
     - null
     metric_stds:
     - 0.0024
+    - null
+  - model: GraphTrans
+    model_plain: GraphTrans
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 9.1
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2201.08821'
+    title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+    date: Jan 21, 2022
+    date_iso: '2022-01-21'
+    date_display: Jan 2022
+    codebase_url: https://github.com/ucbrise/graphtrans
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.183
+    - null
+    metric_stds:
+    - 0.0024
+    - null
+  - model: PACE
+    model_plain: PACE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.178
+    - null
+    metric_stds:
+    - 0.002
+    - null
+  - model: DAGNN (SOTA)
+    model_plain: DAGNN (SOTA)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.08821'
+    title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+    date: Jan 21, 2022
+    date_iso: '2022-01-21'
+    date_display: Jan 2022
+    codebase_url: https://github.com/ucbrise/graphtrans
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1751
+    - null
+    metric_stds:
+    - 0.0049
+    - null
+  - model: DAGNN
+    model_plain: DAGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.175
+    - null
+    metric_stds:
+    - 0.005
+    - null
+  - model: MPNN + VN + NoPE
+    model_plain: MPNN + VN + NoPE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1727
+    - null
+    metric_stds:
+    - 0.0017
+    - null
+  - model: MagNet
+    model_plain: MagNet
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.169
+    - null
+    metric_stds:
+    - 0.002
+    - null
+  - model: Transformer
+    model_plain: Transformer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2201.08821'
+    title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+    date: Jan 21, 2022
+    date_iso: '2022-01-21'
+    date_display: Jan 2022
+    codebase_url: https://github.com/ucbrise/graphtrans
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.167
+    - null
+    metric_stds:
+    - 0.0015
+    - null
+  - model: DiGCN
+    model_plain: DiGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.167
+    - null
+    metric_stds:
+    - 0.002
+    - null
+  - model: DirGNN
+    model_plain: DirGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.166
+    - null
+    metric_stds:
+    - 0.002
+    - null
+  - model: GCN-virtual
+    model_plain: GCN-virtual
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.08821'
+    title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+    date: Jan 21, 2022
+    date_iso: '2022-01-21'
+    date_display: Jan 2022
+    codebase_url: https://github.com/ucbrise/graphtrans
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1595
+    - null
+    metric_stds:
+    - 0.0018
+    - null
+  - model: GCN+virtual node
+    model_plain: GCN+virtual node
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1595
+    - null
+    metric_stds:
+    - 0.0018
+    - null
+  - model: GIN-virtual
+    model_plain: GIN-virtual
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.08821'
+    title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+    date: Jan 21, 2022
+    date_iso: '2022-01-21'
+    date_display: Jan 2022
+    codebase_url: https://github.com/ucbrise/graphtrans
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1581
+    - null
+    metric_stds:
+    - 0.002
+    - null
+  - model: GIN+virtual node
+    model_plain: GIN+virtual node
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1581
+    - null
+    metric_stds:
+    - 0.0026
+    - null
+  - model: PNA
+    model_plain: PNA
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.08821'
+    title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+    date: Jan 21, 2022
+    date_iso: '2022-01-21'
+    date_display: Jan 2022
+    codebase_url: https://github.com/ucbrise/graphtrans
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.157
+    - null
+    metric_stds:
+    - 0.0032
+    - null
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.157
+    - null
+    metric_stds:
+    - 0.002
     - null
   - model: higher-order expander graph propagation
     model_plain: higher-order expander graph propagation
@@ -195,6 +995,34 @@ variants:
     metric_stds:
     - 0.002
     - null
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.08821'
+    title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+    date: Jan 21, 2022
+    date_iso: '2022-01-21'
+    date_display: Jan 2022
+    codebase_url: https://github.com/ucbrise/graphtrans
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1507
+    - null
+    metric_stds:
+    - 0.0018
+    - null
   - model: EGP
     model_plain: EGP
     is_baseline: true
@@ -222,6 +1050,34 @@ variants:
     - null
     metric_stds:
     - 0.0015
+    - null
+  - model: GIN
+    model_plain: GIN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.08821'
+    title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+    date: Jan 21, 2022
+    date_iso: '2022-01-21'
+    date_display: Jan 2022
+    codebase_url: https://github.com/ucbrise/graphtrans
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1495
+    - null
+    metric_stds:
+    - 0.0023
     - null
   - model: Plain GIN
     model_plain: Plain GIN
@@ -531,32 +1387,38 @@ variants:
     metric_stds:
     - null
     - 0.024
-  row_count: 17
+  row_count: 47
   rows_json: ''
   chart_json: /data/datasets/code/standard-split-chart.json
   arch_counts:
-    gnn: 8
-    hybrid: 6
-    graph_transformer: 2
+    gnn: 22
+    hybrid: 11
+    graph_transformer: 13
     llm: 0
     walk: 0
     traditional: 0
   metric_counts:
-  - 8
+  - 38
   - 9
   milestones: &id001
-  - value: 0.1519
-    std: 0.002
-    model: higher-order expander graph propagation
-    arxiv_id: '2311.07966'
-    title: Higher-Order Expander Graph Propagation
-    date: '2023-11-14'
+  - value: 0.183
+    std: 0.0024
+    model: GraphTrans
+    arxiv_id: '2201.08821'
+    title: Representing Long-Range Context for Graph Neural Networks with Global Attention
+    date: '2022-01-21'
   - value: 0.1937
     std: 0.0028
     model: K-Subtree SAT
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: '2024-06-17'
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: '2023-01-27'
+  - value: 0.206
+    std: 0.002
+    model: GMN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: '2025-09-17'
   milestones_by_metric:
     F1: *id001
     ROC-AUC:

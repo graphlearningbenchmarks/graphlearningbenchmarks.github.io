@@ -162,5 +162,6 @@ datasets_by_scope:
     - dataset: ENZYMES
       dataset_slug: enzymes
 single_proposed_model: CatFlow
+main_figure: /figures/2406.04843/main_figure.jpegoptim.jpg
 ---
 

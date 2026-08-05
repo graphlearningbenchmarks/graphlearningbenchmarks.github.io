@@ -56,8 +56,8 @@ proposed_models:
 - LASSO 4x
 - LASSO 8x
 - LASSO
-mrr: 0.0526
-adjusted_mrr: 0.0175
+mrr: 0.0455
+adjusted_mrr: 0.0152
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: GraphAny
+  - model: Cluster-GCN (2019)
     model_key: node sampled soup
-    model_plain: GraphAny
+    model_plain: Cluster-GCN (2019)
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -108,44 +108,45 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: gamlp(jk)
-    model_plain: GraphAny
-    value: 0.9704
-    std: 0.01
+  - model: Cluster-GCN (2019)
+    model_key: engcn
+    model_plain: Cluster-GCN (2019)
+    value: 0.9714
+    std: 0.0003
     metric: F1
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2206.04355'
-    title: Graph Attention Multi-Layer Perceptron
-    date: Jun 9, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-09'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/PKU-DAIR/GAMLP
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9704
-    sort_std: 0.01
+    sort_value: 0.9714
+    sort_std: 0.0003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: GraphAny
-    model_key: graphsaint
-    model_plain: GraphAny
-    value: 0.97
-    std: null
+  - model: Cluster-GCN (2019)
+    model_key: sagn+sle
+    model_plain: Cluster-GCN (2019)
+    value: 0.971
+    std: 0.0
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -155,20 +156,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.97
-    sort_std: null
+    sort_value: 0.971
+    sort_std: 0.0
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -231,8 +233,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -299,8 +301,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -368,8 +370,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -437,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: null
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -505,8 +507,8 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: null
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -573,8 +575,8 @@ results:
     value_note: ''
     sort_value: 0.959
     sort_std: null
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -641,8 +643,8 @@ results:
     value_note: ''
     sort_value: 0.957
     sort_std: null
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -708,8 +710,8 @@ results:
     value_note: ''
     sort_value: 0.949
     sort_std: 0.0
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -776,8 +778,8 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -809,5 +811,6 @@ datasets_by_scope:
     datasets:
     - dataset: Reddit
       dataset_slug: reddit
+main_figure: /figures/2105.04528/main_figure.jpegoptim.jpg
 ---
 

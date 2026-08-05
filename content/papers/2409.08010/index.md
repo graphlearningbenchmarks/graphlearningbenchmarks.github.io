@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MUX-GCL
-mrr: 0.0096
-adjusted_mrr: 0.0064
+mrr: 0.0093
+adjusted_mrr: 0.0062
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -74,9 +74,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gcn
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9412
     std: 0.0008
     metric: Accuracy
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gat
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -232,8 +232,8 @@ results:
     value_note: ''
     sort_value: 0.907
     sort_std: 0.001
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -300,10 +300,10 @@ results:
     value_note: ''
     sort_value: 0.9034
     sort_std: 0.0019
-    global_rank: 108
-    paper_rank: 291
-    rank_delta: 183
-    rank_delta_abs: 183
+    global_rank: 110
+    paper_rank: 295
+    rank_delta: 185
+    rank_delta_abs: 185
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -369,10 +369,10 @@ results:
     value_note: ''
     sort_value: 0.8955
     sort_std: 0.0016
-    global_rank: 164
-    paper_rank: 208
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 166
+    paper_rank: 213
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -438,10 +438,10 @@ results:
     value_note: ''
     sort_value: 0.8953
     sort_std: 0.0035
-    global_rank: 168
-    paper_rank: 263
-    rank_delta: 95
-    rank_delta_abs: 95
+    global_rank: 171
+    paper_rank: 267
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -506,8 +506,8 @@ results:
     value_note: ''
     sort_value: 0.89
     sort_std: 0.001
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 196
+    paper_rank: 196
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -573,8 +573,8 @@ results:
     value_note: ''
     sort_value: 0.89
     sort_std: 0.001
-    global_rank: 193
-    paper_rank: 193
+    global_rank: 197
+    paper_rank: 197
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -641,8 +641,8 @@ results:
     value_note: ''
     sort_value: 0.8894
     sort_std: 0.0015
-    global_rank: 195
-    paper_rank: 283
+    global_rank: 199
+    paper_rank: 287
     rank_delta: 88
     rank_delta_abs: 88
     rank_delta_direction: worse
@@ -708,8 +708,8 @@ results:
     value_note: ''
     sort_value: 0.8893
     sort_std: 0.0021
-    global_rank: 197
-    paper_rank: 205
+    global_rank: 202
+    paper_rank: 210
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -749,15 +749,15 @@ results:
     date_iso: '2024-09-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8902
-    at_pub_std: 0.0021
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.879
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2412.03864'
+    at_pub_source_title: Training MLPs on Graphs without Supervision
+    at_pub_source_date_iso: '2024-02-14'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-04-16'
     value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: 0.015199999999999991
+    gap_vs_at_pub: 0.0040000000000000036
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -776,15 +776,15 @@ results:
     value_note: ''
     sort_value: 0.8861
     sort_std: 0.0064
-    global_rank: 217
-    paper_rank: 283
-    rank_delta: 66
-    rank_delta_abs: 66
+    global_rank: 222
+    paper_rank: 287
+    rank_delta: 65
+    rank_delta_abs: 65
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_source_title: Training MLPs on Graphs without Supervision
+    comparison_source_arxiv: '2412.03864'
     is_best: false
     is_std_outlier: false
   - model: COSTA
@@ -843,10 +843,10 @@ results:
     value_note: ''
     sort_value: 0.8837
     sort_std: 0.0022
-    global_rank: 232
-    paper_rank: 236
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 237
+    paper_rank: 240
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -911,10 +911,10 @@ results:
     value_note: ''
     sort_value: 0.8814
     sort_std: 0.0033
-    global_rank: 242
-    paper_rank: 306
-    rank_delta: 64
-    rank_delta_abs: 64
+    global_rank: 246
+    paper_rank: 309
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -978,8 +978,8 @@ results:
     value_note: ''
     sort_value: 0.881
     sort_std: 0.001
-    global_rank: 247
-    paper_rank: 247
+    global_rank: 251
+    paper_rank: 251
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1019,15 +1019,16 @@ results:
     date_iso: '2024-09-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8878
-    at_pub_std: 0.0043
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.8798
+    at_pub_std: 0.0081
+    at_pub_source_arxiv: '2408.05087'
+    at_pub_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
+      Learning
+    at_pub_source_date_iso: '2024-08-09'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2024-08-09'
     value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.047800000000000065
+    gap_vs_at_pub: 0.03980000000000006
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1046,15 +1047,16 @@ results:
     value_note: ''
     sort_value: 0.8798
     sort_std: 0.0081
-    global_rank: 252
-    paper_rank: 389
-    rank_delta: 137
-    rank_delta_abs: 137
+    global_rank: 256
+    paper_rank: 386
+    rank_delta: 130
+    rank_delta_abs: 130
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
+      Learning
+    comparison_source_arxiv: '2408.05087'
     is_best: false
     is_std_outlier: false
   - model: VGAE
@@ -1115,10 +1117,10 @@ results:
     value_note: ''
     sort_value: 0.8721
     sort_std: 0.0026
-    global_rank: 293
-    paper_rank: 317
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 297
+    paper_rank: 320
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1183,10 +1185,10 @@ results:
     value_note: ''
     sort_value: 0.8666
     sort_std: 0.0007
-    global_rank: 310
-    paper_rank: 344
-    rank_delta: 34
-    rank_delta_abs: 34
+    global_rank: 313
+    paper_rank: 345
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1251,10 +1253,10 @@ results:
     value_note: ''
     sort_value: 0.8628
     sort_std: 0.0007
-    global_rank: 321
-    paper_rank: 336
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 324
+    paper_rank: 338
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1319,8 +1321,8 @@ results:
     value_note: ''
     sort_value: 0.844
     sort_std: 0.001
-    global_rank: 371
-    paper_rank: 371
+    global_rank: 368
+    paper_rank: 368
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1386,8 +1388,8 @@ results:
     value_note: ''
     sort_value: 0.7381
     sort_std: 0.0
-    global_rank: 495
-    paper_rank: 495
+    global_rank: 492
+    paper_rank: 492
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1409,9 +1411,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -1442,9 +1444,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -1476,9 +1478,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -1567,8 +1569,8 @@ results:
     value_note: ''
     sort_value: 0.939
     sort_std: 0.001
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1637,10 +1639,10 @@ results:
     value_note: ''
     sort_value: 0.9381
     sort_std: 0.0048
-    global_rank: 129
-    paper_rank: 190
-    rank_delta: 61
-    rank_delta_abs: 61
+    global_rank: 135
+    paper_rank: 195
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1708,10 +1710,10 @@ results:
     value_note: ''
     sort_value: 0.938
     sort_std: 0.001
-    global_rank: 130
-    paper_rank: 171
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 136
+    paper_rank: 176
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1779,10 +1781,10 @@ results:
     value_note: ''
     sort_value: 0.9337
     sort_std: 0.0021
-    global_rank: 176
-    paper_rank: 355
-    rank_delta: 179
-    rank_delta_abs: 179
+    global_rank: 181
+    paper_rank: 359
+    rank_delta: 178
+    rank_delta_abs: 178
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1850,10 +1852,10 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.006
-    global_rank: 191
-    paper_rank: 311
-    rank_delta: 120
-    rank_delta_abs: 120
+    global_rank: 196
+    paper_rank: 318
+    rank_delta: 122
+    rank_delta_abs: 122
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1919,8 +1921,8 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.004
-    global_rank: 193
-    paper_rank: 193
+    global_rank: 198
+    paper_rank: 198
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1989,10 +1991,10 @@ results:
     value_note: ''
     sort_value: 0.931
     sort_std: 0.004
-    global_rank: 202
-    paper_rank: 344
-    rank_delta: 142
-    rank_delta_abs: 142
+    global_rank: 207
+    paper_rank: 350
+    rank_delta: 143
+    rank_delta_abs: 143
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2060,10 +2062,10 @@ results:
     value_note: ''
     sort_value: 0.9309
     sort_std: 0.0008
-    global_rank: 206
-    paper_rank: 347
-    rank_delta: 141
-    rank_delta_abs: 141
+    global_rank: 211
+    paper_rank: 353
+    rank_delta: 142
+    rank_delta_abs: 142
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2129,8 +2131,8 @@ results:
     value_note: ''
     sort_value: 0.93
     sort_std: 0.002
-    global_rank: 214
-    paper_rank: 214
+    global_rank: 220
+    paper_rank: 220
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2197,10 +2199,10 @@ results:
     value_note: ''
     sort_value: 0.928
     sort_std: 0.005
-    global_rank: 232
-    paper_rank: 270
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 238
+    paper_rank: 277
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2265,8 +2267,8 @@ results:
     value_note: ''
     sort_value: 0.928
     sort_std: 0.001
-    global_rank: 235
-    paper_rank: 235
+    global_rank: 241
+    paper_rank: 241
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2335,8 +2337,8 @@ results:
     value_note: ''
     sort_value: 0.9267
     sort_std: 0.0016
-    global_rank: 256
-    paper_rank: 262
+    global_rank: 263
+    paper_rank: 269
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -2378,11 +2380,10 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.9263
-    at_pub_std: 0.0044
-    at_pub_source_arxiv: '2106.02466'
-    at_pub_source_title: 'Graph Barlow Twins: A self-supervised representation learning
-      framework for graphs'
-    at_pub_source_date_iso: '2021-06-04'
+    at_pub_std: null
+    at_pub_source_arxiv: '2110.15742'
+    at_pub_source_title: Barlow Graph Auto-Encoder for Unsupervised Network Embedding
+    at_pub_source_date_iso: '2021-10-29'
     at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2024-02-23'
     value_gap_source_date_label: '2024'
@@ -2405,8 +2406,8 @@ results:
     value_note: ''
     sort_value: 0.9263
     sort_std: 0.0044
-    global_rank: 260
-    paper_rank: 262
+    global_rank: 267
+    paper_rank: 269
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -2473,8 +2474,8 @@ results:
     value_note: ''
     sort_value: 0.922
     sort_std: 0.0011
-    global_rank: 312
-    paper_rank: 312
+    global_rank: 319
+    paper_rank: 319
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2541,8 +2542,8 @@ results:
     value_note: ''
     sort_value: 0.9185
     sort_std: 0.0006
-    global_rank: 333
-    paper_rank: 347
+    global_rank: 339
+    paper_rank: 353
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -2583,15 +2584,15 @@ results:
     date_iso: '2024-09-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9045
-    at_pub_std: 0.0045
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.9005
+    at_pub_std: null
+    at_pub_source_arxiv: '2110.15742'
+    at_pub_source_title: Barlow Graph Auto-Encoder for Unsupervised Network Embedding
+    at_pub_source_date_iso: '2021-10-29'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2023-07-03'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.010499999999999954
+    gap_vs_at_pub: 0.00649999999999995
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -2610,15 +2611,15 @@ results:
     value_note: ''
     sort_value: 0.9005
     sort_std: 0.0008
-    global_rank: 423
-    paper_rank: 437
+    global_rank: 429
+    paper_rank: 443
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_source_title: Barlow Graph Auto-Encoder for Unsupervised Network Embedding
+    comparison_source_arxiv: '2110.15742'
     is_best: false
     is_std_outlier: false
   - model: Node2Vec
@@ -2678,8 +2679,8 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: 0.001
-    global_rank: 433
-    paper_rank: 433
+    global_rank: 439
+    paper_rank: 439
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2746,8 +2747,8 @@ results:
     value_note: ''
     sort_value: 0.7999
     sort_std: 0.009
-    global_rank: 497
-    paper_rank: 500
+    global_rank: 504
+    paper_rank: 507
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -2783,5 +2784,6 @@ datasets_by_scope:
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
 single_proposed_model: MUX-GCL
+main_figure: /figures/2409.08010/main_figure.jpegoptim.jpg
 ---
 

@@ -12,7 +12,7 @@ stats:
   avg_nodes: 2277.0
   avg_edges: 36101.0
   num_classes: 5
-result_count: 401
+result_count: 442
 best_model:
   model: Hetero-S (GAT 8-layer)
   value: 0.8693
@@ -67,6 +67,15 @@ papers:
     Perturbation'
   date_iso: '2026-01-20'
   venue: ''
+- arxiv_id: '2601.08230'
+  title: 'GADPN: Graph Adaptive Denoising and Perturbation Networks via Singular Value
+    Decomposition'
+  date_iso: '2026-01-13'
+  venue: ''
+- arxiv_id: '2601.02451'
+  title: 'mHC-GNN: Manifold-Constrained Hyper-Connections for Graph Neural Networks'
+  date_iso: '2026-01-05'
+  venue: ''
 - arxiv_id: '2512.08798'
   title: Can TabPFN Compete with GNNs for Node Classification via Graph Tabularization?
   date_iso: '2025-12-09'
@@ -96,6 +105,10 @@ papers:
   title: Directed Homophily-Aware Graph Neural Network
   date_iso: '2025-05-28'
   venue: ''
+- arxiv_id: '2505.20840'
+  title: 'Aggregation Buffer: Revisiting DropEdge with a New Parameter Block'
+  date_iso: '2025-05-27'
+  venue: ICML 2025
 - arxiv_id: '2505.11346'
   title: What Can We Learn From MIMO Graph Convolutions?
   date_iso: '2025-05-16'
@@ -165,6 +178,10 @@ papers:
     Over-squashing'
   date_iso: '2023-12-01'
   venue: ''
+- arxiv_id: '2311.18177'
+  title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+  date_iso: '2023-11-30'
+  venue: ''
 - arxiv_id: '2310.13845'
   title: Spectral-Aware Augmentation for Enhanced Graph Representation Learning
   date_iso: '2023-10-20'
@@ -187,6 +204,10 @@ papers:
     and Simpler Choice towards Powerful Attention'
   date_iso: '2023-05-22'
   venue: IJCAI 2023
+- arxiv_id: '2305.06142'
+  title: Feature Expansion for Graph Neural Networks
+  date_iso: '2023-05-10'
+  venue: ICML 2023
 - arxiv_id: '2305.00139'
   title: Leveraging Label Non-Uniformity for Node Classification in Graph Neural Networks
   date_iso: '2023-04-29'
@@ -199,6 +220,15 @@ papers:
   title: 'TIDE: Time Derivative Diffusion for Deep Learning on Graphs'
   date_iso: '2022-12-05'
   venue: ICML 2022
+- arxiv_id: '2211.15779'
+  title: Revisiting Over-smoothing and Over-squashing using Ollivier's Ricci Curvature
+  date_iso: '2022-11-28'
+  venue: ICML 2022
+- arxiv_id: '2211.15081'
+  title: Mitigating Overfitting in Graph Neural Networks via Feature and Hyperplane
+    Perturbation
+  date_iso: '2022-11-28'
+  venue: ''
 - arxiv_id: '2211.14065'
   title: 'Beyond Smoothing: Unsupervised Graph Representation Learning with Edge Heterophily
     Discriminating'
@@ -285,8 +315,10 @@ variants:
     num_classes: 5
   metrics:
   - Accuracy
+  - F1 Score
   metric_display_names:
   - Accuracy
+  - F1 Score
   show_all_metrics_desktop: false
   chart_default_log_scale: false
   chart_hidden_models: []
@@ -316,7 +348,9 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8693
+    - null
     metric_stds:
+    - null
     - null
   - model: Trans.Conv+CNA
     model_plain: Trans.Conv+CNA
@@ -324,9 +358,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2412.04064'
     title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
     date: Dec 5, 2024
@@ -342,8 +376,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8586
+    - null
     metric_stds:
     - 0.018
+    - null
   - model: GAT
     model_plain: GAT
     is_baseline: false
@@ -369,7 +405,9 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.856
+    - null
     metric_stds:
+    - null
     - null
   - model: SCNode
     model_plain: SCNode
@@ -395,8 +433,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8408
+    - null
     metric_stds:
     - 0.0155
+    - null
   - model: FC-GSSL
     model_plain: FC-GSSL
     is_baseline: false
@@ -421,8 +461,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8231
+    - null
     metric_stds:
     - 0.0051
+    - null
   - model: GraphPAE
     model_plain: GraphPAE
     is_baseline: true
@@ -447,8 +489,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8051
+    - null
     metric_stds:
     - 0.0125
+    - null
   - model: Dir-GNN
     model_plain: Dir-GNN
     is_baseline: true
@@ -473,8 +517,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8048
+    - null
     metric_stds:
     - 0.0146
+    - null
   - model: FaberNet
     model_plain: FaberNet
     is_baseline: true
@@ -499,8 +545,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8033
+    - null
     metric_stds:
     - 0.0119
+    - null
   - model: IBG-NN
     model_plain: IBG-NN
     is_baseline: false
@@ -525,8 +573,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8015
+    - null
     metric_stds:
     - 0.0113
+    - null
   - model: DHGNN
     model_plain: DHGNN
     is_baseline: false
@@ -551,8 +601,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8011
+    - null
     metric_stds:
     - 0.0173
+    - null
   - model: A + D + R
     model_plain: A + D + R
     is_baseline: false
@@ -577,7 +629,9 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7991
+    - null
     metric_stds:
+    - null
     - null
   - model: NDDGNN
     model_plain: NDDGNN
@@ -603,8 +657,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7979
+    - null
     metric_stds:
     - 0.0104
+    - null
   - model: DirGNN
     model_plain: DirGNN
     is_baseline: true
@@ -629,8 +685,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7974
+    - null
     metric_stds:
     - 0.014
+    - null
   - model: GraphMAE
     model_plain: GraphMAE
     is_baseline: true
@@ -655,8 +713,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.795
+    - null
     metric_stds:
     - 0.0057
+    - null
   - model: CoCN
     model_plain: CoCN
     is_baseline: false
@@ -681,8 +741,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7935
+    - null
     metric_stds:
     - 0.0142
+    - null
   - model: CoCN exp.
     model_plain: CoCN exp.
     is_baseline: false
@@ -707,7 +769,9 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7935
+    - null
     metric_stds:
+    - null
     - null
   - model: CoCN vanilla
     model_plain: CoCN vanilla
@@ -733,8 +797,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7917
+    - null
     metric_stds:
     - 0.0017
+    - null
   - model: GraphMAE2
     model_plain: GraphMAE2
     is_baseline: true
@@ -759,8 +825,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7913
+    - null
     metric_stds:
     - 0.0019
+    - null
   - model: FSGNN (Homo/Hetero) 3-hop
     model_plain: FSGNN (Homo/Hetero) 3-hop
     is_baseline: false
@@ -785,8 +853,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7893
+    - null
     metric_stds:
     - 0.0103
+    - null
   - model: Sp^2GCL
     model_plain: Sp^2GCL
     is_baseline: true
@@ -811,8 +881,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7888
+    - null
     metric_stds:
     - 0.0104
+    - null
   - model: GPNet
     model_plain: GPNet
     is_baseline: false
@@ -837,8 +909,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7861
+    - null
     metric_stds:
     - 0.002
+    - null
   - model: GPR-GNN
     model_plain: GPR-GNN
     is_baseline: true
@@ -863,8 +937,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.783
+    - null
     metric_stds:
     - 0.006
+    - null
   - model: FSGNN
     model_plain: FSGNN
     is_baseline: false
@@ -889,8 +965,38 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7827
+    - null
     metric_stds:
     - 0.0128
+    - null
+  - model: UniFilter
+    model_plain: UniFilter
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.18177'
+    title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+    date: Nov 30, 2023
+    date_iso: '2023-11-30'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7575
+    - null
+    metric_stds:
+    - 0.0165
+    - null
   - model: Learnable
     model_plain: Learnable
     is_baseline: true
@@ -915,8 +1021,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.751
+    - null
     metric_stds:
     - 0.0083
+    - null
   - model: CCA-SSG
     model_plain: CCA-SSG
     is_baseline: true
@@ -941,8 +1049,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.75
+    - null
     metric_stds:
     - 0.0075
+    - null
   - model: ACM-GCN
     model_plain: ACM-GCN
     is_baseline: true
@@ -967,8 +1077,38 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7476
+    - null
     metric_stds:
     - 0.022
+    - null
+  - model: Specformer
+    model_plain: Specformer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2311.18177'
+    title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+    date: Nov 30, 2023
+    date_iso: '2023-11-30'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7472
+    - null
+    metric_stds:
+    - 0.0129
+    - null
   - model: AdaptKry
     model_plain: AdaptKry
     is_baseline: false
@@ -994,8 +1134,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7453
+    - null
     metric_stds:
     - 0.0121
+    - null
   - model: UDGNN_GCN
     model_plain: UDGNN_GCN
     is_baseline: true
@@ -1020,8 +1162,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7453
+    - null
     metric_stds:
     - 0.012
+    - null
   - model: MaskGAE
     model_plain: MaskGAE
     is_baseline: true
@@ -1046,8 +1190,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.745
+    - null
     metric_stds:
     - 0.0087
+    - null
   - model: OptBasisGNN
     model_plain: OptBasisGNN
     is_baseline: true
@@ -1057,24 +1203,25 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
-    date: Mar 12, 2024
-    date_iso: '2024-03-12'
-    date_display: Mar 2024
-    codebase_url: https://github.com/kkhuang81/AdaptKry
-    published_conference: WWW 2024
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2024
+    arxiv_id: '2311.18177'
+    title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+    date: Nov 30, 2023
+    date_iso: '2023-11-30'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7426
+    - null
     metric_stds:
     - 0.0074
+    - null
   - model: JacobiConv
     model_plain: JacobiConv
     is_baseline: false
@@ -1099,8 +1246,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.742
+    - null
     metric_stds:
     - 0.0103
+    - null
   - model: JKNet
     model_plain: JKNet
     is_baseline: true
@@ -1126,7 +1275,9 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7419
+    - null
     metric_stds:
+    - null
     - null
   - model: FSGNN (Homo/Hetero) 8-hop
     model_plain: FSGNN (Homo/Hetero) 8-hop
@@ -1152,8 +1303,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7394
+    - null
     metric_stds:
     - 0.0202
+    - null
   - model: A + R
     model_plain: A + R
     is_baseline: true
@@ -1178,7 +1331,9 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7346
+    - null
     metric_stds:
+    - null
     - null
   - model: A + D
     model_plain: A + D
@@ -1204,7 +1359,37 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7333
+    - null
     metric_stds:
+    - null
+    - null
+  - model: FE-GNN
+    model_plain: FE-GNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2305.06142'
+    title: Feature Expansion for Graph Neural Networks
+    date: May 10, 2023
+    date_iso: '2023-05-10'
+    date_display: May 2023
+    codebase_url: https://github.com/sajqavril/Feature-Extension-Graph-Neural-Networks
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7333
+    - null
+    metric_stds:
+    - 0.0035
     - null
   - model: MVGRL
     model_plain: MVGRL
@@ -1230,8 +1415,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7319
+    - null
     metric_stds:
     - 0.0042
+    - null
   - model: LON-GNN
     model_plain: LON-GNN
     is_baseline: false
@@ -1256,8 +1443,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.73
+    - null
     metric_stds:
     - 0.022
+    - null
   - model: ASPECT
     model_plain: ASPECT
     is_baseline: false
@@ -1282,8 +1471,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7288
+    - null
     metric_stds:
     - 0.019
+    - null
   - model: HGODE
     model_plain: HGODE
     is_baseline: false
@@ -1309,8 +1500,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7256
+    - null
     metric_stds:
     - 0.0124
+    - null
   - model: ASPECT-S
     model_plain: ASPECT-S
     is_baseline: false
@@ -1335,8 +1528,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7248
+    - null
     metric_stds:
     - 0.0143
+    - null
   - model: MUSE
     model_plain: MUSE
     is_baseline: false
@@ -1361,8 +1556,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7237
+    - null
     metric_stds:
     - 0.0221
+    - null
   - model: D + R
     model_plain: D + R
     is_baseline: true
@@ -1387,7 +1584,9 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7208
+    - null
     metric_stds:
+    - null
     - null
   - model: NWR-GAE
     model_plain: NWR-GAE
@@ -1413,8 +1612,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7204
+    - null
     metric_stds:
     - 0.0259
+    - null
   - model: S3GCL
     model_plain: S3GCL
     is_baseline: true
@@ -1439,8 +1640,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7188
+    - null
     metric_stds:
     - 0.0191
+    - null
   - model: PolyGCL
     model_plain: PolyGCL
     is_baseline: true
@@ -1465,8 +1668,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7162
+    - null
     metric_stds:
     - 0.0096
+    - null
   - model: FROND
     model_plain: FROND
     is_baseline: true
@@ -1492,8 +1697,10 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7162
+    - null
     metric_stds:
     - 0.0161
+    - null
   - model: AERO-GNN
     model_plain: AERO-GNN
     is_baseline: true
@@ -1518,98 +1725,23 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.7158
+    - null
     metric_stds:
     - 0.024
-  - model: G2-GraphSAGE
-    model_plain: G2-GraphSAGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2210.00513'
-    title: Gradient Gating for Deep Multi-Rate Learning on Graphs
-    date: Oct 2, 2022
-    date_iso: '2022-10-02'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.714
-    metric_stds:
-    - 0.0238
-  - model: G^2
-    model_plain: G^2
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.22362'
-    title: Directed Homophily-Aware Graph Neural Network
-    date: May 28, 2025
-    date_iso: '2025-05-28'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.714
-    metric_stds:
-    - 0.0238
-  - model: GREAD-BS
-    model_plain: GREAD-BS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2403.20221'
-    title: Graph Neural Aggregation-diffusion with Metastability
-    date: Mar 29, 2024
-    date_iso: '2024-03-29'
-    date_display: Mar 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.714
-    metric_stds:
-    - 0.013
-  row_count: 401
+    - null
+  row_count: 442
   rows_json: /data/datasets/chameleon/standard-split-rows.json
   chart_json: /data/datasets/chameleon/standard-split-chart.json
   arch_counts:
-    gnn: 300
-    hybrid: 56
-    graph_transformer: 14
+    gnn: 330
+    hybrid: 58
+    graph_transformer: 15
     llm: 0
     walk: 2
-    traditional: 17
+    traditional: 24
   metric_counts:
-  - 401
+  - 431
+  - 11
   milestones: &id001
   - value: 0.701
     std: 0.029
@@ -1644,5 +1776,13 @@ variants:
     date: '2024-06-18'
   milestones_by_metric:
     Accuracy: *id001
+    F1 Score:
+    - value: 0.505
+      std: null
+      model: FreeKD-Prompt
+      arxiv_id: '2307.00534'
+      title: Shared Growth of Graph Neural Networks via Prompted Free-direction Knowledge
+        Distillation
+      date: '2023-07-02'
 ---
 

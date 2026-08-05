@@ -71,9 +71,9 @@ results:
 - &id002
   dataset: ogbl-citation2
   rows:
-  - model: SIGN
+  - model: Classification
     model_key: mplp
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.9072
     std: 0.0012
     metric: MRR
@@ -104,9 +104,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SIGN
+  - model: Classification
     model_key: cfg
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.8997
     std: 0.0015
     metric: MRR
@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SIGN
+  - model: Classification
     model_key: sieg
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.8987
     std: 0.0018
     metric: MRR
@@ -367,9 +367,9 @@ results:
     sort_value: 0.8705
     sort_std: 0.0004
     global_rank: 14
-    paper_rank: 22
-    rank_delta: 8
-    rank_delta_abs: 8
+    paper_rank: 23
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -502,8 +502,8 @@ results:
     value_note: ''
     sort_value: 0.7985
     sort_std: 0.004
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -525,9 +525,9 @@ results:
 - &id001
   dataset: ogbl-ppa
   rows:
-  - model: SEAL-RS
+  - model: Classification
     model_key: mplp
-    model_plain: SEAL-RS
+    model_plain: Classification
     value: 0.6524
     std: 0.015
     metric: Hits@100
@@ -558,9 +558,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SEAL-RS
+  - model: Classification
     model_key: ogb leader
-    model_plain: SEAL-RS
+    model_plain: Classification
     value: 0.6524
     std: 0.015
     metric: Hits@100
@@ -591,9 +591,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SEAL-RS
+  - model: Classification
     model_key: prb
-    model_plain: SEAL-RS
+    model_plain: Classification
     value: 0.6347
     std: 0.0175
     metric: Hits@100
@@ -955,8 +955,8 @@ results:
     value_note: ''
     sort_value: 0.0383
     sort_std: 0.0133
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -992,5 +992,6 @@ datasets_by_scope:
     - dataset: ogbl-citation2
       dataset_slug: ogbl-citation2
 single_proposed_model: SUREL
+main_figure: /figures/2303.03379/main_figure.jpegoptim.jpg
 ---
 

@@ -1137,5 +1137,6 @@ datasets_by_scope:
     - dataset: DBLP
       dataset_slug: dblp
 single_proposed_model: TGC
+main_figure: /figures/2305.10738/main_figure.jpegoptim.jpg
 ---
 

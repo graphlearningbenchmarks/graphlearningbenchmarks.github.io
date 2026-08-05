@@ -4441,5 +4441,6 @@ datasets_by_scope:
     - dataset: Senate
       dataset_slug: senate
 single_proposed_model: HealHGNN
+main_figure: /figures/2603.00599/main_figure.jpegoptim.jpg
 ---
 

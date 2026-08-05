@@ -108,12 +108,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.8605
+    at_pub_std: 0.0025
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -136,9 +136,9 @@ results:
     sort_value: 0.979
     sort_std: null
     global_rank: 1
-    paper_rank: 96
-    rank_delta: 95
-    rank_delta_abs: 95
+    paper_rank: 97
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -146,9 +146,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SHGN
+  - model: SlotGAT
     model_key: comch
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.947
     std: null
     metric: Micro-F1
@@ -179,9 +179,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SHGN
+  - model: SlotGAT
     model_key: lmsps
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.9469
     std: 0.0036
     metric: Micro-F1
@@ -242,12 +242,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.9141
+    at_pub_std: 0.0075
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -270,9 +270,9 @@ results:
     sort_value: 0.9402
     sort_std: null
     global_rank: 7
-    paper_rank: 52
-    rank_delta: 45
-    rank_delta_abs: 45
+    paper_rank: 53
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -512,12 +512,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.9077
+    at_pub_std: 0.0065
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -540,9 +540,9 @@ results:
     sort_value: 0.9361
     sort_std: null
     global_rank: 17
-    paper_rank: 58
-    rank_delta: 41
-    rank_delta_abs: 41
+    paper_rank: 59
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -781,20 +781,20 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: 0.8924
-    at_pub_std: 0.0059
-    at_pub_source_arxiv: '2206.12547'
-    at_pub_source_title: Geometry Contrastive Learning on Heterogeneous Graphs
-    at_pub_source_date_iso: '2022-06-25'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.9079
+    at_pub_std: 0.0043
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.01550000000000007
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.9185
@@ -808,15 +808,15 @@ results:
     value_note: ''
     sort_value: 0.9185
     sort_std: null
-    global_rank: 49
-    paper_rank: 58
+    global_rank: 50
+    paper_rank: 59
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Geometry Contrastive Learning on Heterogeneous Graphs
-    comparison_source_arxiv: '2206.12547'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: HGT
@@ -849,12 +849,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.91
+    at_pub_std: 0.0076
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2024-12-01'
     value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
@@ -876,8 +876,8 @@ results:
     value_note: ''
     sort_value: 0.916
     sort_std: 0.006
-    global_rank: 52
-    paper_rank: 57
+    global_rank: 53
+    paper_rank: 58
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -917,12 +917,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.9032
+    at_pub_std: 0.0154
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -943,8 +943,8 @@ results:
     value_note: ''
     sort_value: 0.9032
     sort_std: 0.0154
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -984,12 +984,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.8991
+    at_pub_std: 0.0037
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -1010,8 +1010,8 @@ results:
     value_note: ''
     sort_value: 0.8991
     sort_std: 0.0037
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1033,9 +1033,9 @@ results:
 - &id002
   dataset: DBLP
   rows:
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: herec
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -1125,9 +1125,9 @@ results:
     sort_value: 0.9972
     sort_std: null
     global_rank: 2
-    paper_rank: 123
-    rank_delta: 121
-    rank_delta_abs: 121
+    paper_rank: 125
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1136,9 +1136,9 @@ results:
     comparison_source_arxiv: '1912.10832'
     is_best: true
     is_std_outlier: false
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: deepwalk
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -1266,12 +1266,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.9207
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1294,9 +1294,9 @@ results:
     sort_value: 0.95
     sort_std: null
     global_rank: 18
-    paper_rank: 70
-    rank_delta: 52
-    rank_delta_abs: 52
+    paper_rank: 71
+    rank_delta: 53
+    rank_delta_abs: 53
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1401,12 +1401,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.9381
+    at_pub_std: 0.0055
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -1427,8 +1427,8 @@ results:
     value_note: ''
     sort_value: 0.9381
     sort_std: 0.0055
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1495,8 +1495,8 @@ results:
     value_note: ''
     sort_value: 0.9376
     sort_std: 0.0045
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1565,8 +1565,8 @@ results:
     value_note: ''
     sort_value: 0.9369
     sort_std: null
-    global_rank: 45
-    paper_rank: 70
+    global_rank: 46
+    paper_rank: 71
     rank_delta: 25
     rank_delta_abs: 25
     rank_delta_direction: worse
@@ -1634,8 +1634,8 @@ results:
     value_note: ''
     sort_value: 0.9349
     sort_std: 0.0025
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1702,8 +1702,8 @@ results:
     value_note: ''
     sort_value: 0.9233
     sort_std: 0.0041
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1726,9 +1726,9 @@ results:
 - &id005
   dataset: Freebase
   rows:
-  - model: GPH^2
+  - model: SlotGAT
     model_key: gc-hgnn
-    model_plain: GPH^2
+    model_plain: SlotGAT
     value: 0.6247
     std: 0.0042
     metric: Macro-F1
@@ -1759,9 +1759,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPH^2
+  - model: SlotGAT
     model_key: hgmae
-    model_plain: GPH^2
+    model_plain: SlotGAT
     value: 0.6082
     std: 0.0051
     metric: Macro-F1
@@ -1792,9 +1792,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GPH^2
+  - model: SlotGAT
     model_key: heco
-    model_plain: GPH^2
+    model_plain: SlotGAT
     value: 0.5987
     std: 0.0033
     metric: Macro-F1
@@ -1883,9 +1883,9 @@ results:
     sort_value: 0.585
     sort_std: 0.0093
     global_rank: 8
-    paper_rank: 38
-    rank_delta: 30
-    rank_delta_abs: 30
+    paper_rank: 39
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1952,9 +1952,9 @@ results:
     sort_value: 0.583
     sort_std: 0.0072
     global_rank: 9
-    paper_rank: 34
-    rank_delta: 25
-    rank_delta_abs: 25
+    paper_rank: 35
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2287,8 +2287,8 @@ results:
     value_note: ''
     sort_value: 0.4682
     sort_std: 0.0112
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2328,12 +2328,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.4678
+    at_pub_std: 0.0077
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -2354,8 +2354,8 @@ results:
     value_note: ''
     sort_value: 0.4678
     sort_std: 0.0077
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2421,8 +2421,8 @@ results:
     value_note: ''
     sort_value: 0.3323
     sort_std: 0.0139
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2444,9 +2444,9 @@ results:
 - &id004
   dataset: IMDB
   rows:
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-sc
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8133
     std: 0.0179
     metric: Micro-F1
@@ -2455,9 +2455,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -2477,9 +2477,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: sage ban
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8073
     std: 0.002
     metric: Micro-F1
@@ -2510,9 +2510,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-cs
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8033
     std: 0.0094
     metric: Micro-F1
@@ -2521,9 +2521,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -2670,9 +2670,9 @@ results:
     sort_value: 0.7311
     sort_std: null
     global_rank: 34
-    paper_rank: 99
-    rank_delta: 65
-    rank_delta_abs: 65
+    paper_rank: 100
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2778,12 +2778,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.6467
+    at_pub_std: 0.0167
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-05-31'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: null
@@ -2806,9 +2806,9 @@ results:
     sort_value: 0.6782
     sort_std: 0.0154
     global_rank: 48
-    paper_rank: 69
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 70
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2846,21 +2846,20 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: 0.6298
-    at_pub_std: null
-    at_pub_source_arxiv: '2105.11122'
-    at_pub_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    at_pub_source_date_iso: '2021-05-24'
-    at_pub_source_date_label: '2021'
+    at_pub_value: 0.6463
+    at_pub_std: 0.0058
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-05-31'
     value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.01649999999999996
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.6769
@@ -2875,15 +2874,14 @@ results:
     sort_value: 0.6769
     sort_std: 0.0064
     global_rank: 49
-    paper_rank: 69
-    rank_delta: 20
-    rank_delta_abs: 20
+    paper_rank: 70
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    comparison_source_arxiv: '2105.11122'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: HGB
@@ -2942,8 +2940,8 @@ results:
     value_note: ''
     sort_value: 0.6736
     sort_std: 0.0057
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2983,19 +2981,18 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: 0.6365
-    at_pub_std: null
-    at_pub_source_arxiv: '2105.11122'
-    at_pub_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    at_pub_source_date_iso: '2021-05-24'
-    at_pub_source_date_label: '2021'
+    at_pub_value: 0.672
+    at_pub_std: 0.0057
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.03550000000000009
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -3010,16 +3007,15 @@ results:
     value_note: ''
     sort_value: 0.672
     sort_std: 0.0057
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    comparison_source_arxiv: '2105.11122'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Variant#2
@@ -3078,8 +3074,8 @@ results:
     value_note: ''
     sort_value: 0.6668
     sort_std: 0.0052
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3145,8 +3141,8 @@ results:
     value_note: ''
     sort_value: 0.6665
     sort_std: 0.005
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3212,8 +3208,8 @@ results:
     value_note: ''
     sort_value: 0.6658
     sort_std: 0.0042
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3281,8 +3277,8 @@ results:
     value_note: ''
     sort_value: 0.6651
     sort_std: 0.0028
-    global_rank: 60
-    paper_rank: 81
+    global_rank: 61
+    paper_rank: 82
     rank_delta: 21
     rank_delta_abs: 21
     rank_delta_direction: worse
@@ -3323,20 +3319,19 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: 0.6337
-    at_pub_std: null
-    at_pub_source_arxiv: '2105.11122'
-    at_pub_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    at_pub_source_date_iso: '2021-05-24'
-    at_pub_source_date_label: '2021'
+    at_pub_value: 0.6422
+    at_pub_std: 0.0103
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.008499999999999952
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -3350,12 +3345,12 @@ results:
     value_note: ''
     sort_value: 0.6422
     sort_std: 0.0103
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3391,12 +3386,12 @@ results:
     date_iso: '2022-07-06'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.5116
+    at_pub_std: 0.0065
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -3417,8 +3412,8 @@ results:
     value_note: ''
     sort_value: 0.5116
     sort_std: 0.0065
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4334,8 +4329,8 @@ results:
     value_note: ''
     sort_value: 0.4927
     sort_std: 0.0061
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4402,10 +4397,10 @@ results:
     value_note: ''
     sort_value: 0.4811
     sort_std: 0.0048
-    global_rank: 34
-    paper_rank: 37
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 35
+    paper_rank: 39
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4453,5 +4448,6 @@ datasets_by_scope:
       dataset_slug: imdb
     - dataset: Freebase
       dataset_slug: freebase
+main_figure: /figures/2207.02547/main_figure.jpegoptim.jpg
 ---
 

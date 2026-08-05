@@ -54,8 +54,8 @@ paper_type: method
 proposed_models:
 - GCN
 - MoE (GCN)
-mrr: 0.0492
-adjusted_mrr: 0.0492
+mrr: 0.0469
+adjusted_mrr: 0.0469
 mrr_dataset_count: 5
 benchmark_categories:
 - OGB
@@ -68,7 +68,7 @@ benchmark_coverage:
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
   evaluated: 3
-  total: 5
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -77,9 +77,42 @@ results:
 - &id002
   dataset: Penn94
   rows:
-  - model: NewtonNet
+  - model: GloGNN
+    model_key: chebnet2d
+    model_plain: GloGNN
+    value: 0.8762
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2404.04559'
+    title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
+    date: Apr 6, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-06'
+    venue: null
+    codebase_url: https://github.com/jianhao2016/GPRGNN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8762
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GloGNN
     model_key: dc-gnn
-    model_plain: NewtonNet
+    model_plain: GloGNN
     value: 0.8669
     std: 0.0022
     metric: Accuracy
@@ -102,17 +135,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.8669
     sort_std: 0.0022
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: NewtonNet
+  - model: GloGNN
     model_key: m2m-gnn
-    model_plain: NewtonNet
+    model_plain: GloGNN
     value: 0.8594
     std: 0.004
     metric: Accuracy
@@ -136,42 +169,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.8594
     sort_std: 0.004
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NewtonNet
-    model_key: glognn
-    model_plain: NewtonNet
-    value: 0.8574
-    std: 0.0042
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2312.14438'
-    title: 'PC-Conv: Unifying Homophily and Heterophily with Two-fold Filtering'
-    date: Dec 22, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-22'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/uestclbh/PC-Conv
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8574
-    sort_std: 0.0042
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -233,8 +233,8 @@ results:
     value_note: ''
     sort_value: 0.8456
     sort_std: 0.0031
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -302,8 +302,8 @@ results:
     value_note: ''
     sort_value: 0.8354
     sort_std: 0.0032
-    global_rank: 18
-    paper_rank: 35
+    global_rank: 21
+    paper_rank: 38
     rank_delta: 17
     rank_delta_abs: 17
     rank_delta_direction: worse
@@ -370,8 +370,8 @@ results:
     value_note: ''
     sort_value: 0.8339
     sort_std: 0.0043
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -437,8 +437,8 @@ results:
     value_note: ''
     sort_value: 0.8323
     sort_std: 0.002
-    global_rank: 22
-    paper_rank: 31
+    global_rank: 25
+    paper_rank: 34
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -504,8 +504,8 @@ results:
     value_note: ''
     sort_value: 0.832
     sort_std: 0.0055
-    global_rank: 23
-    paper_rank: 26
+    global_rank: 26
+    paper_rank: 29
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -571,8 +571,8 @@ results:
     value_note: ''
     sort_value: 0.8319
     sort_std: 0.0043
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -638,8 +638,8 @@ results:
     value_note: ''
     sort_value: 0.8268
     sort_std: 0.0032
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -705,8 +705,8 @@ results:
     value_note: ''
     sort_value: 0.8161
     sort_std: 0.0027
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -773,8 +773,8 @@ results:
     value_note: ''
     sort_value: 0.8153
     sort_std: 0.0055
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -840,8 +840,8 @@ results:
     value_note: ''
     sort_value: 0.812
     sort_std: 0.0055
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -907,8 +907,8 @@ results:
     value_note: ''
     sort_value: 0.8032
     sort_std: 0.0043
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -974,8 +974,8 @@ results:
     value_note: ''
     sort_value: 0.7907
     sort_std: 0.0043
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1041,8 +1041,8 @@ results:
     value_note: ''
     sort_value: 0.7704
     sort_std: 0.0055
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1108,8 +1108,8 @@ results:
     value_note: ''
     sort_value: 0.7675
     sort_std: 0.0052
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1175,8 +1175,8 @@ results:
     value_note: ''
     sort_value: 0.7658
     sort_std: 0.0053
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1242,8 +1242,8 @@ results:
     value_note: ''
     sort_value: 0.7534
     sort_std: 0.0064
-    global_rank: 46
-    paper_rank: 51
+    global_rank: 49
+    paper_rank: 54
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -1309,8 +1309,8 @@ results:
     value_note: ''
     sort_value: 0.7442
     sort_std: 0.0058
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1332,9 +1332,9 @@ results:
 - &id004
   dataset: Pokec
   rows:
-  - model: VecFormer
+  - model: FMP
     model_key: polynormer-r
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.861
     std: 0.0005
     metric: Accuracy
@@ -1365,9 +1365,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: VecFormer
+  - model: FMP
     model_key: polynormer
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.8595
     std: 0.0007
     metric: Accuracy
@@ -2303,15 +2303,16 @@ results:
     date_iso: '2023-11-09'
     published_venue: ICLR 2023
     published_conference: ICLR 2023
-    at_pub_value: 0.6557
-    at_pub_std: 0.0034
-    at_pub_source_arxiv: '2301.09474'
-    at_pub_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    at_pub_source_date_iso: '2023-01-23'
-    at_pub_source_date_label: ICLR 2023
+    at_pub_value: 0.6976
+    at_pub_std: 0.013
+    at_pub_source_arxiv: '2202.04187'
+    at_pub_source_title: 'FMP: Toward Fair Graph Message Passing against Topology
+      Bias'
+    at_pub_source_date_iso: '2022-02-08'
+    at_pub_source_date_label: '2022'
     value_gap_source_date_iso: '2024-03-02'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.062000000000000055
+    gap_vs_at_pub: 0.020100000000000007
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -2371,43 +2372,44 @@ results:
     date_iso: '2023-11-09'
     published_venue: ICLR 2023
     published_conference: ICLR 2023
-    at_pub_value: 0.6237
-    at_pub_std: 0.0002
-    at_pub_source_arxiv: '2202.03580'
-    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
-      Revisited
-    at_pub_source_date_iso: '2022-02-04'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_value: 0.7048
+    at_pub_std: 0.0077
+    at_pub_source_arxiv: '2202.04187'
+    at_pub_source_title: 'FMP: Toward Fair Graph Message Passing against Topology
+      Bias'
+    at_pub_source_date_iso: '2022-02-08'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-02-08'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.08109999999999995
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6237
-    true_std: 0.0002
-    value_gap_source_arxiv: '2202.03580'
-    value_gap_source_title: Convolutional Neural Networks on Graphs with Chebyshev
-      Approximation, Revisited
+    today_delta_significant: true
+    true_value: 0.7048
+    true_std: 0.0077
+    value_gap_source_arxiv: '2202.04187'
+    value_gap_source_title: 'FMP: Toward Fair Graph Message Passing against Topology
+      Bias'
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.08109999999999995
     has_value_note: false
     value_note: ''
-    sort_value: 0.6237
-    sort_std: 0.0002
-    global_rank: 41
-    paper_rank: 41
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.7048
+    sort_std: 0.0077
+    global_rank: 35
+    paper_rank: 44
+    rank_delta: 9
+    rank_delta_abs: 9
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FMP: Toward Fair Graph Message Passing against Topology
+      Bias'
+    comparison_source_arxiv: '2202.04187'
     is_best: false
     is_std_outlier: false
   - model: AdaGCN
@@ -2466,8 +2468,8 @@ results:
     value_note: ''
     sort_value: 0.5592
     sort_std: 0.0035
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2533,8 +2535,8 @@ results:
     value_note: ''
     sort_value: 0.5337
     sort_std: 0.0215
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2556,9 +2558,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -2590,9 +2592,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -2623,9 +2625,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -2715,10 +2717,10 @@ results:
     value_note: ''
     sort_value: 0.8691
     sort_std: 0.0005
-    global_rank: 11
-    paper_rank: 224
-    rank_delta: 213
-    rank_delta_abs: 213
+    global_rank: 12
+    paper_rank: 241
+    rank_delta: 229
+    rank_delta_abs: 229
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2759,11 +2761,11 @@ results:
     published_conference: ICLR 2023
     at_pub_value: 0.8061
     at_pub_std: 0.0016
-    at_pub_source_arxiv: '2306.10466'
-    at_pub_source_title: 'Graph Ladling: Shockingly Simple Parallel GNN Training without
-      Intermediate Communication'
-    at_pub_source_date_iso: '2023-06-18'
-    at_pub_source_date_label: ICML 2023
+    at_pub_source_arxiv: '2210.07494'
+    at_pub_source_title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking
+      and Rethinking'
+    at_pub_source_date_iso: '2022-10-14'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
     gap_vs_at_pub: 0.021100000000000008
@@ -2785,16 +2787,16 @@ results:
     value_note: ''
     sort_value: 0.8287
     sort_std: null
-    global_rank: 72
-    paper_rank: 195
-    rank_delta: 123
-    rank_delta_abs: 123
+    global_rank: 74
+    paper_rank: 211
+    rank_delta: 137
+    rank_delta_abs: 137
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Graph Ladling: Shockingly Simple Parallel GNN Training
-      without Intermediate Communication'
-    comparison_source_arxiv: '2306.10466'
+    comparison_source_title: 'A Comprehensive Study on Large-Scale Graph Training:
+      Benchmarking and Rethinking'
+    comparison_source_arxiv: '2210.07494'
     is_best: false
     is_std_outlier: false
   - model: SAGE
@@ -2855,10 +2857,10 @@ results:
     value_note: ''
     sort_value: 0.8233
     sort_std: 0.0037
-    global_rank: 83
-    paper_rank: 156
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 84
+    paper_rank: 167
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2923,8 +2925,8 @@ results:
     value_note: ''
     sort_value: 0.7779
     sort_std: 0.0
-    global_rank: 210
-    paper_rank: 210
+    global_rank: 225
+    paper_rank: 225
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2932,6 +2934,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AdaGCN
+    model_key: adagcn
+    model_plain: AdaGCN
+    value: 0.6906
+    std: 0.0004
+    paper_value: 0.6906
+    paper_std: 0.0004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for ogbn-products node classification
+    date: Nov 9, 2023
+    date_display: Nov 2023
+    date_iso: '2023-11-09'
+    published_venue: ICLR 2023
+    published_conference: ICLR 2023
+    at_pub_value: 0.7641
+    at_pub_std: 0.0
+    at_pub_source_arxiv: '2210.07494'
+    at_pub_source_title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking
+      and Rethinking'
+    at_pub_source_date_iso: '2022-10-14'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-10-14'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: 0.07350000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7641
+    true_std: 0.0
+    value_gap_source_arxiv: '2210.07494'
+    value_gap_source_title: 'A Comprehensive Study on Large-Scale Graph Training:
+      Benchmarking and Rethinking'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07350000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7641
+    sort_std: 0.0
+    global_rank: 242
+    paper_rank: 342
+    rank_delta: 100
+    rank_delta_abs: 100
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'A Comprehensive Study on Large-Scale Graph Training:
+      Benchmarking and Rethinking'
+    comparison_source_arxiv: '2210.07494'
     is_best: false
     is_std_outlier: false
   - model: GraphMoE-GCN
@@ -2990,8 +3062,8 @@ results:
     value_note: ''
     sort_value: 0.739
     sort_std: 0.0
-    global_rank: 277
-    paper_rank: 277
+    global_rank: 297
+    paper_rank: 297
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3057,75 +3129,8 @@ results:
     value_note: ''
     sort_value: 0.7241
     sort_std: 0.0004
-    global_rank: 296
-    paper_rank: 296
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AdaGCN
-    model_key: adagcn
-    model_plain: AdaGCN
-    value: 0.6906
-    std: 0.0004
-    paper_value: 0.6906
-    paper_std: 0.0004
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for ogbn-products node classification
-    date: Nov 9, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-09'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-11-09'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6906
-    true_std: 0.0004
-    value_gap_source_arxiv: '2311.05185'
-    value_gap_source_title: Mixture of Weak & Strong Experts on Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6906
-    sort_std: 0.0004
-    global_rank: 323
-    paper_rank: 323
+    global_rank: 314
+    paper_rank: 314
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3191,8 +3196,8 @@ results:
     value_note: ''
     sort_value: 0.6605
     sort_std: 0.002
-    global_rank: 333
-    paper_rank: 351
+    global_rank: 353
+    paper_rank: 371
     rank_delta: 18
     rank_delta_abs: 18
     rank_delta_direction: worse
@@ -4428,5 +4433,6 @@ datasets_by_scope:
       dataset_slug: twitch-gamers
     - dataset: Pokec
       dataset_slug: pokec
+main_figure: /figures/2311.05185/main_figure.jpegoptim.jpg
 ---
 

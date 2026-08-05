@@ -2821,5 +2821,6 @@ datasets_by_scope:
     - dataset: EAT
       dataset_slug: eat
 single_proposed_model: CONVERT
+main_figure: /figures/2308.08963/main_figure.jpegoptim.jpg
 ---
 

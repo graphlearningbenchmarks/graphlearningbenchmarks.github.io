@@ -58,8 +58,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - Node-MoE
-mrr: 0.0069
-adjusted_mrr: 0.0023
+mrr: 0.0055
+adjusted_mrr: 0.0018
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterophilic Graphs
@@ -67,7 +67,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 1
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -76,9 +76,43 @@ results:
 - &id001
   dataset: Actor
   rows:
-  - model: CoCN
+  - model: R-SoftGraphAIN
+    model_key: nodeformer
+    model_plain: R-SoftGraphAIN
+    value: 0.7623
+    std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7623
+    sort_std: 0.0042
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: diggr
-    model_plain: CoCN
+    model_plain: R-SoftGraphAIN
     value: 0.4535
     std: 0.0353
     metric: Accuracy
@@ -101,52 +135,19 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.4535
     sort_std: 0.0353
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: CoCN
-    model_key: uniaug - polygcl
-    model_plain: CoCN
-    value: 0.4301
-    std: 0.0127
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.01899'
-    title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
-    date: Jun 4, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-04'
-    venue: NeurIPS'25
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.4301
-    sort_std: 0.0127
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CoCN
-    model_key: adaptkry
-    model_plain: CoCN
-    value: 0.427
-    std: 0.0114
+  - model: R-SoftGraphAIN
+    model_key: dog
+    model_plain: R-SoftGraphAIN
+    value: 0.432
+    std: 0.012
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -156,25 +157,25 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
-    date: Mar 12, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-12'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/AdaptKry
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.427
-    sort_std: 0.0114
+    sort_value: 0.432
+    sort_std: 0.012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: ChebNetII
     model_key: chebnetii
@@ -235,17 +236,85 @@ results:
     value_note: ''
     sort_value: 0.4175
     sort_std: 0.0107
-    global_rank: 15
-    paper_rank: 164
-    rank_delta: 149
-    rank_delta_abs: 149
+    global_rank: 22
+    paper_rank: 212
+    rank_delta: 190
+    rank_delta_abs: 190
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Convolutional Neural Networks on Graphs with Chebyshev
       Approximation, Revisited
     comparison_source_arxiv: '2202.03580'
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: GCNII
+    model_key: gcnii
+    model_plain: GCNII
+    value: 0.3436
+    std: 0.0077
+    paper_value: 0.3436
+    paper_std: 0.0077
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Heterophilic dataset using fixed splits as specified in Pei et
+      al. 2020
+    date: Jun 5, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-05'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3861
+    at_pub_std: 0.0026
+    at_pub_source_arxiv: '2305.06142'
+    at_pub_source_title: Feature Expansion for Graph Neural Networks
+    at_pub_source_date_iso: '2023-05-10'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2026-03-10'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.04249999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4082
+    true_std: 0.0179
+    value_gap_source_arxiv: '2603.09195'
+    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06459999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4082
+    sort_std: 0.0179
+    global_rank: 39
+    paper_rank: 272
+    rank_delta: 233
+    rank_delta_abs: 233
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Feature Expansion for Graph Neural Networks
+    comparison_source_arxiv: '2305.06142'
+    is_best: false
     is_std_outlier: false
   - model: APPNP
     model_key: appnp
@@ -304,10 +373,10 @@ results:
     value_note: ''
     sort_value: 0.4046
     sort_std: 0.0064
-    global_rank: 36
-    paper_rank: 150
-    rank_delta: 114
-    rank_delta_abs: 114
+    global_rank: 46
+    paper_rank: 190
+    rank_delta: 144
+    rank_delta_abs: 144
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -373,10 +442,10 @@ results:
     value_note: ''
     sort_value: 0.4018
     sort_std: 0.0055
-    global_rank: 38
-    paper_rank: 148
-    rank_delta: 110
-    rank_delta_abs: 110
+    global_rank: 48
+    paper_rank: 187
+    rank_delta: 139
+    rank_delta_abs: 139
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -443,10 +512,10 @@ results:
     value_note: ''
     sort_value: 0.3992
     sort_std: 0.0067
-    global_rank: 45
-    paper_rank: 245
-    rank_delta: 200
-    rank_delta_abs: 200
+    global_rank: 55
+    paper_rank: 302
+    rank_delta: 247
+    rank_delta_abs: 247
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -514,85 +583,16 @@ results:
     value_note: ''
     sort_value: 0.3959
     sort_std: 0.0029
-    global_rank: 49
-    paper_rank: 98
-    rank_delta: 49
-    rank_delta_abs: 49
+    global_rank: 59
+    paper_rank: 124
+    rank_delta: 65
+    rank_delta_abs: 65
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'SignGT: Signed Attention-based Graph Transformer for
       Graph Representation Learning'
     comparison_source_arxiv: '2310.11025'
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gcnii
-    model_plain: GCNII
-    value: 0.3436
-    std: 0.0077
-    paper_value: 0.3436
-    paper_std: 0.0077
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Heterophilic dataset using fixed splits as specified in Pei et
-      al. 2020
-    date: Jun 5, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-05'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3861
-    at_pub_std: 0.0026
-    at_pub_source_arxiv: '2305.06142'
-    at_pub_source_title: Feature Expansion for Graph Neural Networks
-    at_pub_source_date_iso: '2023-05-10'
-    at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2022-11-21'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.04249999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3744
-    true_std: 0.013
-    value_gap_source_arxiv: '2211.11761'
-    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.030799999999999994
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3744
-    sort_std: 0.013
-    global_rank: 96
-    paper_rank: 215
-    rank_delta: 119
-    rank_delta_abs: 119
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Feature Expansion for Graph Neural Networks
-    comparison_source_arxiv: '2305.06142'
     is_best: false
     is_std_outlier: false
   - model: Node-MoE
@@ -653,8 +653,8 @@ results:
     value_note: ''
     sort_value: 0.3628
     sort_std: 0.0101
-    global_rank: 144
-    paper_rank: 144
+    global_rank: 182
+    paper_rank: 182
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -722,10 +722,10 @@ results:
     value_note: ''
     sort_value: 0.362
     sort_std: 0.01
-    global_rank: 146
-    paper_rank: 298
-    rank_delta: 152
-    rank_delta_abs: 152
+    global_rank: 184
+    paper_rank: 357
+    rank_delta: 173
+    rank_delta_abs: 173
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -767,12 +767,12 @@ results:
     published_conference: ''
     at_pub_value: 0.361
     at_pub_std: 0.0155
-    at_pub_source_arxiv: '2303.01265'
-    at_pub_source_title: Steering Graph Neural Networks with Pinning Control
-    at_pub_source_date_iso: '2023-03-02'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-04-22'
-    value_gap_source_date_label: WWW 2025
+    at_pub_source_arxiv: '2210.00513'
+    at_pub_source_title: Gradient Gating for Deep Multi-Rate Learning on Graphs
+    at_pub_source_date_iso: '2022-10-02'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-07-29'
+    value_gap_source_date_label: AAAI 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -783,16 +783,16 @@ results:
     today_delta_significant: false
     true_value: 0.361
     true_std: 0.0155
-    value_gap_source_arxiv: '2505.20034'
-    value_gap_source_title: Graph Wave Networks
+    value_gap_source_arxiv: '2307.16092'
+    value_gap_source_title: Feature Transportation Improves Graph Neural Networks
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.361
     sort_std: 0.0155
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 188
+    paper_rank: 188
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -859,10 +859,10 @@ results:
     value_note: ''
     sort_value: 0.3605
     sort_std: 0.0035
-    global_rank: 151
-    paper_rank: 328
-    rank_delta: 177
-    rank_delta_abs: 177
+    global_rank: 191
+    paper_rank: 389
+    rank_delta: 198
+    rank_delta_abs: 198
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -928,8 +928,8 @@ results:
     value_note: ''
     sort_value: 0.3575
     sort_std: 0.0131
-    global_rank: 163
-    paper_rank: 163
+    global_rank: 210
+    paper_rank: 210
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -997,8 +997,8 @@ results:
     value_note: ''
     sort_value: 0.3489
     sort_std: 0.0111
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 254
+    paper_rank: 254
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1067,8 +1067,8 @@ results:
     value_note: ''
     sort_value: 0.2462
     sort_std: 0.0051
-    global_rank: 390
-    paper_rank: 390
+    global_rank: 451
+    paper_rank: 451
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1102,5 +1102,6 @@ datasets_by_scope:
     - dataset: Actor
       dataset_slug: actor
 single_proposed_model: Node-MoE
+main_figure: /figures/2406.03464/main_figure.jpegoptim.jpg
 ---
 

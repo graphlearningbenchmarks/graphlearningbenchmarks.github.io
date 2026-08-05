@@ -66,9 +66,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: FPS-T
+  - model: SGCONV
     model_key: acm-gcn
-    model_plain: FPS-T
+    model_plain: SGCONV
     value: 0.8894
     std: 0.0054
     metric: F1
@@ -99,11 +99,11 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FPS-T
-    model_key: bernnet
-    model_plain: FPS-T
-    value: 0.8796
-    std: 0.0085
+  - model: SGCONV
+    model_key: appnp
+    model_plain: SGCONV
+    value: 0.888
+    std: 0.001
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -113,30 +113,30 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.05894'
-    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
-    date: Feb 8, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-08'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: APPNP is a standard GNN.
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8796
-    sort_std: 0.0085
+    sort_value: 0.888
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FPS-T
-    model_key: fagcn
-    model_plain: FPS-T
-    value: 0.8792
-    std: 0.0065
+  - model: SGCONV
+    model_key: graphsage
+    model_plain: SGCONV
+    value: 0.881
+    std: 0.001
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -146,24 +146,24 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.05894'
-    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
-    date: Feb 8, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-08'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GraphSAGE is a standard GNN that pools node attributes.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8792
-    sort_std: 0.0065
+    sort_value: 0.881
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: Pre-train (Cluster)
     model_key: pre-train (cluster)
@@ -223,8 +223,8 @@ results:
     value_note: ''
     sort_value: 0.679
     sort_std: 0.008
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -246,44 +246,44 @@ results:
 - &id002
   dataset: PubMed
   rows:
-  - model: Pre-train (All Tasks)
-    model_key: nigcn
-    model_plain: Pre-train (All Tasks)
-    value: 0.809
-    std: 0.0202
+  - model: SGCONV
+    model_key: mixhop
+    model_plain: SGCONV
+    value: 0.891
+    std: 0.001
     metric: F1
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.14000'
-    title: Node-wise Diffusion for Scalable Graph Learning
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/NIGCN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.809
-    sort_std: 0.0202
+    sort_value: 0.891
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Pre-train (All Tasks)
-    model_key: ndls
-    model_plain: Pre-train (All Tasks)
-    value: 0.8038
-    std: 0.0141
+  - model: SGCONV
+    model_key: appnp
+    model_plain: SGCONV
+    value: 0.884
+    std: 0.001
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -293,30 +293,30 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.14000'
-    title: Node-wise Diffusion for Scalable Graph Learning
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/NIGCN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8038
-    sort_std: 0.0141
+    sort_value: 0.884
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Pre-train (All Tasks)
-    model_key: appnp
-    model_plain: Pre-train (All Tasks)
-    value: 0.8021
-    std: 0.0179
+  - model: SGCONV
+    model_key: gcn
+    model_plain: SGCONV
+    value: 0.875
+    std: 0.001
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -326,24 +326,24 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.14000'
-    title: Node-wise Diffusion for Scalable Graph Learning
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/NIGCN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8021
-    sort_std: 0.0179
+    sort_value: 0.875
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: Pre-train (All Tasks)
     model_key: pre-train (all tasks)
@@ -403,8 +403,8 @@ results:
     value_note: ''
     sort_value: 0.66
     sort_std: 0.014
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -413,7 +413,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   rank_metric: F1
   higher_is_better: true
   experiment_scope: node-level
@@ -439,5 +439,6 @@ datasets_by_scope:
       dataset_slug: cora
     - dataset: PubMed
       dataset_slug: pubmed
+main_figure: /figures/1905.13728/main_figure.jpegoptim.jpg
 ---
 

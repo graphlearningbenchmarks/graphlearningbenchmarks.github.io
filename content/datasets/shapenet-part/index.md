@@ -15,7 +15,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 50
-result_count: 40
+result_count: 24
 best_model:
   model: GPS + k-MIP
   value: 0.8268
@@ -34,10 +34,6 @@ papers:
     Networks
   date_iso: '2025-09-29'
   venue: ''
-- arxiv_id: '2211.06489'
-  title: Equivariance with Learned Canonicalization Functions
-  date_iso: '2022-11-11'
-  venue: ICML 2022
 - arxiv_id: '2002.04999'
   title: Differentiable Graph Module (DGM) for Graph Convolutional Networks
   date_iso: '2020-02-11'
@@ -61,11 +57,9 @@ variants:
     num_classes: 50
   metrics:
   - F1
-  - IoU
   - mIoU
   metric_display_names:
   - F1
-  - IoU
   - mIoU
   show_all_metrics_desktop: false
   chart_default_log_scale: false
@@ -97,10 +91,8 @@ variants:
     metric_values:
     - 0.8268
     - null
-    - null
     metric_stds:
     - 0.0064
-    - null
     - null
   - model: Exphormer
     model_plain: Exphormer
@@ -128,10 +120,8 @@ variants:
     metric_values:
     - 0.8262
     - null
-    - null
     metric_stds:
     - 0.0031
-    - null
     - null
   - model: VN-DGCNN
     model_plain: VN-DGCNN
@@ -159,9 +149,7 @@ variants:
     metric_values:
     - 0.814
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: AC-DGCNN
@@ -190,10 +178,8 @@ variants:
     metric_values:
     - 0.809
     - null
-    - null
     metric_stds:
     - 0.007
-    - null
     - null
   - model: GPS + BigBird
     model_plain: GPS + BigBird
@@ -221,10 +207,8 @@ variants:
     metric_values:
     - 0.7965
     - null
-    - null
     metric_stds:
     - 0.0098
-    - null
     - null
   - model: DGCNN
     model_plain: DGCNN
@@ -252,9 +236,7 @@ variants:
     metric_values:
     - 0.786
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: CN-DGCNN
@@ -283,10 +265,8 @@ variants:
     metric_values:
     - 0.785
     - null
-    - null
     metric_stds:
     - 0.009
-    - null
     - null
   - model: GPS + Performer
     model_plain: GPS + Performer
@@ -314,10 +294,8 @@ variants:
     metric_values:
     - 0.7736
     - null
-    - null
     metric_stds:
     - 0.0123
-    - null
     - null
   - model: GatedGCN
     model_plain: GatedGCN
@@ -345,10 +323,8 @@ variants:
     metric_values:
     - 0.762
     - null
-    - null
     metric_stds:
     - 0.0032
-    - null
     - null
   - model: AC-PointNet
     model_plain: AC-PointNet
@@ -376,10 +352,8 @@ variants:
     metric_values:
     - 0.76
     - null
-    - null
     metric_stds:
     - 0.006
-    - null
     - null
   - model: CN-PointNet
     model_plain: CN-PointNet
@@ -407,10 +381,8 @@ variants:
     metric_values:
     - 0.736
     - null
-    - null
     metric_stds:
     - 0.011
-    - null
     - null
   - model: VN-PointNet
     model_plain: VN-PointNet
@@ -438,9 +410,7 @@ variants:
     metric_values:
     - 0.728
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: GINE
@@ -469,10 +439,8 @@ variants:
     metric_values:
     - 0.6457
     - null
-    - null
     metric_stds:
     - 0.0035
-    - null
     - null
   - model: GAT
     model_plain: GAT
@@ -500,10 +468,8 @@ variants:
     metric_values:
     - 0.6301
     - null
-    - null
     metric_stds:
     - 0.0017
-    - null
     - null
   - model: PointNet++
     model_plain: PointNet++
@@ -531,9 +497,7 @@ variants:
     metric_values:
     - 0.623
     - null
-    - null
     metric_stds:
-    - null
     - null
     - null
   - model: GCN
@@ -562,490 +526,8 @@ variants:
     metric_values:
     - 0.6018
     - null
-    - null
     metric_stds:
     - 0.0004
-    - null
-    - null
-  - model: PointNet++
-    model_plain: PointNet++
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.767
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: DGCNN
-    model_plain: DGCNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.786
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: VN-PointNet
-    model_plain: VN-PointNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.728
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: VN-DGCNN
-    model_plain: VN-DGCNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.814
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: PointCNN
-    model_plain: PointCNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.714
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: ShellNet
-    model_plain: ShellNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.771
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: RI-Conv
-    model_plain: RI-Conv
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.753
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: TFN
-    model_plain: TFN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.768
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: GC-Conv
-    model_plain: GC-Conv
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.773
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: RI-Framework
-    model_plain: RI-Framework
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.794
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: CN(frozen)-PointNet
-    model_plain: CN(frozen)-PointNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.723
-    - null
-    metric_stds:
-    - null
-    - 0.011
-    - null
-  - model: CN(L)-PointNet
-    model_plain: CN(L)-PointNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.734
-    - null
-    metric_stds:
-    - null
-    - 0.012
-    - null
-  - model: CN(NL)-PointNet
-    model_plain: CN(NL)-PointNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.736
-    - null
-    metric_stds:
-    - null
-    - 0.011
-    - null
-  - model: CN(frozen)-DGCNN
-    model_plain: CN(frozen)-DGCNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.782
-    - null
-    metric_stds:
-    - null
-    - 0.012
-    - null
-  - model: CN(L)-DGCNN
-    model_plain: CN(L)-DGCNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.785
-    - null
-    metric_stds:
-    - null
-    - 0.011
-    - null
-  - model: CN(NL)-DGCNN
-    model_plain: CN(NL)-DGCNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2211.06489'
-    title: Equivariance with Learned Canonicalization Functions
-    date: Nov 11, 2022
-    date_iso: '2022-11-11'
-    date_display: Nov 2022
-    codebase_url: ''
-    published_conference: ICML 2022
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.785
-    - null
-    metric_stds:
-    - null
-    - 0.009
     - null
   - model: DGCNN
     model_plain: DGCNN
@@ -1071,10 +553,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - null
-    - null
     - 0.852
     metric_stds:
-    - null
     - null
     - null
   - model: dDGM
@@ -1101,10 +581,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - null
-    - null
     - 0.856
     metric_stds:
-    - null
     - null
     - null
   - model: PointNet++
@@ -1131,10 +609,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - null
-    - null
     - 0.851
     metric_stds:
-    - null
     - null
     - null
   - model: Kd-Net
@@ -1161,10 +637,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - null
-    - null
     - 0.823
     metric_stds:
-    - null
     - null
     - null
   - model: LocalFeatureNet
@@ -1191,10 +665,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - null
-    - null
     - 0.843
     metric_stds:
-    - null
     - null
     - null
   - model: PCNN
@@ -1221,10 +693,8 @@ variants:
     is_std_outlier: false
     metric_values:
     - null
-    - null
     - 0.851
     metric_stds:
-    - null
     - null
     - null
   - model: PointCNN
@@ -1251,14 +721,12 @@ variants:
     is_std_outlier: false
     metric_values:
     - null
-    - null
     - 0.861
     metric_stds:
     - null
     - null
-    - null
-  - model: EdgeConv
-    model_plain: EdgeConv
+  - model: DGCNN
+    model_plain: DGCNN
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -1281,24 +749,21 @@ variants:
     is_std_outlier: false
     metric_values:
     - null
-    - null
     - 0.852
     metric_stds:
     - null
     - null
-    - null
-  row_count: 40
+  row_count: 24
   rows_json: ''
   chart_json: /data/datasets/shapenet-part/standard-split-chart.json
   arch_counts:
-    gnn: 25
+    gnn: 15
     hybrid: 3
     graph_transformer: 1
     llm: 0
     walk: 0
     traditional: 1
   metric_counts:
-  - 16
   - 16
   - 8
   milestones: &id001
@@ -1311,7 +776,12 @@ variants:
     date: '2025-09-29'
   milestones_by_metric:
     F1: *id001
-    IoU: []
-    mIoU: []
+    mIoU:
+    - value: 0.861
+      std: null
+      model: PointCNN
+      arxiv_id: '1801.07829'
+      title: Dynamic Graph CNN for Learning on Point Clouds
+      date: '2018-01-24'
 ---
 

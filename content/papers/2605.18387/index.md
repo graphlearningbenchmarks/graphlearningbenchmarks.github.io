@@ -1172,5 +1172,6 @@ datasets_by_scope:
     - dataset: ECHO-Synth
       dataset_slug: echo-synth
 single_proposed_model: GHR
+main_figure: /figures/2605.18387/main_figure.jpegoptim.jpg
 ---
 

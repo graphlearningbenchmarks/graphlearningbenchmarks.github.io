@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 3
-result_count: 361
+result_count: 398
 best_model:
   model: HetGNN
   value: 0.979
@@ -58,11 +58,20 @@ papers:
     Learning'
   date_iso: '2024-09-25'
   venue: NeurIPS 2024
+- arxiv_id: '2406.19258'
+  title: Leveraging Contrastive Learning for Enhanced Node Representations in Tokenized
+    Graph Transformers
+  date_iso: '2024-06-27'
+  venue: NeurIPS 2024
 - arxiv_id: '2406.15797'
   title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
     Clustering'
   date_iso: '2024-06-22'
   venue: ''
+- arxiv_id: '2405.01927'
+  title: 'SlotGAT: Slot-based Message Passing for Heterogeneous Graphs'
+  date_iso: '2024-05-03'
+  venue: ICML 2024
 - arxiv_id: '2404.02810'
   title: Generative-Contrastive Heterogeneous Graph Neural Network
   date_iso: '2024-04-03'
@@ -101,6 +110,10 @@ papers:
   title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
     Learning'
   date_iso: '2023-10-17'
+  venue: ''
+- arxiv_id: '2307.11981'
+  title: Collaborative Graph Neural Networks for Attributed Network Embedding
+  date_iso: '2023-07-22'
   venue: ''
 - arxiv_id: '2307.08430'
   title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
@@ -158,6 +171,10 @@ papers:
   title: Generative and Contrastive Self-Supervised Learning for Graph Anomaly Detection
   date_iso: '2021-08-23'
   venue: ''
+- arxiv_id: '2112.14936'
+  title: Heterogeneous Graph Benchmarks
+  date_iso: '2021-08-14'
+  venue: KDD 2021
 - arxiv_id: '2104.12840'
   title: 'AdaGNN: Graph Neural Networks with Adaptive Frequency Response Filter'
   date_iso: '2021-04-26'
@@ -174,10 +191,10 @@ papers:
   title: Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs
   date_iso: '2020-07-16'
   venue: NeurIPS 2020
-- arxiv_id: '2007.03424'
-  title: 'AEGCN: An uto ncoder-Constrained raph onvolutional etwork'
-  date_iso: '2020-07-03'
-  venue: ''
+- arxiv_id: '2007.02265'
+  title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+  date_iso: '2020-07-05'
+  venue: KDD 2020
 variants:
 - slug: standard-split
   name: Standard split
@@ -198,6 +215,7 @@ variants:
   - AUC
   - Accuracy
   - F1
+  - F1-micro
   - Macro-F1
   - NMI
   - ROC-AUC
@@ -208,6 +226,7 @@ variants:
   - AUC
   - Accuracy
   - F1
+  - F1-micro
   - Macro-F1
   - NMI
   - ROC-AUC
@@ -247,7 +266,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -289,7 +310,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -331,8 +354,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0036
+    - null
     - null
     - null
     - null
@@ -373,8 +398,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0023
+    - null
     - null
     - null
     - null
@@ -415,8 +442,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0022
+    - null
     - null
     - null
     - null
@@ -457,8 +486,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0059
+    - null
     - null
     - null
     - null
@@ -499,7 +530,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -541,8 +574,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0036
+    - null
     - null
     - null
     - null
@@ -583,8 +618,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.005
+    - null
     - null
     - null
     - null
@@ -625,8 +662,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0033
+    - null
     - null
     - null
     - null
@@ -667,8 +706,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0045
+    - null
     - null
     - null
     - null
@@ -706,11 +747,13 @@ variants:
     - null
     - null
     - null
+    - null
     - 0.9388
     - null
     - null
     metric_stds:
     - 0.002
+    - null
     - null
     - null
     - null
@@ -751,8 +794,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0064
+    - null
     - null
     - null
     - null
@@ -793,7 +838,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -835,7 +882,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -877,8 +926,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0017
+    - null
     - null
     - null
     - null
@@ -919,7 +970,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -961,8 +1014,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0044
+    - null
     - null
     - null
     - null
@@ -1003,7 +1058,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1042,11 +1099,13 @@ variants:
     - null
     - null
     - null
+    - null
     - 0.9342
     - null
     - null
     metric_stds:
     - 0.0045
+    - null
     - null
     - null
     - null
@@ -1087,8 +1146,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0045
+    - null
     - null
     - null
     - null
@@ -1129,8 +1190,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0045
+    - null
     - null
     - null
     - null
@@ -1172,8 +1235,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0021
+    - null
     - null
     - null
     - null
@@ -1191,16 +1256,16 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2307.08430'
-    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
-    date: Jul 17, 2023
-    date_iso: '2023-07-17'
-    date_display: Jul 2023
-    codebase_url: ''
-    published_conference: NeurIPS 2023
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2023
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1214,8 +1279,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0045
+    - null
     - null
     - null
     - null
@@ -1256,8 +1323,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0033
+    - null
     - null
     - null
     - null
@@ -1299,8 +1368,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0021
+    - null
     - null
     - null
     - null
@@ -1341,7 +1412,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1383,8 +1456,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0018
+    - null
     - null
     - null
     - null
@@ -1425,8 +1500,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0033
+    - null
     - null
     - null
     - null
@@ -1468,8 +1545,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0018
+    - null
     - null
     - null
     - null
@@ -1510,7 +1589,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1552,8 +1633,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0026
+    - null
     - null
     - null
     - null
@@ -1595,8 +1678,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.005
+    - null
     - null
     - null
     - null
@@ -1637,7 +1722,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1679,8 +1766,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0014
+    - null
     - null
     - null
     - null
@@ -1721,7 +1810,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1763,8 +1854,54 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0017
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: DisenHAN
+    model_plain: DisenHAN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.01927'
+    title: 'SlotGAT: Slot-based Message Passing for Heterogeneous Graphs'
+    date: May 3, 2024
+    date_iso: '2024-05-03'
+    date_display: May 2024
+    codebase_url: https://github.com/scottjiao/SlotGAT_ICML23
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9245
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0033
+    - null
     - null
     - null
     - null
@@ -1805,8 +1942,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1847,7 +1986,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1889,8 +2030,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0038
+    - null
     - null
     - null
     - null
@@ -1931,8 +2074,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0038
+    - null
     - null
     - null
     - null
@@ -1973,8 +2118,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0043
+    - null
     - null
     - null
     - null
@@ -2015,8 +2162,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0027
+    - null
     - null
     - null
     - null
@@ -2057,8 +2206,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.004
+    - null
     - null
     - null
     - null
@@ -2099,8 +2250,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0052
+    - null
     - null
     - null
     - null
@@ -2142,8 +2295,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0037
+    - null
     - null
     - null
     - null
@@ -2161,16 +2316,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.06299'
-    title: Homophily-oriented Heterogeneous Graph Rewiring
-    date: Feb 13, 2023
-    date_iso: '2023-02-13'
-    date_display: Feb 2023
-    codebase_url: ''
-    published_conference: WWW 2023
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2023
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -2181,7 +2336,8 @@ variants:
     - null
     - null
     - null
-    - 0.9217
+    - null
+    - null
     - null
     - null
     metric_stds:
@@ -2191,7 +2347,8 @@ variants:
     - null
     - null
     - null
-    - 0.0024
+    - null
+    - null
     - null
     - null
   - model: GSR
@@ -2227,8 +2384,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0099
+    - null
     - null
     - null
     - null
@@ -2270,6 +2429,7 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.007
     - null
@@ -2280,67 +2440,26 @@ variants:
     - null
     - null
     - null
-  - model: LDS
-    model_plain: LDS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2409.17386'
-    title: 'Beyond Redundancy: Information-aware Unsupervised Multiplex Graph Structure
-      Learning'
-    date: Sep 25, 2024
-    date_iso: '2024-09-25'
-    date_display: Sep 2024
-    codebase_url: https://github.com/zxlearningdeep/InfoMGF
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9205
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0026
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  row_count: 361
+  row_count: 398
   rows_json: /data/datasets/acm/standard-split-rows.json
   chart_json: /data/datasets/acm/standard-split-chart.json
   arch_counts:
-    gnn: 251
-    hybrid: 54
-    graph_transformer: 13
+    gnn: 271
+    hybrid: 62
+    graph_transformer: 18
     llm: 1
-    walk: 16
-    traditional: 23
+    walk: 17
+    traditional: 25
   metric_counts:
-  - 183
-  - 16
+  - 184
+  - 25
   - 1
   - 8
-  - 97
-  - 52
-  - 5
+  - 113
+  - 61
+  - 11
+  - 4
   - 1
   - 7
   milestones: &id001
@@ -2350,6 +2469,12 @@ variants:
     arxiv_id: '2007.08294'
     title: Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs
     date: '2020-07-16'
+  - value: 0.9335
+    std: 0.0045
+    model: Simple-HGN
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: '2021-08-14'
   - value: 0.9398
     std: 0.0036
     model: SeHGNN
@@ -2377,12 +2502,12 @@ variants:
   milestones_by_metric:
     Micro-F1: *id001
     ACC:
-    - value: 0.714
-      std: 0.0008
-      model: IDCRN
-      arxiv_id: '2202.12533'
-      title: Improved Dual Correlation Reduction Network
-      date: '2022-02-25'
+    - value: 0.9142
+      std: null
+      model: AM-GCN
+      arxiv_id: '2007.02265'
+      title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+      date: '2020-07-05'
     ARI:
     - value: 0.5881
       std: 0.0037
@@ -2418,12 +2543,12 @@ variants:
         Learning'
       date: '2023-10-17'
     F1:
-    - value: 0.714
-      std: 0.0008
-      model: IDCRN
-      arxiv_id: '2202.12533'
-      title: Improved Dual Correlation Reduction Network
-      date: '2022-02-25'
+    - value: 0.9136
+      std: null
+      model: AM-GCN
+      arxiv_id: '2007.02265'
+      title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+      date: '2020-07-05'
     - value: 0.9274
       std: 0.0004
       model: SynC SSL
@@ -2431,6 +2556,13 @@ variants:
       title: 'SynC: Synergistic Boosting of Structure and Representation for Deep
         Graph Clustering'
       date: '2024-06-22'
+    F1-micro:
+    - value: 0.775
+      std: null
+      model: CONN
+      arxiv_id: '2307.11981'
+      title: Collaborative Graph Neural Networks for Attributed Network Embedding
+      date: '2023-07-22'
     Macro-F1:
     - value: 0.9388
       std: 0.002

@@ -59,9 +59,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -92,9 +92,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -125,9 +125,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -216,9 +216,9 @@ results:
     sort_value: 0.933
     sort_std: 0.029
     global_rank: 34
-    paper_rank: 555
-    rank_delta: 521
-    rank_delta_abs: 521
+    paper_rank: 586
+    rank_delta: 552
+    rank_delta_abs: 552
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -282,10 +282,10 @@ results:
     value_note: ''
     sort_value: 0.917
     sort_std: 0.029
-    global_rank: 71
-    paper_rank: 207
-    rank_delta: 136
-    rank_delta_abs: 136
+    global_rank: 73
+    paper_rank: 217
+    rank_delta: 144
+    rank_delta_abs: 144
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -349,10 +349,10 @@ results:
     value_note: ''
     sort_value: 0.901
     sort_std: 0.058
-    global_rank: 156
-    paper_rank: 588
-    rank_delta: 432
-    rank_delta_abs: 432
+    global_rank: 164
+    paper_rank: 623
+    rank_delta: 459
+    rank_delta_abs: 459
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -417,8 +417,8 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.069
-    global_rank: 450
-    paper_rank: 450
+    global_rank: 478
+    paper_rank: 478
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -485,8 +485,8 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.06
-    global_rank: 545
-    paper_rank: 545
+    global_rank: 577
+    paper_rank: 577
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -553,8 +553,8 @@ results:
     value_note: ''
     sort_value: 0.757
     sort_std: 0.069
-    global_rank: 665
-    paper_rank: 665
+    global_rank: 709
+    paper_rank: 709
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -586,5 +586,6 @@ datasets_by_scope:
     datasets:
     - dataset: MUTAG
       dataset_slug: mutag
+main_figure: /figures/2605.14884/main_figure.jpegoptim.jpg
 ---
 

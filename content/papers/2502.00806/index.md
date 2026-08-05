@@ -60,8 +60,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - UniGraph2
-mrr: 0.1566
-adjusted_mrr: 0.1566
+mrr: 0.1565
+adjusted_mrr: 0.1565
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -90,9 +90,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -123,9 +123,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -157,9 +157,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -249,8 +249,8 @@ results:
     value_note: ''
     sort_value: 0.2464
     sort_std: 0.0009
-    global_rank: 573
-    paper_rank: 573
+    global_rank: 579
+    paper_rank: 579
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -318,8 +318,8 @@ results:
     value_note: ''
     sort_value: 0.1925
     sort_std: 0.0004
-    global_rank: 575
-    paper_rank: 575
+    global_rank: 581
+    paper_rank: 581
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -387,8 +387,8 @@ results:
     value_note: ''
     sort_value: 0.191
     sort_std: 0.001
-    global_rank: 576
-    paper_rank: 576
+    global_rank: 582
+    paper_rank: 582
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -455,8 +455,8 @@ results:
     value_note: ''
     sort_value: 0.1872
     sort_std: 0.0025
-    global_rank: 577
-    paper_rank: 577
+    global_rank: 583
+    paper_rank: 583
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -524,8 +524,8 @@ results:
     value_note: ''
     sort_value: 0.1824
     sort_std: 0.0021
-    global_rank: 578
-    paper_rank: 578
+    global_rank: 584
+    paper_rank: 584
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -592,8 +592,8 @@ results:
     value_note: ''
     sort_value: 0.1678
     sort_std: 0.0025
-    global_rank: 579
-    paper_rank: 579
+    global_rank: 585
+    paper_rank: 585
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1306,9 +1306,9 @@ results:
 - &id003
   dataset: ogbn-papers100M
   rows:
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: sgc
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.791
     std: null
     metric: Accuracy
@@ -1339,9 +1339,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: gamlp
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -1372,9 +1372,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: glem-gnn
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -1601,9 +1601,9 @@ results:
     sort_value: 0.6624
     sort_std: 0.0054
     global_rank: 30
-    paper_rank: 64
-    rank_delta: 34
-    rank_delta_abs: 34
+    paper_rank: 65
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1693,9 +1693,9 @@ results:
 - &id002
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -1727,9 +1727,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -1760,9 +1760,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -1852,10 +1852,10 @@ results:
     value_note: ''
     sort_value: 0.8547
     sort_std: 0.0029
-    global_rank: 24
-    paper_rank: 293
-    rank_delta: 269
-    rank_delta_abs: 269
+    global_rank: 26
+    paper_rank: 311
+    rank_delta: 285
+    rank_delta_abs: 285
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1921,8 +1921,8 @@ results:
     value_note: ''
     sort_value: 0.8279
     sort_std: 0.0002
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1989,8 +1989,8 @@ results:
     value_note: ''
     sort_value: 0.7801
     sort_std: 0.0013
-    global_rank: 208
-    paper_rank: 208
+    global_rank: 223
+    paper_rank: 223
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2057,8 +2057,8 @@ results:
     value_note: ''
     sort_value: 0.6834
     sort_std: 0.0014
-    global_rank: 325
-    paper_rank: 325
+    global_rank: 344
+    paper_rank: 344
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2125,8 +2125,8 @@ results:
     value_note: ''
     sort_value: 0.6528
     sort_std: 0.0012
-    global_rank: 338
-    paper_rank: 338
+    global_rank: 358
+    paper_rank: 358
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2193,8 +2193,8 @@ results:
     value_note: ''
     sort_value: 0.4511
     sort_std: 0.0002
-    global_rank: 363
-    paper_rank: 363
+    global_rank: 383
+    paper_rank: 383
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2249,5 +2249,6 @@ datasets_by_scope:
     - dataset: WN18RR
       dataset_slug: wn18rr
 single_proposed_model: UniGraph2
+main_figure: /figures/2502.00806/main_figure.jpegoptim.jpg
 ---
 

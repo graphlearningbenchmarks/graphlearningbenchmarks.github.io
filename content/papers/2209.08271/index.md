@@ -2547,5 +2547,6 @@ datasets_by_scope:
       dataset_slug: fb15k-237
     - dataset: WN18
       dataset_slug: wn18
+main_figure: /figures/2209.08271/main_figure.jpegoptim.jpg
 ---
 

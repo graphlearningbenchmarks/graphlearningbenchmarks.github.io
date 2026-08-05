@@ -915,5 +915,6 @@ datasets_by_scope:
     - dataset: WikiCS
       dataset_slug: wikics
 single_proposed_model: InfoAdv
+main_figure: /figures/2211.10929/main_figure.jpegoptim.jpg
 ---
 

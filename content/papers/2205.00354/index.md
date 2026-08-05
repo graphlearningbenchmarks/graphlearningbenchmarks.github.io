@@ -39,8 +39,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - new way to perform isotropic diffusion on graphs
-mrr: 0.025
-adjusted_mrr: 0.0083
+mrr: 0.0244
+adjusted_mrr: 0.0081
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -276,7 +276,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 40
+    global_rank: 41
   - model: GAD-s
     model_key: gad-s
     model_plain: GAD-s
@@ -346,7 +346,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 39
+    global_rank: 40
   - model: DGN
     model_key: dgn
     model_plain: DGN
@@ -416,7 +416,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 42
+    global_rank: 43
   - model: PNA
     model_key: pna
     model_plain: PNA
@@ -486,7 +486,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 44
+    global_rank: 45
   metrics:
   - gap
   - mu
@@ -525,5 +525,6 @@ datasets_by_scope:
     - dataset: QM9
       dataset_slug: qm9
 single_proposed_model: new way to perform isotropic diffusion on graphs
+main_figure: /figures/2205.00354/main_figure.jpegoptim.jpg
 ---
 

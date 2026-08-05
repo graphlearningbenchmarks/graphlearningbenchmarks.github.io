@@ -911,5 +911,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: shared simplicial message passing (300K)
+main_figure: /figures/2402.10011/main_figure.jpegoptim.jpg
 ---
 

@@ -53,9 +53,9 @@ results:
 - &id001
   dataset: CIFAR10
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: randalign
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.7942
     std: 0.00072
     metric: Accuracy
@@ -64,9 +64,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2404.09774'
     title: 'RandAlign: A Parameter-Free Method for Regularizing Graph Convolutional
       Networks'
@@ -87,45 +87,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: tau-grit
-    model_plain: 3WLGNN
-    value: 0.77784
-    std: 0.0049
+  - model: Tango_GPS
+    model_key: differential encoding
+    model_plain: Tango_GPS
+    value: 0.79067
+    std: 0.00269
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.12369'
-    title: A Hierarchical Quantized Tokenization Framework for Task-Adaptive Graph
-      Representation Learning
-    date: Oct 14, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-14'
-    venue: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: Jul 3, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-03'
+    venue: IEEE Transactions on Big Data
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.77784
-    sort_std: 0.0049
+    sort_value: 0.79067
+    sort_std: 0.00269
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: degta
-    model_plain: 3WLGNN
-    value: 0.76756
-    std: 0.00927
+  - model: Tango_GPS
+    model_key: ppgt
+    model_plain: Tango_GPS
+    value: 0.7856
+    std: 0.007
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -135,20 +134,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2408.07654'
-    title: 'Graph Triple Attention Network: A Decoupled Perspective'
-    date: Aug 14, 2024
-    date_display: Aug 2024
-    date_iso: '2024-08-14'
-    venue: arXiv.org
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.76756
-    sort_std: 0.00927
+    sort_value: 0.7856
+    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -184,12 +183,13 @@ results:
     date_iso: '2023-12-10'
     published_venue: TMLR 2023
     published_conference: TMLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.727
+    at_pub_std: 0.0029
+    at_pub_source_arxiv: '2110.03753'
+    at_pub_source_title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure
+      Awareness'
+    at_pub_source_date_iso: '2021-10-07'
+    at_pub_source_date_label: ICLR 2021
     value_gap_source_date_iso: '2023-12-10'
     value_gap_source_date_label: TMLR 2023
     gap_vs_at_pub: null
@@ -210,8 +210,8 @@ results:
     value_note: ''
     sort_value: 0.727
     sort_std: 0.0029
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -253,10 +253,11 @@ results:
     published_conference: TMLR 2023
     at_pub_value: 0.7219
     at_pub_std: 0.0013
-    at_pub_source_arxiv: '2205.12454'
-    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    at_pub_source_date_iso: '2022-05-25'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_source_arxiv: '2110.03753'
+    at_pub_source_title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure
+      Awareness'
+    at_pub_source_date_iso: '2021-10-07'
+    at_pub_source_date_label: ICLR 2021
     value_gap_source_date_iso: '2023-12-10'
     value_gap_source_date_label: TMLR 2023
     gap_vs_at_pub: 0.0020000000000000018
@@ -277,8 +278,8 @@ results:
     value_note: ''
     sort_value: 0.7239
     sort_std: 0.0038
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -345,8 +346,8 @@ results:
     value_note: ''
     sort_value: 0.5982
     sort_std: 0.0033
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -413,8 +414,8 @@ results:
     value_note: ''
     sort_value: 0.5634
     sort_std: 0.0006
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -446,5 +447,6 @@ datasets_by_scope:
     datasets:
     - dataset: CIFAR10
       dataset_slug: cifar10
+main_figure: /figures/2312.05905/main_figure.jpegoptim.jpg
 ---
 

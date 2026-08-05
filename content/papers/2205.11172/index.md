@@ -39,8 +39,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - JacobiConv
-mrr: 0.0333
-adjusted_mrr: 0.0111
+mrr: 0.0312
+adjusted_mrr: 0.0104
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterophilic Graphs
@@ -48,7 +48,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 1
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -57,9 +57,9 @@ results:
 - &id001
   dataset: Chameleon
   rows:
-  - model: Random
+  - model: FE-GNN
     model_key: hetero-s (gat 8-layer)
-    model_plain: Random
+    model_plain: FE-GNN
     value: 0.8693
     std: null
     metric: Accuracy
@@ -91,9 +91,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Random
+  - model: FE-GNN
     model_key: trans.conv+cna
-    model_plain: Random
+    model_plain: FE-GNN
     value: 0.8586
     std: 0.018
     metric: Accuracy
@@ -102,9 +102,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2412.04064'
     title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
     date: Dec 5, 2024
@@ -124,9 +124,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Random
+  - model: FE-GNN
     model_key: gat
-    model_plain: Random
+    model_plain: FE-GNN
     value: 0.856
     std: null
     metric: Accuracy
@@ -214,8 +214,8 @@ results:
     value_note: ''
     sort_value: 0.751
     sort_std: 0.0083
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -281,8 +281,8 @@ results:
     value_note: ''
     sort_value: 0.742
     sort_std: 0.0103
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -348,10 +348,10 @@ results:
     value_note: ''
     sort_value: 0.7033
     sort_std: null
-    global_rank: 60
-    paper_rank: 156
-    rank_delta: 96
-    rank_delta_abs: 96
+    global_rank: 63
+    paper_rank: 160
+    rank_delta: 97
+    rank_delta_abs: 97
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -416,8 +416,8 @@ results:
     value_note: ''
     sort_value: 0.6853
     sort_std: 0.0168
-    global_rank: 76
-    paper_rank: 79
+    global_rank: 79
+    paper_rank: 82
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -484,8 +484,8 @@ results:
     value_note: ''
     sort_value: 0.6748
     sort_std: 0.004
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -552,10 +552,10 @@ results:
     value_note: ''
     sort_value: 0.667
     sort_std: 0.027
-    global_rank: 96
-    paper_rank: 199
-    rank_delta: 103
-    rank_delta_abs: 103
+    global_rank: 99
+    paper_rank: 205
+    rank_delta: 106
+    rank_delta_abs: 106
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -619,8 +619,8 @@ results:
     value_note: ''
     sort_value: 0.5928
     sort_std: 0.0125
-    global_rank: 160
-    paper_rank: 160
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -686,8 +686,8 @@ results:
     value_note: ''
     sort_value: 0.2503
     sort_std: 0.023
-    global_rank: 307
-    paper_rank: 307
+    global_rank: 317
+    paper_rank: 317
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -720,5 +720,6 @@ datasets_by_scope:
     - dataset: Chameleon
       dataset_slug: chameleon
 single_proposed_model: JacobiConv
+main_figure: /figures/2205.11172/main_figure.jpegoptim.jpg
 ---
 

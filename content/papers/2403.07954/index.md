@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - AdaptKry
-mrr: 0.1272
-adjusted_mrr: 0.1272
+mrr: 0.0766
+adjusted_mrr: 0.0766
 mrr_dataset_count: 5
 benchmark_categories:
 - Classic
@@ -71,11 +71,11 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 3
-  total: 13
+  total: 6
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
   evaluated: 1
-  total: 5
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -84,9 +84,43 @@ results:
 - &id002
   dataset: Actor
   rows:
-  - model: CoCN
+  - model: R-SoftGraphAIN
+    model_key: nodeformer
+    model_plain: R-SoftGraphAIN
+    value: 0.7623
+    std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7623
+    sort_std: 0.0042
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: diggr
-    model_plain: CoCN
+    model_plain: R-SoftGraphAIN
     value: 0.4535
     std: 0.0353
     metric: Accuracy
@@ -109,46 +143,47 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.4535
     sort_std: 0.0353
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: CoCN
-    model_key: uniaug - polygcl
-    model_plain: CoCN
-    value: 0.4301
-    std: 0.0127
+  - model: R-SoftGraphAIN
+    model_key: dog
+    model_plain: R-SoftGraphAIN
+    value: 0.432
+    std: 0.012
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.01899'
-    title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
-    date: Jun 4, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-04'
-    venue: NeurIPS'25
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.4301
-    sort_std: 0.0127
+    global_rank: 3
+    sort_value: 0.432
+    sort_std: 0.012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: AdaptKry
     model_key: adaptkry
@@ -207,8 +242,8 @@ results:
     value_note: ''
     sort_value: 0.427
     sort_std: 0.0114
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -216,7 +251,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: OptBasisGNN
     model_key: optbasisgnn
@@ -276,8 +311,8 @@ results:
     value_note: ''
     sort_value: 0.4239
     sort_std: 0.0052
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -285,7 +320,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: BernNet
     model_key: bernnet
@@ -343,8 +378,8 @@ results:
     value_note: ''
     sort_value: 0.4179
     sort_std: 0.0101
-    global_rank: 14
-    paper_rank: 16
+    global_rank: 21
+    paper_rank: 23
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -352,7 +387,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: ChebNetII
     model_key: chebnetii
@@ -412,8 +447,8 @@ results:
     value_note: ''
     sort_value: 0.4175
     sort_std: 0.0107
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -421,7 +456,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: SIGN
     model_key: sign
@@ -481,8 +516,8 @@ results:
     value_note: ''
     sort_value: 0.4122
     sort_std: 0.0096
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -490,7 +525,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: JacobiConv
     model_key: jacobiconv
@@ -550,8 +585,8 @@ results:
     value_note: ''
     sort_value: 0.4117
     sort_std: 0.0064
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -617,8 +652,8 @@ results:
     value_note: ''
     sort_value: 0.4048
     sort_std: 0.0062
-    global_rank: 34
-    paper_rank: 36
+    global_rank: 44
+    paper_rank: 46
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -686,8 +721,8 @@ results:
     value_note: ''
     sort_value: 0.3992
     sort_std: 0.0067
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -753,10 +788,10 @@ results:
     value_note: ''
     sort_value: 0.3802
     sort_std: 0.0023
-    global_rank: 73
-    paper_rank: 98
-    rank_delta: 25
-    rank_delta_abs: 25
+    global_rank: 92
+    paper_rank: 123
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -821,10 +856,10 @@ results:
     value_note: ''
     sort_value: 0.362
     sort_std: 0.01
-    global_rank: 146
-    paper_rank: 245
-    rank_delta: 99
-    rank_delta_abs: 99
+    global_rank: 184
+    paper_rank: 302
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -891,10 +926,10 @@ results:
     value_note: ''
     sort_value: 0.361
     sort_std: 0.0155
-    global_rank: 149
-    paper_rank: 213
-    rank_delta: 64
-    rank_delta_abs: 64
+    global_rank: 189
+    paper_rank: 270
+    rank_delta: 81
+    rank_delta_abs: 81
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -960,8 +995,8 @@ results:
     value_note: ''
     sort_value: 0.3341
     sort_std: 0.008
-    global_rank: 245
-    paper_rank: 245
+    global_rank: 302
+    paper_rank: 302
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -983,9 +1018,9 @@ results:
 - &id003
   dataset: Chameleon
   rows:
-  - model: Random
+  - model: FE-GNN
     model_key: hetero-s (gat 8-layer)
-    model_plain: Random
+    model_plain: FE-GNN
     value: 0.8693
     std: null
     metric: Accuracy
@@ -1017,9 +1052,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Random
+  - model: FE-GNN
     model_key: trans.conv+cna
-    model_plain: Random
+    model_plain: FE-GNN
     value: 0.8586
     std: 0.018
     metric: Accuracy
@@ -1028,9 +1063,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2412.04064'
     title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
     date: Dec 5, 2024
@@ -1050,9 +1085,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Random
+  - model: FE-GNN
     model_key: gat
-    model_plain: Random
+    model_plain: FE-GNN
     value: 0.856
     std: null
     metric: Accuracy
@@ -1142,9 +1177,9 @@ results:
     sort_value: 0.783
     sort_std: 0.006
     global_rank: 21
-    paper_rank: 86
-    rank_delta: 65
-    rank_delta_abs: 65
+    paper_rank: 89
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1209,8 +1244,8 @@ results:
     value_note: ''
     sort_value: 0.7453
     sort_std: 0.0121
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1250,12 +1285,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7426
+    at_pub_std: 0.0074
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -1277,8 +1313,8 @@ results:
     value_note: ''
     sort_value: 0.7426
     sort_std: 0.0074
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1344,8 +1380,8 @@ results:
     value_note: ''
     sort_value: 0.742
     sort_std: 0.0103
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1385,12 +1421,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7138
+    at_pub_std: 0.0106
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -1412,8 +1449,8 @@ results:
     value_note: ''
     sort_value: 0.7138
     sort_std: 0.0106
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1453,12 +1490,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7137
+    at_pub_std: 0.0101
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -1480,8 +1518,8 @@ results:
     value_note: ''
     sort_value: 0.7137
     sort_std: 0.0101
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1547,10 +1585,10 @@ results:
     value_note: ''
     sort_value: 0.7033
     sort_std: null
-    global_rank: 60
-    paper_rank: 146
-    rank_delta: 86
-    rank_delta_abs: 86
+    global_rank: 63
+    paper_rank: 150
+    rank_delta: 87
+    rank_delta_abs: 87
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1588,19 +1626,20 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.6829
-    at_pub_std: 0.0158
-    at_pub_source_arxiv: '2205.11172'
-    at_pub_source_title: How Powerful are Spectral Graph Neural Networks
-    at_pub_source_date_iso: '2022-05-23'
-    at_pub_source_date_label: ICML 2022
+    at_pub_value: 0.6853
+    at_pub_std: 0.0168
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.0024000000000000687
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -1615,12 +1654,12 @@ results:
     value_note: ''
     sort_value: 0.6853
     sort_std: 0.0168
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1684,10 +1723,10 @@ results:
     value_note: ''
     sort_value: 0.671
     sort_std: 0.029
-    global_rank: 91
-    paper_rank: 246
-    rank_delta: 155
-    rank_delta_abs: 155
+    global_rank: 94
+    paper_rank: 255
+    rank_delta: 161
+    rank_delta_abs: 161
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1726,12 +1765,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.6702
+    at_pub_std: 0.0177
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -1753,8 +1793,8 @@ results:
     value_note: ''
     sort_value: 0.6702
     sort_std: 0.0177
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1794,20 +1834,20 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.6048
-    at_pub_std: 0.021
-    at_pub_source_arxiv: '2211.11761'
-    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    at_pub_source_date_iso: '2022-11-21'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.6092
+    at_pub_std: 0.0145
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.0043999999999999595
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -1822,12 +1862,12 @@ results:
     value_note: ''
     sort_value: 0.6092
     sort_std: 0.0145
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1863,19 +1903,20 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.5928
+    at_pub_value: 0.5951
     at_pub_std: 0.0125
-    at_pub_source_arxiv: '2303.13750'
-    at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
-    at_pub_source_date_iso: '2023-03-24'
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
     at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.0022999999999999687
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -1890,12 +1931,12 @@ results:
     value_note: ''
     sort_value: 0.5951
     sort_std: 0.0125
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 161
+    paper_rank: 161
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1913,9 +1954,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -1947,9 +1988,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -1981,9 +2022,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -2072,10 +2113,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 27
-    paper_rank: 162
-    rank_delta: 135
-    rank_delta_abs: 135
+    global_rank: 33
+    paper_rank: 190
+    rank_delta: 157
+    rank_delta_abs: 157
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2141,8 +2182,8 @@ results:
     value_note: ''
     sort_value: 0.8995
     sort_std: 0.0095
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2209,10 +2250,79 @@ results:
     value_note: ''
     sort_value: 0.8976
     sort_std: 0.016
-    global_rank: 35
-    paper_rank: 81
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 41
+    paper_rank: 101
+    rank_delta: 60
+    rank_delta_abs: 60
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ChebNetII
+    model_key: chebnetii
+    model_plain: ChebNetII
+    value: 0.8871
+    std: 0.0093
+    paper_value: 0.8871
+    paper_std: 0.0093
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 10 random splits with 60/20/20 percent training/validation/testing
+      as described in Experimental Setting
+    date: Mar 12, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-12'
+    published_venue: WWW 2024
+    published_conference: WWW 2024
+    at_pub_value: 0.8871
+    at_pub_std: 0.0093
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-04-06'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.8932
+    true_std: 0.011
+    value_gap_source_arxiv: '2404.04559'
+    value_gap_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006099999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8932
+    sort_std: 0.011
+    global_rank: 57
+    paper_rank: 87
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2278,81 +2388,12 @@ results:
     value_note: ''
     sort_value: 0.8898
     sort_std: 0.0072
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: ChebNetII
-    model_key: chebnetii
-    model_plain: ChebNetII
-    value: 0.8871
-    std: 0.0093
-    paper_value: 0.8871
-    paper_std: 0.0093
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 10 random splits with 60/20/20 percent training/validation/testing
-      as described in Experimental Setting
-    date: Mar 12, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-12'
-    published_venue: WWW 2024
-    published_conference: WWW 2024
-    at_pub_value: 0.8851
-    at_pub_std: 0.015
-    at_pub_source_arxiv: '2310.10064'
-    at_pub_source_title: Shape-aware Graph Spectral Learning
-    at_pub_source_date_iso: '2023-10-16'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.0020000000000000018
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8871
-    true_std: 0.0093
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8871
-    sort_std: 0.0093
-    global_rank: 70
-    paper_rank: 70
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2389,18 +2430,19 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.867
-    at_pub_std: 0.0103
-    at_pub_source_arxiv: '2112.13507'
-    at_pub_source_title: Block Modeling-Guided Graph Convolutional Neural Networks
-    at_pub_source_date_iso: '2021-12-27'
-    at_pub_source_date_label: AAAI 2021
+    at_pub_value: 0.8854
+    at_pub_std: 0.0067
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.018399999999999972
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -2416,15 +2458,15 @@ results:
     value_note: ''
     sort_value: 0.8854
     sort_std: 0.0067
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Block Modeling-Guided Graph Convolutional Neural Networks
-    comparison_source_arxiv: '2112.13507'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: ChebNet
@@ -2484,10 +2526,10 @@ results:
     value_note: ''
     sort_value: 0.8832
     sort_std: 0.02
-    global_rank: 90
-    paper_rank: 149
-    rank_delta: 59
-    rank_delta_abs: 59
+    global_rank: 112
+    paper_rank: 177
+    rank_delta: 65
+    rank_delta_abs: 65
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2526,22 +2568,22 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.8588
-    at_pub_std: 0.0361
-    at_pub_source_arxiv: '2302.12357'
-    at_pub_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
-      Graphs'
-    at_pub_source_date_iso: '2023-02-23'
-    at_pub_source_date_label: WWW 2023
+    at_pub_value: 0.8683
+    at_pub_std: 0.0128
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.009499999999999953
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
     true_value: 0.8797
     true_std: null
@@ -2554,10 +2596,10 @@ results:
     value_note: ''
     sort_value: 0.8797
     sort_std: null
-    global_rank: 112
-    paper_rank: 185
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 138
+    paper_rank: 214
+    rank_delta: 76
+    rank_delta_abs: 76
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2596,12 +2638,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.8777
+    at_pub_std: 0.0067
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -2623,8 +2666,8 @@ results:
     value_note: ''
     sort_value: 0.8777
     sort_std: 0.0067
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2665,20 +2708,20 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.8672
-    at_pub_std: 0.0137
-    at_pub_source_arxiv: '2211.11761'
-    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    at_pub_source_date_iso: '2022-11-21'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.877
+    at_pub_std: 0.0069
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.009800000000000031
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -2693,12 +2736,12 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: 0.0069
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2735,12 +2778,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.87
+    at_pub_std: 0.0155
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -2762,8 +2806,8 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: 0.0155
-    global_rank: 174
-    paper_rank: 174
+    global_rank: 202
+    paper_rank: 202
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2804,12 +2848,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.8535
+    at_pub_std: 0.0098
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -2831,8 +2876,8 @@ results:
     value_note: ''
     sort_value: 0.8535
     sort_std: 0.0098
-    global_rank: 268
-    paper_rank: 268
+    global_rank: 301
+    paper_rank: 301
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2854,9 +2899,42 @@ results:
 - &id005
   dataset: Penn94
   rows:
-  - model: NewtonNet
+  - model: GloGNN
+    model_key: chebnet2d
+    model_plain: GloGNN
+    value: 0.8762
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2404.04559'
+    title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
+    date: Apr 6, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-06'
+    venue: null
+    codebase_url: https://github.com/jianhao2016/GPRGNN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8762
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GloGNN
     model_key: dc-gnn
-    model_plain: NewtonNet
+    model_plain: GloGNN
     value: 0.8669
     std: 0.0022
     metric: Accuracy
@@ -2879,17 +2957,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.8669
     sort_std: 0.0022
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: NewtonNet
+  - model: GloGNN
     model_key: m2m-gnn
-    model_plain: NewtonNet
+    model_plain: GloGNN
     value: 0.8594
     std: 0.004
     metric: Accuracy
@@ -2913,7 +2991,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.8594
     sort_std: 0.004
     comparison_type: global_top
@@ -2921,11 +2999,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: NewtonNet
-    model_key: glognn
-    model_plain: NewtonNet
-    value: 0.8574
-    std: 0.0042
+  - model: ChebNetII
+    model_key: chebnetii
+    model_plain: ChebNetII
+    value: 0.8486
+    std: 0.0033
+    paper_value: 0.8486
+    paper_std: 0.0033
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -2935,21 +3015,54 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2312.14438'
-    title: 'PC-Conv: Unifying Homophily and Heterophily with Two-fold Filtering'
-    date: Dec 22, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-22'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/uestclbh/PC-Conv
-    uses_external_data: false
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8574
-    sort_std: 0.0042
-    comparison_type: global_top
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Penn94
+    date: Mar 12, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-12'
+    published_venue: WWW 2024
+    published_conference: WWW 2024
+    at_pub_value: 0.8486
+    at_pub_std: 0.0033
+    at_pub_source_arxiv: '2202.03580'
+    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
+      Revisited
+    at_pub_source_date_iso: '2022-02-04'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-04-06'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.8522
+    true_std: 0.003
+    value_gap_source_arxiv: '2404.04559'
+    value_gap_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0035999999999999366
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8522
+    sort_std: 0.003
+    global_rank: 5
+    paper_rank: 8
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -3011,77 +3124,8 @@ results:
     value_note: ''
     sort_value: 0.8497
     sort_std: 0.0036
-    global_rank: 5
-    paper_rank: 5
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: ChebNetII
-    model_key: chebnetii
-    model_plain: ChebNetII
-    value: 0.8486
-    std: 0.0033
-    paper_value: 0.8486
-    paper_std: 0.0033
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Penn94
-    date: Mar 12, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-12'
-    published_venue: WWW 2024
-    published_conference: WWW 2024
-    at_pub_value: 0.8486
-    at_pub_std: 0.0033
-    at_pub_source_arxiv: '2202.03580'
-    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
-      Revisited
-    at_pub_source_date_iso: '2022-02-04'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-03-12'
-    value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8486
-    true_std: 0.0033
-    value_gap_source_arxiv: '2403.07954'
-    value_gap_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8486
-    sort_std: 0.0033
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3149,8 +3193,8 @@ results:
     value_note: ''
     sort_value: 0.8485
     sort_std: 0.0039
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3218,8 +3262,8 @@ results:
     value_note: ''
     sort_value: 0.8354
     sort_std: 0.0032
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3287,8 +3331,8 @@ results:
     value_note: ''
     sort_value: 0.8326
     sort_std: 0.0029
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3354,8 +3398,8 @@ results:
     value_note: ''
     sort_value: 0.8323
     sort_std: 0.002
-    global_rank: 22
-    paper_rank: 29
+    global_rank: 25
+    paper_rank: 32
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -3421,8 +3465,8 @@ results:
     value_note: ''
     sort_value: 0.8263
     sort_std: 0.003
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3489,8 +3533,8 @@ results:
     value_note: ''
     sort_value: 0.8213
     sort_std: 0.0028
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3557,8 +3601,8 @@ results:
     value_note: ''
     sort_value: 0.8144
     sort_std: 0.0015
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3580,9 +3624,9 @@ results:
 - &id004
   dataset: Squirrel
   rows:
-  - model: LMGC
+  - model: FE-GNN
     model_key: ibg-nn
-    model_plain: LMGC
+    model_plain: FE-GNN
     value: 0.7763
     std: 0.0179
     metric: Accuracy
@@ -3613,9 +3657,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LMGC
+  - model: FE-GNN
     model_key: trans.conv+cna
-    model_plain: LMGC
+    model_plain: FE-GNN
     value: 0.7747
     std: 0.0128
     metric: Accuracy
@@ -3624,9 +3668,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2412.04064'
     title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
     date: Dec 5, 2024
@@ -3646,9 +3690,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LMGC
+  - model: FE-GNN
     model_key: dhgnn
-    model_plain: LMGC
+    model_plain: FE-GNN
     value: 0.7684
     std: 0.0161
     metric: Accuracy
@@ -3709,21 +3753,21 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.3965
-    at_pub_std: 0.0281
-    at_pub_source_arxiv: '2211.14065'
-    at_pub_source_title: 'Beyond Smoothing: Unsupervised Graph Representation Learning
-      with Edge Heterophily Discriminating'
-    at_pub_source_date_iso: '2022-11-25'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_value: 0.5043
+    at_pub_std: 0.0189
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2025-04-25'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.10779999999999995
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.748
@@ -3738,15 +3782,14 @@ results:
     sort_value: 0.748
     sort_std: 0.005
     global_rank: 8
-    paper_rank: 94
-    rank_delta: 86
-    rank_delta_abs: 86
+    paper_rank: 97
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'Beyond Smoothing: Unsupervised Graph Representation
-      Learning with Edge Heterophily Discriminating'
-    comparison_source_arxiv: '2211.14065'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: OptBasisGNN
@@ -3779,12 +3822,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.6362
+    at_pub_std: 0.0076
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -3806,8 +3850,8 @@ results:
     value_note: ''
     sort_value: 0.6362
     sort_std: 0.0076
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3874,8 +3918,8 @@ results:
     value_note: ''
     sort_value: 0.6331
     sort_std: 0.0076
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3941,8 +3985,8 @@ results:
     value_note: ''
     sort_value: 0.6067
     sort_std: null
-    global_rank: 46
-    paper_rank: 120
+    global_rank: 49
+    paper_rank: 123
     rank_delta: 74
     rank_delta_abs: 74
     rank_delta_direction: worse
@@ -3982,12 +4026,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.5791
+    at_pub_std: 0.0089
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -4009,8 +4054,8 @@ results:
     value_note: ''
     sort_value: 0.5791
     sort_std: 0.0089
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4050,12 +4095,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.5772
+    at_pub_std: 0.0059
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -4077,8 +4123,8 @@ results:
     value_note: ''
     sort_value: 0.5772
     sort_std: 0.0059
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4145,8 +4191,8 @@ results:
     value_note: ''
     sort_value: 0.5738
     sort_std: 0.0125
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4186,12 +4232,13 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.5271
+    at_pub_std: 0.0085
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
     gap_vs_at_pub: null
@@ -4213,8 +4260,8 @@ results:
     value_note: ''
     sort_value: 0.5271
     sort_std: 0.0085
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4282,8 +4329,8 @@ results:
     value_note: ''
     sort_value: 0.526
     sort_std: 0.017
-    global_rank: 88
-    paper_rank: 92
+    global_rank: 91
+    paper_rank: 95
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -4351,10 +4398,10 @@ results:
     value_note: ''
     sort_value: 0.523
     sort_std: 0.023
-    global_rank: 89
-    paper_rank: 278
-    rank_delta: 189
-    rank_delta_abs: 189
+    global_rank: 92
+    paper_rank: 290
+    rank_delta: 198
+    rank_delta_abs: 198
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4393,19 +4440,19 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.4016
-    at_pub_std: 0.0212
-    at_pub_source_arxiv: '2211.11761'
-    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    at_pub_source_date_iso: '2022-11-21'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.4559
+    at_pub_std: 0.014
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-12'
     value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.054300000000000015
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -4421,16 +4468,15 @@ results:
     value_note: ''
     sort_value: 0.4559
     sort_std: 0.014
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    comparison_source_arxiv: '2211.11761'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: ChebNet
@@ -4463,19 +4509,20 @@ results:
     date_iso: '2024-03-12'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.4055
+    at_pub_value: 0.4081
     at_pub_std: 0.0042
-    at_pub_source_arxiv: '2303.13750'
-    at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
-    at_pub_source_date_iso: '2023-03-24'
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
     at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-07-26'
     value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.002599999999999991
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
@@ -4489,8 +4536,8 @@ results:
     value_note: ''
     sort_value: 0.4386
     sort_std: 0.0164
-    global_rank: 134
-    paper_rank: 167
+    global_rank: 137
+    paper_rank: 170
     rank_delta: 33
     rank_delta_abs: 33
     rank_delta_direction: worse
@@ -4545,5 +4592,6 @@ datasets_by_scope:
     - dataset: Penn94
       dataset_slug: penn94
 single_proposed_model: AdaptKry
+main_figure: /figures/2403.07954/main_figure.jpegoptim.jpg
 ---
 

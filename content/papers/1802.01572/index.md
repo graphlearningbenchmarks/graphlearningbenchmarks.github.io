@@ -37,8 +37,8 @@ paper_type: method
 proposed_models:
 - MotifNet-m
 - MotifNet-d
-mrr: 0.0012
-adjusted_mrr: 0.0004
+mrr: 0.001
+adjusted_mrr: 0.0003
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -55,9 +55,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -89,9 +89,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -123,9 +123,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -214,10 +214,10 @@ results:
     value_note: ''
     sort_value: 0.8832
     sort_std: 0.02
-    global_rank: 90
-    paper_rank: 840
-    rank_delta: 750
-    rank_delta_abs: 750
+    global_rank: 112
+    paper_rank: 984
+    rank_delta: 872
+    rank_delta_abs: 872
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -283,8 +283,8 @@ results:
     value_note: ''
     sort_value: 0.63
     sort_std: null
-    global_rank: 838
-    paper_rank: 838
+    global_rank: 982
+    paper_rank: 982
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -351,8 +351,8 @@ results:
     value_note: ''
     sort_value: 0.63
     sort_std: null
-    global_rank: 839
-    paper_rank: 839
+    global_rank: 983
+    paper_rank: 983
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -384,5 +384,6 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
+main_figure: /figures/1802.01572/main_figure.jpegoptim.jpg
 ---
 

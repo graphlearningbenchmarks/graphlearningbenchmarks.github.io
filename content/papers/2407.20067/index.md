@@ -49,8 +49,8 @@ proposed_models:
 - xAI-DropNode
 - DropNode (GCN Sufficiency)
 - xAI-DropNode (GCN)
-mrr: 0.0015
-adjusted_mrr: 0.001
+mrr: 0.0013
+adjusted_mrr: 0.0009
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -67,9 +67,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -101,9 +101,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -135,9 +135,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -589,7 +589,7 @@ results:
     today_delta_significant: false
     sort_value: 0.901
     sort_std: 0.015
-    global_rank: 27
+    global_rank: 33
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -651,7 +651,7 @@ results:
     today_delta_significant: false
     sort_value: 0.892
     sort_std: 0.003
-    global_rank: 49
+    global_rank: 62
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -695,16 +695,15 @@ results:
     date_iso: '2024-07-29'
     published_venue: LoG 2024
     published_conference: LoG 2024
-    at_pub_value: 0.874
+    at_pub_value: 0.89
     at_pub_std: null
-    at_pub_source_arxiv: '2106.02892'
-    at_pub_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
-    at_pub_source_date_iso: '2021-06-05'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-06-05'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.05800000000000005
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-08-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.04200000000000004
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -712,27 +711,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.874
+    true_value: 0.89
     true_std: null
-    value_gap_source_arxiv: '2106.02892'
-    value_gap_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
+    value_gap_source_arxiv: '2008.09864'
+    value_gap_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.05800000000000005
+    value_gap: 0.04200000000000004
     has_value_note: false
     value_note: ''
-    sort_value: 0.874
+    sort_value: 0.89
     sort_std: null
-    global_rank: 146
+    global_rank: 70
     paper_rank: 14
-    rank_delta: -132
-    rank_delta_abs: 132
+    rank_delta: -56
+    rank_delta_abs: 56
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
-    comparison_source_arxiv: '2106.02892'
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
     is_best: false
     is_std_outlier: false
   - model: xAI-DropNode
@@ -783,7 +782,7 @@ results:
     today_delta_significant: false
     sort_value: 0.828
     sort_std: 0.005
-    global_rank: 486
+    global_rank: 560
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -827,21 +826,22 @@ results:
     date_iso: '2024-07-29'
     published_venue: LoG 2024
     published_conference: LoG 2024
-    at_pub_value: null
+    at_pub_value: 0.276
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2211.15335'
+    at_pub_source_title: 'You Can Have Better Graph Neural Networks by Not Training
+      Weights at All: Finding Untrained GNNs Tickets'
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: LoG 2022
     value_gap_source_date_iso: '2026-05-30'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.661
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.808
     true_std: 0.0055
@@ -853,15 +853,16 @@ results:
     value_note: ''
     sort_value: 0.808
     sort_std: 0.0055
-    global_rank: 642
+    global_rank: 747
     paper_rank: 12
-    rank_delta: -630
-    rank_delta_abs: 630
+    rank_delta: -735
+    rank_delta_abs: 735
     rank_delta_direction: better
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: improved
+    comparison_source_title: 'You Can Have Better Graph Neural Networks by Not Training
+      Weights at All: Finding Untrained GNNs Tickets'
+    comparison_source_arxiv: '2211.15335'
     is_best: false
     is_std_outlier: false
   - model: BBGDC
@@ -912,7 +913,7 @@ results:
     today_delta_significant: false
     sort_value: 0.742
     sort_std: 0.003
-    global_rank: 759
+    global_rank: 896
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -948,5 +949,6 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
+main_figure: /figures/2407.20067/main_figure.jpegoptim.jpg
 ---
 

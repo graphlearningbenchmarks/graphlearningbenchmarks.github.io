@@ -54,8 +54,8 @@ paper_type: method
 proposed_models:
 - TFGW ADJ (L=2)
 - TFGW SP (L=2)
-mrr: 0.0526
-adjusted_mrr: 0.0175
+mrr: 0.0833
+adjusted_mrr: 0.0278
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -72,107 +72,104 @@ results:
 - &id001
   dataset: ENZYMES
   rows:
-  - model: 3WLGNN
-    model_key: msa-aud
-    model_plain: 3WLGNN
-    value: 0.892
-    std: null
+  - model: WL
+    model_key: bgnn(m)-cs
+    model_plain: WL
+    value: 0.8068
+    std: 0.0149
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.892
-    sort_std: null
+    sort_value: 0.8068
+    sort_std: 0.0149
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-ad
-    model_plain: 3WLGNN
-    value: 0.89
-    std: null
+  - model: WL
+    model_key: bgnn
+    model_plain: WL
+    value: 0.7936
+    std: 0.0281
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.89
-    sort_std: null
+    sort_value: 0.7936
+    sort_std: 0.0281
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-au
-    model_plain: 3WLGNN
-    value: 0.854
-    std: null
+  - model: WL
+    model_key: bgnn(m)-sc
+    model_plain: WL
+    value: 0.7889
+    std: 0.0079
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.854
-    sort_std: null
+    sort_value: 0.7889
+    sort_std: 0.0079
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -231,10 +228,10 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.028
-    global_rank: 14
-    paper_rank: 94
-    rank_delta: 80
-    rank_delta_abs: 80
+    global_rank: 8
+    paper_rank: 91
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -299,8 +296,8 @@ results:
     value_note: ''
     sort_value: 0.751
     sort_std: 0.05
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -308,7 +305,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: TFGW ADJ
     model_key: tfgw adj (l=2)
@@ -367,8 +364,8 @@ results:
     value_note: ''
     sort_value: 0.738
     sort_std: 0.046
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -434,8 +431,8 @@ results:
     value_note: ''
     sort_value: 0.7325
     sort_std: 0.0087
-    global_rank: 23
-    paper_rank: 29
+    global_rank: 16
+    paper_rank: 22
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -502,8 +499,8 @@ results:
     value_note: ''
     sort_value: 0.722
     sort_std: 0.04
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -570,8 +567,8 @@ results:
     value_note: ''
     sort_value: 0.705
     sort_std: 0.062
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -639,8 +636,8 @@ results:
     value_note: ''
     sort_value: 0.695
     sort_std: 0.032
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -707,8 +704,8 @@ results:
     value_note: ''
     sort_value: 0.675
     sort_std: 0.0642
-    global_rank: 51
-    paper_rank: 63
+    global_rank: 44
+    paper_rank: 56
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -775,8 +772,8 @@ results:
     value_note: ''
     sort_value: 0.673
     sort_std: 0.043
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -844,8 +841,8 @@ results:
     value_note: ''
     sort_value: 0.6253
     sort_std: null
-    global_rank: 91
-    paper_rank: 105
+    global_rank: 88
+    paper_rank: 102
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -912,8 +909,8 @@ results:
     value_note: ''
     sort_value: 0.6
     sort_std: 0.028
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1013,5 +1010,6 @@ datasets_by_scope:
     datasets:
     - dataset: ENZYMES
       dataset_slug: enzymes
+main_figure: /figures/2205.15733/main_figure.jpegoptim.jpg
 ---
 

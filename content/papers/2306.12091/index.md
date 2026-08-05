@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -107,9 +107,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -141,9 +141,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -233,9 +233,9 @@ results:
     sort_value: 0.9669
     sort_std: 0.0014
     global_rank: 5
-    paper_rank: 432
-    rank_delta: 427
-    rank_delta_abs: 427
+    paper_rank: 438
+    rank_delta: 433
+    rank_delta_abs: 433
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -301,10 +301,10 @@ results:
     value_note: ''
     sort_value: 0.9573
     sort_std: 0.0012
-    global_rank: 25
-    paper_rank: 362
-    rank_delta: 337
-    rank_delta_abs: 337
+    global_rank: 27
+    paper_rank: 366
+    rank_delta: 339
+    rank_delta_abs: 339
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -371,10 +371,10 @@ results:
     value_note: ''
     sort_value: 0.943
     sort_std: 0.002
-    global_rank: 104
-    paper_rank: 382
-    rank_delta: 278
-    rank_delta_abs: 278
+    global_rank: 110
+    paper_rank: 387
+    rank_delta: 277
+    rank_delta_abs: 277
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -441,10 +441,10 @@ results:
     value_note: ''
     sort_value: 0.9268
     sort_std: 0.0058
-    global_rank: 255
-    paper_rank: 346
-    rank_delta: 91
-    rank_delta_abs: 91
+    global_rank: 262
+    paper_rank: 352
+    rank_delta: 90
+    rank_delta_abs: 90
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -501,7 +501,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9222
     sort_std: 0.0042
-    global_rank: 311
+    global_rank: 318
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -563,7 +563,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9158
     sort_std: null
-    global_rank: 353
+    global_rank: 357
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -589,9 +589,9 @@ results:
 - &id002
   dataset: Coauthor-Physics
   rows:
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: geomancer
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9878
     std: 0.0012
     metric: Accuracy
@@ -623,9 +623,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: lgd
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9855
     std: 0.0012
     metric: Accuracy
@@ -657,9 +657,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: msh-gnn
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9837
     std: 0.0008
     metric: Accuracy
@@ -748,9 +748,9 @@ results:
     sort_value: 0.9732
     sort_std: 0.0006
     global_rank: 19
-    paper_rank: 228
-    rank_delta: 209
-    rank_delta_abs: 209
+    paper_rank: 232
+    rank_delta: 213
+    rank_delta_abs: 213
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -817,9 +817,9 @@ results:
     sort_value: 0.9654
     sort_std: 0.0007
     global_rank: 56
-    paper_rank: 186
-    rank_delta: 130
-    rank_delta_abs: 130
+    paper_rank: 190
+    rank_delta: 134
+    rank_delta_abs: 134
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -887,9 +887,9 @@ results:
     sort_value: 0.9597
     sort_std: 0.0011
     global_rank: 81
-    paper_rank: 184
-    rank_delta: 103
-    rank_delta_abs: 103
+    paper_rank: 188
+    rank_delta: 107
+    rank_delta_abs: 107
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -946,7 +946,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9445
     sort_std: 0.001
-    global_rank: 156
+    global_rank: 160
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1018,8 +1018,8 @@ results:
     value_note: ''
     sort_value: 0.9325
     sort_std: 0.0082
-    global_rank: 194
-    paper_rank: 206
+    global_rank: 198
+    paper_rank: 210
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -1077,7 +1077,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9323
     sort_std: null
-    global_rank: 196
+    global_rank: 200
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1116,5 +1116,6 @@ datasets_by_scope:
       dataset_slug: amazon-photo
     - dataset: Coauthor-Physics
       dataset_slug: coauthor-physics
+main_figure: /figures/2306.12091/main_figure.jpegoptim.jpg
 ---
 

@@ -419,5 +419,6 @@ datasets_by_scope:
     datasets:
     - dataset: WN18
       dataset_slug: wn18
+main_figure: /figures/1606.06357/main_figure.jpegoptim.jpg
 ---
 

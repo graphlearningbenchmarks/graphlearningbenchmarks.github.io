@@ -41,7 +41,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - ChemBERTa 10M
-mrr: 0.0036
+mrr: 0.0037
 adjusted_mrr: 0.0012
 mrr_dataset_count: 1
 benchmark_categories:
@@ -59,9 +59,42 @@ results:
 - &id001
   dataset: BBBP
   rows:
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
+    model_key: magprompt+
+    model_plain: MAGPrompt+
+    value: 0.9432
+    std: 0.0238
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-05'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9432
+    sort_std: 0.0238
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MAGPrompt+
     model_key: cams-llama
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -85,7 +118,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.942
     sort_std: null
     comparison_type: global_top
@@ -93,9 +126,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: se(3)-i mpph
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -120,42 +153,9 @@ results:
     feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
       homology
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.94
     sort_std: 0.021
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: UnifiedMolPretrain
-    model_key: masking node + supervised
-    model_plain: UnifiedMolPretrain
-    value: 0.9343
-    std: 0.025
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2207.06010'
-    title: Does GNN Pretraining Help Molecular Representation?
-    date: Jul 13, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-13'
-    venue: Neural Information Processing Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9343
-    sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -218,16 +218,16 @@ results:
     value_note: ''
     sort_value: 0.913
     sort_std: 0.026
-    global_rank: 18
-    paper_rank: 124
-    rank_delta: 106
-    rank_delta_abs: 106
+    global_rank: 25
+    paper_rank: 116
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: rf
     model_key: rf
@@ -285,10 +285,10 @@ results:
     value_note: ''
     sort_value: 0.725
     sort_std: 0.006
-    global_rank: 90
-    paper_rank: 200
-    rank_delta: 110
-    rank_delta_abs: 110
+    global_rank: 86
+    paper_rank: 190
+    rank_delta: 104
+    rank_delta_abs: 104
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -352,10 +352,10 @@ results:
     value_note: ''
     sort_value: 0.723
     sort_std: 0.0
-    global_rank: 96
-    paper_rank: 140
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 92
+    paper_rank: 131
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -420,8 +420,8 @@ results:
     value_note: ''
     sort_value: 0.643
     sort_std: null
-    global_rank: 281
-    paper_rank: 281
+    global_rank: 271
+    paper_rank: 271
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -454,5 +454,6 @@ datasets_by_scope:
     - dataset: BBBP
       dataset_slug: bbbp
 single_proposed_model: ChemBERTa 10M
+main_figure: /figures/2010.09885/main_figure.jpegoptim.jpg
 ---
 

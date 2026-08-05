@@ -55,8 +55,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - graph2vec
-mrr: 0.003
-adjusted_mrr: 0.001
+mrr: 0.0028
+adjusted_mrr: 0.0009
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -73,9 +73,9 @@ results:
 - &id001
   dataset: PROTEINS
   rows:
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: gmn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8225
     std: null
     metric: Accuracy
@@ -106,9 +106,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: ci-gnn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -140,9 +140,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: diffpool+gpl
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -233,10 +233,10 @@ results:
     value_note: ''
     sort_value: 0.75
     sort_std: 0.031
-    global_rank: 235
-    paper_rank: 349
-    rank_delta: 114
-    rank_delta_abs: 114
+    global_rank: 258
+    paper_rank: 379
+    rank_delta: 121
+    rank_delta_abs: 121
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -302,8 +302,8 @@ results:
     value_note: ''
     sort_value: 0.733
     sort_std: 0.0205
-    global_rank: 331
-    paper_rank: 331
+    global_rank: 361
+    paper_rank: 361
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -371,8 +371,8 @@ results:
     value_note: ''
     sort_value: 0.733
     sort_std: 0.0082
-    global_rank: 334
-    paper_rank: 334
+    global_rank: 364
+    paper_rank: 364
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -440,8 +440,8 @@ results:
     value_note: ''
     sort_value: 0.5749
     sort_std: 0.0357
-    global_rank: 484
-    paper_rank: 484
+    global_rank: 519
+    paper_rank: 519
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -509,8 +509,8 @@ results:
     value_note: ''
     sort_value: 0.5303
     sort_std: 0.0555
-    global_rank: 487
-    paper_rank: 487
+    global_rank: 522
+    paper_rank: 522
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -543,5 +543,6 @@ datasets_by_scope:
     - dataset: PROTEINS
       dataset_slug: proteins
 single_proposed_model: graph2vec
+main_figure: /figures/1707.05005/main_figure.jpegoptim.jpg
 ---
 

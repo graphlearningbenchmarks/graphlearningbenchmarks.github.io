@@ -1513,5 +1513,6 @@ datasets_by_scope:
     - dataset: PCQM4Mv2
       dataset_slug: pcqm4mv2
 single_proposed_model: DeMol
+main_figure: /figures/2603.00568/main_figure.jpegoptim.jpg
 ---
 

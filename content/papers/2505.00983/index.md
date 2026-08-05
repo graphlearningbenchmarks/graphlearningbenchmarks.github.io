@@ -70,21 +70,21 @@ proposed_models:
 - Dir-GNN+EDEN
 - HoloNet+EDEN
 - EDEN
-mrr: 0.0385
-adjusted_mrr: 0.0128
+mrr: 0.027
+adjusted_mrr: 0.009
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
-- Heterophilic Graphs
+- Heterophily Benchmark
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 1
   total: 12
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
   evaluated: 1
-  total: 13
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -886,9 +886,9 @@ results:
 - &id001
   dataset: WikiCS
   rows:
-  - model: GraphAny
+  - model: GPM
     model_key: gcn
-    model_plain: GraphAny
+    model_plain: GPM
     value: 0.9302
     std: 0.0011
     metric: Accuracy
@@ -919,69 +919,71 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: graphssr
-    model_plain: GraphAny
-    value: 0.8793
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
-    venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8793
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphAny
-    model_key: graph-r1
-    model_plain: GraphAny
-    value: 0.8689
-    std: null
+  - model: GPM
+    model_key: rse + rgcn (70b)
+    model_plain: GPM
+    value: 0.8852
+    std: 0.0019
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
     venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8852
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPM
+    model_key: rse + sehgnn (70b)
+    model_plain: GPM
+    value: 0.8796
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8689
-    sort_std: null
+    sort_value: 0.8796
+    sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1044,8 +1046,8 @@ results:
     value_note: ''
     sort_value: 0.814
     sort_std: 0.003
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1068,7 +1070,7 @@ results_grouped:
 - benchmark: Classic
   datasets:
   - *id001
-- benchmark: Heterophilic Graphs
+- benchmark: Heterophily Benchmark
   datasets:
   - *id002
 datasets_by_scope:
@@ -1080,10 +1082,11 @@ datasets_by_scope:
     datasets:
     - dataset: WikiCS
       dataset_slug: wikics
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Tolokers
       dataset_slug: tolokers
+main_figure: /figures/2505.00983/main_figure.jpegoptim.jpg
 ---
 

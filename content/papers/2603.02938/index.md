@@ -74,8 +74,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphSSR
-mrr: 0.2506
-adjusted_mrr: 0.1671
+mrr: 0.1255
+adjusted_mrr: 0.0837
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -92,9 +92,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -126,9 +126,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -160,9 +160,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -252,10 +252,10 @@ results:
     value_note: ''
     sort_value: 0.8875
     sort_std: null
-    global_rank: 69
-    paper_rank: 865
-    rank_delta: 796
-    rank_delta_abs: 796
+    global_rank: 87
+    paper_rank: 1020
+    rank_delta: 933
+    rank_delta_abs: 933
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -322,10 +322,10 @@ results:
     value_note: ''
     sort_value: 0.8392
     sort_std: null
-    global_rank: 355
-    paper_rank: 884
-    rank_delta: 529
-    rank_delta_abs: 529
+    global_rank: 412
+    paper_rank: 1041
+    rank_delta: 629
+    rank_delta_abs: 629
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -392,10 +392,10 @@ results:
     value_note: ''
     sort_value: 0.7941
     sort_std: null
-    global_rank: 686
-    paper_rank: 901
-    rank_delta: 215
-    rank_delta_abs: 215
+    global_rank: 795
+    paper_rank: 1060
+    rank_delta: 265
+    rank_delta_abs: 265
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -461,8 +461,8 @@ results:
     value_note: ''
     sort_value: 0.7241
     sort_std: null
-    global_rank: 773
-    paper_rank: 773
+    global_rank: 911
+    paper_rank: 911
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -529,8 +529,8 @@ results:
     value_note: ''
     sort_value: 0.7153
     sort_std: null
-    global_rank: 783
-    paper_rank: 783
+    global_rank: 922
+    paper_rank: 922
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -597,8 +597,8 @@ results:
     value_note: ''
     sort_value: 0.7081
     sort_std: null
-    global_rank: 788
-    paper_rank: 788
+    global_rank: 927
+    paper_rank: 927
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -665,8 +665,8 @@ results:
     value_note: ''
     sort_value: 0.6959
     sort_std: null
-    global_rank: 797
-    paper_rank: 797
+    global_rank: 938
+    paper_rank: 938
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -733,8 +733,8 @@ results:
     value_note: ''
     sort_value: 0.6953
     sort_std: null
-    global_rank: 798
-    paper_rank: 798
+    global_rank: 939
+    paper_rank: 939
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -801,8 +801,8 @@ results:
     value_note: ''
     sort_value: 0.6941
     sort_std: null
-    global_rank: 799
-    paper_rank: 799
+    global_rank: 940
+    paper_rank: 940
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -869,8 +869,8 @@ results:
     value_note: ''
     sort_value: 0.693
     sort_std: null
-    global_rank: 801
-    paper_rank: 801
+    global_rank: 942
+    paper_rank: 942
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -937,8 +937,8 @@ results:
     value_note: ''
     sort_value: 0.688
     sort_std: null
-    global_rank: 805
-    paper_rank: 805
+    global_rank: 947
+    paper_rank: 947
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1005,8 +1005,8 @@ results:
     value_note: ''
     sort_value: 0.6515
     sort_std: null
-    global_rank: 832
-    paper_rank: 832
+    global_rank: 975
+    paper_rank: 975
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1074,8 +1074,8 @@ results:
     value_note: ''
     sort_value: 0.6421
     sort_std: null
-    global_rank: 837
-    paper_rank: 837
+    global_rank: 981
+    paper_rank: 981
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1098,9 +1098,9 @@ results:
 - &id002
   dataset: WikiCS
   rows:
-  - model: GraphAny
+  - model: GPM
     model_key: gcn
-    model_plain: GraphAny
+    model_plain: GPM
     value: 0.9302
     std: 0.0011
     metric: Accuracy
@@ -1130,6 +1130,76 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GPM
+    model_key: rse + rgcn (70b)
+    model_plain: GPM
+    value: 0.8852
+    std: 0.0019
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8852
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPM
+    model_key: rse + sehgnn (70b)
+    model_plain: GPM
+    value: 0.8796
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8796
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GraphSSR
     model_key: graphssr
@@ -1188,8 +1258,8 @@ results:
     value_note: ''
     sort_value: 0.8793
     sort_std: null
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1256,8 +1326,8 @@ results:
     value_note: ''
     sort_value: 0.8689
     sort_std: null
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1325,8 +1395,8 @@ results:
     value_note: ''
     sort_value: 0.8093
     sort_std: null
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1394,8 +1464,8 @@ results:
     value_note: ''
     sort_value: 0.8062
     sort_std: null
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1464,10 +1534,10 @@ results:
     value_note: ''
     sort_value: 0.7998
     sort_std: 0.0121
-    global_rank: 51
-    paper_rank: 246
-    rank_delta: 195
-    rank_delta_abs: 195
+    global_rank: 62
+    paper_rank: 265
+    rank_delta: 203
+    rank_delta_abs: 203
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1534,10 +1604,10 @@ results:
     value_note: ''
     sort_value: 0.7882
     sort_std: null
-    global_rank: 82
-    paper_rank: 256
-    rank_delta: 174
-    rank_delta_abs: 174
+    global_rank: 93
+    paper_rank: 275
+    rank_delta: 182
+    rank_delta_abs: 182
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1602,8 +1672,8 @@ results:
     value_note: ''
     sort_value: 0.7856
     sort_std: null
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1671,10 +1741,10 @@ results:
     value_note: ''
     sort_value: 0.7855
     sort_std: 0.0037
-    global_rank: 97
-    paper_rank: 257
-    rank_delta: 160
-    rank_delta_abs: 160
+    global_rank: 108
+    paper_rank: 276
+    rank_delta: 168
+    rank_delta_abs: 168
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1740,8 +1810,8 @@ results:
     value_note: ''
     sort_value: 0.7696
     sort_std: null
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 156
+    paper_rank: 156
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1808,8 +1878,8 @@ results:
     value_note: ''
     sort_value: 0.7538
     sort_std: null
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1876,8 +1946,8 @@ results:
     value_note: ''
     sort_value: 0.7526
     sort_std: null
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 178
+    paper_rank: 178
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1913,5 +1983,6 @@ datasets_by_scope:
     - dataset: WikiCS
       dataset_slug: wikics
 single_proposed_model: GraphSSR
+main_figure: /figures/2603.02938/main_figure.jpegoptim.jpg
 ---
 

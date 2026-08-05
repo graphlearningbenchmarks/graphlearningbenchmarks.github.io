@@ -53,9 +53,9 @@ results:
 - &id002
   dataset: ogbn-papers100M
   rows:
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: sgc
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.791
     std: null
     metric: Accuracy
@@ -86,9 +86,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: gamlp
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -119,9 +119,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: glem-gnn
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -278,9 +278,9 @@ results:
     sort_value: 0.6598
     sort_std: 0.0023
     global_rank: 37
-    paper_rank: 55
-    rank_delta: 18
-    rank_delta_abs: 18
+    paper_rank: 56
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -413,8 +413,8 @@ results:
     value_note: ''
     sort_value: 0.645
     sort_std: null
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -436,9 +436,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -470,9 +470,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -503,9 +503,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -594,10 +594,10 @@ results:
     value_note: ''
     sort_value: 0.8722
     sort_std: 0.0005
-    global_rank: 8
-    paper_rank: 251
-    rank_delta: 243
-    rank_delta_abs: 243
+    global_rank: 9
+    paper_rank: 271
+    rank_delta: 262
+    rank_delta_abs: 262
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -663,10 +663,10 @@ results:
     value_note: ''
     sort_value: 0.8287
     sort_std: null
-    global_rank: 72
-    paper_rank: 134
-    rank_delta: 62
-    rank_delta_abs: 62
+    global_rank: 74
+    paper_rank: 140
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -732,8 +732,8 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: null
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -800,8 +800,8 @@ results:
     value_note: ''
     sort_value: 0.777
     sort_std: null
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 227
+    paper_rank: 227
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

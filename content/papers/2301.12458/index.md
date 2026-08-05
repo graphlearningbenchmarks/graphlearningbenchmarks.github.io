@@ -59,8 +59,8 @@ proposed_models:
 - SeeGera-v1
 - SeeGera-v2
 - SeeGera-v3
-mrr: 0.0054
-adjusted_mrr: 0.0054
+mrr: 0.0053
+adjusted_mrr: 0.0053
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -77,9 +77,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -111,9 +111,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gcn
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9412
     std: 0.0008
     metric: Accuracy
@@ -145,9 +145,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gat
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -237,10 +237,10 @@ results:
     value_note: ''
     sort_value: 0.8988
     sort_std: 0.001
-    global_rank: 139
-    paper_rank: 232
-    rank_delta: 93
-    rank_delta_abs: 93
+    global_rank: 141
+    paper_rank: 237
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -305,8 +305,8 @@ results:
     value_note: ''
     sort_value: 0.8953
     sort_std: 0.0035
-    global_rank: 168
-    paper_rank: 324
+    global_rank: 171
+    paper_rank: 327
     rank_delta: 156
     rank_delta_abs: 156
     rank_delta_direction: worse
@@ -374,10 +374,10 @@ results:
     value_note: ''
     sort_value: 0.8896
     sort_std: 0.0013
-    global_rank: 194
-    paper_rank: 208
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 198
+    paper_rank: 213
+    rank_delta: 15
+    rank_delta_abs: 15
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -415,17 +415,17 @@ results:
     date_iso: '2023-01-29'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.8902
-    at_pub_std: 0.0021
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.8752
+    at_pub_std: 0.11
+    at_pub_source_arxiv: '2010.14945'
+    at_pub_source_title: Graph Contrastive Learning with Adaptive Augmentation
+    at_pub_source_date_iso: '2020-10-27'
+    at_pub_source_date_label: WWW 2020
     value_gap_source_date_iso: '2025-04-16'
     value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: 0.015000000000000013
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -442,15 +442,15 @@ results:
     value_note: ''
     sort_value: 0.8861
     sort_std: 0.0064
-    global_rank: 217
-    paper_rank: 283
-    rank_delta: 66
-    rank_delta_abs: 66
+    global_rank: 222
+    paper_rank: 287
+    rank_delta: 65
+    rank_delta_abs: 65
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SeeGera-v1
@@ -510,8 +510,8 @@ results:
     value_note: ''
     sort_value: 0.8844
     sort_std: 0.0024
-    global_rank: 227
-    paper_rank: 227
+    global_rank: 232
+    paper_rank: 232
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -578,8 +578,8 @@ results:
     value_note: ''
     sort_value: 0.8839
     sort_std: 0.0026
-    global_rank: 230
-    paper_rank: 230
+    global_rank: 235
+    paper_rank: 235
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -646,8 +646,8 @@ results:
     value_note: ''
     sort_value: 0.8839
     sort_std: 0.0026
-    global_rank: 231
-    paper_rank: 231
+    global_rank: 236
+    paper_rank: 236
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -687,17 +687,18 @@ results:
     date_iso: '2023-01-29'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.8878
-    at_pub_std: 0.0043
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
+    at_pub_value: 0.841
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2210.08792'
+    at_pub_source_title: Unifying Graph Contrastive Learning with Flexible Contextual
+      Scopes
+    at_pub_source_date_iso: '2022-10-17'
     at_pub_source_date_label: '2022'
     value_gap_source_date_iso: '2024-08-09'
     value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.04830000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: 0.0014999999999999458
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -714,15 +715,15 @@ results:
     value_note: ''
     sort_value: 0.8798
     sort_std: 0.0081
-    global_rank: 252
-    paper_rank: 393
-    rank_delta: 141
-    rank_delta_abs: 141
+    global_rank: 256
+    paper_rank: 390
+    rank_delta: 134
+    rank_delta_abs: 134
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -737,9 +738,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -770,9 +771,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -804,9 +805,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -895,10 +896,10 @@ results:
     value_note: ''
     sort_value: 0.9341
     sort_std: 0.001
-    global_rank: 171
-    paper_rank: 214
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 176
+    paper_rank: 220
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -964,8 +965,8 @@ results:
     value_note: ''
     sort_value: 0.9325
     sort_std: 0.0021
-    global_rank: 187
-    paper_rank: 199
+    global_rank: 192
+    paper_rank: 204
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -1005,15 +1006,15 @@ results:
     date_iso: '2023-01-29'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.9292
-    at_pub_std: 0.0025
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.9249
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2106.05470'
+    at_pub_source_title: Automated Self-Supervised Learning for Graphs
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: ICLR 2021
     value_gap_source_date_iso: '2024-03-03'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.011800000000000033
+    gap_vs_at_pub: 0.007500000000000062
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1032,15 +1033,15 @@ results:
     value_note: ''
     sort_value: 0.931
     sort_std: 0.004
-    global_rank: 202
-    paper_rank: 342
-    rank_delta: 140
-    rank_delta_abs: 140
+    global_rank: 207
+    paper_rank: 348
+    rank_delta: 141
+    rank_delta_abs: 141
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_source_title: Automated Self-Supervised Learning for Graphs
+    comparison_source_arxiv: '2106.05470'
     is_best: false
     is_std_outlier: false
   - model: DGI
@@ -1073,17 +1074,17 @@ results:
     date_iso: '2023-01-29'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.9257
-    at_pub_std: 0.0023
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.9161
+    at_pub_std: 0.0022
+    at_pub_source_arxiv: '2010.14945'
+    at_pub_source_title: Graph Contrastive Learning with Adaptive Augmentation
+    at_pub_source_date_iso: '2020-10-27'
+    at_pub_source_date_label: WWW 2020
     value_gap_source_date_iso: '2024-07-29'
     value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.009599999999999942
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -1100,15 +1101,15 @@ results:
     value_note: ''
     sort_value: 0.9309
     sort_std: 0.0008
-    global_rank: 206
-    paper_rank: 347
-    rank_delta: 141
-    rank_delta_abs: 141
+    global_rank: 211
+    paper_rank: 353
+    rank_delta: 142
+    rank_delta_abs: 142
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SeeGera-v3
@@ -1168,8 +1169,8 @@ results:
     value_note: ''
     sort_value: 0.9281
     sort_std: 0.0045
-    global_rank: 231
-    paper_rank: 231
+    global_rank: 237
+    paper_rank: 237
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1235,8 +1236,8 @@ results:
     value_note: ''
     sort_value: 0.928
     sort_std: 0.005
-    global_rank: 232
-    paper_rank: 313
+    global_rank: 238
+    paper_rank: 319
     rank_delta: 81
     rank_delta_abs: 81
     rank_delta_direction: worse
@@ -1303,8 +1304,8 @@ results:
     value_note: ''
     sort_value: 0.927
     sort_std: 0.0042
-    global_rank: 251
-    paper_rank: 251
+    global_rank: 258
+    paper_rank: 258
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1371,8 +1372,8 @@ results:
     value_note: ''
     sort_value: 0.9253
     sort_std: 0.0041
-    global_rank: 270
-    paper_rank: 270
+    global_rank: 277
+    paper_rank: 277
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1394,9 +1395,9 @@ results:
 - &id003
   dataset: Coauthor-Physics
   rows:
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: geomancer
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9878
     std: 0.0012
     metric: Accuracy
@@ -1428,9 +1429,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: lgd
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9855
     std: 0.0012
     metric: Accuracy
@@ -1462,9 +1463,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: msh-gnn
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9837
     std: 0.0008
     metric: Accuracy
@@ -1525,17 +1526,18 @@ results:
     date_iso: '2023-01-29'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.9564
-    at_pub_std: 0.0008
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.9539
+    at_pub_std: 0.0032
+    at_pub_source_arxiv: '2211.14065'
+    at_pub_source_title: 'Beyond Smoothing: Unsupervised Graph Representation Learning
+      with Edge Heterophily Discriminating'
+    at_pub_source_date_iso: '2022-11-25'
+    at_pub_source_date_label: AAAI 2022
     value_gap_source_date_iso: '2023-02-17'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.0038000000000000256
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: 0.0012999999999999678
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -1553,14 +1555,14 @@ results:
     sort_value: 0.9563
     sort_std: 0.001
     global_rank: 104
-    paper_rank: 132
-    rank_delta: 28
-    rank_delta_abs: 28
+    paper_rank: 134
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: CCA-SSG
@@ -1622,9 +1624,9 @@ results:
     sort_value: 0.9559
     sort_std: 0.0007
     global_rank: 109
-    paper_rank: 127
-    rank_delta: 18
-    rank_delta_abs: 18
+    paper_rank: 129
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1691,9 +1693,9 @@ results:
     sort_value: 0.955
     sort_std: 0.001
     global_rank: 118
-    paper_rank: 129
-    rank_delta: 11
-    rank_delta_abs: 11
+    paper_rank: 131
+    rank_delta: 13
+    rank_delta_abs: 13
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1731,15 +1733,16 @@ results:
     date_iso: '2023-01-29'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.9549
-    at_pub_std: 0.0017
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.9544
+    at_pub_std: 0.0027
+    at_pub_source_arxiv: '2301.12063'
+    at_pub_source_title: 'HAT-GAE: Self-Supervised Graph Auto-encoders with Hierarchical
+      Adaptive Masking and Trainable Corruption'
+    at_pub_source_date_iso: '2023-01-28'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2023-01-28'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.0015999999999999348
+    gap_vs_at_pub: 0.0010999999999999899
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1758,8 +1761,8 @@ results:
     value_note: ''
     sort_value: 0.9544
     sort_std: 0.0027
-    global_rank: 121
-    paper_rank: 128
+    global_rank: 123
+    paper_rank: 130
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -1826,8 +1829,8 @@ results:
     value_note: ''
     sort_value: 0.954
     sort_std: 0.001
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1894,8 +1897,8 @@ results:
     value_note: ''
     sort_value: 0.9539
     sort_std: 0.0008
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1962,8 +1965,8 @@ results:
     value_note: ''
     sort_value: 0.9539
     sort_std: 0.0008
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2003,21 +2006,22 @@ results:
     date_iso: '2023-01-29'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.9538
-    at_pub_std: 0.0007
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.9457
+    at_pub_std: 0.0038
+    at_pub_source_arxiv: '2211.14065'
+    at_pub_source_title: 'Beyond Smoothing: Unsupervised Graph Representation Learning
+      with Edge Heterophily Discriminating'
+    at_pub_source_date_iso: '2022-11-25'
+    at_pub_source_date_label: AAAI 2022
     value_gap_source_date_iso: '2025-04-16'
     value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: 0.00869999999999993
-    worse_than_at_pub: true
+    gap_vs_at_pub: 0.0005999999999999339
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
     true_value: 0.9489
     true_std: 0.0009
@@ -2030,15 +2034,15 @@ results:
     value_note: ''
     sort_value: 0.9489
     sort_std: 0.0009
-    global_rank: 148
-    paper_rank: 152
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 151
+    paper_rank: 156
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -2069,5 +2073,6 @@ datasets_by_scope:
       dataset_slug: amazon-computers
     - dataset: Coauthor-Physics
       dataset_slug: coauthor-physics
+main_figure: /figures/2301.12458/main_figure.jpegoptim.jpg
 ---
 

@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CNNs
-mrr: 0.2917
-adjusted_mrr: 0.1944
+mrr: 0.1528
+adjusted_mrr: 0.1019
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -87,38 +87,104 @@ results:
 - &id003
   dataset: MNIST
   rows:
-  - model: 3WLGNN
-    model_key: graphcon-gat
-    model_plain: 3WLGNN
-    value: 0.9891
-    std: null
+  - model: Tango_GPS
+    model_key: schrödinger gnn
+    model_plain: Tango_GPS
+    value: 0.9913
+    std: 0.0004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9913
+    sort_std: 0.0004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: cnn
+    model_plain: Tango_GPS
+    value: 0.9907
+    std: 0.0007
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2202.02296'
-    title: Graph-Coupled Oscillator Networks
-    date: Feb 4, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-04'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/tk-rusch/GraphCON
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
-    sort_value: 0.9891
-    sort_std: null
+    global_rank: 2
+    sort_value: 0.9907
+    sort_std: 0.0007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: mpnn
+    model_plain: Tango_GPS
+    value: 0.9895
+    std: 0.0006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9895
+    sort_std: 0.0006
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GIG-GatedGCN
     model_key: gig-gatedgcn
@@ -176,108 +242,8 @@ results:
     value_note: ''
     sort_value: 0.988
     sort_std: 0.0003
-    global_rank: 2
-    paper_rank: 2
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: 3WLGNN
-    model_key: pncnn
-    model_plain: 3WLGNN
-    value: 0.9876
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.02296'
-    title: Graph-Coupled Oscillator Networks
-    date: Feb 4, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-04'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/tk-rusch/GraphCON
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9876
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Exphormer
-    model_key: exphormer
-    model_plain: Exphormer
-    value: 0.9855
-    std: 0.0004
-    paper_value: 0.9855
-    paper_std: 0.0004
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: shirzad2023exphormer
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST
-    date: Jun 30, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-06-30'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9855
-    true_std: 0.0004
-    value_gap_source_arxiv: '2407.00696'
-    value_gap_source_title: Graph in Graph Neural Network
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9855
-    sort_std: 0.0004
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -317,15 +283,16 @@ results:
     date_iso: '2024-06-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9824
-    at_pub_std: 0.0004
-    at_pub_source_arxiv: '2006.07846'
-    at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    at_pub_source_date_iso: '2020-06-14'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-06-14'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.009000000000000008
+    at_pub_value: 0.98552
+    at_pub_std: 0.00023
+    at_pub_source_arxiv: '2404.09774'
+    at_pub_source_title: 'RandAlign: A Parameter-Free Method for Regularizing Graph
+      Convolutional Networks'
+    at_pub_source_date_iso: '2024-04-15'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-04-15'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.012119999999999909
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -333,25 +300,163 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9824
-    true_std: 0.0004
-    value_gap_source_arxiv: '2006.07846'
-    value_gap_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
+    true_value: 0.98552
+    true_std: 0.00023
+    value_gap_source_arxiv: '2404.09774'
+    value_gap_source_title: 'RandAlign: A Parameter-Free Method for Regularizing Graph
+      Convolutional Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.009000000000000008
+    value_gap: 0.012119999999999909
     has_value_note: false
     value_note: ''
-    sort_value: 0.9824
-    sort_std: 0.0004
-    global_rank: 22
-    paper_rank: 59
-    rank_delta: 37
-    rank_delta_abs: 37
+    sort_value: 0.98552
+    sort_std: 0.00023
+    global_rank: 11
+    paper_rank: 85
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    comparison_source_arxiv: '2006.07846'
+    comparison_source_title: 'RandAlign: A Parameter-Free Method for Regularizing
+      Graph Convolutional Networks'
+    comparison_source_arxiv: '2404.09774'
+    is_best: false
+    is_std_outlier: false
+  - model: Exphormer
+    model_key: exphormer
+    model_plain: Exphormer
+    value: 0.9855
+    std: 0.0004
+    paper_value: 0.9855
+    paper_std: 0.0004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: shirzad2023exphormer
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard graph classification task on MNIST
+    date: Jun 30, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9855
+    at_pub_std: 0.0003
+    at_pub_source_arxiv: '2402.08678'
+    at_pub_source_title: 'Graph Mamba: Towards Learning on Graphs with State Space
+      Models'
+    at_pub_source_date_iso: '2024-02-13'
+    at_pub_source_date_label: KDD 2024
+    value_gap_source_date_iso: '2024-06-30'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9855
+    true_std: 0.0004
+    value_gap_source_arxiv: '2407.00696'
+    value_gap_source_title: Graph in Graph Neural Network
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9855
+    sort_std: 0.0004
+    global_rank: 13
+    paper_rank: 13
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.9649
+    std: 0.0025
+    paper_value: 0.9649
+    paper_std: 0.0025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: xupowerful
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard graph classification task on MNIST
+    date: Jun 30, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9723
+    at_pub_std: null
+    at_pub_source_arxiv: '2202.02296'
+    at_pub_source_title: Graph-Coupled Oscillator Networks
+    at_pub_source_date_iso: '2022-02-04'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.007400000000000073
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9833
+    true_std: 0.0011
+    value_gap_source_arxiv: '2605.13383'
+    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
+      in GNNs Via Observables'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.018399999999999972
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9833
+    sort_std: 0.0011
+    global_rank: 31
+    paper_rank: 103
+    rank_delta: 72
+    rank_delta_abs: 72
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph-Coupled Oscillator Networks
+    comparison_source_arxiv: '2202.02296'
     is_best: false
     is_std_outlier: false
   - model: EGT
@@ -411,8 +516,8 @@ results:
     value_note: ''
     sort_value: 0.98173
     sort_std: 0.00087
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -478,8 +583,8 @@ results:
     value_note: ''
     sort_value: 0.9801
     sort_std: 0.001
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -545,8 +650,8 @@ results:
     value_note: ''
     sort_value: 0.9794
     sort_std: 0.0012
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -554,73 +659,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.9649
-    std: 0.0025
-    paper_value: 0.9649
-    paper_std: 0.0025
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: xupowerful
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST
-    date: Jun 30, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9723
-    at_pub_std: null
-    at_pub_source_arxiv: '2202.02296'
-    at_pub_source_title: Graph-Coupled Oscillator Networks
-    at_pub_source_date_iso: '2022-02-04'
-    at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: 0.007400000000000073
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9723
-    true_std: null
-    value_gap_source_arxiv: '2202.02296'
-    value_gap_source_title: Graph-Coupled Oscillator Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.007400000000000073
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9723
-    sort_std: null
-    global_rank: 68
-    paper_rank: 74
-    rank_delta: 6
-    rank_delta_abs: 6
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Graph-Coupled Oscillator Networks
-    comparison_source_arxiv: '2202.02296'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -653,15 +691,16 @@ results:
     date_iso: '2024-06-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.965
-    at_pub_std: 0.0018
-    at_pub_source_arxiv: '2006.07846'
-    at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    at_pub_source_date_iso: '2020-06-14'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-06-14'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.009599999999999942
+    at_pub_value: 0.97553
+    at_pub_std: 0.00034
+    at_pub_source_arxiv: '2404.09774'
+    at_pub_source_title: 'RandAlign: A Parameter-Free Method for Regularizing Graph
+      Convolutional Networks'
+    at_pub_source_date_iso: '2024-04-15'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-04-15'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.02012999999999998
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -669,25 +708,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.965
-    true_std: 0.0018
-    value_gap_source_arxiv: '2006.07846'
-    value_gap_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
+    true_value: 0.97553
+    true_std: 0.00034
+    value_gap_source_arxiv: '2404.09774'
+    value_gap_source_title: 'RandAlign: A Parameter-Free Method for Regularizing Graph
+      Convolutional Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.009599999999999942
+    value_gap: 0.02012999999999998
     has_value_note: false
     value_note: ''
-    sort_value: 0.965
-    sort_std: 0.0018
-    global_rank: 74
-    paper_rank: 81
-    rank_delta: 7
-    rank_delta_abs: 7
+    sort_value: 0.97553
+    sort_std: 0.00034
+    global_rank: 81
+    paper_rank: 114
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    comparison_source_arxiv: '2006.07846'
+    comparison_source_title: 'RandAlign: A Parameter-Free Method for Regularizing
+      Graph Convolutional Networks'
+    comparison_source_arxiv: '2404.09774'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -720,15 +761,16 @@ results:
     date_iso: '2024-06-30'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9139
-    at_pub_std: 0.0025
-    at_pub_source_arxiv: '2006.07846'
-    at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    at_pub_source_date_iso: '2020-06-14'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-06-14'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.012700000000000045
+    at_pub_value: 0.94051
+    at_pub_std: 0.00052
+    at_pub_source_arxiv: '2404.09774'
+    at_pub_source_title: 'RandAlign: A Parameter-Free Method for Regularizing Graph
+      Convolutional Networks'
+    at_pub_source_date_iso: '2024-04-15'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-04-15'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.039309999999999956
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -736,25 +778,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9139
-    true_std: 0.0025
-    value_gap_source_arxiv: '2006.07846'
-    value_gap_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
+    true_value: 0.94051
+    true_std: 0.00052
+    value_gap_source_arxiv: '2404.09774'
+    value_gap_source_title: 'RandAlign: A Parameter-Free Method for Regularizing Graph
+      Convolutional Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.012700000000000045
+    value_gap: 0.039309999999999956
     has_value_note: false
     value_note: ''
-    sort_value: 0.9139
-    sort_std: 0.0025
-    global_rank: 95
-    paper_rank: 101
-    rank_delta: 6
-    rank_delta_abs: 6
+    sort_value: 0.94051
+    sort_std: 0.00052
+    global_rank: 129
+    paper_rank: 136
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    comparison_source_arxiv: '2006.07846'
+    comparison_source_title: 'RandAlign: A Parameter-Free Method for Regularizing
+      Graph Convolutional Networks'
+    comparison_source_arxiv: '2404.09774'
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -769,9 +813,9 @@ results:
 - &id004
   dataset: PATTERN
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: deepgraph (48)
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.90657
     std: 0.00062
     metric: Accuracy
@@ -802,11 +846,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: grit
-    model_plain: 3WLGNN
-    value: 0.8722
+  - model: Tango_GPS
+    model_key: ppgt
+    model_plain: Tango_GPS
+    value: 0.89752
     std: 0.0003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.89752
+    sort_std: 0.0003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: ckgcn
+    model_plain: Tango_GPS
+    value: 0.88661
+    std: 0.00143
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -816,53 +893,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8722
-    sort_std: 0.0003
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: 3WLGNN
-    model_key: sparsegrit
-    model_plain: 3WLGNN
-    value: 0.8717
-    std: 0.0004
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8717
-    sort_std: 0.0004
+    sort_value: 0.88661
+    sort_std: 0.00143
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -924,8 +968,8 @@ results:
     value_note: ''
     sort_value: 0.8687
     sort_std: 0.0001
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -991,8 +1035,8 @@ results:
     value_note: ''
     sort_value: 0.8557
     sort_std: 0.0009
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1170,9 +1214,10 @@ results:
     date_iso: '2023-01-01'
     venue: Journal of machine learning research
     codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
-    uses_external_data: true
-    input_feature_source: mixed
-    feature_source_evidence: suffix -E denotes the use of available edge features
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: nodes in these graphs already have features describing
+      their positions in R^2
     is_global_top: true
     global_rank: 3
     sort_value: 0.838
@@ -1395,9 +1440,42 @@ results:
 - &id001
   dataset: ZINC
   rows:
-  - model: Subgraphormer
+  - model: GPS
+    model_key: tigt
+    model_plain: GPS
+    value: 0.014
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: GRaM
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.014
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPS
     model_key: ppgn++
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.001
     metric: MAE
@@ -1420,17 +1498,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.02
     sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: subgraphormer
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.002
     metric: MAE
@@ -1454,47 +1532,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.02
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Subgraphormer
-    model_key: cin
-    model_plain: Subgraphormer
-    value: 0.021
-    std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2306.03561'
-    title: 'CIN++: Enhancing Topological Message Passing'
-    date: Jun 6, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-06'
-    venue: arXiv.org
-    codebase_url: https://github.com/twitter-research/cwn
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Without any use of feature augmentation such as positional
-      encoding, our model exhibits particularly strong performance
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.021
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: CNNs
     model_key: cnns
@@ -1552,8 +1596,8 @@ results:
     value_note: ''
     sort_value: 0.029
     sort_std: 0.001
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1575,9 +1619,9 @@ results:
 - &id002
   dataset: ogbg-ppa
   rows:
-  - model: MLAP
+  - model: differential encoding
     model_key: a-nlsf
-    model_plain: MLAP
+    model_plain: differential encoding
     value: 0.8149
     std: 0.0067
     metric: Accuracy
@@ -1604,6 +1648,72 @@ results:
     global_rank: 1
     sort_value: 0.8149
     sort_std: 0.0067
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: differential encoding
+    model_key: differential encoding
+    model_plain: differential encoding
+    value: 0.8096
+    std: 0.0029
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: Jul 3, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-03'
+    venue: IEEE Transactions on Big Data
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8096
+    sort_std: 0.0029
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: differential encoding
+    model_key: mpnn + vn + nope
+    model_plain: differential encoding
+    value: 0.8055
+    std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8055
+    sort_std: 0.0038
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1665,8 +1775,8 @@ results:
     value_note: ''
     sort_value: 0.8017
     sort_std: null
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1708,10 +1818,9 @@ results:
     published_conference: ''
     at_pub_value: 0.8015
     at_pub_std: 0.0033
-    at_pub_source_arxiv: '2305.06102'
-    at_pub_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
-    at_pub_source_date_iso: '2023-05-10'
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
     at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2025-09-29'
     value_gap_source_date_label: '2025'
@@ -1734,8 +1843,8 @@ results:
     value_note: ''
     sort_value: 0.8015
     sort_std: 0.0033
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1777,11 +1886,10 @@ results:
     published_conference: ''
     at_pub_value: 0.7976
     at_pub_std: 0.0072
-    at_pub_source_arxiv: '2305.06102'
-    at_pub_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
-    at_pub_source_date_iso: '2023-05-10'
-    at_pub_source_date_label: ICML 2023
+    at_pub_source_arxiv: '2202.03036'
+    at_pub_source_title: Structure-Aware Transformer for Graph Representation Learning
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: ICML 2022
     value_gap_source_date_iso: '2023-05-10'
     value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
@@ -1803,8 +1911,8 @@ results:
     value_note: ''
     sort_value: 0.7976
     sort_std: 0.0072
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1872,8 +1980,8 @@ results:
     value_note: ''
     sort_value: 0.7752
     sort_std: 0.0069
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1941,8 +2049,8 @@ results:
     value_note: ''
     sort_value: 0.7712
     sort_std: 0.0071
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2009,5 +2117,6 @@ datasets_by_scope:
     - dataset: TSP
       dataset_slug: tsp
 single_proposed_model: CNNs
+main_figure: /figures/2407.00696/main_figure.jpegoptim.jpg
 ---
 

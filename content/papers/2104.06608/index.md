@@ -41,8 +41,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SANE
-mrr: 0.0175
-adjusted_mrr: 0.0175
+mrr: 0.0169
+adjusted_mrr: 0.0169
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -59,9 +59,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: gamlp(jk)
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.9982
     std: 0.01
     metric: F1
@@ -92,9 +92,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: graphcon-gcn
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.996
     std: null
     metric: F1
@@ -125,34 +125,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
-    model_key: graphsaint
-    model_plain: Whole Dataset
-    value: 0.995
-    std: null
+  - model: Cluster-GCN
+    model_key: gcnii
+    model_plain: Cluster-GCN
+    value: 0.9956
+    std: 0.02
     metric: F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2007.02133'
+    title: Simple and Deep Graph Convolutional Networks
+    date: Jul 4, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/DropEdge/DropEdge
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.995
-    sort_std: null
+    sort_value: 0.9956
+    sort_std: 0.02
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -282,9 +282,9 @@ results:
     sort_value: 0.985
     sort_std: null
     global_rank: 19
-    paper_rank: 126
-    rank_delta: 107
-    rank_delta_abs: 107
+    paper_rank: 129
+    rank_delta: 110
+    rank_delta_abs: 110
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -329,8 +329,8 @@ results:
       Large Graph Convolutional Networks'
     at_pub_source_date_iso: '2019-05-20'
     at_pub_source_date_label: KDD 2019
-    value_gap_source_date_iso: '2019-05-20'
-    value_gap_source_date_label: KDD 2019
+    value_gap_source_date_iso: '2020-07-04'
+    value_gap_source_date_label: ICML 2020
     gap_vs_at_pub: 0.2712
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -341,9 +341,8 @@ results:
     today_delta_significant: true
     true_value: 0.985
     true_std: null
-    value_gap_source_arxiv: '1905.07953'
-    value_gap_source_title: 'Cluster-GCN: An Efficient Algorithm for Training Deep
-      and Large Graph Convolutional Networks'
+    value_gap_source_arxiv: '2007.02133'
+    value_gap_source_title: Simple and Deep Graph Convolutional Networks
     value_gap_source_is_current_paper: false
     value_gap: 0.2712
     has_value_note: false
@@ -351,9 +350,9 @@ results:
     sort_value: 0.985
     sort_std: null
     global_rank: 20
-    paper_rank: 111
-    rank_delta: 91
-    rank_delta_abs: 91
+    paper_rank: 112
+    rank_delta: 92
+    rank_delta_abs: 92
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -418,8 +417,8 @@ results:
     value_note: ''
     sort_value: 0.9749
     sort_std: 0.0
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -487,8 +486,8 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 50
-    paper_rank: 75
+    global_rank: 51
+    paper_rank: 76
     rank_delta: 25
     rank_delta_abs: 25
     rank_delta_direction: worse
@@ -555,8 +554,8 @@ results:
     value_note: ''
     sort_value: 0.9694
     sort_std: 0.0
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -622,8 +621,8 @@ results:
     value_note: ''
     sort_value: 0.9583
     sort_std: 0.0082
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -691,10 +690,10 @@ results:
     value_note: ''
     sort_value: 0.958
     sort_std: 0.001
-    global_rank: 69
-    paper_rank: 126
-    rank_delta: 57
-    rank_delta_abs: 57
+    global_rank: 70
+    paper_rank: 129
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -759,8 +758,8 @@ results:
     value_note: ''
     sort_value: 0.9517
     sort_std: 0.0032
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -826,8 +825,8 @@ results:
     value_note: ''
     sort_value: 0.9467
     sort_std: 0.0
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -894,8 +893,8 @@ results:
     value_note: ''
     sort_value: 0.911
     sort_std: 0.002
-    global_rank: 82
-    paper_rank: 86
+    global_rank: 83
+    paper_rank: 87
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -961,8 +960,8 @@ results:
     value_note: ''
     sort_value: 0.8078
     sort_std: 0.0
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1028,8 +1027,8 @@ results:
     value_note: ''
     sort_value: 0.8019
     sort_std: 0.0
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1096,8 +1095,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.002
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1130,5 +1129,6 @@ datasets_by_scope:
     - dataset: PPI
       dataset_slug: ppi
 single_proposed_model: SANE
+main_figure: /figures/2104.06608/main_figure.jpegoptim.jpg
 ---
 

@@ -52,8 +52,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CIN
-mrr: 0.097
-adjusted_mrr: 0.097
+mrr: 0.082
+adjusted_mrr: 0.082
 mrr_dataset_count: 6
 benchmark_categories:
 - Classic
@@ -81,9 +81,9 @@ results:
 - &id002
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -114,9 +114,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -213,11 +213,10 @@ results:
     published_conference: ''
     at_pub_value: 0.927
     at_pub_std: 0.061
-    at_pub_source_arxiv: '2206.11140'
-    at_pub_source_title: Understanding and Extending Subgraph GNNs by Rethinking Their
-      Symmetries
-    at_pub_source_date_iso: '2022-06-22'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-06-06'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.016999999999999904
@@ -373,9 +372,9 @@ results:
     sort_value: 0.933
     sort_std: 0.029
     global_rank: 34
-    paper_rank: 207
-    rank_delta: 173
-    rank_delta_abs: 173
+    paper_rank: 217
+    rank_delta: 183
+    rank_delta_abs: 183
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -415,11 +414,10 @@ results:
     published_conference: ''
     at_pub_value: 0.922
     at_pub_std: 0.075
-    at_pub_source_arxiv: '2206.11140'
-    at_pub_source_title: Understanding and Extending Subgraph GNNs by Rethinking Their
-      Symmetries
-    at_pub_source_date_iso: '2022-06-22'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2022-09-16'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
@@ -440,8 +438,8 @@ results:
     value_note: ''
     sort_value: 0.922
     sort_std: 0.075
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -483,11 +481,10 @@ results:
     published_conference: ''
     at_pub_value: 0.906
     at_pub_std: 0.087
-    at_pub_source_arxiv: '2206.11140'
-    at_pub_source_title: Understanding and Extending Subgraph GNNs by Rethinking Their
-      Symmetries
-    at_pub_source_date_iso: '2022-06-22'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2022-09-16'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
@@ -508,8 +505,8 @@ results:
     value_note: ''
     sort_value: 0.906
     sort_std: 0.087
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -575,8 +572,8 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.057
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -618,11 +615,10 @@ results:
     published_conference: ''
     at_pub_value: 0.894
     at_pub_std: 0.016
-    at_pub_source_arxiv: '2206.11140'
-    at_pub_source_title: Understanding and Extending Subgraph GNNs by Rethinking Their
-      Symmetries
-    at_pub_source_date_iso: '2022-06-22'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-06-06'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -643,8 +639,8 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.016
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 222
+    paper_rank: 222
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -685,11 +681,12 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.8583
-    at_pub_std: 0.017
-    at_pub_source_arxiv: '1905.11136'
-    at_pub_source_title: Provably Powerful Graph Networks
-    at_pub_source_date_iso: '2019-05-27'
-    at_pub_source_date_label: NeurIPS 2019
+    at_pub_std: null
+    at_pub_source_arxiv: '1901.08296'
+    at_pub_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
+    at_pub_source_date_iso: '2018-12-14'
+    at_pub_source_date_label: '2018'
     value_gap_source_date_iso: '2023-05-10'
     value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: 0.00029999999999996696
@@ -711,8 +708,8 @@ results:
     value_note: ''
     sort_value: 0.8583
     sort_std: 0.0166
-    global_rank: 387
-    paper_rank: 387
+    global_rank: 408
+    paper_rank: 408
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -778,10 +775,10 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.006
-    global_rank: 434
-    paper_rank: 660
-    rank_delta: 226
-    rank_delta_abs: 226
+    global_rank: 460
+    paper_rank: 703
+    rank_delta: 243
+    rank_delta_abs: 243
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -821,11 +818,10 @@ results:
     published_conference: ''
     at_pub_value: 0.839
     at_pub_std: 0.13
-    at_pub_source_arxiv: '2206.11140'
-    at_pub_source_title: Understanding and Extending Subgraph GNNs by Rethinking Their
-      Symmetries
-    at_pub_source_date_iso: '2022-06-22'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2022-09-16'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
@@ -846,8 +842,8 @@ results:
     value_note: ''
     sort_value: 0.839
     sort_std: 0.013
-    global_rank: 465
-    paper_rank: 465
+    global_rank: 493
+    paper_rank: 493
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -889,10 +885,10 @@ results:
     published_conference: ''
     at_pub_value: 0.814
     at_pub_std: 0.017
-    at_pub_source_arxiv: '2209.08179'
-    at_pub_source_title: Cell Attention Networks
-    at_pub_source_date_iso: '2022-09-16'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2022-09-16'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
@@ -913,8 +909,8 @@ results:
     value_note: ''
     sort_value: 0.814
     sort_std: 0.017
-    global_rank: 560
-    paper_rank: 560
+    global_rank: 590
+    paper_rank: 590
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -956,10 +952,10 @@ results:
     published_conference: ''
     at_pub_value: 0.792
     at_pub_std: 0.021
-    at_pub_source_arxiv: '2209.08179'
-    at_pub_source_title: Cell Attention Networks
-    at_pub_source_date_iso: '2022-09-16'
-    at_pub_source_date_label: '2022'
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2022-09-16'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
@@ -980,8 +976,8 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.021
-    global_rank: 613
-    paper_rank: 613
+    global_rank: 650
+    paper_rank: 650
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1003,78 +999,111 @@ results:
 - &id003
   dataset: NCI1
   rows:
-  - model: Diverse B12C3
-    model_key: msa-aud
-    model_plain: Diverse B12C3
-    value: 0.969
+  - model: ECC
+    model_key: wl-mlp
+    model_plain: ECC
+    value: 0.9954
     std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
     is_global_top: true
     global_rank: 1
-    sort_value: 0.969
+    sort_value: 0.9954
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-au
-    model_plain: Diverse B12C3
-    value: 0.966
-    std: null
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.827
+    std: 0.017
+    paper_value: 0.827
+    paper_std: 0.017
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.966
+    table_ref: Table 1
+    source_ref: GIN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9934
+    at_pub_std: null
+    at_pub_source_arxiv: '2202.10156'
+    at_pub_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    at_pub_source_date_iso: '2022-02-21'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-02-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.1664
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9934
+    true_std: null
+    value_gap_source_arxiv: '2202.10156'
+    value_gap_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1664
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9934
     sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
+    global_rank: 2
+    paper_rank: 93
+    rank_delta: 91
+    rank_delta_abs: 91
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    comparison_source_arxiv: '2202.10156'
+    is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-ad
-    model_plain: Diverse B12C3
-    value: 0.963
+  - model: ECC
+    model_key: gcn
+    model_plain: ECC
+    value: 0.9727
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -1082,23 +1111,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GNNs ... use node features
     is_global_top: true
     global_rank: 3
-    sort_value: 0.963
+    sort_value: 0.9727
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -1163,8 +1191,8 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.018
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1206,10 +1234,10 @@ results:
     published_conference: ''
     at_pub_value: 0.836
     at_pub_std: 0.014
-    at_pub_source_arxiv: '2205.14368'
-    at_pub_source_title: Going Deeper into Permutation-Sensitive Graph Neural Networks
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: ICML 2022
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
     gap_vs_at_pub: 0.017000000000000015
@@ -1231,8 +1259,8 @@ results:
     value_note: ''
     sort_value: 0.853
     sort_std: 0.012
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1298,10 +1326,10 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.001
-    global_rank: 31
-    paper_rank: 100
-    rank_delta: 69
-    rank_delta_abs: 69
+    global_rank: 29
+    paper_rank: 103
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1366,80 +1394,12 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.016
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.827
-    std: 0.017
-    paper_value: 0.827
-    paper_std: 0.017
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: GIN
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Jun 6, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.827
-    at_pub_std: 0.017
-    at_pub_source_arxiv: '1905.11136'
-    at_pub_source_title: Provably Powerful Graph Networks
-    at_pub_source_date_iso: '2019-05-27'
-    at_pub_source_date_label: NeurIPS 2019
-    value_gap_source_date_iso: '2023-10-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.8365
-    true_std: 0.0201
-    value_gap_source_arxiv: '2310.01794'
-    value_gap_source_title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based
-      Gnn Explainers through In-depth Benchmarking'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.009500000000000064
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8365
-    sort_std: 0.0201
-    global_rank: 48
-    paper_rank: 92
-    rank_delta: 44
-    rank_delta_abs: 44
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1641,8 +1601,8 @@ results:
     value_note: ''
     sort_value: 0.828
     sort_std: 0.022
-    global_rank: 84
-    paper_rank: 92
+    global_rank: 85
+    paper_rank: 93
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -1710,8 +1670,8 @@ results:
     value_note: ''
     sort_value: 0.824
     sort_std: 0.013
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1777,10 +1737,10 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.019
-    global_rank: 377
-    paper_rank: 426
-    rank_delta: 49
-    rank_delta_abs: 49
+    global_rank: 394
+    paper_rank: 445
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1846,8 +1806,8 @@ results:
     value_note: ''
     sort_value: 0.7433
     sort_std: 0.0271
-    global_rank: 429
-    paper_rank: 430
+    global_rank: 448
+    paper_rank: 449
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1915,10 +1875,10 @@ results:
     value_note: ''
     sort_value: 0.6261
     sort_std: null
-    global_rank: 537
-    paper_rank: 561
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 560
+    paper_rank: 583
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1983,8 +1943,8 @@ results:
     value_note: ''
     sort_value: 0.625
     sort_std: 0.003
-    global_rank: 538
-    paper_rank: 538
+    global_rank: 561
+    paper_rank: 561
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2006,9 +1966,9 @@ results:
 - &id004
   dataset: PROTEINS
   rows:
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: gmn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8225
     std: null
     metric: Accuracy
@@ -2039,9 +1999,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: ci-gnn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -2073,9 +2033,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: diffpool+gpl
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -2139,10 +2099,10 @@ results:
     published_conference: ''
     at_pub_value: 0.77
     at_pub_std: 0.043
-    at_pub_source_arxiv: '2205.14368'
-    at_pub_source_title: Going Deeper into Permutation-Sensitive Graph Neural Networks
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: ICML 2022
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
     gap_vs_at_pub: 0.03500000000000003
@@ -2233,10 +2193,10 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.041
-    global_rank: 23
-    paper_rank: 122
-    rank_delta: 99
-    rank_delta_abs: 99
+    global_rank: 27
+    paper_rank: 136
+    rank_delta: 109
+    rank_delta_abs: 109
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2301,8 +2261,8 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.02
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2342,12 +2302,12 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.772
+    at_pub_std: 0.047
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
     gap_vs_at_pub: null
@@ -2369,8 +2329,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.047
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2412,10 +2372,10 @@ results:
     published_conference: ''
     at_pub_value: 0.766
     at_pub_std: 0.055
-    at_pub_source_arxiv: '2205.14368'
-    at_pub_source_title: Going Deeper into Permutation-Sensitive Graph Neural Networks
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: ICML 2022
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
     gap_vs_at_pub: null
@@ -2437,8 +2397,8 @@ results:
     value_note: ''
     sort_value: 0.766
     sort_std: 0.055
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2480,11 +2440,10 @@ results:
     published_conference: ''
     at_pub_value: 0.766
     at_pub_std: 0.05
-    at_pub_source_arxiv: '2202.00529'
-    at_pub_source_title: Molecular Representation Learning via Heterogeneous Motif
-      Graph Neural Networks
-    at_pub_source_date_iso: '2022-02-01'
-    at_pub_source_date_label: ICML 2022
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
     gap_vs_at_pub: null
@@ -2506,8 +2465,8 @@ results:
     value_note: ''
     sort_value: 0.766
     sort_std: 0.05
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2573,10 +2532,10 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.034
-    global_rank: 92
-    paper_rank: 104
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 105
+    paper_rank: 118
+    rank_delta: 13
+    rank_delta_abs: 13
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2640,10 +2599,10 @@ results:
     value_note: ''
     sort_value: 0.7626
     sort_std: null
-    global_rank: 119
-    paper_rank: 178
-    rank_delta: 59
-    rank_delta_abs: 59
+    global_rank: 133
+    paper_rank: 198
+    rank_delta: 65
+    rank_delta_abs: 65
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2681,19 +2640,19 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7292
-    at_pub_std: 0.0056
-    at_pub_source_arxiv: '1707.05005'
-    at_pub_source_title: 'graph2vec: Learning Distributed Representations of Graphs'
-    at_pub_source_date_iso: '2017-07-17'
-    at_pub_source_date_label: '2017'
+    at_pub_value: 0.75
+    at_pub_std: 0.031
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: 0.02080000000000004
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -2708,12 +2667,12 @@ results:
     value_note: ''
     sort_value: 0.75
     sort_std: 0.031
-    global_rank: 235
-    paper_rank: 235
+    global_rank: 258
+    paper_rank: 258
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2749,20 +2708,19 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7368
+    at_pub_value: 0.737
     at_pub_std: 0.007
-    at_pub_source_arxiv: '2305.06102'
-    at_pub_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
-    at_pub_source_date_iso: '2023-05-10'
-    at_pub_source_date_label: ICML 2023
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: 0.00019999999999997797
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -2777,12 +2735,12 @@ results:
     value_note: ''
     sort_value: 0.737
     sort_std: 0.007
-    global_rank: 309
-    paper_rank: 309
+    global_rank: 338
+    paper_rank: 338
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2818,12 +2776,12 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.717
+    at_pub_std: 0.01
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
     gap_vs_at_pub: null
@@ -2845,8 +2803,8 @@ results:
     value_note: ''
     sort_value: 0.717
     sort_std: 0.01
-    global_rank: 386
-    paper_rank: 386
+    global_rank: 423
+    paper_rank: 423
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2886,12 +2844,12 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.714
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
     gap_vs_at_pub: null
@@ -2913,8 +2871,8 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: 0.003
-    global_rank: 395
-    paper_rank: 395
+    global_rank: 431
+    paper_rank: 431
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2981,8 +2939,8 @@ results:
     value_note: ''
     sort_value: 0.613
     sort_std: 0.016
-    global_rank: 471
-    paper_rank: 471
+    global_rank: 504
+    paper_rank: 504
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3022,12 +2980,12 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.596
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-08-13'
     value_gap_source_date_label: AAAI 2023
     gap_vs_at_pub: null
@@ -3049,8 +3007,8 @@ results:
     value_note: ''
     sort_value: 0.596
     sort_std: 0.001
-    global_rank: 480
-    paper_rank: 480
+    global_rank: 514
+    paper_rank: 514
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3072,9 +3030,9 @@ results:
 - &id006
   dataset: Peptides-func
   rows:
-  - model: SAN+RWSE
+  - model: Tango_GPS
     model_key: s^2gcn
-    model_plain: SAN+RWSE
+    model_plain: Tango_GPS
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -3100,6 +3058,73 @@ results:
     global_rank: 1
     sort_value: 0.7311
     sort_std: 0.0066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: s^2 gcn + pe
+    model_plain: Tango_GPS
+    value: 0.7311
+    std: 0.0066
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_display: May 2024
+    date_iso: '2024-05-29'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: PE is described as stable positional encodings almost
+      free of cost for S2GNNs.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.7311
+    sort_std: 0.0066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: s4g
+    model_plain: Tango_GPS
+    value: 0.7293
+    std: 0.0004
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-13'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7293
+    sort_std: 0.0004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3136,17 +3161,17 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.593
-    at_pub_std: 0.0023
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_value: 0.6623
+    at_pub_std: 0.0038
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.06930000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -3162,48 +3187,15 @@ results:
     value_note: ''
     sort_value: 0.7261
     sort_std: 0.0011
-    global_rank: 2
-    paper_rank: 114
-    rank_delta: 112
-    rank_delta_abs: 112
+    global_rank: 5
+    paper_rank: 156
+    rank_delta: 151
+    rank_delta_abs: 151
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: mpnns
-    model_plain: SAN+RWSE
-    value: 0.725
-    std: 0.0023
-    metric: AP
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.08450'
-    title: 'gLSTM: Mitigating Over-Squashing by Increasing Storage Capacity'
-    date: Oct 9, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-09'
-    venue: arXiv.org
-    codebase_url: https://github.com/HughBlayney/gLSTM
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.725
-    sort_std: 0.0023
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: On the Connection Between MPNN and Graph Transformer
+    comparison_source_arxiv: '2301.11956'
     is_best: true
     is_std_outlier: false
   - model: GatedGCN
@@ -3237,17 +3229,17 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5864
-    at_pub_std: 0.0077
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_value: 0.6635
+    at_pub_std: 0.0024
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.07709999999999995
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -3263,15 +3255,15 @@ results:
     value_note: ''
     sort_value: 0.7006
     sort_std: 0.0033
-    global_rank: 22
-    paper_rank: 121
-    rank_delta: 99
-    rank_delta_abs: 99
+    global_rank: 40
+    paper_rank: 163
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: On the Connection Between MPNN and Graph Transformer
+    comparison_source_arxiv: '2301.11956'
     is_best: false
     is_std_outlier: false
   - model: GCNII
@@ -3332,15 +3324,83 @@ results:
     value_note: ''
     sort_value: 0.699
     sort_std: 0.003
-    global_rank: 24
-    paper_rank: 131
-    rank_delta: 107
-    rank_delta_abs: 107
+    global_rank: 41
+    paper_rank: 174
+    rank_delta: 133
+    rank_delta_abs: 133
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN+RWSE
+    model_key: gatedgcn+rwse
+    model_plain: GatedGCN+RWSE
+    value: 0.6069
+    std: 0.0035
+    paper_value: 0.6069
+    paper_std: 0.0035
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: For both datasets, we did not employ any feature augmentation
+      such as positional encoding.
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test split results for Peptides-func classification task.
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6685
+    at_pub_std: 0.0062
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.06159999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6685
+    true_std: 0.0062
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06159999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6685
+    sort_std: 0.0062
+    global_rank: 87
+    paper_rank: 148
+    rank_delta: 61
+    rank_delta_abs: 61
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: On the Connection Between MPNN and Graph Transformer
+    comparison_source_arxiv: '2301.11956'
     is_best: false
     is_std_outlier: false
   - model: GINE
@@ -3374,17 +3434,17 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5498
-    at_pub_std: 0.0079
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_value: 0.6346
+    at_pub_std: 0.0071
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.0848000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -3400,15 +3460,15 @@ results:
     value_note: ''
     sort_value: 0.6621
     sort_std: 0.0067
-    global_rank: 60
-    paper_rank: 133
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 92
+    paper_rank: 177
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: On the Connection Between MPNN and Graph Transformer
+    comparison_source_arxiv: '2301.11956'
     is_best: false
     is_std_outlier: false
   - model: CIN
@@ -3468,8 +3528,8 @@ results:
     value_note: ''
     sort_value: 0.6569
     sort_std: 0.0117
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3538,78 +3598,10 @@ results:
     value_note: ''
     sort_value: 0.6562
     sort_std: 0.0075
-    global_rank: 68
-    paper_rank: 90
-    rank_delta: 22
-    rank_delta_abs: 22
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GatedGCN+RWSE
-    model_key: gatedgcn+rwse
-    model_plain: GatedGCN+RWSE
-    value: 0.6069
-    std: 0.0035
-    paper_value: 0.6069
-    paper_std: 0.0035
-    metric: AP
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: For both datasets, we did not employ any feature augmentation
-      such as positional encoding.
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test split results for Peptides-func classification task.
-    date: Jun 6, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6069
-    at_pub_std: 0.0035
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-11-19'
-    value_gap_source_date_label: KDD 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6516
-    true_std: 0.0072
-    value_gap_source_arxiv: '2411.12732'
-    value_gap_source_title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    value_gap_source_is_current_paper: false
-    value_gap: 0.04469999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6516
-    sort_std: 0.0072
-    global_rank: 79
-    paper_rank: 108
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 102
+    paper_rank: 125
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3674,8 +3666,8 @@ results:
     value_note: ''
     sort_value: 0.6384
     sort_std: 0.0121
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3742,8 +3734,8 @@ results:
     value_note: ''
     sort_value: 0.6326
     sort_std: 0.0126
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3810,8 +3802,8 @@ results:
     value_note: ''
     sort_value: 0.406
     sort_std: 0.0021
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 196
+    paper_rank: 196
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3864,17 +3856,17 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.3496
-    at_pub_std: 0.0013
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_value: 0.2488
+    at_pub_std: 0.0021
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.10080000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -3891,19 +3883,52 @@ results:
     sort_value: 0.2421
     sort_std: 0.0016
     global_rank: 1
-    paper_rank: 116
-    rank_delta: 115
-    rank_delta_abs: 115
+    paper_rank: 169
+    rank_delta: 168
+    rank_delta_abs: 168
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
+    comparison_type: behind
+    comparison_source_title: On the Connection Between MPNN and Graph Transformer
+    comparison_source_arxiv: '2301.11956'
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
+    model_key: tango_gps
+    model_plain: GMN
+    value: 0.2422
+    std: 0.0014
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Tango does not use additional encodings.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0014
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
+  - model: GMN
     model_key: nba-gin+lappe
-    model_plain: SAN+RWSE
+    model_plain: GMN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -3926,42 +3951,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.2424
     sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: gin
-    model_plain: SAN+RWSE
-    value: 0.2429
-    std: 0.0019
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.12358'
-    title: From Message-Passing to Linearized Graph Sequence Models
-    date: May 12, 2026
-    date_display: May 2026
-    date_iso: '2026-05-12'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.2429
-    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3998,17 +3990,17 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.342
-    at_pub_std: 0.0013
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_value: 0.2523
+    at_pub_std: 0.0016
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.0897
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -4024,15 +4016,15 @@ results:
     value_note: ''
     sort_value: 0.2431
     sort_std: 0.002
-    global_rank: 4
-    paper_rank: 115
-    rank_delta: 111
-    rank_delta_abs: 111
+    global_rank: 7
+    paper_rank: 168
+    rank_delta: 161
+    rank_delta_abs: 161
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: On the Connection Between MPNN and Graph Transformer
+    comparison_source_arxiv: '2301.11956'
     is_best: true
     is_std_outlier: false
   - model: GINE
@@ -4066,17 +4058,17 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.3547
-    at_pub_std: 0.0045
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_value: 0.2584
+    at_pub_std: 0.0011
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2024-11-19'
     value_gap_source_date_label: KDD 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.0963
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -4092,15 +4084,15 @@ results:
     value_note: ''
     sort_value: 0.2473
     sort_std: 0.0017
-    global_rank: 21
-    paper_rank: 118
-    rank_delta: 97
-    rank_delta_abs: 97
+    global_rank: 48
+    paper_rank: 171
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: On the Connection Between MPNN and Graph Transformer
+    comparison_source_arxiv: '2301.11956'
     is_best: false
     is_std_outlier: false
   - model: GatedGCN+RWSE
@@ -4134,17 +4126,17 @@ results:
     date_iso: '2023-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.3357
-    at_pub_std: 0.0006
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_value: 0.2529
+    at_pub_std: 0.0009
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2024-11-19'
     value_gap_source_date_label: KDD 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.08279999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -4160,15 +4152,15 @@ results:
     value_note: ''
     sort_value: 0.2485
     sort_std: 0.0022
-    global_rank: 33
-    paper_rank: 111
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 67
+    paper_rank: 164
+    rank_delta: 97
+    rank_delta_abs: 97
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: On the Connection Between MPNN and Graph Transformer
+    comparison_source_arxiv: '2301.11956'
     is_best: false
     is_std_outlier: false
   - model: CIN
@@ -4228,8 +4220,8 @@ results:
     value_note: ''
     sort_value: 0.2523
     sort_std: 0.0013
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4296,8 +4288,8 @@ results:
     value_note: ''
     sort_value: 0.2529
     sort_std: 0.0016
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4364,8 +4356,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0012
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4412,32 +4404,33 @@ results:
     at_pub_source_title: LRGB
     at_pub_source_date_iso: '2022-06-16'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2026-05-12'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2025-02-03'
+    value_gap_source_date_label: ICLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.2683
-    true_std: 0.0043
-    value_gap_source_arxiv: '2605.12358'
-    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    true_value: 0.268
+    true_std: 0.004
+    value_gap_source_arxiv: '2502.01122'
+    value_gap_source_title: Learning Efficient Positional Encodings with Graph Neural
+      Networks
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.00029999999999996696
     has_value_note: false
     value_note: ''
-    sort_value: 0.2683
-    sort_std: 0.0043
-    global_rank: 95
-    paper_rank: 95
+    sort_value: 0.268
+    sort_std: 0.004
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4500,8 +4493,8 @@ results:
     value_note: ''
     sort_value: 0.3471
     sort_std: 0.001
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4568,8 +4561,8 @@ results:
     value_note: ''
     sort_value: 0.4351
     sort_std: 0.0008
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4591,9 +4584,42 @@ results:
 - &id001
   dataset: ZINC
   rows:
-  - model: Subgraphormer
+  - model: GPS
+    model_key: tigt
+    model_plain: GPS
+    value: 0.014
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: GRaM
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.014
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPS
     model_key: ppgn++
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.001
     metric: MAE
@@ -4616,17 +4642,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.02
     sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: subgraphormer
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.002
     metric: MAE
@@ -4650,13 +4676,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.02
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: CIN
     model_key: cin
@@ -4715,8 +4741,8 @@ results:
     value_note: ''
     sort_value: 0.021
     sort_std: 0.001
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4724,7 +4750,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: CIN++-small
     model_key: cin++-small
@@ -4783,8 +4809,8 @@ results:
     value_note: ''
     sort_value: 0.044
     sort_std: 0.004
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

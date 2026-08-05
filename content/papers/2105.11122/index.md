@@ -83,9 +83,9 @@ results:
 - &id002
   dataset: IMDB
   rows:
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-sc
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8133
     std: 0.0179
     metric: Micro-F1
@@ -94,9 +94,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -116,9 +116,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: sage ban
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8073
     std: 0.002
     metric: Micro-F1
@@ -149,9 +149,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-cs
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8033
     std: 0.0094
     metric: Micro-F1
@@ -160,9 +160,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -241,9 +241,9 @@ results:
     sort_value: 0.7311
     sort_std: null
     global_rank: 34
-    paper_rank: 88
-    rank_delta: 54
-    rank_delta_abs: 54
+    paper_rank: 89
+    rank_delta: 55
+    rank_delta_abs: 55
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -311,9 +311,9 @@ results:
     sort_value: 0.6813
     sort_std: 0.0083
     global_rank: 45
-    paper_rank: 89
-    rank_delta: 44
-    rank_delta_abs: 44
+    paper_rank: 90
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -381,9 +381,9 @@ results:
     sort_value: 0.6808
     sort_std: 0.0049
     global_rank: 46
-    paper_rank: 82
-    rank_delta: 36
-    rank_delta_abs: 36
+    paper_rank: 83
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -451,9 +451,9 @@ results:
     sort_value: 0.6769
     sort_std: 0.0064
     global_rank: 49
-    paper_rank: 77
-    rank_delta: 28
-    rank_delta_abs: 28
+    paper_rank: 78
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -518,8 +518,8 @@ results:
     value_note: ''
     sort_value: 0.672
     sort_std: 0.0057
-    global_rank: 54
-    paper_rank: 74
+    global_rank: 55
+    paper_rank: 75
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -586,8 +586,8 @@ results:
     value_note: ''
     sort_value: 0.6651
     sort_std: 0.0028
-    global_rank: 60
-    paper_rank: 74
+    global_rank: 61
+    paper_rank: 75
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -653,8 +653,8 @@ results:
     value_note: ''
     sort_value: 0.6422
     sort_std: 0.0103
-    global_rank: 70
-    paper_rank: 75
+    global_rank: 71
+    paper_rank: 76
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -721,8 +721,8 @@ results:
     value_note: ''
     sort_value: 0.6206
     sort_std: null
-    global_rank: 81
-    paper_rank: 78
+    global_rank: 82
+    paper_rank: 79
     rank_delta: -3
     rank_delta_abs: 3
     rank_delta_direction: better
@@ -780,7 +780,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5514
     sort_std: null
-    global_rank: 111
+    global_rank: 112
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -850,8 +850,8 @@ results:
     value_note: ''
     sort_value: 0.464
     sort_std: 0.01
-    global_rank: 132
-    paper_rank: 71
+    global_rank: 133
+    paper_rank: 72
     rank_delta: -61
     rank_delta_abs: 61
     rank_delta_direction: better
@@ -1096,8 +1096,8 @@ results:
     value_note: ''
     sort_value: 0.4927
     sort_std: 0.0061
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1163,8 +1163,8 @@ results:
     value_note: ''
     sort_value: 0.4811
     sort_std: 0.0048
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1222,7 +1222,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4781
     sort_std: null
-    global_rank: 36
+    global_rank: 37
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1284,7 +1284,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4728
     sort_std: null
-    global_rank: 38
+    global_rank: 40
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1356,8 +1356,8 @@ results:
     value_note: ''
     sort_value: 0.4678
     sort_std: 0.0067
-    global_rank: 38
-    paper_rank: 40
+    global_rank: 40
+    paper_rank: 42
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -1425,8 +1425,8 @@ results:
     value_note: ''
     sort_value: 0.3767
     sort_std: null
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1494,8 +1494,8 @@ results:
     value_note: ''
     sort_value: 0.3487
     sort_std: null
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1564,10 +1564,10 @@ results:
     value_note: ''
     sort_value: 0.2692
     sort_std: 0.0026
-    global_rank: 57
-    paper_rank: 48
-    rank_delta: -9
-    rank_delta_abs: 9
+    global_rank: 51
+    paper_rank: 49
+    rank_delta: -2
+    rank_delta_abs: 2
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -1607,5 +1607,6 @@ datasets_by_scope:
     - dataset: IMDB
       dataset_slug: imdb
 single_proposed_model: R-HGNN
+main_figure: /figures/2105.11122/main_figure.jpegoptim.jpg
 ---
 

@@ -132,9 +132,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: exphormer + lappe
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -165,9 +165,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: graphgps + rwse
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4685
     std: 0.0009
     metric: MRR
@@ -322,9 +322,9 @@ results:
     sort_value: 0.4526
     sort_std: 0.0006
     global_rank: 24
-    paper_rank: 37
-    rank_delta: 13
-    rank_delta_abs: 13
+    paper_rank: 38
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -580,8 +580,8 @@ results:
     value_note: ''
     sort_value: 0.3442
     sort_std: 0.0006
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -639,7 +639,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3441
     sort_std: 0.0008
-    global_rank: 38
+    global_rank: 39
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -701,7 +701,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3414
     sort_std: 0.0006
-    global_rank: 38
+    global_rank: 39
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -763,7 +763,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3395
     sort_std: 0.0013
-    global_rank: 38
+    global_rank: 39
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -825,7 +825,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3364
     sort_std: 0.0008
-    global_rank: 39
+    global_rank: 40
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -887,7 +887,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3287
     sort_std: 0.002
-    global_rank: 43
+    global_rank: 44
     has_value_gap: false
     has_value_note: false
     value_gap: null

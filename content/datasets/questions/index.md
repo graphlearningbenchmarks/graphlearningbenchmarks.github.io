@@ -1,7 +1,7 @@
 ---
 title: Questions
 slug: questions
-benchmark: Heterophilic Graphs
+benchmark: Heterophily Benchmark
 task_type: node_classification
 description: Yandex Q&A expert network binary node classification from the heterophilic
   benchmark.
@@ -9,14 +9,24 @@ primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
 stats: null
-result_count: 266
+result_count: 291
 best_model:
-  model: MLP
-  value: 0.9733
+  model: GraphSAGE + UniGAP
+  value: 0.8421
   metric: ROC-AUC
-  arxiv_id: '2405.20445'
-  paper_title: Fully-inductive Node Classification on Arbitrary Graphs
+  arxiv_id: '2407.19420'
+  paper_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+    Over-Smoothing in Node Classification Tasks'
 papers:
+- arxiv_id: '2606.05046'
+  title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+    Graph Machine Learning'
+  date_iso: '2026-06-03'
+  venue: ''
+- arxiv_id: '2605.13383'
+  title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+  date_iso: '2026-05-13'
+  venue: ''
 - arxiv_id: '2604.19028'
   title: Learning Posterior Predictive Distributions for Node Classification from
     Synthetic Graph Priors
@@ -57,6 +67,10 @@ papers:
   title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
   date_iso: '2025-08-24'
   venue: ''
+- arxiv_id: '2508.05070'
+  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+  date_iso: '2025-08-07'
+  venue: ''
 - arxiv_id: '2506.15448'
   title: Semi-supervised Graph Anomaly Detection via Robust Homophily Learning
   date_iso: '2025-06-18'
@@ -78,13 +92,13 @@ papers:
   title: Even Sparser Graph Transformers
   date_iso: '2024-11-25'
   venue: NeurIPS 2024
-- arxiv_id: '2411.06427'
-  title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-  date_iso: '2024-11-10'
-  venue: NeurIPS 2024
 - arxiv_id: '2411.05274'
   title: Distributed-Order Fractional Graph Operating Network
   date_iso: '2024-11-08'
+  venue: NeurIPS 2024
+- arxiv_id: '2410.05499'
+  title: Unitary convolutions for learning on graphs and groups
+  date_iso: '2024-10-07'
   venue: NeurIPS 2024
 - arxiv_id: '2410.02158'
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
@@ -110,6 +124,10 @@ papers:
 - arxiv_id: '2405.16185'
   title: Differentiable Cluster Graph Neural Network
   date_iso: '2024-05-25'
+  venue: ''
+- arxiv_id: '2405.15540'
+  title: Bundle Neural Networks for message diffusion on graphs
+  date_iso: '2024-05-24'
   venue: ''
 - arxiv_id: '2404.17099'
   title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
@@ -158,374 +176,16 @@ variants:
   - ROC-AUC
   - Accuracy
   - Average Precision
+  - macro-F1
   metric_display_names:
   - ROC-AUC
   - Accuracy
   - Average Precision
+  - macro-F1
   show_all_metrics_desktop: false
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: MLP
-    model_plain: MLP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2405.20445'
-    title: Fully-inductive Node Classification on Arbitrary Graphs
-    date: May 30, 2024
-    date_iso: '2024-05-30'
-    date_display: May 2024
-    codebase_url: https://github.com/DeepGraphLearning/GraphAny
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9733
-    - null
-    - null
-    metric_stds:
-    - 0.0006
-    - null
-    - null
-  - model: AGS-GNN
-    model_plain: AGS-GNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: Feb 14, 2022
-    date_iso: '2022-02-14'
-    date_display: Feb 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9727
-    - null
-    - null
-    metric_stds:
-    - 0.0004
-    - null
-    - null
-  - model: GCN
-    model_plain: GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.20445'
-    title: Fully-inductive Node Classification on Arbitrary Graphs
-    date: May 30, 2024
-    date_iso: '2024-05-30'
-    date_display: May 2024
-    codebase_url: https://github.com/DeepGraphLearning/GraphAny
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9715
-    - null
-    - null
-    metric_stds:
-    - 0.0004
-    - null
-    - null
-  - model: GAT
-    model_plain: GAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.20445'
-    title: Fully-inductive Node Classification on Arbitrary Graphs
-    date: May 30, 2024
-    date_iso: '2024-05-30'
-    date_display: May 2024
-    codebase_url: https://github.com/DeepGraphLearning/GraphAny
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9711
-    - null
-    - null
-    metric_stds:
-    - 0.0002
-    - null
-    - null
-  - model: GraphAny
-    model_plain: GraphAny
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.20445'
-    title: Fully-inductive Node Classification on Arbitrary Graphs
-    date: May 30, 2024
-    date_iso: '2024-05-30'
-    date_display: May 2024
-    codebase_url: https://github.com/DeepGraphLearning/GraphAny
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.971
-    - null
-    - null
-    metric_stds:
-    - 0.0001
-    - null
-    - null
-  - model: LINKX
-    model_plain: LINKX
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: Feb 14, 2022
-    date_iso: '2022-02-14'
-    date_display: Feb 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9706
-    - null
-    - null
-    metric_stds:
-    - 0.0003
-    - null
-    - null
-  - model: ACM-GCN
-    model_plain: ACM-GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: Feb 14, 2022
-    date_iso: '2022-02-14'
-    date_display: Feb 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9702
-    - null
-    - null
-    metric_stds:
-    - 0.0167
-    - null
-    - null
-  - model: BWGNN
-    model_plain: BWGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_iso: '2024-11-10'
-    date_display: Nov 2024
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9603
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: AMNet
-    model_plain: AMNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_iso: '2024-11-10'
-    date_display: Nov 2024
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9358
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: BernNet
-    model_plain: BernNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_iso: '2024-11-10'
-    date_display: Nov 2024
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9237
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: GAT
-    model_plain: GAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_iso: '2024-11-10'
-    date_display: Nov 2024
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.906
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: GIN
-    model_plain: GIN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_iso: '2024-11-10'
-    date_display: Nov 2024
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8643
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
   - model: GraphSAGE + UniGAP
     model_plain: GraphSAGE + UniGAP
     is_baseline: false
@@ -547,14 +207,16 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8421
     - null
     - null
+    - null
     metric_stds:
     - 0.008
+    - null
     - null
     - null
   - model: H2GCN + UniGAP
@@ -578,14 +240,16 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8359
     - null
     - null
+    - null
     metric_stds:
     - 0.007
+    - null
     - null
     - null
   - model: GCN + UniGAP
@@ -609,14 +273,16 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8273
     - null
     - null
+    - null
     metric_stds:
     - 0.009
+    - null
     - null
     - null
   - model: H2GCN + AdaEdge
@@ -646,8 +312,10 @@ variants:
     - 0.8134
     - null
     - null
+    - null
     metric_stds:
     - 0.007
+    - null
     - null
     - null
   - model: GCN +AdaEdge
@@ -677,8 +345,74 @@ variants:
     - 0.8085
     - null
     - null
+    - null
     metric_stds:
     - 0.008
+    - null
+    - null
+    - null
+  - model: Tango GatedGCN
+    model_plain: Tango GatedGCN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8039
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0104
+    - null
+    - null
+    - null
+  - model: Tango GPS
+    model_plain: Tango GPS
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8032
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0107
+    - null
     - null
     - null
   - model: GraphSAGE + AdaEdge
@@ -708,8 +442,138 @@ variants:
     - 0.8017
     - null
     - null
+    - null
     metric_stds:
     - 0.01
+    - null
+    - null
+    - null
+  - model: Schrödinger
+    model_plain: Schrödinger
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8014
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.002
+    - null
+    - null
+    - null
+  - model: Co-GNN(Σ,Σ)
+    model_plain: Co-GNN(Σ,Σ)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8002
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0086
+    - null
+    - null
+    - null
+  - model: Lie Unitary GCN
+    model_plain: Lie Unitary GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.478
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.05499'
+    title: Unitary convolutions for learning on graphs and groups
+    date: Oct 7, 2024
+    date_iso: '2024-10-07'
+    date_display: Oct 2024
+    codebase_url: https://github.com/Weber-GeoML/Unitary_Convolutions
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8001
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0043
+    - null
+    - null
+    - null
+  - model: Lie UniGCN
+    model_plain: Lie UniGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8001
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0043
+    - null
     - null
     - null
   - model: GCN + HalfHop
@@ -739,8 +603,10 @@ variants:
     - 0.796
     - null
     - null
+    - null
     metric_stds:
     - 0.011
+    - null
     - null
     - null
   - model: H2GCN
@@ -770,8 +636,74 @@ variants:
     - 0.7928
     - null
     - null
+    - null
     metric_stds:
     - 0.008
+    - null
+    - null
+    - null
+  - model: Unitary GCN
+    model_plain: Unitary GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.05499'
+    title: Unitary convolutions for learning on graphs and groups
+    date: Oct 7, 2024
+    date_iso: '2024-10-07'
+    date_display: Oct 2024
+    codebase_url: https://github.com/Weber-GeoML/Unitary_Convolutions
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7921
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0079
+    - null
+    - null
+    - null
+  - model: UniGCN
+    model_plain: UniGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7921
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0079
+    - null
     - null
     - null
   - model: GCN
@@ -801,8 +733,10 @@ variants:
     - 0.7902
     - null
     - null
+    - null
     metric_stds:
     - 0.006
+    - null
     - null
     - null
   - model: Polynormer + Wideformer
@@ -831,8 +765,10 @@ variants:
     - 0.79
     - null
     - null
+    - null
     metric_stds:
     - 0.002
+    - null
     - null
     - null
   - model: H2GCN + HalfHop
@@ -862,8 +798,10 @@ variants:
     - 0.7896
     - null
     - null
+    - null
     metric_stds:
     - 0.019
+    - null
     - null
     - null
   - model: DC-GNN
@@ -892,8 +830,10 @@ variants:
     - 0.7896
     - null
     - null
+    - null
     metric_stds:
     - 0.006
+    - null
     - null
     - null
   - model: Polynormer-r
@@ -922,38 +862,10 @@ variants:
     - 0.7892
     - 0.7892
     - null
+    - null
     metric_stds:
     - 0.0089
     - 0.0089
-    - null
-  - model: PD-GNN
-    model_plain: PD-GNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: Feb 14, 2022
-    date_iso: '2022-02-14'
-    date_display: Feb 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7888
-    - null
-    - null
-    metric_stds:
-    - 0.0094
     - null
     - null
   - model: FSGNN
@@ -982,8 +894,10 @@ variants:
     - 0.7886
     - null
     - null
+    - null
     metric_stds:
     - 0.0092
+    - null
     - null
     - null
   - model: CPF
@@ -1013,8 +927,42 @@ variants:
     - 0.788
     - null
     - null
+    - null
     metric_stds:
     - 0.011
+    - null
+    - null
+    - null
+  - model: BuNN
+    model_plain: BuNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2405.15540'
+    title: Bundle Neural Networks for message diffusion on graphs
+    date: May 24, 2024
+    date_iso: '2024-05-24'
+    date_display: May 2024
+    codebase_url: https://github.com/jacobbamberger/BuNN
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7875
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0109
+    - null
     - null
     - null
   - model: GraphSAGE + HalfHop
@@ -1044,37 +992,9 @@ variants:
     - 0.7862
     - null
     - null
+    - null
     metric_stds:
     - 0.017
-    - null
-    - null
-  - model: GraphSAGE
-    model_plain: GraphSAGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_iso: '2024-11-10'
-    date_display: Nov 2024
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7816
-    - null
-    - null
-    metric_stds:
     - null
     - null
     - null
@@ -1104,8 +1024,10 @@ variants:
     - 0.7812
     - null
     - null
+    - null
     metric_stds:
     - 0.0032
+    - null
     - null
     - null
   - model: BGRL-ECG-GT-sep
@@ -1134,8 +1056,10 @@ variants:
     - 0.7812
     - null
     - null
+    - null
     metric_stds:
     - 0.0032
+    - null
     - null
     - null
   - model: GT-sep
@@ -1164,8 +1088,10 @@ variants:
     - 0.7805
     - null
     - null
+    - null
     metric_stds:
     - 0.0093
+    - null
     - null
     - null
   - model: Polynormer
@@ -1194,9 +1120,11 @@ variants:
     - 0.7795
     - 0.7795
     - null
+    - null
     metric_stds:
     - 0.0106
     - 0.0106
+    - null
     - null
   - model: Graphtransformer
     model_plain: Graphtransformer
@@ -1224,8 +1152,10 @@ variants:
     - 0.7795
     - null
     - null
+    - null
     metric_stds:
     - 0.0068
+    - null
     - null
     - null
   - model: GT
@@ -1237,12 +1167,12 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2405.16185'
-    title: Differentiable Cluster Graph Neural Network
-    date: May 25, 2024
-    date_iso: '2024-05-25'
+    arxiv_id: '2405.15540'
+    title: Bundle Neural Networks for message diffusion on graphs
+    date: May 24, 2024
+    date_iso: '2024-05-24'
     date_display: May 2024
-    codebase_url: ''
+    codebase_url: https://github.com/jacobbamberger/BuNN
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
@@ -1254,8 +1184,10 @@ variants:
     - 0.7795
     - null
     - null
+    - null
     metric_stds:
     - 0.0068
+    - null
     - null
     - null
   - model: MLPBGRL-GT-sep
@@ -1284,8 +1216,74 @@ variants:
     - 0.7785
     - null
     - null
+    - null
     metric_stds:
     - 0.0045
+    - null
+    - null
+    - null
+  - model: GPS GCN+Performer (LapPE)
+    model_plain: GPS GCN+Performer (LapPE)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7785
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0125
+    - null
+    - null
+    - null
+  - model: GAT (RWSE)
+    model_plain: GAT (RWSE)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7783
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0122
+    - null
     - null
     - null
   - model: MLP-ECG-GT-sep
@@ -1314,8 +1312,42 @@ variants:
     - 0.7782
     - null
     - null
+    - null
     metric_stds:
     - 0.0043
+    - null
+    - null
+    - null
+  - model: GCN (RWSE)
+    model_plain: GCN (RWSE)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7781
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.014
+    - null
     - null
     - null
   - model: GCN+JDR
@@ -1344,8 +1376,10 @@ variants:
     - 0.7752
     - null
     - null
+    - null
     metric_stds:
     - 0.0063
+    - null
     - null
     - null
   - model: ECG-GCN
@@ -1374,8 +1408,10 @@ variants:
     - 0.775
     - null
     - null
+    - null
     metric_stds:
     - 0.0035
+    - null
     - null
     - null
   - model: BGRL-ECG-GCN
@@ -1404,8 +1440,10 @@ variants:
     - 0.775
     - null
     - null
+    - null
     metric_stds:
     - 0.0035
+    - null
     - null
     - null
   - model: GAT
@@ -1417,16 +1455,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: Feb 14, 2022
-    date_iso: '2022-02-14'
-    date_display: Feb 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2403.12529'
+    title: Contextualized Messages Boost Graph Representations
+    date: Mar 19, 2024
+    date_iso: '2024-03-19'
+    date_display: Mar 2024
+    codebase_url: https://github.com/briangodwinlim/SIR-GCN
+    published_conference: TMLR 2024
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1434,8 +1472,10 @@ variants:
     - 0.7743
     - null
     - null
+    - null
     metric_stds:
     - 0.012
+    - null
     - null
     - null
   - model: ECG-GAT-sep
@@ -1464,8 +1504,10 @@ variants:
     - 0.7738
     - null
     - null
+    - null
     metric_stds:
     - 0.0018
+    - null
     - null
     - null
   - model: BGRL-ECG-GAT-sep
@@ -1494,8 +1536,10 @@ variants:
     - 0.7738
     - null
     - null
+    - null
     metric_stds:
     - 0.0018
+    - null
     - null
     - null
   - model: MLPBGRL-ECG-GCN
@@ -1524,8 +1568,10 @@ variants:
     - 0.7732
     - null
     - null
+    - null
     metric_stds:
     - 0.0031
+    - null
     - null
     - null
   - model: MLP-ECG-GAT-sep
@@ -1554,8 +1600,10 @@ variants:
     - 0.773
     - null
     - null
+    - null
     metric_stds:
     - 0.0047
+    - null
     - null
     - null
   - model: FAGCN
@@ -1584,8 +1632,10 @@ variants:
     - 0.7724
     - null
     - null
+    - null
     metric_stds:
     - 0.0126
+    - null
     - null
     - null
   - model: ECG-SAGE
@@ -1614,8 +1664,10 @@ variants:
     - 0.7723
     - null
     - null
+    - null
     metric_stds:
     - 0.0036
+    - null
     - null
     - null
   - model: BGRL-ECG-SAGE
@@ -1644,8 +1696,10 @@ variants:
     - 0.7723
     - null
     - null
+    - null
     metric_stds:
     - 0.0036
+    - null
     - null
     - null
   - model: GPS GAT+Performer
@@ -1674,65 +1728,132 @@ variants:
     - 0.7714
     - null
     - null
+    - null
     metric_stds:
     - 0.0149
     - null
     - null
-  row_count: 266
+    - null
+  - model: GPS GAT+Performer (RWSE)
+    model_plain: GPS GAT+Performer (RWSE)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7714
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0149
+    - null
+    - null
+    - null
+  - model: MLPBGRL-GAT-sep
+    model_plain: MLPBGRL-GAT-sep
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2306.12943'
+    title: Evolving Computation Graphs
+    date: Jun 22, 2023
+    date_iso: '2023-06-22'
+    date_display: Jun 2023
+    codebase_url: ''
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7697
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0045
+    - null
+    - null
+    - null
+  row_count: 291
   rows_json: /data/datasets/questions/standard-split-rows.json
   chart_json: /data/datasets/questions/standard-split-chart.json
   arch_counts:
-    gnn: 172
-    hybrid: 32
-    graph_transformer: 19
+    gnn: 181
+    hybrid: 37
+    graph_transformer: 28
     llm: 10
     walk: 0
     traditional: 12
   metric_counts:
-  - 207
-  - 49
+  - 218
+  - 76
   - 12
+  - 14
   milestones: &id001
-  - value: 0.9727
-    std: 0.0004
-    model: AGS-GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: '2022-02-14'
-  - value: 0.9733
-    std: 0.0006
-    model: MLP
-    arxiv_id: '2405.20445'
-    title: Fully-inductive Node Classification on Arbitrary Graphs
-    date: '2024-05-30'
+  - value: 0.7886
+    std: 0.0092
+    model: FSGNN
+    arxiv_id: '2306.12943'
+    title: Evolving Computation Graphs
+    date: '2023-06-22'
+  - value: 0.7892
+    std: 0.0089
+    model: Polynormer-r
+    arxiv_id: '2403.01232'
+    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
+    date: '2024-03-02'
+  - value: 0.7896
+    std: 0.006
+    model: DC-GNN
+    arxiv_id: '2405.16185'
+    title: Differentiable Cluster Graph Neural Network
+    date: '2024-05-25'
+  - value: 0.8421
+    std: 0.008
+    model: GraphSAGE + UniGAP
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: '2024-07-28'
   milestones_by_metric:
     ROC-AUC: *id001
     Accuracy:
-    - value: 0.7517
-      std: 0.0099
-      model: CDE-GRAND-GAT
-      arxiv_id: '2305.16780'
-      title: Graph Neural Convection-Diffusion with Heterophily
-      date: '2023-05-26'
-    - value: 0.7892
-      std: 0.0089
-      model: Polynormer-r
-      arxiv_id: '2403.01232'
-      title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-      date: '2024-03-02'
-    - value: 0.9716
-      std: 0.0006
-      model: MeanGNN
-      arxiv_id: '2506.14291'
-      title: 'Equivariance Everywhere All At Once: A Recipe for Graph Foundation Models'
-      date: '2025-06-17'
+    - value: 0.9727
+      std: null
+      model: AGS-GNN
+      arxiv_id: '2202.07082'
+      title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
+      date: '2022-02-14'
     - value: 0.9733
-      std: 0.0006
+      std: null
       model: MLP
-      arxiv_id: '2604.19028'
-      title: Learning Posterior Predictive Distributions for Node Classification from
-        Synthetic Graph Priors
-      date: '2026-04-21'
+      arxiv_id: '2405.20445'
+      title: Fully-inductive Node Classification on Arbitrary Graphs
+      date: '2024-05-30'
     Average Precision:
     - value: 0.2276
       std: 0.0055
@@ -1740,5 +1861,13 @@ variants:
       arxiv_id: '2509.21489'
       title: 'GraphPFN: A Prior-Data Fitted Graph Foundation Model'
       date: '2025-09-25'
+    macro-F1:
+    - value: 0.543
+      std: null
+      model: CR-TAS
+      arxiv_id: '2606.05046'
+      title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+        Graph Machine Learning'
+      date: '2026-06-03'
 ---
 

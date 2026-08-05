@@ -68,8 +68,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - IS-GIB
-mrr: 0.26
-adjusted_mrr: 0.1733
+mrr: 0.2579
+adjusted_mrr: 0.172
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -86,9 +86,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -720,8 +720,8 @@ results:
     value_note: ''
     sort_value: 0.8874
     sort_std: 0.0127
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -788,8 +788,8 @@ results:
     value_note: ''
     sort_value: 0.8794
     sort_std: 0.0285
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -811,9 +811,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -845,9 +845,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -879,9 +879,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -971,9 +971,9 @@ results:
     sort_value: 0.9572
     sort_std: 0.0031
     global_rank: 4
-    paper_rank: 384
-    rank_delta: 380
-    rank_delta_abs: 380
+    paper_rank: 443
+    rank_delta: 439
+    rank_delta_abs: 439
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1039,9 +1039,9 @@ results:
     sort_value: 0.9557
     sort_std: 0.004
     global_rank: 6
-    paper_rank: 486
-    rank_delta: 480
-    rank_delta_abs: 480
+    paper_rank: 560
+    rank_delta: 554
+    rank_delta_abs: 554
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1107,9 +1107,9 @@ results:
     sort_value: 0.9538
     sort_std: 0.0023
     global_rank: 7
-    paper_rank: 421
-    rank_delta: 414
-    rank_delta_abs: 414
+    paper_rank: 489
+    rank_delta: 482
+    rank_delta_abs: 482
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1174,8 +1174,8 @@ results:
     value_note: ''
     sort_value: 0.8915
     sort_std: 0.0302
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1242,8 +1242,8 @@ results:
     value_note: ''
     sort_value: 0.8623
     sort_std: 0.0167
-    global_rank: 224
-    paper_rank: 224
+    global_rank: 251
+    paper_rank: 251
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1310,8 +1310,8 @@ results:
     value_note: ''
     sort_value: 0.8598
     sort_std: 0.0312
-    global_rank: 236
-    paper_rank: 236
+    global_rank: 262
+    paper_rank: 262
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1378,8 +1378,8 @@ results:
     value_note: ''
     sort_value: 0.8576
     sort_std: 0.0298
-    global_rank: 250
-    paper_rank: 250
+    global_rank: 276
+    paper_rank: 276
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1446,8 +1446,8 @@ results:
     value_note: ''
     sort_value: 0.8497
     sort_std: 0.0245
-    global_rank: 291
-    paper_rank: 291
+    global_rank: 328
+    paper_rank: 328
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1514,8 +1514,8 @@ results:
     value_note: ''
     sort_value: 0.8495
     sort_std: 0.0287
-    global_rank: 292
-    paper_rank: 292
+    global_rank: 329
+    paper_rank: 329
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1582,8 +1582,8 @@ results:
     value_note: ''
     sort_value: 0.8412
     sort_std: 0.0395
-    global_rank: 341
-    paper_rank: 341
+    global_rank: 391
+    paper_rank: 391
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1619,5 +1619,6 @@ datasets_by_scope:
     - dataset: CiteSeer
       dataset_slug: citeseer
 single_proposed_model: IS-GIB
+main_figure: /figures/2306.15902/main_figure.jpegoptim.jpg
 ---
 

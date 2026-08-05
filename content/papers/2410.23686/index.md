@@ -103,10 +103,10 @@ results:
     published_conference: NeurIPS 2024
     at_pub_value: 0.246
     at_pub_std: 0.0007
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.10360000000000003
@@ -128,20 +128,53 @@ results:
     sort_value: 0.2421
     sort_std: 0.0016
     global_rank: 1
-    paper_rank: 116
-    rank_delta: 115
-    rank_delta_abs: 115
+    paper_rank: 169
+    rank_delta: 168
+    rank_delta_abs: 168
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
-      Nodes'
-    comparison_source_arxiv: '2405.11951'
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
+  - model: GMN
+    model_key: tango_gps
+    model_plain: GMN
+    value: 0.2422
+    std: 0.0014
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Tango does not use additional encodings.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
     model_key: nba-gin+lappe
-    model_plain: SAN+RWSE
+    model_plain: GMN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -164,42 +197,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.2424
     sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: gin
-    model_plain: SAN+RWSE
-    value: 0.2429
-    std: 0.0019
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.12358'
-    title: From Message-Passing to Linearized Graph Sequence Models
-    date: May 12, 2026
-    date_display: May 2026
-    date_iso: '2026-05-12'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.2429
-    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -237,10 +237,10 @@ results:
     published_conference: NeurIPS 2024
     at_pub_value: 0.2477
     at_pub_std: 0.0009
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.088
@@ -261,16 +261,16 @@ results:
     value_note: ''
     sort_value: 0.2431
     sort_std: 0.002
-    global_rank: 4
-    paper_rank: 111
-    rank_delta: 107
-    rank_delta_abs: 107
+    global_rank: 7
+    paper_rank: 164
+    rank_delta: 157
+    rank_delta_abs: 157
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
-      Nodes'
-    comparison_source_arxiv: '2405.11951'
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
     is_best: true
     is_std_outlier: false
   - model: GINE
@@ -305,10 +305,10 @@ results:
     published_conference: NeurIPS 2024
     at_pub_value: 0.2473
     at_pub_std: 0.0017
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2024-11-19'
     value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: 0.10740000000000002
@@ -329,16 +329,16 @@ results:
     value_note: ''
     sort_value: 0.2473
     sort_std: 0.0017
-    global_rank: 21
-    paper_rank: 118
-    rank_delta: 97
-    rank_delta_abs: 97
+    global_rank: 48
+    paper_rank: 171
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
-      Nodes'
-    comparison_source_arxiv: '2405.11951'
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
     is_best: false
     is_std_outlier: false
   - model: Exphormer
@@ -397,8 +397,8 @@ results:
     value_note: ''
     sort_value: 0.2481
     sort_std: 0.0007
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -456,7 +456,7 @@ results:
     today_delta_significant: false
     sort_value: 0.25120000000000003
     sort_std: null
-    global_rank: 51
+    global_rank: 96
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -465,6 +465,141 @@ results:
     rank_delta: null
     rank_delta_abs: null
     rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DRew-GCN
+    model_key: drew-gcn
+    model_plain: DRew-GCN
+    value: 0.2536
+    std: null
+    paper_value: 0.2536
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: null
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 31, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-31'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: 0.2536
+    at_pub_std: 0.0015
+    at_pub_source_arxiv: '2405.19121'
+    at_pub_source_title: Spatio-Spectral Graph Neural Networks
+    at_pub_source_date_iso: '2024-05-29'
+    at_pub_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2024-05-29'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2536
+    true_std: 0.0015
+    value_gap_source_arxiv: '2405.19121'
+    value_gap_source_title: Spatio-Spectral Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2536
+    sort_std: 0.0015
+    global_rank: 110
+    paper_rank: 110
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PathNN
+    model_key: pathnn
+    model_plain: PathNN
+    value: 0.2545
+    std: null
+    paper_value: 0.2545
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: null
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 31, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-31'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: 0.254
+    at_pub_std: 0.0046
+    at_pub_source_arxiv: '2312.01538'
+    at_pub_source_title: Recurrent Distance Filtering for Graph Representation Learning
+    at_pub_source_date_iso: '2023-12-03'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-12-03'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.0005000000000000004
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.254
+    true_std: 0.0046
+    value_gap_source_arxiv: '2312.01538'
+    value_gap_source_title: Recurrent Distance Filtering for Graph Representation
+      Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0005000000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.254
+    sort_std: 0.0046
+    global_rank: 117
+    paper_rank: 117
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -526,147 +661,12 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0012
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PathNN
-    model_key: pathnn
-    model_plain: PathNN
-    value: 0.2545
-    std: null
-    paper_value: 0.2545
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: null
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-31'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: 0.2545
-    at_pub_std: 0.0032
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2023-10-11'
-    value_gap_source_date_label: TMLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.2545
-    true_std: 0.0032
-    value_gap_source_arxiv: '2310.07430'
-    value_gap_source_title: Non-backtracking Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.2545
-    sort_std: 0.0032
-    global_rank: 69
-    paper_rank: 69
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DRew-GCN
-    model_key: drew-gcn
-    model_plain: DRew-GCN
-    value: 0.2536
-    std: null
-    paper_value: 0.2536
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: null
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 31, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-31'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-10-09'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.2766
-    true_std: 0.0019
-    value_gap_source_arxiv: '2510.08450'
-    value_gap_source_title: 'gLSTM: Mitigating Over-Squashing by Increasing Storage
-      Capacity'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.02300000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.2766
-    sort_std: 0.0019
-    global_rank: 100
-    paper_rank: 62
-    rank_delta: -38
-    rank_delta_abs: 38
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -728,8 +728,8 @@ results:
     value_note: ''
     sort_value: 0.3471
     sort_std: 0.001
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

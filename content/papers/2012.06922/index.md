@@ -49,8 +49,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FGConv-Sum
-mrr: 0.1043
-adjusted_mrr: 0.0696
+mrr: 0.1042
+adjusted_mrr: 0.0695
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
@@ -67,9 +67,9 @@ results:
 - &id002
   dataset: D&D
   rows:
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: gc-gnn (graphsage)
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -78,9 +78,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2309.00738'
     title: Rethinking the Power of Graph Canonization in Graph Representation Learning
       with Stability
@@ -101,9 +101,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: sugar
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8403
     std: 0.0133
     metric: Accuracy
@@ -135,9 +135,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: ortho-g-u-nets
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8387
     std: null
     metric: Accuracy
@@ -200,11 +200,10 @@ results:
     published_conference: JMLR 2020
     at_pub_value: 0.8243
     at_pub_std: null
-    at_pub_source_arxiv: '2007.11202'
-    at_pub_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
-      Graph Representation and Learning'
-    at_pub_source_date_iso: '2020-07-22'
-    at_pub_source_date_label: '2020'
+    at_pub_source_arxiv: '1905.05178'
+    at_pub_source_title: Graph U-Nets
+    at_pub_source_date_iso: '2019-05-11'
+    at_pub_source_date_label: '2019'
     value_gap_source_date_iso: '2021-09-23'
     value_gap_source_date_label: AAAI 2021
     gap_vs_at_pub: null
@@ -336,11 +335,10 @@ results:
     published_conference: JMLR 2020
     at_pub_value: 0.8064
     at_pub_std: null
-    at_pub_source_arxiv: '2007.11202'
-    at_pub_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
-      Graph Representation and Learning'
-    at_pub_source_date_iso: '2020-07-22'
-    at_pub_source_date_label: '2020'
+    at_pub_source_arxiv: '1905.05178'
+    at_pub_source_title: Graph U-Nets
+    at_pub_source_date_iso: '2019-05-11'
+    at_pub_source_date_label: '2019'
     value_gap_source_date_iso: '2020-07-22'
     value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
@@ -431,10 +429,10 @@ results:
     value_note: ''
     sort_value: 0.7978
     sort_std: null
-    global_rank: 28
-    paper_rank: 81
-    rank_delta: 53
-    rank_delta_abs: 53
+    global_rank: 29
+    paper_rank: 85
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -500,8 +498,8 @@ results:
     value_note: ''
     sort_value: 0.7937
     sort_std: null
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -567,10 +565,10 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.0229
-    global_rank: 60
-    paper_rank: 106
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 62
+    paper_rank: 111
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -634,8 +632,8 @@ results:
     value_note: ''
     sort_value: 0.7863
     sort_std: 0.0136
-    global_rank: 61
-    paper_rank: 62
+    global_rank: 63
+    paper_rank: 64
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -703,8 +701,8 @@ results:
     value_note: ''
     sort_value: 0.7845
     sort_std: null
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -772,8 +770,8 @@ results:
     value_note: ''
     sort_value: 0.7627
     sort_std: null
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -795,9 +793,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -828,9 +826,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -861,9 +859,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -952,9 +950,9 @@ results:
     sort_value: 0.933
     sort_std: 0.029
     global_rank: 34
-    paper_rank: 207
-    rank_delta: 173
-    rank_delta_abs: 173
+    paper_rank: 217
+    rank_delta: 183
+    rank_delta_abs: 183
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1020,9 +1018,9 @@ results:
     sort_value: 0.926
     sort_std: 0.042
     global_rank: 47
-    paper_rank: 76
-    rank_delta: 29
-    rank_delta_abs: 29
+    paper_rank: 78
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1087,8 +1085,8 @@ results:
     value_note: ''
     sort_value: 0.908
     sort_std: 0.025
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1155,10 +1153,10 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.057
-    global_rank: 135
-    paper_rank: 572
-    rank_delta: 437
-    rank_delta_abs: 437
+    global_rank: 141
+    paper_rank: 603
+    rank_delta: 462
+    rank_delta_abs: 462
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1197,11 +1195,12 @@ results:
     published_venue: JMLR 2020
     published_conference: JMLR 2020
     at_pub_value: 0.8583
-    at_pub_std: 0.017
-    at_pub_source_arxiv: '1905.11136'
-    at_pub_source_title: Provably Powerful Graph Networks
-    at_pub_source_date_iso: '2019-05-27'
-    at_pub_source_date_label: NeurIPS 2019
+    at_pub_std: null
+    at_pub_source_arxiv: '1901.08296'
+    at_pub_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
+    at_pub_source_date_iso: '2018-12-14'
+    at_pub_source_date_label: '2018'
     value_gap_source_date_iso: '2023-05-10'
     value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
@@ -1223,8 +1222,8 @@ results:
     value_note: ''
     sort_value: 0.8583
     sort_std: 0.0166
-    global_rank: 387
-    paper_rank: 387
+    global_rank: 408
+    paper_rank: 408
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1290,8 +1289,8 @@ results:
     value_note: ''
     sort_value: 0.858
     sort_std: 0.002
-    global_rank: 388
-    paper_rank: 392
+    global_rank: 409
+    paper_rank: 413
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -1337,33 +1336,33 @@ results:
     at_pub_source_title: Learning Convolutional Neural Networks for Graphs
     at_pub_source_date_iso: '2016-05-17'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2020-07-22'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2021-03-24'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.8368
-    true_std: null
-    value_gap_source_arxiv: '2007.11202'
-    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
-      Graph Representation and Learning'
+    true_value: 0.837
+    true_std: 0.015
+    value_gap_source_arxiv: '2103.13125'
+    value_gap_source_title: Learning Graph Representation by Aggregating Subgraphs
+      via Mutual Information Maximization
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.00019999999999997797
     has_value_note: false
     value_note: ''
-    sort_value: 0.8368
-    sort_std: null
-    global_rank: 477
-    paper_rank: 477
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.837
+    sort_std: 0.015
+    global_rank: 502
+    paper_rank: 506
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1425,10 +1424,10 @@ results:
     value_note: ''
     sort_value: 0.8244
     sort_std: 0.0129
-    global_rank: 524
-    paper_rank: 554
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 552
+    paper_rank: 586
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1462,5 +1461,6 @@ datasets_by_scope:
     - dataset: D&D
       dataset_slug: d-d
 single_proposed_model: FGConv-Sum
+main_figure: /figures/2012.06922/main_figure.jpegoptim.jpg
 ---
 

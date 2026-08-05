@@ -47,8 +47,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GAT
-mrr: 0.3684
-adjusted_mrr: 0.3684
+mrr: 0.3654
+adjusted_mrr: 0.3654
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -66,7 +66,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -75,9 +75,9 @@ results:
 - &id003
   dataset: ACM
   rows:
-  - model: SAGE
+  - model: GCN+P+D
     model_key: signgt
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -109,9 +109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
+  - model: GCN+P+D
     model_key: nodeformer
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
+  - model: GCN+P+D
     model_key: fagcn
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9487
     std: 0.0059
     metric: Accuracy
@@ -172,40 +172,6 @@ results:
     global_rank: 3
     sort_value: 0.9487
     sort_std: 0.0059
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAGE
-    model_key: specformer
-    model_plain: SAGE
-    value: 0.9454
-    std: 0.0043
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2310.11025'
-    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
-      Learning'
-    date: Oct 17, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-17'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 4
-    sort_value: 0.9454
-    sort_std: 0.0043
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -268,10 +234,10 @@ results:
     value_note: ''
     sort_value: 0.9424
     sort_std: 0.0043
-    global_rank: 6
-    paper_rank: 15
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 7
+    paper_rank: 18
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -336,8 +302,8 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -404,8 +370,8 @@ results:
     value_note: ''
     sort_value: 0.929
     sort_std: null
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -676,9 +642,9 @@ results:
 - &id001
   dataset: Coauthor-Physics
   rows:
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: geomancer
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9878
     std: 0.0012
     metric: Accuracy
@@ -710,9 +676,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: lgd
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9855
     std: 0.0012
     metric: Accuracy
@@ -744,9 +710,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: msh-gnn
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9837
     std: 0.0008
     metric: Accuracy
@@ -875,16 +841,16 @@ results:
     date_iso: '2021-12-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.955
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '2111.10698'
-    at_pub_source_title: Towards Graph Self-Supervised Learning with Contrastive Adjusted
-      Zooming
-    at_pub_source_date_iso: '2021-11-20'
-    at_pub_source_date_label: '2021'
+    at_pub_value: 0.962
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2103.14958'
+    at_pub_source_title: 'SelfGNN: Self-supervised Graph Neural Networks without explicit
+      negative sampling'
+    at_pub_source_date_iso: '2021-03-27'
+    at_pub_source_date_label: WWW 2021
     value_gap_source_date_iso: '2026-05-18'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.010000000000000009
+    gap_vs_at_pub: 0.0030000000000000027
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: true
@@ -910,9 +876,9 @@ results:
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Towards Graph Self-Supervised Learning with Contrastive
-      Adjusted Zooming
-    comparison_source_arxiv: '2111.10698'
+    comparison_source_title: 'SelfGNN: Self-supervised Graph Neural Networks without
+      explicit negative sampling'
+    comparison_source_arxiv: '2103.14958'
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -972,8 +938,8 @@ results:
     value_note: ''
     sort_value: 0.953
     sort_std: 0.001
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -995,9 +961,9 @@ results:
 - &id002
   dataset: DBLP
   rows:
-  - model: STPGC
+  - model: ACGCL
     model_key: hg-scm
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -1029,9 +995,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: advsyngnn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9486
     std: 0.0012
     metric: Accuracy
@@ -1063,9 +1029,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: simplehgn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9446
     std: 0.0022
     metric: Accuracy
@@ -1155,9 +1121,9 @@ results:
     sort_value: 0.8859
     sort_std: 0.001
     global_rank: 23
-    paper_rank: 58
-    rank_delta: 35
-    rank_delta_abs: 35
+    paper_rank: 57
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1222,8 +1188,8 @@ results:
     value_note: ''
     sort_value: 0.872
     sort_std: null
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1290,8 +1256,8 @@ results:
     value_note: ''
     sort_value: 0.858
     sort_std: null
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1343,5 +1309,6 @@ datasets_by_scope:
     - dataset: Amazon2M
       dataset_slug: amazon2m
 single_proposed_model: GAT
+main_figure: /figures/2112.08331/main_figure.jpegoptim.jpg
 ---
 

@@ -79,8 +79,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - NewtonNet
-mrr: 0.0286
-adjusted_mrr: 0.0095
+mrr: 0.0244
+adjusted_mrr: 0.0081
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -255,10 +255,10 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 34
-    paper_rank: 50
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 40
+    paper_rank: 70
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -324,8 +324,8 @@ results:
     value_note: ''
     sort_value: 0.061
     sort_std: 0.009
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -372,8 +372,8 @@ results:
     at_pub_source_title: Directional Message Passing for Molecular Graphs
     at_pub_source_date_iso: '2020-03-06'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.13999999999999999
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -384,18 +384,18 @@ results:
     today_delta_significant: true
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.13999999999999999
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 50
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 42
+    paper_rank: 70
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -461,10 +461,10 @@ results:
     value_note: ''
     sort_value: 0.077
     sort_std: null
-    global_rank: 39
-    paper_rank: 49
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 45
+    paper_rank: 69
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -509,8 +509,8 @@ results:
       Dipole Moments and Partial Charges'
     at_pub_source_date_iso: '2019-02-22'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.32
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -521,19 +521,18 @@ results:
     today_delta_significant: true
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.29
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 59
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 46
+    paper_rank: 79
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -600,8 +599,8 @@ results:
     value_note: ''
     sort_value: 0.182
     sort_std: null
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -669,8 +668,8 @@ results:
     value_note: ''
     sort_value: 0.23
     sort_std: null
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -704,5 +703,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: NewtonNet
+main_figure: /figures/2108.02913/main_figure.jpegoptim.jpg
 ---
 

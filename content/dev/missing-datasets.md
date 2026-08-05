@@ -11,9 +11,9 @@ This page distinguishes between entries that are truly unresolved and stale pend
 
 Source: pending_datasets table in benchmarks.db
 
-**Tracked entries in DB:** 8424
-**Still unresolved:** 8077
-**Already covered now:** 347
+**Tracked entries in DB:** 8453
+**Still unresolved:** 8073
+**Already covered now:** 380
 
 ### Still unresolved
 
@@ -58,7 +58,6 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | Acetylsalicylic acid (N=1k) | 1809.01072 | MAE | MoleculeNet |  |
 | pending | Acetylsalicylic acid (N=50k) | 1809.01072 | MAE | MoleculeNet |  |
 | pending | ACL Anthology Network | 2408.05822 | Accuracy |  |  |
-| pending | ACM $\to$ DBLP | 2402.08907 | Micro-F1 |  |  |
 | pending | ACT | 2311.11114 | AUC |  |  |
 | pending | ACT | 2511.02354 | AUC |  |  |
 | pending | ACT | 2603.01626 | AUC |  |  |
@@ -97,6 +96,7 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | AIDS | 2406.15523 | AUROC | TUDataset | yes |
 | pending | AIDS | 2407.02057 | AUC | TUDataset | yes |
 | pending | AIDS | 2409.09957 | AUROC | TUDatasets | yes |
+| pending | AIDS | 2502.02379 | AUROC, Accuracy | TUDatasets | yes |
 | pending | AIDS | 2502.02719 | F1 | TUDataset | yes |
 | pending | AIDS | 2505.21285 | AUROC | TUDataset | yes |
 | pending | AIDS | 2603.29644 | AUC | TUDataset | yes |
@@ -130,7 +130,6 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | Airport | 2305.00139 | Accuracy |  |  |
 | pending | Airport | 2305.18965 | Accuracy, ROC |  |  |
 | pending | Airport | 2309.04082 | F1 |  |  |
-| pending | Airport | 2402.08907 | Accuracy |  |  |
 | pending | Airport | 2404.17099 | Accuracy |  |  |
 | pending | Airport | 2411.05274 | Accuracy |  |  |
 | pending | Airport | 2502.03251 | ACC |  |  |
@@ -212,7 +211,16 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | AMAC | 2303.07778 | Accuracy |  |  |
 | pending | AMAC | 2403.03670 | ACC |  |  |
 | pending | Amaz-Comp | 2305.17437 | Accuracy |  |  |
+| pending | Amazon | 1902.08730 | F1 |  |  |
+| pending | Amazon | 1905.01669 | ROC-AUC |  |  |
+| pending | Amazon | 1905.10881 | Recall |  |  |
+| pending | Amazon | 2006.15437 | F1 |  |  |
+| pending | Amazon | 2103.05872 | F1 |  |  |
+| pending | Amazon | 2104.10569 | Accuracy |  |  |
+| pending | Amazon | 2112.14936 | MRR, ROC-AUC | Heterogeneous Graph Benchmark (HGB) |  |
+| pending | Amazon | 2406.06642 | Accuracy |  | yes |
 | pending | Amazon | 2407.04236 | NMI |  |  |
+| pending | Amazon | 2407.14106 | Accuracy |  |  |
 | pending | Amazon | 2505.20853 | Accuracy |  | yes |
 | pending | Amazon | 2508.09320 | Accuracy |  | yes |
 | pending | Amazon (Book $\rightarrow$ Movie) | 2212.08174 | HR@10 |  |  |
@@ -370,8 +378,6 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | arXiv-GrQc | 2602.17071 | AUC |  |  |
 | pending | Arxiv-PubMed | 2310.13023 | Accuracy |  |  |
 | pending | Arxiv-S | 2305.13825 | PM |  |  |
-| pending | Arxiv-T1 | 2402.08907 | Accuracy |  |  |
-| pending | Arxiv-T3 | 2402.08907 | Accuracy |  |  |
 | pending | arxiv-year Coarse | 2110.14446 | Accuracy |  |  |
 | pending | Arxiv/DRGAT | 2410.19723 | F1 |  |  |
 | pending | Arxiv/SAGE | 2410.19723 | F1 |  |  |
@@ -405,6 +411,7 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | atax | 2504.19649 | ADRS |  |  |
 | pending | ATOM3D | 2106.03843 | AUROC, Accuracy, MAE, RMSE, global Rs, mean Rs |  |  |
 | pending | ATOM3D | 2202.09891 | LBA RMSE, PSR Global Rs, PSR Mean Rs, RSR Global Rs, RSR Mean Rs |  |  |
+| pending | Atrributed MUTAG | 2107.01952 | total BPE | TUDatasets | yes |
 | pending | Austen | 2001.07620 | Error |  |  |
 | pending | Authorship attribution | 2001.07620 | error |  |  |
 | pending | autoencoder experiment | 2110.05292 | MSE |  |  |
@@ -715,6 +722,7 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | Book-Crossing | 2107.08765 | AUC |  |  |
 | pending | Book-Crossing | 2204.08807 | AUC |  |  |
 | pending | BookCrossing | 2308.00404 | Recall |  |  |
+| pending | Books | 1506.04757 | Accuracy |  |  |
 | pending | Books | 2309.13885 | MRR |  |  |
 | pending | Books | 2502.00829 | Accuracy |  |  |
 | pending | Books | 2502.08071 | R@10 |  |  |
@@ -779,7 +787,6 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | brodatz-o-r-s-rs | 1410.3314 | Accuracy | Brodatz |  |
 | pending | Brontë | 2001.07620 | error |  |  |
 | pending | Brown | 2202.02466 | Accuracy |  |  |
-| pending | Brown | 2402.08907 | Accuracy |  |  |
 | pending | BSI-SVT | 2208.07239 | MRR |  |  |
 | pending | BSI-ZK | 2208.07239 | MRR |  |  |
 | pending | Buckyball catcher | 2209.14865 | MAE |  |  |
@@ -913,6 +920,7 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | celecoxib_rediscovery | 2206.12411 | AUC Top-10 |  |  |
 | pending | Celegans | 2406.16687 | ROC-AUC |  |  |
 | pending | Cell Effective Permeability | 2503.06337 | Success Percent |  |  |
+| pending | Cell Phones and Accessories | 1506.04757 | Accuracy |  |  |
 | pending | CEP | 1603.05629 | MAE |  |  |
 | pending | CEP | 1806.09206 | RMSE |  |  |
 | pending | CEP | 2002.10413 | Accuracy |  |  |
@@ -1065,7 +1073,6 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | Citation | 1910.03053 | Accuracy |  |  |
 | pending | Citation | 2212.00535 | AUC |  |  |
 | pending | Citation | 2212.08174 | Accuracy |  |  |
-| pending | Citation | 2402.08907 | Accuracy | Planetoid | yes |
 | pending | Citation | 2408.14512 | AUC, F1 |  |  |
 | pending | Citation | 2505.12709 | Accuracy |  |  |
 | pending | Citation | 2505.20089 | Accuracy |  |  |
@@ -1398,6 +1405,7 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | Cora-Full | 2402.04621 | Accuracy |  |  |
 | pending | Cora-Full | 2407.14732 | Accuracy |  |  |
 | pending | Cora-full | 2504.20430 | Accuracy |  |  |
+| pending | Cora-Full (PCA) | 2112.03499 | Accuracy |  | yes |
 | pending | CORA-H | 2110.04099 | Weighted-F1 |  | yes |
 | pending | Cora-H | 2110.04099 | Weighted-F1 | Heterophily Benchmark |  |
 | pending | Cora-H | 2208.08302 | Weighted-F1 |  |  |
@@ -1805,7 +1813,6 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | db | 1410.3314 | Accuracy |  |  |
 | pending | DB100k | 2011.03798 | MRR |  |  |
 | pending | dbAMP | 2501.17901 | F1 |  |  |
-| pending | DBLP $\to$ ACM | 2402.08907 | Micro-F1 |  |  |
 | pending | DBLP and ACM | 2403.01092 | Accuracy |  |  |
 | pending | DBLP(AuthorCitation) | 1503.03578 | Macro-F1, Micro-F1 |  |  |
 | pending | DBLP(PaperCitation) | 1503.03578 | Macro-F1, Micro-F1 |  |  |
@@ -1821,6 +1828,7 @@ ightarrow$D | 2403.01467 | Accuracy |  |  |
 | pending | DBpedia100k | 2310.04562 | MRR |  |  |
 | pending | DBpedia100K | 2410.12288 | MRR |  |  |
 | pending | DBpedia50k | 2407.07639 | EO, Fid_a, Fid_b |  |  |
+| pending | DCSBM | 1911.05485 | Accuracy |  |  |
 | pending | dd | 1410.3314 | Accuracy |  |  |
 | pending | DD | 1805.11921 | Accuracy | TU | yes |
 | pending | DD | 1905.11577 | Accuracy | TU | yes |
@@ -1946,6 +1954,7 @@ ightarrow$FR | 2403.01467 | Accuracy |  |  |
 | pending | DeformingPlate | 2010.03409 | RMSE |  |  |
 | pending | Degree Computing | 2402.08785 | Accuracy |  |  |
 | pending | DEKOIS | 2604.23134 | AUC |  |  |
+| pending | Delaney | 1801.03226 | RMSE | TUDatasets | yes |
 | pending | Delaney | 1806.09206 | RMSE | MoleculeNet | yes |
 | pending | Delaney | 2110.02667 | RMSE | MoleculeNet | yes |
 | pending | Delaney solubility | 1801.03226 | RMSE | MoleculeNet | yes |
@@ -2014,6 +2023,7 @@ ightarrow$FR | 2403.01467 | Accuracy |  |  |
 | pending | Diginetica | 1811.00855 | P@20 |  |  |
 | pending | Diginetica | 2012.06852 | P@10 |  |  |
 | pending | Diginetica | 2108.10560 | P@10 |  |  |
+| pending | Digital Music | 1506.04757 | Accuracy |  |  |
 | pending | Digits | 1903.11960 | Accuracy |  |  |
 | pending | Digits | 2102.05034 | Accuracy | TU | yes |
 | pending | Digits | 2201.05540 | F1-micro |  |  |
@@ -2145,7 +2155,6 @@ ightarrow$FR | 2403.01467 | Accuracy |  |  |
 | pending | Drugs | 2510.10402 | AS |  |  |
 | pending | Drugs | 2601.22327 | AtomSta |  |  |
 | pending | Drugs-75K | 2509.22468 | IP |  |  |
-| pending | dsbm | 2305.13084 | Accuracy |  |  |
 | pending | dSprites | 2310.18777 | MSE |  |  |
 | pending | DSR | 2601.22327 | CD, IoU, NC |  |  |
 | pending | DTP Open Compound Collection (1SYH) | 2209.12487 | QuickVina2, Smina |  |  |
@@ -2262,6 +2271,7 @@ ightarrow$FR | 2403.01467 | Accuracy |  |  |
 | pending | Election | 2406.06642 | Accuracy |  |  |
 | pending | Electrolyte | 2309.15718 | Energy, Force |  |  |
 | pending | electron-proton simulation | 2006.10503 | MSE v, MSE x |  |  |
+| pending | Electronics | 1506.04757 | Accuracy |  |  |
 | pending | Electronics | 2502.08071 | R@10 |  |  |
 | pending | Electronics | 2604.22549 | R@10 |  |  |
 | pending | Ellip. | 2306.12251 | AUPRC | Elliptic | yes |
@@ -3008,6 +3018,7 @@ ightarrow$FR | 2403.01467 | Accuracy |  |  |
 | pending | GLUE | 2312.04234 | Avg | GLUE |  |
 | pending | GLUE | 2510.12111 | Accuracy |  |  |
 | pending | Glycose | 2507.12380 | MCC |  |  |
+| pending | GMM clustering | 2405.19121 | Accuracy |  |  |
 | pending | GNN expressiveness benchmarks | 2205.12245 | Accuracy | GNN Expressivity Benchmark |  |
 | pending | GNN-DSE | 2504.19649 | ADRS |  |  |
 | pending | GNNs | 2305.10037 | Accuracy |  |  |
@@ -3517,6 +3528,7 @@ ightarrow$FR | 2403.01467 | Accuracy |  |  |
 | pending | Home | 2504.10917 | Hit@1 |  |  |
 | pending | HOMO | 2002.12880 | MAE | TUDatasets | yes |
 | pending | Homo | 2006.12138 | MSE |  |  |
+| pending | homogeneous graphs | 2007.03424 | Accuracy |  |  |
 | pending | HomologyTAPE | 2309.04941 | MAE |  |  |
 | pending | Homomorphism Counting | 2601.19094 | MAE |  |  |
 | pending | homomorphism counting | 2601.19094 | MAE |  |  |
@@ -3664,6 +3676,7 @@ ightarrow$FR | 2403.01467 | Accuracy |  |  |
 | pending | IMDB-B | 2107.01952 | negative log likelihood | TU | yes |
 | pending | IMDB-B | 2110.02910 | Accuracy | TU | yes |
 | pending | IMDB-B | 2110.03753 | Accuracy | TU Datasets | yes |
+| pending | IMDB-B | 2110.07875 | Accuracy | TUDatasets | yes |
 | pending | IMDB-B | 2110.09344 | Accuracy | TUDataset | yes |
 | pending | IMDB-B | 2110.15438 | Accuracy | TU | yes |
 | pending | IMDB-B | 2111.03220 | Accuracy | TUDataset | yes |
@@ -4000,6 +4013,7 @@ ightarrow$FR | 2403.01467 | Accuracy |  |  |
 | pending | Jazz | 2603.01388 | MAE |  |  |
 | pending | JDFT2D | 2306.05344 | MAE |  |  |
 | pending | Jester 617K | 2109.09587 | MAE |  |  |
+| pending | Jewelry | 1506.04757 | Accuracy | TUDatasets | yes |
 | pending | JNK3 | 1801.07299 | Diversity |  |  |
 | pending | JNK3 | 2002.03244 | Success |  |  |
 | pending | JNK3 | 2103.10432 | PM |  |  |
@@ -4261,8 +4275,10 @@ ightarrow$FR | 2403.01467 | Accuracy |  |  |
 | pending | Los-loop | 1811.05320 | RMSE |  |  |
 | pending | Loseit | 2207.06221 | Recall@20 |  |  |
 | pending | Low Walk Index Dataset | 2211.16494 | Accuracy |  |  |
+| pending | Low-Order Graphs | 2305.13987 | # Indistinguishable Graph Pairs |  |  |
 | pending | Low-Pass | 2106.04319 | R^2 |  |  |
 | pending | LP | 2506.01728 | mean relative objective error |  |  |
+| pending | LP-15 | 2101.07965 | Accuracy |  |  |
 | pending | LPWC | 2506.08743 | F1 |  |  |
 | pending | LR-EXP | 2506.24018 | Precision |  |  |
 | pending | LRGB | 2406.06984 | AP |  |  |
@@ -4416,6 +4432,7 @@ ightarrow$E | 2403.01467 | Accuracy |  |  |
 | pending | Meituan | 2407.15620 | NDCG, Recall |  |  |
 | pending | MeltingTemp | 2206.02886 | R^2 | MoleculeNet | yes |
 | pending | MemeTracker | 1704.01665 | Approximation Ratio |  |  |
+| pending | Men | 1506.04757 | Accuracy | TUDatasets | yes |
 | pending | Men's clothing | 1506.04757 | Accuracy |  |  |
 | pending | Merck DPP4 | 1506.05163 | R2 | MoleculeNet |  |
 | pending | Meshes | 2510.07716 | Cosine Similarity |  |  |
@@ -4801,43 +4818,15 @@ ightarrow$E | 2403.01467 | Accuracy |  |  |
 | pending | Motor | 2602.17071 | MAE |  |  |
 | pending | Movie | 2309.03523 | Accuracy |  |  |
 | pending | movie graph | 2001.07620 | RMSE |  |  |
-| pending | MovieLen-20M | 2308.05697 | R@5 |  |  |
-| pending | MovieLens | 1704.06803 | RMSE |  |  |
-| pending | MovieLens | 1705.07664 | RMSE |  |  |
-| pending | MovieLens | 2005.09863 | Hits@30 |  | yes |
-| pending | Movielens | 2106.06722 | HR@20 |  |  |
-| pending | Movielens | 2106.10879 | Prec@10 |  |  |
-| pending | MovieLens | 2112.14936 | ndcg@20, recall@20 |  |  |
-| pending | MovieLens | 2204.12200 | NDCG |  |  |
-| pending | MovieLens | 2304.11116 | Accuracy |  |  |
-| pending | MovieLens | 2305.18622 | H@20, H@50, MRR, NDCG |  |  |
-| pending | MovieLens | 2307.01504 | MAE |  |  |
-| pending | MovieLens | 2311.00423 | R@10 |  |  |
-| pending | MovieLens | 2401.03597 | Accuracy |  |  |
-| pending | Movielens | 2403.17416 | Recall |  | yes |
-| pending | MovieLens | 2411.01410 | Cumulative regret |  |  |
-| pending | MovieLens | 2412.19211 | Recall |  |  |
 | pending | MovieLens (100 shots) | 2307.01504 | MAE |  |  |
 | pending | MovieLens 100K | 1706.02263 | RMSE |  |  |
 | pending | MovieLens 100K | 2109.09587 | MAE |  |  |
 | pending | MovieLens 10M (ML-10M) | 1706.02263 | RMSE |  |  |
-| pending | MovieLens 1M | 2109.09587 | MAE |  | yes |
 | pending | MovieLens 1M (ML-1M) | 1706.02263 | RMSE |  |  |
 | pending | MovieLens-100K | 1904.12058 | RMSE |  |  |
 | pending | MovieLens-100K | 2204.11346 | Recall |  |  |
-| pending | MovieLens-1M | 1904.12058 | RMSE |  |  |
-| pending | Movielens-1M | 2110.15114 | NDCG@20 |  |  |
-| pending | MovieLens-1M | 2202.06200 | Recall@10 |  |  |
-| pending | MovieLens-1M | 2204.08807 | AUC |  |  |
-| pending | MovieLens-1M | 2204.11346 | Recall@20 |  |  |
-| pending | MovieLens-1M | 2404.08660 | NDCG@20 |  |  |
-| pending | Movielens-1M | 2407.17234 | Recall@10, Recall@20, Recall@5 |  |  |
-| pending | MovieLens-20M | 1904.12575 | AUC |  |  |
-| pending | MovieLens-20M | 1905.04413 | AUC, Recall@10, Recall@100, Recall@2, Recall@50 |  |  |
-| pending | Movielens-25M | 2307.05100 | NDCG@20 |  |  |
 | pending | MovieLens-War | 2112.07191 | HR |  |  |
 | pending | MovieLens1M | 2403.04287 | Recall@20 |  |  |
-| pending | MovieLens_1M | 2402.09711 | Hits@10 |  |  |
 | pending | moving MNIST | 1612.07659 | Cross-entropy |  |  |
 | pending | Moving-MNIST | 1612.07659 | Cross-entropy |  |  |
 | pending | MP | 2309.04062 | MAE |  |  |
@@ -4959,6 +4948,7 @@ ightarrow$E | 2403.01467 | Accuracy |  |  |
 | pending | MUV | 2106.05819 | ROC-AUC | MoleculeNet | yes |
 | pending | MUV | 2107.07994 | ROC-AUC | MoleculeNet | yes |
 | pending | muv | 2110.00987 | ROC-AUC | MoleculeNet | yes |
+| pending | MUV | 2110.02667 | ROC-AUC | TUDatasets | yes |
 | pending | MUV | 2110.07728 | ROC-AUC | MoleculeNet | yes |
 | pending | MUV | 2202.02989 | ROC-AUC | MoleculeNet | yes |
 | pending | MUV | 2202.09346 | ROC-AUC | MoleculeNet | yes |
@@ -5296,6 +5286,7 @@ ightarrow$E | 2403.01467 | Accuracy |  |  |
 | pending | Nodel CLS | 2402.08785 | Accuracy |  |  |
 | pending | NOMAD | 2309.05934 | MSE |  |  |
 | pending | Northeastern | 2208.07012 | Accuracy |  |  |
+| pending | Novelty Costumes | 1506.04757 | Accuracy |  |  |
 | pending | Nowplaying | 2012.06852 | P@10 |  |  |
 | pending | NS | 0901.0553 | AUC |  |  |
 | pending | NS | 1802.09691 | AUC |  |  |
@@ -5635,7 +5626,6 @@ ightarrow$E | 2403.01467 | Accuracy |  |  |
 | pending | PenalizedLogP | 2007.04897 | Objective |  |  |
 | pending | PenalizedLogP (similarity-constrained) | 2007.04897 | Objective |  |  |
 | pending | Penn | 2202.02466 | Accuracy |  |  |
-| pending | Penn | 2402.08907 | Accuracy |  |  |
 | pending | Penn Treebank | 1612.07659 | Perplexity |  |  |
 | pending | Penn Treebank | 2006.09790 | Likelihood |  |  |
 | pending | Penn94 (FB100) | 2104.01404 | Accuracy | FB100 | yes |
@@ -5942,6 +5932,7 @@ ightarrow$E | 2403.01467 | Accuracy |  |  |
 | pending | PTC | 2509.24886 | Accuracy | TU | yes |
 | pending | ptc | 2601.01123 | Accuracy | TUDataset | yes |
 | pending | PTC | 2605.04834 | Accuracy | TUDatasets | yes |
+| pending | PTC MR | 2107.01952 | bpe | TUDatasets | yes |
 | pending | PTC-FM | 2312.08671 | Accuracy | TUDatasets | yes |
 | pending | PTC-FR | 2506.06571 | Accuracy | TU | yes |
 | pending | PTC-MM | 2302.02369 | ACC | TUDataset | yes |
@@ -6205,6 +6196,7 @@ ightarrow$E | 2403.01467 | Accuracy |  |  |
 | pending | RDT-M | 2311.01038 | Micro F1 |  |  |
 | pending | RDT-M12K | 2312.13583 | Accuracy |  |  |
 | pending | RDT-M5K | 1810.00826 | Accuracy |  |  |
+| pending | RDT-M5K | 2006.09963 | Accuracy |  |  |
 | pending | RDT-M5K | 2007.10467 | Accuracy |  |  |
 | pending | RDT-M5K | 2010.13902 | Accuracy |  |  |
 | pending | RDT-M5K | 2103.03212 | Accuracy |  |  |
@@ -6326,6 +6318,7 @@ ightarrow$E | 2403.01467 | Accuracy |  |  |
 | pending | Rice31 | 2010.13993 | Accuracy |  |  |
 | pending | RiddleSense | 2309.15427 | Accuracy |  |  |
 | pending | Ring | 2409.05100 | Size of the graph cuts |  |  |
+| pending | ring | 2605.13383 | Loss |  |  |
 | pending | Ring-Cl | 2410.21043 | Link Prediction |  |  |
 | pending | RingTransfer | 2506.06582 | Accuracy |  |  |
 | pending | RLM | 2604.16586 | Pearson R |  |  |
@@ -6509,6 +6502,7 @@ ightarrow$M | 2403.01467 | Accuracy |  |  |
 | pending | ShapeMol | 2501.02526 | Sim_S |  |  |
 | pending | ShapeNetPart | 2408.05822 | F1 |  |  |
 | pending | Shapes | 2210.15304 | Accuracy |  |  |
+| pending | Shoes and Accessories | 1506.04757 | Accuracy |  |  |
 | pending | Shortest Distance | 2410.22372 | Accuracy |  |  |
 | pending | Shortest Path | 1511.05493 | Accuracy |  |  |
 | pending | Shortest Path | 2305.10037 | Accuracy |  |  |
@@ -6595,6 +6589,7 @@ ightarrow$M | 2403.01467 | Accuracy |  |  |
 | pending | Solubility_AqSolDB | 2404.11568 | MAE | MoleculeNet | yes |
 | pending | Solvated Peptides | 2411.19629 | MAE |  |  |
 | pending | solvated protein fragments | 1902.08408 | MAE |  |  |
+| pending | Solvated protein fragments | 1902.08408 | MAE |  |  |
 | pending | Sorting Experiment | 1511.06391 | Accuracy | Neural Algorithmic Reasoning |  |
 | pending | Sorting Networks | 2302.00049 | F1-Score |  |  |
 | pending | Sorting Networks | 2407.20912 | RMSE | Combinatorial Optimization |  |
@@ -6749,6 +6744,7 @@ ightarrow$M | 2403.01467 | Accuracy |  |  |
 | pending | Stochastic-bag | 2011.12747 | idity |  |  |
 | pending | STONED-SELFIES | 2209.12487 | ΔE‡ |  |  |
 | pending | String | 1612.00222 | MSE |  |  |
+| pending | Strongly Regular Graphs | 2305.13987 | # Indistinguishable Graph Pairs |  |  |
 | pending | strongly regular graphs | 2506.13911 | Precision |  |  |
 | pending | strongly-regular graphs | 2301.12906 | Success rate |  |  |
 | pending | Strongly-regular graphs | 2301.12906 | Success rate |  |  |
@@ -7289,7 +7285,6 @@ ightarrow$M | 2403.01467 | Accuracy |  |  |
 | pending | Twitch | 2603.24304 | Accuracy |  |  |
 | pending | Twitch (avg) | 2310.06417 | ROC-AUC |  |  |
 | pending | Twitch PT | 1909.13021 | F1 |  |  |
-| pending | Twitch-All | 2402.08907 | Accuracy |  |  |
 | pending | Twitch-DE | 2104.01404 | ROC-AUC |  |  |
 | pending | Twitch-DE | 2204.04874 | ROC-AUC |  |  |
 | pending | Twitch-DE | 2205.13700 | Accuracy |  |  |
@@ -7779,6 +7774,7 @@ ightarrow$M | 2403.01467 | Accuracy |  |  |
 | pending | WN18RR-5-way | 2310.00149 | Acc | WN18RR |  |
 | pending | WN18RR-5-way | 2502.00806 | Accuracy |  |  |
 | pending | WO | 2505.20215 | F1 |  |  |
+| pending | Women | 1506.04757 | Accuracy | TUDatasets | yes |
 | pending | Women's clothing | 1506.04757 | Accuracy |  |  |
 | pending | WordNet | 2304.11116 | Accuracy |  |  |
 | pending | WordNet | 2410.12609 | MRR |  |  |
@@ -8008,4 +8004,4 @@ ightarrow$EN | 2104.06608 | Hits@1, Hits@10, Hits@50 |  |  |
 These rows remain in pending_datasets, but they already resolve against the current DB and should not be treated as missing coverage.
 
 
-Detailed table: 347 rows (loaded below).
+Detailed table: 380 rows (loaded below).

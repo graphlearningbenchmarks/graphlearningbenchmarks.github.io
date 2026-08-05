@@ -12,7 +12,7 @@ stats:
   avg_nodes: 5201.0
   avg_edges: 217073.0
   num_classes: 5
-result_count: 402
+result_count: 427
 best_model:
   model: IBG-NN
   value: 0.7763
@@ -60,6 +60,11 @@ papers:
   title: 'SPGCL: Simple yet Powerful Graph Contrastive Learning via SVD-Guided Structural
     Perturbation'
   date_iso: '2026-01-20'
+  venue: ''
+- arxiv_id: '2601.08230'
+  title: 'GADPN: Graph Adaptive Denoising and Perturbation Networks via Singular Value
+    Decomposition'
+  date_iso: '2026-01-13'
   venue: ''
 - arxiv_id: '2512.08798'
   title: Can TabPFN Compete with GNNs for Node Classification via Graph Tabularization?
@@ -156,6 +161,10 @@ papers:
     Over-squashing'
   date_iso: '2023-12-01'
   venue: ''
+- arxiv_id: '2311.18177'
+  title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+  date_iso: '2023-11-30'
+  venue: ''
 - arxiv_id: '2310.13845'
   title: Spectral-Aware Augmentation for Enhanced Graph Representation Learning
   date_iso: '2023-10-20'
@@ -182,9 +191,18 @@ papers:
     and Simpler Choice towards Powerful Attention'
   date_iso: '2023-05-22'
   venue: IJCAI 2023
+- arxiv_id: '2305.06142'
+  title: Feature Expansion for Graph Neural Networks
+  date_iso: '2023-05-10'
+  venue: ICML 2023
 - arxiv_id: '2303.13750'
   title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
   date_iso: '2023-03-24'
+  venue: ''
+- arxiv_id: '2211.15081'
+  title: Mitigating Overfitting in Graph Neural Networks via Feature and Hyperplane
+    Perturbation
+  date_iso: '2022-11-28'
   venue: ''
 - arxiv_id: '2211.14065'
   title: 'Beyond Smoothing: Unsupervised Graph Representation Learning with Edge Heterophily
@@ -310,9 +328,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2412.04064'
     title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
     date: Dec 5, 2024
@@ -865,6 +883,34 @@ variants:
     metric_stds:
     - 0.026
     - null
+  - model: FE-GNN
+    model_plain: FE-GNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2305.06142'
+    title: Feature Expansion for Graph Neural Networks
+    date: May 10, 2023
+    date_iso: '2023-05-10'
+    date_display: May 2023
+    codebase_url: https://github.com/sajqavril/Feature-Extension-Graph-Neural-Networks
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.679
+    - null
+    metric_stds:
+    - 0.0023
+    - null
   - model: ACM-GCN
     model_plain: ACM-GCN
     is_baseline: true
@@ -920,6 +966,34 @@ variants:
     - null
     metric_stds:
     - 0.0221
+    - null
+  - model: UniFilter
+    model_plain: UniFilter
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.18177'
+    title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+    date: Nov 30, 2023
+    date_iso: '2023-11-30'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.674
+    - null
+    metric_stds:
+    - 0.0125
     - null
   - model: RDGNN-S
     model_plain: RDGNN-S
@@ -1064,6 +1138,34 @@ variants:
     - null
     metric_stds:
     - 0.0183
+    - null
+  - model: Specformer
+    model_plain: Specformer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2311.18177'
+    title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+    date: Nov 30, 2023
+    date_iso: '2023-11-30'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6464
+    - null
+    metric_stds:
+    - 0.0081
     - null
   - model: G2-GraphSAGE
     model_plain: G2-GraphSAGE
@@ -1216,17 +1318,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
-    date: Mar 12, 2024
-    date_iso: '2024-03-12'
-    date_display: Mar 2024
-    codebase_url: https://github.com/kkhuang81/AdaptKry
-    published_conference: WWW 2024
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2024
+    arxiv_id: '2311.18177'
+    title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+    date: Nov 30, 2023
+    date_iso: '2023-11-30'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1602,104 +1703,18 @@ variants:
     metric_stds:
     - 0.0169
     - null
-  - model: GCN + HalfHop
-    model_plain: GCN + HalfHop
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6024
-    - null
-    metric_stds:
-    - 0.024
-    - null
-  - model: H2GCN + HalfHop
-    model_plain: H2GCN + HalfHop
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2407.19420'
-    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
-      Over-Smoothing in Node Classification Tasks'
-    date: Jul 28, 2024
-    date_iso: '2024-07-28'
-    date_display: Jul 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6024
-    - null
-    metric_stds:
-    - 0.024
-    - null
-  - model: MVGRL
-    model_plain: MVGRL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.15699'
-    title: Frequency-Corrupt Based Graph Self-Supervised Learning
-    date: Apr 17, 2026
-    date_iso: '2026-04-17'
-    date_display: Apr 2026
-    codebase_url: https://github.com/rookitkitlee/FC-GSSL
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6009
-    - null
-    metric_stds:
-    - 0.0044
-    - null
-  row_count: 402
+  row_count: 427
   rows_json: /data/datasets/squirrel/standard-split-rows.json
   chart_json: /data/datasets/squirrel/standard-split-chart.json
   arch_counts:
-    gnn: 296
+    gnn: 317
     hybrid: 44
-    graph_transformer: 14
+    graph_transformer: 15
     llm: 0
     walk: 5
-    traditional: 14
+    traditional: 16
   metric_counts:
-  - 396
+  - 421
   - 6
   milestones: &id001
   - value: 0.59

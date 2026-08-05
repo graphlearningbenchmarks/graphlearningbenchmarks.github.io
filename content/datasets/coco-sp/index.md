@@ -8,27 +8,45 @@ primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LRGBDataset.html
 stats: null
-result_count: 61
+result_count: 104
 best_model:
-  model: GEAET
-  value: 0.3895
+  model: CRaWl
+  value: 0.4588
   metric: F1
-  arxiv_id: '2405.21061'
-  paper_title: Graph External Attention Enhanced Transformer
+  arxiv_id: '2605.13383'
+  paper_title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via
+    Observables'
 papers:
+- arxiv_id: '2606.05046'
+  title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+    Graph Machine Learning'
+  date_iso: '2026-06-03'
+  venue: ''
 - arxiv_id: '2606.04647'
   title: 'ALINC: Active Learning for Inductive Node Classification via Graph Sampling'
   date_iso: '2026-06-03'
+  venue: ''
+- arxiv_id: '2605.13383'
+  title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+  date_iso: '2026-05-13'
   venue: ''
 - arxiv_id: '2605.05689'
   title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive Consistency
     Model'
   date_iso: '2026-05-07'
   venue: ''
+- arxiv_id: '2510.12111'
+  title: 'Chimera: State Space Models Beyond Sequences'
+  date_iso: '2025-10-14'
+  venue: TMLR 2025
 - arxiv_id: '2411.12732'
   title: Benchmarking Positional Encodings for GNNs and Graph Transformers
   date_iso: '2024-11-19'
   venue: KDD 2024
+- arxiv_id: '2410.05593'
+  title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+  date_iso: '2024-10-08'
+  venue: ICLR 2024
 - arxiv_id: '2406.12059'
   title: A Scalable and Effective Alternative to Graph Transformers
   date_iso: '2024-06-17'
@@ -41,11 +59,19 @@ papers:
   title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
   date_iso: '2024-05-20'
   venue: ICLR 2024
+- arxiv_id: '2402.08678'
+  title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+  date_iso: '2024-02-13'
+  venue: KDD 2024
 - arxiv_id: '2309.09384'
   title: Mitigating Over-Smoothing and Over-Squashing using Augmentations of Forman-Ricci
     Curvature
   date_iso: '2023-09-17'
   venue: ''
+- arxiv_id: '2309.00367'
+  title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+  date_iso: '2023-09-01'
+  venue: TMLR 2023
 - arxiv_id: '2206.08164'
   title: LRGB
   date_iso: '2022-06-16'
@@ -73,6 +99,258 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
+  - model: CRaWl
+    model_plain: CRaWl
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.4588
+    - null
+    metric_stds:
+    - 0.0079
+    - null
+  - model: GPS
+    model_plain: GPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.444
+    - null
+    metric_stds:
+    - 0.0065
+    - null
+  - model: NeuralWalker
+    model_plain: NeuralWalker
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_iso: '2025-10-14'
+    date_display: Oct 2025
+    codebase_url: https://github.com/goombalab/chimera
+    published_conference: TMLR 2025
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4398
+    - null
+    metric_stds:
+    - 0.0033
+    - null
+  - model: Schrödinger
+    model_plain: Schrödinger
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4259
+    - null
+    metric_stds:
+    - 0.0034
+    - null
+  - model: Lie UniGCN
+    model_plain: Lie UniGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4005
+    - null
+    metric_stds:
+    - 0.0067
+    - null
+  - model: Chimera
+    model_plain: Chimera
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_iso: '2025-10-14'
+    date_display: Oct 2025
+    codebase_url: https://github.com/goombalab/chimera
+    published_conference: TMLR 2025
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3977
+    - null
+    metric_stds:
+    - 0.016
+    - null
+  - model: GMN
+    model_plain: GMN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3974
+    - null
+    metric_stds:
+    - 0.0101
+    - null
+  - model: Graph Mamba
+    model_plain: Graph Mamba
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_iso: '2025-10-14'
+    date_display: Oct 2025
+    codebase_url: https://github.com/goombalab/chimera
+    published_conference: TMLR 2025
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3974
+    - null
+    metric_stds:
+    - 0.0101
+    - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.396
+    - null
+    metric_stds:
+    - 0.0027
+    - null
   - model: GEAET
     model_plain: GEAET
     is_baseline: false
@@ -93,13 +371,41 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2024
     uses_external_data: true
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.3895
     - null
     metric_stds:
     - null
+    - null
+  - model: GPS + Mamba
+    model_plain: GPS + Mamba
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3895
+    - null
+    metric_stds:
+    - 0.0125
     - null
   - model: GraphGPS + RWSE
     model_plain: GraphGPS + RWSE
@@ -121,7 +427,7 @@ variants:
     published_conference_slug: kdd
     published_venue: KDD 2024
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.3891
@@ -138,24 +444,80 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_iso: '2024-05-20'
-    date_display: May 2024
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
+    arxiv_id: '2309.00367'
+    title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    date: Sep 1, 2023
+    date_iso: '2023-09-01'
+    date_display: Sep 2023
+    codebase_url: https://github.com/toenshoff/LRGB
+    published_conference: TMLR 2023
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2023
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.3884
     - null
     metric_stds:
     - 0.0055
+    - null
+  - model: GraphGPS+Transformer
+    model_plain: GraphGPS+Transformer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_iso: '2025-10-14'
+    date_display: Oct 2025
+    codebase_url: https://github.com/goombalab/chimera
+    published_conference: TMLR 2025
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3884
+    - null
+    metric_stds:
+    - 0.0055
+    - null
+  - model: GatedGCN
+    model_plain: GatedGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.388
+    - null
+    metric_stds:
+    - 0.004
     - null
   - model: GraphGPS + RWDIFF
     model_plain: GraphGPS + RWDIFF
@@ -177,7 +539,7 @@ variants:
     published_conference_slug: kdd
     published_venue: KDD 2024
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.3873
@@ -327,6 +689,34 @@ variants:
     metric_stds:
     - 0.0056
     - null
+  - model: UniGCN
+    model_plain: UniGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3516
+    - null
+    metric_stds:
+    - 0.007
+    - null
   - model: Exphormer + ESLapPE
     model_plain: Exphormer + ESLapPE
     is_baseline: true
@@ -410,6 +800,34 @@ variants:
     - null
     metric_stds:
     - 0.0028
+    - null
+  - model: NAGphormer
+    model_plain: NAGphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3458
+    - null
+    metric_stds:
+    - 0.007
     - null
   - model: Exphormer
     model_plain: Exphormer
@@ -496,6 +914,34 @@ variants:
     metric_stds:
     - 0.0052
     - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2309.00367'
+    title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    date: Sep 1, 2023
+    date_iso: '2023-09-01'
+    date_display: Sep 2023
+    codebase_url: https://github.com/toenshoff/LRGB
+    published_conference: TMLR 2023
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.343
+    - null
+    metric_stds:
+    - 0.0008
+    - null
   - model: Exphormer + RWDIFF
     model_plain: Exphormer + RWDIFF
     is_baseline: true
@@ -580,6 +1026,34 @@ variants:
     metric_stds:
     - 0.0032
     - null
+  - model: DRew
+    model_plain: DRew
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3314
+    - null
+    metric_stds:
+    - 0.0024
+    - null
   - model: GatedGCN-VN
     model_plain: GatedGCN-VN
     is_baseline: true
@@ -636,6 +1110,34 @@ variants:
     metric_stds:
     - 0.0039
     - null
+  - model: CRaWl
+    model_plain: CRaWl
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3219
+    - null
+    metric_stds:
+    - 0.00106
+    - null
   - model: SAN+RWSE
     model_plain: SAN+RWSE
     is_baseline: true
@@ -663,6 +1165,34 @@ variants:
     - null
     metric_stds:
     - 0.0027
+    - null
+  - model: Gated-GCN
+    model_plain: Gated-GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_iso: '2025-10-14'
+    date_display: Oct 2025
+    codebase_url: https://github.com/goombalab/chimera
+    published_conference: TMLR 2025
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2922
+    - null
+    metric_stds:
+    - 0.0018
     - null
   - model: GatedGCN
     model_plain: GatedGCN
@@ -720,6 +1250,34 @@ variants:
     metric_stds:
     - 0.0085
     - null
+  - model: GINE
+    model_plain: GINE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_iso: '2026-05-13'
+    date_display: May 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2718
+    - null
+    metric_stds:
+    - 0.0054
+    - null
   - model: Transformer+LapPE
     model_plain: Transformer+LapPE
     is_baseline: true
@@ -748,33 +1306,61 @@ variants:
     metric_stds:
     - 0.0098
     - null
-  - model: SAN+LapPE
-    model_plain: SAN+LapPE
+  - model: Gated-GCN
+    model_plain: Gated-GCN
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
     codebase_url: ''
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.2592
+    - 0.2641
     - null
     metric_stds:
-    - 0.0158
+    - 0.0045
+    - null
+  - model: GPS + BigBird
+    model_plain: GPS + BigBird
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_iso: '2025-10-14'
+    date_display: Oct 2025
+    codebase_url: https://github.com/goombalab/chimera
+    published_conference: TMLR 2025
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2622
+    - null
+    metric_stds:
+    - 0.0008
     - null
   - model: SAN
     model_plain: SAN
@@ -796,6 +1382,34 @@ variants:
     published_conference_short: ''
     published_conference_slug: ''
     published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2592
+    - null
+    metric_stds:
+    - 0.0158
+    - null
+  - model: SAN+LapPE
+    model_plain: SAN+LapPE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -889,612 +1503,18 @@ variants:
     metric_stds:
     - 0.0008
     - null
-  - model: GINE
-    model_plain: GINE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_iso: '2024-05-20'
-    date_display: May 2024
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2125
-    - null
-    metric_stds:
-    - 0.0009
-    - null
-  - model: GRIT + RWSE
-    model_plain: GRIT + RWSE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2114
-    - null
-    metric_stds:
-    - 0.0009
-    - null
-  - model: GRIT + LapPE
-    model_plain: GRIT + LapPE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2112
-    - null
-    metric_stds:
-    - 0.0005
-    - null
-  - model: GRIT + noPE
-    model_plain: GRIT + noPE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2105
-    - null
-    metric_stds:
-    - 0.0004
-    - null
-  - model: GRIT + ESLapPE
-    model_plain: GRIT + ESLapPE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.21
-    - null
-    metric_stds:
-    - 0.0008
-    - null
-  - model: GCN-VN
-    model_plain: GCN-VN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_iso: '2024-05-20'
-    date_display: May 2024
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2072
-    - null
-    metric_stds:
-    - 0.0043
-    - null
-  - model: SparseGRIT + noPE
-    model_plain: SparseGRIT + noPE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.1976
-    - null
-    metric_stds:
-    - 0.0038
-    - null
-  - model: SparseGRIT + RWSE
-    model_plain: SparseGRIT + RWSE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.1969
-    - null
-    metric_stds:
-    - 0.001
-    - null
-  - model: SparseGRIT + RWDIFF
-    model_plain: SparseGRIT + RWDIFF
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.1965
-    - null
-    metric_stds:
-    - 0.0011
-    - null
-  - model: SparseGRIT + ESLapPE
-    model_plain: SparseGRIT + ESLapPE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.1958
-    - null
-    metric_stds:
-    - 0.0001
-    - null
-  - model: GINE
-    model_plain: GINE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.1339
-    - null
-    metric_stds:
-    - 0.0044
-    - null
-  - model: GCN
-    model_plain: GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_iso: '2024-05-20'
-    date_display: May 2024
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.1338
-    - null
-    metric_stds:
-    - 0.0007
-    - null
-  - model: GINE
-    model_plain: GINE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2206.08164'
-    title: LRGB
-    date: Jun 16, 2022
-    date_iso: '2022-06-16'
-    date_display: Jun 2022
-    codebase_url: https://github.com/vijaydwivedi75/lrgb
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.1168
-    - null
-    metric_stds:
-    - 0.0053
-    - null
-  - model: AFR-3
-    model_plain: AFR-3
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2309.09384'
-    title: Mitigating Over-Smoothing and Over-Squashing using Augmentations of Forman-Ricci
-      Curvature
-    date: Sep 17, 2023
-    date_iso: '2023-09-17'
-    date_display: Sep 2023
-    codebase_url: https://github.com/Weber-GeoML/AFRC_Rewiring
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.101
-    - null
-    metric_stds:
-    - 0.011
-    - null
-  - model: BORF
-    model_plain: BORF
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2309.09384'
-    title: Mitigating Over-Smoothing and Over-Squashing using Augmentations of Forman-Ricci
-      Curvature
-    date: Sep 17, 2023
-    date_iso: '2023-09-17'
-    date_display: Sep 2023
-    codebase_url: https://github.com/Weber-GeoML/AFRC_Rewiring
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.101
-    - null
-    metric_stds:
-    - 0.012
-    - null
-  - model: AFR-4
-    model_plain: AFR-4
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2309.09384'
-    title: Mitigating Over-Smoothing and Over-Squashing using Augmentations of Forman-Ricci
-      Curvature
-    date: Sep 17, 2023
-    date_iso: '2023-09-17'
-    date_display: Sep 2023
-    codebase_url: https://github.com/Weber-GeoML/AFRC_Rewiring
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.098
-    - null
-    metric_stds:
-    - 0.011
-    - null
-  - model: FoSR
-    model_plain: FoSR
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2309.09384'
-    title: Mitigating Over-Smoothing and Over-Squashing using Augmentations of Forman-Ricci
-      Curvature
-    date: Sep 17, 2023
-    date_iso: '2023-09-17'
-    date_display: Sep 2023
-    codebase_url: https://github.com/Weber-GeoML/AFRC_Rewiring
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.093
-    - null
-    metric_stds:
-    - 0.014
-    - null
-  - model: SDRF
-    model_plain: SDRF
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2309.09384'
-    title: Mitigating Over-Smoothing and Over-Squashing using Augmentations of Forman-Ricci
-      Curvature
-    date: Sep 17, 2023
-    date_iso: '2023-09-17'
-    date_display: Sep 2023
-    codebase_url: https://github.com/Weber-GeoML/AFRC_Rewiring
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.085
-    - null
-    metric_stds:
-    - 0.01
-    - null
-  - model: GCN
-    model_plain: GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0841
-    - null
-    metric_stds:
-    - 0.001
-    - null
-  - model: GCN
-    model_plain: GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2206.08164'
-    title: LRGB
-    date: Jun 16, 2022
-    date_iso: '2022-06-16'
-    date_display: Jun 2022
-    codebase_url: https://github.com/vijaydwivedi75/lrgb
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0797
-    - null
-    metric_stds:
-    - 0.0026
-    - null
-  - model: None
-    model_plain: None
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2309.09384'
-    title: Mitigating Over-Smoothing and Over-Squashing using Augmentations of Forman-Ricci
-      Curvature
-    date: Sep 17, 2023
-    date_iso: '2023-09-17'
-    date_display: Sep 2023
-    codebase_url: https://github.com/Weber-GeoML/AFRC_Rewiring
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.078
-    - null
-    metric_stds:
-    - 0.004
-    - null
-  row_count: 61
+  row_count: 104
   rows_json: /data/datasets/coco-sp/standard-split-rows.json
   chart_json: /data/datasets/coco-sp/standard-split-chart.json
   arch_counts:
-    gnn: 14
-    hybrid: 9
-    graph_transformer: 23
+    gnn: 28
+    hybrid: 22
+    graph_transformer: 34
     llm: 0
-    walk: 0
-    traditional: 12
+    walk: 1
+    traditional: 16
   metric_counts:
-  - 50
+  - 93
   - 11
   milestones: &id001
   - value: 0.323
@@ -1506,15 +1526,27 @@ variants:
   - value: 0.3884
     std: 0.0055
     model: GPS
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: '2024-05-20'
-  - value: 0.3891
+    arxiv_id: '2309.00367'
+    title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    date: '2023-09-01'
+  - value: 0.3974
+    std: 0.0101
+    model: GMN
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: '2024-02-13'
+  - value: 0.4398
     std: 0.0033
-    model: GraphGPS + RWSE
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: '2024-11-19'
+    model: NeuralWalker
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: '2025-10-14'
+  - value: 0.4588
+    std: 0.0079
+    model: CRaWl
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: '2026-05-13'
   milestones_by_metric:
     F1: *id001
     AULC:

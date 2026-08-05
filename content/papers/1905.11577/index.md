@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - lapool
-mrr: 0.0435
-adjusted_mrr: 0.0145
+mrr: 0.05
+adjusted_mrr: 0.0167
 mrr_dataset_count: 1
 benchmark_categories:
 - MoleculeNet
@@ -62,9 +62,9 @@ results:
 - &id001
   dataset: Tox21
   rows:
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: himp
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.874
     std: 0.005
     metric: ROC-AUC
@@ -95,9 +95,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: gine w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -128,9 +128,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -219,8 +219,8 @@ results:
     value_note: ''
     sort_value: 0.8342
     sort_std: 0.0097
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -288,8 +288,8 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.0069
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -357,8 +357,8 @@ results:
     value_note: ''
     sort_value: 0.8237
     sort_std: 0.009
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -426,8 +426,8 @@ results:
     value_note: ''
     sort_value: 0.8141
     sort_std: 0.006
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -460,5 +460,6 @@ datasets_by_scope:
     - dataset: Tox21
       dataset_slug: tox21
 single_proposed_model: lapool
+main_figure: /figures/1905.11577/main_figure.jpegoptim.jpg
 ---
 

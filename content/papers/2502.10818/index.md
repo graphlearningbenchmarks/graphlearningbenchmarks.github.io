@@ -72,21 +72,21 @@ proposed_models:
 - kGCN-SSM
 - GCN-SSM (shared)
 - GCN-SSM (Optimal L)
-mrr: 0.0286
-adjusted_mrr: 0.0286
+mrr: 0.0264
+adjusted_mrr: 0.0264
 mrr_dataset_count: 4
 benchmark_categories:
-- Heterophilic Graphs
 - LRGB
+- Heterophily Benchmark
 - Algorithmic Graph Tasks
 benchmark_coverage:
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
-  evaluated: 3
-  total: 13
 - benchmark: LRGB
   benchmark_slug: lrgb
   evaluated: 2
+  total: 5
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
+  evaluated: 3
   total: 5
 - benchmark: Algorithmic Graph Tasks
   benchmark_slug: algorithmic-graph-tasks
@@ -100,12 +100,12 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id002
+- &id004
   dataset: Amazon-ratings
   rows:
-  - model: topk
+  - model: H2GCN
     model_key: h2gcn + unigap
-    model_plain: topk
+    model_plain: H2GCN
     value: 0.6375
     std: 0.011
     metric: Accuracy
@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: H2GCN
     model_key: graphsage + unigap
-    model_plain: topk
+    model_plain: H2GCN
     value: 0.6283
     std: 0.009
     metric: Accuracy
@@ -171,9 +171,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: H2GCN
     model_key: gcn + unigap
-    model_plain: topk
+    model_plain: H2GCN
     value: 0.5976
     std: 0.008
     metric: Accuracy
@@ -263,10 +263,10 @@ results:
     value_note: ''
     sort_value: 0.5411
     sort_std: 0.0034
-    global_rank: 24
-    paper_rank: 101
-    rank_delta: 77
-    rank_delta_abs: 77
+    global_rank: 26
+    paper_rank: 126
+    rank_delta: 100
+    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -323,7 +323,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5172
     sort_std: 0.0033
-    global_rank: 63
+    global_rank: 72
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1527,12 +1527,45 @@ results:
   metric: MSE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: Minesweeper
   rows:
-  - model: topk
+  - model: Tango_GPS
+    model_key: bunn
+    model_plain: Tango_GPS
+    value: 0.9899
+    std: 0.0016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2405.15540'
+    title: Bundle Neural Networks for message diffusion on graphs
+    date: May 24, 2024
+    date_display: May 2024
+    date_iso: '2024-05-24'
+    venue: arXiv.org
+    codebase_url: https://github.com/jacobbamberger/BuNN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9899
+    sort_std: 0.0016
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
     model_key: dc-gnn
-    model_plain: topk
+    model_plain: Tango_GPS
     value: 0.985
     std: 0.0021
     metric: ROC-AUC
@@ -1555,79 +1588,46 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.985
     sort_std: 0.0021
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: topk
-    model_key: polynormer-r
-    model_plain: topk
-    value: 0.9746
-    std: 0.0036
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9746
-    sort_std: 0.0036
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: topk
-    model_key: polynormer + wideformer
-    model_plain: topk
-    value: 0.9726
-    std: 0.0001
+  - model: Tango_GPS
+    model_key: tango_gps
+    model_plain: Tango_GPS
+    value: 0.9839
+    std: 0.0054
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-24'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9726
-    sort_std: 0.0001
+    sort_value: 0.9839
+    sort_std: 0.0054
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GCN-SSM (Optimal L)
     model_key: gcn-ssm (optimal l)
@@ -1677,7 +1677,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9602
     sort_std: 0.0052
-    global_rank: 5
+    global_rank: 12
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1747,10 +1747,10 @@ results:
     value_note: ''
     sort_value: 0.915
     sort_std: 0.0006
-    global_rank: 44
-    paper_rank: 61
-    rank_delta: 17
-    rank_delta_abs: 17
+    global_rank: 59
+    paper_rank: 80
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1767,12 +1767,12 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id002
   dataset: Peptides-func
   rows:
-  - model: SAN+RWSE
+  - model: Tango_GPS
     model_key: s^2gcn
-    model_plain: SAN+RWSE
+    model_plain: Tango_GPS
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -1803,67 +1803,68 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: gcn
-    model_plain: SAN+RWSE
-    value: 0.7261
-    std: 0.0011
+  - model: Tango_GPS
+    model_key: s^2 gcn + pe
+    model_plain: Tango_GPS
+    value: 0.7311
+    std: 0.0066
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.12358'
-    title: From Message-Passing to Linearized Graph Sequence Models
-    date: May 12, 2026
-    date_display: May 2026
-    date_iso: '2026-05-12'
-    venue: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_display: May 2024
+    date_iso: '2024-05-29'
+    venue: Neural Information Processing Systems
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: PE is described as stable positional encodings almost
+      free of cost for S2GNNs.
     is_global_top: true
     global_rank: 2
-    sort_value: 0.7261
-    sort_std: 0.0011
+    sort_value: 0.7311
+    sort_std: 0.0066
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: mpnns
-    model_plain: SAN+RWSE
-    value: 0.725
-    std: 0.0023
+  - model: Tango_GPS
+    model_key: s4g
+    model_plain: Tango_GPS
+    value: 0.7293
+    std: 0.0004
     metric: AP
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.08450'
-    title: 'gLSTM: Mitigating Over-Squashing by Increasing Storage Capacity'
-    date: Oct 9, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-09'
-    venue: arXiv.org
-    codebase_url: https://github.com/HughBlayney/gLSTM
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-13'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.725
-    sort_std: 0.0023
+    sort_value: 0.7293
+    sort_std: 0.0004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1899,14 +1900,14 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7085
+    at_pub_std: 0.0027
+    at_pub_source_arxiv: '2312.01538'
+    at_pub_source_title: Recurrent Distance Filtering for Graph Representation Learning
+    at_pub_source_date_iso: '2023-12-03'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-12-03'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1915,17 +1916,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7085
+    true_std: 0.0027
+    value_gap_source_arxiv: '2312.01538'
+    value_gap_source_title: Recurrent Distance Filtering for Graph Representation
+      Learning
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7085
     sort_std: 0.0027
-    global_rank: 15
+    global_rank: 24
+    paper_rank: 24
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1988,10 +1995,10 @@ results:
     value_note: ''
     sort_value: 0.6902
     sort_std: 0.0022
-    global_rank: 36
-    paper_rank: 6
-    rank_delta: -30
-    rank_delta_abs: 30
+    global_rank: 60
+    paper_rank: 9
+    rank_delta: -51
+    rank_delta_abs: 51
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
@@ -2008,12 +2015,12 @@ results:
   metric: AP
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id001
   dataset: Peptides-struct
   rows:
-  - model: SAN+RWSE
+  - model: GMN
     model_key: gcn
-    model_plain: SAN+RWSE
+    model_plain: GMN
     value: 0.2421
     std: 0.0016
     metric: MAE
@@ -2044,9 +2051,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
+  - model: GMN
+    model_key: tango_gps
+    model_plain: GMN
+    value: 0.2422
+    std: 0.0014
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Tango does not use additional encodings.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
     model_key: nba-gin+lappe
-    model_plain: SAN+RWSE
+    model_plain: GMN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -2069,42 +2109,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.2424
     sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: gin
-    model_plain: SAN+RWSE
-    value: 0.2429
-    std: 0.0019
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.12358'
-    title: From Message-Passing to Linearized Graph Sequence Models
-    date: May 12, 2026
-    date_display: May 2026
-    date_iso: '2026-05-12'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.2429
-    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2140,36 +2147,44 @@ results:
     date_iso: '2025-02-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_value: 0.2455
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2501.17901'
+    at_pub_source_title: Molecular fingerprints are strong models for peptide function
+      prediction
+    at_pub_source_date_iso: '2025-01-29'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-01-29'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.0048000000000000265
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.2503
-    sort_std: 0.0019
-    global_rank: 44
-    has_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2455
+    true_std: 0.0013
+    value_gap_source_arxiv: '2501.17901'
+    value_gap_source_title: Molecular fingerprints are strong models for peptide function
+      prediction
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0048000000000000265
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.2455
+    sort_std: 0.0013
+    global_rank: 26
+    paper_rank: 86
+    rank_delta: 60
+    rank_delta_abs: 60
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecular fingerprints are strong models for peptide
+      function prediction
+    comparison_source_arxiv: '2501.17901'
     is_best: false
     is_std_outlier: false
   - model: kGCN-SSM
@@ -2229,8 +2244,8 @@ results:
     value_note: ''
     sort_value: 0.2581
     sort_std: 0.0003
-    global_rank: 80
-    paper_rank: 98
+    global_rank: 131
+    paper_rank: 149
     rank_delta: 18
     rank_delta_abs: 18
     rank_delta_direction: worse
@@ -2249,12 +2264,12 @@ results:
   metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id003
   dataset: Roman-empire
   rows:
-  - model: topk
+  - model: GPS + Mamba
     model_key: dir-nt
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9477
     std: 0.0031
     metric: Accuracy
@@ -2286,9 +2301,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: GPS + Mamba
     model_key: dir-poly
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9451
     std: 0.0022
     metric: Accuracy
@@ -2320,9 +2335,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: GPS + Mamba
     model_key: largescalenet
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9358
     std: 0.0024
     metric: Accuracy
@@ -2401,7 +2416,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8837
     sort_std: 0.006
-    global_rank: 47
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2471,10 +2486,10 @@ results:
     value_note: ''
     sort_value: 0.7882
     sort_std: 0.0009
-    global_rank: 88
-    paper_rank: 103
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 99
+    paper_rank: 119
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3674,13 +3689,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Heterophilic Graphs
+- benchmark: LRGB
   datasets:
   - *id001
   - *id002
-  - *id003
-- benchmark: LRGB
+- benchmark: Heterophily Benchmark
   datasets:
+  - *id003
   - *id004
   - *id005
 - benchmark: Algorithmic Graph Tasks
@@ -3691,8 +3706,8 @@ datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Roman-empire
       dataset_slug: roman-empire

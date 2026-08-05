@@ -54,8 +54,8 @@ paper_type: method
 proposed_models:
 - PIGN with GCN
 - PIGN with GAT
-mrr: 0.0014
-adjusted_mrr: 0.001
+mrr: 0.0013
+adjusted_mrr: 0.0008
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -77,9 +77,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -110,9 +110,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: is-gib
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: eerm
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -176,74 +176,6 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.699
-    std: 0.01
-    paper_value: 0.699
-    paper_std: 0.01
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split) as per canonical
-      definition for CiteSeer node classification.
-    date: Oct 2, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8013
-    at_pub_std: 0.0062
-    at_pub_source_arxiv: '2110.13094'
-    at_pub_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
-    at_pub_source_date_iso: '2021-10-25'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-10-18'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.10230000000000006
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8075
-    true_std: 0.0078
-    value_gap_source_arxiv: '2310.11762'
-    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.10850000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8075
-    sort_std: 0.0078
-    global_rank: 32
-    paper_rank: 604
-    rank_delta: 572
-    rank_delta_abs: 572
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
-    comparison_source_arxiv: '2110.13094'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -277,15 +209,15 @@ results:
     date_iso: '2023-10-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7943
-    at_pub_std: 0.0026
-    at_pub_source_arxiv: '2110.13094'
-    at_pub_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
-    at_pub_source_date_iso: '2021-10-25'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-06-27'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.08130000000000004
+    at_pub_value: 0.8769
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2305.06142'
+    at_pub_source_title: Feature Expansion for Graph Neural Networks
+    at_pub_source_date_iso: '2023-05-10'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.16390000000000005
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -293,26 +225,93 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8033
-    true_std: 0.0088
-    value_gap_source_arxiv: '2406.19249'
-    value_gap_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer
-      for Node Classification'
+    true_value: 0.8769
+    true_std: 0.004
+    value_gap_source_arxiv: '2305.06142'
+    value_gap_source_title: Feature Expansion for Graph Neural Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.09030000000000005
+    value_gap: 0.16390000000000005
     has_value_note: false
     value_note: ''
-    sort_value: 0.8033
-    sort_std: 0.0088
-    global_rank: 37
-    paper_rank: 518
-    rank_delta: 481
-    rank_delta_abs: 481
+    sort_value: 0.8769
+    sort_std: 0.004
+    global_rank: 21
+    paper_rank: 587
+    rank_delta: 566
+    rank_delta_abs: 566
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
-    comparison_source_arxiv: '2110.13094'
+    comparison_source_title: Feature Expansion for Graph Neural Networks
+    comparison_source_arxiv: '2305.06142'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.699
+    std: 0.01
+    paper_value: 0.699
+    paper_std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) as per canonical
+      definition for CiteSeer node classification.
+    date: Oct 2, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.808
+    at_pub_std: 0.0026
+    at_pub_source_arxiv: '2305.06142'
+    at_pub_source_title: Feature Expansion for Graph Neural Networks
+    at_pub_source_date_iso: '2023-05-10'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.1090000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.808
+    true_std: 0.0026
+    value_gap_source_arxiv: '2305.06142'
+    value_gap_source_title: Feature Expansion for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1090000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.808
+    sort_std: 0.0026
+    global_rank: 46
+    paper_rank: 686
+    rank_delta: 640
+    rank_delta_abs: 640
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Feature Expansion for Graph Neural Networks
+    comparison_source_arxiv: '2305.06142'
     is_best: false
     is_std_outlier: false
   - model: PIGN with GCN
@@ -373,8 +372,8 @@ results:
     value_note: ''
     sort_value: 0.684
     sort_std: 0.015
-    global_rank: 657
-    paper_rank: 657
+    global_rank: 739
+    paper_rank: 739
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -442,8 +441,8 @@ results:
     value_note: ''
     sort_value: 0.661
     sort_std: 0.017
-    global_rank: 718
-    paper_rank: 718
+    global_rank: 811
+    paper_rank: 811
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -511,8 +510,8 @@ results:
     value_note: ''
     sort_value: 0.4991
     sort_std: 0.0494
-    global_rank: 821
-    paper_rank: 821
+    global_rank: 934
+    paper_rank: 934
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -580,8 +579,8 @@ results:
     value_note: ''
     sort_value: 0.4533
     sort_std: 0.1006
-    global_rank: 832
-    paper_rank: 832
+    global_rank: 947
+    paper_rank: 947
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -603,9 +602,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -637,9 +636,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -671,9 +670,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -761,10 +760,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 27
-    paper_rank: 639
-    rank_delta: 612
-    rank_delta_abs: 612
+    global_rank: 33
+    paper_rank: 743
+    rank_delta: 710
+    rank_delta_abs: 710
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -829,10 +828,10 @@ results:
     value_note: ''
     sort_value: 0.8897
     sort_std: null
-    global_rank: 57
-    paper_rank: 652
-    rank_delta: 595
-    rank_delta_abs: 595
+    global_rank: 72
+    paper_rank: 759
+    rank_delta: 687
+    rank_delta_abs: 687
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -897,8 +896,8 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.009
-    global_rank: 699
-    paper_rank: 699
+    global_rank: 808
+    paper_rank: 808
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -965,8 +964,8 @@ results:
     value_note: ''
     sort_value: 0.767
     sort_std: 0.014
-    global_rank: 732
-    paper_rank: 732
+    global_rank: 855
+    paper_rank: 855
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1033,8 +1032,8 @@ results:
     value_note: ''
     sort_value: 0.609
     sort_std: 0.174
-    global_rank: 842
-    paper_rank: 842
+    global_rank: 988
+    paper_rank: 988
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1101,8 +1100,8 @@ results:
     value_note: ''
     sort_value: 0.605
     sort_std: 0.175
-    global_rank: 843
-    paper_rank: 843
+    global_rank: 989
+    paper_rank: 989
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1124,9 +1123,9 @@ results:
 - &id003
   dataset: PascalVOC-SP
   rows:
-  - model: SAN+RWSE
+  - model: CR-TAS
     model_key: gcn
-    model_plain: SAN+RWSE
+    model_plain: CR-TAS
     value: 0.78
     std: 0.31
     metric: F1
@@ -1156,72 +1155,73 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: crawl
-    model_plain: SAN+RWSE
-    value: 0.4588
-    std: 0.79
+    is_std_outlier: true
+  - model: CR-TAS
+    model_key: neuralwalker
+    model_plain: CR-TAS
+    value: 0.4912
+    std: 0.0042
     metric: F1
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-14'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/goombalab/chimera
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.4588
-    sort_std: 0.79
+    sort_value: 0.4912
+    sort_std: 0.0042
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: graphgps
-    model_plain: SAN+RWSE
-    value: 0.4538
-    std: 0.83
+  - model: CR-TAS
+    model_key: ppgt
+    model_plain: CR-TAS
+    value: 0.4641
+    std: 0.0033
     metric: F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: utilize relative random walk probabilities (RRWP) as
+      our demonstrating example of graph PE
     is_global_top: true
     global_rank: 3
-    sort_value: 0.4538
-    sort_std: 0.83
+    sort_value: 0.4641
+    sort_std: 0.0033
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GraphSAGE (PIGN)
     model_key: graphsage (pign)
@@ -1280,8 +1280,8 @@ results:
     value_note: ''
     sort_value: 0.356
     sort_std: 0.0037
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1348,8 +1348,8 @@ results:
     value_note: ''
     sort_value: 0.1831
     sort_std: 0.0038
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1416,8 +1416,8 @@ results:
     value_note: ''
     sort_value: 0.1706
     sort_std: 0.0046
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

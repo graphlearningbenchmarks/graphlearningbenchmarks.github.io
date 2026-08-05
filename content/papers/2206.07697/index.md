@@ -160,5 +160,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: MACE
+main_figure: /figures/2206.07697/main_figure.jpegoptim.jpg
 ---
 

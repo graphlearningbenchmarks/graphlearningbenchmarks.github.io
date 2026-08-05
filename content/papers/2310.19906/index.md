@@ -46,8 +46,8 @@ paper_type: method
 proposed_models:
 - PGIB
 - PGIB_cont
-mrr: 0.0159
-adjusted_mrr: 0.0053
+mrr: 0.0135
+adjusted_mrr: 0.0045
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -64,9 +64,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -97,9 +97,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -130,9 +130,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -222,9 +222,9 @@ results:
     sort_value: 0.9637
     sort_std: 0.0215
     global_rank: 6
-    paper_rank: 569
-    rank_delta: 563
-    rank_delta_abs: 563
+    paper_rank: 599
+    rank_delta: 593
+    rank_delta_abs: 593
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -289,9 +289,9 @@ results:
     sort_value: 0.933
     sort_std: 0.029
     global_rank: 34
-    paper_rank: 573
-    rank_delta: 539
-    rank_delta_abs: 539
+    paper_rank: 605
+    rank_delta: 571
+    rank_delta_abs: 571
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -355,10 +355,10 @@ results:
     value_note: ''
     sort_value: 0.917
     sort_std: 0.029
-    global_rank: 71
-    paper_rank: 573
-    rank_delta: 502
-    rank_delta_abs: 502
+    global_rank: 73
+    paper_rank: 605
+    rank_delta: 532
+    rank_delta_abs: 532
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -422,10 +422,10 @@ results:
     value_note: ''
     sort_value: 0.901
     sort_std: 0.058
-    global_rank: 156
-    paper_rank: 694
-    rank_delta: 538
-    rank_delta_abs: 538
+    global_rank: 164
+    paper_rank: 740
+    rank_delta: 576
+    rank_delta_abs: 576
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -489,10 +489,10 @@ results:
     value_note: ''
     sort_value: 0.891
     sort_std: 0.058
-    global_rank: 239
-    paper_rank: 679
-    rank_delta: 440
-    rank_delta_abs: 440
+    global_rank: 250
+    paper_rank: 725
+    rank_delta: 475
+    rank_delta_abs: 475
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -556,10 +556,10 @@ results:
     value_note: ''
     sort_value: 0.887
     sort_std: 0.053
-    global_rank: 266
-    paper_rank: 615
-    rank_delta: 349
-    rank_delta_abs: 349
+    global_rank: 278
+    paper_rank: 652
+    rank_delta: 374
+    rank_delta_abs: 374
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -597,40 +597,38 @@ results:
     date_iso: '2023-10-30'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: 0.8138
-    at_pub_std: 0.0231
-    at_pub_source_arxiv: '2206.09345'
-    at_pub_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    at_pub_source_date_iso: '2022-06-19'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-06-19'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.0037999999999999146
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-30'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.8138
-    true_std: 0.0231
-    value_gap_source_arxiv: '2206.09345'
-    value_gap_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0037999999999999146
+    true_value: 0.81
+    true_std: 0.0663
+    value_gap_source_arxiv: '2310.19906'
+    value_gap_source_title: Interpretable Prototype-based Graph Information Bottleneck
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.8138
-    sort_std: 0.0231
-    global_rank: 563
-    paper_rank: 566
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
+    sort_value: 0.81
+    sort_std: 0.0663
+    global_rank: 598
+    paper_rank: 598
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -648,9 +646,9 @@ results:
 - &id002
   dataset: PROTEINS
   rows:
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: gmn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8225
     std: null
     metric: Accuracy
@@ -681,9 +679,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: ci-gnn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -715,9 +713,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: diffpool+gpl
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -807,10 +805,10 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.041
-    global_rank: 23
-    paper_rank: 420
-    rank_delta: 397
-    rank_delta_abs: 397
+    global_rank: 27
+    paper_rank: 453
+    rank_delta: 426
+    rank_delta_abs: 426
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -876,10 +874,10 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: 0.03
-    global_rank: 38
-    paper_rank: 395
-    rank_delta: 357
-    rank_delta_abs: 357
+    global_rank: 47
+    paper_rank: 431
+    rank_delta: 384
+    rank_delta_abs: 384
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -943,8 +941,8 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.0242
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1010,8 +1008,8 @@ results:
     value_note: ''
     sort_value: 0.7714
     sort_std: 0.0219
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1057,8 +1055,8 @@ results:
     at_pub_source_title: Universal Graph Transformer Self-Attention Networks
     at_pub_source_date_iso: '2019-09-26'
     at_pub_source_date_label: WWW 2019
-    value_gap_source_date_iso: '2023-01-04'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-02-26'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: 0.03170000000000006
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1067,21 +1065,20 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.76
-    true_std: 0.03
-    value_gap_source_arxiv: '2301.01642'
-    value_gap_source_title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network
-      for Interpretable Brain Network-Based Psychiatric Diagnosis'
+    true_value: 0.7665
+    true_std: 0.0314
+    value_gap_source_arxiv: '2402.16346'
+    value_gap_source_title: Boosting Graph Pooling with Persistent Homology
     value_gap_source_is_current_paper: false
-    value_gap: 0.03170000000000006
+    value_gap: 0.03820000000000001
     has_value_note: false
     value_note: ''
-    sort_value: 0.76
-    sort_std: 0.03
-    global_rank: 135
-    paper_rank: 350
-    rank_delta: 215
-    rank_delta_abs: 215
+    sort_value: 0.7665
+    sort_std: 0.0314
+    global_rank: 94
+    paper_rank: 382
+    rank_delta: 288
+    rank_delta_abs: 288
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1145,8 +1142,8 @@ results:
     value_note: ''
     sort_value: 0.7525
     sort_std: 0.0592
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 235
+    paper_rank: 235
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1212,8 +1209,8 @@ results:
     value_note: ''
     sort_value: 0.7383
     sort_std: 0.0422
-    global_rank: 306
-    paper_rank: 306
+    global_rank: 335
+    paper_rank: 335
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1279,8 +1276,8 @@ results:
     value_note: ''
     sort_value: 0.7366
     sort_std: 0.0332
-    global_rank: 314
-    paper_rank: 314
+    global_rank: 344
+    paper_rank: 344
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1346,8 +1343,8 @@ results:
     value_note: ''
     sort_value: 0.6964
     sort_std: 0.0471
-    global_rank: 428
-    paper_rank: 428
+    global_rank: 460
+    paper_rank: 460
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1382,5 +1379,6 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: PROTEINS
       dataset_slug: proteins
+main_figure: /figures/2310.19906/main_figure.jpegoptim.jpg
 ---
 

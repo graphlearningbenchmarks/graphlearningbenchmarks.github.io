@@ -867,9 +867,9 @@ results:
     sort_value: 0.9302
     sort_std: 0.0011
     global_rank: 1
-    paper_rank: 157
-    rank_delta: 156
-    rank_delta_abs: 156
+    paper_rank: 177
+    rank_delta: 176
+    rank_delta_abs: 176
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -878,72 +878,216 @@ results:
     comparison_source_arxiv: '2204.04874'
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: graphssr
-    model_plain: GraphAny
-    value: 0.8793
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
-    venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8793
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphAny
-    model_key: graph-r1
-    model_plain: GraphAny
-    value: 0.8689
-    std: null
+  - model: GPM
+    model_key: rse + rgcn (70b)
+    model_plain: GPM
+    value: 0.8852
+    std: 0.0019
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
     venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.8689
-    sort_std: null
+    global_rank: 2
+    sort_value: 0.8852
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPM
+    model_key: rse + sehgnn (70b)
+    model_plain: GPM
+    value: 0.8796
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8796
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7437
+    std: 0.0028
+    paper_value: 0.7437
+    paper_std: 0.0028
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification task on WikiCS with 80/10/10 split as per Table
+      1
+    date: Oct 9, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-09'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8303
+    at_pub_std: 0.0021
+    at_pub_source_arxiv: '2405.18581'
+    at_pub_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
+    at_pub_source_date_iso: '2024-05-28'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-05-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.08660000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8303
+    true_std: 0.0021
+    value_gap_source_arxiv: '2405.18581'
+    value_gap_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08660000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8303
+    sort_std: 0.0021
+    global_rank: 20
+    paper_rank: 186
+    rank_delta: 166
+    rank_delta_abs: 166
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Unleashing the Potential of Text-attributed Graphs:
+      Automatic Relation Decomposition via Large Language Models'
+    comparison_source_arxiv: '2405.18581'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.7492
+    std: 0.0015
+    paper_value: 0.7492
+    paper_std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification task on WikiCS with 80/10/10 split as per Table
+      1
+    date: Oct 9, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-09'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8533
+    at_pub_std: null
+    at_pub_source_arxiv: '2505.19762'
+    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    at_pub_source_date_iso: '2025-05-26'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2024-05-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.10409999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8279
+    true_std: 0.0016
+    value_gap_source_arxiv: '2405.18581'
+    value_gap_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07869999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8279
+    sort_std: 0.0016
+    global_rank: 23
+    paper_rank: 180
+    rank_delta: 157
+    rank_delta_abs: 157
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    comparison_source_arxiv: '2505.19762'
     is_best: false
     is_std_outlier: false
   - model: GraphSAGE
@@ -1005,87 +1149,16 @@ results:
     value_note: ''
     sort_value: 0.8146
     sort_std: 0.001
-    global_rank: 25
-    paper_rank: 158
-    rank_delta: 133
-    rank_delta_abs: 133
+    global_rank: 36
+    paper_rank: 178
+    rank_delta: 142
+    rank_delta_abs: 142
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'GLBench: A Comprehensive Benchmark for Graph with Large
       Language Models'
     comparison_source_arxiv: '2407.07457'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7492
-    std: 0.0015
-    paper_value: 0.7492
-    paper_std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification task on WikiCS with 80/10/10 split as per Table
-      1
-    date: Oct 9, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-09'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8533
-    at_pub_std: null
-    at_pub_source_arxiv: '2505.19762'
-    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    at_pub_source_date_iso: '2025-05-26'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.10409999999999997
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8103
-    true_std: 0.0092
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06110000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8103
-    sort_std: 0.0092
-    global_rank: 29
-    paper_rank: 161
-    rank_delta: 132
-    rank_delta_abs: 132
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    comparison_source_arxiv: '2505.19762'
     is_best: false
     is_std_outlier: false
   - model: FedSage
@@ -1147,10 +1220,10 @@ results:
     value_note: ''
     sort_value: 0.7864
     sort_std: 0.0034
-    global_rank: 91
-    paper_rank: 148
-    rank_delta: 57
-    rank_delta_abs: 57
+    global_rank: 102
+    paper_rank: 165
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1218,10 +1291,10 @@ results:
     value_note: ''
     sort_value: 0.786
     sort_std: 0.0024
-    global_rank: 95
-    paper_rank: 141
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 106
+    paper_rank: 157
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1289,10 +1362,10 @@ results:
     value_note: ''
     sort_value: 0.7832
     sort_std: 0.0043
-    global_rank: 106
-    paper_rank: 134
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 118
+    paper_rank: 150
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1360,10 +1433,10 @@ results:
     value_note: ''
     sort_value: 0.7822
     sort_std: 0.0027
-    global_rank: 109
-    paper_rank: 146
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 121
+    paper_rank: 163
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1431,10 +1504,10 @@ results:
     value_note: ''
     sort_value: 0.7767
     sort_std: 0.0013
-    global_rank: 122
-    paper_rank: 148
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 138
+    paper_rank: 165
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1502,10 +1575,10 @@ results:
     value_note: ''
     sort_value: 0.7754
     sort_std: 0.0024
-    global_rank: 126
-    paper_rank: 150
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 142
+    paper_rank: 167
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1573,8 +1646,8 @@ results:
     value_note: ''
     sort_value: 0.7662
     sort_std: 0.0041
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 163
+    paper_rank: 163
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1582,76 +1655,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.7437
-    std: 0.0028
-    paper_value: 0.7437
-    paper_std: 0.0028
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification task on WikiCS with 80/10/10 split as per Table
-      1
-    date: Oct 9, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-09'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8303
-    at_pub_std: 0.0021
-    at_pub_source_arxiv: '2405.18581'
-    at_pub_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
-      Relation Decomposition via Large Language Models'
-    at_pub_source_date_iso: '2024-05-28'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2022-01-24'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.08660000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.759
-    true_std: 0.007
-    value_gap_source_arxiv: '2201.09830'
-    value_gap_source_title: Learning Graph Augmentations to Learn Graph Representations
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01529999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.759
-    sort_std: 0.007
-    global_rank: 151
-    paper_rank: 167
-    rank_delta: 16
-    rank_delta_abs: 16
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Unleashing the Potential of Text-attributed Graphs:
-      Automatic Relation Decomposition via Large Language Models'
-    comparison_source_arxiv: '2405.18581'
     is_best: false
     is_std_outlier: false
   - model: Linear
@@ -1713,8 +1716,8 @@ results:
     value_note: ''
     sort_value: 0.7438
     sort_std: 0.0016
-    global_rank: 167
-    paper_rank: 174
+    global_rank: 186
+    paper_rank: 193
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -1737,9 +1740,9 @@ results:
 - &id002
   dataset: ogbn-arxiv
   rows:
-  - model: X_OGB
+  - model: EGP (GCN)
     model_key: ofa
-    model_plain: X_OGB
+    model_plain: EGP (GCN)
     value: 0.7764
     std: null
     metric: Accuracy
@@ -1771,9 +1774,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: X_OGB
+  - model: EGP (GCN)
     model_key: giant-xrt
-    model_plain: X_OGB
+    model_plain: EGP (GCN)
     value: 0.7612
     std: 0.0016
     metric: Accuracy
@@ -1804,9 +1807,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: X_OGB
+  - model: EGP (GCN)
     model_key: gegcn
-    model_plain: X_OGB
+    model_plain: EGP (GCN)
     value: 0.7576
     std: 0.0064
     metric: Accuracy
@@ -1898,10 +1901,10 @@ results:
     value_note: ''
     sort_value: 0.7391
     sort_std: null
-    global_rank: 14
+    global_rank: 13
     paper_rank: 102
-    rank_delta: 88
-    rank_delta_abs: 88
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1968,8 +1971,8 @@ results:
     value_note: ''
     sort_value: 0.7377
     sort_std: 0.003
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2037,8 +2040,8 @@ results:
     value_note: ''
     sort_value: 0.7352
     sort_std: 0.0039
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2106,8 +2109,8 @@ results:
     value_note: ''
     sort_value: 0.7333
     sort_std: 0.0048
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2175,8 +2178,8 @@ results:
     value_note: ''
     sort_value: 0.732
     sort_std: 0.0022
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2244,8 +2247,8 @@ results:
     value_note: ''
     sort_value: 0.7319
     sort_std: 0.0022
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2313,10 +2316,10 @@ results:
     value_note: ''
     sort_value: 0.73
     sort_std: 0.0017
-    global_rank: 26
-    paper_rank: 98
-    rank_delta: 72
-    rank_delta_abs: 72
+    global_rank: 25
+    paper_rank: 100
+    rank_delta: 75
+    rank_delta_abs: 75
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2382,10 +2385,10 @@ results:
     value_note: ''
     sort_value: 0.7277
     sort_std: 0.0016
-    global_rank: 30
-    paper_rank: 101
-    rank_delta: 71
-    rank_delta_abs: 71
+    global_rank: 28
+    paper_rank: 102
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2451,8 +2454,8 @@ results:
     value_note: ''
     sort_value: 0.7212
     sort_std: 0.0033
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2519,10 +2522,10 @@ results:
     value_note: ''
     sort_value: 0.7176
     sort_std: null
-    global_rank: 64
-    paper_rank: 100
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 62
+    paper_rank: 102
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2657,8 +2660,8 @@ results:
     value_note: ''
     sort_value: 0.6628
     sort_std: 0.001
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2709,5 +2712,6 @@ datasets_by_scope:
     datasets:
     - dataset: WN18RR
       dataset_slug: wn18rr
+main_figure: /figures/2510.07755/main_figure.jpegoptim.jpg
 ---
 

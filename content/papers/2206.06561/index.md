@@ -52,9 +52,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - FreeKD
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0714
+adjusted_mrr: 0.0238
+mrr_dataset_count: 1
 benchmark_categories:
 - Classic
 - Heterophilic Graphs
@@ -66,7 +66,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 1
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -75,9 +75,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: gamlp(jk)
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.9982
     std: 0.01
     metric: F1
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: graphcon-gcn
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.996
     std: null
     metric: F1
@@ -141,34 +141,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
-    model_key: graphsaint
-    model_plain: Whole Dataset
-    value: 0.995
-    std: null
+  - model: Cluster-GCN
+    model_key: gcnii
+    model_plain: Cluster-GCN
+    value: 0.9956
+    std: 0.02
     metric: F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2007.02133'
+    title: Simple and Deep Graph Convolutional Networks
+    date: Jul 4, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/DropEdge/DropEdge
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.995
-    sort_std: null
+    sort_value: 0.9956
+    sort_std: 0.02
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -210,8 +210,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -220,70 +220,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    sort_value: 0.9879
-    sort_std: null
-    global_rank: 15
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LSP
-    model_key: lsp
-    model_plain: LSP
-    value: 0.9825
-    std: null
-    paper_value: 0.9825
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: "Table \ref{kd}"
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 14, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-14'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: 0.9781
-    at_pub_std: 0.0031
-    at_pub_source_arxiv: '2111.04964'
-    at_pub_source_title: On Representation Knowledge Distillation for Graph Neural
-      Networks
-    at_pub_source_date_iso: '2021-11-09'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.0044000000000000705
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9825
+    true_value: 0.9879
     true_std: null
     value_gap_source_arxiv: '2307.00534'
     value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
@@ -292,18 +229,17 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.9825
+    sort_value: 0.9879
     sort_std: null
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: On Representation Knowledge Distillation for Graph Neural
-      Networks
-    comparison_source_arxiv: '2111.04964'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: KD
@@ -364,8 +300,8 @@ results:
     value_note: ''
     sort_value: 0.9793
     sort_std: 0.0026
-    global_rank: 32
-    paper_rank: 36
+    global_rank: 33
+    paper_rank: 37
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -373,6 +309,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LSP
+    model_key: lsp
+    model_plain: LSP
+    value: 0.9825
+    std: null
+    paper_value: 0.9825
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: "Table \ref{kd}"
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jun 14, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-14'
+    published_venue: KDD 2022
+    published_conference: KDD 2022
+    at_pub_value: 0.9781
+    at_pub_std: 0.0031
+    at_pub_source_arxiv: '2111.04964'
+    at_pub_source_title: On Representation Knowledge Distillation for Graph Neural
+      Networks
+    at_pub_source_date_iso: '2021-11-09'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-11-09'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.0044000000000000705
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9781
+    true_std: 0.0031
+    value_gap_source_arxiv: '2111.04964'
+    value_gap_source_title: On Representation Knowledge Distillation for Graph Neural
+      Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0044000000000000705
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9781
+    sort_std: 0.0031
+    global_rank: 38
+    paper_rank: 27
+    rank_delta: -11
+    rank_delta_abs: 11
+    rank_delta_direction: better
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: On Representation Knowledge Distillation for Graph Neural
+      Networks
+    comparison_source_arxiv: '2111.04964'
     is_best: false
     is_std_outlier: false
   - model: GNN-SD
@@ -411,8 +417,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -421,23 +427,17 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.9773
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
     sort_value: 0.9773
     sort_std: null
-    global_rank: 40
-    paper_rank: 40
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    global_rank: 43
     has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -479,8 +479,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: ''
+    value_gap_source_date_label: ''
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -489,23 +489,17 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.9766
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
     sort_value: 0.9766
     sort_std: null
-    global_rank: 43
-    paper_rank: 43
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    global_rank: 45
     has_value_gap: false
+    has_value_note: false
+    value_gap: null
+    value_note: ''
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -567,10 +561,10 @@ results:
     value_note: ''
     sort_value: 0.976
     sort_std: null
-    global_rank: 44
+    global_rank: 45
     paper_rank: 8
-    rank_delta: -36
-    rank_delta_abs: 36
+    rank_delta: -37
+    rank_delta_abs: 37
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -636,8 +630,8 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -695,7 +689,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6928
     sort_std: null
-    global_rank: 120
+    global_rank: 123
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -721,6 +715,40 @@ results:
 - &id002
   dataset: Texas
   rows:
+  - model: RDD
+    model_key: freekd-prompt (sage-sage)
+    model_plain: RDD
+    value: 0.8108
+    std: null
+    metric: F1 Score
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2307.00534'
+    title: Shared Growth of Graph Neural Networks via Prompted Free-direction Knowledge
+      Distillation
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8108
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: FreeKD
     model_key: freekd
     model_plain: FreeKD
@@ -757,31 +785,37 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.7876
-    sort_std: null
-    global_rank: 1
-    has_value_gap: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.7784
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: 0.009199999999999986
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.7784
+    sort_std: null
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GSAGE
     model_key: gsage
@@ -831,7 +865,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7622
     sort_std: null
-    global_rank: 1
+    global_rank: 4
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -841,6 +875,40 @@ results:
     rank_delta_abs: null
     rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: RDD
+    model_key: sage
+    model_plain: RDD
+    value: 0.7622
+    std: null
+    metric: F1 Score
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2307.00534'
+    title: Shared Growth of Graph Neural Networks via Prompted Free-direction Knowledge
+      Distillation
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7622
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -893,7 +961,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6514
     sort_std: null
-    global_rank: 1
+    global_rank: 4
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -943,8 +1011,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -953,17 +1021,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6081
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6081
     sort_std: null
-    global_rank: 1
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1005,8 +1079,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1015,17 +1089,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5973
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5973
     sort_std: null
-    global_rank: 1
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1067,8 +1147,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1077,17 +1157,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5946
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5946
     sort_std: null
-    global_rank: 1
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1129,8 +1215,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1139,17 +1225,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5892
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5892
     sort_std: null
-    global_rank: 1
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1191,8 +1283,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1201,17 +1293,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5865
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5865
     sort_std: null
-    global_rank: 1
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1253,8 +1351,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1263,17 +1361,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5784
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5784
     sort_std: null
-    global_rank: 1
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1315,8 +1419,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1325,17 +1429,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5757
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5757
     sort_std: null
-    global_rank: 1
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1372,5 +1482,6 @@ datasets_by_scope:
     - dataset: Texas
       dataset_slug: texas
 single_proposed_model: FreeKD
+main_figure: /figures/2206.06561/main_figure.jpegoptim.jpg
 ---
 

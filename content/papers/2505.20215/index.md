@@ -64,9 +64,9 @@ results:
 - &id001
   dataset: PCQM-Contact
   rows:
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: exphormer
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -97,9 +97,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: exphormer + lappe
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -130,9 +130,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: graphgps + rwse
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4685
     std: 0.0009
     metric: MRR
@@ -211,7 +211,7 @@ results:
     today_delta_significant: false
     sort_value: 0.288
     sort_std: 0.09
-    global_rank: 51
+    global_rank: 52
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -273,7 +273,7 @@ results:
     today_delta_significant: false
     sort_value: 0.245
     sort_std: 0.034
-    global_rank: 52
+    global_rank: 53
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -335,7 +335,7 @@ results:
     today_delta_significant: false
     sort_value: 0.237
     sort_std: 0.019
-    global_rank: 52
+    global_rank: 53
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -397,7 +397,7 @@ results:
     today_delta_significant: false
     sort_value: 0.209
     sort_std: 0.028
-    global_rank: 52
+    global_rank: 53
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -433,5 +433,6 @@ datasets_by_scope:
     datasets:
     - dataset: PCQM-Contact
       dataset_slug: pcqm-contact
+main_figure: /figures/2505.20215/main_figure.jpegoptim.jpg
 ---
 

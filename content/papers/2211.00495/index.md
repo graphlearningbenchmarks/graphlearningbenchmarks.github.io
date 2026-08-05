@@ -59,8 +59,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - NAI
-mrr: 0.0038
-adjusted_mrr: 0.0013
+mrr: 0.0036
+adjusted_mrr: 0.0012
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -77,9 +77,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -111,9 +111,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -236,10 +236,10 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: 0.009
-    global_rank: 86
-    paper_rank: 267
-    rank_delta: 181
-    rank_delta_abs: 181
+    global_rank: 87
+    paper_rank: 286
+    rank_delta: 199
+    rank_delta_abs: 199
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -305,10 +305,10 @@ results:
     value_note: ''
     sort_value: 0.7765
     sort_std: 0.0048
-    global_rank: 213
-    paper_rank: 346
-    rank_delta: 133
-    rank_delta_abs: 133
+    global_rank: 228
+    paper_rank: 366
+    rank_delta: 138
+    rank_delta_abs: 138
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -372,8 +372,8 @@ results:
     value_note: ''
     sort_value: 0.7458
     sort_std: null
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 281
+    paper_rank: 281
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -439,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.7301
     sort_std: null
-    global_rank: 291
-    paper_rank: 291
+    global_rank: 310
+    paper_rank: 310
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -506,8 +506,8 @@ results:
     value_note: ''
     sort_value: 0.7133
     sort_std: null
-    global_rank: 309
-    paper_rank: 309
+    global_rank: 327
+    paper_rank: 327
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -540,5 +540,6 @@ datasets_by_scope:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
 single_proposed_model: NAI
+main_figure: /figures/2211.00495/main_figure.jpegoptim.jpg
 ---
 

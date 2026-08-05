@@ -73,9 +73,42 @@ results:
 - &id001
   dataset: ZINC
   rows:
-  - model: Subgraphormer
+  - model: GPS
+    model_key: tigt
+    model_plain: GPS
+    value: 0.014
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: GRaM
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.014
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPS
     model_key: ppgn++
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.001
     metric: MAE
@@ -98,17 +131,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.02
     sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: subgraphormer
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.002
     metric: MAE
@@ -132,13 +165,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.02
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: CIN
     model_key: cin
@@ -196,16 +229,16 @@ results:
     value_note: ''
     sort_value: 0.021
     sort_std: 0.001
-    global_rank: 3
-    paper_rank: 4
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 4
+    paper_rank: 6
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: I^2-GNN
     model_key: i^2-gnn
@@ -255,7 +288,7 @@ results:
     today_delta_significant: false
     sort_value: 0.023
     sort_std: 0.001
-    global_rank: 7
+    global_rank: 10
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -317,7 +350,7 @@ results:
     today_delta_significant: false
     sort_value: 0.025
     sort_std: 0.003
-    global_rank: 9
+    global_rank: 14
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -389,8 +422,8 @@ results:
     value_note: ''
     sort_value: 0.029
     sort_std: 0.001
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -457,8 +490,8 @@ results:
     value_note: ''
     sort_value: 0.036
     sort_std: 0.002
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -504,8 +537,8 @@ results:
     at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     at_pub_source_date_iso: '2021-06-23'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-10-22'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2021-06-23'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -516,17 +549,16 @@ results:
     today_delta_significant: false
     true_value: 0.044
     true_std: 0.003
-    value_gap_source_arxiv: '2210.13978'
-    value_gap_source_title: Boosting the Cycle Counting Power of Graph Neural Networks
-      with I$^2$-GNNs
+    value_gap_source_arxiv: '2106.12575'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.044
     sort_std: 0.003
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -592,8 +624,8 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -91,12 +91,12 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id002
+- &id001
   dataset: BACE
   rows:
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: protomol
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -128,9 +128,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: mmsg
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -162,9 +162,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: memgnn
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -243,7 +243,7 @@ results:
     today_delta_significant: false
     sort_value: 0.827
     sort_std: null
-    global_rank: 108
+    global_rank: 110
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -328,12 +328,45 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: BBBP
   rows:
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
+    model_key: magprompt+
+    model_plain: MAGPrompt+
+    value: 0.9432
+    std: 0.0238
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-05'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9432
+    sort_std: 0.0238
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MAGPrompt+
     model_key: cams-llama
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -357,7 +390,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.942
     sort_std: null
     comparison_type: global_top
@@ -365,9 +398,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: se(3)-i mpph
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -392,42 +425,9 @@ results:
     feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
       homology
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.94
     sort_std: 0.021
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: UnifiedMolPretrain
-    model_key: masking node + supervised
-    model_plain: UnifiedMolPretrain
-    value: 0.9343
-    std: 0.025
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2207.06010'
-    title: Does GNN Pretraining Help Molecular Representation?
-    date: Jul 13, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-13'
-    venue: Neural Information Processing Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9343
-    sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -481,7 +481,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7399
     sort_std: null
-    global_rank: 73
+    global_rank: 70
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -543,7 +543,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7204
     sort_std: null
-    global_rank: 100
+    global_rank: 95
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -569,44 +569,78 @@ results:
 - &id003
   dataset: ToxCast
   rows:
-  - model: Adding atoms and bonds features
-    model_key: sci
-    model_plain: Adding atoms and bonds features
-    value: 0.8073
-    std: 0.0006
+  - model: GIN (Supervised EdgePred)
+    model_key: geomgcl
+    model_plain: GIN (Supervised EdgePred)
+    value: 0.763
+    std: null
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-08'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
+    arxiv_id: '2109.11730'
+    title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property Prediction'
+    date: Sep 24, 2021
+    date_display: Sep 2021
+    date_iso: '2021-09-24'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: The model uses 2D and 3D views derived from the molecule,
+      which are standard geometric augmentations/views for this task.
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8073
-    sort_std: 0.0006
+    sort_value: 0.763
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Adding atoms and bonds features
-    model_key: pharmhgt
-    model_plain: Adding atoms and bonds features
-    value: 0.8023
-    std: 0.0009
+  - model: GIN (Supervised EdgePred)
+    model_key: light deepgpt
+    model_plain: GIN (Supervised EdgePred)
+    value: 0.757
+    std: 0.011
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.37
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.757
+    sort_std: 0.011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN (Supervised EdgePred)
+    model_key: d&d-node +vn
+    model_plain: GIN (Supervised EdgePred)
+    value: 0.7556
+    std: 0.0068
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
@@ -616,53 +650,21 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-08'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8023
-    sort_std: 0.0009
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Adding atoms and bonds features
-    model_key: stablegnn-graph
-    model_plain: Adding atoms and bonds features
-    value: 0.7986
-    std: 0.001
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-08'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    uses_external_data: false
+    arxiv_id: '2309.04062'
+    title: '3D Denoisers are Good 2D Teachers: Molecular Pretraining via Denoising
+      and Cross-Modal Distillation'
+    date: Sep 8, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-08'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.7986
-    sort_std: 0.001
+    sort_value: 0.7556
+    sort_std: 0.0068
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -716,7 +718,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6577
     sort_std: null
-    global_rank: 100
+    global_rank: 102
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -752,12 +754,13 @@ datasets_by_scope:
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:
-    - dataset: BBBP
-      dataset_slug: bbbp
     - dataset: BACE
       dataset_slug: bace
+    - dataset: BBBP
+      dataset_slug: bbbp
     - dataset: ToxCast
       dataset_slug: toxcast
 single_proposed_model: GDeR
+main_figure: /figures/2410.13761/main_figure.jpegoptim.jpg
 ---
 

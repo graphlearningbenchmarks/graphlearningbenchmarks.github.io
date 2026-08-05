@@ -70,9 +70,9 @@ results:
 - &id001
   dataset: ESOL
   rows:
-  - model: KCL
+  - model: AMCT
     model_key: mat
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.278
     std: 0.02
     metric: RMSE
@@ -104,9 +104,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: KCL
+  - model: AMCT
     model_key: smiles
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.356
     std: 0.017
     metric: RMSE
@@ -138,34 +138,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: KCL
-    model_key: conan-fgw
-    model_plain: KCL
-    value: 0.514
-    std: 0.019
+  - model: AMCT
+    model_key: graphormer-spis
+    model_plain: AMCT
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2402.01975'
-    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
-    date: Feb 3, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-03'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.514
-    sort_std: 0.019
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -229,10 +229,10 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.026
-    global_rank: 56
-    paper_rank: 94
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 66
+    paper_rank: 105
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -297,10 +297,10 @@ results:
     value_note: ''
     sort_value: 0.959
     sort_std: 0.047
-    global_rank: 60
-    paper_rank: 101
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 70
+    paper_rank: 112
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -364,10 +364,10 @@ results:
     value_note: ''
     sort_value: 1.12
     sort_std: 0.019
-    global_rank: 86
-    paper_rank: 117
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 96
+    paper_rank: 128
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -424,7 +424,7 @@ results:
     today_delta_significant: false
     sort_value: 1.161
     sort_std: 0.037
-    global_rank: 90
+    global_rank: 100
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -436,6 +436,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MGSSL
+    model_key: mgssl
+    model_plain: MGSSL
+    value: 2.936
+    std: 0.071
+    paper_value: 2.936
+    paper_std: 0.071
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 1.179
+    at_pub_std: 0.008
+    at_pub_source_arxiv: '2310.07351'
+    at_pub_source_title: Atom-Motif Contrastive Transformer for Molecular Property
+      Prediction
+    at_pub_source_date_iso: '2023-10-11'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-10-11'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 1.757
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 1.179
+    true_std: 0.008
+    value_gap_source_arxiv: '2310.07351'
+    value_gap_source_title: Atom-Motif Contrastive Transformer for Molecular Property
+      Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: 1.757
+    has_value_note: false
+    value_note: ''
+    sort_value: 1.179
+    sort_std: 0.008
+    global_rank: 103
+    paper_rank: 137
+    rank_delta: 34
+    rank_delta_abs: 34
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Atom-Motif Contrastive Transformer for Molecular Property
+      Prediction
+    comparison_source_arxiv: '2310.07351'
     is_best: false
     is_std_outlier: false
   - model: ContextPred
@@ -494,8 +564,8 @@ results:
     value_note: ''
     sort_value: 1.196
     sort_std: 0.037
-    global_rank: 93
-    paper_rank: 122
+    global_rank: 104
+    paper_rank: 133
     rank_delta: 29
     rank_delta_abs: 29
     rank_delta_direction: worse
@@ -563,8 +633,8 @@ results:
     value_note: ''
     sort_value: 1.237
     sort_std: 0.403
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -573,74 +643,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
-  - model: MGSSL
-    model_key: mgssl
-    model_plain: MGSSL
-    value: 2.936
-    std: 0.071
-    paper_value: 2.936
-    paper_std: 0.071
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 1.438
-    at_pub_std: 0.12
-    at_pub_source_arxiv: '2309.04589'
-    at_pub_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
-    at_pub_source_date_iso: '2023-09-08'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-09-08'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 1.498
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 1.438
-    true_std: 0.12
-    value_gap_source_arxiv: '2309.04589'
-    value_gap_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
-    value_gap_source_is_current_paper: false
-    value_gap: 1.498
-    has_value_note: false
-    value_note: ''
-    sort_value: 1.438
-    sort_std: 0.12
-    global_rank: 104
-    paper_rank: 126
-    rank_delta: 22
-    rank_delta_abs: 22
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
-    comparison_source_arxiv: '2309.04589'
-    is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: GraphFP
     model_key: graphfp
     model_plain: GraphFP
@@ -699,8 +702,8 @@ results:
     value_note: ''
     sort_value: 2.136
     sort_std: 0.096
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -768,8 +771,8 @@ results:
     value_note: ''
     sort_value: 2.368
     sort_std: 0.07
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -837,8 +840,8 @@ results:
     value_note: ''
     sort_value: 2.953
     sort_std: 0.049
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 138
+    paper_rank: 138
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -906,8 +909,8 @@ results:
     value_note: ''
     sort_value: 2.954
     sort_std: 0.087
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1152,8 +1155,8 @@ results:
     value_note: ''
     sort_value: 1.953
     sort_std: 0.038
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1221,8 +1224,8 @@ results:
     value_note: ''
     sort_value: 2.528
     sort_std: 0.016
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1290,8 +1293,8 @@ results:
     value_note: ''
     sort_value: 2.712
     sort_std: 0.327
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1357,8 +1360,8 @@ results:
     value_note: ''
     sort_value: 2.84
     sort_std: 0.19
-    global_rank: 86
-    paper_rank: 91
+    global_rank: 78
+    paper_rank: 83
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -1426,8 +1429,8 @@ results:
     value_note: ''
     sort_value: 3.033
     sort_std: 0.026
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1493,10 +1496,10 @@ results:
     value_note: ''
     sort_value: 3.057
     sort_std: 0.17
-    global_rank: 95
-    paper_rank: 100
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 88
+    paper_rank: 92
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1562,8 +1565,8 @@ results:
     value_note: ''
     sort_value: 3.166
     sort_std: 0.027
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1631,8 +1634,8 @@ results:
     value_note: ''
     sort_value: 3.192
     sort_std: 0.023
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1700,8 +1703,8 @@ results:
     value_note: ''
     sort_value: 3.282
     sort_std: 0.002
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1769,8 +1772,8 @@ results:
     value_note: ''
     sort_value: 4.023
     sort_std: 0.039
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2667,5 +2670,6 @@ datasets_by_scope:
     - dataset: Lipophilicity
       dataset_slug: lipophilicity
 single_proposed_model: GraSPNet
+main_figure: /figures/2602.20344/main_figure.jpegoptim.jpg
 ---
 

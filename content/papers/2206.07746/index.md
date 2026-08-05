@@ -60,8 +60,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - one-step gradient matching scheme
-mrr: 0.0044
-adjusted_mrr: 0.0044
+mrr: 0.0035
+adjusted_mrr: 0.0035
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -90,9 +90,9 @@ results:
 - &id006
   dataset: CIFAR10
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: randalign
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.7942
     std: 0.00072
     metric: Accuracy
@@ -101,9 +101,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2404.09774'
     title: 'RandAlign: A Parameter-Free Method for Regularizing Graph Convolutional
       Networks'
@@ -124,45 +124,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: tau-grit
-    model_plain: 3WLGNN
-    value: 0.77784
-    std: 0.0049
+  - model: Tango_GPS
+    model_key: differential encoding
+    model_plain: Tango_GPS
+    value: 0.79067
+    std: 0.00269
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.12369'
-    title: A Hierarchical Quantized Tokenization Framework for Task-Adaptive Graph
-      Representation Learning
-    date: Oct 14, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-14'
-    venue: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: Jul 3, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-03'
+    venue: IEEE Transactions on Big Data
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.77784
-    sort_std: 0.0049
+    sort_value: 0.79067
+    sort_std: 0.00269
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: degta
-    model_plain: 3WLGNN
-    value: 0.76756
-    std: 0.00927
+  - model: Tango_GPS
+    model_key: ppgt
+    model_plain: Tango_GPS
+    value: 0.7856
+    std: 0.007
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -172,20 +171,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2408.07654'
-    title: 'Graph Triple Attention Network: A Decoupled Perspective'
-    date: Aug 14, 2024
-    date_display: Aug 2024
-    date_iso: '2024-08-14'
-    venue: arXiv.org
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.76756
-    sort_std: 0.00927
+    sort_value: 0.7856
+    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -247,8 +246,8 @@ results:
     value_note: ''
     sort_value: 0.5075
     sort_std: 0.0014
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -315,8 +314,8 @@ results:
     value_note: ''
     sort_value: 0.3534
     sort_std: 0.0014
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 130
+    paper_rank: 130
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -383,8 +382,8 @@ results:
     value_note: ''
     sort_value: 0.3447
     sort_std: 0.0052
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -451,8 +450,8 @@ results:
     value_note: ''
     sort_value: 0.3394
     sort_std: 0.0037
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -519,8 +518,8 @@ results:
     value_note: ''
     sort_value: 0.3056
     sort_std: 0.0081
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -587,8 +586,8 @@ results:
     value_note: ''
     sort_value: 0.2417
     sort_std: 0.0051
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 134
+    paper_rank: 134
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -610,9 +609,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -643,9 +642,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: is-gib
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -677,9 +676,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: eerm
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -768,8 +767,8 @@ results:
     value_note: ''
     sort_value: 0.717
     sort_std: null
-    global_rank: 479
-    paper_rank: 479
+    global_rank: 549
+    paper_rank: 549
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -836,8 +835,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: null
-    global_rank: 548
-    paper_rank: 548
+    global_rank: 620
+    paper_rank: 620
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -884,32 +883,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-15'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-07-10'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.706
-    true_std: null
-    value_gap_source_arxiv: '2206.07746'
-    value_gap_source_title: Condensing Graphs via One-Step Gradient Matching
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    true_value: 0.708
+    true_std: 0.045
+    value_gap_source_arxiv: '2407.08064'
+    value_gap_source_title: 'TinyGraph: Joint Feature and Node Condensation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0020000000000000018
     has_value_note: false
     value_note: ''
-    sort_value: 0.706
-    sort_std: null
-    global_rank: 571
-    paper_rank: 571
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.708
+    sort_std: 0.045
+    global_rank: 636
+    paper_rank: 646
+    rank_delta: 10
+    rank_delta_abs: 10
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -927,9 +927,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -961,9 +961,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -995,9 +995,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -1085,8 +1085,8 @@ results:
     value_note: ''
     sort_value: 0.815
     sort_std: null
-    global_rank: 599
-    paper_rank: 599
+    global_rank: 696
+    paper_rank: 696
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1108,9 +1108,43 @@ results:
 - &id003
   dataset: PubMed
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
+    model_key: lgtl
+    model_plain: R-SoftGraphAIN
+    value: 0.9518
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9518
+    sort_std: 0.0011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: sagn
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -1134,7 +1168,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.9517
     sort_std: null
     comparison_type: global_top
@@ -1142,9 +1176,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
     model_key: mixhop (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -1168,43 +1202,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9513
     sort_std: 0.0038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
-    model_key: graphsage (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
-    value: 0.9511
-    std: 0.0036
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.13902'
-    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
-      Framework'
-    date: May 22, 2024
-    date_display: May 2024
-    date_iso: '2024-05-22'
-    venue: Web Search and Data Mining
-    codebase_url: https://github.com/QiaoYRan/LOGIN
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9511
-    sort_std: 0.0036
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1266,8 +1266,8 @@ results:
     value_note: ''
     sort_value: 0.793
     sort_std: null
-    global_rank: 479
-    paper_rank: 479
+    global_rank: 571
+    paper_rank: 571
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1333,8 +1333,8 @@ results:
     value_note: ''
     sort_value: 0.779
     sort_std: null
-    global_rank: 609
-    paper_rank: 609
+    global_rank: 725
+    paper_rank: 725
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1400,8 +1400,8 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: null
-    global_rank: 671
-    paper_rank: 671
+    global_rank: 800
+    paper_rank: 800
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1423,134 +1423,101 @@ results:
 - &id004
   dataset: ogbg-molhiv
   rows:
-  - model: MEG
-    model_key: clear
-    model_plain: MEG
-    value: 0.997
-    std: 0.002
+  - model: SigGate-GT
+    model_key: multi-rf fusion with multi-gnn blending
+    model_plain: SigGate-GT
+    value: 0.8476
+    std: 0.0002
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Mixing pharmacophoric (FCFP) and structural (ECFP) fingerprints...
+      GNNs contributing only 12%
     is_global_top: true
     global_rank: 1
-    sort_value: 0.997
-    sort_std: 0.002
+    sort_value: 0.8476
+    sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Random
-    model_key: random
-    model_plain: Random
-    value: 0.719
-    std: 0.009
-    paper_value: 0.719
-    paper_std: 0.009
+  - model: SigGate-GT
+    model_key: hyperfusion
+    model_plain: SigGate-GT
+    value: 0.8475
+    std: 0.0003
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: OGB scaffold split; evaluated on test set using GCN with sum pooling.
-    date: Jun 15, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-15'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-16'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.897
-    true_std: 0.004
-    value_gap_source_arxiv: '2210.08443'
-    value_gap_source_title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.17800000000000005
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.897
-    sort_std: 0.004
-    global_rank: 2
-    paper_rank: 299
-    rank_delta: 297
-    rank_delta_abs: 297
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MEG
-    model_key: eg-ist
-    model_plain: MEG
-    value: 0.897
-    std: 0.004
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8475
+    sort_std: 0.0003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SigGate-GT
+    model_key: pas+fps
+    model_plain: SigGate-GT
+    value: 0.842
+    std: 0.0015
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.897
-    sort_std: 0.004
+    sort_value: 0.842
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1681,8 +1648,8 @@ results:
     value_note: ''
     sort_value: 0.731
     sort_std: 0.004
-    global_rank: 290
-    paper_rank: 290
+    global_rank: 291
+    paper_rank: 291
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1749,10 +1716,10 @@ results:
     value_note: ''
     sort_value: 0.728
     sort_std: 0.002
-    global_rank: 295
-    paper_rank: 299
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 296
+    paper_rank: 301
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1817,8 +1784,8 @@ results:
     value_note: ''
     sort_value: 0.725
     sort_std: 0.006
-    global_rank: 298
-    paper_rank: 299
+    global_rank: 299
+    paper_rank: 300
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1885,8 +1852,76 @@ results:
     value_note: ''
     sort_value: 0.725
     sort_std: 0.006
-    global_rank: 299
-    paper_rank: 299
+    global_rank: 300
+    paper_rank: 300
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Random
+    model_key: random
+    model_plain: Random
+    value: 0.719
+    std: 0.009
+    paper_value: 0.719
+    paper_std: 0.009
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; evaluated on test set using GCN with sum pooling.
+    date: Jun 15, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-15'
+    published_venue: KDD 2022
+    published_conference: KDD 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.721
+    true_std: 0.014
+    value_gap_source_arxiv: '2402.04924'
+    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0020000000000000018
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.721
+    sort_std: 0.014
+    global_rank: 301
+    paper_rank: 301
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1908,9 +1943,9 @@ results:
 - &id005
   dataset: ogbg-molpcba
   rows:
-  - model: CTRL
+  - model: UGTs
     model_key: prune
-    model_plain: CTRL
+    model_plain: UGTs
     value: 0.8159
     std: 0.0535
     metric: ROC-AUC
@@ -1941,9 +1976,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CTRL
+  - model: UGTs
     model_key: egtas
-    model_plain: CTRL
+    model_plain: UGTs
     value: 0.7919
     std: 0.0137
     metric: ROC-AUC
@@ -1974,34 +2009,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CTRL
-    model_key: autogt
-    model_plain: CTRL
-    value: 0.767
-    std: 0.0142
+  - model: UGTs
+    model_key: ugts
+    model_plain: UGTs
+    value: 0.784
+    std: null
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2405.19779'
-    title: Automatic Graph Topology-Aware Transformer
-    date: May 30, 2024
-    date_display: May 2024
-    date_iso: '2024-05-30'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/xiaofangxd/EGTAS
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2211.15335'
+    title: 'You Can Have Better Graph Neural Networks by Not Training Weights at All:
+      Finding Untrained GNNs Tickets'
+    date: Nov 28, 2022
+    date_display: Nov 2022
+    date_iso: '2022-11-28'
+    venue: Learning on Graphs Conference
+    codebase_url: https://github.com/TianjinYellow/UGTs-LoG
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.767
-    sort_std: 0.0142
+    sort_value: 0.784
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2064,8 +2100,8 @@ results:
     value_note: ''
     sort_value: 0.646
     sort_std: 0.004
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2132,8 +2168,8 @@ results:
     value_note: ''
     sort_value: 0.62
     sort_std: 0.007
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2200,8 +2236,8 @@ results:
     value_note: ''
     sort_value: 0.617
     sort_std: 0.003
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2268,8 +2304,8 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: 0.02
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2336,8 +2372,8 @@ results:
     value_note: ''
     sort_value: 0.579
     sort_std: 0.032
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2404,8 +2440,8 @@ results:
     value_note: ''
     sort_value: 0.576
     sort_std: 0.019
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2466,5 +2502,6 @@ datasets_by_scope:
     - dataset: CIFAR10
       dataset_slug: cifar10
 single_proposed_model: one-step gradient matching scheme
+main_figure: /figures/2206.07746/main_figure.jpegoptim.jpg
 ---
 

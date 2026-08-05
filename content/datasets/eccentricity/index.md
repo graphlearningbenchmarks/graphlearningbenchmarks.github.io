@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: null
-result_count: 24
+result_count: 21
 best_model:
   model: GCN-SSM + k-hop
   value: -4.2652
@@ -22,10 +22,6 @@ best_model:
   paper_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs:
     Bridging Recurrent and Graph Learning'
 papers:
-- arxiv_id: '2508.05070'
-  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-  date_iso: '2025-08-07'
-  venue: ''
 - arxiv_id: '2505.18728'
   title: 'Message-Passing State-Space Models: Improving Graph Learning with Modern
     Sequence Modeling'
@@ -169,32 +165,6 @@ variants:
     - -2.2446
     metric_stds:
     - 0.0027
-  - model: Tango_GPS
-    model_plain: Tango_GPS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - -2.1455
-    metric_stds:
-    - 0.0033
   - model: DRew-GCN
     model_plain: DRew-GCN
     is_baseline: true
@@ -249,32 +219,6 @@ variants:
     - -2.0291
     metric_stds:
     - 0.024
-  - model: Tango_GatedGCN
-    model_plain: Tango_GatedGCN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - -1.7419
-    metric_stds:
-    - 0.0106
   - model: PH-DGN
     model_plain: PH-DGN
     is_baseline: true
@@ -489,32 +433,6 @@ variants:
     - 0.6833
     metric_stds:
     - 0.0074
-  - model: GatedGCN
-    model_plain: GatedGCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_iso: '2025-08-07'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6995
-    metric_stds:
-    - 0.0302
   - model: A-DGN
     model_plain: A-DGN
     is_baseline: false
@@ -697,18 +615,18 @@ variants:
     - 0.9504
     metric_stds:
     - 0.0007
-  row_count: 24
+  row_count: 21
   rows_json: ''
   chart_json: /data/datasets/eccentricity/standard-split-chart.json
   arch_counts:
-    gnn: 17
-    hybrid: 5
+    gnn: 16
+    hybrid: 3
     graph_transformer: 0
     llm: 0
     walk: 0
     traditional: 0
   metric_counts:
-  - 24
+  - 21
   milestones: &id001
   - value: 0.3046
     std: 0.1181

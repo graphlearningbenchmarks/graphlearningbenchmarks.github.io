@@ -75,9 +75,9 @@ results:
   dataset: Cora
   is_multi_metric: true
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     metric_values:
     - 0.9635
     - null
@@ -115,9 +115,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     metric_values:
     - 0.9629
     - null
@@ -155,9 +155,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     metric_values:
     - 0.9574
     - null
@@ -256,7 +256,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 17
+    global_rank: 18
   - model: GAT_(Llama3)
     model_key: gat_(llama3)
     model_plain: GAT_(Llama3)
@@ -318,7 +318,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 18
+    global_rank: 19
   - model: LinguGraph-Llama3 (8B)
     model_key: lingugraph-llama3 (8b)
     model_plain: LinguGraph-Llama3 (8B)
@@ -380,7 +380,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 19
+    global_rank: 20
   - model: GIN_(Llama3)
     model_key: gin_(llama3)
     model_plain: GIN_(Llama3)
@@ -442,7 +442,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 21
+    global_rank: 23
   - model: GCN_(Llama3)
     model_key: gcn_(llama3)
     model_plain: GCN_(Llama3)
@@ -504,7 +504,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 24
+    global_rank: 28
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -564,7 +564,7 @@ results:
     comparison_source_arxiv: '2401.09125'
     is_best: false
     is_std_outlier: false
-    global_rank: 27
+    global_rank: 33
   - model: BernNet
     model_key: bernnet
     model_plain: BernNet
@@ -624,7 +624,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 35
+    global_rank: 41
   - model: ACM-GCN
     model_key: acm-gcn
     model_plain: ACM-GCN
@@ -684,7 +684,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 36
+    global_rank: 42
   - model: RevGAT
     model_key: revgat
     model_plain: RevGAT
@@ -744,7 +744,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 53
+    global_rank: 66
   - model: GAT
     model_key: gat
     model_plain: GAT
@@ -805,7 +805,7 @@ results:
     comparison_source_arxiv: '2009.09232'
     is_best: false
     is_std_outlier: false
-    global_rank: 57
+    global_rank: 72
   - model: GCNII
     model_key: gcnii
     model_plain: GCNII
@@ -865,7 +865,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 59
+    global_rank: 74
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
@@ -927,7 +927,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 63
+    global_rank: 79
   - model: FAGCN
     model_key: fagcn
     model_plain: FAGCN
@@ -987,7 +987,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 65
+    global_rank: 81
   - model: LinguGraph-Llama2 (7B)
     model_key: lingugraph-llama2 (7b)
     model_plain: LinguGraph-Llama2 (7B)
@@ -1049,7 +1049,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 103
+    global_rank: 126
   - model: LinguGraph-Mistral (7B)
     model_key: lingugraph-mistral (7b)
     model_plain: LinguGraph-Mistral (7B)
@@ -1111,7 +1111,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 125
+    global_rank: 152
   - model: GIN
     model_key: gin
     model_plain: GIN
@@ -1174,7 +1174,7 @@ results:
     comparison_source_arxiv: '2110.15777'
     is_best: false
     is_std_outlier: false
-    global_rank: 198
+    global_rank: 227
   - model: Graphtransformer
     model_key: graphtransformer
     model_plain: Graphtransformer
@@ -1235,7 +1235,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 210
+    global_rank: 239
   - model: SGC-v2
     model_key: sgc-v2
     model_plain: SGC-v2
@@ -1295,7 +1295,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 263
+    global_rank: 290
   - model: Graphormer
     model_key: graphormer
     model_plain: Graphormer
@@ -1355,7 +1355,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 652
+    global_rank: 759
   - model: Llama3 (8B)
     model_key: llama3 (8b)
     model_plain: Llama3 (8B)
@@ -1416,7 +1416,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 913
+    global_rank: 1075
   - model: Llama2 (7B)
     model_key: llama2 (7b)
     model_plain: Llama2 (7B)
@@ -1477,7 +1477,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 914
+    global_rank: 1076
   - model: Mistral (7B)
     model_key: mistral (7b)
     model_plain: Mistral (7B)
@@ -1538,7 +1538,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 915
+    global_rank: 1077
   metrics:
   - Accuracy
   - F1
@@ -1566,5 +1566,6 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
+main_figure: /figures/2402.05894/main_figure.jpegoptim.jpg
 ---
 

@@ -71,9 +71,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: gamlp(jk)
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.9982
     std: 0.01
     metric: F1
@@ -104,9 +104,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: graphcon-gcn
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.996
     std: null
     metric: F1
@@ -137,34 +137,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
-    model_key: graphsaint
-    model_plain: Whole Dataset
-    value: 0.995
-    std: null
+  - model: Cluster-GCN
+    model_key: gcnii
+    model_plain: Cluster-GCN
+    value: 0.9956
+    std: 0.02
     metric: F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2007.02133'
+    title: Simple and Deep Graph Convolutional Networks
+    date: Jul 4, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/DropEdge/DropEdge
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.995
-    sort_std: null
+    sort_value: 0.9956
+    sort_std: 0.02
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -295,8 +295,8 @@ results:
     value_note: ''
     sort_value: 0.9771
     sort_std: null
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -363,8 +363,8 @@ results:
     value_note: ''
     sort_value: 0.9752
     sort_std: null
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -431,8 +431,8 @@ results:
     value_note: ''
     sort_value: 0.9268
     sort_std: null
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -454,9 +454,42 @@ results:
 - &id002
   dataset: ZINC
   rows:
-  - model: Subgraphormer
+  - model: GPS
+    model_key: tigt
+    model_plain: GPS
+    value: 0.014
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: GRaM
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.014
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPS
     model_key: ppgn++
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.001
     metric: MAE
@@ -479,17 +512,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.02
     sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: subgraphormer
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.002
     metric: MAE
@@ -513,47 +546,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.02
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Subgraphormer
-    model_key: cin
-    model_plain: Subgraphormer
-    value: 0.021
-    std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2306.03561'
-    title: 'CIN++: Enhancing Topological Message Passing'
-    date: Jun 6, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-06'
-    venue: arXiv.org
-    codebase_url: https://github.com/twitter-research/cwn
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Without any use of feature augmentation such as positional
-      encoding, our model exhibits particularly strong performance
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.021
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -611,15 +610,82 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 27
-    paper_rank: 47
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 41
+    paper_rank: 66
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     comparison_source_arxiv: '2106.12575'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.476
+    std: 0.006
+    paper_value: 0.476
+    paper_std: 0.006
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: velivckovic2018graph
+    variant_inference_reason: 'zinc: paper text matched full'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test split for ZINC regression
+    date: Sep 27, 2021
+    date_display: Sep 2021
+    date_iso: '2021-09-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-02-03'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.111
+    true_std: 0.002
+    value_gap_source_arxiv: '2402.02005'
+    value_gap_source_title: Topology-Informed Graph Transformer
+    value_gap_source_is_current_paper: false
+    value_gap: 0.365
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.111
+    sort_std: 0.002
+    global_rank: 47
+    paper_rank: 68
+    rank_delta: 21
+    rank_delta_abs: 21
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -658,8 +724,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-05-25'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2024-02-03'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -668,20 +734,20 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.1152
-    true_std: 0.001
-    value_gap_source_arxiv: '2305.15747'
-    value_gap_source_title: Union Subgraph Neural Networks
+    true_value: 0.113
+    true_std: 0.002
+    value_gap_source_arxiv: '2402.02005'
+    value_gap_source_title: Topology-Informed Graph Transformer
     value_gap_source_is_current_paper: false
-    value_gap: 0.29179999999999995
+    value_gap: 0.294
     has_value_note: false
     value_note: ''
-    sort_value: 0.1152
-    sort_std: 0.001
-    global_rank: 30
-    paper_rank: 47
-    rank_delta: 17
-    rank_delta_abs: 17
+    sort_value: 0.113
+    sort_std: 0.002
+    global_rank: 48
+    paper_rank: 66
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -745,8 +811,8 @@ results:
     value_note: ''
     sort_value: 0.1205
     sort_std: 0.0034
-    global_rank: 31
-    paper_rank: 49
+    global_rank: 50
+    paper_rank: 68
     rank_delta: 18
     rank_delta_abs: 18
     rank_delta_direction: worse
@@ -813,10 +879,10 @@ results:
     value_note: ''
     sort_value: 0.282
     sort_std: 0.015
-    global_rank: 43
-    paper_rank: 49
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 63
+    paper_rank: 68
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -881,8 +947,8 @@ results:
     value_note: ''
     sort_value: 0.325
     sort_std: 0.015
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -949,80 +1015,12 @@ results:
     value_note: ''
     sort_value: 0.337
     sort_std: 0.021
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.476
-    std: 0.006
-    paper_value: 0.476
-    paper_std: 0.006
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: velivckovic2018graph
-    variant_inference_reason: 'zinc: paper text matched full'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test split for ZINC regression
-    date: Sep 27, 2021
-    date_display: Sep 2021
-    date_iso: '2021-09-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-23'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.384
-    true_std: 0.007
-    value_gap_source_arxiv: '2201.09332'
-    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
-      Graphs?
-    value_gap_source_is_current_paper: false
-    value_gap: 0.09199999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.384
-    sort_std: 0.007
-    global_rank: 46
-    paper_rank: 49
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1085,8 +1083,8 @@ results:
     value_note: ''
     sort_value: 0.386
     sort_std: 0.009
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1153,8 +1151,8 @@ results:
     value_note: ''
     sort_value: 0.407
     sort_std: 0.018
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1221,8 +1219,8 @@ results:
     value_note: ''
     sort_value: 0.669
     sort_std: 0.07
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1231,7 +1229,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   rank_metric: MAE
   higher_is_better: false
   experiment_scope: graph-level
@@ -1263,5 +1261,6 @@ datasets_by_scope:
     datasets:
     - dataset: ZINC
       dataset_slug: zinc
+main_figure: /figures/2109.12872/main_figure.jpegoptim.jpg
 ---
 

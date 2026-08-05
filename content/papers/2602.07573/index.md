@@ -90,9 +90,9 @@ results:
 - &id001
   dataset: ACM
   rows:
-  - model: SAGE
+  - model: GCN+P+D
     model_key: signgt
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -124,9 +124,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
+  - model: GCN+P+D
     model_key: nodeformer
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -158,9 +158,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
+  - model: GCN+P+D
     model_key: fagcn
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9487
     std: 0.0059
     metric: Accuracy
@@ -187,40 +187,6 @@ results:
     global_rank: 3
     sort_value: 0.9487
     sort_std: 0.0059
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAGE
-    model_key: specformer
-    model_plain: SAGE
-    value: 0.9454
-    std: 0.0043
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2310.11025'
-    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
-      Learning'
-    date: Oct 17, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-17'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 4
-    sort_value: 0.9454
-    sort_std: 0.0043
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -284,10 +250,10 @@ results:
     value_note: ''
     sort_value: 0.9233
     sort_std: 0.0038
-    global_rank: 24
-    paper_rank: 68
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 41
+    paper_rank: 83
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -353,8 +319,8 @@ results:
     value_note: ''
     sort_value: 0.732
     sort_std: null
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -421,8 +387,8 @@ results:
     value_note: ''
     sort_value: 0.698
     sort_std: null
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -489,8 +455,8 @@ results:
     value_note: ''
     sort_value: 0.61
     sort_std: null
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -557,8 +523,8 @@ results:
     value_note: ''
     sort_value: 0.537
     sort_std: null
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -625,8 +591,8 @@ results:
     value_note: ''
     sort_value: 0.518
     sort_std: null
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -693,8 +659,8 @@ results:
     value_note: ''
     sort_value: 0.461
     sort_std: null
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -761,8 +727,8 @@ results:
     value_note: ''
     sort_value: 0.449
     sort_std: null
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -829,8 +795,8 @@ results:
     value_note: ''
     sort_value: 0.409
     sort_std: null
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -897,8 +863,8 @@ results:
     value_note: ''
     sort_value: 0.404
     sort_std: null
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -965,8 +931,8 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: null
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1033,8 +999,8 @@ results:
     value_note: ''
     sort_value: 0.325
     sort_std: null
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1067,5 +1033,6 @@ datasets_by_scope:
     - dataset: ACM
       dataset_slug: acm
 single_proposed_model: RSGDA
+main_figure: /figures/2602.07573/main_figure.jpegoptim.jpg
 ---
 

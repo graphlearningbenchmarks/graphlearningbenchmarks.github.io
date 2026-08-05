@@ -97,17 +97,17 @@ results:
     date_iso: '2023-10-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.3496
-    at_pub_std: 0.0013
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_value: 0.246
+    at_pub_std: 0.0007
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.10360000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -124,19 +124,53 @@ results:
     sort_value: 0.2421
     sort_std: 0.0016
     global_rank: 1
-    paper_rank: 116
-    rank_delta: 115
-    rank_delta_abs: 115
+    paper_rank: 169
+    rank_delta: 168
+    rank_delta_abs: 168
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
+    comparison_type: behind
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
+    model_key: tango_gps
+    model_plain: GMN
+    value: 0.2422
+    std: 0.0014
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Tango does not use additional encodings.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0014
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
+  - model: GMN
     model_key: nba-gin+lappe
-    model_plain: SAN+RWSE
+    model_plain: GMN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -159,7 +193,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.2424
     sort_std: 0.001
     comparison_type: global_top
@@ -223,10 +257,10 @@ results:
     value_note: ''
     sort_value: 0.2429
     sort_std: 0.0019
-    global_rank: 3
-    paper_rank: 118
-    rank_delta: 115
-    rank_delta_abs: 115
+    global_rank: 5
+    paper_rank: 171
+    rank_delta: 166
+    rank_delta_abs: 166
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -282,7 +316,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2487
     sort_std: 0.0009
-    global_rank: 34
+    global_rank: 72
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -352,8 +386,8 @@ results:
     value_note: ''
     sort_value: 0.2529
     sort_std: 0.0016
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -419,8 +453,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0012
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -78,9 +78,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -111,9 +111,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -237,10 +237,10 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.057
-    global_rank: 135
-    paper_rank: 569
-    rank_delta: 434
-    rank_delta_abs: 434
+    global_rank: 141
+    paper_rank: 599
+    rank_delta: 458
+    rank_delta_abs: 458
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -306,8 +306,8 @@ results:
     value_note: ''
     sort_value: 0.7794
     sort_std: 0.0
-    global_rank: 634
-    paper_rank: 634
+    global_rank: 673
+    paper_rank: 673
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -375,8 +375,8 @@ results:
     value_note: ''
     sort_value: 0.7323
     sort_std: 0.0048
-    global_rank: 698
-    paper_rank: 698
+    global_rank: 744
+    paper_rank: 744
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -444,8 +444,8 @@ results:
     value_note: ''
     sort_value: 0.672
     sort_std: 0.0124
-    global_rank: 728
-    paper_rank: 728
+    global_rank: 774
+    paper_rank: 774
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1003,5 +1003,6 @@ datasets_by_scope:
     - dataset: WN18
       dataset_slug: wn18
 single_proposed_model: R-GCN
+main_figure: /figures/1703.06103/main_figure.jpegoptim.jpg
 ---
 

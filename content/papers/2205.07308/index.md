@@ -60,21 +60,21 @@ has_results: true
 paper_type: method
 proposed_models:
 - GloGNN
-mrr: 0.0602
-adjusted_mrr: 0.0602
-mrr_dataset_count: 12
+mrr: 0.0469
+adjusted_mrr: 0.0469
+mrr_dataset_count: 11
 benchmark_categories:
 - Heterophilic Graphs
 - LINKX Benchmarks
 benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
-  evaluated: 4
-  total: 13
+  evaluated: 3
+  total: 6
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
   evaluated: 2
-  total: 5
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -83,9 +83,43 @@ results:
 - &id003
   dataset: Actor
   rows:
-  - model: CoCN
+  - model: R-SoftGraphAIN
+    model_key: nodeformer
+    model_plain: R-SoftGraphAIN
+    value: 0.7623
+    std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7623
+    sort_std: 0.0042
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: diggr
-    model_plain: CoCN
+    model_plain: R-SoftGraphAIN
     value: 0.4535
     std: 0.0353
     metric: Accuracy
@@ -108,52 +142,19 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.4535
     sort_std: 0.0353
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: CoCN
-    model_key: uniaug - polygcl
-    model_plain: CoCN
-    value: 0.4301
-    std: 0.0127
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.01899'
-    title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
-    date: Jun 4, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-04'
-    venue: NeurIPS'25
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.4301
-    sort_std: 0.0127
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CoCN
-    model_key: adaptkry
-    model_plain: CoCN
-    value: 0.427
-    std: 0.0114
+  - model: R-SoftGraphAIN
+    model_key: dog
+    model_plain: R-SoftGraphAIN
+    value: 0.432
+    std: 0.012
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -163,25 +164,25 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
-    date: Mar 12, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-12'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/AdaptKry
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.427
-    sort_std: 0.0114
+    sort_value: 0.432
+    sort_std: 0.012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GloGNN
     model_key: glognn
@@ -240,10 +241,10 @@ results:
     value_note: ''
     sort_value: 0.3959
     sort_std: 0.0029
-    global_rank: 49
-    paper_rank: 98
-    rank_delta: 49
-    rank_delta_abs: 49
+    global_rank: 59
+    paper_rank: 124
+    rank_delta: 65
+    rank_delta_abs: 65
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -299,7 +300,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2473
     sort_std: null
-    global_rank: 390
+    global_rank: 451
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -325,9 +326,9 @@ results:
 - &id002
   dataset: Cornell
   rows:
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -358,9 +359,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: acm-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.948
     std: 0.038
     metric: Accuracy
@@ -391,9 +392,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: rf-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -481,10 +482,10 @@ results:
     value_note: ''
     sort_value: 0.8595
     sort_std: 0.051
-    global_rank: 86
-    paper_rank: 129
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 89
+    paper_rank: 134
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -540,7 +541,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4838
     sort_std: null
-    global_rank: 488
+    global_rank: 521
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -564,47 +565,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 - &id004
-  dataset: Film
+  dataset: Penn94
   rows:
-  - model: DoG
-    model_key: dog
-    model_plain: DoG
-    value: 0.432
-    std: 0.012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2503.12563'
-    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
-    date: Mar 16, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-16'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
-    uses_external_data: true
-    input_feature_source: raw_features
-    feature_source_evidence: DoG generates synthetic graph structures to boost the
-      performance of GNNs.
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.432
-    sort_std: 0.012
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DoG
-    model_key: p^2gnn
-    model_plain: DoG
-    value: 0.4305
-    std: 0.0134
+  - model: GloGNN
+    model_key: chebnet2d
+    model_plain: GloGNN
+    value: 0.8762
+    std: 0.002
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -614,202 +581,28 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2603.09195'
-    title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    date: Mar 10, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-10'
-    venue: arXiv.org
-    codebase_url: ''
+    arxiv_id: '2404.04559'
+    title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
+    date: Apr 6, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-06'
+    venue: null
+    codebase_url: https://github.com/jianhao2016/GPRGNN
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.4305
-    sort_std: 0.0134
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DoG
-    model_key: vr-gnn
-    model_plain: DoG
-    value: 0.4216
-    std: 0.0042
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.09195'
-    title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    date: Mar 10, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-10'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.4216
-    sort_std: 0.0042
+    global_rank: 1
+    sort_value: 0.8762
+    sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
   - model: GloGNN
-    model_key: glognn
-    model_plain: GloGNN
-    value: 0.3735
-    std: null
-    paper_value: 0.3735
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: ''
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 15, 2022
-    date_display: May 2022
-    date_iso: '2022-05-15'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-03-10'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.388
-    true_std: 0.013
-    value_gap_source_arxiv: '2603.09195'
-    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.014500000000000013
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.388
-    sort_std: 0.013
-    global_rank: 12
-    paper_rank: 28
-    rank_delta: 16
-    rank_delta_abs: 16
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H_A
-    model_key: h_a
-    model_plain: H_A
-    value: 0.2473
-    std: null
-    paper_value: 0.2473
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: ''
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 15, 2022
-    date_display: May 2022
-    date_iso: '2022-05-15'
-    published_venue: ICML 2022
-    published_conference: ICML 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.2473
-    sort_std: null
-    global_rank: 73
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id005
-  dataset: Penn94
-  rows:
-  - model: NewtonNet
     model_key: dc-gnn
-    model_plain: NewtonNet
+    model_plain: GloGNN
     value: 0.8669
     std: 0.0022
     metric: Accuracy
@@ -832,17 +625,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.8669
     sort_std: 0.0022
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: NewtonNet
+  - model: GloGNN
     model_key: m2m-gnn
-    model_plain: NewtonNet
+    model_plain: GloGNN
     value: 0.8594
     std: 0.004
     metric: Accuracy
@@ -866,7 +659,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.8594
     sort_std: 0.004
     comparison_type: global_top
@@ -931,8 +724,8 @@ results:
     value_note: ''
     sort_value: 0.8574
     sort_std: 0.0042
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -990,7 +783,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8225
     sort_std: null
-    global_rank: 32
+    global_rank: 35
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1016,9 +809,9 @@ results:
 - &id001
   dataset: Texas
   rows:
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -1049,9 +842,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: dog
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -1060,9 +853,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -1083,9 +876,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: gpf-plus
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -1172,10 +965,10 @@ results:
     value_note: ''
     sort_value: 0.8524
     sort_std: 0.049
-    global_rank: 154
-    paper_rank: 182
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 160
+    paper_rank: 187
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1241,10 +1034,10 @@ results:
     value_note: ''
     sort_value: 0.7568
     sort_std: 0.0512
-    global_rank: 332
-    paper_rank: 392
-    rank_delta: 60
-    rank_delta_abs: 60
+    global_rank: 345
+    paper_rank: 413
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1301,7 +1094,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5622
     sort_std: null
-    global_rank: 576
+    global_rank: 591
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1324,12 +1117,12 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id005
   dataset: snap-patents
   rows:
-  - model: GCN
+  - model: LargeGT-full
     model_key: fabernet
-    model_plain: GCN
+    model_plain: LargeGT-full
     value: 0.751
     std: 0.0003
     metric: Accuracy
@@ -1360,9 +1153,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN
+  - model: LargeGT-full
     model_key: largescalenet
-    model_plain: GCN
+    model_plain: LargeGT-full
     value: 0.7505
     std: 0.0005
     metric: Accuracy
@@ -1393,9 +1186,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN
+  - model: LargeGT-full
     model_key: dirgnn
-    model_plain: GCN
+    model_plain: LargeGT-full
     value: 0.7395
     std: 0.0005
     metric: Accuracy
@@ -1421,39 +1214,6 @@ results:
     global_rank: 3
     sort_value: 0.7395
     sort_std: 0.0005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: dir-gcn
-    model_plain: GCN
-    value: 0.7132
-    std: 0.0006
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.10498'
-    title: Edge Directionality Improves Learning on Heterophilic Graphs
-    date: May 17, 2023
-    date_display: May 2023
-    date_iso: '2023-05-17'
-    venue: LOG IN
-    codebase_url: https://github.com/emalgorithm/directed-graph-neural-network
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 4
-    sort_value: 0.7132
-    sort_std: 0.0006
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1515,10 +1275,10 @@ results:
     value_note: ''
     sort_value: 0.6209
     sort_std: 0.0027
-    global_rank: 9
+    global_rank: 11
     paper_rank: 1
-    rank_delta: -8
-    rank_delta_abs: 8
+    rank_delta: -10
+    rank_delta_abs: 10
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
@@ -1574,7 +1334,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5622
     sort_std: null
-    global_rank: 12
+    global_rank: 15
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1603,11 +1363,10 @@ results_grouped:
   - *id001
   - *id002
   - *id003
-  - *id004
 - benchmark: LINKX Benchmarks
   datasets:
+  - *id004
   - *id005
-  - *id006
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -1621,8 +1380,6 @@ datasets_by_scope:
       dataset_slug: cornell
     - dataset: Actor
       dataset_slug: actor
-    - dataset: Film
-      dataset_slug: film
   - benchmark: LINKX Benchmarks
     benchmark_slug: linkx-benchmarks
     datasets:
@@ -1631,5 +1388,6 @@ datasets_by_scope:
     - dataset: snap-patents
       dataset_slug: snap-patents
 single_proposed_model: GloGNN
+main_figure: /figures/2205.07308/main_figure.jpegoptim.jpg
 ---
 

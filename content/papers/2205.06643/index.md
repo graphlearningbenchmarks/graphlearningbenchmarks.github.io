@@ -72,8 +72,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - BOTNet
-mrr: 0.0333
-adjusted_mrr: 0.0111
+mrr: 0.0278
+adjusted_mrr: 0.0093
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -279,7 +279,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 30
+    global_rank: 36
   - model: NequIP
     model_key: nequip
     model_plain: NequIP
@@ -298,18 +298,18 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.131
+    sort_value: 0.053
     sort_std: null
-    true_value: 0.131
+    true_value: 0.053
     true_std: null
     paper_value: 2.3
     paper_std: null
     has_value_gap: true
     has_value_note: false
-    value_gap: 2.1689999999999996
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
+    value_gap: 2.247
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
     value_note: ''
     at_pub_value: 0.348
     at_pub_std: null
@@ -318,8 +318,8 @@ results:
       based Molecular Potentials'
     at_pub_source_date_iso: '2022-01-01'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: 1.952
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -343,7 +343,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 45
+    global_rank: 34
   - model: Linear ACE
     model_key: linear ace
     model_plain: Linear ACE
@@ -405,7 +405,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 68
+    global_rank: 88
   - model: FCHL
     model_key: fchl
     model_plain: FCHL
@@ -467,7 +467,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 68
+    global_rank: 88
   - model: PaiNN
     model_key: painn
     model_plain: PaiNN
@@ -529,7 +529,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 39
+    global_rank: 45
   - model: sGDML
     model_key: sgdml
     model_plain: sGDML
@@ -591,7 +591,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 34
+    global_rank: 40
   - model: NewtonNet
     model_key: newtonnet
     model_plain: NewtonNet
@@ -653,7 +653,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 35
+    global_rank: 41
   - model: DimeNet++
     model_key: dimenet++
     model_plain: DimeNet++
@@ -715,7 +715,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 36
+    global_rank: 42
   - model: SchNet
     model_key: schnet
     model_plain: SchNet
@@ -777,7 +777,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 40
+    global_rank: 46
   - model: GMsNN
     model_key: gmsnn
     model_plain: GMsNN
@@ -839,7 +839,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 70
+    global_rank: 90
   - model: ANI
     model_key: ani
     model_plain: ANI
@@ -901,7 +901,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 70
+    global_rank: 90
   - model: GAP
     model_key: gap
     model_plain: GAP
@@ -963,7 +963,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 71
+    global_rank: 91
   metrics:
   - MAE
   - E
@@ -994,5 +994,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: BOTNet
+main_figure: /figures/2205.06643/main_figure.jpegoptim.jpg
 ---
 

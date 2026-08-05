@@ -64,8 +64,8 @@ paper_type: method
 proposed_models:
 - EXGC-X
 - EXGC
-mrr: 0.0038
-adjusted_mrr: 0.0038
+mrr: 0.0033
+adjusted_mrr: 0.0033
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -82,9 +82,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -115,9 +115,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: is-gib
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -149,9 +149,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: eerm
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -240,8 +240,8 @@ results:
     value_note: ''
     sort_value: 0.7112
     sort_std: 0.0006
-    global_rank: 538
-    paper_rank: 538
+    global_rank: 610
+    paper_rank: 610
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -287,8 +287,8 @@ results:
     at_pub_source_title: Condensing Graphs via One-Step Gradient Matching
     at_pub_source_date_iso: '2022-06-15'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-06-15'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-07-10'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.06619999999999993
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -297,20 +297,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.706
-    true_std: null
-    value_gap_source_arxiv: '2206.07746'
-    value_gap_source_title: Condensing Graphs via One-Step Gradient Matching
+    true_value: 0.708
+    true_std: 0.045
+    value_gap_source_arxiv: '2407.08064'
+    value_gap_source_title: 'TinyGraph: Joint Feature and Node Condensation for Graph
+      Neural Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.06619999999999993
+    value_gap: 0.06819999999999993
     has_value_note: false
     value_note: ''
-    sort_value: 0.706
-    sort_std: null
-    global_rank: 571
-    paper_rank: 757
-    rank_delta: 186
-    rank_delta_abs: 186
+    sort_value: 0.708
+    sort_std: 0.045
+    global_rank: 636
+    paper_rank: 851
+    rank_delta: 215
+    rank_delta_abs: 215
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -376,10 +377,10 @@ results:
     value_note: ''
     sort_value: 0.7049
     sort_std: 0.0008
-    global_rank: 577
-    paper_rank: 846
-    rank_delta: 269
-    rank_delta_abs: 269
+    global_rank: 654
+    paper_rank: 962
+    rank_delta: 308
+    rank_delta_abs: 308
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -445,12 +446,146 @@ results:
     value_note: ''
     sort_value: 0.6916
     sort_std: 0.02
-    global_rank: 630
-    paper_rank: 630
+    global_rank: 710
+    paper_rank: 710
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: K-Center
+    model_key: k-center
+    model_plain: K-Center
+    value: 0.3403
+    std: 0.0252
+    paper_value: 0.3403
+    paper_std: 0.0252
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) for node classification
+    date: Feb 5, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-05'
+    published_venue: WWW 2024
+    published_conference: WWW 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.691
+    true_std: 0.001
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: false
+    value_gap: 0.35069999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.691
+    sort_std: 0.001
+    global_rank: 712
+    paper_rank: 962
+    rank_delta: 250
+    rank_delta_abs: 250
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Herding
+    model_key: herding
+    model_plain: Herding
+    value: 0.3131
+    std: 0.012
+    paper_value: 0.3131
+    paper_std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) for node classification
+    date: Feb 5, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-05'
+    published_venue: WWW 2024
+    published_conference: WWW 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.69
+    true_std: 0.001
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: false
+    value_gap: 0.37689999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.69
+    sort_std: 0.001
+    global_rank: 714
+    paper_rank: 963
+    rank_delta: 249
+    rank_delta_abs: 249
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -513,8 +648,8 @@ results:
     value_note: ''
     sort_value: 0.6782
     sort_std: 0.0131
-    global_rank: 669
-    paper_rank: 669
+    global_rank: 756
+    paper_rank: 756
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -581,148 +716,12 @@ results:
     value_note: ''
     sort_value: 0.6413
     sort_std: 0.0183
-    global_rank: 753
-    paper_rank: 753
+    global_rank: 847
+    paper_rank: 847
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Herding
-    model_key: herding
-    model_plain: Herding
-    value: 0.3131
-    std: 0.012
-    paper_value: 0.3131
-    paper_std: 0.012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split) for node classification
-    date: Feb 5, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-05'
-    published_venue: WWW 2024
-    published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-02-07'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.571
-    true_std: 0.015
-    value_gap_source_arxiv: '2402.04924'
-    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
-      Rational Gradient Matching'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.25789999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.571
-    sort_std: 0.015
-    global_rank: 801
-    paper_rank: 848
-    rank_delta: 47
-    rank_delta_abs: 47
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: K-Center
-    model_key: k-center
-    model_plain: K-Center
-    value: 0.3403
-    std: 0.0252
-    paper_value: 0.3403
-    paper_std: 0.0252
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split) for node classification
-    date: Feb 5, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-05'
-    published_venue: WWW 2024
-    published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-02-07'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.524
-    true_std: 0.028
-    value_gap_source_arxiv: '2402.04924'
-    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
-      Rational Gradient Matching'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.18370000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.524
-    sort_std: 0.028
-    global_rank: 816
-    paper_rank: 846
-    rank_delta: 30
-    rank_delta_abs: 30
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -740,9 +739,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -774,9 +773,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -808,9 +807,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -901,10 +900,10 @@ results:
     value_note: ''
     sort_value: 0.8699
     sort_std: 0.006
-    global_rank: 175
-    paper_rank: 897
-    rank_delta: 722
-    rank_delta_abs: 722
+    global_rank: 204
+    paper_rank: 1055
+    rank_delta: 851
+    rank_delta_abs: 851
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -971,8 +970,8 @@ results:
     value_note: ''
     sort_value: 0.8202
     sort_std: 0.0042
-    global_rank: 553
-    paper_rank: 553
+    global_rank: 646
+    paper_rank: 646
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1040,8 +1039,8 @@ results:
     value_note: ''
     sort_value: 0.8091
     sort_std: 0.0039
-    global_rank: 638
-    paper_rank: 638
+    global_rank: 742
+    paper_rank: 742
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1109,8 +1108,8 @@ results:
     value_note: ''
     sort_value: 0.8091
     sort_std: 0.001
-    global_rank: 639
-    paper_rank: 639
+    global_rank: 743
+    paper_rank: 743
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1157,7 +1156,7 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_iso: '2024-07-10'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1167,28 +1166,28 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.801
-    true_std: 0.006
-    value_gap_source_arxiv: '2402.04924'
-    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
-      Rational Gradient Matching'
+    true_value: 0.809
+    true_std: 0.032
+    value_gap_source_arxiv: '2407.08064'
+    value_gap_source_title: 'TinyGraph: Joint Feature and Node Condensation for Graph
+      Neural Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.07340000000000002
+    value_gap: 0.08140000000000003
     has_value_note: false
     value_note: ''
-    sort_value: 0.801
-    sort_std: 0.006
-    global_rank: 666
-    paper_rank: 768
-    rank_delta: 102
-    rank_delta_abs: 102
+    sort_value: 0.809
+    sort_std: 0.032
+    global_rank: 744
+    paper_rank: 906
+    rank_delta: 162
+    rank_delta_abs: 162
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: Herding
     model_key: herding
     model_plain: Herding
@@ -1248,10 +1247,10 @@ results:
     value_note: ''
     sort_value: 0.768
     sort_std: 0.001
-    global_rank: 730
-    paper_rank: 887
-    rank_delta: 157
-    rank_delta_abs: 157
+    global_rank: 853
+    paper_rank: 1044
+    rank_delta: 191
+    rank_delta_abs: 191
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1319,10 +1318,10 @@ results:
     value_note: ''
     sort_value: 0.767
     sort_std: 0.001
-    global_rank: 731
-    paper_rank: 880
-    rank_delta: 149
-    rank_delta_abs: 149
+    global_rank: 854
+    paper_rank: 1037
+    rank_delta: 183
+    rank_delta_abs: 183
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1389,8 +1388,8 @@ results:
     value_note: ''
     sort_value: 0.691
     sort_std: 0.0031
-    global_rank: 802
-    paper_rank: 802
+    global_rank: 943
+    paper_rank: 943
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1412,9 +1411,9 @@ results:
 - &id003
   dataset: Reddit
   rows:
-  - model: GraphAny
+  - model: Cluster-GCN (2019)
     model_key: node sampled soup
-    model_plain: GraphAny
+    model_plain: Cluster-GCN (2019)
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -1446,44 +1445,45 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: gamlp(jk)
-    model_plain: GraphAny
-    value: 0.9704
-    std: 0.01
+  - model: Cluster-GCN (2019)
+    model_key: engcn
+    model_plain: Cluster-GCN (2019)
+    value: 0.9714
+    std: 0.0003
     metric: F1
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2206.04355'
-    title: Graph Attention Multi-Layer Perceptron
-    date: Jun 9, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-09'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/PKU-DAIR/GAMLP
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9704
-    sort_std: 0.01
+    sort_value: 0.9714
+    sort_std: 0.0003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: GraphAny
-    model_key: graphsaint
-    model_plain: GraphAny
-    value: 0.97
-    std: null
+  - model: Cluster-GCN (2019)
+    model_key: sagn+sle
+    model_plain: Cluster-GCN (2019)
+    value: 0.971
+    std: 0.0
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -1493,20 +1493,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.97
-    sort_std: null
+    sort_value: 0.971
+    sort_std: 0.0
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1569,8 +1570,8 @@ results:
     value_note: ''
     sort_value: 0.9396
     sort_std: 0.0003
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1637,8 +1638,8 @@ results:
     value_note: ''
     sort_value: 0.9184
     sort_std: 0.0073
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 138
+    paper_rank: 138
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1705,8 +1706,8 @@ results:
     value_note: ''
     sort_value: 0.9173
     sort_std: 0.0052
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1773,8 +1774,8 @@ results:
     value_note: ''
     sort_value: 0.9114
     sort_std: 0.0059
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1841,8 +1842,8 @@ results:
     value_note: ''
     sort_value: 0.9106
     sort_std: 0.0093
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1909,8 +1910,8 @@ results:
     value_note: ''
     sort_value: 0.7868
     sort_std: 0.0094
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1977,8 +1978,8 @@ results:
     value_note: ''
     sort_value: 0.6992
     sort_std: 0.0232
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2045,8 +2046,8 @@ results:
     value_note: ''
     sort_value: 0.6014
     sort_std: 0.0184
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 172
+    paper_rank: 172
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2084,5 +2085,6 @@ datasets_by_scope:
       dataset_slug: citeseer
     - dataset: Reddit
       dataset_slug: reddit
+main_figure: /figures/2402.05962/main_figure.jpegoptim.jpg
 ---
 

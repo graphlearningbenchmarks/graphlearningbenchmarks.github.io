@@ -57,8 +57,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FedGT (default)
-mrr: 0.0105
-adjusted_mrr: 0.0035
+mrr: 0.0103
+adjusted_mrr: 0.0034
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -75,9 +75,9 @@ results:
 - &id001
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -109,9 +109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gcn
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9412
     std: 0.0008
     metric: Accuracy
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gat
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -235,8 +235,8 @@ results:
     value_note: ''
     sort_value: 0.9059
     sort_std: 0.0009
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -304,8 +304,8 @@ results:
     value_note: ''
     sort_value: 0.8973
     sort_std: 0.0016
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 152
+    paper_rank: 152
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -338,5 +338,6 @@ datasets_by_scope:
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
 single_proposed_model: FedGT (default)
+main_figure: /figures/2401.15203/main_figure.jpegoptim.jpg
 ---
 

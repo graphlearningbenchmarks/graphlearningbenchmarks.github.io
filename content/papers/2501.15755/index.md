@@ -80,9 +80,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -173,9 +173,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 493
-    rank_delta: 491
-    rank_delta_abs: 491
+    paper_rank: 490
+    rank_delta: 488
+    rank_delta_abs: 488
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -184,9 +184,9 @@ results:
     comparison_source_arxiv: '2410.02622'
     is_best: false
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gat
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -276,9 +276,9 @@ results:
     sort_value: 0.9351
     sort_std: 0.0006
     global_rank: 8
-    paper_rank: 497
-    rank_delta: 489
-    rank_delta_abs: 489
+    paper_rank: 493
+    rank_delta: 485
+    rank_delta_abs: 485
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -334,7 +334,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8737
     sort_std: null
-    global_rank: 291
+    global_rank: 295
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -396,7 +396,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8737
     sort_std: null
-    global_rank: 291
+    global_rank: 295
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -458,7 +458,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8706
     sort_std: null
-    global_rank: 301
+    global_rank: 304
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -520,7 +520,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8699
     sort_std: null
-    global_rank: 301
+    global_rank: 304
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -644,7 +644,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7878
     sort_std: null
-    global_rank: 477
+    global_rank: 474
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -706,7 +706,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7838
     sort_std: null
-    global_rank: 479
+    global_rank: 476
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -768,7 +768,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7316
     sort_std: null
-    global_rank: 499
+    global_rank: 495
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -830,7 +830,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5742
     sort_std: null
-    global_rank: 526
+    global_rank: 522
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -892,7 +892,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4748
     sort_std: null
-    global_rank: 532
+    global_rank: 528
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -965,8 +965,8 @@ results:
     value_note: ''
     sort_value: 0.42
     sort_std: 0.006
-    global_rank: 536
-    paper_rank: 522
+    global_rank: 532
+    paper_rank: 518
     rank_delta: -14
     rank_delta_abs: 14
     rank_delta_direction: better
@@ -1025,7 +1025,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3895
     sort_std: null
-    global_rank: 538
+    global_rank: 534
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1051,9 +1051,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -1084,9 +1084,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -1118,9 +1118,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -1200,7 +1200,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8512
     sort_std: null
-    global_rank: 479
+    global_rank: 486
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1262,7 +1262,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8438
     sort_std: null
-    global_rank: 485
+    global_rank: 492
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1324,7 +1324,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8427
     sort_std: null
-    global_rank: 485
+    global_rank: 492
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1386,7 +1386,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8413
     sort_std: null
-    global_rank: 485
+    global_rank: 492
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1448,7 +1448,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8089
     sort_std: null
-    global_rank: 495
+    global_rank: 502
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1510,7 +1510,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7918
     sort_std: null
-    global_rank: 499
+    global_rank: 506
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1536,9 +1536,9 @@ results:
 - &id003
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -1570,9 +1570,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -1603,9 +1603,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -1695,10 +1695,10 @@ results:
     value_note: ''
     sort_value: 0.8691
     sort_std: 0.0005
-    global_rank: 11
-    paper_rank: 238
-    rank_delta: 227
-    rank_delta_abs: 227
+    global_rank: 12
+    paper_rank: 255
+    rank_delta: 243
+    rank_delta_abs: 243
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1764,10 +1764,10 @@ results:
     value_note: ''
     sort_value: 0.8467
     sort_std: null
-    global_rank: 35
-    paper_rank: 284
-    rank_delta: 249
-    rank_delta_abs: 249
+    global_rank: 37
+    paper_rank: 304
+    rank_delta: 267
+    rank_delta_abs: 267
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1832,10 +1832,10 @@ results:
     value_note: ''
     sort_value: 0.846
     sort_std: null
-    global_rank: 36
-    paper_rank: 284
-    rank_delta: 248
-    rank_delta_abs: 248
+    global_rank: 38
+    paper_rank: 304
+    rank_delta: 266
+    rank_delta_abs: 266
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1901,10 +1901,10 @@ results:
     value_note: ''
     sort_value: 0.8233
     sort_std: 0.0037
-    global_rank: 83
-    paper_rank: 287
-    rank_delta: 204
-    rank_delta_abs: 204
+    global_rank: 84
+    paper_rank: 307
+    rank_delta: 223
+    rank_delta_abs: 223
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1961,7 +1961,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8148
     sort_std: null
-    global_rank: 104
+    global_rank: 106
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2023,7 +2023,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8104
     sort_std: null
-    global_rank: 117
+    global_rank: 122
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2093,10 +2093,10 @@ results:
     value_note: ''
     sort_value: 0.7954
     sort_std: null
-    global_rank: 149
-    paper_rank: 175
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 159
+    paper_rank: 189
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2152,7 +2152,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7884
     sort_std: null
-    global_rank: 186
+    global_rank: 201
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2214,7 +2214,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7827
     sort_std: null
-    global_rank: 205
+    global_rank: 221
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2285,8 +2285,8 @@ results:
     value_note: ''
     sort_value: 0.6964
     sort_std: 0.0015
-    global_rank: 320
-    paper_rank: 286
+    global_rank: 340
+    paper_rank: 306
     rank_delta: -34
     rank_delta_abs: 34
     rank_delta_direction: better
@@ -2345,7 +2345,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6756
     sort_std: null
-    global_rank: 329
+    global_rank: 348
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2407,7 +2407,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5762
     sort_std: null
-    global_rank: 358
+    global_rank: 378
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2469,7 +2469,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5734
     sort_std: null
-    global_rank: 358
+    global_rank: 378
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2531,7 +2531,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4132
     sort_std: null
-    global_rank: 365
+    global_rank: 385
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2578,5 +2578,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
+main_figure: /figures/2501.15755/main_figure.jpegoptim.jpg
 ---
 

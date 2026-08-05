@@ -12,7 +12,7 @@ stats:
   avg_nodes: 30326273.0
   avg_edges: null
   num_classes: null
-result_count: 99
+result_count: 100
 best_model:
   model: SkipNode-U
   value: 0.826
@@ -551,8 +551,8 @@ variants:
     metric_stds:
     - 0.0049
     - null
-  - model: RA+Proposal Set
-    model_plain: RA+Proposal Set
+  - model: RA
+    model_plain: RA
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -833,6 +833,34 @@ variants:
     metric_stds:
     - 0.0048
     - null
+  - model: RA
+    model_plain: RA
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2209.15486'
+    title: Graph Neural Networks for Link Prediction with Subgraph Sketching
+    date: Sep 30, 2022
+    date_iso: '2022-09-30'
+    date_display: Sep 2022
+    codebase_url: https://github.com/melifluos/subgraph-sketching
+    published_conference: ICLR 2022
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4933
+    - null
+    metric_stds:
+    - 0.0
+    - null
   - model: Resource Allocation
     model_plain: Resource Allocation
     is_baseline: true
@@ -848,34 +876,6 @@ variants:
     date_iso: '2020-12-30'
     date_display: Dec 2020
     codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.4933
-    - null
-    metric_stds:
-    - 0.0
-    - null
-  - model: RA
-    model_plain: RA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2112.02936'
-    title: Pairwise Learning for Neural Link Prediction
-    date: Dec 6, 2021
-    date_iso: '2021-12-06'
-    date_display: Dec 2021
-    codebase_url: https://github.com/zhitao-wang/PLNLP
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
@@ -1566,7 +1566,7 @@ variants:
     metric_stds:
     - 0.016
     - null
-  row_count: 99
+  row_count: 100
   rows_json: /data/datasets/ogbl-ppa/standard-split-rows.json
   chart_json: /data/datasets/ogbl-ppa/standard-split-chart.json
   arch_counts:
@@ -1575,9 +1575,9 @@ variants:
     graph_transformer: 1
     llm: 0
     walk: 5
-    traditional: 24
+    traditional: 25
   metric_counts:
-  - 93
+  - 94
   - 6
   milestones: &id001
   - value: 0.342
@@ -1599,13 +1599,12 @@ variants:
     arxiv_id: '2012.15024'
     title: Adaptive Graph Diffusion Networks
     date: '2020-12-30'
-  - value: 0.5323
-    std: 0.0103
-    model: SUREL
-    arxiv_id: '2202.13538'
-    title: Algorithm and System Co-design for Efficient Subgraph-based Graph Representation
-      Learning
-    date: '2022-02-28'
+  - value: 0.5324
+    std: 0.0
+    model: RA
+    arxiv_id: '2112.02936'
+    title: Pairwise Learning for Neural Link Prediction
+    date: '2021-12-06'
   - value: 0.5432
     std: 0.0044
     model: SUREL

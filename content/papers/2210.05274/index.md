@@ -318,5 +318,6 @@ datasets_by_scope:
     - dataset: ZINC
       dataset_slug: zinc
 single_proposed_model: DiffLinker
+main_figure: /figures/2210.05274/main_figure.jpegoptim.jpg
 ---
 

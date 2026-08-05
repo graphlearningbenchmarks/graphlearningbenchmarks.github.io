@@ -233,10 +233,10 @@ results:
     value_note: ''
     sort_value: 0.039
     sort_std: null
-    global_rank: 16
-    paper_rank: 65
-    rank_delta: 49
-    rank_delta_abs: 49
+    global_rank: 18
+    paper_rank: 85
+    rank_delta: 67
+    rank_delta_abs: 67
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -274,16 +274,15 @@ results:
     date_iso: '2025-02-12'
     published_venue: ICLR 2025
     published_conference: ICLR 2025
-    at_pub_value: 0.0061
+    at_pub_value: 0.064
     at_pub_std: null
-    at_pub_source_arxiv: '2402.04836'
-    at_pub_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    at_pub_source_date_iso: '2024-02-07'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
-    gap_vs_at_pub: 2.7939
+    at_pub_source_arxiv: '2003.03123'
+    at_pub_source_title: Directional Message Passing for Molecular Graphs
+    at_pub_source_date_iso: '2020-03-06'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 2.7359999999999998
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -293,24 +292,23 @@ results:
     today_delta_significant: true
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 2.7359999999999998
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 66
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 42
+    paper_rank: 86
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    comparison_source_arxiv: '2402.04836'
+    comparison_source_title: Directional Message Passing for Molecular Graphs
+    comparison_source_arxiv: '2003.03123'
     is_best: false
     is_std_outlier: false
   - model: PaiNN
@@ -371,10 +369,10 @@ results:
     value_note: ''
     sort_value: 0.077
     sort_std: null
-    global_rank: 39
-    paper_rank: 66
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 45
+    paper_rank: 86
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -420,8 +418,8 @@ results:
       Dipole Moments and Partial Charges'
     at_pub_source_date_iso: '2019-02-22'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 3.45
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -432,19 +430,18 @@ results:
     today_delta_significant: true
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 3.42
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 66
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 46
+    paper_rank: 86
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -501,7 +498,7 @@ results:
     today_delta_significant: false
     sort_value: 1.5
     sort_std: null
-    global_rank: 64
+    global_rank: 84
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -563,7 +560,7 @@ results:
     today_delta_significant: false
     sort_value: 2.0
     sort_std: null
-    global_rank: 64
+    global_rank: 84
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -599,5 +596,6 @@ datasets_by_scope:
     datasets:
     - dataset: MD17
       dataset_slug: md17
+main_figure: /figures/2502.08209/main_figure.jpegoptim.jpg
 ---
 

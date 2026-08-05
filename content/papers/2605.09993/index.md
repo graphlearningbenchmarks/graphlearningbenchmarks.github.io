@@ -40,7 +40,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - R-GFM
-mrr: 0.0019
+mrr: 0.0017
 adjusted_mrr: 0.0006
 mrr_dataset_count: 1
 benchmark_categories:
@@ -49,7 +49,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 1
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -58,9 +58,9 @@ results:
 - &id001
   dataset: Cornell
   rows:
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -91,9 +91,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: acm-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.948
     std: 0.038
     metric: Accuracy
@@ -124,9 +124,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: rf-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -213,10 +213,10 @@ results:
     value_note: ''
     sort_value: 0.8852
     sort_std: 0.0133
-    global_rank: 49
-    paper_rank: 545
-    rank_delta: 496
-    rank_delta_abs: 496
+    global_rank: 50
+    paper_rank: 584
+    rank_delta: 534
+    rank_delta_abs: 534
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -280,10 +280,10 @@ results:
     value_note: ''
     sort_value: 0.8623
     sort_std: 0.0471
-    global_rank: 79
-    paper_rank: 546
-    rank_delta: 467
-    rank_delta_abs: 467
+    global_rank: 82
+    paper_rank: 585
+    rank_delta: 503
+    rank_delta_abs: 503
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -349,10 +349,10 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.054
-    global_rank: 165
-    paper_rank: 574
-    rank_delta: 409
-    rank_delta_abs: 409
+    global_rank: 171
+    paper_rank: 615
+    rank_delta: 444
+    rank_delta_abs: 444
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -417,10 +417,10 @@ results:
     value_note: ''
     sort_value: 0.8015
     sort_std: 0.0037
-    global_rank: 183
-    paper_rank: 569
-    rank_delta: 386
-    rank_delta_abs: 386
+    global_rank: 190
+    paper_rank: 610
+    rank_delta: 420
+    rank_delta_abs: 420
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -485,10 +485,10 @@ results:
     value_note: ''
     sort_value: 0.795
     sort_std: 0.063
-    global_rank: 190
-    paper_rank: 574
-    rank_delta: 384
-    rank_delta_abs: 384
+    global_rank: 198
+    paper_rank: 615
+    rank_delta: 417
+    rank_delta_abs: 417
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -555,10 +555,10 @@ results:
     value_note: ''
     sort_value: 0.7082
     sort_std: 0.0271
-    global_rank: 284
-    paper_rank: 547
-    rank_delta: 263
-    rank_delta_abs: 263
+    global_rank: 296
+    paper_rank: 586
+    rank_delta: 290
+    rank_delta_abs: 290
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -625,156 +625,16 @@ results:
     value_note: ''
     sort_value: 0.5933
     sort_std: 0.0148
-    global_rank: 377
-    paper_rank: 550
-    rank_delta: 173
-    rank_delta_abs: 173
+    global_rank: 404
+    paper_rank: 589
+    rank_delta: 185
+    rank_delta_abs: 185
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Simple and Asymmetric Graph Contrastive Learning without
       Augmentations
     comparison_source_arxiv: '2310.18884'
-    is_best: false
-    is_std_outlier: false
-  - model: MDGFM
-    model_key: mdgfm
-    model_plain: MDGFM
-    value: 0.2649
-    std: 0.1073
-    paper_value: 0.2649
-    paper_std: 0.1073
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 1-shot node classification using leave-one-dataset-out pretraining
-    date: May 11, 2026
-    date_display: May 2026
-    date_iso: '2026-05-11'
-    published_venue: ICML 2026
-    published_conference: ICML 2026
-    at_pub_value: 0.4956
-    at_pub_std: 0.0692
-    at_pub_source_arxiv: '2502.02017'
-    at_pub_source_title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer
-      via Topology Alignment'
-    at_pub_source_date_iso: '2025-02-04'
-    at_pub_source_date_label: ICML 2025
-    value_gap_source_date_iso: '2025-02-04'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: 0.23069999999999996
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4956
-    true_std: 0.0692
-    value_gap_source_arxiv: '2502.02017'
-    value_gap_source_title: 'Multi-Domain Graph Foundation Models: Robust Knowledge
-      Transfer via Topology Alignment'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.23069999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4956
-    sort_std: 0.0692
-    global_rank: 482
-    paper_rank: 551
-    rank_delta: 69
-    rank_delta_abs: 69
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Multi-Domain Graph Foundation Models: Robust Knowledge
-      Transfer via Topology Alignment'
-    comparison_source_arxiv: '2502.02017'
-    is_best: false
-    is_std_outlier: false
-  - model: GCOPE
-    model_key: gcope
-    model_plain: GCOPE
-    value: 0.25
-    std: 0.0658
-    paper_value: 0.25
-    paper_std: 0.0658
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 1-shot node classification using leave-one-dataset-out pretraining
-    date: May 11, 2026
-    date_display: May 2026
-    date_iso: '2026-05-11'
-    published_venue: ICML 2026
-    published_conference: ICML 2026
-    at_pub_value: 0.4821
-    at_pub_std: 0.1197
-    at_pub_source_arxiv: '2502.02017'
-    at_pub_source_title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer
-      via Topology Alignment'
-    at_pub_source_date_iso: '2025-02-04'
-    at_pub_source_date_label: ICML 2025
-    value_gap_source_date_iso: '2025-02-04'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: 0.23209999999999997
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4821
-    true_std: 0.1197
-    value_gap_source_arxiv: '2502.02017'
-    value_gap_source_title: 'Multi-Domain Graph Foundation Models: Robust Knowledge
-      Transfer via Topology Alignment'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.23209999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4821
-    sort_std: 0.1197
-    global_rank: 488
-    paper_rank: 554
-    rank_delta: 66
-    rank_delta_abs: 66
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Multi-Domain Graph Foundation Models: Robust Knowledge
-      Transfer via Topology Alignment'
-    comparison_source_arxiv: '2502.02017'
     is_best: false
     is_std_outlier: false
   - model: GraphCL
@@ -834,79 +694,10 @@ results:
     value_note: ''
     sort_value: 0.4722
     sort_std: 0.045
-    global_rank: 492
-    paper_rank: 507
-    rank_delta: 15
-    rank_delta_abs: 15
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPF
-    model_key: gpf
-    model_plain: GPF
-    value: 0.3622
-    std: 0.0946
-    paper_value: 0.3622
-    paper_std: 0.0946
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 1-shot node classification using leave-one-dataset-out pretraining
-    date: May 11, 2026
-    date_display: May 2026
-    date_iso: '2026-05-11'
-    published_venue: ICML 2026
-    published_conference: ICML 2026
-    at_pub_value: 0.3817
-    at_pub_std: 0.0815
-    at_pub_source_arxiv: '2502.02017'
-    at_pub_source_title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer
-      via Topology Alignment'
-    at_pub_source_date_iso: '2025-02-04'
-    at_pub_source_date_label: ICML 2025
-    value_gap_source_date_iso: '2025-02-04'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: 0.019499999999999962
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.3817
-    true_std: 0.0815
-    value_gap_source_arxiv: '2502.02017'
-    value_gap_source_title: 'Multi-Domain Graph Foundation Models: Robust Knowledge
-      Transfer via Topology Alignment'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.019499999999999962
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3817
-    sort_std: 0.0815
-    global_rank: 534
-    paper_rank: 536
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 524
+    paper_rank: 541
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -970,12 +761,80 @@ results:
     value_note: ''
     sort_value: 0.3671
     sort_std: 0.0992
-    global_rank: 535
-    paper_rank: 535
+    global_rank: 572
+    paper_rank: 572
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPF
+    model_key: gpf
+    model_plain: GPF
+    value: 0.3622
+    std: 0.0946
+    paper_value: 0.3622
+    paper_std: 0.0946
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 1-shot node classification using leave-one-dataset-out pretraining
+    date: May 11, 2026
+    date_display: May 2026
+    date_iso: '2026-05-11'
+    published_venue: ICML 2026
+    published_conference: ICML 2026
+    at_pub_value: 0.2891
+    at_pub_std: 0.0885
+    at_pub_source_arxiv: '2509.22416'
+    at_pub_source_title: 'One Prompt Fits All: Universal Graph Adaptation for Pretrained
+      Models'
+    at_pub_source_date_iso: '2025-09-26'
+    at_pub_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2026-05-11'
+    value_gap_source_date_label: ICML 2026
+    gap_vs_at_pub: 0.0731
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3622
+    true_std: 0.0946
+    value_gap_source_arxiv: '2605.09993'
+    value_gap_source_title: Learning Graph Foundation Models on Riemannian Graph-of-Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3622
+    sort_std: 0.0946
+    global_rank: 575
+    paper_rank: 575
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1037,8 +896,8 @@ results:
     value_note: ''
     sort_value: 0.3622
     sort_std: 0.053
-    global_rank: 537
-    paper_rank: 537
+    global_rank: 576
+    paper_rank: 576
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1078,16 +937,16 @@ results:
     date_iso: '2026-05-11'
     published_venue: ICML 2026
     published_conference: ICML 2026
-    at_pub_value: 0.3469
-    at_pub_std: 0.0854
-    at_pub_source_arxiv: '2502.02017'
-    at_pub_source_title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer
-      via Topology Alignment'
-    at_pub_source_date_iso: '2025-02-04'
-    at_pub_source_date_label: ICML 2025
+    at_pub_value: 0.2901
+    at_pub_std: 0.0832
+    at_pub_source_arxiv: '2509.22416'
+    at_pub_source_title: 'One Prompt Fits All: Universal Graph Adaptation for Pretrained
+      Models'
+    at_pub_source_date_iso: '2025-09-26'
+    at_pub_source_date_label: NeurIPS 2025
     value_gap_source_date_iso: '2026-05-11'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.00990000000000002
+    gap_vs_at_pub: 0.06669999999999998
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1105,8 +964,8 @@ results:
     value_note: ''
     sort_value: 0.3568
     sort_std: 0.0963
-    global_rank: 539
-    paper_rank: 539
+    global_rank: 578
+    paper_rank: 578
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1172,8 +1031,8 @@ results:
     value_note: ''
     sort_value: 0.3296
     sort_std: 0.0544
-    global_rank: 542
-    paper_rank: 542
+    global_rank: 581
+    paper_rank: 581
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1240,8 +1099,8 @@ results:
     value_note: ''
     sort_value: 0.3243
     sort_std: 0.1081
-    global_rank: 544
-    paper_rank: 544
+    global_rank: 583
+    paper_rank: 583
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1307,8 +1166,8 @@ results:
     value_note: ''
     sort_value: 0.3135
     sort_std: 0.0776
-    global_rank: 546
-    paper_rank: 546
+    global_rank: 585
+    paper_rank: 585
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1374,8 +1233,142 @@ results:
     value_note: ''
     sort_value: 0.2783
     sort_std: 0.11
-    global_rank: 550
-    paper_rank: 550
+    global_rank: 589
+    paper_rank: 589
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MDGFM
+    model_key: mdgfm
+    model_plain: MDGFM
+    value: 0.2649
+    std: 0.1073
+    paper_value: 0.2649
+    paper_std: 0.1073
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 1-shot node classification using leave-one-dataset-out pretraining
+    date: May 11, 2026
+    date_display: May 2026
+    date_iso: '2026-05-11'
+    published_venue: ICML 2026
+    published_conference: ICML 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-05-11'
+    value_gap_source_date_label: ICML 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2649
+    true_std: 0.1073
+    value_gap_source_arxiv: '2605.09993'
+    value_gap_source_title: Learning Graph Foundation Models on Riemannian Graph-of-Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2649
+    sort_std: 0.1073
+    global_rank: 591
+    paper_rank: 591
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCOPE
+    model_key: gcope
+    model_plain: GCOPE
+    value: 0.25
+    std: 0.0658
+    paper_value: 0.25
+    paper_std: 0.0658
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 1-shot node classification using leave-one-dataset-out pretraining
+    date: May 11, 2026
+    date_display: May 2026
+    date_iso: '2026-05-11'
+    published_venue: ICML 2026
+    published_conference: ICML 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-05-11'
+    value_gap_source_date_label: ICML 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.25
+    true_std: 0.0658
+    value_gap_source_arxiv: '2605.09993'
+    value_gap_source_title: Learning Graph Foundation Models on Riemannian Graph-of-Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.25
+    sort_std: 0.0658
+    global_rank: 595
+    paper_rank: 595
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1408,5 +1401,6 @@ datasets_by_scope:
     - dataset: Cornell
       dataset_slug: cornell
 single_proposed_model: R-GFM
+main_figure: /figures/2605.09993/main_figure.jpegoptim.jpg
 ---
 

@@ -177,6 +177,76 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: NequIP
+    model_key: nequip
+    model_plain: NequIP
+    value: 1.1
+    std: null
+    paper_value: 1.1
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: null
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: batzner2022nequip
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.0009
+    at_pub_std: null
+    at_pub_source_arxiv: '2407.02263'
+    at_pub_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
+    at_pub_source_date_iso: '2024-07-02'
+    at_pub_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 1.0991000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.053
+    true_std: null
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    value_gap_source_is_current_paper: false
+    value_gap: 1.0470000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.053
+    sort_std: null
+    global_rank: 34
+    paper_rank: 83
+    rank_delta: 49
+    rank_delta_abs: 49
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
+    comparison_source_arxiv: '2407.02263'
+    is_best: false
+    is_std_outlier: false
   - model: DimeNet++
     model_key: dimenet++
     model_plain: DimeNet++
@@ -207,16 +277,15 @@ results:
     date_iso: '2025-03-03'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.0061
+    at_pub_value: 0.064
     at_pub_std: null
-    at_pub_source_arxiv: '2402.04836'
-    at_pub_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    at_pub_source_date_iso: '2024-02-07'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
-    gap_vs_at_pub: 4.1939
+    at_pub_source_arxiv: '2003.03123'
+    at_pub_source_title: Directional Message Passing for Molecular Graphs
+    at_pub_source_date_iso: '2020-03-06'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 4.136
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -226,24 +295,23 @@ results:
     today_delta_significant: true
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 4.136
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 66
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 42
+    paper_rank: 86
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    comparison_source_arxiv: '2402.04836'
+    comparison_source_title: Directional Message Passing for Molecular Graphs
+    comparison_source_arxiv: '2003.03123'
     is_best: false
     is_std_outlier: false
   - model: PaiNN
@@ -304,10 +372,10 @@ results:
     value_note: ''
     sort_value: 0.077
     sort_std: null
-    global_rank: 39
-    paper_rank: 66
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 45
+    paper_rank: 86
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -353,8 +421,8 @@ results:
       Dipole Moments and Partial Charges'
     at_pub_source_date_iso: '2019-02-22'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 16.75
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -365,95 +433,24 @@ results:
     today_delta_significant: true
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 16.720000000000002
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 70
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 46
+    paper_rank: 90
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
       Dipole Moments and Partial Charges'
     comparison_source_arxiv: '1902.08408'
-    is_best: false
-    is_std_outlier: false
-  - model: NequIP
-    model_key: nequip
-    model_plain: NequIP
-    value: 1.1
-    std: null
-    paper_value: 1.1
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: null
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: batzner2022nequip
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Mar 3, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-03'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.0009
-    at_pub_std: null
-    at_pub_source_arxiv: '2402.04836'
-    at_pub_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    at_pub_source_date_iso: '2024-02-07'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 1.0991000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.131
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.9690000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.131
-    sort_std: null
-    global_rank: 45
-    paper_rank: 63
-    rank_delta: 18
-    rank_delta_abs: 18
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    comparison_source_arxiv: '2402.04836'
     is_best: false
     is_std_outlier: false
   - model: SphereNet
@@ -514,10 +511,10 @@ results:
     value_note: ''
     sort_value: 0.147
     sort_std: null
-    global_rank: 49
-    paper_rank: 63
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 68
+    paper_rank: 83
+    rank_delta: 15
+    rank_delta_abs: 15
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -574,7 +571,7 @@ results:
     today_delta_significant: false
     sort_value: 1.0
     sort_std: null
-    global_rank: 64
+    global_rank: 84
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -636,7 +633,7 @@ results:
     today_delta_significant: false
     sort_value: 1.0
     sort_std: null
-    global_rank: 64
+    global_rank: 84
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -698,7 +695,7 @@ results:
     today_delta_significant: false
     sort_value: 1.7
     sort_std: null
-    global_rank: 64
+    global_rank: 84
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -760,7 +757,7 @@ results:
     today_delta_significant: false
     sort_value: 8.9
     sort_std: null
-    global_rank: 69
+    global_rank: 89
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -822,7 +819,7 @@ results:
     today_delta_significant: false
     sort_value: 9.9
     sort_std: null
-    global_rank: 70
+    global_rank: 90
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -858,5 +855,6 @@ datasets_by_scope:
     datasets:
     - dataset: MD17
       dataset_slug: md17
+main_figure: /figures/2503.01431/main_figure.jpegoptim.jpg
 ---
 

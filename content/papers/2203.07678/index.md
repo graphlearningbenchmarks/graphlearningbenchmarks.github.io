@@ -61,9 +61,43 @@ results:
 - &id002
   dataset: COLLAB
   rows:
-  - model: ORC
+  - model: GPM
+    model_key: wl-mlp
+    model_plain: GPM
+    value: 0.9792
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9792
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPM
     model_key: msh-gnn
-    model_plain: ORC
+    model_plain: GPM
     value: 0.964
     std: 0.007
     metric: Accuracy
@@ -86,17 +120,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.964
     sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: ORC
+  - model: GPM
     model_key: cocn
-    model_plain: ORC
+    model_plain: GPM
     value: 0.8722
     std: 0.0013
     metric: Accuracy
@@ -119,42 +153,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: use the one-hot encoding of node degrees as node features
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.8722
     sort_std: 0.0013
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: ORC
-    model_key: n^2
-    model_plain: ORC
-    value: 0.867
-    std: 0.016
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.867
-    sort_std: 0.016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -217,10 +218,10 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: 0.021
-    global_rank: 36
-    paper_rank: 238
-    rank_delta: 202
-    rank_delta_abs: 202
+    global_rank: 37
+    paper_rank: 263
+    rank_delta: 226
+    rank_delta_abs: 226
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -285,10 +286,10 @@ results:
     value_note: ''
     sort_value: 0.8213
     sort_std: 0.0043
-    global_rank: 40
-    paper_rank: 307
-    rank_delta: 267
-    rank_delta_abs: 267
+    global_rank: 41
+    paper_rank: 340
+    rank_delta: 299
+    rank_delta_abs: 299
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -353,10 +354,10 @@ results:
     value_note: ''
     sort_value: 0.818
     sort_std: 0.0224
-    global_rank: 43
-    paper_rank: 283
-    rank_delta: 240
-    rank_delta_abs: 240
+    global_rank: 45
+    paper_rank: 314
+    rank_delta: 269
+    rank_delta_abs: 269
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -412,7 +413,7 @@ results:
     today_delta_significant: false
     sort_value: 0.795
     sort_std: 0.017
-    global_rank: 155
+    global_rank: 165
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -474,7 +475,7 @@ results:
     today_delta_significant: false
     sort_value: 0.79
     sort_std: 0.02
-    global_rank: 175
+    global_rank: 185
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -536,7 +537,7 @@ results:
     today_delta_significant: false
     sort_value: 0.785
     sort_std: 0.017
-    global_rank: 182
+    global_rank: 194
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -598,7 +599,7 @@ results:
     today_delta_significant: false
     sort_value: 0.778
     sort_std: 0.015
-    global_rank: 198
+    global_rank: 211
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -669,10 +670,10 @@ results:
     value_note: ''
     sort_value: 0.7759
     sort_std: 0.0224
-    global_rank: 202
-    paper_rank: 290
-    rank_delta: 88
-    rank_delta_abs: 88
+    global_rank: 215
+    paper_rank: 322
+    rank_delta: 107
+    rank_delta_abs: 107
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -728,7 +729,7 @@ results:
     today_delta_significant: false
     sort_value: 0.733
     sort_std: 0.016
-    global_rank: 275
+    global_rank: 306
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -790,7 +791,7 @@ results:
     today_delta_significant: false
     sort_value: 0.722
     sort_std: 0.022
-    global_rank: 285
+    global_rank: 316
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -852,7 +853,7 @@ results:
     today_delta_significant: false
     sort_value: 0.703
     sort_std: 0.027
-    global_rank: 300
+    global_rank: 333
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -914,7 +915,7 @@ results:
     today_delta_significant: false
     sort_value: 0.661
     sort_std: 0.03
-    global_rank: 319
+    global_rank: 352
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -976,7 +977,7 @@ results:
     today_delta_significant: false
     sort_value: 0.52
     sort_std: 0.059
-    global_rank: 355
+    global_rank: 386
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1002,9 +1003,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1035,9 +1036,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1068,9 +1069,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -1159,9 +1160,9 @@ results:
     sort_value: 0.933
     sort_std: 0.029
     global_rank: 34
-    paper_rank: 485
-    rank_delta: 451
-    rank_delta_abs: 451
+    paper_rank: 512
+    rank_delta: 478
+    rank_delta_abs: 478
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1199,15 +1200,15 @@ results:
     date_iso: '2022-03-15'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.906
+    at_pub_std: 0.087
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2022-09-16'
     value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.039000000000000035
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1225,10 +1226,10 @@ results:
     value_note: ''
     sort_value: 0.906
     sort_std: 0.087
-    global_rank: 118
-    paper_rank: 362
-    rank_delta: 244
-    rank_delta_abs: 244
+    global_rank: 123
+    paper_rank: 381
+    rank_delta: 258
+    rank_delta_abs: 258
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1284,7 +1285,7 @@ results:
     today_delta_significant: false
     sort_value: 0.899
     sort_std: 0.06
-    global_rank: 180
+    global_rank: 188
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1355,10 +1356,10 @@ results:
     value_note: ''
     sort_value: 0.896
     sort_std: 0.062
-    global_rank: 198
-    paper_rank: 358
-    rank_delta: 160
-    rank_delta_abs: 160
+    global_rank: 207
+    paper_rank: 377
+    rank_delta: 170
+    rank_delta_abs: 170
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1423,10 +1424,10 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.046
-    global_rank: 208
-    paper_rank: 573
-    rank_delta: 365
-    rank_delta_abs: 365
+    global_rank: 218
+    paper_rank: 604
+    rank_delta: 386
+    rank_delta_abs: 386
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1482,7 +1483,7 @@ results:
     today_delta_significant: false
     sort_value: 0.884
     sort_std: 0.021
-    global_rank: 283
+    global_rank: 296
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1544,7 +1545,7 @@ results:
     today_delta_significant: false
     sort_value: 0.878
     sort_std: 0.072
-    global_rank: 311
+    global_rank: 326
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1606,7 +1607,7 @@ results:
     today_delta_significant: false
     sort_value: 0.862
     sort_std: 0.078
-    global_rank: 373
+    global_rank: 393
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1651,11 +1652,12 @@ results:
     published_venue: ''
     published_conference: ''
     at_pub_value: 0.8583
-    at_pub_std: 0.017
-    at_pub_source_arxiv: '1905.11136'
-    at_pub_source_title: Provably Powerful Graph Networks
-    at_pub_source_date_iso: '2019-05-27'
-    at_pub_source_date_label: NeurIPS 2019
+    at_pub_std: null
+    at_pub_source_arxiv: '1901.08296'
+    at_pub_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
+    at_pub_source_date_iso: '2018-12-14'
+    at_pub_source_date_label: '2018'
     value_gap_source_date_iso: '2023-05-10'
     value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: 0.0343
@@ -1677,10 +1679,10 @@ results:
     value_note: ''
     sort_value: 0.8583
     sort_std: 0.0166
-    global_rank: 387
-    paper_rank: 525
-    rank_delta: 138
-    rank_delta_abs: 138
+    global_rank: 408
+    paper_rank: 553
+    rank_delta: 145
+    rank_delta_abs: 145
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1736,7 +1738,7 @@ results:
     today_delta_significant: false
     sort_value: 0.84
     sort_std: 0.06
-    global_rank: 465
+    global_rank: 493
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1798,7 +1800,7 @@ results:
     today_delta_significant: false
     sort_value: 0.835
     sort_std: 0.064
-    global_rank: 484
+    global_rank: 512
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1860,7 +1862,7 @@ results:
     today_delta_significant: false
     sort_value: 0.829
     sort_std: 0.068
-    global_rank: 505
+    global_rank: 530
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1922,7 +1924,7 @@ results:
     today_delta_significant: false
     sort_value: 0.824
     sort_std: 0.059
-    global_rank: 532
+    global_rank: 560
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1984,7 +1986,7 @@ results:
     today_delta_significant: false
     sort_value: 0.808
     sort_std: 0.081
-    global_rank: 572
+    global_rank: 603
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2046,7 +2048,7 @@ results:
     today_delta_significant: false
     sort_value: 0.798
     sort_std: 0.109
-    global_rank: 603
+    global_rank: 638
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2086,5 +2088,6 @@ datasets_by_scope:
     - dataset: COLLAB
       dataset_slug: collab
 single_proposed_model: IHGNN
+main_figure: /figures/2203.07678/main_figure.jpegoptim.jpg
 ---
 

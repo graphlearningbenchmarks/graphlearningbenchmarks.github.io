@@ -920,5 +920,6 @@ datasets_by_scope:
       dataset_slug: amazon-photo
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
+main_figure: /figures/2110.04099/main_figure.jpegoptim.jpg
 ---
 

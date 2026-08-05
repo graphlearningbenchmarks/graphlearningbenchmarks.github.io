@@ -325,5 +325,6 @@ datasets_by_scope:
     - dataset: WN18RR
       dataset_slug: wn18rr
 single_proposed_model: Ultra fine-tuned
+main_figure: /figures/2310.04562/main_figure.jpegoptim.jpg
 ---
 

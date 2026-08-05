@@ -5154,5 +5154,6 @@ datasets_by_scope:
       dataset_slug: collab
     - dataset: ENZYMES
       dataset_slug: enzymes
+main_figure: /figures/2406.15523/main_figure.jpegoptim.jpg
 ---
 

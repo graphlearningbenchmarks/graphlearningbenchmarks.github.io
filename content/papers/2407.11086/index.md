@@ -68,8 +68,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - Frad
-mrr: 0.0476
-adjusted_mrr: 0.0159
+mrr: 0.0417
+adjusted_mrr: 0.0139
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -246,10 +246,10 @@ results:
     value_note: ''
     sort_value: 0.0431
     sort_std: null
-    global_rank: 21
-    paper_rank: 53
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 24
+    paper_rank: 73
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -316,10 +316,10 @@ results:
     value_note: ''
     sort_value: 0.0529
     sort_std: null
-    global_rank: 28
-    paper_rank: 53
-    rank_delta: 25
-    rank_delta_abs: 25
+    global_rank: 33
+    paper_rank: 73
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -385,8 +385,8 @@ results:
     value_note: ''
     sort_value: 0.2361
     sort_std: null
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -453,8 +453,8 @@ results:
     value_note: ''
     sort_value: 0.253
     sort_std: null
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -487,5 +487,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: Frad
+main_figure: /figures/2407.11086/main_figure.jpegoptim.jpg
 ---
 

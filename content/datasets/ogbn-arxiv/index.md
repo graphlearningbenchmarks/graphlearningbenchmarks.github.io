@@ -12,7 +12,7 @@ stats:
   avg_nodes: 1166243.0
   avg_edges: null
   num_classes: 40
-result_count: 180
+result_count: 171
 best_model:
   model: OFA
   value: 0.7764
@@ -30,15 +30,15 @@ papers:
     Learning via Ricci Flow'
   date_iso: '2026-03-27'
   venue: ''
+- arxiv_id: '2601.07419'
+  title: 'Position: Don''t be Afraid of Over-Smoothing And Over-Squashing'
+  date_iso: '2026-01-12'
+  venue: ''
 - arxiv_id: '2510.07755'
   title: 'FedBook: A Unified Federated Graph Foundation Codebook with Intra-domain
     and Inter-domain Knowledge Modeling'
   date_iso: '2025-10-09'
   venue: ''
-- arxiv_id: '2505.16860'
-  title: 'GCAL: Adapting Graph Models to Evolving Domain Shifts'
-  date_iso: '2025-05-22'
-  venue: ICML 2025
 - arxiv_id: '2501.19089'
   title: Resolving Oversmoothing with Opinion Dissensus
   date_iso: '2025-01-31'
@@ -51,11 +51,6 @@ papers:
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
   date_iso: '2024-10-03'
   venue: TMLR 2024
-- arxiv_id: '2408.00295'
-  title: Contrastive Graph Representation Learning with Adversarial Cross-view Reconstruction
-    and Information Bottleneck
-  date_iso: '2024-08-01'
-  venue: ''
 - arxiv_id: '2407.19941'
   title: Boosting Cross-Domain and Cross-Task Generalization for Text-Attributed Graphs
     from Structural Perspective
@@ -81,6 +76,11 @@ papers:
   title: Rethinking and Simplifying Bootstrapped Graph Latents
   date_iso: '2023-12-05'
   venue: ''
+- arxiv_id: '2311.17781'
+  title: 'Propagate & Distill: Towards Effective Graph Learners Using Propagation-Embracing
+    MLPs'
+  date_iso: '2023-11-29'
+  venue: LoG 2023
 - arxiv_id: '2309.14907'
   title: Label Deconvolution for Node Representation Learning on Large-scale Attributed
     Graphs against Learning Bias
@@ -125,14 +125,19 @@ papers:
     GNN Explanation Methods'
   date_iso: '2021-06-16'
   venue: ''
-- arxiv_id: '2103.06064'
-  title: Graph Neural Networks Inspired by Classical Iterative Algorithms
-  date_iso: '2021-03-10'
-  venue: ICML 2021
+- arxiv_id: '2106.02466'
+  title: 'Graph Barlow Twins: A self-supervised representation learning framework
+    for graphs'
+  date_iso: '2021-06-04'
+  venue: ''
 - arxiv_id: '2102.06986'
   title: How Framelets Enhance Graph Neural Networks
   date_iso: '2021-02-13'
   venue: ICML 2021
+- arxiv_id: '2102.03147'
+  title: Learning Conjoint Attentions for Graph Neural Nets
+  date_iso: '2021-02-05'
+  venue: NeurIPS 2021
 - arxiv_id: '2012.15024'
   title: Adaptive Graph Diffusion Networks
   date_iso: '2020-12-30'
@@ -296,39 +301,6 @@ variants:
     - null
     metric_stds:
     - 0.0007
-    - null
-    - null
-    - null
-  - model: CGRL
-    model_plain: CGRL
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2408.00295'
-    title: Contrastive Graph Representation Learning with Adversarial Cross-view Reconstruction
-      and Information Bottleneck
-    date: Aug 1, 2024
-    date_iso: '2024-08-01'
-    date_display: Aug 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.747
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.004
     - null
     - null
     - null
@@ -1109,38 +1081,6 @@ variants:
     - null
     - null
     - null
-  - model: transparent GNN architecture
-    model_plain: transparent GNN architecture
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2103.06064'
-    title: Graph Neural Networks Inspired by Classical Iterative Algorithms
-    date: Mar 10, 2021
-    date_iso: '2021-03-10'
-    date_display: Mar 2021
-    codebase_url: https://github.com/FFTYYY/TWIRLS
-    published_conference: ICML 2021
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2021
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7293
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0019
-    - null
-    - null
-    - null
   - model: ANS-GT
     model_plain: ANS-GT
     is_baseline: false
@@ -1786,18 +1726,82 @@ variants:
     - null
     - null
     - null
-  row_count: 180
+  - model: DAGNN
+    model_plain: DAGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.04
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2012.15024'
+    title: Adaptive Graph Diffusion Networks
+    date: Dec 30, 2020
+    date_iso: '2020-12-30'
+    date_display: Dec 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7209
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0025
+    - null
+    - null
+    - null
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2010.00238'
+    title: Multi-grained Semantics-aware Graph Neural Networks
+    date: Oct 1, 2020
+    date_iso: '2020-10-01'
+    date_display: Oct 2020
+    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7206
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+  row_count: 171
   rows_json: /data/datasets/ogbn-arxiv/standard-split-rows.json
   chart_json: /data/datasets/ogbn-arxiv/standard-split-chart.json
   arch_counts:
-    gnn: 129
-    hybrid: 15
+    gnn: 125
+    hybrid: 14
     graph_transformer: 2
     llm: 6
-    walk: 3
-    traditional: 22
+    walk: 2
+    traditional: 20
   metric_counts:
-  - 166
+  - 157
   - 5
   - 9
   - 9

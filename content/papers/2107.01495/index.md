@@ -44,9 +44,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - Degree
-mrr: 0.0015
-adjusted_mrr: 0.0015
-mrr_dataset_count: 3
+mrr: 0.0021
+adjusted_mrr: 0.0007
+mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
 benchmark_coverage:
@@ -62,9 +62,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -95,9 +95,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -128,9 +128,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -219,8 +219,8 @@ results:
     value_note: ''
     sort_value: 0.844
     sort_std: 0.077
-    global_rank: 445
-    paper_rank: 445
+    global_rank: 471
+    paper_rank: 471
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -287,8 +287,8 @@ results:
     value_note: ''
     sort_value: 0.83
     sort_std: 0.063
-    global_rank: 497
-    paper_rank: 497
+    global_rank: 521
+    paper_rank: 521
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -354,10 +354,10 @@ results:
     value_note: ''
     sort_value: 0.827
     sort_std: 0.068
-    global_rank: 508
-    paper_rank: 731
-    rank_delta: 223
-    rank_delta_abs: 223
+    global_rank: 534
+    paper_rank: 777
+    rank_delta: 243
+    rank_delta_abs: 243
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -422,8 +422,8 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.067
-    global_rank: 593
-    paper_rank: 593
+    global_rank: 628
+    paper_rank: 628
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -490,8 +490,8 @@ results:
     value_note: ''
     sort_value: 0.773
     sort_std: 0.076
-    global_rank: 644
-    paper_rank: 644
+    global_rank: 683
+    paper_rank: 683
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -558,8 +558,8 @@ results:
     value_note: ''
     sort_value: 0.658
     sort_std: 0.07
-    global_rank: 735
-    paper_rank: 735
+    global_rank: 781
+    paper_rank: 781
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -626,8 +626,8 @@ results:
     value_note: ''
     sort_value: 0.654
     sort_std: 0.077
-    global_rank: 738
-    paper_rank: 738
+    global_rank: 784
+    paper_rank: 784
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -694,8 +694,8 @@ results:
     value_note: ''
     sort_value: 0.651
     sort_std: 0.083
-    global_rank: 741
-    paper_rank: 741
+    global_rank: 787
+    paper_rank: 787
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -728,5 +728,6 @@ datasets_by_scope:
     - dataset: MUTAG
       dataset_slug: mutag
 single_proposed_model: Degree
+main_figure: /figures/2107.01495/main_figure.jpegoptim.jpg
 ---
 

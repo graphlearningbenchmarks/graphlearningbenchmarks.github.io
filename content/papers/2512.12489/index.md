@@ -751,5 +751,6 @@ datasets_by_scope:
     - dataset: PCQM4Mv2
       dataset_slug: pcqm4mv2
 single_proposed_model: MPNNs
+main_figure: /figures/2512.12489/main_figure.jpegoptim.jpg
 ---
 

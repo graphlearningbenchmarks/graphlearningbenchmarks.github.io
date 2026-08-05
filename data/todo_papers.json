@@ -38108,7 +38108,7 @@
     {
       "arxiv_id": "2410.10365",
       "title": "SpeGCL: Self-supervised Graph Spectrum Contrastive Learning without Positive Samples",
-      "status": "processing",
+      "status": "done",
       "seen_count": 32,
       "is_manually_important": true,
       "seen_from": [

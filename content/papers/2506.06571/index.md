@@ -41,8 +41,8 @@ paper_type: method
 proposed_models:
 - SPECTRE
 - GPS+FastSpectRe
-mrr: 0.0311
-adjusted_mrr: 0.0311
+mrr: 0.022
+adjusted_mrr: 0.022
 mrr_dataset_count: 3
 benchmark_categories:
 - TU Dortmund
@@ -59,9 +59,42 @@ results:
 - &id003
   dataset: IMDB-BINARY
   rows:
-  - model: Diverse B12C3
+  - model: DMoNPool-TIP
+    model_key: gcfl
+    model_plain: DMoNPool-TIP
+    value: 0.8299
+    std: 0.052
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13423'
+    title: Federated Graph Classification over Non-IID Graphs
+    date: Jun 25, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-25'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8299
+    sort_std: 0.052
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DMoNPool-TIP
     model_key: gat +del-f
-    model_plain: Diverse B12C3
+    model_plain: DMoNPool-TIP
     value: 0.7863
     std: 0.0054
     metric: Accuracy
@@ -84,7 +117,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.7863
     sort_std: 0.0054
     comparison_type: global_top
@@ -92,9 +125,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
+  - model: DMoNPool-TIP
     model_key: graph transformer +del-f
-    model_plain: Diverse B12C3
+    model_plain: DMoNPool-TIP
     value: 0.7828
     std: 0.0027
     metric: Accuracy
@@ -117,42 +150,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.7828
     sort_std: 0.0027
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: graph transformer + del-k
-    model_plain: Diverse B12C3
-    value: 0.7765
-    std: 0.0049
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2402.16402'
-    title: Graph Learning with Distributional Edge Layouts
-    date: Feb 26, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-26'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7765
-    sort_std: 0.0049
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -214,8 +214,8 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: 0.0
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -281,8 +281,8 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: 0.0283
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -348,8 +348,8 @@ results:
     value_note: ''
     sort_value: 0.755
     sort_std: 0.0071
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -415,8 +415,8 @@ results:
     value_note: ''
     sort_value: 0.75
     sort_std: 0.0283
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -424,7 +424,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -463,8 +463,8 @@ results:
       Curvature
     at_pub_source_date_iso: '2025-03-03'
     at_pub_source_date_label: KDD 2025
-    value_gap_source_date_iso: '2023-02-17'
-    value_gap_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2024-02-26'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: 0.1080000000000001
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -472,29 +472,28 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.738
-    true_std: 0.0513
-    value_gap_source_arxiv: '2302.08671'
-    value_gap_source_title: Search to Capture Long-range Dependency with Stacking
-      GNNs for Graph Classification
+    today_delta_significant: true
+    true_value: 0.742
+    true_std: 0.024
+    value_gap_source_arxiv: '2402.16346'
+    value_gap_source_title: Boosting Graph Pooling with Persistent Homology
     value_gap_source_is_current_paper: false
-    value_gap: 0.04800000000000004
+    value_gap: 0.052000000000000046
     has_value_note: false
     value_note: ''
-    sort_value: 0.738
-    sort_std: 0.0513
-    global_rank: 46
-    paper_rank: 125
-    rank_delta: 79
-    rank_delta_abs: 79
+    sort_value: 0.742
+    sort_std: 0.024
+    global_rank: 47
+    paper_rank: 137
+    rank_delta: 90
+    rank_delta_abs: 90
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
       Curvature
     comparison_source_arxiv: '2503.01079'
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GPS+RePHINE
     model_key: gps+rephine
@@ -552,8 +551,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.0212
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -619,8 +618,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.0
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,9 +641,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -675,9 +674,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -708,9 +707,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -798,8 +797,8 @@ results:
     value_note: ''
     sort_value: 0.912
     sort_std: 0.03
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -866,10 +865,10 @@ results:
     value_note: ''
     sort_value: 0.891
     sort_std: 0.058
-    global_rank: 239
-    paper_rank: 742
-    rank_delta: 503
-    rank_delta_abs: 503
+    global_rank: 250
+    paper_rank: 788
+    rank_delta: 538
+    rank_delta_abs: 538
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -934,8 +933,8 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: 0.03
-    global_rank: 313
-    paper_rank: 313
+    global_rank: 328
+    paper_rank: 328
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1001,8 +1000,8 @@ results:
     value_note: ''
     sort_value: 0.825
     sort_std: 0.06
-    global_rank: 520
-    paper_rank: 520
+    global_rank: 548
+    paper_rank: 548
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1024,44 +1023,44 @@ results:
 - &id002
   dataset: NCI1
   rows:
-  - model: Diverse B12C3
-    model_key: msa-aud
-    model_plain: Diverse B12C3
-    value: 0.969
+  - model: ECC
+    model_key: wl-mlp
+    model_plain: ECC
+    value: 0.9954
     std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
     is_global_top: true
     global_rank: 1
-    sort_value: 0.969
+    sort_value: 0.9954
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-au
-    model_plain: Diverse B12C3
-    value: 0.966
+  - model: ECC
+    model_key: gin
+    model_plain: ECC
+    value: 0.9934
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -1069,57 +1068,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GNNs ... use node features
     is_global_top: true
     global_rank: 2
-    sort_value: 0.966
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-ad
-    model_plain: Diverse B12C3
-    value: 0.963
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.963
+    sort_value: 0.9934
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -1156,15 +1120,15 @@ results:
     date_iso: '2025-06-06'
     published_venue: NeurIPS 2025
     published_conference: NeurIPS 2025
-    at_pub_value: 0.84
+    at_pub_value: 0.9727
     at_pub_std: null
-    at_pub_source_arxiv: '2107.04086'
-    at_pub_source_title: Robust Counterfactual Explanations on Graph Neural Networks
-    at_pub_source_date_iso: '2021-07-08'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-07-08'
-    value_gap_source_date_label: NeurIPS 2021
-    gap_vs_at_pub: 0.09670000000000001
+    at_pub_source_arxiv: '2202.10156'
+    at_pub_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    at_pub_source_date_iso: '2022-02-21'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-02-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.22940000000000005
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1172,26 +1136,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.84
+    true_value: 0.9727
     true_std: null
-    value_gap_source_arxiv: '2107.04086'
-    value_gap_source_title: Robust Counterfactual Explanations on Graph Neural Networks
+    value_gap_source_arxiv: '2202.10156'
+    value_gap_source_title: 1-WL Expressiveness Is (Almost) All You Need
     value_gap_source_is_current_paper: false
-    value_gap: 0.09670000000000001
+    value_gap: 0.22940000000000005
     has_value_note: false
     value_note: ''
-    sort_value: 0.84
+    sort_value: 0.9727
     sort_std: null
-    global_rank: 39
-    paper_rank: 428
-    rank_delta: 389
-    rank_delta_abs: 389
+    global_rank: 3
+    paper_rank: 447
+    rank_delta: 444
+    rank_delta_abs: 444
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Robust Counterfactual Explanations on Graph Neural Networks
-    comparison_source_arxiv: '2107.04086'
-    is_best: false
+    comparison_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    comparison_source_arxiv: '2202.10156'
+    is_best: true
     is_std_outlier: false
   - model: GPS+FastSpectRe
     model_key: gps+fastspectre
@@ -1316,8 +1280,8 @@ results:
     value_note: ''
     sort_value: 0.8236
     sort_std: 0.0086
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1384,8 +1348,8 @@ results:
     value_note: ''
     sort_value: 0.8151
     sort_std: 0.0172
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1452,8 +1416,8 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: 0.0017
-    global_rank: 179
-    paper_rank: 179
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1519,8 +1483,8 @@ results:
     value_note: ''
     sort_value: 0.8066
     sort_std: 0.0155
-    global_rank: 186
-    paper_rank: 186
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1586,8 +1550,8 @@ results:
     value_note: ''
     sort_value: 0.7737
     sort_std: 0.0206
-    global_rank: 348
-    paper_rank: 348
+    global_rank: 363
+    paper_rank: 363
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1625,5 +1589,6 @@ datasets_by_scope:
       dataset_slug: nci1
     - dataset: IMDB-BINARY
       dataset_slug: imdb-binary
+main_figure: /figures/2506.06571/main_figure.jpegoptim.jpg
 ---
 

@@ -48,11 +48,16 @@ adjusted_mrr: 0.0
 mrr_dataset_count: 0
 benchmark_categories:
 - Heterophilic Graphs
+- Heterophily Benchmark
 benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
-  evaluated: 4
-  total: 13
+  evaluated: 3
+  total: 6
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
+  evaluated: 1
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -61,9 +66,43 @@ results:
 - &id003
   dataset: Actor
   rows:
-  - model: CoCN
+  - model: R-SoftGraphAIN
+    model_key: nodeformer
+    model_plain: R-SoftGraphAIN
+    value: 0.7623
+    std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7623
+    sort_std: 0.0042
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: diggr
-    model_plain: CoCN
+    model_plain: R-SoftGraphAIN
     value: 0.4535
     std: 0.0353
     metric: Accuracy
@@ -86,13 +125,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.4535
     sort_std: 0.0353
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: true
   - model: TRIGON
     model_key: trigon
@@ -142,7 +181,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4402
     sort_std: 0.0028
-    global_rank: 2
+    global_rank: 3
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -154,46 +193,13 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: CoCN
-    model_key: uniaug - polygcl
-    model_plain: CoCN
-    value: 0.4301
-    std: 0.0127
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.01899'
-    title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
-    date: Jun 4, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-04'
-    venue: NeurIPS'25
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.4301
-    sort_std: 0.0127
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CoCN
-    model_key: adaptkry
-    model_plain: CoCN
-    value: 0.427
-    std: 0.0114
+  - model: R-SoftGraphAIN
+    model_key: dog
+    model_plain: R-SoftGraphAIN
+    value: 0.432
+    std: 0.012
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -203,25 +209,25 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
-    date: Mar 12, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-12'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/AdaptKry
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.427
-    sort_std: 0.0114
+    sort_value: 0.432
+    sort_std: 0.012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: DR
     model_key: dr
@@ -271,7 +277,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4136
     sort_std: 0.002
-    global_rank: 22
+    global_rank: 30
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -333,7 +339,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3412
     sort_std: 0.0033
-    global_rank: 225
+    global_rank: 281
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -395,7 +401,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3185
     sort_std: 0.0022
-    global_rank: 266
+    global_rank: 324
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -457,7 +463,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3136
     sort_std: 0.0027
-    global_rank: 278
+    global_rank: 336
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -519,7 +525,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3108
     sort_std: 0.0028
-    global_rank: 284
+    global_rank: 342
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -581,7 +587,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3002
     sort_std: 0.0022
-    global_rank: 310
+    global_rank: 368
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -643,7 +649,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2973
     sort_std: 0.0024
-    global_rank: 315
+    global_rank: 373
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -715,10 +721,10 @@ results:
     value_note: ''
     sort_value: 0.2868
     sort_std: 0.0016
-    global_rank: 334
-    paper_rank: 343
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 396
+    paper_rank: 404
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -784,10 +790,10 @@ results:
     value_note: ''
     sort_value: 0.2477
     sort_std: 0.0032
-    global_rank: 388
-    paper_rank: 281
-    rank_delta: -107
-    rank_delta_abs: 107
+    global_rank: 449
+    paper_rank: 339
+    rank_delta: -110
+    rank_delta_abs: 110
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -808,9 +814,9 @@ results:
 - &id002
   dataset: Cornell
   rows:
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -841,9 +847,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: acm-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.948
     std: 0.038
     metric: Accuracy
@@ -874,9 +880,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: rf-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -955,7 +961,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7063
     sort_std: 0.0166
-    global_rank: 287
+    global_rank: 299
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1027,8 +1033,8 @@ results:
     value_note: ''
     sort_value: 0.679
     sort_std: 0.047
-    global_rank: 307
-    paper_rank: 307
+    global_rank: 321
+    paper_rank: 321
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1096,10 +1102,10 @@ results:
     value_note: ''
     sort_value: 0.592
     sort_std: 0.048
-    global_rank: 378
-    paper_rank: 486
-    rank_delta: 108
-    rank_delta_abs: 108
+    global_rank: 405
+    paper_rank: 518
+    rank_delta: 113
+    rank_delta_abs: 113
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1166,10 +1172,10 @@ results:
     value_note: ''
     sort_value: 0.5829
     sort_std: 0.0049
-    global_rank: 395
-    paper_rank: 500
-    rank_delta: 105
-    rank_delta_abs: 105
+    global_rank: 422
+    paper_rank: 534
+    rank_delta: 112
+    rank_delta_abs: 112
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1236,10 +1242,10 @@ results:
     value_note: ''
     sort_value: 0.5826
     sort_std: 0.005
-    global_rank: 397
-    paper_rank: 507
-    rank_delta: 110
-    rank_delta_abs: 110
+    global_rank: 424
+    paper_rank: 541
+    rank_delta: 117
+    rank_delta_abs: 117
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1296,7 +1302,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5819
     sort_std: 0.0158
-    global_rank: 398
+    global_rank: 425
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1368,10 +1374,10 @@ results:
     value_note: ''
     sort_value: 0.508
     sort_std: 0.011
-    global_rank: 472
-    paper_rank: 487
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 504
+    paper_rank: 520
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1427,7 +1433,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4803
     sort_std: 0.0166
-    global_rank: 490
+    global_rank: 522
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1489,7 +1495,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4605
     sort_std: 0.0149
-    global_rank: 498
+    global_rank: 532
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1561,10 +1567,10 @@ results:
     value_note: ''
     sort_value: 0.4416
     sort_std: 0.0146
-    global_rank: 510
-    paper_rank: 488
-    rank_delta: -22
-    rank_delta_abs: 22
+    global_rank: 544
+    paper_rank: 521
+    rank_delta: -23
+    rank_delta_abs: 23
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -1585,9 +1591,9 @@ results:
 - &id004
   dataset: Roman-empire
   rows:
-  - model: topk
+  - model: GPS + Mamba
     model_key: dir-nt
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9477
     std: 0.0031
     metric: Accuracy
@@ -1619,9 +1625,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: GPS + Mamba
     model_key: dir-poly
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9451
     std: 0.0022
     metric: Accuracy
@@ -1653,9 +1659,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: GPS + Mamba
     model_key: largescalenet
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9358
     std: 0.0024
     metric: Accuracy
@@ -1734,7 +1740,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7123
     sort_std: 0.0018
-    global_rank: 111
+    global_rank: 130
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1796,7 +1802,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6652
     sort_std: 0.0013
-    global_rank: 120
+    global_rank: 141
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1858,7 +1864,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6199
     sort_std: 0.0014
-    global_rank: 137
+    global_rank: 162
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1920,7 +1926,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5858
     sort_std: 0.0014
-    global_rank: 143
+    global_rank: 169
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1982,7 +1988,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5393
     sort_std: 0.0014
-    global_rank: 146
+    global_rank: 177
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2044,7 +2050,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5331
     sort_std: 0.0023
-    global_rank: 146
+    global_rank: 177
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2106,7 +2112,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5253
     sort_std: 0.0013
-    global_rank: 148
+    global_rank: 179
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2168,7 +2174,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5238
     sort_std: 0.0021
-    global_rank: 148
+    global_rank: 179
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2230,7 +2236,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5166
     sort_std: 0.0017
-    global_rank: 150
+    global_rank: 180
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2256,9 +2262,9 @@ results:
 - &id001
   dataset: Texas
   rows:
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -2289,9 +2295,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: dog
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -2300,9 +2306,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -2323,9 +2329,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: gpf-plus
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -2404,7 +2410,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7729
     sort_std: 0.0155
-    global_rank: 313
+    global_rank: 325
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2466,7 +2472,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6956
     sort_std: 0.0171
-    global_rank: 404
+    global_rank: 425
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2538,10 +2544,10 @@ results:
     value_note: ''
     sort_value: 0.678
     sort_std: 0.025
-    global_rank: 418
-    paper_rank: 353
-    rank_delta: -65
-    rank_delta_abs: 65
+    global_rank: 440
+    paper_rank: 368
+    rank_delta: -72
+    rank_delta_abs: 72
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -2608,16 +2614,86 @@ results:
     value_note: ''
     sort_value: 0.6482
     sort_std: 0.0029
-    global_rank: 457
-    paper_rank: 575
-    rank_delta: 118
-    rank_delta_abs: 118
+    global_rank: 480
+    paper_rank: 590
+    rank_delta: 110
+    rank_delta_abs: 110
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
       Networks'
     comparison_source_arxiv: '2210.09789'
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.5668
+    std: 0.0149
+    paper_value: 0.5668
+    paper_std: 0.0149
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Aug 26, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.631
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '2211.15779'
+    at_pub_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2022-11-28'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: 0.06420000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.631
+    true_std: 0.017
+    value_gap_source_arxiv: '2211.15779'
+    value_gap_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06420000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.631
+    sort_std: 0.017
+    global_rank: 498
+    paper_rank: 586
+    rank_delta: 88
+    rank_delta_abs: 88
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    comparison_source_arxiv: '2211.15779'
     is_best: false
     is_std_outlier: false
   - model: DIGL
@@ -2678,10 +2754,10 @@ results:
     value_note: ''
     sort_value: 0.6203
     sort_std: 0.0043
-    global_rank: 486
-    paper_rank: 613
-    rank_delta: 127
-    rank_delta_abs: 127
+    global_rank: 514
+    paper_rank: 630
+    rank_delta: 116
+    rank_delta_abs: 116
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2738,7 +2814,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5979
     sort_std: 0.0171
-    global_rank: 512
+    global_rank: 535
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2800,7 +2876,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5684
     sort_std: 0.0161
-    global_rank: 569
+    global_rank: 584
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2844,16 +2920,16 @@ results:
     date_iso: '2025-08-26'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.46
-    at_pub_std: 0.016
-    at_pub_source_arxiv: '2506.16110'
-    at_pub_source_title: Mitigating Over-Squashing in Graph Neural Networks by Spectrum-Preserving
-      Sparsification
-    at_pub_source_date_iso: '2025-06-19'
-    at_pub_source_date_label: ICML 2025
+    at_pub_value: 0.47
+    at_pub_std: 0.037
+    at_pub_source_arxiv: '2211.15779'
+    at_pub_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: ICML 2022
     value_gap_source_date_iso: '2025-08-28'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.15850000000000003
+    gap_vs_at_pub: 0.14850000000000008
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -2872,86 +2948,16 @@ results:
     value_note: ''
     sort_value: 0.5286
     sort_std: 0.0172
-    global_rank: 594
-    paper_rank: 488
-    rank_delta: -106
-    rank_delta_abs: 106
+    global_rank: 611
+    paper_rank: 516
+    rank_delta: -95
+    rank_delta_abs: 95
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Mitigating Over-Squashing in Graph Neural Networks by
-      Spectrum-Preserving Sparsification
-    comparison_source_arxiv: '2506.16110'
-    is_best: false
-    is_std_outlier: false
-  - model: BORF
-    model_key: borf
-    model_plain: BORF
-    value: 0.5668
-    std: 0.0149
-    paper_value: 0.5668
-    paper_std: 0.0149
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Aug 26, 2025
-    date_display: Aug 2025
-    date_iso: '2025-08-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.623
-    at_pub_std: 0.02
-    at_pub_source_arxiv: '2309.09384'
-    at_pub_source_title: Mitigating Over-Smoothing and Over-Squashing using Augmentations
-      of Forman-Ricci Curvature
-    at_pub_source_date_iso: '2023-09-17'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-08-28'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.05620000000000003
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4995
-    true_std: 0.0143
-    value_gap_source_arxiv: '2508.20597'
-    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
-      Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06729999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4995
-    sort_std: 0.0143
-    global_rank: 599
-    paper_rank: 572
-    rank_delta: -27
-    rank_delta_abs: 27
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Mitigating Over-Smoothing and Over-Squashing using Augmentations
-      of Forman-Ricci Curvature
-    comparison_source_arxiv: '2309.09384'
+    comparison_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    comparison_source_arxiv: '2211.15779'
     is_best: false
     is_std_outlier: false
   - model: GTR
@@ -3012,10 +3018,10 @@ results:
     value_note: ''
     sort_value: 0.495
     sort_std: 0.029
-    global_rank: 602
-    paper_rank: 560
-    rank_delta: -42
-    rank_delta_abs: 42
+    global_rank: 619
+    paper_rank: 575
+    rank_delta: -44
+    rank_delta_abs: 44
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -3039,6 +3045,8 @@ results_grouped:
   - *id001
   - *id002
   - *id003
+- benchmark: Heterophily Benchmark
+  datasets:
   - *id004
 datasets_by_scope:
 - scope: node-level
@@ -3053,6 +3061,9 @@ datasets_by_scope:
       dataset_slug: cornell
     - dataset: Actor
       dataset_slug: actor
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
+    datasets:
     - dataset: Roman-empire
       dataset_slug: roman-empire
 single_proposed_model: TRIGON

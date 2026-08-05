@@ -1,7 +1,7 @@
 ---
 title: Roman-empire
 slug: roman-empire
-benchmark: Heterophilic Graphs
+benchmark: Heterophily Benchmark
 task_type: node_classification
 description: Wikipedia Roman Empire article node classification (18 syntactic roles)
   from the heterophilic benchmark.
@@ -9,7 +9,7 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
 stats: null
-result_count: 265
+result_count: 314
 best_model:
   model: Dir-NT
   value: 0.9477
@@ -18,10 +18,19 @@ best_model:
   paper_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
     Graph Learning'
 papers:
+- arxiv_id: '2606.05046'
+  title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+    Graph Machine Learning'
+  date_iso: '2026-06-03'
+  venue: ''
 - arxiv_id: '2605.20248'
   title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
     Classification'
   date_iso: '2026-05-18'
+  venue: ''
+- arxiv_id: '2605.13383'
+  title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+  date_iso: '2026-05-13'
   venue: ''
 - arxiv_id: '2604.08980'
   title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware Graph
@@ -37,6 +46,10 @@ papers:
   title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
   date_iso: '2026-02-28'
   venue: ICLR 2026
+- arxiv_id: '2601.07419'
+  title: 'Position: Don''t be Afraid of Over-Smoothing And Over-Squashing'
+  date_iso: '2026-01-12'
+  venue: ''
 - arxiv_id: '2512.14908'
   title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
     Graphs'
@@ -75,6 +88,10 @@ papers:
   title: 'Aligning the Spectrum: Hybrid Graph Pre-training and Prompt Tuning across
     Homophily and Heterophily'
   date_iso: '2025-08-15'
+  venue: ''
+- arxiv_id: '2508.05070'
+  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+  date_iso: '2025-08-07'
   venue: ''
 - arxiv_id: '2507.20127'
   title: 'Aggregation-aware MLP: An Unsupervised Approach for Graph Message-passing'
@@ -138,6 +155,10 @@ papers:
   title: Differentiable Cluster Graph Neural Network
   date_iso: '2024-05-25'
   venue: ''
+- arxiv_id: '2405.15540'
+  title: Bundle Neural Networks for message diffusion on graphs
+  date_iso: '2024-05-24'
+  venue: ''
 - arxiv_id: '2404.17099'
   title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
     with FROND
@@ -159,6 +180,10 @@ papers:
   title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
   date_iso: '2024-03-02'
   venue: ICLR 2024
+- arxiv_id: '2402.08678'
+  title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+  date_iso: '2024-02-13'
+  venue: KDD 2024
 - arxiv_id: '2312.08672'
   title: 'CAT: A Causal Graph Attention Network for Trimming Heterophilic Graphs'
   date_iso: '2023-12-14'
@@ -194,8 +219,14 @@ variants:
     num_classes: null
   metrics:
   - Accuracy
+  - AP
+  - AUROC
+  - macro-F1
   metric_display_names:
   - Accuracy
+  - AP
+  - AUROC
+  - macro-F1
   show_all_metrics_desktop: false
   chart_default_log_scale: false
   chart_hidden_models: []
@@ -225,8 +256,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9477
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0031
+    - null
+    - null
+    - null
   - model: Dir-Poly
     model_plain: Dir-Poly
     is_baseline: true
@@ -252,8 +289,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9451
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0022
+    - null
+    - null
+    - null
   - model: D-CDE
     model_plain: D-CDE
     is_baseline: true
@@ -278,8 +321,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9387
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0041
+    - null
+    - null
+    - null
   - model: LargeScaleNet
     model_plain: LargeScaleNet
     is_baseline: false
@@ -304,8 +353,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9358
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0024
+    - null
+    - null
+    - null
   - model: SSN
     model_plain: SSN
     is_baseline: true
@@ -330,8 +385,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9352
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0028
+    - null
+    - null
+    - null
   - model: GraphTARIF
     model_plain: GraphTARIF
     is_baseline: true
@@ -357,8 +418,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9323
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0038
+    - null
+    - null
+    - null
   - model: F-CDE
     model_plain: F-CDE
     is_baseline: true
@@ -384,8 +451,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9306
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0055
+    - null
+    - null
+    - null
   - model: Polynormer-r
     model_plain: Polynormer-r
     is_baseline: false
@@ -410,8 +483,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9255
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0037
+    - null
+    - null
+    - null
   - model: GHC
     model_plain: GHC
     is_baseline: true
@@ -436,8 +515,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9227
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0057
+    - null
+    - null
+    - null
   - model: FaberNet
     model_plain: FaberNet
     is_baseline: true
@@ -462,8 +547,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9224
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0043
+    - null
+    - null
+    - null
   - model: CoED
     model_plain: CoED
     is_baseline: true
@@ -489,8 +580,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9217
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0029
+    - null
+    - null
+    - null
   - model: GraphGPS + Wideformer
     model_plain: GraphGPS + Wideformer
     is_baseline: false
@@ -515,8 +612,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9216
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0024
+    - null
+    - null
+    - null
   - model: Polynormer + Wideformer
     model_plain: Polynormer + Wideformer
     is_baseline: false
@@ -541,8 +644,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9216
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0024
+    - null
+    - null
+    - null
   - model: Polynormer
     model_plain: Polynormer
     is_baseline: false
@@ -567,8 +676,46 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9213
+    - null
+    - null
+    - null
     metric_stds:
     - 0.005
+    - null
+    - null
+    - null
+  - model: Tango_GatedGCN
+    model_plain: Tango_GatedGCN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9189
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.003
+    - null
+    - null
+    - null
   - model: NDDGNN
     model_plain: NDDGNN
     is_baseline: true
@@ -593,24 +740,29 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9176
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0027
+    - null
+    - null
+    - null
   - model: BuNN
     model_plain: BuNN
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2605.20248'
-    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
-      Classification'
-    date: May 18, 2026
-    date_iso: '2026-05-18'
-    date_display: May 2026
-    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    arxiv_id: '2405.15540'
+    title: Bundle Neural Networks for message diffusion on graphs
+    date: May 24, 2024
+    date_iso: '2024-05-24'
+    date_display: May 2024
+    codebase_url: https://github.com/jacobbamberger/BuNN
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
@@ -620,8 +772,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9175
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0039
+    - null
+    - null
+    - null
   - model: NT
     model_plain: NT
     is_baseline: false
@@ -647,8 +805,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9171
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0057
+    - null
+    - null
+    - null
   - model: GCN+TS
     model_plain: GCN+TS
     is_baseline: true
@@ -674,8 +838,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9166
+    - null
+    - null
+    - null
     metric_stds:
     - 0.002
+    - null
+    - null
+    - null
   - model: CDE-GRAND-GAT
     model_plain: CDE-GRAND-GAT
     is_baseline: true
@@ -700,8 +870,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9164
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0028
+    - null
+    - null
+    - null
   - model: CDE
     model_plain: CDE
     is_baseline: true
@@ -727,8 +903,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9164
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0028
+    - null
+    - null
+    - null
   - model: CDE-GRAND
     model_plain: CDE-GRAND
     is_baseline: true
@@ -753,8 +935,46 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9164
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0028
+    - null
+    - null
+    - null
+  - model: Co-GNN(Σ,Σ)
+    model_plain: Co-GNN(Σ,Σ)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9157
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0032
+    - null
+    - null
+    - null
   - model: CDE-GRAND-TRANS
     model_plain: CDE-GRAND-TRANS
     is_baseline: true
@@ -779,8 +999,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9155
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0023
+    - null
+    - null
+    - null
   - model: DirGNN
     model_plain: DirGNN
     is_baseline: true
@@ -805,8 +1031,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.913
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0046
+    - null
+    - null
+    - null
   - model: SAGE+T
     model_plain: SAGE+T
     is_baseline: true
@@ -832,8 +1064,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9127
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0036
+    - null
+    - null
+    - null
   - model: Dir-GNN
     model_plain: Dir-GNN
     is_baseline: true
@@ -858,8 +1096,46 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9123
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0032
+    - null
+    - null
+    - null
+  - model: Tango_GPS
+    model_plain: Tango_GPS
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9108
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0057
+    - null
+    - null
+    - null
   - model: GraphSAGE
     model_plain: GraphSAGE
     is_baseline: true
@@ -884,8 +1160,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9106
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0027
+    - null
+    - null
+    - null
   - model: GAT+T
     model_plain: GAT+T
     is_baseline: true
@@ -911,8 +1193,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9093
+    - null
+    - null
+    - null
     metric_stds:
     - 0.002
+    - null
+    - null
+    - null
   - model: CDE-GRAND-LAP
     model_plain: CDE-GRAND-LAP
     is_baseline: true
@@ -937,8 +1225,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9058
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0049
+    - null
+    - null
+    - null
   - model: Polynormer
     model_plain: Polynormer
     is_baseline: true
@@ -963,8 +1257,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9032
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0036
+    - null
+    - null
+    - null
   - model: DC-GNN
     model_plain: DC-GNN
     is_baseline: false
@@ -989,8 +1289,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8996
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0035
+    - null
+    - null
+    - null
   - model: ReDiSC
     model_plain: ReDiSC
     is_baseline: false
@@ -1016,8 +1322,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8988
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0038
+    - null
+    - null
+    - null
   - model: ECG-GAT-sep
     model_plain: ECG-GAT-sep
     is_baseline: true
@@ -1042,8 +1354,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8962
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0018
+    - null
+    - null
+    - null
   - model: BGRL-ECG-GAT-sep
     model_plain: BGRL-ECG-GAT-sep
     is_baseline: true
@@ -1068,8 +1386,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8962
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0018
+    - null
+    - null
+    - null
   - model: ECG-GT-sep
     model_plain: ECG-GT-sep
     is_baseline: true
@@ -1094,8 +1418,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8956
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0016
+    - null
+    - null
+    - null
   - model: BGRL-ECG-GT-sep
     model_plain: BGRL-ECG-GT-sep
     is_baseline: true
@@ -1120,8 +1450,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8956
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0016
+    - null
+    - null
+    - null
   - model: DPM-SNC
     model_plain: DPM-SNC
     is_baseline: true
@@ -1147,8 +1483,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8952
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0046
+    - null
+    - null
+    - null
   - model: AGCN
     model_plain: AGCN
     is_baseline: false
@@ -1173,7 +1515,13 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.894
+    - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
+    - null
     - null
   - model: PD-GNN
     model_plain: PD-GNN
@@ -1199,8 +1547,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8923
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0056
+    - null
+    - null
+    - null
   - model: DHGNN
     model_plain: DHGNN
     is_baseline: false
@@ -1225,34 +1579,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8905
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0053
-  - model: Exphormer
-    model_plain: Exphormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8903
-    metric_stds:
-    - 0.0037
+    - null
+    - null
+    - null
   - model: Exphormer+GAT
     model_plain: Exphormer+GAT
     is_baseline: true
@@ -1277,8 +1611,46 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8903
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0037
+    - null
+    - null
+    - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8903
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0037
+    - null
+    - null
+    - null
   - model: MPSNN
     model_plain: MPSNN
     is_baseline: true
@@ -1303,8 +1675,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8876
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0063
+    - null
+    - null
+    - null
   - model: GAT-sep
     model_plain: GAT-sep
     is_baseline: true
@@ -1329,8 +1707,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8875
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0041
+    - null
+    - null
+    - null
   - model: GAT
     model_plain: GAT
     is_baseline: true
@@ -1355,8 +1739,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8875
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0041
+    - null
+    - null
+    - null
   - model: MLPBGRL-GAT-sep
     model_plain: MLPBGRL-GAT-sep
     is_baseline: true
@@ -1381,8 +1771,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8873
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0037
+    - null
+    - null
+    - null
   - model: MLPBGRL-GT-sep
     model_plain: MLPBGRL-GT-sep
     is_baseline: true
@@ -1407,8 +1803,14 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.887
+    - null
+    - null
+    - null
     metric_stds:
     - 0.003
+    - null
+    - null
+    - null
   - model: LGD
     model_plain: LGD
     is_baseline: true
@@ -1434,99 +1836,29 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8867
+    - null
+    - null
+    - null
     metric_stds:
     - 0.0008
-  - model: MLP->GNN-ECG-GT-sep
-    model_plain: MLP->GNN-ECG-GT-sep
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2306.12943'
-    title: Evolving Computation Graphs
-    date: Jun 22, 2023
-    date_iso: '2023-06-22'
-    date_display: Jun 2023
-    codebase_url: ''
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8862
-    metric_stds:
-    - 0.0046
-  - model: MLP-ECG-GT-sep
-    model_plain: MLP-ECG-GT-sep
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2306.12943'
-    title: Evolving Computation Graphs
-    date: Jun 22, 2023
-    date_iso: '2023-06-22'
-    date_display: Jun 2023
-    codebase_url: ''
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8856
-    metric_stds:
-    - 0.0035
-  - model: GCN-SSM (Optimal L)
-    model_plain: GCN-SSM (Optimal L)
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2502.10818'
-    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
-      Recurrent and Graph Learning'
-    date: Feb 15, 2025
-    date_iso: '2025-02-15'
-    date_display: Feb 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8837
-    metric_stds:
-    - 0.006
-  row_count: 265
+    - null
+    - null
+    - null
+  row_count: 314
   rows_json: /data/datasets/roman-empire/standard-split-rows.json
   chart_json: /data/datasets/roman-empire/standard-split-chart.json
   arch_counts:
-    gnn: 151
-    hybrid: 52
-    graph_transformer: 26
+    gnn: 178
+    hybrid: 63
+    graph_transformer: 37
     llm: 1
     walk: 0
     traditional: 14
   metric_counts:
-  - 265
+  - 306
+  - 7
+  - 14
+  - 14
   milestones: &id001
   - value: 0.8923
     std: 0.0056
@@ -1574,5 +1906,28 @@ variants:
     date: '2026-04-10'
   milestones_by_metric:
     Accuracy: *id001
+    AP:
+    - value: 0.8856
+      std: 0.0071
+      model: Schrödinger
+      arxiv_id: '2605.13383'
+      title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+      date: '2026-05-13'
+    AUROC:
+    - value: 0.949
+      std: null
+      model: GPS
+      arxiv_id: '2606.05046'
+      title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+        Graph Machine Learning'
+      date: '2026-06-03'
+    macro-F1:
+    - value: 0.583
+      std: null
+      model: GraphGPS
+      arxiv_id: '2606.05046'
+      title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+        Graph Machine Learning'
+      date: '2026-06-03'
 ---
 

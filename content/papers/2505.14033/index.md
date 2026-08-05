@@ -50,26 +50,26 @@ has_results: true
 paper_type: method
 proposed_models:
 - CPF
-mrr: 0.2655
-adjusted_mrr: 0.2655
-mrr_dataset_count: 4
+mrr: 0.354
+adjusted_mrr: 0.354
+mrr_dataset_count: 3
 benchmark_categories:
-- Heterophilic Graphs
+- Heterophily Benchmark
 - LINKX Benchmarks
 - Other Graph Benchmarks
 benchmark_coverage:
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
   evaluated: 1
-  total: 13
+  total: 5
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
   evaluated: 1
-  total: 5
+  total: 6
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -1498,207 +1498,107 @@ results:
 - &id001
   dataset: Questions
   rows:
-  - model: topk
-    model_key: mlp
-    model_plain: topk
-    value: 0.9733
-    std: 0.0006
+  - model: Tango GPS
+    model_key: graphsage + unigap
+    model_plain: Tango GPS
+    value: 0.8421
+    std: 0.008
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2405.20445'
-    title: Fully-inductive Node Classification on Arbitrary Graphs
-    date: May 30, 2024
-    date_display: May 2024
-    date_iso: '2024-05-30'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/DeepGraphLearning/GraphAny
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9733
-    sort_std: 0.0006
+    sort_value: 0.8421
+    sort_std: 0.008
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
-    model_key: ags-gnn
-    model_plain: topk
-    value: 0.9727
-    std: 0.0004
+  - model: Tango GPS
+    model_key: h2gcn + unigap
+    model_plain: Tango GPS
+    value: 0.8359
+    std: 0.007
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: Feb 14, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-14'
-    venue: IEEE Transactions on Knowledge and Data Engineering
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9727
-    sort_std: 0.0004
+    sort_value: 0.8359
+    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7517
-    std: 0.008
-    paper_value: 0.7517
-    paper_std: 0.008
+  - model: Tango GPS
+    model_key: gcn + unigap
+    model_plain: Tango GPS
+    value: 0.8273
+    std: 0.009
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification on heterophilic graphs
-    date: May 20, 2025
-    date_display: May 2025
-    date_iso: '2025-05-20'
-    published_venue: KDD 2025
-    published_conference: KDD 2025
-    at_pub_value: 0.9715
-    at_pub_std: 0.0004
-    at_pub_source_arxiv: '2405.20445'
-    at_pub_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    at_pub_source_date_iso: '2024-05-30'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-05-30'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.2198
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9715
-    true_std: 0.0004
-    value_gap_source_arxiv: '2405.20445'
-    value_gap_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: 0.2198
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9715
-    sort_std: 0.0004
+    is_global_top: true
     global_rank: 3
-    paper_rank: 73
-    rank_delta: 70
-    rank_delta_abs: 70
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    comparison_source_arxiv: '2405.20445'
-    is_best: false
-    is_std_outlier: false
-  - model: LINKX
-    model_key: linkx
-    model_plain: LINKX
-    value: 0.6385
-    std: 0.008
-    paper_value: 0.6385
-    paper_std: 0.008
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification on heterophilic graphs
-    date: May 20, 2025
-    date_display: May 2025
-    date_iso: '2025-05-20'
-    published_venue: KDD 2025
-    published_conference: KDD 2025
-    at_pub_value: 0.9706
-    at_pub_std: 0.0003
-    at_pub_source_arxiv: '2202.07082'
-    at_pub_source_title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    at_pub_source_date_iso: '2022-02-14'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-02-14'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.33210000000000006
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9706
-    true_std: 0.0003
-    value_gap_source_arxiv: '2202.07082'
-    value_gap_source_title: 'Graph Neural Networks for Graphs with Heterophily: A
-      Survey'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.33210000000000006
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9706
-    sort_std: 0.0003
-    global_rank: 6
-    paper_rank: 115
-    rank_delta: 109
-    rank_delta_abs: 109
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Graph Neural Networks for Graphs with Heterophily: A
-      Survey'
-    comparison_source_arxiv: '2202.07082'
-    is_best: false
+    sort_value: 0.8273
+    sort_std: 0.009
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: H2GCN
     model_key: h2gcn
@@ -1758,10 +1658,80 @@ results:
     value_note: ''
     sort_value: 0.7928
     sort_std: 0.008
-    global_rank: 19
-    paper_rank: 115
-    rank_delta: 96
-    rank_delta_abs: 96
+    global_rank: 14
+    paper_rank: 133
+    rank_delta: 119
+    rank_delta_abs: 119
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    comparison_source_arxiv: '2407.19420'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7517
+    std: 0.008
+    paper_value: 0.7517
+    paper_std: 0.008
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on heterophilic graphs
+    date: May 20, 2025
+    date_display: May 2025
+    date_iso: '2025-05-20'
+    published_venue: KDD 2025
+    published_conference: KDD 2025
+    at_pub_value: 0.7902
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2407.19420'
+    at_pub_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    at_pub_source_date_iso: '2024-07-28'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-07-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.03849999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7902
+    true_std: 0.006
+    value_gap_source_arxiv: '2407.19420'
+    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03849999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7902
+    sort_std: 0.006
+    global_rank: 17
+    paper_rank: 77
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1827,8 +1797,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.011
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1895,8 +1865,8 @@ results:
     value_note: ''
     sort_value: 0.7568
     sort_std: 0.008
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1963,8 +1933,8 @@ results:
     value_note: ''
     sort_value: 0.7549
     sort_std: 0.009
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2031,8 +2001,8 @@ results:
     value_note: ''
     sort_value: 0.7446
     sort_std: 0.012
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2099,8 +2069,8 @@ results:
     value_note: ''
     sort_value: 0.7442
     sort_std: 0.013
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2166,8 +2136,8 @@ results:
     value_note: ''
     sort_value: 0.7388
     sort_std: 0.0116
-    global_rank: 84
-    paper_rank: 89
+    global_rank: 87
+    paper_rank: 92
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -2234,8 +2204,8 @@ results:
     value_note: ''
     sort_value: 0.7383
     sort_std: 0.008
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2302,8 +2272,8 @@ results:
     value_note: ''
     sort_value: 0.7255
     sort_std: 0.01
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2370,8 +2340,8 @@ results:
     value_note: ''
     sort_value: 0.7232
     sort_std: 0.01
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2438,8 +2408,8 @@ results:
     value_note: ''
     sort_value: 0.7128
     sort_std: 0.006
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2506,8 +2476,8 @@ results:
     value_note: ''
     sort_value: 0.7082
     sort_std: 0.01
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2574,8 +2544,8 @@ results:
     value_note: ''
     sort_value: 0.7075
     sort_std: 0.012
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2642,8 +2612,8 @@ results:
     value_note: ''
     sort_value: 0.7042
     sort_std: 0.012
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2710,8 +2680,8 @@ results:
     value_note: ''
     sort_value: 0.696
     sort_std: 0.012
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2778,8 +2748,8 @@ results:
     value_note: ''
     sort_value: 0.6784
     sort_std: 0.005
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2847,8 +2817,8 @@ results:
     value_note: ''
     sort_value: 0.6458
     sort_std: 0.012
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2857,6 +2827,74 @@ results:
     comparison_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer
       in Linear Time'
     comparison_source_arxiv: '2403.01232'
+    is_best: false
+    is_std_outlier: false
+  - model: LINKX
+    model_key: linkx
+    model_plain: LINKX
+    value: 0.6385
+    std: 0.008
+    paper_value: 0.6385
+    paper_std: 0.008
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on heterophilic graphs
+    date: May 20, 2025
+    date_display: May 2025
+    date_iso: '2025-05-20'
+    published_venue: KDD 2025
+    published_conference: KDD 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-20'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6385
+    true_std: 0.008
+    value_gap_source_arxiv: '2505.14033'
+    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
+      Through the Lens of Graph Coarsening'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6385
+    sort_std: 0.008
+    global_rank: 136
+    paper_rank: 136
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: ROC-AUC
@@ -4249,7 +4287,7 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Heterophilic Graphs
+- benchmark: Heterophily Benchmark
   datasets:
   - *id001
 - benchmark: LINKX Benchmarks
@@ -4262,8 +4300,8 @@ datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Questions
       dataset_slug: questions
@@ -4278,5 +4316,6 @@ datasets_by_scope:
     - dataset: Amazon2M
       dataset_slug: amazon2m
 single_proposed_model: CPF
+main_figure: /figures/2505.14033/main_figure.jpegoptim.jpg
 ---
 

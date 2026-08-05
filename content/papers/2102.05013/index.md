@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SphereNet
-mrr: 0.0204
-adjusted_mrr: 0.0068
+mrr: 0.0147
+adjusted_mrr: 0.0049
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -174,6 +174,74 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: NequIP
+    model_key: nequip
+    model_plain: NequIP
+    value: 0.353
+    std: null
+    paper_value: 0.353
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: batzner2021se
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE of forces on MD17 molecules with WoFE=100
+    date: Feb 9, 2021
+    date_display: Feb 2021
+    date_iso: '2021-02-09'
+    published_venue: ICLR 2021
+    published_conference: ICLR 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.053
+    true_std: null
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.053
+    sort_std: null
+    global_rank: 34
+    paper_rank: 79
+    rank_delta: 45
+    rank_delta_abs: 45
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: sGDML
     model_key: sgdml
     model_plain: sGDML
@@ -230,10 +298,10 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 34
-    paper_rank: 60
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 40
+    paper_rank: 80
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -277,8 +345,8 @@ results:
     at_pub_source_title: Directional Message Passing for Molecular Graphs
     at_pub_source_date_iso: '2020-03-06'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.435
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -289,18 +357,18 @@ results:
     today_delta_significant: true
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.435
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 60
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 42
+    paper_rank: 80
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -345,8 +413,8 @@ results:
       Dipole Moments and Partial Charges'
     at_pub_source_date_iso: '2019-02-22'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 1.3
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -357,19 +425,18 @@ results:
     today_delta_significant: true
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 1.27
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 63
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 46
+    paper_rank: 83
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -434,78 +501,10 @@ results:
     value_note: ''
     sort_value: 0.101
     sort_std: null
-    global_rank: 43
-    paper_rank: 51
-    rank_delta: 8
-    rank_delta_abs: 8
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NequIP
-    model_key: nequip
-    model_plain: NequIP
-    value: 0.353
-    std: null
-    paper_value: 0.353
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: batzner2021se
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: MAE of forces on MD17 molecules with WoFE=100
-    date: Feb 9, 2021
-    date_display: Feb 2021
-    date_iso: '2021-02-09'
-    published_venue: ICLR 2021
-    published_conference: ICLR 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.131
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.22199999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.131
-    sort_std: null
-    global_rank: 45
-    paper_rank: 59
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 54
+    paper_rank: 71
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -570,10 +569,10 @@ results:
     value_note: ''
     sort_value: 0.147
     sort_std: null
-    global_rank: 49
-    paper_rank: 50
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 68
+    paper_rank: 70
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -637,8 +636,8 @@ results:
     value_note: ''
     sort_value: 0.217
     sort_std: null
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -671,5 +670,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: SphereNet
+main_figure: /figures/2102.05013/main_figure.jpegoptim.jpg
 ---
 

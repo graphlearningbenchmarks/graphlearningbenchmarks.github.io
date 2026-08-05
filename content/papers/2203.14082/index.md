@@ -62,8 +62,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MH-Aug
-mrr: 0.0051
-adjusted_mrr: 0.0034
+mrr: 0.0042
+adjusted_mrr: 0.0028
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -80,9 +80,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -113,9 +113,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: is-gib
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: eerm
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -211,16 +211,15 @@ results:
     date_iso: '2022-03-26'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: 0.802
+    at_pub_value: 0.813
     at_pub_std: null
-    at_pub_source_arxiv: '2106.02892'
-    at_pub_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
-    at_pub_source_date_iso: '2021-06-05'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-06-05'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.0827
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-08-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.0936999999999999
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -228,27 +227,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.802
+    true_value: 0.813
     true_std: null
-    value_gap_source_arxiv: '2106.02892'
-    value_gap_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
+    value_gap_source_arxiv: '2008.09864'
+    value_gap_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.0827
+    value_gap: 0.0936999999999999
     has_value_note: false
     value_note: ''
-    sort_value: 0.802
+    sort_value: 0.813
     sort_std: null
-    global_rank: 39
-    paper_rank: 454
-    rank_delta: 415
-    rank_delta_abs: 415
+    global_rank: 35
+    paper_rank: 521
+    rank_delta: 486
+    rank_delta_abs: 486
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
-    comparison_source_arxiv: '2106.02892'
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
     is_best: false
     is_std_outlier: false
   - model: MH-Aug
@@ -308,12 +307,80 @@ results:
     value_note: ''
     sort_value: 0.7555
     sort_std: 0.0044
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 194
+    paper_rank: 194
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Vanilla
+    model_key: vanilla
+    model_plain: Vanilla
+    value: 0.7164
+    std: 0.0031
+    paper_value: 0.7164
+    paper_std: 0.0031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Mar 26, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-26'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-10'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.753
+    true_std: null
+    value_gap_source_arxiv: '2403.07943'
+    value_gap_source_title: Revisiting Edge Perturbation for Graph Neural Network
+      in Graph Data Augmentation and Attack
+    value_gap_source_is_current_paper: false
+    value_gap: 0.036599999999999966
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.753
+    sort_std: null
+    global_rank: 208
+    paper_rank: 556
+    rank_delta: 348
+    rank_delta_abs: 348
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -376,8 +443,8 @@ results:
     value_note: ''
     sort_value: 0.747
     sort_std: 0.0059
-    global_rank: 184
-    paper_rank: 184
+    global_rank: 230
+    paper_rank: 230
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -445,8 +512,8 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: 0.006
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 270
+    paper_rank: 270
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -513,8 +580,8 @@ results:
     value_note: ''
     sort_value: 0.7356
     sort_std: 0.0041
-    global_rank: 256
-    paper_rank: 256
+    global_rank: 313
+    paper_rank: 313
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -581,8 +648,8 @@ results:
     value_note: ''
     sort_value: 0.7295
     sort_std: 0.0062
-    global_rank: 325
-    paper_rank: 325
+    global_rank: 388
+    paper_rank: 388
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -649,8 +716,8 @@ results:
     value_note: ''
     sort_value: 0.727
     sort_std: 0.007
-    global_rank: 351
-    paper_rank: 351
+    global_rank: 416
+    paper_rank: 416
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -717,76 +784,8 @@ results:
     value_note: ''
     sort_value: 0.723
     sort_std: 0.004
-    global_rank: 417
-    paper_rank: 417
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Vanilla
-    model_key: vanilla
-    model_plain: Vanilla
-    value: 0.7164
-    std: 0.0031
-    paper_value: 0.7164
-    paper_std: 0.0031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
-    date: Mar 26, 2022
-    date_display: Mar 2022
-    date_iso: '2022-03-26'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-03-26'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7164
-    true_std: 0.0031
-    value_gap_source_arxiv: '2203.14082'
-    value_gap_source_title: Metropolis-Hastings Data Augmentation for Graph Neural
-      Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7164
-    sort_std: 0.0031
-    global_rank: 487
-    paper_rank: 487
+    global_rank: 483
+    paper_rank: 483
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -853,8 +852,8 @@ results:
     value_note: ''
     sort_value: 0.697
     sort_std: 0.009
-    global_rank: 614
-    paper_rank: 614
+    global_rank: 694
+    paper_rank: 694
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -876,9 +875,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -910,9 +909,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -944,9 +943,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -1008,16 +1007,15 @@ results:
     date_iso: '2022-03-26'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: 0.874
+    at_pub_value: 0.89
     at_pub_std: null
-    at_pub_source_arxiv: '2106.02892'
-    at_pub_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
-    at_pub_source_date_iso: '2021-06-05'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-06-05'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.04359999999999997
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-08-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.059599999999999986
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1025,27 +1023,95 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.874
+    true_value: 0.89
     true_std: null
-    value_gap_source_arxiv: '2106.02892'
-    value_gap_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
+    value_gap_source_arxiv: '2008.09864'
+    value_gap_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.04359999999999997
+    value_gap: 0.059599999999999986
     has_value_note: false
     value_note: ''
-    sort_value: 0.874
+    sort_value: 0.89
     sort_std: null
-    global_rank: 146
-    paper_rank: 467
-    rank_delta: 321
-    rank_delta_abs: 321
+    global_rank: 70
+    paper_rank: 537
+    rank_delta: 467
+    rank_delta_abs: 467
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
-    comparison_source_arxiv: '2106.02892'
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
+    is_best: false
+    is_std_outlier: false
+  - model: Vanilla
+    model_key: vanilla
+    model_plain: Vanilla
+    value: 0.8223
+    std: 0.0046
+    paper_value: 0.8223
+    paper_std: 0.0046
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+    date: Mar 26, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-26'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-10'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.871
+    true_std: null
+    value_gap_source_arxiv: '2403.07943'
+    value_gap_source_title: Revisiting Edge Perturbation for Graph Neural Network
+      in Graph Data Augmentation and Attack
+    value_gap_source_is_current_paper: false
+    value_gap: 0.048699999999999966
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.871
+    sort_std: null
+    global_rank: 193
+    paper_rank: 624
+    rank_delta: 431
+    rank_delta_abs: 431
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MH-Aug
@@ -1105,8 +1171,8 @@ results:
     value_note: ''
     sort_value: 0.8516
     sort_std: 0.0035
-    global_rank: 281
-    paper_rank: 281
+    global_rank: 315
+    paper_rank: 315
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1174,8 +1240,8 @@ results:
     value_note: ''
     sort_value: 0.8394
     sort_std: 0.0057
-    global_rank: 353
-    paper_rank: 355
+    global_rank: 410
+    paper_rank: 412
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -1242,8 +1308,8 @@ results:
     value_note: ''
     sort_value: 0.838
     sort_std: 0.0073
-    global_rank: 370
-    paper_rank: 370
+    global_rank: 427
+    paper_rank: 427
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1310,8 +1376,8 @@ results:
     value_note: ''
     sort_value: 0.8371
     sort_std: 0.0048
-    global_rank: 373
-    paper_rank: 373
+    global_rank: 430
+    paper_rank: 430
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1378,8 +1444,8 @@ results:
     value_note: ''
     sort_value: 0.836
     sort_std: 0.005
-    global_rank: 403
-    paper_rank: 403
+    global_rank: 468
+    paper_rank: 468
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1447,8 +1513,8 @@ results:
     value_note: ''
     sort_value: 0.836
     sort_std: 0.005
-    global_rank: 389
-    paper_rank: 389
+    global_rank: 454
+    paper_rank: 454
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1515,8 +1581,8 @@ results:
     value_note: ''
     sort_value: 0.835
     sort_std: 0.004
-    global_rank: 420
-    paper_rank: 420
+    global_rank: 485
+    paper_rank: 485
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1583,76 +1649,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.008
-    global_rank: 528
-    paper_rank: 528
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Vanilla
-    model_key: vanilla
-    model_plain: Vanilla
-    value: 0.8223
-    std: 0.0046
-    paper_value: 0.8223
-    paper_std: 0.0046
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Mar 26, 2022
-    date_display: Mar 2022
-    date_iso: '2022-03-26'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-03-26'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8223
-    true_std: 0.0046
-    value_gap_source_arxiv: '2203.14082'
-    value_gap_source_title: Metropolis-Hastings Data Augmentation for Graph Neural
-      Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8223
-    sort_std: 0.0046
-    global_rank: 536
-    paper_rank: 536
+    global_rank: 609
+    paper_rank: 609
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1688,5 +1686,6 @@ datasets_by_scope:
     - dataset: CiteSeer
       dataset_slug: citeseer
 single_proposed_model: MH-Aug
+main_figure: /figures/2203.14082/main_figure.jpegoptim.jpg
 ---
 

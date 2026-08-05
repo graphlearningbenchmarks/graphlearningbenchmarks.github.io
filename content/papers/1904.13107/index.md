@@ -48,29 +48,32 @@ abstract: Graph neural networks, which generalize deep neural network models to 
 codebase_url: ''
 extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
 has_results: true
-paper_type: dataset
-proposed_models: []
-mrr: null
-adjusted_mrr: null
-mrr_dataset_count: 0
+paper_type: method
+proposed_models:
+- EigenPooling-1
+- EigenPooling-2
+- EigenPooling-3
+mrr: 0.0067
+adjusted_mrr: 0.0067
+mrr_dataset_count: 5
 benchmark_categories:
 - TU Dortmund
 benchmark_coverage:
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
-  evaluated: 4
+  evaluated: 5
   total: 11
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id004
+- &id005
   dataset: D&D
   rows:
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: gc-gnn (graphsage)
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -79,9 +82,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2309.00738'
     title: Rethinking the Power of Graph Canonization in Graph Representation Learning
       with Stability
@@ -102,9 +105,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: sugar
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8403
     std: 0.0133
     metric: Accuracy
@@ -136,9 +139,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: ortho-g-u-nets
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8387
     std: null
     metric: Accuracy
@@ -186,14 +189,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on D&D dataset
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -226,10 +229,10 @@ results:
     value_note: ''
     sort_value: 0.7937
     sort_std: null
-    global_rank: 40
-    paper_rank: 82
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 41
+    paper_rank: 86
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -254,14 +257,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on D&D dataset
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -293,10 +296,10 @@ results:
     value_note: ''
     sort_value: 0.7912
     sort_std: 0.0307
-    global_rank: 46
-    paper_rank: 122
-    rank_delta: 76
-    rank_delta_abs: 76
+    global_rank: 48
+    paper_rank: 130
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -304,16 +307,16 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-3
-    model_key: m-3
-    model_plain: m-3
+  - model: EigenPooling-3
+    model_key: eigenpooling-3
+    model_plain: EigenPooling-3
     value: 0.786
     std: null
     paper_value: 0.786
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -321,14 +324,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on D&D dataset
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -340,8 +343,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -350,17 +353,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.786
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.786
     sort_std: null
-    global_rank: 63
+    global_rank: 65
+    paper_rank: 65
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -383,14 +391,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on D&D dataset
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -402,8 +410,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -412,32 +420,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.78
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.78
     sort_std: null
-    global_rank: 80
+    global_rank: 82
+    paper_rank: 82
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-1
-    model_key: m-1
-    model_plain: m-1
+  - model: EigenPooling-1
+    model_key: eigenpooling-1
+    model_plain: EigenPooling-1
     value: 0.775
     std: null
     paper_value: 0.775
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -445,14 +458,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on D&D dataset
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -464,8 +477,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -474,32 +487,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.775
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.775
     sort_std: null
-    global_rank: 94
+    global_rank: 98
+    paper_rank: 98
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-2
-    model_key: m-2
-    model_plain: m-2
+  - model: EigenPooling-2
+    model_key: eigenpooling-2
+    model_plain: EigenPooling-2
     value: 0.77
     std: null
     paper_value: 0.77
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -507,14 +525,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on D&D dataset
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -526,8 +544,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -536,17 +554,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.77
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.77
     sort_std: null
-    global_rank: 107
+    global_rank: 112
+    paper_rank: 112
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -569,14 +592,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on D&D dataset
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -588,8 +611,8 @@ results:
     at_pub_source_title: Graph Neural Networks With Convolutional ARMA Filters
     at_pub_source_date_iso: '2019-01-05'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2020-09-13'
-    value_gap_source_date_label: AAAI 2020
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: 0.030000000000000027
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -598,21 +621,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7578
-    true_std: 0.0391
-    value_gap_source_arxiv: '2009.05923'
-    value_gap_source_title: Contrastive Self-supervised Learning for Graph Classification
-    value_gap_source_is_current_paper: false
-    value_gap: 0.008199999999999985
+    true_value: 0.766
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7578
-    sort_std: 0.0391
-    global_rank: 126
-    paper_rank: 111
-    rank_delta: -15
-    rank_delta_abs: 15
-    rank_delta_direction: better
+    sort_value: 0.766
+    sort_std: null
+    global_rank: 117
+    paper_rank: 117
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -636,14 +659,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on D&D dataset
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -655,33 +678,32 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-22'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.7265
-    true_std: 0.0047
-    value_gap_source_arxiv: '2306.12726'
-    value_gap_source_title: On Exploring Node-feature and Graph-structure Diversities
-      for Node Drop Graph Pooling
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01849999999999996
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.745
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7265
-    sort_std: 0.0047
-    global_rank: 162
-    paper_rank: 147
-    rank_delta: -15
-    rank_delta_abs: 15
-    rank_delta_direction: better
-    has_value_gap: true
+    sort_value: 0.745
+    sort_std: null
+    global_rank: 156
+    paper_rank: 156
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -696,110 +718,107 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id004
   dataset: ENZYMES
   rows:
-  - model: 3WLGNN
-    model_key: msa-aud
-    model_plain: 3WLGNN
-    value: 0.892
-    std: null
+  - model: WL
+    model_key: bgnn(m)-cs
+    model_plain: WL
+    value: 0.8068
+    std: 0.0149
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.892
-    sort_std: null
+    sort_value: 0.8068
+    sort_std: 0.0149
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-ad
-    model_plain: 3WLGNN
-    value: 0.89
-    std: null
+  - model: WL
+    model_key: bgnn
+    model_plain: WL
+    value: 0.7936
+    std: 0.0281
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.89
-    sort_std: null
+    sort_value: 0.7936
+    sort_std: 0.0281
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-au
-    model_plain: 3WLGNN
-    value: 0.854
-    std: null
+  - model: WL
+    model_key: bgnn(m)-sc
+    model_plain: WL
+    value: 0.7889
+    std: 0.0079
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.854
-    sort_std: null
+    sort_value: 0.7889
+    sort_std: 0.0079
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GraphSAGE
     model_key: graphsage
@@ -818,14 +837,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on ENZYMES
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -857,10 +876,10 @@ results:
     value_note: ''
     sort_value: 0.68167
     sort_std: 0.05449
-    global_rank: 45
-    paper_rank: 146
-    rank_delta: 101
-    rank_delta_abs: 101
+    global_rank: 38
+    paper_rank: 147
+    rank_delta: 109
+    rank_delta_abs: 109
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -885,14 +904,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on ENZYMES
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -924,10 +943,10 @@ results:
     value_note: ''
     sort_value: 0.665
     sort_std: 0.0691
-    global_rank: 55
-    paper_rank: 194
-    rank_delta: 139
-    rank_delta_abs: 139
+    global_rank: 48
+    paper_rank: 206
+    rank_delta: 158
+    rank_delta_abs: 158
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -935,16 +954,16 @@ results:
     comparison_source_arxiv: '1901.01343'
     is_best: false
     is_std_outlier: false
-  - model: m-1
-    model_key: m-1
-    model_plain: m-1
+  - model: EigenPooling-1
+    model_key: eigenpooling-1
+    model_plain: EigenPooling-1
     value: 0.65
     std: null
     paper_value: 0.65
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -952,14 +971,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on ENZYMES
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -971,8 +990,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -981,32 +1000,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.65
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.65
     sort_std: null
-    global_rank: 72
+    global_rank: 65
+    paper_rank: 65
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-2
-    model_key: m-2
-    model_plain: m-2
+  - model: EigenPooling-2
+    model_key: eigenpooling-2
+    model_plain: EigenPooling-2
     value: 0.645
     std: null
     paper_value: 0.645
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1014,14 +1038,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on ENZYMES
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1033,8 +1057,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1043,32 +1067,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.645
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.645
     sort_std: null
-    global_rank: 76
+    global_rank: 70
+    paper_rank: 70
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-3
-    model_key: m-3
-    model_plain: m-3
+  - model: EigenPooling-3
+    model_key: eigenpooling-3
+    model_plain: EigenPooling-3
     value: 0.645
     std: null
     paper_value: 0.645
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1076,14 +1105,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on ENZYMES
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1095,8 +1124,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1105,17 +1134,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.645
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.645
     sort_std: null
-    global_rank: 76
+    global_rank: 71
+    paper_rank: 71
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1138,14 +1172,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on ENZYMES
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1157,8 +1191,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1167,17 +1201,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.636
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.636
     sort_std: null
-    global_rank: 83
+    global_rank: 77
+    paper_rank: 77
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1200,14 +1239,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on ENZYMES
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1239,10 +1278,10 @@ results:
     value_note: ''
     sort_value: 0.6015
     sort_std: null
-    global_rank: 116
-    paper_rank: 213
-    rank_delta: 97
-    rank_delta_abs: 97
+    global_rank: 113
+    paper_rank: 233
+    rank_delta: 120
+    rank_delta_abs: 120
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1267,14 +1306,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on ENZYMES
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1308,9 +1347,9 @@ results:
     sort_value: 0.5712
     sort_std: null
     global_rank: 140
-    paper_rank: 204
-    rank_delta: 64
-    rank_delta_abs: 64
+    paper_rank: 218
+    rank_delta: 78
+    rank_delta_abs: 78
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1330,9 +1369,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1363,9 +1402,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1396,9 +1435,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -1447,14 +1486,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1486,10 +1525,10 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.078
-    global_rank: 134
-    paper_rank: 622
-    rank_delta: 488
-    rank_delta_abs: 488
+    global_rank: 140
+    paper_rank: 661
+    rank_delta: 521
+    rank_delta_abs: 521
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1514,14 +1553,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1553,10 +1592,10 @@ results:
     value_note: ''
     sort_value: 0.891
     sort_std: 0.058
-    global_rank: 239
-    paper_rank: 630
-    rank_delta: 391
-    rank_delta_abs: 391
+    global_rank: 250
+    paper_rank: 669
+    rank_delta: 419
+    rank_delta_abs: 419
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1581,28 +1620,29 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
     published_venue: KDD 2019
     published_conference: KDD 2019
-    at_pub_value: 0.858
+    at_pub_value: 0.8583
     at_pub_std: null
-    at_pub_source_arxiv: '1810.00826'
-    at_pub_source_title: How Powerful are Graph Neural Networks?
-    at_pub_source_date_iso: '2018-10-01'
-    at_pub_source_date_label: ICLR 2018
+    at_pub_source_arxiv: '1901.08296'
+    at_pub_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
+    at_pub_source_date_iso: '2018-12-14'
+    at_pub_source_date_label: '2018'
     value_gap_source_date_iso: '2023-05-10'
     value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.06999999999999995
+    gap_vs_at_pub: 0.07029999999999992
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1621,15 +1661,16 @@ results:
     value_note: ''
     sort_value: 0.8583
     sort_std: 0.0166
-    global_rank: 387
-    paper_rank: 619
-    rank_delta: 232
-    rank_delta_abs: 232
+    global_rank: 408
+    paper_rank: 658
+    rank_delta: 250
+    rank_delta_abs: 250
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: How Powerful are Graph Neural Networks?
-    comparison_source_arxiv: '1810.00826'
+    comparison_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
+    comparison_source_arxiv: '1901.08296'
     is_best: false
     is_std_outlier: false
   - model: Set2Set
@@ -1649,32 +1690,32 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
     published_venue: KDD 2019
     published_conference: KDD 2019
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.737
+    at_pub_std: 0.069
+    at_pub_source_arxiv: '1903.02428'
+    at_pub_source_title: Fast Graph Representation Learning with PyTorch Geometric
+    at_pub_source_date_iso: '2019-03-06'
+    at_pub_source_date_label: ICLR 2019
     value_gap_source_date_iso: '2023-10-17'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.027000000000000024
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: false
-    insignificant_improvement_at_pub: false
+    insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
@@ -1689,10 +1730,10 @@ results:
     value_note: ''
     sort_value: 0.8084
     sort_std: 0.0067
-    global_rank: 570
-    paper_rank: 655
-    rank_delta: 85
-    rank_delta_abs: 85
+    global_rank: 600
+    paper_rank: 696
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1717,14 +1758,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1736,8 +1777,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1746,32 +1787,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.806
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.806
     sort_std: null
-    global_rank: 574
+    global_rank: 605
+    paper_rank: 605
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-1
-    model_key: m-1
-    model_plain: m-1
+  - model: EigenPooling-1
+    model_key: eigenpooling-1
+    model_plain: EigenPooling-1
     value: 0.801
     std: null
     paper_value: 0.801
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1779,14 +1825,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1798,8 +1844,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1808,32 +1854,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.801
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.801
     sort_std: null
-    global_rank: 588
+    global_rank: 622
+    paper_rank: 622
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-3
-    model_key: m-3
-    model_plain: m-3
+  - model: EigenPooling-3
+    model_key: eigenpooling-3
+    model_plain: EigenPooling-3
     value: 0.795
     std: null
     paper_value: 0.795
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1841,14 +1892,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1860,8 +1911,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1870,32 +1921,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.795
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.795
     sort_std: null
-    global_rank: 610
+    global_rank: 646
+    paper_rank: 646
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-2
-    model_key: m-2
-    model_plain: m-2
+  - model: EigenPooling-2
+    model_key: eigenpooling-2
+    model_plain: EigenPooling-2
     value: 0.789
     std: null
     paper_value: 0.789
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1903,14 +1959,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG for graph classification
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -1922,8 +1978,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1932,17 +1988,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.789
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.789
     sort_std: null
-    global_rank: 620
+    global_rank: 658
+    paper_rank: 658
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1960,44 +2021,44 @@ results:
 - &id002
   dataset: NCI1
   rows:
-  - model: Diverse B12C3
-    model_key: msa-aud
-    model_plain: Diverse B12C3
-    value: 0.969
+  - model: ECC
+    model_key: wl-mlp
+    model_plain: ECC
+    value: 0.9954
     std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
     is_global_top: true
     global_rank: 1
-    sort_value: 0.969
+    sort_value: 0.9954
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-au
-    model_plain: Diverse B12C3
-    value: 0.966
+  - model: ECC
+    model_key: gin
+    model_plain: ECC
+    value: 0.9934
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -2005,57 +2066,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GNNs ... use node features
     is_global_top: true
     global_rank: 2
-    sort_value: 0.966
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-ad
-    model_plain: Diverse B12C3
-    value: 0.963
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.963
+    sort_value: 0.9934
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -2079,14 +2105,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on NCI1
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -2098,8 +2124,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-07-08'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2022-02-21'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -2108,20 +2134,20 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.84
+    true_value: 0.9727
     true_std: null
-    value_gap_source_arxiv: '2107.04086'
-    value_gap_source_title: Robust Counterfactual Explanations on Graph Neural Networks
+    value_gap_source_arxiv: '2202.10156'
+    value_gap_source_title: 1-WL Expressiveness Is (Almost) All You Need
     value_gap_source_is_current_paper: false
-    value_gap: 0.11499999999999999
+    value_gap: 0.24770000000000003
     has_value_note: false
     value_note: ''
-    sort_value: 0.84
+    sort_value: 0.9727
     sort_std: null
-    global_rank: 39
-    paper_rank: 463
-    rank_delta: 424
-    rank_delta_abs: 424
+    global_rank: 3
+    paper_rank: 484
+    rank_delta: 481
+    rank_delta_abs: 481
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2146,14 +2172,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on NCI1
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -2186,10 +2212,10 @@ results:
     value_note: ''
     sort_value: 0.8303
     sort_std: 0.0137
-    global_rank: 75
-    paper_rank: 448
-    rank_delta: 373
-    rank_delta_abs: 373
+    global_rank: 76
+    paper_rank: 469
+    rank_delta: 393
+    rank_delta_abs: 393
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2197,16 +2223,16 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-3
-    model_key: m-3
-    model_plain: m-3
+  - model: EigenPooling-3
+    model_key: eigenpooling-3
+    model_plain: EigenPooling-3
     value: 0.77
     std: null
     paper_value: 0.77
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -2214,14 +2240,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on NCI1
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -2233,8 +2259,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2243,32 +2269,37 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.77
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.77
     sort_std: null
-    global_rank: 371
+    global_rank: 387
+    paper_rank: 387
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: m-2
-    model_key: m-2
-    model_plain: m-2
+  - model: EigenPooling-2
+    model_key: eigenpooling-2
+    model_plain: EigenPooling-2
     value: 0.767
     std: null
     paper_value: 0.767
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -2276,14 +2307,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on NCI1
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -2295,8 +2326,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2305,17 +2336,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.767
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.767
     sort_std: null
-    global_rank: 376
+    global_rank: 392
+    paper_rank: 392
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2338,14 +2374,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on NCI1
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -2377,15 +2413,82 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.019
-    global_rank: 377
-    paper_rank: 456
-    rank_delta: 79
-    rank_delta_abs: 79
+    global_rank: 394
+    paper_rank: 477
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Graph Capsule Convolutional Neural Networks
     comparison_source_arxiv: '1805.08090'
+    is_best: false
+    is_std_outlier: false
+  - model: EigenPooling-1
+    model_key: eigenpooling-1
+    model_plain: EigenPooling-1
+    value: 0.76
+    std: null
+    paper_value: 0.76
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on NCI1
+    date: Apr 30, 2019
+    date_display: Apr 2019
+    date_iso: '2019-04-30'
+    published_venue: KDD 2019
+    published_conference: KDD 2019
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.76
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.76
+    sort_std: null
+    global_rank: 419
+    paper_rank: 419
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Diff-pool
@@ -2405,14 +2508,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on NCI1
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -2424,8 +2527,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2434,79 +2537,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.76
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.76
     sort_std: null
-    global_rank: 400
+    global_rank: 413
+    paper_rank: 413
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: m-1
-    model_key: m-1
-    model_plain: m-1
-    value: 0.76
-    std: null
-    paper_value: 0.76
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2019
-    date_display: Apr 2019
-    date_iso: '2019-04-30'
-    published_venue: KDD 2019
-    published_conference: KDD 2019
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.76
-    sort_std: null
-    global_rank: 400
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2529,14 +2575,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on NCI1
     date: Apr 30, 2019
     date_display: Apr 2019
     date_iso: '2019-04-30'
@@ -2569,10 +2615,659 @@ results:
     value_note: ''
     sort_value: 0.717
     sort_std: 0.0073
-    global_rank: 466
-    paper_rank: 468
+    global_rank: 487
+    paper_rank: 489
     rank_delta: 2
     rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: PROTEINS
+  rows:
+  - model: Graphormer-SPIS
+    model_key: gmn
+    model_plain: Graphormer-SPIS
+    value: 0.8225
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8225
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Graphormer-SPIS
+    model_key: ci-gnn
+    model_plain: Graphormer-SPIS
+    value: 0.82
+    std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2301.01642'
+    title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network for Interpretable
+      Brain Network-Based Psychiatric Diagnosis'
+    date: Jan 4, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-04'
+    venue: Neural Networks
+    codebase_url: https://github.com/ZKZ-Brain/CI-GNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.82
+    sort_std: 0.02
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Graphormer-SPIS
+    model_key: diffpool+gpl
+    model_plain: Graphormer-SPIS
+    value: 0.8196
+    std: 0.0286
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.11361'
+    title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
+      of Graph Neural Networks'
+    date: Jul 16, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-16'
+    venue: Applied intelligence (Boston)
+    codebase_url: https://github.com/PreckLi/graph_prompt_learning
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8196
+    sort_std: 0.0286
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.746
+    std: null
+    paper_value: 0.746
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on PROTEINS
+    date: Apr 30, 2019
+    date_display: Apr 2019
+    date_iso: '2019-04-30'
+    published_venue: KDD 2019
+    published_conference: KDD 2019
+    at_pub_value: 0.702
+    at_pub_std: 0.039
+    at_pub_source_arxiv: '1901.01343'
+    at_pub_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    at_pub_source_date_iso: '2019-01-05'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2024-02-26'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.04400000000000004
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7667
+    true_std: 0.0305
+    value_gap_source_arxiv: '2402.16346'
+    value_gap_source_title: Boosting Graph Pooling with Persistent Homology
+    value_gap_source_is_current_paper: false
+    value_gap: 0.02070000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7667
+    sort_std: 0.0305
+    global_rank: 93
+    paper_rank: 290
+    rank_delta: 197
+    rank_delta_abs: 197
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    comparison_source_arxiv: '1901.01343'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.74
+    std: null
+    paper_value: 0.74
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on PROTEINS
+    date: Apr 30, 2019
+    date_display: Apr 2019
+    date_iso: '2019-04-30'
+    published_venue: KDD 2019
+    published_conference: KDD 2019
+    at_pub_value: 0.731
+    at_pub_std: 0.038
+    at_pub_source_arxiv: '1903.02428'
+    at_pub_source_title: Fast Graph Representation Learning with PyTorch Geometric
+    at_pub_source_date_iso: '2019-03-06'
+    at_pub_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-02-26'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.009000000000000008
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7665
+    true_std: 0.0314
+    value_gap_source_arxiv: '2402.16346'
+    value_gap_source_title: Boosting Graph Pooling with Persistent Homology
+    value_gap_source_is_current_paper: false
+    value_gap: 0.026499999999999968
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7665
+    sort_std: 0.0314
+    global_rank: 94
+    paper_rank: 322
+    rank_delta: 228
+    rank_delta_abs: 228
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: EigenPooling-3
+    model_key: eigenpooling-3
+    model_plain: EigenPooling-3
+    value: 0.766
+    std: null
+    paper_value: 0.766
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on PROTEINS
+    date: Apr 30, 2019
+    date_display: Apr 2019
+    date_iso: '2019-04-30'
+    published_venue: KDD 2019
+    published_conference: KDD 2019
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.766
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.766
+    sort_std: null
+    global_rank: 102
+    paper_rank: 102
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: dgcnn
+    model_plain: DGCNN
+    value: 0.732
+    std: null
+    paper_value: 0.732
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on PROTEINS
+    date: Apr 30, 2019
+    date_display: Apr 2019
+    date_iso: '2019-04-30'
+    published_venue: KDD 2019
+    published_conference: KDD 2019
+    at_pub_value: 0.7554
+    at_pub_std: 0.0094
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2021-09-23'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: 0.023399999999999976
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7626
+    true_std: null
+    value_gap_source_arxiv: '2109.11338'
+    value_gap_source_title: Orthogonal Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03059999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7626
+    sort_std: null
+    global_rank: 133
+    paper_rank: 367
+    rank_delta: 234
+    rank_delta_abs: 234
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph Capsule Convolutional Neural Networks
+    comparison_source_arxiv: '1805.08090'
+    is_best: false
+    is_std_outlier: false
+  - model: Diff-pool
+    model_key: diff-pool
+    model_plain: Diff-pool
+    value: 0.759
+    std: null
+    paper_value: 0.759
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on PROTEINS
+    date: Apr 30, 2019
+    date_display: Apr 2019
+    date_iso: '2019-04-30'
+    published_venue: KDD 2019
+    published_conference: KDD 2019
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.759
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.759
+    sort_std: null
+    global_rank: 164
+    paper_rank: 164
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: EigenPooling-2
+    model_key: eigenpooling-2
+    model_plain: EigenPooling-2
+    value: 0.754
+    std: null
+    paper_value: 0.754
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on PROTEINS
+    date: Apr 30, 2019
+    date_display: Apr 2019
+    date_iso: '2019-04-30'
+    published_venue: KDD 2019
+    published_conference: KDD 2019
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.754
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.754
+    sort_std: null
+    global_rank: 215
+    paper_rank: 215
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: EigenPooling-1
+    model_key: eigenpooling-1
+    model_plain: EigenPooling-1
+    value: 0.751
+    std: null
+    paper_value: 0.751
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on PROTEINS
+    date: Apr 30, 2019
+    date_display: Apr 2019
+    date_iso: '2019-04-30'
+    published_venue: KDD 2019
+    published_conference: KDD 2019
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.751
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.751
+    sort_std: null
+    global_rank: 250
+    paper_rank: 250
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Set2Set
+    model_key: set2set
+    model_plain: Set2Set
+    value: 0.727
+    std: null
+    paper_value: 0.727
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV accuracy on PROTEINS
+    date: Apr 30, 2019
+    date_display: Apr 2019
+    date_iso: '2019-04-30'
+    published_venue: KDD 2019
+    published_conference: KDD 2019
+    at_pub_value: 0.736
+    at_pub_std: 0.037
+    at_pub_source_arxiv: '1903.02428'
+    at_pub_source_title: Fast Graph Representation Learning with PyTorch Geometric
+    at_pub_source_date_iso: '2019-03-06'
+    at_pub_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2020-02-21'
+    value_gap_source_date_label: ICLR 2020
+    gap_vs_at_pub: 0.009000000000000008
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7429
+    true_std: null
+    value_gap_source_arxiv: '2002.09518'
+    value_gap_source_title: Memory-Based Graph Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.015900000000000025
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7429
+    sort_std: null
+    global_rank: 313
+    paper_rank: 385
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2596,6 +3291,7 @@ results_grouped:
   - *id002
   - *id003
   - *id004
+  - *id005
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -2607,9 +3303,12 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: NCI1
       dataset_slug: nci1
+    - dataset: PROTEINS
+      dataset_slug: proteins
     - dataset: ENZYMES
       dataset_slug: enzymes
     - dataset: D&D
       dataset_slug: d-d
+main_figure: /figures/1904.13107/main_figure.jpegoptim.jpg
 ---
 

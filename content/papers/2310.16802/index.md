@@ -207,8 +207,8 @@ results:
       with vector-scalar interactive message passing for molecules'
     at_pub_source_date_iso: '2022-10-29'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: 0.2493
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -219,19 +219,19 @@ results:
     today_delta_significant: true
     true_value: 0.0507
     true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
     value_gap_source_is_current_paper: false
     value_gap: 0.2493
     has_value_note: false
     value_note: ''
     sort_value: 0.0507
     sort_std: null
-    global_rank: 24
-    paper_rank: 57
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 29
+    paper_rank: 77
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -298,10 +298,10 @@ results:
     value_note: ''
     sort_value: 0.053
     sort_std: null
-    global_rank: 29
-    paper_rank: 50
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 35
+    paper_rank: 70
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -367,8 +367,8 @@ results:
     value_note: ''
     sort_value: 0.3
     sort_std: null
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -435,8 +435,8 @@ results:
     value_note: ''
     sort_value: 0.7
     sort_std: null
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -503,8 +503,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -571,8 +571,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -604,5 +604,6 @@ datasets_by_scope:
     datasets:
     - dataset: MD17
       dataset_slug: md17
+main_figure: /figures/2310.16802/main_figure.jpegoptim.jpg
 ---
 

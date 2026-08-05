@@ -1313,5 +1313,6 @@ datasets_by_scope:
     - dataset: Code
       dataset_slug: code
 single_proposed_model: two augmentation methods based on environment subgraphs
+main_figure: /figures/2206.02886/main_figure.jpegoptim.jpg
 ---
 

@@ -628,5 +628,6 @@ datasets_by_scope:
     datasets:
     - dataset: ACM
       dataset_slug: acm
+main_figure: /figures/2310.11676/main_figure.jpegoptim.jpg
 ---
 

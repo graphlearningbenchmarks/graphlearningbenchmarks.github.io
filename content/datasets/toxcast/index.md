@@ -13,13 +13,14 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 617
-result_count: 299
+result_count: 285
 best_model:
-  model: SCI
-  value: 0.8073
+  model: GeomGCL
+  value: 0.763
   metric: ROC-AUC
-  arxiv_id: '2311.04837'
-  paper_title: Identifying Semantic Component for Robust Molecular Property Prediction
+  arxiv_id: '2109.11730'
+  paper_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property
+    Prediction'
 papers:
 - arxiv_id: '2503.04362'
   title: A Generalist Cross-Domain Molecular Learning Framework for Structure-Based
@@ -100,10 +101,6 @@ papers:
   title: Fine-tuning Graph Neural Networks by Preserving Graph Generative Patterns
   date_iso: '2023-12-21'
   venue: AAAI 2023
-- arxiv_id: '2311.04837'
-  title: Identifying Semantic Component for Robust Molecular Property Prediction
-  date_iso: '2023-11-08'
-  venue: ''
 - arxiv_id: '2310.14753'
   title: Rethinking Tokenizer and Decoder in Masked Graph Modeling for Molecules
   date_iso: '2023-10-23'
@@ -111,6 +108,10 @@ papers:
 - arxiv_id: '2310.14216'
   title: 'UniMAP: Universal SMILES-Graph Representation Learning'
   date_iso: '2023-10-22'
+  venue: ''
+- arxiv_id: '2310.07351'
+  title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+  date_iso: '2023-10-11'
   venue: ''
 - arxiv_id: '2309.10131'
   title: Deep Prompt Tuning for Graph Transformers
@@ -210,15 +211,18 @@ papers:
   title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
   date_iso: '2021-06-10'
   venue: NeurIPS 2021
-- arxiv_id: '2106.04509'
-  title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive
-    Learning from Molecular Graph'
-  date_iso: '2021-06-05'
-  venue: KDD 2021
 - arxiv_id: '2011.15069'
   title: Graph convolutions that can finally model local structure
   date_iso: '2020-11-30'
   venue: ''
+- arxiv_id: '1905.12265'
+  title: Strategies for Pre-training Graph Neural Networks
+  date_iso: '2019-05-29'
+  venue: ICLR 2019
+- arxiv_id: '1801.03226'
+  title: Adaptive Graph Convolutional Neural Networks
+  date_iso: '2018-01-10'
+  venue: AAAI 2018
 variants:
 - slug: scaffold-split
   name: Scaffold split
@@ -242,174 +246,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: SCI
-    model_plain: SCI
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_iso: '2023-11-08'
-    date_display: Nov 2023
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.8073
-    - null
-    metric_stds:
-    - 0.0006
-    - null
-  - model: PharmHGT
-    model_plain: PharmHGT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_iso: '2023-11-08'
-    date_display: Nov 2023
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8023
-    - null
-    metric_stds:
-    - 0.0009
-    - null
-  - model: StableGNN-Graph
-    model_plain: StableGNN-Graph
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_iso: '2023-11-08'
-    date_display: Nov 2023
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7986
-    - null
-    metric_stds:
-    - 0.001
-    - null
-  - model: OOD-GNN
-    model_plain: OOD-GNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_iso: '2023-11-08'
-    date_display: Nov 2023
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.787
-    - null
-    metric_stds:
-    - 0.003
-    - null
-  - model: FFiNet
-    model_plain: FFiNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_iso: '2023-11-08'
-    date_display: Nov 2023
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7712
-    - null
-    metric_stds:
-    - 0.0048
-    - null
-  - model: AttentiveFP
-    model_plain: AttentiveFP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_iso: '2023-11-08'
-    date_display: Nov 2023
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7678
-    - null
-    metric_stds:
-    - 0.0037
-    - null
   - model: GeomGCL
     model_plain: GeomGCL
     is_baseline: false
@@ -430,7 +266,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2021
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.763
@@ -458,7 +294,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: true
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.757
@@ -1316,6 +1152,34 @@ variants:
     metric_stds:
     - 0.007
     - null
+  - model: AMCT
+    model_plain: AMCT
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.07351'
+    title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+    date: Oct 11, 2023
+    date_iso: '2023-10-11'
+    date_display: Oct 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.715
+    - null
+    metric_stds:
+    - 0.011
+    - null
   - model: DeeperGCN
     model_plain: DeeperGCN
     is_baseline: true
@@ -1430,35 +1294,6 @@ variants:
     - null
     metric_stds:
     - 0.014
-    - null
-  - model: scratch
-    model_plain: scratch
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2106.04509'
-    title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive
-      Learning from Molecular Graph'
-    date: Jun 5, 2021
-    date_iso: '2021-06-05'
-    date_display: Jun 2021
-    codebase_url: https://github.com/illidanlab/MoCL-DK
-    published_conference: KDD 2021
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2021
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.71
-    - null
-    metric_stds:
-    - null
     - null
   - model: S-CGIB
     model_plain: S-CGIB
@@ -1575,6 +1410,62 @@ variants:
     metric_stds:
     - null
     - null
+  - model: AGCN
+    model_plain: AGCN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '1801.03226'
+    title: Adaptive Graph Convolutional Neural Networks
+    date: Jan 10, 2018
+    date_iso: '2018-01-10'
+    date_display: Jan 2018
+    codebase_url: ''
+    published_conference: AAAI 2018
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2018
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7033
+    - null
+    metric_stds:
+    - null
+    - null
+  - model: Graphormer
+    model_plain: Graphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.07351'
+    title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+    date: Oct 11, 2023
+    date_iso: '2023-10-11'
+    date_display: Oct 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.703
+    - null
+    metric_stds:
+    - 0.01
+    - null
   - model: HMGNN
     model_plain: HMGNN
     is_baseline: true
@@ -1660,20 +1551,141 @@ variants:
     metric_stds:
     - 0.0037
     - null
-  row_count: 299
+  - model: 3DInfomax +vn
+    model_plain: 3DInfomax +vn
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2309.04062'
+    title: '3D Denoisers are Good 2D Teachers: Molecular Pretraining via Denoising
+      and Cross-Modal Distillation'
+    date: Sep 8, 2023
+    date_iso: '2023-09-08'
+    date_display: Sep 2023
+    codebase_url: ''
+    published_conference: AAAI 2023
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2023
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6979
+    - null
+    metric_stds:
+    - 0.0066
+    - null
+  - model: Node Prediction
+    model_plain: Node Prediction
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2207.06010'
+    title: Does GNN Pretraining Help Molecular Representation?
+    date: Jul 13, 2022
+    date_iso: '2022-07-13'
+    date_display: Jul 2022
+    codebase_url: ''
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6977
+    - null
+    metric_stds:
+    - 0.0013
+    - null
+  - model: GraphCL
+    model_plain: GraphCL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.03364'
+    title: 'KPGT: Knowledge-Guided Pre-training of Graph Transformer for Molecular
+      Property Prediction'
+    date: Jun 2, 2022
+    date_iso: '2022-06-02'
+    date_display: Jun 2022
+    codebase_url: https://github.com/lihan97/KPGT
+    published_conference: KDD 2022
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2022
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.696
+    - null
+    metric_stds:
+    - 0.023
+    - null
+  - model: UniCorn
+    model_plain: UniCorn
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2405.10343'
+    title: 'UniCorn: A Unified Contrastive Learning Approach for Multi-view Molecular
+      Representation Learning'
+    date: May 15, 2024
+    date_iso: '2024-05-15'
+    date_display: May 2024
+    codebase_url: ''
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.694
+    - null
+    metric_stds:
+    - 0.011
+    - null
+  row_count: 285
   rows_json: /data/datasets/toxcast/scaffold-split-rows.json
   chart_json: /data/datasets/toxcast/scaffold-split-chart.json
   arch_counts:
-    gnn: 195
-    hybrid: 64
-    graph_transformer: 7
-    llm: 9
+    gnn: 179
+    hybrid: 60
+    graph_transformer: 11
+    llm: 10
     walk: 0
-    traditional: 16
+    traditional: 17
   metric_counts:
-  - 286
+  - 272
   - 21
   milestones: &id001
+  - value: 0.7033
+    std: null
+    model: AGCN
+    arxiv_id: '1801.03226'
+    title: Adaptive Graph Convolutional Neural Networks
+    date: '2018-01-10'
   - value: 0.749
     std: 0.002
     model: GINE w/ VN
@@ -1686,12 +1698,6 @@ variants:
     arxiv_id: '2109.11730'
     title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property Prediction'
     date: '2021-09-24'
-  - value: 0.8073
-    std: 0.0006
-    model: SCI
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: '2023-11-08'
   milestones_by_metric:
     ROC-AUC: *id001
     Accuracy:

@@ -1095,5 +1095,6 @@ datasets_by_scope:
     - dataset: IMDB
       dataset_slug: imdb
 single_proposed_model: three self-supervision signals
+main_figure: /figures/2202.11245/main_figure.jpegoptim.jpg
 ---
 

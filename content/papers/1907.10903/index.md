@@ -51,9 +51,9 @@ proposed_models:
 - JKNet+DropEdge
 - IncepGCN+DropEdge
 - GraphSAGE+DropEdge
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0131
+adjusted_mrr: 0.0131
+mrr_dataset_count: 3
 benchmark_categories:
 - Classic
 benchmark_coverage:
@@ -69,9 +69,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: GCNII
+  - model: TinyGraph
     model_key: ne-asgcn
-    model_plain: GCNII
+    model_plain: TinyGraph
     value: 0.9758
     std: 0.0027
     metric: Accuracy
@@ -103,9 +103,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCNII
+  - model: TinyGraph
+    model_key: hsgt
+    model_plain: TinyGraph
+    value: 0.973
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.02866'
+    title: Hierarchical Transformer for Scalable Graph Learning
+    date: May 4, 2023
+    date_display: May 2023
+    date_iso: '2023-05-04'
+    venue: International Joint Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.973
+    sort_std: 0.0024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: TinyGraph
     model_key: gcmae
-    model_plain: GCNII
+    model_plain: TinyGraph
     value: 0.9713
     std: 0.0017
     metric: Accuracy
@@ -129,42 +162,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9713
     sort_std: 0.0017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gat+norm.adj.
-    model_plain: GCNII
-    value: 0.9706
-    std: 0.0005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2103.13355'
-    title: Bag of Tricks for Node Classification with Graph Neural Networks
-    date: Mar 24, 2021
-    date_display: Mar 2021
-    date_iso: '2021-03-24'
-    venue: null
-    codebase_url: https://github.com/espylapiza/Bag-of-Tricks-for-Node-Classification-with-Graph-Neural-Networks
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9706
-    sort_std: 0.0005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -227,8 +227,8 @@ results:
     value_note: ''
     sort_value: 0.9702
     sort_std: null
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -295,8 +295,8 @@ results:
     value_note: ''
     sort_value: 0.9702
     sort_std: null
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -363,8 +363,8 @@ results:
     value_note: ''
     sort_value: 0.9687
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -431,8 +431,8 @@ results:
     value_note: ''
     sort_value: 0.9687
     sort_std: null
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -499,8 +499,8 @@ results:
     value_note: ''
     sort_value: 0.9671
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -567,8 +567,8 @@ results:
     value_note: ''
     sort_value: 0.9654
     sort_std: null
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -576,6 +576,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9647
+    std: null
+    paper_value: 0.9647
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Testing accuracy on 32 layers with DropEdge
+    date: Jul 25, 2019
+    date_display: Jul 2019
+    date_iso: '2019-07-25'
+    published_venue: ICLR 2019
+    published_conference: ICLR 2019
+    at_pub_value: 0.9432
+    at_pub_std: null
+    at_pub_source_arxiv: '1809.05343'
+    at_pub_source_title: Adaptive Sampling Towards Fast Graph Representation Learning
+    at_pub_source_date_iso: '2018-09-01'
+    at_pub_source_date_label: NeurIPS 2018
+    value_gap_source_date_iso: '2023-05-04'
+    value_gap_source_date_label: IJCAI 2023
+    gap_vs_at_pub: 0.021499999999999964
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9653
+    true_std: 0.0011
+    value_gap_source_arxiv: '2305.02866'
+    value_gap_source_title: Hierarchical Transformer for Scalable Graph Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0006000000000000449
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9653
+    sort_std: 0.0011
+    global_rank: 19
+    paper_rank: 25
+    rank_delta: 6
+    rank_delta_abs: 6
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Adaptive Sampling Towards Fast Graph Representation Learning
+    comparison_source_arxiv: '1809.05343'
     is_best: false
     is_std_outlier: false
   - model: ResGCN+DropEdge
@@ -635,8 +702,8 @@ results:
     value_note: ''
     sort_value: 0.9648
     sort_std: null
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -703,8 +770,8 @@ results:
     value_note: ''
     sort_value: 0.9648
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -712,74 +779,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.9647
-    std: null
-    paper_value: 0.9647
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Testing accuracy on 32 layers with DropEdge
-    date: Jul 25, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-25'
-    published_venue: ICLR 2019
-    published_conference: ICLR 2019
-    at_pub_value: 0.9432
-    at_pub_std: null
-    at_pub_source_arxiv: '1809.05343'
-    at_pub_source_title: Adaptive Sampling Towards Fast Graph Representation Learning
-    at_pub_source_date_iso: '2018-09-01'
-    at_pub_source_date_label: NeurIPS 2018
-    value_gap_source_date_iso: '2019-07-25'
-    value_gap_source_date_label: ICLR 2019
-    gap_vs_at_pub: 0.021499999999999964
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9647
-    true_std: null
-    value_gap_source_arxiv: '1907.10903'
-    value_gap_source_title: 'DropEdge: Towards Deep Graph Convolutional Networks on
-      Node Classification'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9647
-    sort_std: null
-    global_rank: 23
-    paper_rank: 23
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Adaptive Sampling Towards Fast Graph Representation Learning
-    comparison_source_arxiv: '1809.05343'
     is_best: false
     is_std_outlier: false
   - model: ResGCN
@@ -839,8 +838,8 @@ results:
     value_note: ''
     sort_value: 0.9646
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -907,8 +906,8 @@ results:
     value_note: ''
     sort_value: 0.9627
     sort_std: 0.0032
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -975,8 +974,8 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1008,5 +1007,6 @@ datasets_by_scope:
     datasets:
     - dataset: Reddit
       dataset_slug: reddit
+main_figure: /figures/1907.10903/main_figure.jpegoptim.jpg
 ---
 

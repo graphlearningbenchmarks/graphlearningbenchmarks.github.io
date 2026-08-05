@@ -67,9 +67,9 @@ results:
 - &id001
   dataset: ogbg-molpcba
   rows:
-  - model: UnifiedMolPretrain
+  - model: SigGate-GT
     model_key: hig with graphormer
-    model_plain: UnifiedMolPretrain
+    model_plain: SigGate-GT
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -100,9 +100,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: SigGate-GT
     model_key: grpe-large
-    model_plain: UnifiedMolPretrain
+    model_plain: SigGate-GT
     value: 0.315
     std: 0.001
     metric: AP
@@ -133,9 +133,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: SigGate-GT
     model_key: graphormer
-    model_plain: UnifiedMolPretrain
+    model_plain: SigGate-GT
     value: 0.314
     std: null
     metric: AP
@@ -222,8 +222,8 @@ results:
     value_note: ''
     sort_value: 0.2832
     sort_std: 0.0013
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -289,8 +289,8 @@ results:
     value_note: ''
     sort_value: 0.2791
     sort_std: 0.0022
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -356,8 +356,8 @@ results:
     value_note: ''
     sort_value: 0.279
     sort_std: 0.0018
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -423,8 +423,8 @@ results:
     value_note: ''
     sort_value: 0.2706
     sort_std: 0.0021
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -456,5 +456,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbg-molpcba
       dataset_slug: ogbg-molpcba
+main_figure: /figures/2206.11941/main_figure.jpegoptim.jpg
 ---
 

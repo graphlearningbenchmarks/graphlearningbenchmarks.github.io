@@ -56,28 +56,28 @@ mrr: 0.0127
 adjusted_mrr: 0.0127
 mrr_dataset_count: 4
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 3
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id004
+- &id003
   dataset: IMDB-MULTI
   rows:
-  - model: G-Mixup
+  - model: GatedGCN-LSPE
     model_key: graphsnn
-    model_plain: G-Mixup
+    model_plain: GatedGCN-LSPE
     value: 0.779
     std: 0.036
     metric: Accuracy
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: G-Mixup
+  - model: GatedGCN-LSPE
     model_key: sin
-    model_plain: G-Mixup
+    model_plain: GatedGCN-LSPE
     value: 0.756
     std: 0.032
     metric: Accuracy
@@ -141,9 +141,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: G-Mixup
+  - model: GatedGCN-LSPE
     model_key: cin
-    model_plain: G-Mixup
+    model_plain: GatedGCN-LSPE
     value: 0.756
     std: 0.037
     metric: Accuracy
@@ -719,47 +719,47 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: NCI1
   rows:
-  - model: Diverse B12C3
-    model_key: msa-aud
-    model_plain: Diverse B12C3
-    value: 0.969
+  - model: ECC
+    model_key: wl-mlp
+    model_plain: ECC
+    value: 0.9954
     std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
     is_global_top: true
     global_rank: 1
-    sort_value: 0.969
+    sort_value: 0.9954
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-au
-    model_plain: Diverse B12C3
-    value: 0.966
+  - model: ECC
+    model_key: gin
+    model_plain: ECC
+    value: 0.9934
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -767,33 +767,32 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GNNs ... use node features
     is_global_top: true
     global_rank: 2
-    sort_value: 0.966
+    sort_value: 0.9934
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-ad
-    model_plain: Diverse B12C3
-    value: 0.963
+  - model: ECC
+    model_key: gcn
+    model_plain: ECC
+    value: 0.9727
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -801,23 +800,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GNNs ... use node features
     is_global_top: true
     global_rank: 3
-    sort_value: 0.963
+    sort_value: 0.9727
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -882,10 +880,10 @@ results:
     value_note: ''
     sort_value: 0.824
     sort_std: 0.0
-    global_rank: 107
-    paper_rank: 421
-    rank_delta: 314
-    rank_delta_abs: 314
+    global_rank: 109
+    paper_rank: 440
+    rank_delta: 331
+    rank_delta_abs: 331
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -952,10 +950,10 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.001
-    global_rank: 113
-    paper_rank: 378
-    rank_delta: 265
-    rank_delta_abs: 265
+    global_rank: 115
+    paper_rank: 395
+    rank_delta: 280
+    rank_delta_abs: 280
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1020,10 +1018,10 @@ results:
     value_note: ''
     sort_value: 0.803
     sort_std: 0.003
-    global_rank: 211
-    paper_rank: 229
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 213
+    paper_rank: 233
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1087,8 +1085,8 @@ results:
     value_note: ''
     sort_value: 0.8002
     sort_std: 0.0245
-    global_rank: 223
-    paper_rank: 223
+    global_rank: 226
+    paper_rank: 226
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1154,8 +1152,8 @@ results:
     value_note: ''
     sort_value: 0.7978
     sort_std: 0.0109
-    global_rank: 236
-    paper_rank: 236
+    global_rank: 241
+    paper_rank: 241
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1221,8 +1219,8 @@ results:
     value_note: ''
     sort_value: 0.7908
     sort_std: 0.0212
-    global_rank: 263
-    paper_rank: 263
+    global_rank: 271
+    paper_rank: 271
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1288,8 +1286,8 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.0158
-    global_rank: 312
-    paper_rank: 312
+    global_rank: 323
+    paper_rank: 323
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1355,8 +1353,8 @@ results:
     value_note: ''
     sort_value: 0.6505
     sort_std: 0.0436
-    global_rank: 521
-    paper_rank: 521
+    global_rank: 542
+    paper_rank: 542
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1375,12 +1373,12 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: PROTEINS
   rows:
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: gmn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8225
     std: null
     metric: Accuracy
@@ -1411,9 +1409,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: ci-gnn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -1445,9 +1443,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: diffpool+gpl
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -1478,6 +1476,73 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: G-Mixup
+    model_key: g-mixup
+    model_plain: G-Mixup
+    value: 0.7018
+    std: 0.0244
+    paper_value: 0.7018
+    paper_std: 0.0244
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Jun 11, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-11'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.715
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2202.13248'
+    at_pub_source_title: Automated Data Augmentations for Graph Classification
+    at_pub_source_date_iso: '2022-02-26'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-06-28'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.01319999999999999
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.7574
+    true_std: 0.0312
+    value_gap_source_arxiv: '2306.15963'
+    value_gap_source_title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05559999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7574
+    sort_std: 0.0312
+    global_rank: 180
+    paper_rank: 456
+    rank_delta: 276
+    rank_delta_abs: 276
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: DropNode
     model_key: dropnode
@@ -1535,10 +1600,77 @@ results:
     value_note: ''
     sort_value: 0.7573
     sort_std: 0.0414
-    global_rank: 165
-    paper_rank: 354
-    rank_delta: 189
-    rank_delta_abs: 189
+    global_rank: 182
+    paper_rank: 387
+    rank_delta: 205
+    rank_delta_abs: 205
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: M-Mixup
+    model_key: m-mixup
+    model_plain: M-Mixup
+    value: 0.7116
+    std: 0.0287
+    paper_value: 0.7116
+    paper_std: 0.0287
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Jun 11, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-11'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.706
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2202.13248'
+    at_pub_source_title: Automated Data Augmentations for Graph Classification
+    at_pub_source_date_iso: '2022-02-26'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-06-28'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.005600000000000049
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7565
+    true_std: 0.0451
+    value_gap_source_arxiv: '2306.15963'
+    value_gap_source_title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+    value_gap_source_is_current_paper: false
+    value_gap: 0.04489999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7565
+    sort_std: 0.0451
+    global_rank: 189
+    paper_rank: 435
+    rank_delta: 246
+    rank_delta_abs: 246
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1604,10 +1736,77 @@ results:
     value_note: ''
     sort_value: 0.755
     sort_std: 0.002
-    global_rank: 182
-    paper_rank: 391
-    rank_delta: 209
-    rank_delta_abs: 209
+    global_rank: 202
+    paper_rank: 428
+    rank_delta: 226
+    rank_delta_abs: 226
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Vanilla
+    model_key: vanilla
+    model_plain: Vanilla
+    value: 0.7143
+    std: 0.026
+    paper_value: 0.7143
+    paper_std: 0.026
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Jun 11, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-11'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-28'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.7493
+    true_std: 0.0302
+    value_gap_source_arxiv: '2306.15963'
+    value_gap_source_title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03499999999999992
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7493
+    sort_std: 0.0302
+    global_rank: 267
+    paper_rank: 430
+    rank_delta: 163
+    rank_delta_abs: 163
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1672,10 +1871,10 @@ results:
     value_note: ''
     sort_value: 0.7461
     sort_std: 0.0508
-    global_rank: 264
-    paper_rank: 345
-    rank_delta: 81
-    rank_delta_abs: 81
+    global_rank: 290
+    paper_rank: 375
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1739,213 +1938,12 @@ results:
     value_note: ''
     sort_value: 0.7242
     sort_std: 0.0243
-    global_rank: 360
-    paper_rank: 360
+    global_rank: 396
+    paper_rank: 396
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: G-Mixup
-    model_key: g-mixup
-    model_plain: G-Mixup
-    value: 0.7018
-    std: 0.0244
-    paper_value: 0.7018
-    paper_std: 0.0244
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Jun 11, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-11'
-    published_venue: ICML 2023
-    published_conference: ICML 2023
-    at_pub_value: 0.715
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2202.13248'
-    at_pub_source_title: Automated Data Augmentations for Graph Classification
-    at_pub_source_date_iso: '2022-02-26'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-02-26'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: 0.01319999999999999
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.715
-    true_std: 0.006
-    value_gap_source_arxiv: '2202.13248'
-    value_gap_source_title: Automated Data Augmentations for Graph Classification
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01319999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.715
-    sort_std: 0.006
-    global_rank: 393
-    paper_rank: 424
-    rank_delta: 31
-    rank_delta_abs: 31
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Vanilla
-    model_key: vanilla
-    model_plain: Vanilla
-    value: 0.7143
-    std: 0.026
-    paper_value: 0.7143
-    paper_std: 0.026
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Jun 11, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-11'
-    published_venue: ICML 2023
-    published_conference: ICML 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-11'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7143
-    true_std: 0.026
-    value_gap_source_arxiv: '2306.06788'
-    value_gap_source_title: Graph Mixup with Soft Alignments
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7143
-    sort_std: 0.026
-    global_rank: 394
-    paper_rank: 394
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: M-Mixup
-    model_key: m-mixup
-    model_plain: M-Mixup
-    value: 0.7116
-    std: 0.0287
-    paper_value: 0.7116
-    paper_std: 0.0287
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Jun 11, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-11'
-    published_venue: ICML 2023
-    published_conference: ICML 2023
-    at_pub_value: 0.706
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2202.13248'
-    at_pub_source_title: Automated Data Augmentations for Graph Classification
-    at_pub_source_date_iso: '2022-02-26'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2023-06-11'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.005600000000000049
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7116
-    true_std: 0.0287
-    value_gap_source_arxiv: '2306.06788'
-    value_gap_source_title: Graph Mixup with Soft Alignments
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7116
-    sort_std: 0.0287
-    global_rank: 400
-    paper_rank: 400
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2007,8 +2005,8 @@ results:
     value_note: ''
     sort_value: 0.6793
     sort_std: 0.0324
-    global_rank: 438
-    paper_rank: 438
+    global_rank: 471
+    paper_rank: 471
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2027,103 +2025,104 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id004
   dataset: ogbg-molhiv
   rows:
-  - model: MEG
-    model_key: clear
-    model_plain: MEG
-    value: 0.997
-    std: 0.002
+  - model: SigGate-GT
+    model_key: multi-rf fusion with multi-gnn blending
+    model_plain: SigGate-GT
+    value: 0.8476
+    std: 0.0002
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Mixing pharmacophoric (FCFP) and structural (ECFP) fingerprints...
+      GNNs contributing only 12%
     is_global_top: true
     global_rank: 1
-    sort_value: 0.997
-    sort_std: 0.002
+    sort_value: 0.8476
+    sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MEG
-    model_key: random
-    model_plain: MEG
-    value: 0.897
-    std: 0.004
+  - model: SigGate-GT
+    model_key: hyperfusion
+    model_plain: SigGate-GT
+    value: 0.8475
+    std: 0.0003
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.897
-    sort_std: 0.004
+    sort_value: 0.8475
+    sort_std: 0.0003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: MEG
-    model_key: eg-ist
-    model_plain: MEG
-    value: 0.897
-    std: 0.004
+  - model: SigGate-GT
+    model_key: pas+fps
+    model_plain: SigGate-GT
+    value: 0.842
+    std: 0.0015
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.897
-    sort_std: 0.004
+    sort_value: 0.842
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2185,8 +2184,8 @@ results:
     value_note: ''
     sort_value: 0.7809
     sort_std: 0.0089
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2252,8 +2251,8 @@ results:
     value_note: ''
     sort_value: 0.7742
     sort_std: 0.0077
-    global_rank: 142
-    paper_rank: 142
+    global_rank: 138
+    paper_rank: 138
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2319,8 +2318,8 @@ results:
     value_note: ''
     sort_value: 0.7742
     sort_std: 0.0145
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2386,8 +2385,8 @@ results:
     value_note: ''
     sort_value: 0.7684
     sort_std: 0.0054
-    global_rank: 177
-    paper_rank: 177
+    global_rank: 175
+    paper_rank: 175
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2453,10 +2452,10 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.01
-    global_rank: 208
-    paper_rank: 250
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 207
+    paper_rank: 251
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2520,10 +2519,10 @@ results:
     value_note: ''
     sort_value: 0.7604
     sort_std: 0.01
-    global_rank: 220
-    paper_rank: 255
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 219
+    paper_rank: 256
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2587,8 +2586,8 @@ results:
     value_note: ''
     sort_value: 0.6994
     sort_std: 0.0048
-    global_rank: 305
-    paper_rank: 305
+    global_rank: 307
+    paper_rank: 307
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2654,8 +2653,8 @@ results:
     value_note: ''
     sort_value: 0.6945
     sort_std: 0.0168
-    global_rank: 306
-    paper_rank: 306
+    global_rank: 308
+    paper_rank: 308
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2675,23 +2674,18 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
-  datasets:
-  - *id001
 - benchmark: TU Dortmund
   datasets:
+  - *id001
   - *id002
   - *id003
+- benchmark: OGB
+  datasets:
   - *id004
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -2701,5 +2695,11 @@ datasets_by_scope:
       dataset_slug: proteins
     - dataset: IMDB-MULTI
       dataset_slug: imdb-multi
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+main_figure: /figures/2306.06788/main_figure.jpegoptim.jpg
 ---
 

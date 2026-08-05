@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SliDe
-mrr: 0.0435
-adjusted_mrr: 0.0145
+mrr: 0.037
+adjusted_mrr: 0.0123
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -225,10 +225,10 @@ results:
     value_note: ''
     sort_value: 0.0431
     sort_std: null
-    global_rank: 21
-    paper_rank: 28
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 24
+    paper_rank: 33
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -293,8 +293,8 @@ results:
     value_note: ''
     sort_value: 0.048
     sort_std: null
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -362,10 +362,10 @@ results:
     value_note: ''
     sort_value: 0.052
     sort_std: null
-    global_rank: 25
-    paper_rank: 33
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 30
+    paper_rank: 39
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -431,8 +431,8 @@ results:
     value_note: ''
     sort_value: 0.0529
     sort_std: null
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -478,8 +478,8 @@ results:
     at_pub_source_title: Directional Message Passing for Molecular Graphs
     at_pub_source_date_iso: '2020-03-06'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.123
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -490,18 +490,18 @@ results:
     today_delta_significant: true
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.123
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 50
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 42
+    paper_rank: 70
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -567,8 +567,8 @@ results:
     value_note: ''
     sort_value: 0.077
     sort_std: null
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -616,8 +616,8 @@ results:
       Dipole Moments and Partial Charges'
     at_pub_source_date_iso: '2019-02-22'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.26
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -628,19 +628,18 @@ results:
     today_delta_significant: true
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.22999999999999998
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 58
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 46
+    paper_rank: 78
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -706,8 +705,8 @@ results:
     value_note: ''
     sort_value: 0.122
     sort_std: null
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -775,8 +774,8 @@ results:
     value_note: ''
     sort_value: 0.147
     sort_std: null
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -810,5 +809,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: SliDe
+main_figure: /figures/2311.02124/main_figure.jpegoptim.jpg
 ---
 

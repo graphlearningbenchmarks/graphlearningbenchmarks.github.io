@@ -68,9 +68,9 @@ results:
 - &id001
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -161,9 +161,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 445
-    rank_delta: 443
-    rank_delta_abs: 443
+    paper_rank: 442
+    rank_delta: 440
+    rank_delta_abs: 440
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -230,9 +230,9 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 447
-    rank_delta: 444
-    rank_delta_abs: 444
+    paper_rank: 444
+    rank_delta: 441
+    rank_delta_abs: 441
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -297,10 +297,10 @@ results:
     value_note: ''
     sort_value: 0.9022
     sort_std: 0.0021
-    global_rank: 111
-    paper_rank: 447
-    rank_delta: 336
-    rank_delta_abs: 336
+    global_rank: 113
+    paper_rank: 444
+    rank_delta: 331
+    rank_delta_abs: 331
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -356,7 +356,7 @@ results:
     today_delta_significant: false
     sort_value: 0.837
     sort_std: 0.018
-    global_rank: 401
+    global_rank: 398
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -418,7 +418,7 @@ results:
     today_delta_significant: false
     sort_value: 0.835
     sort_std: 0.016
-    global_rank: 409
+    global_rank: 406
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -480,7 +480,7 @@ results:
     today_delta_significant: false
     sort_value: 0.804
     sort_std: 0.019
-    global_rank: 468
+    global_rank: 465
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -517,5 +517,6 @@ datasets_by_scope:
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
 single_proposed_model: GCNs
+main_figure: /figures/1911.07123/main_figure.jpegoptim.jpg
 ---
 

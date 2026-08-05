@@ -609,5 +609,6 @@ datasets_by_scope:
     datasets:
     - dataset: Reddit
       dataset_slug: reddit
+main_figure: /figures/2307.02813/main_figure.jpegoptim.jpg
 ---
 

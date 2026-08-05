@@ -63,9 +63,9 @@ proposed_models:
 - GPTrans-B
 - GPTrans-L
 - GPTrans-Nano
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0526
+adjusted_mrr: 0.0175
+mrr_dataset_count: 1
 benchmark_categories:
 - OGB
 - GNNBenchmark
@@ -88,9 +88,9 @@ results:
 - &id002
   dataset: CLUSTER
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: grpe-small
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.81586
     std: 0.0019
     metric: Accuracy
@@ -121,11 +121,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Tango_GPS
+    model_key: tango_gps
+    model_plain: Tango_GPS
+    value: 0.80113
+    std: 0.00138
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.80113
+    sort_std: 0.00138
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Tango_GPS
     model_key: grit
-    model_plain: 3WLGNN
-    value: 0.80026
-    std: 0.00277
+    model_plain: Tango_GPS
+    value: 0.8003
+    std: 0.0028
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -135,55 +168,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.05689'
-    title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive Consistency
-      Model'
-    date: May 7, 2026
-    date_display: May 2026
-    date_iso: '2026-05-07'
-    venue: null
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_display: May 2024
+    date_iso: '2024-05-29'
+    venue: Neural Information Processing Systems
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.80026
-    sort_std: 0.00277
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: 3WLGNN
-    model_key: egtas
-    model_plain: 3WLGNN
-    value: 0.79236
-    std: 0.00215
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.14336'
-    title: 'DARTS-GT: Differentiable Architecture Search for Graph Transformers with
-      Quantifiable Instance-Specific Interpretability Analysis'
-    date: Oct 16, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/shrutiOx/DARTS_GT
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
     global_rank: 3
-    sort_value: 0.79236
-    sort_std: 0.00215
+    sort_value: 0.8003
+    sort_std: 0.0028
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -246,8 +244,8 @@ results:
     value_note: ''
     sort_value: 0.79232
     sort_std: 0.00348
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -293,27 +291,32 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-29'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    sort_value: 0.78069
-    sort_std: 0.00154
-    global_rank: 15
-    has_value_gap: false
+    true_value: 0.7807
+    true_std: 0.0015
+    value_gap_source_arxiv: '2405.19121'
+    value_gap_source_title: Spatio-Spectral Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 9.99999999995449e-06
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.7807
+    sort_std: 0.0015
+    global_rank: 19
+    paper_rank: 20
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -355,33 +358,32 @@ results:
     at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
     at_pub_source_date_iso: '2022-05-25'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2025-10-16'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2024-05-29'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.78016
+    true_value: 0.7802
     true_std: 0.0018
-    value_gap_source_arxiv: '2510.14336'
-    value_gap_source_title: 'DARTS-GT: Differentiable Architecture Search for Graph
-      Transformers with Quantifiable Instance-Specific Interpretability Analysis'
+    value_gap_source_arxiv: '2405.19121'
+    value_gap_source_title: Spatio-Spectral Graph Neural Networks
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 4.0000000000040004e-05
     has_value_note: false
     value_note: ''
-    sort_value: 0.78016
+    sort_value: 0.7802
     sort_std: 0.0018
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -444,8 +446,8 @@ results:
     value_note: ''
     sort_value: 0.76691
     sort_std: 0.0065
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -511,8 +513,8 @@ results:
     value_note: ''
     sort_value: 0.76082
     sort_std: 0.00196
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -570,7 +572,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7466
     sort_std: 0.00236
-    global_rank: 53
+    global_rank: 62
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -640,8 +642,8 @@ results:
     value_note: ''
     sort_value: 0.73169
     sort_std: 0.00622
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -708,8 +710,8 @@ results:
     value_note: ''
     sort_value: 0.70587
     sort_std: 0.00447
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -775,8 +777,8 @@ results:
     value_note: ''
     sort_value: 0.69026
     sort_std: 0.01372
-    global_rank: 61
-    paper_rank: 62
+    global_rank: 71
+    paper_rank: 72
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -843,8 +845,8 @@ results:
     value_note: ''
     sort_value: 0.64716
     sort_std: 0.01553
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -911,8 +913,8 @@ results:
     value_note: ''
     sort_value: 0.63844
     sort_std: 0.0011
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -934,9 +936,9 @@ results:
 - &id003
   dataset: PATTERN
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: deepgraph (48)
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.90657
     std: 0.00062
     metric: Accuracy
@@ -967,11 +969,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: grit
-    model_plain: 3WLGNN
-    value: 0.8722
+  - model: Tango_GPS
+    model_key: ppgt
+    model_plain: Tango_GPS
+    value: 0.89752
     std: 0.0003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.89752
+    sort_std: 0.0003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: ckgcn
+    model_plain: Tango_GPS
+    value: 0.88661
+    std: 0.00143
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -981,53 +1016,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8722
-    sort_std: 0.0003
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: 3WLGNN
-    model_key: sparsegrit
-    model_plain: 3WLGNN
-    value: 0.8717
-    std: 0.0004
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8717
-    sort_std: 0.0004
+    sort_value: 0.88661
+    sort_std: 0.00143
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1090,8 +1092,8 @@ results:
     value_note: ''
     sort_value: 0.86821
     sort_std: 0.02
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1149,7 +1151,7 @@ results:
     today_delta_significant: false
     sort_value: 0.86731
     sort_std: 0.00085
-    global_rank: 33
+    global_rank: 39
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1220,8 +1222,8 @@ results:
     value_note: ''
     sort_value: 0.86685
     sort_std: 0.059
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1279,7 +1281,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8665
     sort_std: 0.00033
-    global_rank: 44
+    global_rank: 52
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1325,10 +1327,10 @@ results:
     published_conference: IJCAI 2023
     at_pub_value: 0.86581
     at_pub_std: 0.00037
-    at_pub_source_arxiv: '2205.12454'
-    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    at_pub_source_date_iso: '2022-05-25'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_source_arxiv: '2202.03036'
+    at_pub_source_title: Structure-Aware Transformer for Graph Representation Learning
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: ICML 2022
     value_gap_source_date_iso: '2025-10-16'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1350,8 +1352,8 @@ results:
     value_note: ''
     sort_value: 0.86581
     sort_std: 0.037
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1417,10 +1419,10 @@ results:
     value_note: ''
     sort_value: 0.85614
     sort_std: 0.032
-    global_rank: 67
-    paper_rank: 97
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 84
+    paper_rank: 116
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1484,10 +1486,10 @@ results:
     value_note: ''
     sort_value: 0.8559
     sort_std: 0.0001
-    global_rank: 68
-    paper_rank: 74
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 85
+    paper_rank: 92
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1551,10 +1553,10 @@ results:
     value_note: ''
     sort_value: 0.8557
     sort_std: 0.0009
-    global_rank: 71
-    paper_rank: 52
-    rank_delta: -19
-    rank_delta_abs: 19
+    global_rank: 88
+    paper_rank: 64
+    rank_delta: -24
+    rank_delta_abs: 24
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -1611,7 +1613,7 @@ results:
     today_delta_significant: false
     sort_value: 0.84808
     sort_std: 0.00068
-    global_rank: 77
+    global_rank: 96
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1682,8 +1684,8 @@ results:
     value_note: ''
     sort_value: 0.78271
     sort_std: 0.186
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1749,8 +1751,8 @@ results:
     value_note: ''
     sort_value: 0.5052
     sort_std: 0.0
-    global_rank: 104
-    paper_rank: 106
+    global_rank: 123
+    paper_rank: 125
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -3360,5 +3362,6 @@ datasets_by_scope:
     datasets:
     - dataset: PCQM4Mv2
       dataset_slug: pcqm4mv2
+main_figure: /figures/2305.11424/main_figure.jpegoptim.jpg
 ---
 

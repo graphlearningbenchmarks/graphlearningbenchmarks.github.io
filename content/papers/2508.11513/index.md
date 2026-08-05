@@ -73,8 +73,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphOracle
-mrr: 0.0096
-adjusted_mrr: 0.0032
+mrr: 0.0093
+adjusted_mrr: 0.0031
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -618,9 +618,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -651,9 +651,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -684,9 +684,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -775,9 +775,9 @@ results:
     sort_value: 0.933
     sort_std: 0.029
     global_rank: 34
-    paper_rank: 293
-    rank_delta: 259
-    rank_delta_abs: 259
+    paper_rank: 308
+    rank_delta: 274
+    rank_delta_abs: 274
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -841,10 +841,10 @@ results:
     value_note: ''
     sort_value: 0.917
     sort_std: 0.029
-    global_rank: 71
-    paper_rank: 580
-    rank_delta: 509
-    rank_delta_abs: 509
+    global_rank: 73
+    paper_rank: 614
+    rank_delta: 541
+    rank_delta_abs: 541
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -909,8 +909,8 @@ results:
     value_note: ''
     sort_value: 0.91
     sort_std: 0.02
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -976,10 +976,10 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.078
-    global_rank: 134
-    paper_rank: 457
-    rank_delta: 323
-    rank_delta_abs: 323
+    global_rank: 140
+    paper_rank: 485
+    rank_delta: 345
+    rank_delta_abs: 345
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1043,10 +1043,10 @@ results:
     value_note: ''
     sort_value: 0.901
     sort_std: 0.058
-    global_rank: 156
-    paper_rank: 383
-    rank_delta: 227
-    rank_delta_abs: 227
+    global_rank: 164
+    paper_rank: 403
+    rank_delta: 239
+    rank_delta_abs: 239
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1111,10 +1111,10 @@ results:
     value_note: ''
     sort_value: 0.891
     sort_std: 0.058
-    global_rank: 239
-    paper_rank: 537
-    rank_delta: 298
-    rank_delta_abs: 298
+    global_rank: 250
+    paper_rank: 568
+    rank_delta: 318
+    rank_delta_abs: 318
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1180,8 +1180,8 @@ results:
     value_note: ''
     sort_value: 0.75
     sort_std: 0.0548
-    global_rank: 676
-    paper_rank: 676
+    global_rank: 721
+    paper_rank: 721
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1222,5 +1222,6 @@ datasets_by_scope:
     - dataset: BACE
       dataset_slug: bace
 single_proposed_model: GraphOracle
+main_figure: /figures/2508.11513/main_figure.jpegoptim.jpg
 ---
 

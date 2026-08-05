@@ -153,34 +153,34 @@ results:
     is_best: false
     is_std_outlier: false
   - model: SIGN
-    model_key: sign
+    model_key: gidn
     model_plain: SIGN
-    value: 0.6664
-    std: 0.0064
+    value: 0.7096
+    std: 0.0055
     metric: Hits@50
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2409.17475'
-    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
-      Networks
-    date: Sep 26, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-26'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/tensor-gales/HeteLinkPred
+    arxiv_id: '2210.01301'
+    title: 'GIDN: A Lightweight Graph Inception Diffusion Network for High-efficient
+      Link Prediction'
+    date: Oct 4, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-04'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.6664
-    sort_std: 0.0064
+    sort_value: 0.7096
+    sort_std: 0.0055
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -244,10 +244,10 @@ results:
     value_note: ''
     sort_value: 0.6474
     sort_std: 0.0043
-    global_rank: 11
-    paper_rank: 29
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 15
+    paper_rank: 35
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -304,7 +304,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5492
     sort_std: 0.0022
-    global_rank: 25
+    global_rank: 29
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -375,8 +375,8 @@ results:
     value_note: ''
     sort_value: 0.5273
     sort_std: 0.0047
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -442,8 +442,8 @@ results:
     value_note: ''
     sort_value: 0.522
     sort_std: 0.007
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -476,5 +476,6 @@ datasets_by_scope:
     - dataset: ogbl-collab
       dataset_slug: ogbl-collab
 single_proposed_model: shaDow-SAGE
+main_figure: /figures/2201.07858/main_figure.jpegoptim.jpg
 ---
 

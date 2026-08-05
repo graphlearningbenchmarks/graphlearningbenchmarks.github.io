@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - TFGNN
-mrr: 0.094
-adjusted_mrr: 0.0626
+mrr: 0.0935
+adjusted_mrr: 0.0624
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -131,9 +131,9 @@ results:
     sort_value: 0.791
     sort_std: null
     global_rank: 1
-    paper_rank: 54
-    rank_delta: 53
-    rank_delta_abs: 53
+    paper_rank: 55
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: '2403.13268'
     is_best: true
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: gamlp
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -175,9 +175,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: glem-gnn
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -833,9 +833,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -867,9 +867,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -900,9 +900,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -992,10 +992,10 @@ results:
     value_note: ''
     sort_value: 0.8691
     sort_std: 0.0005
-    global_rank: 11
-    paper_rank: 224
-    rank_delta: 213
-    rank_delta_abs: 213
+    global_rank: 12
+    paper_rank: 242
+    rank_delta: 230
+    rank_delta_abs: 230
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1061,8 +1061,8 @@ results:
     value_note: ''
     sort_value: 0.8405
     sort_std: 0.002
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1130,10 +1130,10 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: 0.009
-    global_rank: 86
-    paper_rank: 244
-    rank_delta: 158
-    rank_delta_abs: 158
+    global_rank: 87
+    paper_rank: 263
+    rank_delta: 176
+    rank_delta_abs: 176
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1199,8 +1199,8 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: 0.003
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1240,19 +1240,19 @@ results:
     date_iso: '2024-04-15'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.8107
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2404.04559'
-    at_pub_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    at_pub_source_date_iso: '2024-04-06'
-    at_pub_source_date_label: '2024'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2024-04-15'
     value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.005900000000000016
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -1267,12 +1267,12 @@ results:
     value_note: ''
     sort_value: 0.8166
     sort_std: 0.003
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1308,19 +1308,19 @@ results:
     date_iso: '2024-04-15'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.8115
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2404.04559'
-    at_pub_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    at_pub_source_date_iso: '2024-04-06'
-    at_pub_source_date_label: '2024'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2024-04-15'
     value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.0018000000000000238
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -1335,12 +1335,12 @@ results:
     value_note: ''
     sort_value: 0.8133
     sort_std: 0.002
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1403,8 +1403,8 @@ results:
     value_note: ''
     sort_value: 0.8111
     sort_std: 0.002
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1471,8 +1471,8 @@ results:
     value_note: ''
     sort_value: 0.8033
     sort_std: 0.002
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1539,8 +1539,8 @@ results:
     value_note: ''
     sort_value: 0.7982
     sort_std: 0.002
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1580,21 +1580,21 @@ results:
     date_iso: '2024-04-15'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.8075
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2404.04559'
-    at_pub_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    at_pub_source_date_iso: '2024-04-06'
-    at_pub_source_date_label: '2024'
+    at_pub_value: 0.7976
+    at_pub_std: 0.0059
+    at_pub_source_arxiv: '2210.03930'
+    at_pub_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    at_pub_source_date_iso: '2022-10-08'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2024-03-02'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.013000000000000012
-    worse_than_at_pub: true
+    gap_vs_at_pub: 0.0030999999999999917
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
     true_value: 0.7976
     true_std: 0.0059
@@ -1607,15 +1607,15 @@ results:
     value_note: ''
     sort_value: 0.7976
     sort_std: 0.0059
-    global_rank: 146
-    paper_rank: 152
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 155
+    paper_rank: 163
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    comparison_source_arxiv: '2404.04559'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: JacobiConv
@@ -1648,16 +1648,16 @@ results:
     date_iso: '2024-04-15'
     published_venue: WWW 2024
     published_conference: WWW 2024
-    at_pub_value: 0.8131
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '2404.04559'
-    at_pub_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    at_pub_source_date_iso: '2024-04-06'
-    at_pub_source_date_label: '2024'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2024-04-15'
     value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: 0.019600000000000062
-    worse_than_at_pub: true
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
@@ -1675,15 +1675,15 @@ results:
     value_note: ''
     sort_value: 0.7935
     sort_std: 0.002
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    comparison_source_arxiv: '2404.04559'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -1712,5 +1712,6 @@ datasets_by_scope:
     - dataset: ogbn-papers100M
       dataset_slug: ogbn-papers100m
 single_proposed_model: TFGNN
+main_figure: /figures/2404.15354/main_figure.jpegoptim.jpg
 ---
 

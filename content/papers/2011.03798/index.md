@@ -1649,5 +1649,6 @@ datasets_by_scope:
     - dataset: FB15k-237
       dataset_slug: fb15k-237
 single_proposed_model: PairRE
+main_figure: /figures/2011.03798/main_figure.jpegoptim.jpg
 ---
 

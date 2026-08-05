@@ -46,8 +46,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SplineCNN
-mrr: 0.0244
-adjusted_mrr: 0.0081
+mrr: 0.0204
+adjusted_mrr: 0.0068
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -64,9 +64,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -98,9 +98,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -132,9 +132,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -197,15 +197,16 @@ results:
     date_iso: '2017-11-24'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.815
-    at_pub_std: null
-    at_pub_source_arxiv: '1710.10370'
-    at_pub_source_title: Topology Adaptive Graph Convolutional Networks
-    at_pub_source_date_iso: '2017-10-28'
-    at_pub_source_date_label: '2017'
+    at_pub_value: 0.8159
+    at_pub_std: 0.0042
+    at_pub_source_arxiv: '1611.08402'
+    at_pub_source_title: Geometric deep learning on graphs and manifolds using mixture
+      model CNNs
+    at_pub_source_date_iso: '2016-11-25'
+    at_pub_source_date_label: '2016'
     value_gap_source_date_iso: '2024-01-17'
     value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.056700000000000084
+    gap_vs_at_pub: 0.05580000000000007
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: true
@@ -223,15 +224,16 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 27
-    paper_rank: 162
-    rank_delta: 135
-    rank_delta_abs: 135
+    global_rank: 33
+    paper_rank: 190
+    rank_delta: 157
+    rank_delta_abs: 157
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Topology Adaptive Graph Convolutional Networks
-    comparison_source_arxiv: '1710.10370'
+    comparison_source_title: Geometric deep learning on graphs and manifolds using
+      mixture model CNNs
+    comparison_source_arxiv: '1611.08402'
     is_best: false
     is_std_outlier: false
   - model: SplineCNN
@@ -293,8 +295,8 @@ results:
     value_note: ''
     sort_value: 0.8948
     sort_std: 0.0031
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -361,10 +363,10 @@ results:
     value_note: ''
     sort_value: 0.8832
     sort_std: 0.02
-    global_rank: 90
-    paper_rank: 163
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 112
+    paper_rank: 191
+    rank_delta: 79
+    rank_delta_abs: 79
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -430,8 +432,8 @@ results:
     value_note: ''
     sort_value: 0.879
     sort_std: 0.0066
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -464,5 +466,6 @@ datasets_by_scope:
     - dataset: Cora
       dataset_slug: cora
 single_proposed_model: SplineCNN
+main_figure: /figures/1711.08920/main_figure.jpegoptim.jpg
 ---
 

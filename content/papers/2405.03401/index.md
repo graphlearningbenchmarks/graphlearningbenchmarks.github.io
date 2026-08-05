@@ -51,8 +51,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - E2GNN
-mrr: 0.0039
-adjusted_mrr: 0.0039
+mrr: 0.0034
+adjusted_mrr: 0.0034
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -69,9 +69,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -103,9 +103,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -228,10 +228,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 27
-    paper_rank: 386
-    rank_delta: 359
-    rank_delta_abs: 359
+    global_rank: 33
+    paper_rank: 445
+    rank_delta: 412
+    rank_delta_abs: 412
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -272,11 +272,11 @@ results:
     published_conference: ''
     at_pub_value: 0.8683
     at_pub_std: 0.0128
-    at_pub_source_arxiv: '2403.07954'
-    at_pub_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov
-      Subspace Approach'
-    at_pub_source_date_iso: '2024-03-12'
-    at_pub_source_date_label: WWW 2024
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
     gap_vs_at_pub: 0.04919999999999991
@@ -298,16 +298,16 @@ results:
     value_note: ''
     sort_value: 0.8797
     sort_std: null
-    global_rank: 112
-    paper_rank: 561
-    rank_delta: 449
-    rank_delta_abs: 449
+    global_rank: 138
+    paper_rank: 655
+    rank_delta: 517
+    rank_delta_abs: 517
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive
-      Krylov Subspace Approach'
-    comparison_source_arxiv: '2403.07954'
+    comparison_source_title: An Effective Universal Polynomial Basis for Spectral
+      Graph Neural Networks
+    comparison_source_arxiv: '2311.18177'
     is_best: false
     is_std_outlier: false
   - model: GLNN
@@ -367,10 +367,10 @@ results:
     value_note: ''
     sort_value: 0.836
     sort_std: 0.0022
-    global_rank: 396
-    paper_rank: 500
-    rank_delta: 104
-    rank_delta_abs: 104
+    global_rank: 461
+    paper_rank: 579
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -436,8 +436,8 @@ results:
     value_note: ''
     sort_value: 0.8353
     sort_std: 0.0019
-    global_rank: 407
-    paper_rank: 407
+    global_rank: 473
+    paper_rank: 473
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -505,8 +505,8 @@ results:
     value_note: ''
     sort_value: 0.8353
     sort_std: 0.0019
-    global_rank: 408
-    paper_rank: 408
+    global_rank: 474
+    paper_rank: 474
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -574,8 +574,8 @@ results:
     value_note: ''
     sort_value: 0.8236
     sort_std: 0.0028
-    global_rank: 518
-    paper_rank: 518
+    global_rank: 600
+    paper_rank: 600
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -643,8 +643,8 @@ results:
     value_note: ''
     sort_value: 0.8228
     sort_std: 0.005
-    global_rank: 533
-    paper_rank: 533
+    global_rank: 621
+    paper_rank: 621
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -712,8 +712,8 @@ results:
     value_note: ''
     sort_value: 0.8211
     sort_std: 0.0034
-    global_rank: 543
-    paper_rank: 543
+    global_rank: 634
+    paper_rank: 634
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -781,8 +781,8 @@ results:
     value_note: ''
     sort_value: 0.8198
     sort_std: 0.0082
-    global_rank: 560
-    paper_rank: 560
+    global_rank: 654
+    paper_rank: 654
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -804,9 +804,43 @@ results:
 - &id002
   dataset: PubMed
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
+    model_key: lgtl
+    model_plain: R-SoftGraphAIN
+    value: 0.9518
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9518
+    sort_std: 0.0011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: sagn
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -830,7 +864,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.9517
     sort_std: null
     comparison_type: global_top
@@ -838,9 +872,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
     model_key: mixhop (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -864,43 +898,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9513
     sort_std: 0.0038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
-    model_key: graphsage (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
-    value: 0.9511
-    std: 0.0036
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.13902'
-    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
-      Framework'
-    date: May 22, 2024
-    date_display: May 2024
-    date_iso: '2024-05-22'
-    venue: Web Search and Data Mining
-    codebase_url: https://github.com/QiaoYRan/LOGIN
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9511
-    sort_std: 0.0036
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -936,15 +936,15 @@ results:
     date_iso: '2024-05-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.889
-    at_pub_std: 0.0032
-    at_pub_source_arxiv: '2308.07134'
-    at_pub_source_title: Language is All a Graph Needs
-    at_pub_source_date_iso: '2023-08-14'
-    at_pub_source_date_label: '2023'
+    at_pub_value: 0.897
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.07189999999999996
+    gap_vs_at_pub: 0.07989999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -963,15 +963,16 @@ results:
     value_note: ''
     sort_value: 0.9296
     sort_std: null
-    global_rank: 17
-    paper_rank: 290
-    rank_delta: 273
-    rank_delta_abs: 273
+    global_rank: 21
+    paper_rank: 354
+    rank_delta: 333
+    rank_delta_abs: 333
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Language is All a Graph Needs
-    comparison_source_arxiv: '2308.07134'
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
     is_best: false
     is_std_outlier: false
   - model: SAGE
@@ -1004,16 +1005,15 @@ results:
     date_iso: '2024-05-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7736
+    at_pub_value: 0.7844
     at_pub_std: null
-    at_pub_source_arxiv: '2103.02885'
-    at_pub_source_title: 'Extract the Knowledge of Graph Neural Networks and Go Beyond
-      it: An Effective Knowledge Distillation Framework'
-    at_pub_source_date_iso: '2021-03-04'
-    at_pub_source_date_label: WWW 2021
+    at_pub_source_arxiv: '2310.14527'
+    at_pub_source_title: 'Marginal Nodes Matter: Towards Structure Fairness in Graphs'
+    at_pub_source_date_iso: '2023-10-23'
+    at_pub_source_date_label: KDD 2023
     value_gap_source_date_iso: '2025-06-08'
     value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: 0.005499999999999949
+    gap_vs_at_pub: 0.01629999999999998
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1032,16 +1032,16 @@ results:
     value_note: ''
     sort_value: 0.8881
     sort_std: 0.0015
-    global_rank: 109
-    paper_rank: 651
-    rank_delta: 542
-    rank_delta_abs: 542
+    global_rank: 137
+    paper_rank: 776
+    rank_delta: 639
+    rank_delta_abs: 639
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Extract the Knowledge of Graph Neural Networks and Go
-      Beyond it: An Effective Knowledge Distillation Framework'
-    comparison_source_arxiv: '2103.02885'
+    comparison_source_title: 'Marginal Nodes Matter: Towards Structure Fairness in
+      Graphs'
+    comparison_source_arxiv: '2310.14527'
     is_best: false
     is_std_outlier: false
   - model: E2GNN
@@ -1101,8 +1101,8 @@ results:
     value_note: ''
     sort_value: 0.8185
     sort_std: 0.0045
-    global_rank: 285
-    paper_rank: 285
+    global_rank: 349
+    paper_rank: 349
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1169,8 +1169,8 @@ results:
     value_note: ''
     sort_value: 0.8185
     sort_std: 0.0045
-    global_rank: 286
-    paper_rank: 286
+    global_rank: 350
+    paper_rank: 350
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1237,8 +1237,8 @@ results:
     value_note: ''
     sort_value: 0.8034
     sort_std: 0.0029
-    global_rank: 369
-    paper_rank: 369
+    global_rank: 440
+    paper_rank: 440
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1305,8 +1305,8 @@ results:
     value_note: ''
     sort_value: 0.8027
     sort_std: 0.0036
-    global_rank: 379
-    paper_rank: 379
+    global_rank: 451
+    paper_rank: 451
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1373,8 +1373,8 @@ results:
     value_note: ''
     sort_value: 0.7953
     sort_std: 0.0029
-    global_rank: 443
-    paper_rank: 443
+    global_rank: 526
+    paper_rank: 526
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1441,8 +1441,8 @@ results:
     value_note: ''
     sort_value: 0.7945
     sort_std: 0.0035
-    global_rank: 458
-    paper_rank: 458
+    global_rank: 544
+    paper_rank: 544
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1509,8 +1509,8 @@ results:
     value_note: ''
     sort_value: 0.7943
     sort_std: 0.0024
-    global_rank: 461
-    paper_rank: 461
+    global_rank: 547
+    paper_rank: 547
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1591,9 +1591,9 @@ results:
     sort_value: 0.9302
     sort_std: 0.0011
     global_rank: 1
-    paper_rank: 175
-    rank_delta: 174
-    rank_delta_abs: 174
+    paper_rank: 194
+    rank_delta: 193
+    rank_delta_abs: 193
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1602,69 +1602,71 @@ results:
     comparison_source_arxiv: '2204.04874'
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: graphssr
-    model_plain: GraphAny
-    value: 0.8793
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
-    venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8793
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphAny
-    model_key: graph-r1
-    model_plain: GraphAny
-    value: 0.8689
-    std: null
+  - model: GPM
+    model_key: rse + rgcn (70b)
+    model_plain: GPM
+    value: 0.8852
+    std: 0.0019
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
     venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8852
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPM
+    model_key: rse + sehgnn (70b)
+    model_plain: GPM
+    value: 0.8796
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8689
-    sort_std: null
+    sort_value: 0.8796
+    sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1707,8 +1709,8 @@ results:
       on Textual Graphs
     at_pub_source_date_iso: '2024-01-28'
     at_pub_source_date_label: IJCAI 2024
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2024-05-28'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.08179999999999998
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1717,21 +1719,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8103
-    true_std: 0.0092
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
+    true_value: 0.8279
+    true_std: 0.0016
+    value_gap_source_arxiv: '2405.18581'
+    value_gap_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
     value_gap_source_is_current_paper: false
-    value_gap: 0.10999999999999999
+    value_gap: 0.12759999999999994
     has_value_note: false
     value_note: ''
-    sort_value: 0.8103
-    sort_std: 0.0092
-    global_rank: 29
-    paper_rank: 195
-    rank_delta: 166
-    rank_delta_abs: 166
+    sort_value: 0.8279
+    sort_std: 0.0016
+    global_rank: 23
+    paper_rank: 214
+    rank_delta: 191
+    rank_delta_abs: 191
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1798,10 +1800,10 @@ results:
     value_note: ''
     sort_value: 0.7887
     sort_std: 0.0011
-    global_rank: 80
-    paper_rank: 202
-    rank_delta: 122
-    rank_delta_abs: 122
+    global_rank: 91
+    paper_rank: 221
+    rank_delta: 130
+    rank_delta_abs: 130
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1867,8 +1869,8 @@ results:
     value_note: ''
     sort_value: 0.7323
     sort_std: 0.0043
-    global_rank: 173
-    paper_rank: 173
+    global_rank: 192
+    paper_rank: 192
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1926,7 +1928,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7323
     sort_std: 0.0043
-    global_rank: 174
+    global_rank: 193
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1998,8 +2000,8 @@ results:
     value_note: ''
     sort_value: 0.7286
     sort_std: null
-    global_rank: 174
-    paper_rank: 204
+    global_rank: 193
+    paper_rank: 223
     rank_delta: 30
     rank_delta_abs: 30
     rank_delta_direction: worse
@@ -2067,8 +2069,8 @@ results:
     value_note: ''
     sort_value: 0.7092
     sort_std: 0.0053
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 208
+    paper_rank: 208
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2135,8 +2137,8 @@ results:
     value_note: ''
     sort_value: 0.7069
     sort_std: 0.0117
-    global_rank: 191
-    paper_rank: 191
+    global_rank: 210
+    paper_rank: 210
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2203,8 +2205,8 @@ results:
     value_note: ''
     sort_value: 0.7023
     sort_std: 0.0022
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 211
+    paper_rank: 211
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2271,8 +2273,8 @@ results:
     value_note: ''
     sort_value: 0.6879
     sort_std: 0.0057
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 220
+    paper_rank: 220
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2311,5 +2313,6 @@ datasets_by_scope:
     - dataset: WikiCS
       dataset_slug: wikics
 single_proposed_model: E2GNN
+main_figure: /figures/2405.03401/main_figure.jpegoptim.jpg
 ---
 

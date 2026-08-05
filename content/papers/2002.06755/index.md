@@ -41,7 +41,7 @@ proposed_models:
 - LPA
 - GCN
 - GCN-LPA
-mrr: 0.0058
+mrr: 0.0056
 adjusted_mrr: 0.0019
 mrr_dataset_count: 1
 benchmark_categories:
@@ -59,9 +59,9 @@ results:
 - &id001
   dataset: Coauthor-CS
   rows:
-  - model: DoG
+  - model: DGI (PPR)
     model_key: dog
-    model_plain: DoG
+    model_plain: DGI (PPR)
     value: 0.969
     std: 0.003
     metric: Accuracy
@@ -70,9 +70,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -92,9 +92,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: DGI (PPR)
     model_key: gwn-fa
-    model_plain: DoG
+    model_plain: DGI (PPR)
     value: 0.9667
     std: 0.0026
     metric: Accuracy
@@ -125,9 +125,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: DGI (PPR)
     model_key: gwn-sym
-    model_plain: DoG
+    model_plain: DGI (PPR)
     value: 0.9666
     std: 0.0026
     metric: Accuracy
@@ -215,9 +215,9 @@ results:
     sort_value: 0.9593
     sort_std: 0.0025
     global_rank: 7
-    paper_rank: 122
-    rank_delta: 115
-    rank_delta_abs: 115
+    paper_rank: 124
+    rank_delta: 117
+    rank_delta_abs: 117
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -488,10 +488,10 @@ results:
     value_note: ''
     sort_value: 0.928
     sort_std: 0.002
-    global_rank: 111
-    paper_rank: 156
-    rank_delta: 45
-    rank_delta_abs: 45
+    global_rank: 112
+    paper_rank: 160
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -556,8 +556,8 @@ results:
     value_note: ''
     sort_value: 0.924
     sort_std: 0.004
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 134
+    paper_rank: 134
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -624,8 +624,8 @@ results:
     value_note: ''
     sort_value: 0.913
     sort_std: 0.002
-    global_rank: 172
-    paper_rank: 172
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -692,8 +692,8 @@ results:
     value_note: ''
     sort_value: 0.911
     sort_std: 0.006
-    global_rank: 177
-    paper_rank: 177
+    global_rank: 182
+    paper_rank: 182
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -725,5 +725,6 @@ datasets_by_scope:
     datasets:
     - dataset: Coauthor-CS
       dataset_slug: coauthor-cs
+main_figure: /figures/2002.06755/main_figure.jpegoptim.jpg
 ---
 

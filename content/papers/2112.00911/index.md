@@ -51,8 +51,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - ProtGNN
-mrr: 0.0141
-adjusted_mrr: 0.0047
+mrr: 0.0137
+adjusted_mrr: 0.0046
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -354,9 +354,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -387,9 +387,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -420,9 +420,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -577,8 +577,8 @@ results:
     value_note: ''
     sort_value: 0.917
     sort_std: 0.029
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -644,10 +644,10 @@ results:
     value_note: ''
     sort_value: 0.901
     sort_std: 0.058
-    global_rank: 156
-    paper_rank: 672
-    rank_delta: 516
-    rank_delta_abs: 516
+    global_rank: 164
+    paper_rank: 717
+    rank_delta: 553
+    rank_delta_abs: 553
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -711,10 +711,10 @@ results:
     value_note: ''
     sort_value: 0.891
     sort_std: 0.058
-    global_rank: 239
-    paper_rank: 697
-    rank_delta: 458
-    rank_delta_abs: 458
+    global_rank: 250
+    paper_rank: 743
+    rank_delta: 493
+    rank_delta_abs: 493
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -753,5 +753,6 @@ datasets_by_scope:
     - dataset: BBBP
       dataset_slug: bbbp
 single_proposed_model: ProtGNN
+main_figure: /figures/2112.00911/main_figure.jpegoptim.jpg
 ---
 

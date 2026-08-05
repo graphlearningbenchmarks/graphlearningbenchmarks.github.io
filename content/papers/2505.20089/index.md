@@ -62,8 +62,8 @@ proposed_models:
 - HGDA_F
 - HGDA_H
 - HGDA
-mrr: 0.0083
-adjusted_mrr: 0.0028
+mrr: 0.0082
+adjusted_mrr: 0.0027
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -80,9 +80,9 @@ results:
 - &id001
   dataset: ACM
   rows:
-  - model: SHGN
+  - model: SlotGAT
     model_key: hetgnn
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.979
     std: null
     metric: Micro-F1
@@ -113,9 +113,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SHGN
+  - model: SlotGAT
     model_key: comch
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.947
     std: null
     metric: Micro-F1
@@ -146,9 +146,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SHGN
+  - model: SlotGAT
     model_key: lmsps
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.9469
     std: 0.0036
     metric: Micro-F1
@@ -238,9 +238,9 @@ results:
     sort_value: 0.9246
     sort_std: null
     global_rank: 36
-    paper_rank: 128
-    rank_delta: 92
-    rank_delta_abs: 92
+    paper_rank: 129
+    rank_delta: 93
+    rank_delta_abs: 93
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -305,8 +305,8 @@ results:
     value_note: ''
     sort_value: 0.698
     sort_std: null
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -372,8 +372,8 @@ results:
     value_note: ''
     sort_value: 0.683
     sort_std: null
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -439,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.679
     sort_std: null
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -506,8 +506,8 @@ results:
     value_note: ''
     sort_value: 0.66
     sort_std: null
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -573,8 +573,8 @@ results:
     value_note: ''
     sort_value: 0.61
     sort_std: null
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -640,8 +640,8 @@ results:
     value_note: ''
     sort_value: 0.537
     sort_std: null
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -707,8 +707,8 @@ results:
     value_note: ''
     sort_value: 0.518
     sort_std: null
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -774,8 +774,8 @@ results:
     value_note: ''
     sort_value: 0.461
     sort_std: null
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -841,8 +841,8 @@ results:
     value_note: ''
     sort_value: 0.449
     sort_std: null
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -908,8 +908,8 @@ results:
     value_note: ''
     sort_value: 0.409
     sort_std: null
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -975,8 +975,8 @@ results:
     value_note: ''
     sort_value: 0.404
     sort_std: null
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1042,8 +1042,8 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: null
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1109,8 +1109,8 @@ results:
     value_note: ''
     sort_value: 0.325
     sort_std: null
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1142,5 +1142,6 @@ datasets_by_scope:
     datasets:
     - dataset: ACM
       dataset_slug: acm
+main_figure: /figures/2505.20089/main_figure.jpegoptim.jpg
 ---
 

@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FractalGCL
-mrr: 0.0166
-adjusted_mrr: 0.0166
+mrr: 0.0163
+adjusted_mrr: 0.0163
 mrr_dataset_count: 4
 benchmark_categories:
 - TU Dortmund
@@ -66,9 +66,9 @@ results:
 - &id004
   dataset: D&D
   rows:
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: gc-gnn (graphsage)
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -77,9 +77,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2309.00738'
     title: Rethinking the Power of Graph Canonization in Graph Representation Learning
       with Stability
@@ -100,9 +100,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: true
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: sugar
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8403
     std: 0.0133
     metric: Accuracy
@@ -134,9 +134,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: ortho-g-u-nets
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8387
     std: null
     metric: Accuracy
@@ -290,8 +290,8 @@ results:
     value_note: ''
     sort_value: 0.7895
     sort_std: 0.0047
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -357,8 +357,8 @@ results:
     value_note: ''
     sort_value: 0.7888
     sort_std: 0.0038
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -424,8 +424,8 @@ results:
     value_note: ''
     sort_value: 0.7886
     sort_std: 0.0048
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -465,12 +465,12 @@ results:
     date_iso: '2025-05-16'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7862
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -491,8 +491,8 @@ results:
     value_note: ''
     sort_value: 0.7862
     sort_std: 0.004
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -532,12 +532,12 @@ results:
     date_iso: '2025-05-16'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.784
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -558,8 +558,8 @@ results:
     value_note: ''
     sort_value: 0.784
     sort_std: 0.007
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -599,12 +599,12 @@ results:
     date_iso: '2025-05-16'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7744
+    at_pub_std: 0.0111
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -625,8 +625,8 @@ results:
     value_note: ''
     sort_value: 0.7744
     sort_std: 0.0111
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -666,12 +666,12 @@ results:
     date_iso: '2025-05-16'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.774
+    at_pub_std: 0.0115
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -692,8 +692,8 @@ results:
     value_note: ''
     sort_value: 0.774
     sort_std: 0.0115
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -733,12 +733,12 @@ results:
     date_iso: '2025-05-16'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7732
+    at_pub_std: 0.0054
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -759,8 +759,8 @@ results:
     value_note: ''
     sort_value: 0.7732
     sort_std: 0.0054
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -826,8 +826,8 @@ results:
     value_note: ''
     sort_value: 0.7578
     sort_std: 0.0034
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 134
+    paper_rank: 134
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -893,8 +893,8 @@ results:
     value_note: ''
     sort_value: 0.7466
     sort_std: 0.0051
-    global_rank: 142
-    paper_rank: 142
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -960,8 +960,8 @@ results:
     value_note: ''
     sort_value: 0.7454
     sort_std: 0.0068
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1027,10 +1027,10 @@ results:
     value_note: ''
     sort_value: 0.7424
     sort_std: 0.0086
-    global_rank: 149
-    paper_rank: 160
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 158
+    paper_rank: 166
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1094,8 +1094,8 @@ results:
     value_note: ''
     sort_value: 0.7032
     sort_std: 0.0232
-    global_rank: 176
-    paper_rank: 176
+    global_rank: 178
+    paper_rank: 178
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1117,9 +1117,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1150,9 +1150,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1183,9 +1183,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -1273,8 +1273,8 @@ results:
     value_note: ''
     sort_value: 0.9171
     sort_std: 0.0023
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1340,8 +1340,8 @@ results:
     value_note: ''
     sort_value: 0.8955
     sort_std: 0.0108
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 208
+    paper_rank: 208
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1408,10 +1408,10 @@ results:
     value_note: ''
     sort_value: 0.895
     sort_std: 0.015
-    global_rank: 200
-    paper_rank: 700
-    rank_delta: 500
-    rank_delta_abs: 500
+    global_rank: 209
+    paper_rank: 746
+    rank_delta: 537
+    rank_delta_abs: 537
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1450,19 +1450,18 @@ results:
     date_iso: '2025-05-16'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.841
-    at_pub_std: 0.029
-    at_pub_source_arxiv: '2410.12657'
-    at_pub_source_title: Explanation-Preserving Augmentation for Semi-Supervised Graph
-      Representation Learning
-    at_pub_source_date_iso: '2024-10-16'
-    at_pub_source_date_label: AAAI 2024
+    at_pub_value: 0.895
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.05400000000000005
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1477,16 +1476,15 @@ results:
     value_note: ''
     sort_value: 0.895
     sort_std: 0.006
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 210
+    paper_rank: 210
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Explanation-Preserving Augmentation for Semi-Supervised
-      Graph Representation Learning
-    comparison_source_arxiv: '2410.12657'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: InfoGraph
@@ -1547,10 +1545,10 @@ results:
     value_note: ''
     sort_value: 0.893
     sort_std: 0.0514
-    global_rank: 226
-    paper_rank: 240
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 236
+    paper_rank: 251
+    rank_delta: 15
+    rank_delta_abs: 15
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1616,8 +1614,8 @@ results:
     value_note: ''
     sort_value: 0.891
     sort_std: 0.014
-    global_rank: 240
-    paper_rank: 240
+    global_rank: 251
+    paper_rank: 251
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1683,8 +1681,8 @@ results:
     value_note: ''
     sort_value: 0.8846
     sort_std: 0.0098
-    global_rank: 277
-    paper_rank: 277
+    global_rank: 290
+    paper_rank: 290
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1752,10 +1750,10 @@ results:
     value_note: ''
     sort_value: 0.8829
     sort_std: 0.0131
-    global_rank: 288
-    paper_rank: 358
-    rank_delta: 70
-    rank_delta_abs: 70
+    global_rank: 301
+    paper_rank: 377
+    rank_delta: 76
+    rank_delta_abs: 76
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1819,8 +1817,8 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: null
-    global_rank: 312
-    paper_rank: 331
+    global_rank: 327
+    paper_rank: 346
     rank_delta: 19
     rank_delta_abs: 19
     rank_delta_direction: worse
@@ -1887,8 +1885,8 @@ results:
     value_note: ''
     sort_value: 0.8767
     sort_std: 0.0079
-    global_rank: 316
-    paper_rank: 316
+    global_rank: 331
+    paper_rank: 331
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1955,8 +1953,8 @@ results:
     value_note: ''
     sort_value: 0.8766
     sort_std: 0.0101
-    global_rank: 317
-    paper_rank: 317
+    global_rank: 332
+    paper_rank: 332
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2022,10 +2020,10 @@ results:
     value_note: ''
     sort_value: 0.8644
     sort_std: 0.0125
-    global_rank: 369
-    paper_rank: 491
-    rank_delta: 122
-    rank_delta_abs: 122
+    global_rank: 389
+    paper_rank: 518
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2090,10 +2088,10 @@ results:
     value_note: ''
     sort_value: 0.832
     sort_std: 0.013
-    global_rank: 491
-    paper_rank: 732
-    rank_delta: 241
-    rank_delta_abs: 241
+    global_rank: 518
+    paper_rank: 778
+    rank_delta: 260
+    rank_delta_abs: 260
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2158,8 +2156,8 @@ results:
     value_note: ''
     sort_value: 0.7175
     sort_std: 0.0734
-    global_rank: 714
-    paper_rank: 714
+    global_rank: 759
+    paper_rank: 759
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2181,44 +2179,44 @@ results:
 - &id002
   dataset: NCI1
   rows:
-  - model: Diverse B12C3
-    model_key: msa-aud
-    model_plain: Diverse B12C3
-    value: 0.969
+  - model: ECC
+    model_key: wl-mlp
+    model_plain: ECC
+    value: 0.9954
     std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
     is_global_top: true
     global_rank: 1
-    sort_value: 0.969
+    sort_value: 0.9954
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-au
-    model_plain: Diverse B12C3
-    value: 0.966
+  - model: ECC
+    model_key: gin
+    model_plain: ECC
+    value: 0.9934
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -2226,33 +2224,32 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GNNs ... use node features
     is_global_top: true
     global_rank: 2
-    sort_value: 0.966
+    sort_value: 0.9934
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-ad
-    model_plain: Diverse B12C3
-    value: 0.963
+  - model: ECC
+    model_key: gcn
+    model_plain: ECC
+    value: 0.9727
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -2260,23 +2257,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GNNs ... use node features
     is_global_top: true
     global_rank: 3
-    sort_value: 0.963
+    sort_value: 0.9727
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -2341,10 +2337,10 @@ results:
     value_note: ''
     sort_value: 0.825
     sort_std: 0.0013
-    global_rank: 101
-    paper_rank: 327
-    rank_delta: 226
-    rank_delta_abs: 226
+    global_rank: 104
+    paper_rank: 342
+    rank_delta: 238
+    rank_delta_abs: 238
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2411,10 +2407,10 @@ results:
     value_note: ''
     sort_value: 0.818
     sort_std: 0.0015
-    global_rank: 137
-    paper_rank: 259
-    rank_delta: 122
-    rank_delta_abs: 122
+    global_rank: 138
+    paper_rank: 267
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2481,10 +2477,10 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: 0.0026
-    global_rank: 143
-    paper_rank: 304
-    rank_delta: 161
-    rank_delta_abs: 161
+    global_rank: 144
+    paper_rank: 314
+    rank_delta: 170
+    rank_delta_abs: 170
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2550,8 +2546,8 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.0016
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 194
+    paper_rank: 194
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2619,10 +2615,10 @@ results:
     value_note: ''
     sort_value: 0.7978
     sort_std: 0.0017
-    global_rank: 235
-    paper_rank: 427
-    rank_delta: 192
-    rank_delta_abs: 192
+    global_rank: 240
+    paper_rank: 446
+    rank_delta: 206
+    rank_delta_abs: 206
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2688,8 +2684,8 @@ results:
     value_note: ''
     sort_value: 0.7972
     sort_std: 0.0053
-    global_rank: 239
-    paper_rank: 239
+    global_rank: 244
+    paper_rank: 244
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2730,12 +2726,12 @@ results:
     date_iso: '2025-05-16'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.787
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -2756,8 +2752,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.004
-    global_rank: 278
-    paper_rank: 278
+    global_rank: 287
+    paper_rank: 287
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2824,8 +2820,8 @@ results:
     value_note: ''
     sort_value: 0.7866
     sort_std: 0.0034
-    global_rank: 285
-    paper_rank: 285
+    global_rank: 294
+    paper_rank: 294
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2894,10 +2890,10 @@ results:
     value_note: ''
     sort_value: 0.784
     sort_std: 0.005
-    global_rank: 303
-    paper_rank: 316
-    rank_delta: 13
-    rank_delta_abs: 13
+    global_rank: 313
+    paper_rank: 328
+    rank_delta: 15
+    rank_delta_abs: 15
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2963,8 +2959,8 @@ results:
     value_note: ''
     sort_value: 0.7814
     sort_std: 0.0108
-    global_rank: 314
-    paper_rank: 314
+    global_rank: 326
+    paper_rank: 326
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3031,10 +3027,10 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.0074
-    global_rank: 343
-    paper_rank: 389
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 358
+    paper_rank: 406
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3100,10 +3096,10 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.018
-    global_rank: 391
-    paper_rank: 420
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 408
+    paper_rank: 439
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3169,8 +3165,8 @@ results:
     value_note: ''
     sort_value: 0.7322
     sort_std: 0.0181
-    global_rank: 448
-    paper_rank: 448
+    global_rank: 469
+    paper_rank: 469
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3238,8 +3234,8 @@ results:
     value_note: ''
     sort_value: 0.73
     sort_std: 0.003
-    global_rank: 453
-    paper_rank: 453
+    global_rank: 474
+    paper_rank: 474
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3262,9 +3258,9 @@ results:
 - &id003
   dataset: PROTEINS
   rows:
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: gmn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8225
     std: null
     metric: Accuracy
@@ -3295,9 +3291,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: ci-gnn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -3329,9 +3325,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: diffpool+gpl
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -3419,8 +3415,8 @@ results:
     value_note: ''
     sort_value: 0.7585
     sort_std: 0.004
-    global_rank: 153
-    paper_rank: 153
+    global_rank: 168
+    paper_rank: 168
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3488,10 +3484,10 @@ results:
     value_note: ''
     sort_value: 0.7535
     sort_std: 0.0009
-    global_rank: 197
-    paper_rank: 294
-    rank_delta: 97
-    rank_delta_abs: 97
+    global_rank: 219
+    paper_rank: 322
+    rank_delta: 103
+    rank_delta_abs: 103
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3530,12 +3526,12 @@ results:
     date_iso: '2025-05-16'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.752
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -3556,8 +3552,8 @@ results:
     value_note: ''
     sort_value: 0.752
     sort_std: 0.006
-    global_rank: 215
-    paper_rank: 215
+    global_rank: 238
+    paper_rank: 238
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3623,8 +3619,8 @@ results:
     value_note: ''
     sort_value: 0.7503
     sort_std: 0.0043
-    global_rank: 229
-    paper_rank: 229
+    global_rank: 252
+    paper_rank: 252
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3690,10 +3686,10 @@ results:
     value_note: ''
     sort_value: 0.7489
     sort_std: 0.0065
-    global_rank: 250
-    paper_rank: 282
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 275
+    paper_rank: 309
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3757,8 +3753,8 @@ results:
     value_note: ''
     sort_value: 0.7489
     sort_std: 0.0039
-    global_rank: 251
-    paper_rank: 251
+    global_rank: 276
+    paper_rank: 276
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3824,8 +3820,8 @@ results:
     value_note: ''
     sort_value: 0.7485
     sort_std: 0.0071
-    global_rank: 253
-    paper_rank: 253
+    global_rank: 278
+    paper_rank: 278
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3893,8 +3889,8 @@ results:
     value_note: ''
     sort_value: 0.746
     sort_std: 0.004
-    global_rank: 265
-    paper_rank: 271
+    global_rank: 291
+    paper_rank: 297
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -3961,8 +3957,8 @@ results:
     value_note: ''
     sort_value: 0.7444
     sort_std: 0.0031
-    global_rank: 279
-    paper_rank: 279
+    global_rank: 306
+    paper_rank: 306
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4029,8 +4025,8 @@ results:
     value_note: ''
     sort_value: 0.7407
     sort_std: 0.011
-    global_rank: 293
-    paper_rank: 293
+    global_rank: 321
+    paper_rank: 321
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4096,8 +4092,8 @@ results:
     value_note: ''
     sort_value: 0.733
     sort_std: 0.0205
-    global_rank: 331
-    paper_rank: 331
+    global_rank: 361
+    paper_rank: 361
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4163,8 +4159,8 @@ results:
     value_note: ''
     sort_value: 0.7227
     sort_std: 0.004
-    global_rank: 370
-    paper_rank: 370
+    global_rank: 406
+    paper_rank: 406
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4231,8 +4227,8 @@ results:
     value_note: ''
     sort_value: 0.7051
     sort_std: 0.0017
-    global_rank: 415
-    paper_rank: 415
+    global_rank: 449
+    paper_rank: 449
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4298,8 +4294,8 @@ results:
     value_note: ''
     sort_value: 0.7023
     sort_std: 0.0063
-    global_rank: 423
-    paper_rank: 423
+    global_rank: 455
+    paper_rank: 455
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4341,5 +4337,6 @@ datasets_by_scope:
     - dataset: D&D
       dataset_slug: d-d
 single_proposed_model: FractalGCL
+main_figure: /figures/2505.11356/main_figure.jpegoptim.jpg
 ---
 

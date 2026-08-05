@@ -55,8 +55,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GeomGCL
-mrr: 0.1327
-adjusted_mrr: 0.1327
+mrr: 0.2497
+adjusted_mrr: 0.2497
 mrr_dataset_count: 7
 benchmark_categories:
 - MoleculeNet
@@ -74,9 +74,9 @@ results:
 - &id002
   dataset: ClinTox
   rows:
-  - model: UnifiedMolPretrain
+  - model: EdgePrompt+
     model_key: se(3)-i mpph
-    model_plain: UnifiedMolPretrain
+    model_plain: EdgePrompt+
     value: 0.993
     std: 0.004
     metric: ROC-AUC
@@ -109,9 +109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: EdgePrompt+
     model_key: ka-gcn
-    model_plain: UnifiedMolPretrain
+    model_plain: EdgePrompt+
     value: 0.992
     std: 0.005
     metric: ROC-AUC
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: EdgePrompt+
     model_key: ka-gat
-    model_plain: UnifiedMolPretrain
+    model_plain: EdgePrompt+
     value: 0.991
     std: 0.005
     metric: ROC-AUC
@@ -235,9 +235,9 @@ results:
     sort_value: 0.933
     sort_std: null
     global_rank: 11
-    paper_rank: 88
-    rank_delta: 77
-    rank_delta_abs: 77
+    paper_rank: 79
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -370,8 +370,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: null
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -438,8 +438,8 @@ results:
     value_note: ''
     sort_value: 0.898
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -506,10 +506,10 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: null
-    global_rank: 31
-    paper_rank: 35
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 28
+    paper_rank: 31
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -574,8 +574,8 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: null
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,8 +642,8 @@ results:
     value_note: ''
     sort_value: 0.825
     sort_std: null
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -683,7 +683,7 @@ results:
     date_iso: '2021-09-24'
     published_venue: AAAI 2021
     published_conference: AAAI 2021
-    at_pub_value: 0.487
+    at_pub_value: 0.458
     at_pub_std: null
     at_pub_source_arxiv: '2106.04509'
     at_pub_source_title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware
@@ -692,7 +692,7 @@ results:
     at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2021-09-24'
     value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 0.29400000000000004
+    gap_vs_at_pub: 0.323
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -711,8 +711,8 @@ results:
     value_note: ''
     sort_value: 0.781
     sort_std: null
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -780,8 +780,8 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: null
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -848,8 +848,8 @@ results:
     value_note: ''
     sort_value: 0.739
     sort_std: null
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -916,8 +916,8 @@ results:
     value_note: ''
     sort_value: 0.68
     sort_std: null
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -996,9 +996,9 @@ results:
     sort_value: 0.278
     sort_std: 0.02
     global_rank: 1
-    paper_rank: 18
-    rank_delta: 17
-    rank_delta_abs: 17
+    paper_rank: 25
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1006,9 +1006,9 @@ results:
     comparison_source_arxiv: '2002.08264'
     is_best: true
     is_std_outlier: false
-  - model: KCL
+  - model: AMCT
     model_key: smiles
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.356
     std: 0.017
     metric: RMSE
@@ -1040,34 +1040,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: KCL
-    model_key: conan-fgw
-    model_plain: KCL
-    value: 0.514
-    std: 0.019
+  - model: AMCT
+    model_key: graphormer-spis
+    model_plain: AMCT
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2402.01975'
-    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
-    date: Feb 3, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-03'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.514
-    sort_std: 0.019
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1130,8 +1130,8 @@ results:
     value_note: ''
     sort_value: 0.555
     sort_std: null
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1199,8 +1199,8 @@ results:
     value_note: ''
     sort_value: 0.575
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1268,8 +1268,8 @@ results:
     value_note: ''
     sort_value: 0.578
     sort_std: null
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1337,8 +1337,8 @@ results:
     value_note: ''
     sort_value: 0.589
     sort_std: null
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1406,8 +1406,8 @@ results:
     value_note: ''
     sort_value: 0.633
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1474,8 +1474,8 @@ results:
     value_note: ''
     sort_value: 0.647
     sort_std: null
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1542,8 +1542,8 @@ results:
     value_note: ''
     sort_value: 0.701
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1610,8 +1610,8 @@ results:
     value_note: ''
     sort_value: 0.914
     sort_std: null
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1678,8 +1678,8 @@ results:
     value_note: ''
     sort_value: 0.934
     sort_std: null
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1746,8 +1746,8 @@ results:
     value_note: ''
     sort_value: 1.329
     sort_std: null
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2512,8 +2512,8 @@ results:
     value_note: ''
     sort_value: 2.061
     sort_std: null
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2580,8 +2580,8 @@ results:
     value_note: ''
     sort_value: 2.104
     sort_std: null
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3467,9 +3467,9 @@ results:
 - &id003
   dataset: SIDER
   rows:
-  - model: UnifiedMolPretrain
+  - model: DGI
     model_key: ka-gat
-    model_plain: UnifiedMolPretrain
+    model_plain: DGI
     value: 0.847
     std: 0.002
     metric: ROC-AUC
@@ -3501,9 +3501,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: DGI
     model_key: ka-gcn
-    model_plain: UnifiedMolPretrain
+    model_plain: DGI
     value: 0.842
     std: 0.001
     metric: ROC-AUC
@@ -3535,9 +3535,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: DGI
     model_key: graphkan
-    model_plain: UnifiedMolPretrain
+    model_plain: DGI
     value: 0.837
     std: 0.001
     metric: ROC-AUC
@@ -3694,8 +3694,8 @@ results:
     value_note: ''
     sort_value: 0.638
     sort_std: null
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3762,81 +3762,12 @@ results:
     value_note: ''
     sort_value: 0.637
     sort_std: null
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AttentiveFP
-    model_key: attentivefp
-    model_plain: AttentiveFP
-    value: 0.605
-    std: null
-    paper_value: 0.605
-    paper_std: null
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: xiong2019pushing
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: ROC-AUC on Sider classification task
-    date: Sep 24, 2021
-    date_display: Sep 2021
-    date_iso: '2021-09-24'
-    published_venue: AAAI 2021
-    published_conference: AAAI 2021
-    at_pub_value: 0.606
-    at_pub_std: 0.032
-    at_pub_source_arxiv: '2106.06130'
-    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
-      for Property Prediction'
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-11-08'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.0010000000000000009
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.6321
-    true_std: 0.0125
-    value_gap_source_arxiv: '2311.04837'
-    value_gap_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    value_gap_source_is_current_paper: false
-    value_gap: 0.027100000000000013
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6321
-    sort_std: 0.0125
-    global_rank: 83
-    paper_rank: 164
-    rank_delta: 81
-    rank_delta_abs: 81
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3899,8 +3830,8 @@ results:
     value_note: ''
     sort_value: 0.629
     sort_std: null
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3967,8 +3898,8 @@ results:
     value_note: ''
     sort_value: 0.626
     sort_std: null
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4035,8 +3966,8 @@ results:
     value_note: ''
     sort_value: 0.619
     sort_std: null
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4103,8 +4034,8 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: null
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4171,8 +4102,8 @@ results:
     value_note: ''
     sort_value: 0.607
     sort_std: null
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4182,6 +4113,75 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: AttentiveFP
+    model_key: attentivefp
+    model_plain: AttentiveFP
+    value: 0.605
+    std: null
+    paper_value: 0.605
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: xiong2019pushing
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on Sider classification task
+    date: Sep 24, 2021
+    date_display: Sep 2021
+    date_iso: '2021-09-24'
+    published_venue: AAAI 2021
+    published_conference: AAAI 2021
+    at_pub_value: 0.606
+    at_pub_std: 0.032
+    at_pub_source_arxiv: '2106.06130'
+    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
+      for Property Prediction'
+    at_pub_source_date_iso: '2021-06-11'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-06-11'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.0010000000000000009
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.606
+    true_std: 0.032
+    value_gap_source_arxiv: '2106.06130'
+    value_gap_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
+      Learning for Property Prediction'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0010000000000000009
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.606
+    sort_std: 0.032
+    global_rank: 157
+    paper_rank: 163
+    rank_delta: 6
+    rank_delta_abs: 6
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: true
   - model: InfoGraph
     model_key: infograph
     model_plain: InfoGraph
@@ -4212,20 +4212,21 @@ results:
     date_iso: '2021-09-24'
     published_venue: AAAI 2021
     published_conference: AAAI 2021
-    at_pub_value: null
+    at_pub_value: 0.502
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2106.04509'
+    at_pub_source_title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware
+      Contrastive Learning from Molecular Graph'
+    at_pub_source_date_iso: '2021-06-05'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2024-05-02'
     value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.08299999999999996
     worse_than_at_pub: false
     surpassed_since_pub: true
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
+    improvement_surpassed_since_pub: true
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.6054
@@ -4238,15 +4239,16 @@ results:
     value_note: ''
     sort_value: 0.6054
     sort_std: 0.009
-    global_rank: 164
-    paper_rank: 205
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 163
+    paper_rank: 207
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: improved
+    comparison_source_title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware
+      Contrastive Learning from Molecular Graph'
+    comparison_source_arxiv: '2106.04509'
     is_best: false
     is_std_outlier: false
   - model: SGCN
@@ -4306,8 +4308,8 @@ results:
     value_note: ''
     sort_value: 0.56
     sort_std: null
-    global_rank: 226
-    paper_rank: 226
+    global_rank: 231
+    paper_rank: 231
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4329,9 +4331,9 @@ results:
 - &id001
   dataset: Tox21
   rows:
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: himp
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.874
     std: 0.005
     metric: ROC-AUC
@@ -4362,9 +4364,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: gine w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -4395,9 +4397,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -4485,8 +4487,8 @@ results:
     value_note: ''
     sort_value: 0.85
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4553,8 +4555,8 @@ results:
     value_note: ''
     sort_value: 0.848
     sort_std: null
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4562,76 +4564,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AttentiveFP
-    model_key: attentivefp
-    model_plain: AttentiveFP
-    value: 0.835
-    std: null
-    paper_value: 0.835
-    paper_std: null
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: ROC-AUC on Tox21 classification task
-    date: Sep 24, 2021
-    date_display: Sep 2021
-    date_iso: '2021-09-24'
-    published_venue: AAAI 2021
-    published_conference: AAAI 2021
-    at_pub_value: 0.761
-    at_pub_std: 0.005
-    at_pub_source_arxiv: '2106.06130'
-    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
-      for Property Prediction'
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-11-08'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.07399999999999995
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8448
-    true_std: 0.0015
-    value_gap_source_arxiv: '2311.04837'
-    value_gap_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    value_gap_source_is_current_paper: false
-    value_gap: 0.009800000000000031
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8448
-    sort_std: 0.0015
-    global_rank: 14
-    paper_rank: 22
-    rank_delta: 8
-    rank_delta_abs: 8
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    comparison_source_arxiv: '2106.06130'
     is_best: false
     is_std_outlier: false
   - model: GeomMPNN
@@ -4691,8 +4623,8 @@ results:
     value_note: ''
     sort_value: 0.838
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4759,8 +4691,8 @@ results:
     value_note: ''
     sort_value: 0.836
     sort_std: null
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4768,6 +4700,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AttentiveFP
+    model_key: attentivefp
+    model_plain: AttentiveFP
+    value: 0.835
+    std: null
+    paper_value: 0.835
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on Tox21 classification task
+    date: Sep 24, 2021
+    date_display: Sep 2021
+    date_iso: '2021-09-24'
+    published_venue: AAAI 2021
+    published_conference: AAAI 2021
+    at_pub_value: 0.761
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2106.06130'
+    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
+      for Property Prediction'
+    at_pub_source_date_iso: '2021-06-11'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-09-24'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: 0.07399999999999995
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.835
+    true_std: null
+    value_gap_source_arxiv: '2109.11730'
+    value_gap_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
+      Property Prediction'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.835
+    sort_std: null
+    global_rank: 19
+    paper_rank: 19
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
+      Learning for Property Prediction'
+    comparison_source_arxiv: '2106.06130'
     is_best: false
     is_std_outlier: false
   - model: MAT
@@ -4827,8 +4829,8 @@ results:
     value_note: ''
     sort_value: 0.834
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4896,8 +4898,8 @@ results:
     value_note: ''
     sort_value: 0.824
     sort_std: null
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4964,8 +4966,8 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: null
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5006,19 +5008,18 @@ results:
     date_iso: '2021-09-24'
     published_venue: AAAI 2021
     published_conference: AAAI 2021
-    at_pub_value: 0.615
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2106.04509'
-    at_pub_source_title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware
-      Contrastive Learning from Molecular Graph'
-    at_pub_source_date_iso: '2021-06-05'
-    at_pub_source_date_label: KDD 2021
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2021-09-24'
     value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 0.17800000000000005
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -5034,16 +5035,15 @@ results:
     value_note: ''
     sort_value: 0.793
     sort_std: null
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware
-      Contrastive Learning from Molecular Graph'
-    comparison_source_arxiv: '2106.04509'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: DimeNet++
@@ -5103,8 +5103,8 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: null
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5171,8 +5171,8 @@ results:
     value_note: ''
     sort_value: 0.769
     sort_std: null
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5194,175 +5194,6 @@ results:
 - &id004
   dataset: ToxCast
   rows:
-  - model: Adding atoms and bonds features
-    model_key: sci
-    model_plain: Adding atoms and bonds features
-    value: 0.8073
-    std: 0.0006
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-08'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.8073
-    sort_std: 0.0006
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Adding atoms and bonds features
-    model_key: pharmhgt
-    model_plain: Adding atoms and bonds features
-    value: 0.8023
-    std: 0.0009
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-08'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8023
-    sort_std: 0.0009
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Adding atoms and bonds features
-    model_key: stablegnn-graph
-    model_plain: Adding atoms and bonds features
-    value: 0.7986
-    std: 0.001
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    date: Nov 8, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-08'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7986
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AttentiveFP
-    model_key: attentivefp
-    model_plain: AttentiveFP
-    value: 0.743
-    std: null
-    paper_value: 0.743
-    paper_std: null
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: ROC-AUC on ToxCast classification task
-    date: Sep 24, 2021
-    date_display: Sep 2021
-    date_iso: '2021-09-24'
-    published_venue: AAAI 2021
-    published_conference: AAAI 2021
-    at_pub_value: 0.637
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '2106.06130'
-    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
-      for Property Prediction'
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-11-08'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.10599999999999998
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7678
-    true_std: 0.0037
-    value_gap_source_arxiv: '2311.04837'
-    value_gap_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    value_gap_source_is_current_paper: false
-    value_gap: 0.024800000000000044
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7678
-    sort_std: 0.0037
-    global_rank: 6
-    paper_rank: 17
-    rank_delta: 11
-    rank_delta_abs: 11
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
-      Learning for Property Prediction'
-    comparison_source_arxiv: '2106.06130'
-    is_best: false
-    is_std_outlier: false
   - model: GeomGCL
     model_key: geomgcl
     model_plain: GeomGCL
@@ -5421,13 +5252,80 @@ results:
     value_note: ''
     sort_value: 0.763
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN (Supervised EdgePred)
+    model_key: light deepgpt
+    model_plain: GIN (Supervised EdgePred)
+    value: 0.757
+    std: 0.011
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.37
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.757
+    sort_std: 0.011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN (Supervised EdgePred)
+    model_key: d&d-node +vn
+    model_plain: GIN (Supervised EdgePred)
+    value: 0.7556
+    std: 0.0068
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2309.04062'
+    title: '3D Denoisers are Good 2D Teachers: Molecular Pretraining via Denoising
+      and Cross-Modal Distillation'
+    date: Sep 8, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-08'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7556
+    sort_std: 0.0068
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -5489,8 +5387,8 @@ results:
     value_note: ''
     sort_value: 0.755
     sort_std: null
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5498,6 +5396,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AttentiveFP
+    model_key: attentivefp
+    model_plain: AttentiveFP
+    value: 0.743
+    std: null
+    paper_value: 0.743
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ToxCast classification task
+    date: Sep 24, 2021
+    date_display: Sep 2021
+    date_iso: '2021-09-24'
+    published_venue: AAAI 2021
+    published_conference: AAAI 2021
+    at_pub_value: 0.637
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2106.06130'
+    at_pub_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning
+      for Property Prediction'
+    at_pub_source_date_iso: '2021-06-11'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-09-24'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: 0.10599999999999998
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.743
+    true_std: null
+    value_gap_source_arxiv: '2109.11730'
+    value_gap_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
+      Property Prediction'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.743
+    sort_std: null
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
+      Learning for Property Prediction'
+    comparison_source_arxiv: '2106.06130'
     is_best: false
     is_std_outlier: false
   - model: DMPNN
@@ -5557,8 +5525,8 @@ results:
     value_note: ''
     sort_value: 0.743
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5625,8 +5593,8 @@ results:
     value_note: ''
     sort_value: 0.743
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5693,8 +5661,8 @@ results:
     value_note: ''
     sort_value: 0.735
     sort_std: null
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5761,8 +5729,8 @@ results:
     value_note: ''
     sort_value: 0.718
     sort_std: null
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5802,19 +5770,18 @@ results:
     date_iso: '2021-09-24'
     published_venue: AAAI 2021
     published_conference: AAAI 2021
-    at_pub_value: 0.562
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2106.04509'
-    at_pub_source_title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware
-      Contrastive Learning from Molecular Graph'
-    at_pub_source_date_iso: '2021-06-05'
-    at_pub_source_date_label: KDD 2021
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2021-09-24'
     value_gap_source_date_label: AAAI 2021
-    gap_vs_at_pub: 0.1429999999999999
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -5830,16 +5797,15 @@ results:
     value_note: ''
     sort_value: 0.705
     sort_std: null
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware
-      Contrastive Learning from Molecular Graph'
-    comparison_source_arxiv: '2106.04509'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: HMGNN
@@ -5899,8 +5865,8 @@ results:
     value_note: ''
     sort_value: 0.702
     sort_std: null
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5967,8 +5933,8 @@ results:
     value_note: ''
     sort_value: 0.656
     sort_std: null
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6087,5 +6053,6 @@ datasets_by_scope:
     - dataset: Lipophilicity
       dataset_slug: lipophilicity
 single_proposed_model: GeomGCL
+main_figure: /figures/2109.11730/main_figure.jpegoptim.jpg
 ---
 

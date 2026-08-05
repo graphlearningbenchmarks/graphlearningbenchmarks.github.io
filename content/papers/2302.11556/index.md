@@ -52,8 +52,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - PPGN++
-mrr: 1.0
-adjusted_mrr: 0.3333
+mrr: 0.5
+adjusted_mrr: 0.1667
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -70,6 +70,39 @@ results:
 - &id001
   dataset: ZINC
   rows:
+  - model: GPS
+    model_key: tigt
+    model_plain: GPS
+    value: 0.014
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: GRaM
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.014
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: PPGN++
     model_key: ppgn++
     model_plain: PPGN++
@@ -126,8 +159,8 @@ results:
     value_note: ''
     sort_value: 0.02
     sort_std: 0.001
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -135,11 +168,11 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: subgraphormer
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.002
     metric: MAE
@@ -163,13 +196,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.02
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: CIN
     model_key: cin
@@ -227,16 +260,16 @@ results:
     value_note: ''
     sort_value: 0.021
     sort_std: 0.001
-    global_rank: 3
-    paper_rank: 4
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 4
+    paper_rank: 6
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: SignNet
     model_key: signnet
@@ -294,8 +327,8 @@ results:
     value_note: ''
     sort_value: 0.024
     sort_std: 0.003
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -303,7 +336,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: HIMP
     model_key: himp
@@ -362,8 +395,8 @@ results:
     value_note: ''
     sort_value: 0.036
     sort_std: 0.002
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -429,8 +462,8 @@ results:
     value_note: ''
     sort_value: 0.042
     sort_std: 0.003
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -496,8 +529,8 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -530,5 +563,6 @@ datasets_by_scope:
     - dataset: ZINC
       dataset_slug: zinc
 single_proposed_model: PPGN++
+main_figure: /figures/2302.11556/main_figure.jpegoptim.jpg
 ---
 

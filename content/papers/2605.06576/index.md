@@ -70,13 +70,13 @@ mrr: null
 adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
-- Heterophilic Graphs
+- Heterophily Benchmark
 - Knowledge Graphs
 benchmark_coverage:
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
   evaluated: 1
-  total: 13
+  total: 5
 - benchmark: Knowledge Graphs
   benchmark_slug: knowledge-graphs
   evaluated: 1
@@ -91,9 +91,9 @@ results:
 - &id001
   dataset: Tolokers
   rows:
-  - model: topk
+  - model: Schrödinger
     model_key: polynormer-r
-    model_plain: topk
+    model_plain: Schrödinger
     value: 0.8591
     std: 0.0074
     metric: ROC-AUC
@@ -124,9 +124,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: Schrödinger
     model_key: dc-gnn
-    model_plain: topk
+    model_plain: Schrödinger
     value: 0.8588
     std: 0.0081
     metric: ROC-AUC
@@ -157,9 +157,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: Schrödinger
     model_key: polynormer + wideformer
-    model_plain: topk
+    model_plain: Schrödinger
     value: 0.8533
     std: 0.0023
     metric: ROC-AUC
@@ -249,10 +249,10 @@ results:
     value_note: ''
     sort_value: 0.8443
     sort_std: 0.01
-    global_rank: 10
-    paper_rank: 115
-    rank_delta: 105
-    rank_delta_abs: 105
+    global_rank: 17
+    paper_rank: 123
+    rank_delta: 106
+    rank_delta_abs: 106
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -318,10 +318,10 @@ results:
     value_note: ''
     sort_value: 0.8364
     sort_std: 0.0067
-    global_rank: 28
-    paper_rank: 99
-    rank_delta: 71
-    rank_delta_abs: 71
+    global_rank: 37
+    paper_rank: 107
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -388,10 +388,10 @@ results:
     value_note: ''
     sort_value: 0.8243
     sort_std: 0.0044
-    global_rank: 55
-    paper_rank: 99
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 64
+    paper_rank: 107
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -457,8 +457,8 @@ results:
     value_note: ''
     sort_value: 0.8041
     sort_std: 0.0036
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -525,8 +525,8 @@ results:
     value_note: ''
     sort_value: 0.7666
     sort_std: 0.0044
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -593,8 +593,8 @@ results:
     value_note: ''
     sort_value: 0.7242
     sort_std: 0.0061
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -661,8 +661,8 @@ results:
     value_note: ''
     sort_value: 0.6934
     sort_std: 0.052
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -729,8 +729,8 @@ results:
     value_note: ''
     sort_value: 0.689
     sort_std: 0.0346
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1457,7 +1457,7 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Heterophilic Graphs
+- benchmark: Heterophily Benchmark
   datasets:
   - *id001
 - benchmark: Knowledge Graphs
@@ -1467,8 +1467,8 @@ datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Tolokers
       dataset_slug: tolokers
@@ -1480,5 +1480,6 @@ datasets_by_scope:
     datasets:
     - dataset: WN18RR
       dataset_slug: wn18rr
+main_figure: /figures/2605.06576/main_figure.jpegoptim.jpg
 ---
 

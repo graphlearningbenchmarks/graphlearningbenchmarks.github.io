@@ -1597,26 +1597,19 @@ variants:
     title: 'Labeling Trick: A Theory of Using Graph Neural Networks for Multi-Node
       Representation Learning'
     date: '2020-10-30'
-  - value: 0.6483
-    std: 0.0054
-    model: SEAL-PS2
-    arxiv_id: '2212.12488'
-    title: 'Bring Your Own View: Graph Neural Networks for Link Prediction with Personalized
-      Subgraph Selection'
-    date: '2022-12-23'
-  - value: 0.661
-    std: 0.002
-    model: YinYanGNN
-    arxiv_id: '2310.09516'
-    title: Efficient Link Prediction via GNN Layers Induced by Negative Sampling
-    date: '2023-10-14'
-  - value: 0.6664
-    std: 0.0064
-    model: SIGN
-    arxiv_id: '2409.17475'
-    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
-      Networks
-    date: '2024-09-26'
+  - value: 0.7059
+    std: 0.0029
+    model: PLNLP
+    arxiv_id: '2112.02936'
+    title: Pairwise Learning for Neural Link Prediction
+    date: '2021-12-06'
+  - value: 0.7096
+    std: 0.0055
+    model: GIDN
+    arxiv_id: '2210.01301'
+    title: 'GIDN: A Lightweight Graph Inception Diffusion Network for High-efficient
+      Link Prediction'
+    date: '2022-10-04'
   - value: 0.765
     std: 0.0027
     model: PROXI

@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - IGM
-mrr: 0.0087
-adjusted_mrr: 0.0058
+mrr: 0.0089
+adjusted_mrr: 0.006
 mrr_dataset_count: 2
 benchmark_categories:
 - MoleculeNet
@@ -71,12 +71,12 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id002
+- &id001
   dataset: BACE
   rows:
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: protomol
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: mmsg
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: memgnn
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -232,8 +232,8 @@ results:
     value_note: ''
     sort_value: 0.8265
     sort_std: 0.0117
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -300,8 +300,8 @@ results:
     value_note: ''
     sort_value: 0.8098
     sort_std: 0.0125
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -341,20 +341,19 @@ results:
     date_iso: '2023-12-18'
     published_venue: AAAI 2023
     published_conference: AAAI 2023
-    at_pub_value: 0.7515
-    at_pub_std: 0.0593
-    at_pub_source_arxiv: '2311.04837'
-    at_pub_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    at_pub_source_date_iso: '2023-11-08'
-    at_pub_source_date_label: '2023'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-12-18'
     value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: 0.047800000000000065
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -369,12 +368,12 @@ results:
     value_note: ''
     sort_value: 0.7993
     sort_std: 0.0203
-    global_rank: 169
-    paper_rank: 169
+    global_rank: 167
+    paper_rank: 167
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -437,8 +436,8 @@ results:
     value_note: ''
     sort_value: 0.7963
     sort_std: 0.0187
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 176
+    paper_rank: 176
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -505,8 +504,8 @@ results:
     value_note: ''
     sort_value: 0.7936
     sort_std: 0.0272
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 181
+    paper_rank: 181
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -573,8 +572,8 @@ results:
     value_note: ''
     sort_value: 0.7912
     sort_std: 0.0275
-    global_rank: 195
-    paper_rank: 195
+    global_rank: 191
+    paper_rank: 191
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -641,8 +640,8 @@ results:
     value_note: ''
     sort_value: 0.7885
     sort_std: 0.0126
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 197
+    paper_rank: 197
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -709,8 +708,8 @@ results:
     value_note: ''
     sort_value: 0.7783
     sort_std: 0.0349
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 215
+    paper_rank: 215
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -777,8 +776,8 @@ results:
     value_note: ''
     sort_value: 0.7751
     sort_std: 0.0246
-    global_rank: 223
-    paper_rank: 223
+    global_rank: 218
+    paper_rank: 218
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -845,8 +844,8 @@ results:
     value_note: ''
     sort_value: 0.7696
     sort_std: 0.0188
-    global_rank: 228
-    paper_rank: 228
+    global_rank: 224
+    paper_rank: 224
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -865,12 +864,45 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: BBBP
   rows:
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
+    model_key: magprompt+
+    model_plain: MAGPrompt+
+    value: 0.9432
+    std: 0.0238
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-05'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9432
+    sort_std: 0.0238
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MAGPrompt+
     model_key: cams-llama
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -894,7 +926,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.942
     sort_std: null
     comparison_type: global_top
@@ -902,9 +934,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: se(3)-i mpph
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -929,42 +961,9 @@ results:
     feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
       homology
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.94
     sort_std: 0.021
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: UnifiedMolPretrain
-    model_key: masking node + supervised
-    model_plain: UnifiedMolPretrain
-    value: 0.9343
-    std: 0.025
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2207.06010'
-    title: Does GNN Pretraining Help Molecular Representation?
-    date: Jul 13, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-13'
-    venue: Neural Information Processing Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9343
-    sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1027,10 +1026,10 @@ results:
     value_note: ''
     sort_value: 0.7155
     sort_std: 0.0156
-    global_rank: 112
-    paper_rank: 193
-    rank_delta: 81
-    rank_delta_abs: 81
+    global_rank: 107
+    paper_rank: 183
+    rank_delta: 76
+    rank_delta_abs: 76
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1095,8 +1094,8 @@ results:
     value_note: ''
     sort_value: 0.7103
     sort_std: 0.0079
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1136,19 +1135,18 @@ results:
     date_iso: '2023-12-18'
     published_venue: AAAI 2023
     published_conference: AAAI 2023
-    at_pub_value: 0.6442
-    at_pub_std: 0.0088
-    at_pub_source_arxiv: '2311.04837'
-    at_pub_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    at_pub_source_date_iso: '2023-11-08'
-    at_pub_source_date_label: '2023'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-12-18'
     value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: 0.053100000000000036
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1164,16 +1162,15 @@ results:
     value_note: ''
     sort_value: 0.6973
     sort_std: 0.0154
-    global_rank: 161
-    paper_rank: 161
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    comparison_source_arxiv: '2311.04837'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: CIGA
@@ -1233,8 +1230,8 @@ results:
     value_note: ''
     sort_value: 0.6965
     sort_std: 0.0132
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 157
+    paper_rank: 157
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1301,8 +1298,8 @@ results:
     value_note: ''
     sort_value: 0.6913
     sort_std: 0.0145
-    global_rank: 177
-    paper_rank: 177
+    global_rank: 167
+    paper_rank: 167
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1369,8 +1366,8 @@ results:
     value_note: ''
     sort_value: 0.6867
     sort_std: 0.0138
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1437,8 +1434,8 @@ results:
     value_note: ''
     sort_value: 0.6844
     sort_std: 0.0208
-    global_rank: 194
-    paper_rank: 194
+    global_rank: 184
+    paper_rank: 184
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1505,8 +1502,8 @@ results:
     value_note: ''
     sort_value: 0.6693
     sort_std: 0.0231
-    global_rank: 235
-    paper_rank: 235
+    global_rank: 226
+    paper_rank: 226
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1573,8 +1570,8 @@ results:
     value_note: ''
     sort_value: 0.6577
     sort_std: 0.0336
-    global_rank: 259
-    paper_rank: 259
+    global_rank: 249
+    paper_rank: 249
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1641,8 +1638,8 @@ results:
     value_note: ''
     sort_value: 0.6486
     sort_std: 0.0213
-    global_rank: 275
-    paper_rank: 275
+    global_rank: 265
+    paper_rank: 265
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1673,10 +1670,11 @@ datasets_by_scope:
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:
-    - dataset: BBBP
-      dataset_slug: bbbp
     - dataset: BACE
       dataset_slug: bace
+    - dataset: BBBP
+      dataset_slug: bbbp
 single_proposed_model: IGM
+main_figure: /figures/2312.10988/main_figure.jpegoptim.jpg
 ---
 

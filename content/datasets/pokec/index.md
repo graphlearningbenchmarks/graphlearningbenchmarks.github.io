@@ -13,7 +13,7 @@ stats:
   avg_nodes: 662143.0
   avg_edges: 13806079.0
   num_classes: 2
-result_count: 74
+result_count: 80
 best_model:
   model: Polynormer-r
   value: 0.861
@@ -59,6 +59,10 @@ papers:
   title: Interpreting Unfairness in Graph Neural Networks via Training Node Attribution
   date_iso: '2022-11-25'
   venue: AAAI 2022
+- arxiv_id: '2202.04187'
+  title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
+  date_iso: '2022-02-08'
+  venue: ''
 - arxiv_id: '2202.03580'
   title: Convolutional Neural Networks on Graphs with Chebyshev Approximation, Revisited
   date_iso: '2022-02-04'
@@ -972,6 +976,58 @@ variants:
     - 0.7223
     metric_stds:
     - 0.0018
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04187'
+    title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
+    date: Feb 8, 2022
+    date_iso: '2022-02-08'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7178
+    metric_stds:
+    - 0.0037
+  - model: SGC
+    model_plain: SGC
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04187'
+    title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
+    date: Feb 8, 2022
+    date_iso: '2022-02-08'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7124
+    metric_stds:
+    - 0.0046
   - model: NodeFormer
     model_plain: NodeFormer
     is_baseline: true
@@ -996,6 +1052,84 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.71
+    metric_stds:
+    - 0.013
+  - model: FMP
+    model_plain: FMP
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04187'
+    title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
+    date: Feb 8, 2022
+    date_iso: '2022-02-08'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.705
+    metric_stds:
+    - 0.005
+  - model: MLP
+    model_plain: MLP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2202.04187'
+    title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
+    date: Feb 8, 2022
+    date_iso: '2022-02-08'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7048
+    metric_stds:
+    - 0.0077
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04187'
+    title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
+    date: Feb 8, 2022
+    date_iso: '2022-02-08'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6976
     metric_stds:
     - 0.013
   - model: DIFFormer-s
@@ -1077,6 +1211,32 @@ variants:
     - 0.6801
     metric_stds:
     - 0.0025
+  - model: APPNP
+    model_plain: APPNP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04187'
+    title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
+    date: Feb 8, 2022
+    date_iso: '2022-02-08'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6691
+    metric_stds:
+    - 0.0146
   - model: GOAT
     model_plain: GOAT
     is_baseline: true
@@ -1234,175 +1394,18 @@ variants:
     - 0.635
     metric_stds:
     - 0.004
-  - model: Van. GCN
-    model_plain: Van. GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14383'
-    title: Interpreting Unfairness in Graph Neural Networks via Training Node Attribution
-    date: Nov 25, 2022
-    date_iso: '2022-11-25'
-    date_display: Nov 2022
-    codebase_url: https://github.com/yushundong/BIND
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.632
-    metric_stds:
-    - 0.007
-  - model: BIND 10%
-    model_plain: BIND 10%
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14383'
-    title: Interpreting Unfairness in Graph Neural Networks via Training Node Attribution
-    date: Nov 25, 2022
-    date_iso: '2022-11-25'
-    date_display: Nov 2022
-    codebase_url: https://github.com/yushundong/BIND
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.629
-    metric_stds:
-    - 0.004
-  - model: MLP
-    model_plain: MLP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2202.03580'
-    title: Convolutional Neural Networks on Graphs with Chebyshev Approximation, Revisited
-    date: Feb 4, 2022
-    date_iso: '2022-02-04'
-    date_display: Feb 2022
-    codebase_url: https://github.com/ivam-he/ChebNetII
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6237
-    metric_stds:
-    - 0.0002
-  - model: GAT-NSampler
-    model_plain: GAT-NSampler
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6232
-    metric_stds:
-    - 0.0065
-  - model: GCN
-    model_plain: GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2301.09474'
-    title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    date: Jan 23, 2023
-    date_iso: '2023-01-23'
-    date_display: Jan 2023
-    codebase_url: https://github.com/qitianwu/DIFFormer
-    published_conference: ICLR 2023
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.6231
-    metric_stds:
-    - 0.0113
-  - model: EDITS
-    model_plain: EDITS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14383'
-    title: Interpreting Unfairness in Graph Neural Networks via Training Node Attribution
-    date: Nov 25, 2022
-    date_iso: '2022-11-25'
-    date_display: Nov 2022
-    codebase_url: https://github.com/yushundong/BIND
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.616
-    metric_stds:
-    - 0.009
-  row_count: 74
+  row_count: 80
   rows_json: /data/datasets/pokec/standard-split-rows.json
   chart_json: /data/datasets/pokec/standard-split-chart.json
   arch_counts:
-    gnn: 46
+    gnn: 51
     hybrid: 14
     graph_transformer: 11
     llm: 0
     walk: 0
-    traditional: 3
+    traditional: 4
   metric_counts:
-  - 74
+  - 80
   milestones: &id001
   - value: 0.8233
     std: 0.0028

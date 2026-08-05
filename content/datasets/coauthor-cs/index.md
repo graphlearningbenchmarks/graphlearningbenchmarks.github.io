@@ -9,7 +9,7 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Coauthor.html
 stats: null
-result_count: 338
+result_count: 346
 best_model:
   model: DoG
   value: 0.969
@@ -191,10 +191,6 @@ papers:
     Contrastive Learning
   date_iso: '2022-02-17'
   venue: AAAI 2022
-- arxiv_id: '2202.04936'
-  title: Robust Graph Representation Learning for Local Corruption Recovery
-  date_iso: '2022-02-10'
-  venue: WWW 2022
 - arxiv_id: '2201.09830'
   title: Learning Graph Augmentations to Learn Graph Representations
   date_iso: '2022-01-24'
@@ -243,6 +239,10 @@ papers:
   title: Unifying Graph Convolutional Neural Networks and Label Propagation
   date_iso: '2020-02-17'
   venue: ''
+- arxiv_id: '1911.05485'
+  title: Diffusion Improves Graph Learning
+  date_iso: '2019-10-28'
+  venue: NeurIPS 2019
 - arxiv_id: '1909.11715'
   title: 'GraphMix: Improved Training of GNNs for Semi-Supervised Learning'
   date_iso: '2019-09-25'
@@ -280,9 +280,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -1883,18 +1883,18 @@ variants:
     - null
     - null
     - null
-  row_count: 338
+  row_count: 346
   rows_json: /data/datasets/coauthor-cs/standard-split-rows.json
   chart_json: /data/datasets/coauthor-cs/standard-split-chart.json
   arch_counts:
-    gnn: 229
+    gnn: 236
     hybrid: 53
     graph_transformer: 11
     llm: 1
-    walk: 9
-    traditional: 19
+    walk: 10
+    traditional: 21
   metric_counts:
-  - 320
+  - 328
   - 6
   - 12
   - 12
@@ -1905,6 +1905,12 @@ variants:
     arxiv_id: '1909.11715'
     title: 'GraphMix: Improved Training of GNNs for Semi-Supervised Learning'
     date: '2019-09-25'
+  - value: 0.9301
+    std: 0.0007
+    model: GCN (PPR)
+    arxiv_id: '1911.05485'
+    title: Diffusion Improves Graph Learning
+    date: '2019-10-28'
   - value: 0.948
     std: 0.004
     model: GCN-LPA

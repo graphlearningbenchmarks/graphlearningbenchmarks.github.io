@@ -12,7 +12,7 @@ stats:
   avg_nodes: 30561187.0
   avg_edges: null
   num_classes: null
-result_count: 111
+result_count: 112
 best_model:
   model: MPLP
   value: 0.9072
@@ -865,7 +865,7 @@ variants:
     published_conference_short: KDD
     published_conference_slug: kdd
     published_venue: KDD 2023
-    uses_external_data: false
+    uses_external_data: true
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -1014,6 +1014,34 @@ variants:
     - null
     metric_stds:
     - 0.0021
+    - null
+  - model: Classification
+    model_plain: Classification
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2112.02936'
+    title: Pairwise Learning for Neural Link Prediction
+    date: Dec 6, 2021
+    date_iso: '2021-12-06'
+    date_display: Dec 2021
+    codebase_url: https://github.com/zhitao-wang/PLNLP
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8464
+    - null
+    metric_stds:
+    - null
     - null
   - model: GPRGNN
     model_plain: GPRGNN
@@ -1208,7 +1236,7 @@ variants:
     published_conference_short: KDD
     published_conference_slug: kdd
     published_venue: KDD 2023
-    uses_external_data: false
+    uses_external_data: true
     is_best: false
     is_std_outlier: false
     metric_values:
@@ -1530,36 +1558,7 @@ variants:
     metric_stds:
     - 0.001
     - null
-  - model: GATv2
-    model_plain: GATv2
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2508.17630'
-    title: 'Quantum Graph Attention Network: A Novel Quantum Multi-Head Attention
-      Mechanism for Graph Learning'
-    date: Aug 25, 2025
-    date_iso: '2025-08-25'
-    date_display: Aug 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8014
-    - null
-    metric_stds:
-    - 0.0071
-    - null
-  row_count: 111
+  row_count: 112
   rows_json: /data/datasets/ogbl-citation2/standard-split-rows.json
   chart_json: /data/datasets/ogbl-citation2/standard-split-chart.json
   arch_counts:
@@ -1568,9 +1567,9 @@ variants:
     graph_transformer: 1
     llm: 3
     walk: 4
-    traditional: 35
+    traditional: 36
   metric_counts:
-  - 108
+  - 109
   - 3
   milestones: &id001
   - value: 0.8767

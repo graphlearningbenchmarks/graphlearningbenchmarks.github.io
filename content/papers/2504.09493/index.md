@@ -59,8 +59,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FedPG
-mrr: 0.0101
-adjusted_mrr: 0.0034
+mrr: 0.01
+adjusted_mrr: 0.0033
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -77,9 +77,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -111,9 +111,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -234,8 +234,8 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: 0.004
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -301,8 +301,8 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.004
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -368,8 +368,8 @@ results:
     value_note: ''
     sort_value: 0.79
     sort_std: 0.006
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 192
+    paper_rank: 192
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -435,8 +435,8 @@ results:
     value_note: ''
     sort_value: 0.776
     sort_std: 0.005
-    global_rank: 216
-    paper_rank: 216
+    global_rank: 232
+    paper_rank: 232
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -502,8 +502,8 @@ results:
     value_note: ''
     sort_value: 0.767
     sort_std: 0.003
-    global_rank: 223
-    paper_rank: 223
+    global_rank: 238
+    paper_rank: 238
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -569,8 +569,8 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.004
-    global_rank: 224
-    paper_rank: 224
+    global_rank: 241
+    paper_rank: 241
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -636,8 +636,8 @@ results:
     value_note: ''
     sort_value: 0.763
     sort_std: 0.005
-    global_rank: 225
-    paper_rank: 225
+    global_rank: 243
+    paper_rank: 243
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -703,8 +703,8 @@ results:
     value_note: ''
     sort_value: 0.724
     sort_std: 0.004
-    global_rank: 297
-    paper_rank: 297
+    global_rank: 315
+    paper_rank: 315
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -770,8 +770,8 @@ results:
     value_note: ''
     sort_value: 0.678
     sort_std: 0.003
-    global_rank: 327
-    paper_rank: 327
+    global_rank: 346
+    paper_rank: 346
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -837,8 +837,8 @@ results:
     value_note: ''
     sort_value: 0.676
     sort_std: 0.003
-    global_rank: 328
-    paper_rank: 328
+    global_rank: 347
+    paper_rank: 347
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -871,5 +871,6 @@ datasets_by_scope:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
 single_proposed_model: FedPG
+main_figure: /figures/2504.09493/main_figure.jpegoptim.jpg
 ---
 

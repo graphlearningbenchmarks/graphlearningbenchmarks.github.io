@@ -177,18 +177,18 @@ mrr: null
 adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
-- Heterophilic Graphs
+- Heterophily Benchmark
 - Other Graph Benchmarks
 - Hypergraph Benchmarks
 benchmark_coverage:
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
   evaluated: 2
-  total: 13
+  total: 5
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 - benchmark: Hypergraph Benchmarks
   benchmark_slug: hypergraph-benchmarks
   evaluated: 2
@@ -1293,9 +1293,42 @@ results:
 - &id002
   dataset: Minesweeper
   rows:
-  - model: topk
+  - model: Tango_GPS
+    model_key: bunn
+    model_plain: Tango_GPS
+    value: 0.9899
+    std: 0.0016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2405.15540'
+    title: Bundle Neural Networks for message diffusion on graphs
+    date: May 24, 2024
+    date_display: May 2024
+    date_iso: '2024-05-24'
+    venue: arXiv.org
+    codebase_url: https://github.com/jacobbamberger/BuNN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9899
+    sort_std: 0.0016
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
     model_key: dc-gnn
-    model_plain: topk
+    model_plain: Tango_GPS
     value: 0.985
     std: 0.0021
     metric: ROC-AUC
@@ -1318,79 +1351,46 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.985
     sort_std: 0.0021
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: topk
-    model_key: polynormer-r
-    model_plain: topk
-    value: 0.9746
-    std: 0.0036
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9746
-    sort_std: 0.0036
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: topk
-    model_key: polynormer + wideformer
-    model_plain: topk
-    value: 0.9726
-    std: 0.0001
+  - model: Tango_GPS
+    model_key: tango_gps
+    model_plain: Tango_GPS
+    value: 0.9839
+    std: 0.0054
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-24'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9726
-    sort_std: 0.0001
+    sort_value: 0.9839
+    sort_std: 0.0054
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GAT
     model_key: gat
@@ -1448,10 +1448,10 @@ results:
     value_note: ''
     sort_value: 0.9391
     sort_std: 0.0035
-    global_rank: 20
-    paper_rank: 66
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 30
+    paper_rank: 85
+    rank_delta: 55
+    rank_delta_abs: 55
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1515,10 +1515,10 @@ results:
     value_note: ''
     sort_value: 0.915
     sort_std: 0.0006
-    global_rank: 44
-    paper_rank: 76
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 59
+    paper_rank: 96
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1584,8 +1584,8 @@ results:
     value_note: ''
     sort_value: 0.9032
     sort_std: 0.0011
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1652,8 +1652,8 @@ results:
     value_note: ''
     sort_value: 0.8942
     sort_std: 0.0
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1720,8 +1720,8 @@ results:
     value_note: ''
     sort_value: 0.89
     sort_std: 0.0
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1788,8 +1788,8 @@ results:
     value_note: ''
     sort_value: 0.8862
     sort_std: 0.0004
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1856,8 +1856,8 @@ results:
     value_note: ''
     sort_value: 0.8782
     sort_std: 0.0034
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1924,8 +1924,8 @@ results:
     value_note: ''
     sort_value: 0.8452
     sort_std: 0.0005
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1992,8 +1992,8 @@ results:
     value_note: ''
     sort_value: 0.8114
     sort_std: 0.0005
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2060,8 +2060,8 @@ results:
     value_note: ''
     sort_value: 0.7802
     sort_std: 0.0
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2083,9 +2083,9 @@ results:
 - &id001
   dataset: Tolokers
   rows:
-  - model: topk
+  - model: Schrödinger
     model_key: polynormer-r
-    model_plain: topk
+    model_plain: Schrödinger
     value: 0.8591
     std: 0.0074
     metric: ROC-AUC
@@ -2116,9 +2116,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: Schrödinger
     model_key: dc-gnn
-    model_plain: topk
+    model_plain: Schrödinger
     value: 0.8588
     std: 0.0081
     metric: ROC-AUC
@@ -2149,9 +2149,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: Schrödinger
     model_key: polynormer + wideformer
-    model_plain: topk
+    model_plain: Schrödinger
     value: 0.8533
     std: 0.0023
     metric: ROC-AUC
@@ -2239,8 +2239,8 @@ results:
     value_note: ''
     sort_value: 0.8443
     sort_std: 0.01
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2306,8 +2306,8 @@ results:
     value_note: ''
     sort_value: 0.8364
     sort_std: 0.0067
-    global_rank: 28
-    paper_rank: 39
+    global_rank: 37
+    paper_rank: 48
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -2374,8 +2374,8 @@ results:
     value_note: ''
     sort_value: 0.8326
     sort_std: 0.001
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2443,8 +2443,8 @@ results:
     value_note: ''
     sort_value: 0.8072
     sort_std: 0.0119
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2512,8 +2512,8 @@ results:
     value_note: ''
     sort_value: 0.7753
     sort_std: 0.0001
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2580,8 +2580,8 @@ results:
     value_note: ''
     sort_value: 0.7735
     sort_std: 0.0003
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2601,7 +2601,7 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Heterophilic Graphs
+- benchmark: Heterophily Benchmark
   datasets:
   - *id001
   - *id002
@@ -2616,8 +2616,8 @@ datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Tolokers
       dataset_slug: tolokers
@@ -2635,5 +2635,6 @@ datasets_by_scope:
       dataset_slug: cora-ca
     - dataset: DBLP-CA
       dataset_slug: dblp-ca
+main_figure: /figures/2406.06642/main_figure.jpegoptim.jpg
 ---
 

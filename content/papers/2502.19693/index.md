@@ -407,9 +407,9 @@ results:
     sort_value: 0.791
     sort_std: null
     global_rank: 1
-    paper_rank: 60
-    rank_delta: 59
-    rank_delta_abs: 59
+    paper_rank: 61
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -418,9 +418,9 @@ results:
     comparison_source_arxiv: '2403.13268'
     is_best: true
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: gamlp
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -451,9 +451,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: glem-gnn
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -788,7 +788,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5173
     sort_std: null
-    global_rank: 73
+    global_rank: 75
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -814,9 +814,9 @@ results:
 - &id002
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -848,9 +848,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -881,9 +881,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -973,10 +973,10 @@ results:
     value_note: ''
     sort_value: 0.8383
     sort_std: 0.0014
-    global_rank: 49
-    paper_rank: 173
-    rank_delta: 124
-    rank_delta_abs: 124
+    global_rank: 51
+    paper_rank: 187
+    rank_delta: 136
+    rank_delta_abs: 136
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1043,10 +1043,10 @@ results:
     value_note: ''
     sort_value: 0.831
     sort_std: 0.008
-    global_rank: 65
-    paper_rank: 126
-    rank_delta: 61
-    rank_delta_abs: 61
+    global_rank: 67
+    paper_rank: 131
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1103,7 +1103,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8196
     sort_std: 0.0024
-    global_rank: 94
+    global_rank: 95
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1165,7 +1165,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8071
     sort_std: null
-    global_rank: 122
+    global_rank: 127
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1227,7 +1227,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7999
     sort_std: null
-    global_rank: 138
+    global_rank: 144
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1289,7 +1289,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7962
     sort_std: null
-    global_rank: 149
+    global_rank: 158
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1334,12 +1334,11 @@ results:
     published_venue: ICLR 2025
     published_conference: ICLR 2025
     at_pub_value: 0.7897
-    at_pub_std: null
-    at_pub_source_arxiv: '2310.12457'
-    at_pub_source_title: 'MuseGNN: Forming Scalable, Convergent GNN Layers that Minimize
-      a Sampling-Based Energy'
-    at_pub_source_date_iso: '2023-10-19'
-    at_pub_source_date_label: ICLR 2023
+    at_pub_std: 0.0033
+    at_pub_source_arxiv: '2305.02866'
+    at_pub_source_title: Hierarchical Transformer for Scalable Graph Learning
+    at_pub_source_date_iso: '2023-05-04'
+    at_pub_source_date_label: IJCAI 2023
     value_gap_source_date_iso: '2023-10-19'
     value_gap_source_date_label: ICLR 2023
     gap_vs_at_pub: null
@@ -1361,8 +1360,8 @@ results:
     value_note: ''
     sort_value: 0.7897
     sort_std: null
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 195
+    paper_rank: 195
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1420,7 +1419,7 @@ results:
     today_delta_significant: false
     sort_value: 0.787
     sort_std: null
-    global_rank: 192
+    global_rank: 208
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1482,7 +1481,7 @@ results:
     today_delta_significant: false
     sort_value: 0.0017
     sort_std: null
-    global_rank: 374
+    global_rank: 395
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1529,5 +1528,6 @@ datasets_by_scope:
       dataset_slug: ogbn-products
     - dataset: ogbn-papers100M
       dataset_slug: ogbn-papers100m
+main_figure: /figures/2502.19693/main_figure.jpegoptim.jpg
 ---
 

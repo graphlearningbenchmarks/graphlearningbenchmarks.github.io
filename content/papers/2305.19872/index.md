@@ -81,9 +81,9 @@ results:
 - &id003
   dataset: ACM
   rows:
-  - model: SHGN
+  - model: SlotGAT
     model_key: hetgnn
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.979
     std: null
     metric: Micro-F1
@@ -114,9 +114,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SHGN
+  - model: SlotGAT
     model_key: comch
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.947
     std: null
     metric: Micro-F1
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SHGN
+  - model: SlotGAT
     model_key: lmsps
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.9469
     std: 0.0036
     metric: Micro-F1
@@ -280,10 +280,10 @@ results:
     published_conference: WWW 2023
     at_pub_value: 0.9141
     at_pub_std: 0.0075
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -306,9 +306,9 @@ results:
     sort_value: 0.9402
     sort_std: null
     global_rank: 7
-    paper_rank: 52
-    rank_delta: 45
-    rank_delta_abs: 45
+    paper_rank: 53
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -510,9 +510,9 @@ results:
     sort_value: 0.9375
     sort_std: null
     global_rank: 14
-    paper_rank: 47
-    rank_delta: 33
-    rank_delta_abs: 33
+    paper_rank: 48
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -552,10 +552,10 @@ results:
     published_conference: WWW 2023
     at_pub_value: 0.9077
     at_pub_std: 0.0065
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -578,9 +578,9 @@ results:
     sort_value: 0.9361
     sort_std: null
     global_rank: 17
-    paper_rank: 58
-    rank_delta: 41
-    rank_delta_abs: 41
+    paper_rank: 59
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -783,9 +783,9 @@ results:
     sort_value: 0.9278
     sort_std: null
     global_rank: 31
-    paper_rank: 42
-    rank_delta: 11
-    rank_delta_abs: 11
+    paper_rank: 43
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -852,9 +852,9 @@ results:
     sort_value: 0.9258
     sort_std: null
     global_rank: 34
-    paper_rank: 55
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 56
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -922,9 +922,9 @@ results:
     sort_value: 0.9246
     sort_std: null
     global_rank: 36
-    paper_rank: 44
-    rank_delta: 8
-    rank_delta_abs: 8
+    paper_rank: 45
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -990,8 +990,8 @@ results:
     value_note: ''
     sort_value: 0.9233
     sort_std: 0.0038
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1059,8 +1059,8 @@ results:
     value_note: ''
     sort_value: 0.9228
     sort_std: 0.0027
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1103,10 +1103,10 @@ results:
     published_conference: WWW 2023
     at_pub_value: 0.9079
     at_pub_std: 0.0043
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1128,8 +1128,8 @@ results:
     value_note: ''
     sort_value: 0.9185
     sort_std: null
-    global_rank: 49
-    paper_rank: 58
+    global_rank: 50
+    paper_rank: 59
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -1151,9 +1151,9 @@ results:
 - &id002
   dataset: DBLP
   rows:
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: herec
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -1184,9 +1184,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: hetsann
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -1217,9 +1217,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: deepwalk
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -1442,9 +1442,9 @@ results:
     sort_value: 0.952
     sort_std: 0.0203
     global_rank: 13
-    paper_rank: 38
-    rank_delta: 25
-    rank_delta_abs: 25
+    paper_rank: 39
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1484,10 +1484,10 @@ results:
     published_conference: WWW 2023
     at_pub_value: 0.9207
     at_pub_std: 0.005
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1510,9 +1510,9 @@ results:
     sort_value: 0.95
     sort_std: null
     global_rank: 18
-    paper_rank: 70
-    rank_delta: 52
-    rank_delta_abs: 52
+    paper_rank: 71
+    rank_delta: 53
+    rank_delta_abs: 53
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1579,9 +1579,9 @@ results:
     sort_value: 0.946
     sort_std: 0.0031
     global_rank: 28
-    paper_rank: 75
-    rank_delta: 47
-    rank_delta_abs: 47
+    paper_rank: 76
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1620,19 +1620,19 @@ results:
     date_iso: '2023-05-31'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.9251
-    at_pub_std: 0.0128
-    at_pub_source_arxiv: '2210.00248'
-    at_pub_source_title: Heterogeneous Graph Contrastive Multi-view Learning
-    at_pub_source_date_iso: '2022-10-01'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.9339
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-10-25'
     value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.008799999999999919
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
@@ -1648,9 +1648,9 @@ results:
     sort_value: 0.9448
     sort_std: 0.0022
     global_rank: 29
-    paper_rank: 50
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 51
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1759,11 +1759,10 @@ results:
     published_conference: WWW 2023
     at_pub_value: 0.9397
     at_pub_std: 0.0054
-    at_pub_source_arxiv: '2302.11329'
-    at_pub_source_title: 'HINormer: Representation Learning On Heterogeneous Information
-      Networks with Graph Transformer'
-    at_pub_source_date_iso: '2023-02-22'
-    at_pub_source_date_label: WWW 2023
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-10-25'
     value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
@@ -1785,8 +1784,8 @@ results:
     value_note: ''
     sort_value: 0.9417
     sort_std: 0.0026
-    global_rank: 38
-    paper_rank: 39
+    global_rank: 39
+    paper_rank: 40
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1853,8 +1852,8 @@ results:
     value_note: ''
     sort_value: 0.9376
     sort_std: 0.0045
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1922,8 +1921,8 @@ results:
     value_note: ''
     sort_value: 0.9369
     sort_std: null
-    global_rank: 45
-    paper_rank: 70
+    global_rank: 46
+    paper_rank: 71
     rank_delta: 25
     rank_delta_abs: 25
     rank_delta_direction: worse
@@ -1990,8 +1989,8 @@ results:
     value_note: ''
     sort_value: 0.9297
     sort_std: 0.0048
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2058,8 +2057,8 @@ results:
     value_note: ''
     sort_value: 0.9284
     sort_std: 0.0034
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2126,8 +2125,8 @@ results:
     value_note: ''
     sort_value: 0.9257
     sort_std: 0.0037
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2195,8 +2194,8 @@ results:
     value_note: ''
     sort_value: 0.9245
     sort_std: 0.0076
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2219,9 +2218,9 @@ results:
 - &id004
   dataset: IMDB
   rows:
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-sc
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8133
     std: 0.0179
     metric: Micro-F1
@@ -2230,9 +2229,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -2252,9 +2251,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: sage ban
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8073
     std: 0.002
     metric: Micro-F1
@@ -2285,9 +2284,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-cs
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8033
     std: 0.0094
     metric: Micro-F1
@@ -2296,9 +2295,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -2895,11 +2894,10 @@ results:
     published_conference: WWW 2023
     at_pub_value: 0.6514
     at_pub_std: 0.0045
-    at_pub_source_arxiv: '2302.11329'
-    at_pub_source_title: 'HINormer: Representation Learning On Heterogeneous Information
-      Networks with Graph Transformer'
-    at_pub_source_date_iso: '2023-02-22'
-    at_pub_source_date_label: WWW 2023
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-05-31'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: 0.031299999999999994
@@ -2928,9 +2926,8 @@ results:
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'HINormer: Representation Learning On Heterogeneous Information
-      Networks with Graph Transformer'
-    comparison_source_arxiv: '2302.11329'
+    comparison_source_title: Heterogeneous Graph Benchmarks
+    comparison_source_arxiv: '2112.14936'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -2965,11 +2962,10 @@ results:
     published_conference: WWW 2023
     at_pub_value: 0.6482
     at_pub_std: 0.0064
-    at_pub_source_arxiv: '2302.11329'
-    at_pub_source_title: 'HINormer: Representation Learning On Heterogeneous Information
-      Networks with Graph Transformer'
-    at_pub_source_date_iso: '2023-02-22'
-    at_pub_source_date_label: WWW 2023
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-05-31'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: 0.03310000000000002
@@ -2998,9 +2994,8 @@ results:
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'HINormer: Representation Learning On Heterogeneous Information
-      Networks with Graph Transformer'
-    comparison_source_arxiv: '2302.11329'
+    comparison_source_title: Heterogeneous Graph Benchmarks
+    comparison_source_arxiv: '2112.14936'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -3105,10 +3100,10 @@ results:
     published_conference: WWW 2023
     at_pub_value: 0.6467
     at_pub_std: 0.0167
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-05-31'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: 0.03149999999999997
@@ -3173,10 +3168,10 @@ results:
     published_conference: WWW 2023
     at_pub_value: 0.6463
     at_pub_std: 0.0058
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-05-31'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: 0.03059999999999996
@@ -3205,8 +3200,8 @@ results:
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    comparison_source_arxiv: '2207.02547'
+    comparison_source_title: Heterogeneous Graph Benchmarks
+    comparison_source_arxiv: '2112.14936'
     is_best: false
     is_std_outlier: false
   - model: RGCN
@@ -3267,8 +3262,8 @@ results:
     value_note: ''
     sort_value: 0.6651
     sort_std: 0.0028
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3514,8 +3509,8 @@ results:
     value_note: ''
     sort_value: 0.4927
     sort_std: 0.0061
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3582,10 +3577,10 @@ results:
     value_note: ''
     sort_value: 0.4811
     sort_std: 0.0048
-    global_rank: 34
-    paper_rank: 37
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 35
+    paper_rank: 39
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3631,5 +3626,6 @@ datasets_by_scope:
     - dataset: IMDB
       dataset_slug: imdb
 single_proposed_model: PSHGCN
+main_figure: /figures/2305.19872/main_figure.jpegoptim.jpg
 ---
 

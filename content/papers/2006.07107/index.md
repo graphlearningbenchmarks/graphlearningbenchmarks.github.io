@@ -62,8 +62,8 @@ paper_type: method
 proposed_models:
 - NodeNorm₁
 - NodeNorm
-mrr: 0.0029
-adjusted_mrr: 0.0029
+mrr: 0.0025
+adjusted_mrr: 0.0025
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -85,9 +85,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -118,9 +118,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: is-gib
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -152,9 +152,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: eerm
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -224,8 +224,8 @@ results:
       Learning'
     at_pub_source_date_iso: '2019-09-25'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2021-06-05'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2020-08-22'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -234,21 +234,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.802
+    true_value: 0.813
     true_std: null
-    value_gap_source_arxiv: '2106.02892'
-    value_gap_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
+    value_gap_source_arxiv: '2008.09864'
+    value_gap_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.07900000000000007
+    value_gap: 0.08999999999999997
     has_value_note: false
     value_note: ''
-    sort_value: 0.802
+    sort_value: 0.813
     sort_std: null
-    global_rank: 39
-    paper_rank: 413
-    rank_delta: 374
-    rank_delta_abs: 374
+    global_rank: 35
+    paper_rank: 479
+    rank_delta: 444
+    rank_delta_abs: 444
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -314,8 +314,8 @@ results:
     value_note: ''
     sort_value: 0.731
     sort_std: null
-    global_rank: 311
-    paper_rank: 311
+    global_rank: 372
+    paper_rank: 372
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -383,8 +383,8 @@ results:
     value_note: ''
     sort_value: 0.648
     sort_std: null
-    global_rank: 740
-    paper_rank: 740
+    global_rank: 834
+    paper_rank: 834
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -406,9 +406,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -440,9 +440,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -474,9 +474,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -546,8 +546,8 @@ results:
       Learning'
     at_pub_source_date_iso: '2019-09-25'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2021-06-05'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2020-08-22'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -556,21 +556,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.874
+    true_value: 0.89
     true_std: null
-    value_gap_source_arxiv: '2106.02892'
-    value_gap_source_title: Training Robust Graph Neural Networks with Topology Adaptive
-      Edge Dropping
+    value_gap_source_arxiv: '2008.09864'
+    value_gap_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.04600000000000004
+    value_gap: 0.062000000000000055
     has_value_note: false
     value_note: ''
-    sort_value: 0.874
+    sort_value: 0.89
     sort_std: null
-    global_rank: 146
-    paper_rank: 482
-    rank_delta: 336
-    rank_delta_abs: 336
+    global_rank: 70
+    paper_rank: 552
+    rank_delta: 482
+    rank_delta_abs: 482
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -636,8 +636,8 @@ results:
     value_note: ''
     sort_value: 0.837
     sort_std: null
-    global_rank: 380
-    paper_rank: 380
+    global_rank: 437
+    paper_rank: 437
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -705,8 +705,8 @@ results:
     value_note: ''
     sort_value: 0.783
     sort_std: null
-    global_rank: 710
-    paper_rank: 710
+    global_rank: 825
+    paper_rank: 825
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -728,9 +728,43 @@ results:
 - &id003
   dataset: PubMed
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
+    model_key: lgtl
+    model_plain: R-SoftGraphAIN
+    value: 0.9518
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9518
+    sort_std: 0.0011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: sagn
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -754,7 +788,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.9517
     sort_std: null
     comparison_type: global_top
@@ -762,9 +796,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
     model_key: mixhop (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -788,43 +822,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9513
     sort_std: 0.0038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
-    model_key: graphsage (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
-    value: 0.9511
-    std: 0.0036
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.13902'
-    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
-      Framework'
-    date: May 22, 2024
-    date_display: May 2024
-    date_iso: '2024-05-22'
-    venue: Web Search and Data Mining
-    codebase_url: https://github.com/QiaoYRan/LOGIN
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9511
-    sort_std: 0.0036
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -888,10 +888,10 @@ results:
     value_note: ''
     sort_value: 0.909
     sort_std: null
-    global_rank: 33
-    paper_rank: 430
-    rank_delta: 397
-    rank_delta_abs: 397
+    global_rank: 47
+    paper_rank: 509
+    rank_delta: 462
+    rank_delta_abs: 462
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -957,8 +957,8 @@ results:
     value_note: ''
     sort_value: 0.808
     sort_std: null
-    global_rank: 337
-    paper_rank: 337
+    global_rank: 408
+    paper_rank: 408
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1026,10 +1026,10 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: null
-    global_rank: 598
-    paper_rank: 651
-    rank_delta: 53
-    rank_delta_abs: 53
+    global_rank: 712
+    paper_rank: 776
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1049,9 +1049,9 @@ results:
 - &id004
   dataset: ogbn-proteins
   rows:
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8942
     std: 0.0007
     metric: ROC-AUC
@@ -1083,9 +1083,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: x_wo/ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8915
     std: 0.0012
     metric: ROC-AUC
@@ -1117,9 +1117,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: mog
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8904
     std: 0.0072
     metric: ROC-AUC
@@ -1208,8 +1208,8 @@ results:
     value_note: ''
     sort_value: 0.8226
     sort_std: 0.0093
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1255,33 +1255,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-06-12'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7936
-    true_std: 0.0086
-    value_gap_source_arxiv: '2006.07107'
-    value_gap_source_title: Understanding and Resolving Performance Degradation in
-      Deep Graph Convolutional Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    today_delta_significant: true
+    true_value: 0.813
+    true_std: 0.0065
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.019399999999999973
     has_value_note: false
     value_note: ''
-    sort_value: 0.7936
-    sort_std: 0.0086
-    global_rank: 29
-    paper_rank: 29
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.813
+    sort_std: 0.0065
+    global_rank: 22
+    paper_rank: 34
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1323,5 +1323,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbn-proteins
       dataset_slug: ogbn-proteins
+main_figure: /figures/2006.07107/main_figure.jpegoptim.jpg
 ---
 

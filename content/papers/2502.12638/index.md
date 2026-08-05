@@ -94,9 +94,9 @@ results:
 - &id001
   dataset: ESOL
   rows:
-  - model: KCL
+  - model: AMCT
     model_key: mat
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.278
     std: 0.02
     metric: RMSE
@@ -128,9 +128,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: KCL
+  - model: AMCT
     model_key: smiles
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.356
     std: 0.017
     metric: RMSE
@@ -162,37 +162,171 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: KCL
-    model_key: conan-fgw
-    model_plain: KCL
-    value: 0.514
-    std: 0.019
+  - model: AMCT
+    model_key: graphormer-spis
+    model_plain: AMCT
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2402.01975'
-    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
-    date: Feb 3, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-03'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.514
-    sort_std: 0.019
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 1.43
+    std: 0.05
+    paper_value: 1.43
+    paper_std: 0.05
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semi
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Scaffold split
+    date: Feb 18, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-18'
+    published_venue: ICLR 2025
+    published_conference: ICLR 2025
+    at_pub_value: 0.564
+    at_pub_std: 0.015
+    at_pub_source_arxiv: '2305.13987'
+    at_pub_source_title: On Structural Expressive Power of Graph Transformers
+    at_pub_source_date_iso: '2023-05-23'
+    at_pub_source_date_label: KDD 2023
+    value_gap_source_date_iso: '2023-05-23'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: 0.866
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.564
+    true_std: 0.015
+    value_gap_source_arxiv: '2305.13987'
+    value_gap_source_title: On Structural Expressive Power of Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.866
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.564
+    sort_std: 0.015
+    global_rank: 9
+    paper_rank: 114
+    rank_delta: 105
+    rank_delta_abs: 105
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: On Structural Expressive Power of Graph Transformers
+    comparison_source_arxiv: '2305.13987'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 1.45
+    std: 0.02
+    paper_value: 1.45
+    paper_std: 0.02
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: xu2019powerful
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Scaffold split
+    date: Feb 18, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-18'
+    published_venue: ICLR 2025
+    published_conference: ICLR 2025
+    at_pub_value: 0.626
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '2305.13987'
+    at_pub_source_title: On Structural Expressive Power of Graph Transformers
+    at_pub_source_date_iso: '2023-05-23'
+    at_pub_source_date_label: KDD 2023
+    value_gap_source_date_iso: '2023-05-23'
+    value_gap_source_date_label: KDD 2023
+    gap_vs_at_pub: 0.824
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.626
+    true_std: 0.017
+    value_gap_source_arxiv: '2305.13987'
+    value_gap_source_title: On Structural Expressive Power of Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.824
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.626
+    sort_std: 0.017
+    global_rank: 26
+    paper_rank: 114
+    rank_delta: 88
+    rank_delta_abs: 88
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: On Structural Expressive Power of Graph Transformers
+    comparison_source_arxiv: '2305.13987'
     is_best: false
     is_std_outlier: false
   - model: D-MPNN
@@ -251,82 +385,15 @@ results:
     value_note: ''
     sort_value: 0.635
     sort_std: 0.027
-    global_rank: 20
-    paper_rank: 60
-    rank_delta: 40
-    rank_delta_abs: 40
+    global_rank: 28
+    paper_rank: 70
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Optimal Transport Graph Neural Networks
     comparison_source_arxiv: '2006.04804'
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 1.45
-    std: 0.02
-    paper_value: 1.45
-    paper_std: 0.02
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: xu2019powerful
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Feb 18, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-18'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: 0.626
-    at_pub_std: 0.017
-    at_pub_source_arxiv: '2305.13987'
-    at_pub_source_title: On Structural Expressive Power of Graph Transformers
-    at_pub_source_date_iso: '2023-05-23'
-    at_pub_source_date_label: KDD 2023
-    value_gap_source_date_iso: '2020-06-08'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.824
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.665
-    true_std: 0.026
-    value_gap_source_arxiv: '2006.04804'
-    value_gap_source_title: Optimal Transport Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.7849999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.665
-    sort_std: 0.026
-    global_rank: 24
-    paper_rank: 104
-    rank_delta: 80
-    rank_delta_abs: 80
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: On Structural Expressive Power of Graph Transformers
-    comparison_source_arxiv: '2305.13987'
     is_best: false
     is_std_outlier: false
   - model: MoLlama
@@ -387,8 +454,8 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: 0.01
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -455,8 +522,8 @@ results:
     value_note: ''
     sort_value: 0.777
     sort_std: 0.02
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -464,74 +531,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 1.43
-    std: 0.05
-    paper_value: 1.43
-    paper_std: 0.05
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kipf2017semi
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Feb 18, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-18'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: 0.564
-    at_pub_std: 0.015
-    at_pub_source_arxiv: '2305.13987'
-    at_pub_source_title: On Structural Expressive Power of Graph Transformers
-    at_pub_source_date_iso: '2023-05-23'
-    at_pub_source_date_label: KDD 2023
-    value_gap_source_date_iso: '2023-10-25'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: 0.866
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.876
-    true_std: 0.037
-    value_gap_source_arxiv: '2310.16401'
-    value_gap_source_title: Graph Neural Networks with a Distribution of Parametrized
-      Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: 0.5539999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.876
-    sort_std: 0.037
-    global_rank: 47
-    paper_rank: 103
-    rank_delta: 56
-    rank_delta_abs: 56
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: On Structural Expressive Power of Graph Transformers
-    comparison_source_arxiv: '2305.13987'
     is_best: false
     is_std_outlier: false
   - model: ChemBERTa-2
@@ -592,8 +591,8 @@ results:
     value_note: ''
     sort_value: 0.889
     sort_std: 0.0
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -659,10 +658,10 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.028
-    global_rank: 50
-    paper_rank: 59
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 59
+    paper_rank: 69
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -702,11 +701,11 @@ results:
     published_conference: ICLR 2025
     at_pub_value: 1.045
     at_pub_std: 0.064
-    at_pub_source_arxiv: '2312.07633'
-    at_pub_source_title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    at_pub_source_date_iso: '2023-12-12'
-    at_pub_source_date_label: NeurIPS 2023
+    at_pub_source_arxiv: '2310.07351'
+    at_pub_source_title: Atom-Motif Contrastive Transformer for Molecular Property
+      Prediction
+    at_pub_source_date_iso: '2023-10-11'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2023-12-12'
     value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.0050000000000001155
@@ -728,8 +727,8 @@ results:
     value_note: ''
     sort_value: 1.045
     sort_std: 0.064
-    global_rank: 69
-    paper_rank: 70
+    global_rank: 79
+    paper_rank: 80
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -796,8 +795,8 @@ results:
     value_note: ''
     sort_value: 1.07
     sort_std: 0.19
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -865,8 +864,8 @@ results:
     value_note: ''
     sort_value: 1.11
     sort_std: 0.01
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -933,8 +932,8 @@ results:
     value_note: ''
     sort_value: 1.22
     sort_std: 0.02
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -976,11 +975,11 @@ results:
     published_conference: ICLR 2025
     at_pub_value: 1.266
     at_pub_std: 0.147
-    at_pub_source_arxiv: '2312.07633'
-    at_pub_source_title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    at_pub_source_date_iso: '2023-12-12'
-    at_pub_source_date_label: NeurIPS 2023
+    at_pub_source_arxiv: '2310.07351'
+    at_pub_source_title: Atom-Motif Contrastive Transformer for Molecular Property
+      Prediction
+    at_pub_source_date_iso: '2023-10-11'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2023-12-12'
     value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.0040000000000000036
@@ -1002,8 +1001,8 @@ results:
     value_note: ''
     sort_value: 1.266
     sort_std: 0.147
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1070,8 +1069,8 @@ results:
     value_note: ''
     sort_value: 1.41
     sort_std: 0.0
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1138,8 +1137,8 @@ results:
     value_note: ''
     sort_value: 1.5
     sort_std: 0.0
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1323,9 +1322,9 @@ results:
     sort_value: 1.01
     sort_std: 0.064
     global_rank: 8
-    paper_rank: 49
-    rank_delta: 41
-    rank_delta_abs: 41
+    paper_rank: 45
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1529,8 +1528,8 @@ results:
     value_note: ''
     sort_value: 2.03
     sort_std: 0.22
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1597,8 +1596,8 @@ results:
     value_note: ''
     sort_value: 2.047
     sort_std: 0.0
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1606,76 +1605,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 2.87
-    std: 0.14
-    paper_value: 2.87
-    paper_std: 0.14
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: unknown
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kipf2017semi
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Scaffold split
-    date: Feb 18, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-18'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: 2.1519
-    at_pub_std: 0.0645
-    at_pub_source_arxiv: '2311.04837'
-    at_pub_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    at_pub_source_date_iso: '2023-11-08'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-11-08'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.7181000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 2.1519
-    true_std: 0.0645
-    value_gap_source_arxiv: '2311.04837'
-    value_gap_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    value_gap_source_is_current_paper: false
-    value_gap: 0.7181000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 2.1519
-    sort_std: 0.0645
-    global_rank: 48
-    paper_rank: 86
-    rank_delta: 38
-    rank_delta_abs: 38
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    comparison_source_arxiv: '2311.04837'
     is_best: false
     is_std_outlier: false
   - model: MolCLR
@@ -1736,8 +1665,8 @@ results:
     value_note: ''
     sort_value: 2.2
     sort_std: 0.2
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1804,8 +1733,8 @@ results:
     value_note: ''
     sort_value: 2.23
     sort_std: 0.26
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1873,16 +1802,85 @@ results:
     value_note: ''
     sort_value: 2.346
     sort_std: 0.122
-    global_rank: 62
-    paper_rank: 80
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 56
+    paper_rank: 72
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
       Learning for Property Prediction'
     comparison_source_arxiv: '2106.06130'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 2.87
+    std: 0.14
+    paper_value: 2.87
+    paper_std: 0.14
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semi
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Scaffold split
+    date: Feb 18, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-18'
+    published_venue: ICLR 2025
+    published_conference: ICLR 2025
+    at_pub_value: 2.618
+    at_pub_std: 0.298
+    at_pub_source_arxiv: '2310.16401'
+    at_pub_source_title: Graph Neural Networks with a Distribution of Parametrized
+      Graphs
+    at_pub_source_date_iso: '2023-10-25'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-10-25'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.2520000000000002
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 2.618
+    true_std: 0.298
+    value_gap_source_arxiv: '2310.16401'
+    value_gap_source_title: Graph Neural Networks with a Distribution of Parametrized
+      Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2520000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 2.618
+    sort_std: 0.298
+    global_rank: 66
+    paper_rank: 78
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Pretrain-GNN
@@ -1942,8 +1940,8 @@ results:
     value_note: ''
     sort_value: 2.83
     sort_std: 0.12
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2010,8 +2008,8 @@ results:
     value_note: ''
     sort_value: 3.14
     sort_std: 0.0
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2078,8 +2076,8 @@ results:
     value_note: ''
     sort_value: 3.14
     sort_std: 0.0
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2147,11 +2145,11 @@ results:
     value_note: ''
     sort_value: 3.215
     sort_std: 0.755
-    global_rank: 101
-    paper_rank: 102
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
+    global_rank: 93
+    paper_rank: 93
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -2216,8 +2214,8 @@ results:
     value_note: ''
     sort_value: 3.349
     sort_std: 0.097
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3261,5 +3259,6 @@ datasets_by_scope:
     datasets:
     - dataset: QM7b
       dataset_slug: qm7b
+main_figure: /figures/2502.12638/main_figure.jpegoptim.jpg
 ---
 

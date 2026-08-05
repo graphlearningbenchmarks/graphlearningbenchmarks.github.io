@@ -367,5 +367,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: QHNetV2
+main_figure: /figures/2506.09398/main_figure.jpegoptim.jpg
 ---
 

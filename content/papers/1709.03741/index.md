@@ -281,10 +281,10 @@ results:
     value_note: ''
     sort_value: 2.9
     sort_std: 0.135
-    global_rank: 88
+    global_rank: 80
     paper_rank: 6
-    rank_delta: -82
-    rank_delta_abs: 82
+    rank_delta: -74
+    rank_delta_abs: 74
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
@@ -315,5 +315,6 @@ datasets_by_scope:
     - dataset: FreeSolv
       dataset_slug: freesolv
 single_proposed_model: dummy super node
+main_figure: /figures/1709.03741/main_figure.jpegoptim.jpg
 ---
 

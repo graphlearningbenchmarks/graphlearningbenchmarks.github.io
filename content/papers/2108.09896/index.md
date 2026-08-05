@@ -579,5 +579,6 @@ datasets_by_scope:
     - dataset: ACM
       dataset_slug: acm
 single_proposed_model: SL-GAD
+main_figure: /figures/2108.09896/main_figure.jpegoptim.jpg
 ---
 

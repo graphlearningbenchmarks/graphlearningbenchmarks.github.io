@@ -29,8 +29,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CACE
-mrr: 0.0152
-adjusted_mrr: 0.0051
+mrr: 0.0116
+adjusted_mrr: 0.0039
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -149,6 +149,76 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: NequIP
+    model_key: nequip
+    model_plain: NequIP
+    value: 2.2
+    std: null
+    paper_value: 2.2
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: batzner20223
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Energy (E) error for ethanol in MD-17 trained on 1000 configurations
+    date: Feb 12, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-12'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.04
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.14276'
+    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
+      length-scales in molecular systems'
+    at_pub_source_date_iso: '2022-05-28'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 2.16
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.053
+    true_std: null
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    value_gap_source_is_current_paper: false
+    value_gap: 2.1470000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.053
+    sort_std: null
+    global_rank: 34
+    paper_rank: 85
+    rank_delta: 51
+    rank_delta_abs: 51
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'So3krates: Equivariant attention for interactions on
+      arbitrary length-scales in molecular systems'
+    comparison_source_arxiv: '2205.14276'
+    is_best: false
+    is_std_outlier: false
   - model: sGDML
     model_key: sgdml
     model_plain: sGDML
@@ -205,10 +275,10 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 34
-    paper_rank: 66
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 40
+    paper_rank: 86
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -274,10 +344,10 @@ results:
     value_note: ''
     sort_value: 0.061
     sort_std: 0.009
-    global_rank: 35
-    paper_rank: 66
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 41
+    paper_rank: 86
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -316,16 +386,15 @@ results:
     date_iso: '2024-02-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.0061
+    at_pub_value: 0.064
     at_pub_std: null
-    at_pub_source_arxiv: '2402.04836'
-    at_pub_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    at_pub_source_date_iso: '2024-02-07'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
-    gap_vs_at_pub: 2.7939
+    at_pub_source_arxiv: '2003.03123'
+    at_pub_source_title: Directional Message Passing for Molecular Graphs
+    at_pub_source_date_iso: '2020-03-06'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 2.7359999999999998
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -335,24 +404,23 @@ results:
     today_delta_significant: true
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 2.7359999999999998
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 66
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 42
+    paper_rank: 86
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    comparison_source_arxiv: '2402.04836'
+    comparison_source_title: Directional Message Passing for Molecular Graphs
+    comparison_source_arxiv: '2003.03123'
     is_best: false
     is_std_outlier: false
   - model: PaiNN
@@ -413,10 +481,10 @@ results:
     value_note: ''
     sort_value: 0.077
     sort_std: null
-    global_rank: 39
-    paper_rank: 66
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 45
+    paper_rank: 86
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -462,8 +530,8 @@ results:
       Dipole Moments and Partial Charges'
     at_pub_source_date_iso: '2019-02-22'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 3.45
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -474,19 +542,18 @@ results:
     today_delta_significant: true
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 3.42
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 66
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 46
+    paper_rank: 86
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -552,86 +619,16 @@ results:
     value_note: ''
     sort_value: 0.101
     sort_std: null
-    global_rank: 43
-    paper_rank: 66
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 54
+    paper_rank: 86
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
       Proteins, and Crystalline Materials
     comparison_source_arxiv: '2306.09375'
-    is_best: false
-    is_std_outlier: false
-  - model: NequIP
-    model_key: nequip
-    model_plain: NequIP
-    value: 2.2
-    std: null
-    paper_value: 2.2
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: batzner20223
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy (E) error for ethanol in MD-17 trained on 1000 configurations
-    date: Feb 12, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-12'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.0009
-    at_pub_std: null
-    at_pub_source_arxiv: '2402.04836'
-    at_pub_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    at_pub_source_date_iso: '2024-02-07'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 2.1991
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.131
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 2.069
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.131
-    sort_std: null
-    global_rank: 45
-    paper_rank: 65
-    rank_delta: 20
-    rank_delta_abs: 20
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    comparison_source_arxiv: '2402.04836'
     is_best: false
     is_std_outlier: false
   - model: SphereNet
@@ -692,10 +689,10 @@ results:
     value_note: ''
     sort_value: 0.147
     sort_std: null
-    global_rank: 49
-    paper_rank: 68
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 68
+    paper_rank: 88
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -761,8 +758,8 @@ results:
     value_note: ''
     sort_value: 2.37
     sort_std: null
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -795,5 +792,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: CACE
+main_figure: /figures/2402.07472/main_figure.jpegoptim.jpg
 ---
 

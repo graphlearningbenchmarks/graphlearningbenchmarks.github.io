@@ -43,7 +43,7 @@ proposed_models:
 - DropMPNN
 - Drop-1-GNN
 - DropGNN
-mrr: 0.007
+mrr: 0.0068
 adjusted_mrr: 0.0023
 mrr_dataset_count: 1
 benchmark_categories:
@@ -67,9 +67,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -100,9 +100,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -133,9 +133,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -225,9 +225,9 @@ results:
     sort_value: 0.933
     sort_std: 0.029
     global_rank: 34
-    paper_rank: 207
-    rank_delta: 173
-    rank_delta_abs: 173
+    paper_rank: 217
+    rank_delta: 183
+    rank_delta_abs: 183
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -294,9 +294,9 @@ results:
     sort_value: 0.926
     sort_std: 0.042
     global_rank: 47
-    paper_rank: 240
-    rank_delta: 193
-    rank_delta_abs: 193
+    paper_rank: 251
+    rank_delta: 204
+    rank_delta_abs: 204
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -362,8 +362,8 @@ results:
     value_note: ''
     sort_value: 0.906
     sort_std: 0.087
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -431,8 +431,8 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.07
-    global_rank: 142
-    paper_rank: 142
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -500,8 +500,8 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.057
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -568,10 +568,10 @@ results:
     value_note: ''
     sort_value: 0.888
     sort_std: 0.07
-    global_rank: 260
-    paper_rank: 377
-    rank_delta: 117
-    rank_delta_abs: 117
+    global_rank: 272
+    paper_rank: 396
+    rank_delta: 124
+    rank_delta_abs: 124
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -611,11 +611,12 @@ results:
     published_venue: NeurIPS 2021
     published_conference: NeurIPS 2021
     at_pub_value: 0.8583
-    at_pub_std: 0.017
-    at_pub_source_arxiv: '1905.11136'
-    at_pub_source_title: Provably Powerful Graph Networks
-    at_pub_source_date_iso: '2019-05-27'
-    at_pub_source_date_label: NeurIPS 2019
+    at_pub_std: null
+    at_pub_source_arxiv: '1901.08296'
+    at_pub_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
+    at_pub_source_date_iso: '2018-12-14'
+    at_pub_source_date_label: '2018'
     value_gap_source_date_iso: '2023-05-10'
     value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: 0.00029999999999996696
@@ -637,8 +638,8 @@ results:
     value_note: ''
     sort_value: 0.8583
     sort_std: 0.0166
-    global_rank: 387
-    paper_rank: 387
+    global_rank: 408
+    paper_rank: 408
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -661,9 +662,9 @@ results:
   dataset: QM9
   is_multi_metric: true
   rows:
-  - model: DimeNet++
+  - model: Graphormer-SPIS
     model_key: equiformer v2
-    model_plain: DimeNet++
+    model_plain: Graphormer-SPIS
     metric_values:
     - 0.01
     - null
@@ -718,9 +719,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: DimeNet++
+  - model: Graphormer-SPIS
     model_key: eqgat
-    model_plain: DimeNet++
+    model_plain: Graphormer-SPIS
     metric_values:
     - 0.011
     - null
@@ -775,9 +776,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: DimeNet++
+  - model: Graphormer-SPIS
     model_key: equiformer
-    model_plain: DimeNet++
+    model_plain: Graphormer-SPIS
     metric_values:
     - 0.011
     - null
@@ -1149,7 +1150,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 74
+    global_rank: 71
   - model: 1-2-3 GNN
     model_key: 1-2-3 gnn
     model_plain: 1-2-3 GNN
@@ -1228,7 +1229,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 77
+    global_rank: 74
   - model: 1-GNN
     model_key: 1-gnn
     model_plain: 1-GNN
@@ -1307,7 +1308,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 78
+    global_rank: 75
   metrics:
   - gap
   - mu
@@ -1360,5 +1361,6 @@ datasets_by_scope:
     datasets:
     - dataset: QM9
       dataset_slug: qm9
+main_figure: /figures/2111.06283/main_figure.jpegoptim.jpg
 ---
 

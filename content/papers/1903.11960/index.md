@@ -44,8 +44,8 @@ paper_type: method
 proposed_models:
 - LDS (Cora)
 - LDS
-mrr: 0.0029
-adjusted_mrr: 0.001
+mrr: 0.0025
+adjusted_mrr: 0.0008
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -58,7 +58,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 task_categories:
 - graph_classification
 - node_classification
@@ -1053,9 +1053,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -1086,9 +1086,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: is-gib
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -1120,9 +1120,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: eerm
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -1210,8 +1210,8 @@ results:
     value_note: ''
     sort_value: 0.683
     sort_std: 0.013
-    global_rank: 660
-    paper_rank: 660
+    global_rank: 743
+    paper_rank: 743
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1253,11 +1253,10 @@ results:
     published_conference: ICML 2019
     at_pub_value: 0.596
     at_pub_std: null
-    at_pub_source_arxiv: '1803.03735'
-    at_pub_source_title: Attention-based Graph Neural Network for Semi-supervised
-      Learning
-    at_pub_source_date_iso: '2018-02-15'
-    at_pub_source_date_label: '2018'
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
     value_gap_source_date_iso: '2019-03-28'
     value_gap_source_date_label: ICML 2019
     gap_vs_at_pub: 0.08500000000000008
@@ -1278,16 +1277,16 @@ results:
     value_note: ''
     sort_value: 0.681
     sort_std: 0.001
-    global_rank: 662
-    paper_rank: 662
+    global_rank: 746
+    paper_rank: 746
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Attention-based Graph Neural Network for Semi-supervised
-      Learning
-    comparison_source_arxiv: '1803.03735'
+    comparison_source_title: Semi-Supervised Classification with Graph Convolutional
+      Networks
+    comparison_source_arxiv: '1609.02907'
     is_best: false
     is_std_outlier: false
   - model: ManiReg
@@ -1322,11 +1321,10 @@ results:
     published_conference: ICML 2019
     at_pub_value: 0.601
     at_pub_std: null
-    at_pub_source_arxiv: '1803.03735'
-    at_pub_source_title: Attention-based Graph Neural Network for Semi-supervised
-      Learning
-    at_pub_source_date_iso: '2018-02-15'
-    at_pub_source_date_label: '2018'
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
     value_gap_source_date_iso: '2019-03-28'
     value_gap_source_date_label: ICML 2019
     gap_vs_at_pub: 0.07600000000000007
@@ -1347,16 +1345,16 @@ results:
     value_note: ''
     sort_value: 0.677
     sort_std: 0.016
-    global_rank: 672
-    paper_rank: 672
+    global_rank: 759
+    paper_rank: 759
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Attention-based Graph Neural Network for Semi-supervised
-      Learning
-    comparison_source_arxiv: '1803.03735'
+    comparison_source_title: Semi-Supervised Classification with Graph Convolutional
+      Networks
+    comparison_source_arxiv: '1609.02907'
     is_best: false
     is_std_outlier: false
   - model: LogReg
@@ -1415,8 +1413,8 @@ results:
     value_note: ''
     sort_value: 0.622
     sort_std: 0.0
-    global_rank: 773
-    paper_rank: 773
+    global_rank: 872
+    paper_rank: 872
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1482,8 +1480,8 @@ results:
     value_note: ''
     sort_value: 0.607
     sort_std: 0.007
-    global_rank: 779
-    paper_rank: 779
+    global_rank: 884
+    paper_rank: 884
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1549,8 +1547,8 @@ results:
     value_note: ''
     sort_value: 0.602
     sort_std: 0.0
-    global_rank: 785
-    paper_rank: 785
+    global_rank: 891
+    paper_rank: 891
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1616,8 +1614,8 @@ results:
     value_note: ''
     sort_value: 0.584
     sort_std: 0.011
-    global_rank: 795
-    paper_rank: 795
+    global_rank: 904
+    paper_rank: 904
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1683,8 +1681,8 @@ results:
     value_note: ''
     sort_value: 0.583
     sort_std: 0.0
-    global_rank: 796
-    paper_rank: 796
+    global_rank: 905
+    paper_rank: 905
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1750,8 +1748,8 @@ results:
     value_note: ''
     sort_value: 0.581
     sort_std: 0.012
-    global_rank: 798
-    paper_rank: 798
+    global_rank: 909
+    paper_rank: 909
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1817,8 +1815,8 @@ results:
     value_note: ''
     sort_value: 0.567
     sort_std: 0.017
-    global_rank: 804
-    paper_rank: 804
+    global_rank: 915
+    paper_rank: 915
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1860,11 +1858,10 @@ results:
     published_conference: ICML 2019
     at_pub_value: 0.453
     at_pub_std: null
-    at_pub_source_arxiv: '1803.03735'
-    at_pub_source_title: Attention-based Graph Neural Network for Semi-supervised
-      Learning
-    at_pub_source_date_iso: '2018-02-15'
-    at_pub_source_date_label: '2018'
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
     value_gap_source_date_iso: '2025-07-19'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.221
@@ -1886,16 +1883,16 @@ results:
     value_note: ''
     sort_value: 0.498
     sort_std: 0.0
-    global_rank: 822
-    paper_rank: 855
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 935
+    paper_rank: 971
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Attention-based Graph Neural Network for Semi-supervised
-      Learning
-    comparison_source_arxiv: '1803.03735'
+    comparison_source_title: Semi-Supervised Classification with Graph Convolutional
+      Networks
+    comparison_source_arxiv: '1609.02907'
     is_best: false
     is_std_outlier: false
   - model: Sparse-GCN
@@ -1954,8 +1951,8 @@ results:
     value_note: ''
     sort_value: 0.331
     sort_std: 0.009
-    global_rank: 848
-    paper_rank: 848
+    global_rank: 963
+    paper_rank: 963
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1977,9 +1974,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -2011,9 +2008,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -2045,9 +2042,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -2135,8 +2132,8 @@ results:
     value_note: ''
     sort_value: 0.8408
     sort_std: 0.004
-    global_rank: 348
-    paper_rank: 348
+    global_rank: 403
+    paper_rank: 403
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2202,8 +2199,8 @@ results:
     value_note: ''
     sort_value: 0.8002
     sort_std: 0.006
-    global_rank: 667
-    paper_rank: 667
+    global_rank: 775
+    paper_rank: 775
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2269,8 +2266,8 @@ results:
     value_note: ''
     sort_value: 0.7976
     sort_std: 0.005
-    global_rank: 676
-    paper_rank: 676
+    global_rank: 785
+    paper_rank: 785
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2316,5 +2313,6 @@ datasets_by_scope:
     datasets:
     - dataset: 20News
       dataset_slug: 20news
+main_figure: /figures/1903.11960/main_figure.jpegoptim.jpg
 ---
 

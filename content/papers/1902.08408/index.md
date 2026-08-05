@@ -40,14 +40,14 @@ abstract: 'In recent years, machine learning (ML) methods have become increasing
   which is more stable than the helical form by $0.46$ kcal mol$^-1$ according to
   the reference ab initio calculations.'
 codebase_url: https://github.com/MeuwlyGroup/PhysNet
-extraction_model: google/gemma-4-31B-it
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
 has_results: true
 paper_type: method
 proposed_models:
 - PhysNet
 - PhysNet-ens5
-mrr: 0.0192
-adjusted_mrr: 0.0064
+mrr: 0.0139
+adjusted_mrr: 0.0046
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -214,7 +214,7 @@ results:
     today_delta_significant: false
     sort_value: 0.02
     sort_std: null
-    global_rank: 12
+    global_rank: 14
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -286,8 +286,8 @@ results:
     value_note: ''
     sort_value: 0.04
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -345,7 +345,7 @@ results:
     today_delta_significant: false
     sort_value: 0.06
     sort_std: null
-    global_rank: 35
+    global_rank: 41
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -417,10 +417,10 @@ results:
     value_note: ''
     sort_value: 0.07
     sort_std: null
-    global_rank: 37
-    paper_rank: 12
-    rank_delta: -25
-    rank_delta_abs: 25
+    global_rank: 43
+    paper_rank: 14
+    rank_delta: -29
+    rank_delta_abs: 29
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -466,8 +466,8 @@ results:
       materials
     at_pub_source_date_iso: '2017-12-17'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.03
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -478,19 +478,18 @@ results:
     today_delta_significant: true
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.03
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 24
-    rank_delta: -16
-    rank_delta_abs: 16
+    global_rank: 46
+    paper_rank: 28
+    rank_delta: -18
+    rank_delta_abs: 18
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -556,10 +555,10 @@ results:
     value_note: ''
     sort_value: 0.23
     sort_std: null
-    global_rank: 52
-    paper_rank: 13
-    rank_delta: -39
-    rank_delta_abs: 39
+    global_rank: 72
+    paper_rank: 15
+    rank_delta: -57
+    rank_delta_abs: 57
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
@@ -589,5 +588,6 @@ datasets_by_scope:
     datasets:
     - dataset: MD17
       dataset_slug: md17
+main_figure: /figures/1902.08408/main_figure.jpegoptim.jpg
 ---
 

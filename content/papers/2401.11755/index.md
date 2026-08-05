@@ -83,9 +83,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -117,9 +117,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gcn
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9412
     std: 0.0008
     metric: Accuracy
@@ -151,9 +151,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gat
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -233,7 +233,7 @@ results:
     today_delta_significant: false
     sort_value: 0.86
     sort_std: 0.006
-    global_rank: 331
+    global_rank: 333
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -295,7 +295,7 @@ results:
     today_delta_significant: false
     sort_value: 0.843
     sort_std: 0.004
-    global_rank: 377
+    global_rank: 374
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -321,9 +321,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -354,9 +354,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -388,9 +388,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -470,7 +470,7 @@ results:
     today_delta_significant: false
     sort_value: 0.931
     sort_std: 0.005
-    global_rank: 206
+    global_rank: 211
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -532,7 +532,7 @@ results:
     today_delta_significant: false
     sort_value: 0.928
     sort_std: 0.003
-    global_rank: 239
+    global_rank: 245
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -558,9 +558,9 @@ results:
 - &id004
   dataset: Coauthor-Physics
   rows:
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: geomancer
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9878
     std: 0.0012
     metric: Accuracy
@@ -592,9 +592,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: lgd
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9855
     std: 0.0012
     metric: Accuracy
@@ -626,9 +626,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphMix
+  - model: SelfGNN LDP
     model_key: msh-gnn
-    model_plain: GraphMix
+    model_plain: SelfGNN LDP
     value: 0.9837
     std: 0.0008
     metric: Accuracy
@@ -707,7 +707,7 @@ results:
     today_delta_significant: false
     sort_value: 0.936
     sort_std: 0.01
-    global_rank: 181
+    global_rank: 185
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -769,7 +769,7 @@ results:
     today_delta_significant: false
     sort_value: 0.931
     sort_std: 0.006
-    global_rank: 202
+    global_rank: 206
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -795,9 +795,9 @@ results:
 - &id003
   dataset: Reddit
   rows:
-  - model: GraphAny
+  - model: Cluster-GCN (2019)
     model_key: node sampled soup
-    model_plain: GraphAny
+    model_plain: Cluster-GCN (2019)
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -829,44 +829,45 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: gamlp(jk)
-    model_plain: GraphAny
-    value: 0.9704
-    std: 0.01
+  - model: Cluster-GCN (2019)
+    model_key: engcn
+    model_plain: Cluster-GCN (2019)
+    value: 0.9714
+    std: 0.0003
     metric: F1
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2206.04355'
-    title: Graph Attention Multi-Layer Perceptron
-    date: Jun 9, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-09'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/PKU-DAIR/GAMLP
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9704
-    sort_std: 0.01
+    sort_value: 0.9714
+    sort_std: 0.0003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
-  - model: GraphAny
-    model_key: graphsaint
-    model_plain: GraphAny
-    value: 0.97
-    std: null
+    is_best: false
+    is_std_outlier: false
+  - model: Cluster-GCN (2019)
+    model_key: sagn+sle
+    model_plain: Cluster-GCN (2019)
+    value: 0.971
+    std: 0.0
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -876,20 +877,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.97
-    sort_std: null
+    sort_value: 0.971
+    sort_std: 0.0
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -943,7 +945,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9507
     sort_std: 0.0008
-    global_rank: 65
+    global_rank: 78
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1005,7 +1007,7 @@ results:
     today_delta_significant: false
     sort_value: 0.933
     sort_std: 0.0012
-    global_rank: 108
+    global_rank: 124
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1067,7 +1069,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9146
     sort_std: 0.0005
-    global_rank: 121
+    global_rank: 141
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1093,9 +1095,9 @@ results:
 - &id006
   dataset: ogbn-papers100M
   rows:
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: sgc
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.791
     std: null
     metric: Accuracy
@@ -1126,9 +1128,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: gamlp
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -1159,9 +1161,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: glem-gnn
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -1302,7 +1304,7 @@ results:
     today_delta_significant: false
     sort_value: 0.606
     sort_std: 0.003
-    global_rank: 68
+    global_rank: 70
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1328,9 +1330,9 @@ results:
 - &id005
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -1362,9 +1364,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -1395,9 +1397,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -1477,7 +1479,7 @@ results:
     today_delta_significant: false
     sort_value: 0.842
     sort_std: 0.003
-    global_rank: 42
+    global_rank: 44
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1539,7 +1541,7 @@ results:
     today_delta_significant: false
     sort_value: 0.763
     sort_std: 0.002
-    global_rank: 226
+    global_rank: 244
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1596,5 +1598,6 @@ datasets_by_scope:
     - dataset: ogbn-papers100M
       dataset_slug: ogbn-papers100m
 single_proposed_model: FedGTA
+main_figure: /figures/2401.11755/main_figure.jpegoptim.jpg
 ---
 

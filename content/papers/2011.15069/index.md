@@ -40,8 +40,8 @@ proposed_models:
 - GINE w/ VN
 - NaiveGINe+ K=3 w/ VN
 - GINe+ K=1 w/ VN
-mrr: 0.059
-adjusted_mrr: 0.059
+mrr: 0.0699
+adjusted_mrr: 0.0699
 mrr_dataset_count: 3
 benchmark_categories:
 - OGB
@@ -363,7 +363,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 6
+    global_rank: 5
   - model: GINE
     model_key: gine
     model_plain: GINE
@@ -423,7 +423,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 8
+    global_rank: 7
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -483,7 +483,7 @@ results:
     comparison_source_arxiv: '2002.09518'
     is_best: false
     is_std_outlier: false
-    global_rank: 18
+    global_rank: 15
   - model: DeeperGCN
     model_key: deepergcn
     model_plain: DeeperGCN
@@ -543,7 +543,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 27
+    global_rank: 24
   metrics:
   - ROC-AUC
   - Accuracy
@@ -562,35 +562,35 @@ results:
   dataset: ToxCast
   is_multi_metric: true
   rows:
-  - model: Adding atoms and bonds features
-    model_key: sci
-    model_plain: Adding atoms and bonds features
+  - model: GIN (Supervised EdgePred)
+    model_key: geomgcl
+    model_plain: GIN (Supervised EdgePred)
     metric_values:
-    - 0.8073
+    - 0.763
     - null
     metric_stds:
-    - 0.0006
     - null
-    is_baseline: true
+    - null
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
+    arxiv_id: '2109.11730'
+    title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property Prediction'
     published_venue: ''
-    date: Nov 8, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-08'
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
+    date: Sep 24, 2021
+    date_display: Sep 2021
+    date_iso: '2021-09-24'
+    codebase_url: ''
     uses_external_data: false
     is_global_top: true
     global_rank: 1
     is_best: true
-    sort_value: 0.8073
-    sort_std: 0.0006
+    sort_value: 0.763
+    sort_std: null
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -601,14 +601,53 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Adding atoms and bonds features
-    model_key: pharmhgt
-    model_plain: Adding atoms and bonds features
+  - model: GIN (Supervised EdgePred)
+    model_key: light deepgpt
+    model_plain: GIN (Supervised EdgePred)
     metric_values:
-    - 0.8023
+    - 0.757
     - null
     metric_stds:
-    - 0.0009
+    - 0.011
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.37
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    published_venue: ''
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    codebase_url: ''
+    uses_external_data: true
+    is_global_top: true
+    global_rank: 2
+    is_best: true
+    sort_value: 0.757
+    sort_std: 0.011
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: GIN (Supervised EdgePred)
+    model_key: d&d-node +vn
+    model_plain: GIN (Supervised EdgePred)
+    metric_values:
+    - 0.7556
+    - null
+    metric_stds:
+    - 0.0068
     - null
     is_baseline: true
     is_overridden: false
@@ -617,58 +656,20 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
+    arxiv_id: '2309.04062'
+    title: '3D Denoisers are Good 2D Teachers: Molecular Pretraining via Denoising
+      and Cross-Modal Distillation'
     published_venue: ''
-    date: Nov 8, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-08'
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: false
-    sort_value: 0.8023
-    sort_std: 0.0009
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: Adding atoms and bonds features
-    model_key: stablegnn-graph
-    model_plain: Adding atoms and bonds features
-    metric_values:
-    - 0.7986
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2311.04837'
-    title: Identifying Semantic Component for Robust Molecular Property Prediction
-    published_venue: ''
-    date: Nov 8, 2023
-    date_display: Nov 2023
-    date_iso: '2023-11-08'
-    codebase_url: https://github.com/DMIRLAB-Group/SCI
-    uses_external_data: false
+    date: Sep 8, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-08'
+    codebase_url: ''
+    uses_external_data: true
     is_global_top: true
     global_rank: 3
     is_best: false
-    sort_value: 0.7986
-    sort_std: 0.001
+    sort_value: 0.7556
+    sort_std: 0.0068
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -738,7 +739,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 14
+    global_rank: 8
   - model: GINe+ K=1 w/ VN
     model_key: gine+ k=1 w/ vn
     model_plain: GINe+ K=1 w/ VN
@@ -798,7 +799,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 15
+    global_rank: 9
   - model: GCN w/ VN
     model_key: gcn w/ vn
     model_plain: GCN w/ VN
@@ -858,7 +859,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 18
+    global_rank: 13
   - model: GINE
     model_key: gine
     model_plain: GINE
@@ -918,7 +919,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 21
+    global_rank: 16
   - model: NaiveGINe+ K=3 w/ VN
     model_key: naivegine+ k=3 w/ vn
     model_plain: NaiveGINe+ K=3 w/ VN
@@ -978,7 +979,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 22
+    global_rank: 17
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -1001,24 +1002,24 @@ results:
     true_std: 0.002
     paper_value: 0.735
     paper_std: 0.002
-    has_value_gap: false
+    has_value_gap: true
     has_value_note: false
     value_gap: null
     value_gap_source_arxiv: '2011.15069'
     value_gap_source_title: Graph convolutions that can finally model local structure
     value_note: ''
-    at_pub_value: null
+    at_pub_value: 0.6739
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '1801.03226'
+    at_pub_source_title: Adaptive Graph Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-01-10'
+    at_pub_source_date_label: AAAI 2018
     value_gap_source_date_iso: '2020-11-30'
     value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.06109999999999993
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1033,12 +1034,12 @@ results:
     uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: improved
+    comparison_source_title: Adaptive Graph Convolutional Neural Networks
+    comparison_source_arxiv: '1801.03226'
     is_best: false
     is_std_outlier: false
-    global_rank: 23
+    global_rank: 18
   - model: HIMP
     model_key: himp
     model_plain: HIMP
@@ -1098,7 +1099,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 31
+    global_rank: 26
   - model: DeeperGCN
     model_key: deepergcn
     model_plain: DeeperGCN
@@ -1158,7 +1159,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 39
+    global_rank: 35
   metrics:
   - ROC-AUC
   - Accuracy
@@ -1176,100 +1177,101 @@ results:
 - &id001
   dataset: ogbg-molhiv
   rows:
-  - model: MEG
-    model_key: clear
-    model_plain: MEG
-    value: 0.997
-    std: 0.002
+  - model: SigGate-GT
+    model_key: multi-rf fusion with multi-gnn blending
+    model_plain: SigGate-GT
+    value: 0.8476
+    std: 0.0002
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Mixing pharmacophoric (FCFP) and structural (ECFP) fingerprints...
+      GNNs contributing only 12%
     is_global_top: true
     global_rank: 1
-    sort_value: 0.997
-    sort_std: 0.002
+    sort_value: 0.8476
+    sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MEG
-    model_key: random
-    model_plain: MEG
-    value: 0.897
-    std: 0.004
+  - model: SigGate-GT
+    model_key: hyperfusion
+    model_plain: SigGate-GT
+    value: 0.8475
+    std: 0.0003
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.897
-    sort_std: 0.004
+    sort_value: 0.8475
+    sort_std: 0.0003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: MEG
-    model_key: eg-ist
-    model_plain: MEG
-    value: 0.897
-    std: 0.004
+  - model: SigGate-GT
+    model_key: pas+fps
+    model_plain: SigGate-GT
+    value: 0.842
+    std: 0.0015
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.897
-    sort_std: 0.004
+    sort_value: 0.842
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1332,8 +1334,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.0082
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1399,8 +1401,8 @@ results:
     value_note: ''
     sort_value: 0.786
     sort_std: 0.012
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1466,8 +1468,8 @@ results:
     value_note: ''
     sort_value: 0.771
     sort_std: 0.015
-    global_rank: 162
-    paper_rank: 162
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1533,8 +1535,8 @@ results:
     value_note: ''
     sort_value: 0.766
     sort_std: 0.014
-    global_rank: 188
-    paper_rank: 188
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1601,8 +1603,8 @@ results:
     value_note: ''
     sort_value: 0.763
     sort_std: 0.003
-    global_rank: 204
-    paper_rank: 214
+    global_rank: 203
+    paper_rank: 213
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -1668,8 +1670,8 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: 0.012
-    global_rank: 222
-    paper_rank: 222
+    global_rank: 221
+    paper_rank: 221
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1802,8 +1804,8 @@ results:
     value_note: ''
     sort_value: 0.756
     sort_std: 0.014
-    global_rank: 236
-    paper_rank: 236
+    global_rank: 237
+    paper_rank: 237
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1846,5 +1848,6 @@ datasets_by_scope:
       dataset_slug: tox21
     - dataset: ToxCast
       dataset_slug: toxcast
+main_figure: /figures/2011.15069/main_figure.jpegoptim.jpg
 ---
 

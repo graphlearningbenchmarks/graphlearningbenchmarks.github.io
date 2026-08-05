@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - BNNs
-mrr: 0.0072
-adjusted_mrr: 0.0024
+mrr: 0.0077
+adjusted_mrr: 0.0026
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -76,7 +76,7 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id003
+- &id002
   dataset: BACE
   rows:
   - model: BNNs
@@ -700,12 +700,45 @@ results:
   metric: AU-ROC
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id002
+- &id003
   dataset: BBBP
   rows:
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
+    model_key: magprompt+
+    model_plain: MAGPrompt+
+    value: 0.9432
+    std: 0.0238
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-05'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9432
+    sort_std: 0.0238
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MAGPrompt+
     model_key: cams-llama
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -729,7 +762,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.942
     sort_std: null
     comparison_type: global_top
@@ -737,9 +770,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: se(3)-i mpph
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -764,42 +797,9 @@ results:
     feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
       homology
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.94
     sort_std: 0.021
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: UnifiedMolPretrain
-    model_key: masking node + supervised
-    model_plain: UnifiedMolPretrain
-    value: 0.9343
-    std: 0.025
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2207.06010'
-    title: Does GNN Pretraining Help Molecular Representation?
-    date: Jul 13, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-13'
-    venue: Neural Information Processing Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9343
-    sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -862,8 +862,8 @@ results:
     value_note: ''
     sort_value: 0.7198
     sort_std: null
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -931,8 +931,8 @@ results:
     value_note: ''
     sort_value: 0.7155
     sort_std: 0.0156
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -999,8 +999,8 @@ results:
     value_note: ''
     sort_value: 0.7025
     sort_std: 0.007
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 130
+    paper_rank: 130
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1067,8 +1067,8 @@ results:
     value_note: ''
     sort_value: 0.7003
     sort_std: 0.0198
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 140
+    paper_rank: 140
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1135,8 +1135,8 @@ results:
     value_note: ''
     sort_value: 0.7002
     sort_std: 0.0069
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1203,8 +1203,8 @@ results:
     value_note: ''
     sort_value: 0.6982
     sort_std: 0.0217
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1271,8 +1271,8 @@ results:
     value_note: ''
     sort_value: 0.6954
     sort_std: 0.0226
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1339,8 +1339,8 @@ results:
     value_note: ''
     sort_value: 0.6898
     sort_std: 0.0176
-    global_rank: 186
-    paper_rank: 186
+    global_rank: 175
+    paper_rank: 175
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1407,8 +1407,8 @@ results:
     value_note: ''
     sort_value: 0.6787
     sort_std: 0.0234
-    global_rank: 205
-    paper_rank: 205
+    global_rank: 196
+    paper_rank: 196
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1475,8 +1475,8 @@ results:
     value_note: ''
     sort_value: 0.6393
     sort_std: 0.0266
-    global_rank: 284
-    paper_rank: 284
+    global_rank: 274
+    paper_rank: 274
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1543,8 +1543,8 @@ results:
     value_note: ''
     sort_value: 0.637
     sort_std: 0.0049
-    global_rank: 285
-    paper_rank: 285
+    global_rank: 275
+    paper_rank: 275
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1611,8 +1611,8 @@ results:
     value_note: ''
     sort_value: 0.5975
     sort_std: 0.0246
-    global_rank: 312
-    paper_rank: 312
+    global_rank: 297
+    paper_rank: 297
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1679,8 +1679,8 @@ results:
     value_note: ''
     sort_value: 0.5855
     sort_std: 0.024
-    global_rank: 316
-    paper_rank: 316
+    global_rank: 300
+    paper_rank: 300
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1747,8 +1747,8 @@ results:
     value_note: ''
     sort_value: 0.5623
     sort_std: 0.0425
-    global_rank: 320
-    paper_rank: 320
+    global_rank: 303
+    paper_rank: 303
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1770,9 +1770,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1803,9 +1803,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1836,9 +1836,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -1930,9 +1930,9 @@ results:
     sort_value: 0.9637
     sort_std: 0.0215
     global_rank: 6
-    paper_rank: 619
-    rank_delta: 613
-    rank_delta_abs: 613
+    paper_rank: 658
+    rank_delta: 652
+    rank_delta_abs: 652
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1999,10 +1999,10 @@ results:
     value_note: ''
     sort_value: 0.91
     sort_std: 0.057
-    global_rank: 101
-    paper_rank: 654
-    rank_delta: 553
-    rank_delta_abs: 553
+    global_rank: 105
+    paper_rank: 694
+    rank_delta: 589
+    rank_delta_abs: 589
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2069,10 +2069,10 @@ results:
     value_note: ''
     sort_value: 0.88
     sort_std: 0.03
-    global_rank: 294
-    paper_rank: 737
-    rank_delta: 443
-    rank_delta_abs: 443
+    global_rank: 309
+    paper_rank: 783
+    rank_delta: 474
+    rank_delta_abs: 474
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2139,10 +2139,10 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: 0.03
-    global_rank: 354
-    paper_rank: 679
-    rank_delta: 325
-    rank_delta_abs: 325
+    global_rank: 372
+    paper_rank: 724
+    rank_delta: 352
+    rank_delta_abs: 352
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2208,10 +2208,10 @@ results:
     value_note: ''
     sort_value: 0.843
     sort_std: 0.032
-    global_rank: 447
-    paper_rank: 609
-    rank_delta: 162
-    rank_delta_abs: 162
+    global_rank: 474
+    paper_rank: 646
+    rank_delta: 172
+    rank_delta_abs: 172
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2277,8 +2277,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.0071
-    global_rank: 600
-    paper_rank: 600
+    global_rank: 635
+    paper_rank: 635
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2346,8 +2346,8 @@ results:
     value_note: ''
     sort_value: 0.7903
     sort_std: 0.0065
-    global_rank: 615
-    paper_rank: 615
+    global_rank: 652
+    paper_rank: 652
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2415,8 +2415,8 @@ results:
     value_note: ''
     sort_value: 0.7834
     sort_std: 0.0081
-    global_rank: 625
-    paper_rank: 625
+    global_rank: 664
+    paper_rank: 664
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2484,8 +2484,8 @@ results:
     value_note: ''
     sort_value: 0.7816
     sort_std: 0.0103
-    global_rank: 627
-    paper_rank: 627
+    global_rank: 666
+    paper_rank: 666
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2553,8 +2553,8 @@ results:
     value_note: ''
     sort_value: 0.7789
     sort_std: 0.0059
-    global_rank: 636
-    paper_rank: 636
+    global_rank: 675
+    paper_rank: 675
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2622,8 +2622,8 @@ results:
     value_note: ''
     sort_value: 0.7682
     sort_std: 0.0059
-    global_rank: 652
-    paper_rank: 652
+    global_rank: 692
+    paper_rank: 692
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2690,8 +2690,8 @@ results:
     value_note: ''
     sort_value: 0.7519
     sort_std: 0.0073
-    global_rank: 671
-    paper_rank: 671
+    global_rank: 716
+    paper_rank: 716
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2758,8 +2758,8 @@ results:
     value_note: ''
     sort_value: 0.6832
     sort_std: 0.0117
-    global_rank: 726
-    paper_rank: 726
+    global_rank: 772
+    paper_rank: 772
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2826,8 +2826,8 @@ results:
     value_note: ''
     sort_value: 0.6586
     sort_std: 0.0196
-    global_rank: 734
-    paper_rank: 734
+    global_rank: 780
+    paper_rank: 780
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2866,10 +2866,11 @@ datasets_by_scope:
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:
-    - dataset: BBBP
-      dataset_slug: bbbp
     - dataset: BACE
       dataset_slug: bace
+    - dataset: BBBP
+      dataset_slug: bbbp
 single_proposed_model: BNNs
+main_figure: /figures/2508.17097/main_figure.jpegoptim.jpg
 ---
 

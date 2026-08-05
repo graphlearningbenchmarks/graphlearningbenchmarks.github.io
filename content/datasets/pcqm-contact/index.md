@@ -1422,7 +1422,7 @@ variants:
     graph_transformer: 34
     llm: 0
     walk: 1
-    traditional: 6
+    traditional: 5
   metric_counts:
   - 110
   milestones: &id001

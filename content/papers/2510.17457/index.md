@@ -63,7 +63,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 1
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -1200,9 +1200,9 @@ results:
 - &id003
   dataset: Texas
   rows:
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -1233,9 +1233,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: dog
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -1244,9 +1244,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -1267,9 +1267,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: gpf-plus
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -1358,10 +1358,10 @@ results:
     value_note: ''
     sort_value: 0.8973
     sort_std: 0.0449
-    global_rank: 68
-    paper_rank: 181
-    rank_delta: 113
-    rank_delta_abs: 113
+    global_rank: 71
+    paper_rank: 186
+    rank_delta: 115
+    rank_delta_abs: 115
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1417,7 +1417,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8501
     sort_std: 0.0651
-    global_rank: 166
+    global_rank: 172
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1479,7 +1479,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8486
     sort_std: 0.0543
-    global_rank: 171
+    global_rank: 177
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1551,10 +1551,10 @@ results:
     value_note: ''
     sort_value: 0.8162
     sort_std: 0.0645
-    global_rank: 236
-    paper_rank: 448
-    rank_delta: 212
-    rank_delta_abs: 212
+    global_rank: 245
+    paper_rank: 473
+    rank_delta: 228
+    rank_delta_abs: 228
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1619,10 +1619,10 @@ results:
     value_note: ''
     sort_value: 0.7933
     sort_std: 0.0447
-    global_rank: 287
-    paper_rank: 577
-    rank_delta: 290
-    rank_delta_abs: 290
+    global_rank: 299
+    paper_rank: 592
+    rank_delta: 293
+    rank_delta_abs: 293
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1678,7 +1678,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7826
     sort_std: 0.013
-    global_rank: 300
+    global_rank: 312
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1740,7 +1740,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7696
     sort_std: 0.0729
-    global_rank: 317
+    global_rank: 329
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1802,7 +1802,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7696
     sort_std: 0.0365
-    global_rank: 317
+    global_rank: 329
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1864,7 +1864,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7652
     sort_std: 0.0238
-    global_rank: 321
+    global_rank: 333
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1926,7 +1926,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7565
     sort_std: 0.0677
-    global_rank: 335
+    global_rank: 348
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1938,6 +1938,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.4737
+    std: 0.0212
+    paper_value: 0.4737
+    paper_std: 0.0212
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 20, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-20'
+    published_venue: NeurIPS 2025
+    published_conference: NeurIPS 2025
+    at_pub_value: 0.746
+    at_pub_std: 0.008
+    at_pub_source_arxiv: '2309.02769'
+    at_pub_source_title: 'Unifying over-smoothing and over-squashing in graph neural
+      networks: A physics informed approach and beyond'
+    at_pub_source_date_iso: '2023-09-06'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-01-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.2723
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.746
+    true_std: 0.008
+    value_gap_source_arxiv: '2401.14580'
+    value_gap_source_title: 'Design your own universe: a physics-informed agnostic
+      method for enhancing graph neural networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2723
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.746
+    sort_std: 0.008
+    global_rank: 361
+    paper_rank: 627
+    rank_delta: 266
+    rank_delta_abs: 266
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Unifying over-smoothing and over-squashing in graph
+      neural networks: A physics informed approach and beyond'
+    comparison_source_arxiv: '2309.02769'
     is_best: false
     is_std_outlier: false
   - model: ProxyGap
@@ -1988,7 +2058,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7421
     sort_std: 0.0125
-    global_rank: 354
+    global_rank: 369
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2050,7 +2120,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7333
     sort_std: 0.0127
-    global_rank: 366
+    global_rank: 385
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2062,75 +2132,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.4737
-    std: 0.0212
-    paper_value: 0.4737
-    paper_std: 0.0212
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 20, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-20'
-    published_venue: NeurIPS 2025
-    published_conference: NeurIPS 2025
-    at_pub_value: 0.746
-    at_pub_std: 0.008
-    at_pub_source_arxiv: '2309.02769'
-    at_pub_source_title: 'Unifying over-smoothing and over-squashing in graph neural
-      networks: A physics informed approach and beyond'
-    at_pub_source_date_iso: '2023-09-06'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-10-18'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.2723
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7279
-    true_std: 0.0492
-    value_gap_source_arxiv: '2310.11762'
-    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.2542
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7279
-    sort_std: 0.0492
-    global_rank: 371
-    paper_rank: 610
-    rank_delta: 239
-    rank_delta_abs: 239
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Unifying over-smoothing and over-squashing in graph
-      neural networks: A physics informed approach and beyond'
-    comparison_source_arxiv: '2309.02769'
     is_best: false
     is_std_outlier: false
   - model: GraphNormv2
@@ -2181,7 +2182,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7207
     sort_std: 0.0156
-    global_rank: 381
+    global_rank: 400
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2253,16 +2254,156 @@ results:
     value_note: ''
     sort_value: 0.678
     sort_std: 0.025
-    global_rank: 418
-    paper_rank: 391
-    rank_delta: -27
-    rank_delta_abs: 27
+    global_rank: 440
+    paper_rank: 412
+    rank_delta: -28
+    rank_delta_abs: 28
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Dynamic Triangulation-Based Graph Rewiring for Graph
       Neural Networks
     comparison_source_arxiv: '2508.19071'
+    is_best: false
+    is_std_outlier: false
+  - model: VCR-Graphormer
+    model_key: vcr-graphormer
+    model_plain: VCR-Graphormer
+    value: 0.6263
+    std: 0.005
+    paper_value: 0.6263
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 20, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-20'
+    published_venue: NeurIPS 2025
+    published_conference: NeurIPS 2025
+    at_pub_value: 0.6579
+    at_pub_std: 0.0178
+    at_pub_source_arxiv: '2505.15845'
+    at_pub_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in
+      Tokenized Graph Learning Models'
+    at_pub_source_date_iso: '2025-05-19'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-19'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.03160000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6579
+    true_std: 0.0178
+    value_gap_source_arxiv: '2505.15845'
+    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03160000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6579
+    sort_std: 0.0178
+    global_rank: 466
+    paper_rank: 502
+    rank_delta: 36
+    rank_delta_abs: 36
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
+    comparison_source_arxiv: '2505.15845'
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.7488
+    std: 0.0012
+    paper_value: 0.7488
+    paper_std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 20, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-20'
+    published_venue: NeurIPS 2025
+    published_conference: NeurIPS 2025
+    at_pub_value: 0.631
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '2211.15779'
+    at_pub_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2022-11-28'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: 0.11780000000000002
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.631
+    true_std: 0.017
+    value_gap_source_arxiv: '2211.15779'
+    value_gap_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11780000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.631
+    sort_std: 0.017
+    global_rank: 498
+    paper_rank: 358
+    rank_delta: -140
+    rank_delta_abs: 140
+    rank_delta_direction: better
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    comparison_source_arxiv: '2211.15779'
     is_best: false
     is_std_outlier: false
   - model: HGCN
@@ -2313,7 +2454,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6278
     sort_std: 0.0178
-    global_rank: 474
+    global_rank: 501
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2325,138 +2466,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: VCR-Graphormer
-    model_key: vcr-graphormer
-    model_plain: VCR-Graphormer
-    value: 0.6263
-    std: 0.005
-    paper_value: 0.6263
-    paper_std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 20, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-20'
-    published_venue: NeurIPS 2025
-    published_conference: NeurIPS 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.6263
-    sort_std: 0.005
-    global_rank: 476
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: BORF
-    model_key: borf
-    model_plain: BORF
-    value: 0.7488
-    std: 0.0012
-    paper_value: 0.7488
-    paper_std: 0.0012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 20, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-20'
-    published_venue: NeurIPS 2025
-    published_conference: NeurIPS 2025
-    at_pub_value: 0.623
-    at_pub_std: 0.02
-    at_pub_source_arxiv: '2309.09384'
-    at_pub_source_title: Mitigating Over-Smoothing and Over-Squashing using Augmentations
-      of Forman-Ricci Curvature
-    at_pub_source_date_iso: '2023-09-17'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-08-28'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.12580000000000002
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4995
-    true_std: 0.0143
-    value_gap_source_arxiv: '2508.20597'
-    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
-      Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.24930000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4995
-    sort_std: 0.0143
-    global_rank: 599
-    paper_rank: 345
-    rank_delta: -254
-    rank_delta_abs: 254
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Mitigating Over-Smoothing and Over-Squashing using Augmentations
-      of Forman-Ricci Curvature
-    comparison_source_arxiv: '2309.09384'
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -2530,9 +2539,9 @@ results:
     sort_value: 0.9302
     sort_std: 0.0011
     global_rank: 1
-    paper_rank: 129
-    rank_delta: 128
-    rank_delta_abs: 128
+    paper_rank: 145
+    rank_delta: 144
+    rank_delta_abs: 144
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2541,69 +2550,71 @@ results:
     comparison_source_arxiv: '2204.04874'
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: graphssr
-    model_plain: GraphAny
-    value: 0.8793
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
-    venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8793
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphAny
-    model_key: graph-r1
-    model_plain: GraphAny
-    value: 0.8689
-    std: null
+  - model: GPM
+    model_key: rse + rgcn (70b)
+    model_plain: GPM
+    value: 0.8852
+    std: 0.0019
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
     venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8852
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPM
+    model_key: rse + sehgnn (70b)
+    model_plain: GPM
+    value: 0.8796
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8689
-    sort_std: null
+    sort_value: 0.8796
+    sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2657,7 +2668,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8621
     sort_std: 0.0039
-    global_rank: 5
+    global_rank: 9
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2719,69 +2730,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8589
     sort_std: 0.0028
-    global_rank: 6
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: VCR-Graphormer
-    model_key: vcr-graphormer
-    model_plain: VCR-Graphormer
-    value: 0.8432
-    std: 0.0001
-    paper_value: 0.8432
-    paper_std: 0.0001
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 20, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-20'
-    published_venue: NeurIPS 2025
-    published_conference: NeurIPS 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.8432
-    sort_std: 0.0001
-    global_rank: 12
+    global_rank: 10
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2843,7 +2792,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8407
     sort_std: 0.0076
-    global_rank: 12
+    global_rank: 17
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2905,7 +2854,7 @@ results:
     today_delta_significant: false
     sort_value: 0.84
     sort_std: 0.0026
-    global_rank: 12
+    global_rank: 17
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2967,7 +2916,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8395
     sort_std: 0.0028
-    global_rank: 12
+    global_rank: 17
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3029,7 +2978,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8367
     sort_std: 0.0066
-    global_rank: 12
+    global_rank: 17
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3041,6 +2990,145 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8237
+    std: 0.0245
+    paper_value: 0.8237
+    paper_std: 0.0245
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 20, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-20'
+    published_venue: NeurIPS 2025
+    published_conference: NeurIPS 2025
+    at_pub_value: 0.8303
+    at_pub_std: 0.0021
+    at_pub_source_arxiv: '2405.18581'
+    at_pub_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
+    at_pub_source_date_iso: '2024-05-28'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-05-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.00660000000000005
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.8303
+    true_std: 0.0021
+    value_gap_source_arxiv: '2405.18581'
+    value_gap_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00660000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8303
+    sort_std: 0.0021
+    global_rank: 20
+    paper_rank: 25
+    rank_delta: 5
+    rank_delta_abs: 5
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.7581
+    std: 0.0103
+    paper_value: 0.7581
+    paper_std: 0.0103
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 20, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-20'
+    published_venue: NeurIPS 2025
+    published_conference: NeurIPS 2025
+    at_pub_value: 0.8533
+    at_pub_std: null
+    at_pub_source_arxiv: '2505.19762'
+    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    at_pub_source_date_iso: '2025-05-26'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2024-05-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.09519999999999995
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8279
+    true_std: 0.0016
+    value_gap_source_arxiv: '2405.18581'
+    value_gap_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06979999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8279
+    sort_std: 0.0016
+    global_rank: 23
+    paper_rank: 168
+    rank_delta: 145
+    rank_delta_abs: 145
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    comparison_source_arxiv: '2505.19762'
     is_best: false
     is_std_outlier: false
   - model: ProxyGap
@@ -3091,7 +3179,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8134
     sort_std: 0.0076
-    global_rank: 27
+    global_rank: 38
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3103,76 +3191,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7581
-    std: 0.0103
-    paper_value: 0.7581
-    paper_std: 0.0103
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 20, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-20'
-    published_venue: NeurIPS 2025
-    published_conference: NeurIPS 2025
-    at_pub_value: 0.8533
-    at_pub_std: null
-    at_pub_source_arxiv: '2505.19762'
-    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    at_pub_source_date_iso: '2025-05-26'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.09519999999999995
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8103
-    true_std: 0.0092
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.052200000000000024
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8103
-    sort_std: 0.0092
-    global_rank: 29
-    paper_rank: 151
-    rank_delta: 122
-    rank_delta_abs: 122
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    comparison_source_arxiv: '2505.19762'
     is_best: false
     is_std_outlier: false
   - model: GREAD
@@ -3223,7 +3241,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7925
     sort_std: 0.0116
-    global_rank: 64
+    global_rank: 75
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3285,7 +3303,7 @@ results:
     today_delta_significant: false
     sort_value: 0.792
     sort_std: 0.0121
-    global_rank: 67
+    global_rank: 78
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3355,10 +3373,10 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.0014
-    global_rank: 110
-    paper_rank: 11
-    rank_delta: -99
-    rank_delta_abs: 99
+    global_rank: 122
+    paper_rank: 15
+    rank_delta: -107
+    rank_delta_abs: 107
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -3414,7 +3432,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7785
     sort_std: 0.0134
-    global_rank: 119
+    global_rank: 134
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3426,6 +3444,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: VCR-Graphormer
+    model_key: vcr-graphormer
+    model_plain: VCR-Graphormer
+    value: 0.8432
+    std: 0.0001
+    paper_value: 0.8432
+    paper_std: 0.0001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 20, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-20'
+    published_venue: NeurIPS 2025
+    published_conference: NeurIPS 2025
+    at_pub_value: 0.7769
+    at_pub_std: 0.0033
+    at_pub_source_arxiv: '2501.18739'
+    at_pub_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    at_pub_source_date_iso: '2025-01-30'
+    at_pub_source_date_label: ICML 2025
+    value_gap_source_date_iso: '2025-01-30'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.06629999999999991
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7769
+    true_std: 0.0033
+    value_gap_source_arxiv: '2501.18739'
+    value_gap_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06629999999999991
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7769
+    sort_std: 0.0033
+    global_rank: 137
+    paper_rank: 16
+    rank_delta: -121
+    rank_delta_abs: 121
+    rank_delta_direction: better
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    comparison_source_arxiv: '2501.18739'
     is_best: false
     is_std_outlier: false
   - model: DR
@@ -3476,7 +3561,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7762
     sort_std: 0.0016
-    global_rank: 124
+    global_rank: 140
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3538,7 +3623,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7693
     sort_std: 0.0045
-    global_rank: 141
+    global_rank: 157
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3547,74 +3632,6 @@ results:
     rank_delta: null
     rank_delta_abs: null
     rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.8237
-    std: 0.0245
-    paper_value: 0.8237
-    paper_std: 0.0245
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 20, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-20'
-    published_venue: NeurIPS 2025
-    published_conference: NeurIPS 2025
-    at_pub_value: 0.8303
-    at_pub_std: 0.0021
-    at_pub_source_arxiv: '2405.18581'
-    at_pub_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
-      Relation Decomposition via Large Language Models'
-    at_pub_source_date_iso: '2024-05-28'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2022-01-24'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.00660000000000005
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.759
-    true_std: 0.007
-    value_gap_source_arxiv: '2201.09830'
-    value_gap_source_title: Learning Graph Augmentations to Learn Graph Representations
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06469999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.759
-    sort_std: 0.007
-    global_rank: 151
-    paper_rank: 16
-    rank_delta: -135
-    rank_delta_abs: 135
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3668,7 +3685,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7432
     sort_std: 0.0067
-    global_rank: 169
+    global_rank: 188
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3715,5 +3732,6 @@ datasets_by_scope:
     datasets:
     - dataset: Texas
       dataset_slug: texas
+main_figure: /figures/2510.17457/main_figure.jpegoptim.jpg
 ---
 

@@ -95,11 +95,6 @@ papers:
     Learning'
   date_iso: '2024-09-25'
   venue: NeurIPS 2024
-- arxiv_id: '2408.00295'
-  title: Contrastive Graph Representation Learning with Adversarial Cross-view Reconstruction
-    and Information Bottleneck
-  date_iso: '2024-08-01'
-  venue: ''
 - arxiv_id: '2407.11361'
   title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
     of Graph Neural Networks'
@@ -119,6 +114,10 @@ papers:
   title: Rethinking Independent Cross-Entropy Loss For Graph-Structured Data
   date_iso: '2024-05-24'
   venue: ICML 2024
+- arxiv_id: '2405.01927'
+  title: 'SlotGAT: Slot-based Message Passing for Heterogeneous Graphs'
+  date_iso: '2024-05-03'
+  venue: ICML 2024
 - arxiv_id: '2404.02810'
   title: Generative-Contrastive Heterogeneous Graph Neural Network
   date_iso: '2024-04-03'
@@ -126,6 +125,10 @@ papers:
 - arxiv_id: '2403.03670'
   title: 'CDC: A Simple Framework for Complex Data Clustering'
   date_iso: '2024-03-06'
+  venue: ''
+- arxiv_id: '2402.10468'
+  title: Adversarial Curriculum Graph Contrastive Learning with Pair-wise Augmentation
+  date_iso: '2024-02-16'
   venue: ''
 - arxiv_id: '2402.04621'
   title: 'Feature Distribution on Graph Topology Mediates the Effect of Graph Convolution:
@@ -209,6 +212,10 @@ papers:
   title: Relational Self-Supervised Learning on Graphs
   date_iso: '2022-08-21'
   venue: ''
+- arxiv_id: '2208.06743'
+  title: Enhancing Graph Contrastive Learning with Node Similarity
+  date_iso: '2022-08-13'
+  venue: ''
 - arxiv_id: '2208.06129'
   title: Multiplex Heterogeneous Graph Convolutional Network
   date_iso: '2022-08-12'
@@ -259,6 +266,10 @@ papers:
   title: Multi-view Contrastive Graph Clustering
   date_iso: '2021-10-22'
   venue: NeurIPS 2021
+- arxiv_id: '2112.14936'
+  title: Heterogeneous Graph Benchmarks
+  date_iso: '2021-08-14'
+  venue: KDD 2021
 - arxiv_id: '2012.10024'
   title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
     Networks
@@ -319,6 +330,7 @@ variants:
   - F1
   - F1-micro
   - Macro F1
+  - Macro-F1
   - NMI
   - ROC-AUC
   - Unweighted F1 Measure
@@ -332,6 +344,7 @@ variants:
   - F1
   - F1-micro
   - Macro F1
+  - Macro-F1
   - NMI
   - ROC-AUC
   - Unweighted F1 Measure
@@ -374,7 +387,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -422,7 +437,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -470,7 +487,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -518,7 +537,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -566,7 +587,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -614,7 +637,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -662,8 +687,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.002
+    - null
     - null
     - null
     - null
@@ -710,8 +737,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0012
+    - null
     - null
     - null
     - null
@@ -758,8 +787,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0029
+    - null
     - null
     - null
     - null
@@ -807,8 +838,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0023
+    - null
     - null
     - null
     - null
@@ -855,8 +888,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0017
+    - null
     - null
     - null
     - null
@@ -903,8 +938,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0019
+    - null
     - null
     - null
     - null
@@ -951,8 +988,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0203
+    - null
     - null
     - null
     - null
@@ -999,8 +1038,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0022
+    - null
     - null
     - null
     - null
@@ -1047,8 +1088,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0039
+    - null
     - null
     - null
     - null
@@ -1096,7 +1139,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1144,8 +1189,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0019
+    - null
     - null
     - null
     - null
@@ -1192,7 +1239,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1240,8 +1289,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0024
+    - null
     - null
     - null
     - null
@@ -1289,8 +1340,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0021
+    - null
     - null
     - null
     - null
@@ -1337,8 +1390,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0017
+    - null
     - null
     - null
     - null
@@ -1385,8 +1440,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0014
+    - null
     - null
     - null
     - null
@@ -1433,7 +1490,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1481,8 +1540,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0016
+    - null
     - null
     - null
     - null
@@ -1530,8 +1591,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.004
+    - null
     - null
     - null
     - null
@@ -1579,7 +1642,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1627,8 +1692,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0011
+    - null
     - null
     - null
     - null
@@ -1675,8 +1742,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.004
+    - null
     - null
     - null
     - null
@@ -1723,8 +1792,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0042
+    - null
     - null
     - null
     - null
@@ -1771,8 +1842,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0031
+    - null
     - null
     - null
     - null
@@ -1820,7 +1893,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1868,8 +1943,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0022
+    - null
     - null
     - null
     - null
@@ -1916,8 +1993,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0022
+    - null
     - null
     - null
     - null
@@ -1965,8 +2044,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0022
+    - null
     - null
     - null
     - null
@@ -1987,16 +2068,16 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2307.08430'
-    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
-    date: Jul 17, 2023
-    date_iso: '2023-07-17'
-    date_display: Jul 2023
-    codebase_url: ''
-    published_conference: NeurIPS 2023
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2023
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -2013,8 +2094,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0022
+    - null
     - null
     - null
     - null
@@ -2061,7 +2144,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2109,7 +2194,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2157,8 +2244,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0013
+    - null
     - null
     - null
     - null
@@ -2206,8 +2295,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.004
+    - null
     - null
     - null
     - null
@@ -2255,7 +2346,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2303,6 +2396,7 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0036
     - null
@@ -2313,6 +2407,57 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
+    - null
+    - null
+  - model: DisenHAN
+    model_plain: DisenHAN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.01927'
+    title: 'SlotGAT: Slot-based Message Passing for Heterogeneous Graphs'
+    date: May 3, 2024
+    date_iso: '2024-05-03'
+    date_display: May 2024
+    codebase_url: https://github.com/scottjiao/SlotGAT_ICML23
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9418
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - 0.9366
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0036
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - 0.0039
     - null
     - null
     - null
@@ -2351,7 +2496,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2400,8 +2547,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0011
+    - null
     - null
     - null
     - null
@@ -2448,7 +2597,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2470,17 +2621,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.11329'
-    title: 'HINormer: Representation Learning On Heterogeneous Information Networks
-      with Graph Transformer'
-    date: Feb 22, 2023
-    date_iso: '2023-02-22'
-    date_display: Feb 2023
-    codebase_url: ''
-    published_conference: WWW 2023
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2023
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -2497,8 +2647,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0054
+    - null
     - null
     - null
     - null
@@ -2545,7 +2697,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2593,8 +2747,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0053
+    - null
     - null
     - null
     - null
@@ -2615,16 +2771,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2207.02547'
-    title: Simple and Efficient Heterogeneous Graph Neural Network
-    date: Jul 6, 2022
-    date_iso: '2022-07-06'
-    date_display: Jul 2022
-    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -2641,8 +2797,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0055
+    - null
     - null
     - null
     - null
@@ -2690,56 +2848,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.008
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: MAGNN
-    model_plain: MAGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2207.02547'
-    title: Simple and Efficient Heterogeneous Graph Neural Network
-    date: Jul 6, 2022
-    date_iso: '2022-07-06'
-    date_display: Jul 2022
-    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9376
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0045
     - null
     - null
     - null
@@ -2755,22 +2867,23 @@ variants:
   rows_json: /data/datasets/dblp/standard-split-rows.json
   chart_json: /data/datasets/dblp/standard-split-chart.json
   arch_counts:
-    gnn: 403
-    hybrid: 71
+    gnn: 404
+    hybrid: 70
     graph_transformer: 21
     llm: 3
-    walk: 31
+    walk: 30
     traditional: 49
   metric_counts:
-  - 288
+  - 290
   - 27
   - 13
-  - 199
+  - 197
   - 5
   - 9
   - 74
   - 9
   - 11
+  - 1
   - 22
   - 7
   - 6
@@ -2867,6 +2980,13 @@ variants:
       title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
         Graph'
       date: '2023-12-10'
+    Macro-F1:
+    - value: 0.9495
+      std: 0.002
+      model: SlotGAT
+      arxiv_id: '2405.01927'
+      title: 'SlotGAT: Slot-based Message Passing for Heterogeneous Graphs'
+      date: '2024-05-03'
     NMI:
     - value: 0.41
       std: 0.12

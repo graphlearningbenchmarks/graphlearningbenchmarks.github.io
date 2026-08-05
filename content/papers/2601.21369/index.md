@@ -88,9 +88,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -156,9 +156,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -247,10 +247,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 27
-    paper_rank: 748
-    rank_delta: 721
-    rank_delta_abs: 721
+    global_rank: 33
+    paper_rank: 879
+    rank_delta: 846
+    rank_delta_abs: 846
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -289,15 +289,16 @@ results:
     date_iso: '2026-01-29'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.889
-    at_pub_std: 0.0
-    at_pub_source_arxiv: '2009.09232'
-    at_pub_source_title: Learned Low Precision Graph Neural Networks
-    at_pub_source_date_iso: '2020-09-19'
-    at_pub_source_date_label: '2020'
+    at_pub_value: 0.8897
+    at_pub_std: 0.0014
+    at_pub_source_arxiv: '2505.15845'
+    at_pub_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in
+      Tokenized Graph Learning Models'
+    at_pub_source_date_iso: '2025-05-19'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.12770000000000004
+    gap_vs_at_pub: 0.12840000000000007
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -316,15 +317,16 @@ results:
     value_note: ''
     sort_value: 0.8897
     sort_std: null
-    global_rank: 57
-    paper_rank: 743
-    rank_delta: 686
-    rank_delta_abs: 686
+    global_rank: 72
+    paper_rank: 867
+    rank_delta: 795
+    rank_delta_abs: 795
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Learned Low Precision Graph Neural Networks
-    comparison_source_arxiv: '2009.09232'
+    comparison_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
+    comparison_source_arxiv: '2505.15845'
     is_best: false
     is_std_outlier: false
   - model: GraphSAGE
@@ -386,10 +388,10 @@ results:
     value_note: ''
     sort_value: 0.8889
     sort_std: null
-    global_rank: 63
-    paper_rank: 755
-    rank_delta: 692
-    rank_delta_abs: 692
+    global_rank: 79
+    paper_rank: 889
+    rank_delta: 810
+    rank_delta_abs: 810
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -457,10 +459,10 @@ results:
     value_note: ''
     sort_value: 0.866
     sort_std: 0.0091
-    global_rank: 198
-    paper_rank: 754
-    rank_delta: 556
-    rank_delta_abs: 556
+    global_rank: 227
+    paper_rank: 888
+    rank_delta: 661
+    rank_delta_abs: 661
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -528,10 +530,10 @@ results:
     value_note: ''
     sort_value: 0.7941
     sort_std: null
-    global_rank: 686
-    paper_rank: 748
-    rank_delta: 62
-    rank_delta_abs: 62
+    global_rank: 795
+    paper_rank: 877
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -598,8 +600,8 @@ results:
     value_note: ''
     sort_value: 0.7655
     sort_std: 0.0023
-    global_rank: 736
-    paper_rank: 736
+    global_rank: 860
+    paper_rank: 860
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -667,8 +669,8 @@ results:
     value_note: ''
     sort_value: 0.7643
     sort_std: 0.0026
-    global_rank: 737
-    paper_rank: 737
+    global_rank: 861
+    paper_rank: 861
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -736,8 +738,8 @@ results:
     value_note: ''
     sort_value: 0.7643
     sort_std: 0.0026
-    global_rank: 738
-    paper_rank: 738
+    global_rank: 862
+    paper_rank: 862
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -805,8 +807,8 @@ results:
     value_note: ''
     sort_value: 0.7633
     sort_std: 0.0035
-    global_rank: 741
-    paper_rank: 741
+    global_rank: 865
+    paper_rank: 865
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -874,8 +876,8 @@ results:
     value_note: ''
     sort_value: 0.7632
     sort_std: 0.0016
-    global_rank: 742
-    paper_rank: 742
+    global_rank: 866
+    paper_rank: 866
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -943,8 +945,8 @@ results:
     value_note: ''
     sort_value: 0.7576
     sort_std: 0.0019
-    global_rank: 745
-    paper_rank: 745
+    global_rank: 871
+    paper_rank: 871
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1012,8 +1014,8 @@ results:
     value_note: ''
     sort_value: 0.7473
     sort_std: 0.0017
-    global_rank: 754
-    paper_rank: 754
+    global_rank: 888
+    paper_rank: 888
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1081,8 +1083,8 @@ results:
     value_note: ''
     sort_value: 0.7441
     sort_std: 0.0026
-    global_rank: 756
-    paper_rank: 756
+    global_rank: 893
+    paper_rank: 893
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1150,8 +1152,8 @@ results:
     value_note: ''
     sort_value: 0.7237
     sort_std: 0.0033
-    global_rank: 775
-    paper_rank: 775
+    global_rank: 914
+    paper_rank: 914
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1973,5 +1975,6 @@ datasets_by_scope:
     datasets:
     - dataset: WN18RR
       dataset_slug: wn18rr
+main_figure: /figures/2601.21369/main_figure.jpegoptim.jpg
 ---
 

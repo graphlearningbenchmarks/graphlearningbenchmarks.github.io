@@ -81,9 +81,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: herec
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -114,9 +114,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: hetsann
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: deepwalk
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -228,7 +228,7 @@ results:
     today_delta_significant: false
     sort_value: 0.785
     sort_std: 0.007
-    global_rank: 133
+    global_rank: 135
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -290,7 +290,7 @@ results:
     today_delta_significant: false
     sort_value: 0.779
     sort_std: 0.002
-    global_rank: 136
+    global_rank: 138
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -352,7 +352,7 @@ results:
     today_delta_significant: false
     sort_value: 0.773
     sort_std: 0.006
-    global_rank: 138
+    global_rank: 140
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -414,7 +414,7 @@ results:
     today_delta_significant: false
     sort_value: 0.766
     sort_std: 0.001
-    global_rank: 139
+    global_rank: 141
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -476,7 +476,7 @@ results:
     today_delta_significant: false
     sort_value: 0.763
     sort_std: 0.007
-    global_rank: 140
+    global_rank: 142
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -538,7 +538,7 @@ results:
     today_delta_significant: false
     sort_value: 0.754
     sort_std: 0.003
-    global_rank: 141
+    global_rank: 143
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -600,7 +600,7 @@ results:
     today_delta_significant: false
     sort_value: 0.733
     sort_std: 0.007
-    global_rank: 147
+    global_rank: 149
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -636,5 +636,6 @@ datasets_by_scope:
     datasets:
     - dataset: DBLP
       dataset_slug: dblp
+main_figure: /figures/2310.14845/main_figure.jpegoptim.jpg
 ---
 

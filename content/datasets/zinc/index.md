@@ -12,7 +12,7 @@ stats:
   avg_nodes: 23.2
   avg_edges: 24.9
   num_classes: null
-result_count: 147
+result_count: 150
 best_model:
   model: TIGT
   value: 0.014
@@ -55,10 +55,6 @@ papers:
     Graph Coarsening
   date_iso: '2024-06-13'
   venue: NeurIPS 2024
-- arxiv_id: '2406.08210'
-  title: 'Expressivity and Generalization: Fragment-Biases for Molecular GNNs'
-  date_iso: '2024-06-12'
-  venue: ICML 2024
 - arxiv_id: '2406.05815'
   title: What Can We Learn from State Space Models for Machine Learning on Graphs?
   date_iso: '2024-06-09'
@@ -67,10 +63,6 @@ papers:
   title: Graph as Point Set
   date_iso: '2024-05-05'
   venue: ICML 2024
-- arxiv_id: '2402.16346'
-  title: Boosting Graph Pooling with Persistent Homology
-  date_iso: '2024-02-26'
-  venue: NeurIPS 2024
 - arxiv_id: '2402.08450'
   title: 'Subgraphormer: Unifying Subgraph GNNs and Graph Transformers via Graph Products'
   date_iso: '2024-02-13'
@@ -801,42 +793,6 @@ variants:
     - null
     - null
     - null
-  - model: WL
-    model_plain: WL
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2406.08210'
-    title: 'Expressivity and Generalization: Fragment-Biases for Molecular GNNs'
-    date: Jun 12, 2024
-    date_iso: '2024-06-12'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: ICML 2024
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0237
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: MPNNs
     model_plain: MPNNs
     is_baseline: false
@@ -1490,42 +1446,6 @@ variants:
     - null
     - null
     - null
-  - model: AUTOBAHN
-    model_plain: AUTOBAHN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2406.08210'
-    title: 'Expressivity and Generalization: Fragment-Biases for Molecular GNNs'
-    date: Jun 12, 2024
-    date_iso: '2024-06-12'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: ICML 2024
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.029
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: NGNN
     model_plain: NGNN
     is_baseline: true
@@ -1997,18 +1917,90 @@ variants:
     - null
     - null
     - null
-  row_count: 147
+  - model: CRaWl
+    model_plain: CRaWl
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2501.18739'
+    title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    date: Jan 30, 2025
+    date_iso: '2025-01-30'
+    date_display: Jan 2025
+    codebase_url: https://github.com/Zehong-Wang/GPM
+    published_conference: ICML 2025
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.036
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.005
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SAT
+    model_plain: SAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2501.18739'
+    title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    date: Jan 30, 2025
+    date_iso: '2025-01-30'
+    date_display: Jan 2025
+    codebase_url: https://github.com/Zehong-Wang/GPM
+    published_conference: ICML 2025
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.036
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.002
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 150
   rows_json: /data/datasets/zinc/full-rows.json
   chart_json: /data/datasets/zinc/full-chart.json
   arch_counts:
-    gnn: 80
-    hybrid: 27
-    graph_transformer: 24
+    gnn: 83
+    hybrid: 25
+    graph_transformer: 27
     llm: 0
     walk: 1
-    traditional: 8
+    traditional: 7
   metric_counts:
-  - 136
+  - 139
   - 3
   - 1
   - 8
@@ -2021,30 +2013,24 @@ variants:
     arxiv_id: '1802.08786'
     title: Syntax-Directed Variational Autoencoder for Structured Data
     date: '2018-02-15'
-  - value: 0.325
-    std: 0.015
-    model: ANA
-    arxiv_id: '2109.12872'
-    title: 'Meta-Aggregator: Learning to Aggregate for 1-bit Graph Neural Networks'
-    date: '2021-09-27'
-  - value: 0.068
-    std: 0.002
-    model: FeTA + GCKN + 3RW
-    arxiv_id: '2201.09332'
-    title: How Expressive are Transformers in Spectral Domain for Graphs?
-    date: '2022-01-23'
   - value: 0.022
     std: 0.002
     model: CIN
-    arxiv_id: '2210.13978'
-    title: Boosting the Cycle Counting Power of Graph Neural Networks with I$^2$-GNNs
-    date: '2022-10-22'
+    arxiv_id: '2106.12575'
+    title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    date: '2021-06-23'
   - value: 0.02
     std: 0.001
     model: PPGN++
     arxiv_id: '2302.11556'
     title: Equivariant Polynomials for Graph Neural Networks
     date: '2023-02-22'
+  - value: 0.014
+    std: 0.001
+    model: TIGT
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: '2024-02-03'
   milestones_by_metric:
     MAE: *id001
     QED:

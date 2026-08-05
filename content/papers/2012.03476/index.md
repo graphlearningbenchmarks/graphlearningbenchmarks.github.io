@@ -60,8 +60,8 @@ proposed_models:
 - NCGNN-D
 - NCGNN-A
 - NCGNN
-mrr: 0.0056
-adjusted_mrr: 0.0056
+mrr: 0.0054
+adjusted_mrr: 0.0054
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -74,7 +74,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 3
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -83,9 +83,43 @@ results:
 - &id005
   dataset: Actor
   rows:
-  - model: CoCN
+  - model: R-SoftGraphAIN
+    model_key: nodeformer
+    model_plain: R-SoftGraphAIN
+    value: 0.7623
+    std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7623
+    sort_std: 0.0042
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: diggr
-    model_plain: CoCN
+    model_plain: R-SoftGraphAIN
     value: 0.4535
     std: 0.0353
     metric: Accuracy
@@ -108,52 +142,19 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.4535
     sort_std: 0.0353
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: CoCN
-    model_key: uniaug - polygcl
-    model_plain: CoCN
-    value: 0.4301
-    std: 0.0127
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.01899'
-    title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
-    date: Jun 4, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-04'
-    venue: NeurIPS'25
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.4301
-    sort_std: 0.0127
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CoCN
-    model_key: adaptkry
-    model_plain: CoCN
-    value: 0.427
-    std: 0.0114
+  - model: R-SoftGraphAIN
+    model_key: dog
+    model_plain: R-SoftGraphAIN
+    value: 0.432
+    std: 0.012
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -163,25 +164,92 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
-    date: Mar 12, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-12'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/AdaptKry
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.427
-    sort_std: 0.0114
+    sort_value: 0.432
+    sort_std: 0.012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: GCNII
+    model_key: gcnii
+    model_plain: GCNII
+    value: 0.3385
+    std: null
+    paper_value: 0.3385
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: gcnii
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Average test accuracy on disassortative graphs
+    date: Dec 7, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-07'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-03-10'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4082
+    true_std: 0.0179
+    value_gap_source_arxiv: '2603.09195'
+    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06969999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4082
+    sort_std: 0.0179
+    global_rank: 39
+    paper_rank: 290
+    rank_delta: 251
+    rank_delta_abs: 251
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: MLP
     model_key: mlp
@@ -240,78 +308,10 @@ results:
     value_note: ''
     sort_value: 0.4018
     sort_std: 0.0055
-    global_rank: 38
-    paper_rank: 162
-    rank_delta: 124
-    rank_delta_abs: 124
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gcnii
-    model_plain: GCNII
-    value: 0.3385
-    std: null
-    paper_value: 0.3385
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 5
-    source_ref: gcnii
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Average test accuracy on disassortative graphs
-    date: Dec 7, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-07'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-11-21'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3744
-    true_std: 0.013
-    value_gap_source_arxiv: '2211.11761'
-    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
-      and Scalable Graph Learning Paradigm'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03589999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3744
-    sort_std: 0.013
-    global_rank: 96
-    paper_rank: 233
-    rank_delta: 137
-    rank_delta_abs: 137
+    global_rank: 48
+    paper_rank: 209
+    rank_delta: 161
+    rank_delta_abs: 161
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -376,8 +376,8 @@ results:
     value_note: ''
     sort_value: 0.3684
     sort_std: null
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -444,10 +444,10 @@ results:
     value_note: ''
     sort_value: 0.362
     sort_std: 0.01
-    global_rank: 146
-    paper_rank: 299
-    rank_delta: 153
-    rank_delta_abs: 153
+    global_rank: 184
+    paper_rank: 357
+    rank_delta: 173
+    rank_delta_abs: 173
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -511,10 +511,10 @@ results:
     value_note: ''
     sort_value: 0.3605
     sort_std: 0.0035
-    global_rank: 151
-    paper_rank: 367
-    rank_delta: 216
-    rank_delta_abs: 216
+    global_rank: 191
+    paper_rank: 427
+    rank_delta: 236
+    rank_delta_abs: 236
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -578,8 +578,8 @@ results:
     value_note: ''
     sort_value: 0.3594
     sort_std: 0.013
-    global_rank: 154
-    paper_rank: 158
+    global_rank: 200
+    paper_rank: 204
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -646,8 +646,8 @@ results:
     value_note: ''
     sort_value: 0.3562
     sort_std: 0.013
-    global_rank: 169
-    paper_rank: 169
+    global_rank: 218
+    paper_rank: 218
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -714,10 +714,10 @@ results:
     value_note: ''
     sort_value: 0.3551
     sort_std: 0.011
-    global_rank: 175
-    paper_rank: 237
-    rank_delta: 62
-    rank_delta_abs: 62
+    global_rank: 226
+    paper_rank: 294
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -781,10 +781,10 @@ results:
     value_note: ''
     sort_value: 0.346
     sort_std: null
-    global_rank: 210
-    paper_rank: 313
-    rank_delta: 103
-    rank_delta_abs: 103
+    global_rank: 267
+    paper_rank: 371
+    rank_delta: 104
+    rank_delta_abs: 104
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -824,11 +824,10 @@ results:
     published_conference: ''
     at_pub_value: 0.3163
     at_pub_std: null
-    at_pub_source_arxiv: '2212.10822'
-    at_pub_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
-      with Diversification for Graph Convolutional Networks'
-    at_pub_source_date_iso: '2020-08-20'
-    at_pub_source_date_label: NeurIPS 2020
+    at_pub_source_arxiv: '2002.05287'
+    at_pub_source_title: Heterophilic Graphs
+    at_pub_source_date_iso: '2020-02-13'
+    at_pub_source_date_label: ICLR 2020
     value_gap_source_date_iso: '2023-02-23'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: 0.003500000000000003
@@ -850,16 +849,15 @@ results:
     value_note: ''
     sort_value: 0.3163
     sort_std: null
-    global_rank: 268
-    paper_rank: 278
+    global_rank: 326
+    paper_rank: 336
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
-      with Diversification for Graph Convolutional Networks'
-    comparison_source_arxiv: '2212.10822'
+    comparison_source_title: Heterophilic Graphs
+    comparison_source_arxiv: '2002.05287'
     is_best: false
     is_std_outlier: false
   - model: Geom-GCN-I
@@ -894,11 +892,10 @@ results:
     published_conference: ''
     at_pub_value: 0.2909
     at_pub_std: null
-    at_pub_source_arxiv: '2212.10822'
-    at_pub_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
-      with Diversification for Graph Convolutional Networks'
-    at_pub_source_date_iso: '2020-08-20'
-    at_pub_source_date_label: NeurIPS 2020
+    at_pub_source_arxiv: '2002.05287'
+    at_pub_source_title: Heterophilic Graphs
+    at_pub_source_date_iso: '2020-02-13'
+    at_pub_source_date_label: ICLR 2020
     value_gap_source_date_iso: '2023-02-23'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: 0.004400000000000015
@@ -920,16 +917,15 @@ results:
     value_note: ''
     sort_value: 0.2909
     sort_std: null
-    global_rank: 326
-    paper_rank: 334
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 387
+    paper_rank: 396
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
-      with Diversification for Graph Convolutional Networks'
-    comparison_source_arxiv: '2212.10822'
+    comparison_source_title: Heterophilic Graphs
+    comparison_source_arxiv: '2002.05287'
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -944,9 +940,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -1036,9 +1032,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 430
-    rank_delta: 428
-    rank_delta_abs: 428
+    paper_rank: 427
+    rank_delta: 425
+    rank_delta_abs: 425
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1104,9 +1100,9 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 426
-    rank_delta: 423
-    rank_delta_abs: 423
+    paper_rank: 423
+    rank_delta: 420
+    rank_delta_abs: 420
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1171,10 +1167,10 @@ results:
     value_note: ''
     sort_value: 0.9104
     sort_std: 0.0041
-    global_rank: 72
-    paper_rank: 460
-    rank_delta: 388
-    rank_delta_abs: 388
+    global_rank: 73
+    paper_rank: 457
+    rank_delta: 384
+    rank_delta_abs: 384
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1239,10 +1235,10 @@ results:
     value_note: ''
     sort_value: 0.9093
     sort_std: 0.0018
-    global_rank: 83
-    paper_rank: 454
-    rank_delta: 371
-    rank_delta_abs: 371
+    global_rank: 84
+    paper_rank: 451
+    rank_delta: 367
+    rank_delta_abs: 367
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1308,10 +1304,10 @@ results:
     value_note: ''
     sort_value: 0.9022
     sort_std: 0.0021
-    global_rank: 111
-    paper_rank: 411
-    rank_delta: 300
-    rank_delta_abs: 300
+    global_rank: 113
+    paper_rank: 408
+    rank_delta: 295
+    rank_delta_abs: 295
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1376,10 +1372,10 @@ results:
     value_note: ''
     sort_value: 0.8883
     sort_std: 0.0044
-    global_rank: 204
-    paper_rank: 517
-    rank_delta: 313
-    rank_delta_abs: 313
+    global_rank: 209
+    paper_rank: 513
+    rank_delta: 304
+    rank_delta_abs: 304
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1444,8 +1440,8 @@ results:
     value_note: ''
     sort_value: 0.8812
     sort_std: null
-    global_rank: 244
-    paper_rank: 244
+    global_rank: 248
+    paper_rank: 248
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1512,8 +1508,8 @@ results:
     value_note: ''
     sort_value: 0.8811
     sort_std: null
-    global_rank: 246
-    paper_rank: 246
+    global_rank: 250
+    paper_rank: 250
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1579,8 +1575,8 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.012
-    global_rank: 365
-    paper_rank: 426
+    global_rank: 362
+    paper_rank: 423
     rank_delta: 61
     rank_delta_abs: 61
     rank_delta_direction: worse
@@ -1647,8 +1643,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: null
-    global_rank: 436
-    paper_rank: 436
+    global_rank: 433
+    paper_rank: 433
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1715,8 +1711,8 @@ results:
     value_note: ''
     sort_value: 0.8218
     sort_std: null
-    global_rank: 437
-    paper_rank: 437
+    global_rank: 434
+    paper_rank: 434
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1782,8 +1778,8 @@ results:
     value_note: ''
     sort_value: 0.82
     sort_std: 0.006
-    global_rank: 442
-    paper_rank: 469
+    global_rank: 439
+    paper_rank: 466
     rank_delta: 27
     rank_delta_abs: 27
     rank_delta_direction: worse
@@ -1805,9 +1801,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -1838,9 +1834,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -1872,9 +1868,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -1964,9 +1960,9 @@ results:
     sort_value: 0.9669
     sort_std: 0.0014
     global_rank: 5
-    paper_rank: 439
-    rank_delta: 434
-    rank_delta_abs: 434
+    paper_rank: 445
+    rank_delta: 440
+    rank_delta_abs: 440
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2004,17 +2000,17 @@ results:
     date_iso: '2020-12-07'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9282
-    at_pub_std: 0.0023
-    at_pub_source_arxiv: '1911.05485'
-    at_pub_source_title: Diffusion Improves Graph Learning
-    at_pub_source_date_iso: '2019-10-28'
-    at_pub_source_date_label: NeurIPS 2019
+    at_pub_value: 0.9242
+    at_pub_std: 0.0022
+    at_pub_source_arxiv: '2010.14945'
+    at_pub_source_title: Graph Contrastive Learning with Adaptive Augmentation
+    at_pub_source_date_iso: '2020-10-27'
+    at_pub_source_date_label: WWW 2020
     value_gap_source_date_iso: '2026-05-18'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.006099999999999994
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: 0.0020999999999999908
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -2032,14 +2028,14 @@ results:
     sort_value: 0.9632
     sort_std: 0.0008
     global_rank: 16
-    paper_rank: 310
-    rank_delta: 294
-    rank_delta_abs: 294
+    paper_rank: 317
+    rank_delta: 301
+    rank_delta_abs: 301
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Diffusion Improves Graph Learning
-    comparison_source_arxiv: '1911.05485'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: APPNP
@@ -2099,10 +2095,10 @@ results:
     value_note: ''
     sort_value: 0.9573
     sort_std: 0.0012
-    global_rank: 25
-    paper_rank: 326
-    rank_delta: 301
-    rank_delta_abs: 301
+    global_rank: 27
+    paper_rank: 332
+    rank_delta: 305
+    rank_delta_abs: 305
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -2167,10 +2163,10 @@ results:
     value_note: ''
     sort_value: 0.9511
     sort_std: 0.0009
-    global_rank: 63
-    paper_rank: 407
-    rank_delta: 344
-    rank_delta_abs: 344
+    global_rank: 66
+    paper_rank: 413
+    rank_delta: 347
+    rank_delta_abs: 347
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -2235,8 +2231,8 @@ results:
     value_note: ''
     sort_value: 0.943
     sort_std: 0.002
-    global_rank: 104
-    paper_rank: 431
+    global_rank: 110
+    paper_rank: 437
     rank_delta: 327
     rank_delta_abs: 327
     rank_delta_direction: worse
@@ -2303,8 +2299,8 @@ results:
     value_note: ''
     sort_value: 0.9308
     sort_std: null
-    global_rank: 207
-    paper_rank: 207
+    global_rank: 212
+    paper_rank: 212
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2371,10 +2367,10 @@ results:
     value_note: ''
     sort_value: 0.9307
     sort_std: 0.0042
-    global_rank: 208
-    paper_rank: 494
-    rank_delta: 286
-    rank_delta_abs: 286
+    global_rank: 213
+    paper_rank: 501
+    rank_delta: 288
+    rank_delta_abs: 288
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2439,8 +2435,8 @@ results:
     value_note: ''
     sort_value: 0.9286
     sort_std: null
-    global_rank: 226
-    paper_rank: 226
+    global_rank: 232
+    paper_rank: 232
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2507,8 +2503,8 @@ results:
     value_note: ''
     sort_value: 0.9269
     sort_std: null
-    global_rank: 253
-    paper_rank: 253
+    global_rank: 260
+    paper_rank: 260
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2575,8 +2571,8 @@ results:
     value_note: ''
     sort_value: 0.9222
     sort_std: null
-    global_rank: 308
-    paper_rank: 308
+    global_rank: 315
+    paper_rank: 315
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2643,8 +2639,8 @@ results:
     value_note: ''
     sort_value: 0.9221
     sort_std: null
-    global_rank: 311
-    paper_rank: 311
+    global_rank: 318
+    paper_rank: 318
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2710,8 +2706,8 @@ results:
     value_note: ''
     sort_value: 0.919
     sort_std: 0.007
-    global_rank: 331
-    paper_rank: 342
+    global_rank: 337
+    paper_rank: 348
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -2778,8 +2774,8 @@ results:
     value_note: ''
     sort_value: 0.9059
     sort_std: null
-    global_rank: 403
-    paper_rank: 403
+    global_rank: 408
+    paper_rank: 408
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2801,9 +2797,9 @@ results:
 - &id004
   dataset: Cornell
   rows:
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -2834,9 +2830,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: acm-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.948
     std: 0.038
     metric: Accuracy
@@ -2867,9 +2863,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: rf-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -2956,10 +2952,10 @@ results:
     value_note: ''
     sort_value: 0.9136
     sort_std: 0.007
-    global_rank: 24
-    paper_rank: 175
-    rank_delta: 151
-    rank_delta_abs: 151
+    global_rank: 25
+    paper_rank: 182
+    rank_delta: 157
+    rank_delta_abs: 157
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2997,20 +2993,20 @@ results:
     date_iso: '2020-12-07'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7649
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-03-10'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.016199999999999992
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.8918
@@ -3023,15 +3019,15 @@ results:
     value_note: ''
     sort_value: 0.8918
     sort_std: 0.0396
-    global_rank: 40
-    paper_rank: 209
-    rank_delta: 169
-    rank_delta_abs: 169
+    global_rank: 41
+    paper_rank: 217
+    rank_delta: 176
+    rank_delta_abs: 176
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Simple and Deep Graph Convolutional Networks
-    comparison_source_arxiv: '2007.02133'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
   - model: NCGNN-A
@@ -3091,8 +3087,8 @@ results:
     value_note: ''
     sort_value: 0.8379
     sort_std: null
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3159,8 +3155,8 @@ results:
     value_note: ''
     sort_value: 0.8216
     sort_std: 0.048
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3227,8 +3223,8 @@ results:
     value_note: ''
     sort_value: 0.8216
     sort_std: 0.06
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3270,10 +3266,11 @@ results:
     published_conference: ''
     at_pub_value: 0.5432
     at_pub_std: null
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
+    at_pub_source_arxiv: '2212.10822'
+    at_pub_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
+      with Diversification for Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-08-20'
+    at_pub_source_date_label: NeurIPS 2020
     value_gap_source_date_iso: '2022-06-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: 0.04599999999999993
@@ -3295,15 +3292,16 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.054
-    global_rank: 165
-    paper_rank: 381
-    rank_delta: 216
-    rank_delta_abs: 216
+    global_rank: 171
+    paper_rank: 408
+    rank_delta: 237
+    rank_delta_abs: 237
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Simple and Deep Graph Convolutional Networks
-    comparison_source_arxiv: '2007.02133'
+    comparison_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
+      with Diversification for Graph Convolutional Networks'
+    comparison_source_arxiv: '2212.10822'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -3338,10 +3336,11 @@ results:
     published_conference: ''
     at_pub_value: 0.527
     at_pub_std: null
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
+    at_pub_source_arxiv: '2212.10822'
+    at_pub_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
+      with Diversification for Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-08-20'
+    at_pub_source_date_label: NeurIPS 2020
     value_gap_source_date_iso: '2024-05-25'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.043300000000000005
@@ -3362,15 +3361,16 @@ results:
     value_note: ''
     sort_value: 0.8015
     sort_std: 0.0037
-    global_rank: 183
-    paper_rank: 415
-    rank_delta: 232
-    rank_delta_abs: 232
+    global_rank: 190
+    paper_rank: 443
+    rank_delta: 253
+    rank_delta_abs: 253
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Simple and Deep Graph Convolutional Networks
-    comparison_source_arxiv: '2007.02133'
+    comparison_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
+      with Diversification for Graph Convolutional Networks'
+    comparison_source_arxiv: '2212.10822'
     is_best: false
     is_std_outlier: false
   - model: Geom-GCN-S
@@ -3429,10 +3429,10 @@ results:
     value_note: ''
     sort_value: 0.754
     sort_std: null
-    global_rank: 244
-    paper_rank: 424
-    rank_delta: 180
-    rank_delta_abs: 180
+    global_rank: 253
+    paper_rank: 453
+    rank_delta: 200
+    rank_delta_abs: 200
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3497,10 +3497,10 @@ results:
     value_note: ''
     sort_value: 0.7351
     sort_std: 0.0718
-    global_rank: 264
-    paper_rank: 369
-    rank_delta: 105
-    rank_delta_abs: 105
+    global_rank: 273
+    paper_rank: 396
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3540,10 +3540,11 @@ results:
     published_conference: ''
     at_pub_value: 0.6081
     at_pub_std: null
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
+    at_pub_source_arxiv: '2212.10822'
+    at_pub_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
+      with Diversification for Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-08-20'
+    at_pub_source_date_label: NeurIPS 2020
     value_gap_source_date_iso: '2023-02-23'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: null
@@ -3565,8 +3566,8 @@ results:
     value_note: ''
     sort_value: 0.6081
     sort_std: null
-    global_rank: 362
-    paper_rank: 362
+    global_rank: 386
+    paper_rank: 386
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3608,10 +3609,11 @@ results:
     published_conference: ''
     at_pub_value: 0.5676
     at_pub_std: null
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
+    at_pub_source_arxiv: '2212.10822'
+    at_pub_source_title: 'Complete the Missing Half: Augmenting Aggregation Filtering
+      with Diversification for Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-08-20'
+    at_pub_source_date_label: NeurIPS 2020
     value_gap_source_date_iso: '2023-02-23'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: null
@@ -3633,8 +3635,8 @@ results:
     value_note: ''
     sort_value: 0.5676
     sort_std: null
-    global_rank: 418
-    paper_rank: 418
+    global_rank: 446
+    paper_rank: 446
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3656,9 +3658,9 @@ results:
 - &id003
   dataset: Texas
   rows:
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -3689,9 +3691,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: dog
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -3700,9 +3702,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -3723,9 +3725,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: gpf-plus
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -3792,8 +3794,8 @@ results:
     at_pub_source_title: Non-Local Graph Neural Networks
     at_pub_source_date_iso: '2020-05-29'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2022-12-07'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-01-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.005900000000000016
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -3802,20 +3804,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9226
-    true_std: 0.0071
-    value_gap_source_arxiv: '2212.03654'
-    value_gap_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    true_value: 0.923
+    true_std: 0.007
+    value_gap_source_arxiv: '2401.14580'
+    value_gap_source_title: 'Design your own universe: a physics-informed agnostic
+      method for enhancing graph neural networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.10370000000000001
+    value_gap: 0.10410000000000008
     has_value_note: false
     value_note: ''
-    sort_value: 0.9226
-    sort_std: 0.0071
+    sort_value: 0.923
+    sort_std: 0.007
     global_rank: 43
-    paper_rank: 231
-    rank_delta: 188
-    rank_delta_abs: 188
+    paper_rank: 239
+    rank_delta: 196
+    rank_delta_abs: 196
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3880,8 +3883,8 @@ results:
     value_note: ''
     sort_value: 0.8486
     sort_std: 0.0677
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3948,8 +3951,8 @@ results:
     value_note: ''
     sort_value: 0.8443
     sort_std: null
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 186
+    paper_rank: 186
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3989,17 +3992,17 @@ results:
     date_iso: '2020-12-07'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7784
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-03-10'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.023799999999999932
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -4015,15 +4018,15 @@ results:
     value_note: ''
     sort_value: 0.8246
     sort_std: 0.0458
-    global_rank: 214
-    paper_rank: 336
-    rank_delta: 122
-    rank_delta_abs: 122
+    global_rank: 221
+    paper_rank: 349
+    rank_delta: 128
+    rank_delta_abs: 128
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Simple and Deep Graph Convolutional Networks
-    comparison_source_arxiv: '2007.02133'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: H2GCN-2
@@ -4083,8 +4086,8 @@ results:
     value_note: ''
     sort_value: 0.8216
     sort_std: 0.0528
-    global_rank: 222
-    paper_rank: 222
+    global_rank: 230
+    paper_rank: 230
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4126,10 +4129,10 @@ results:
     published_conference: ''
     at_pub_value: 0.5838
     at_pub_std: null
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
+    at_pub_source_arxiv: '2002.05287'
+    at_pub_source_title: Heterophilic Graphs
+    at_pub_source_date_iso: '2020-02-13'
+    at_pub_source_date_label: ICLR 2020
     value_gap_source_date_iso: '2025-06-17'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -4151,10 +4154,10 @@ results:
     value_note: ''
     sort_value: 0.8162
     sort_std: 0.0645
-    global_rank: 236
-    paper_rank: 548
-    rank_delta: 312
-    rank_delta_abs: 312
+    global_rank: 245
+    paper_rank: 563
+    rank_delta: 318
+    rank_delta_abs: 318
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4218,10 +4221,10 @@ results:
     value_note: ''
     sort_value: 0.7933
     sort_std: 0.0447
-    global_rank: 287
-    paper_rank: 519
-    rank_delta: 232
-    rank_delta_abs: 232
+    global_rank: 299
+    paper_rank: 540
+    rank_delta: 241
+    rank_delta_abs: 241
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4285,10 +4288,10 @@ results:
     value_note: ''
     sort_value: 0.735
     sort_std: null
-    global_rank: 365
-    paper_rank: 513
-    rank_delta: 148
-    rank_delta_abs: 148
+    global_rank: 384
+    paper_rank: 535
+    rank_delta: 151
+    rank_delta_abs: 151
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4353,10 +4356,10 @@ results:
     value_note: ''
     sort_value: 0.7027
     sort_std: 0.0493
-    global_rank: 394
-    paper_rank: 524
-    rank_delta: 130
-    rank_delta_abs: 130
+    global_rank: 415
+    paper_rank: 543
+    rank_delta: 128
+    rank_delta_abs: 128
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4396,10 +4399,10 @@ results:
     published_conference: ''
     at_pub_value: 0.6757
     at_pub_std: null
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
+    at_pub_source_arxiv: '2002.05287'
+    at_pub_source_title: Heterophilic Graphs
+    at_pub_source_date_iso: '2020-02-13'
+    at_pub_source_date_label: ICLR 2020
     value_gap_source_date_iso: '2023-02-23'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: null
@@ -4421,8 +4424,8 @@ results:
     value_note: ''
     sort_value: 0.6757
     sort_std: null
-    global_rank: 422
-    paper_rank: 422
+    global_rank: 444
+    paper_rank: 444
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4464,10 +4467,10 @@ results:
     published_conference: ''
     at_pub_value: 0.5758
     at_pub_std: null
-    at_pub_source_arxiv: '2007.02133'
-    at_pub_source_title: Simple and Deep Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-07-04'
-    at_pub_source_date_label: ICML 2020
+    at_pub_source_arxiv: '2002.05287'
+    at_pub_source_title: Heterophilic Graphs
+    at_pub_source_date_iso: '2020-02-13'
+    at_pub_source_date_label: ICLR 2020
     value_gap_source_date_iso: '2023-02-23'
     value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: null
@@ -4489,8 +4492,8 @@ results:
     value_note: ''
     sort_value: 0.5758
     sort_std: null
-    global_rank: 563
-    paper_rank: 563
+    global_rank: 578
+    paper_rank: 578
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4539,5 +4542,6 @@ datasets_by_scope:
       dataset_slug: cornell
     - dataset: Actor
       dataset_slug: actor
+main_figure: /figures/2012.03476/main_figure.jpegoptim.jpg
 ---
 

@@ -65,21 +65,21 @@ paper_type: method
 proposed_models:
 - GraphSAGE
 - weakly supervised graph anomaly detection method
-mrr: 0.0345
-adjusted_mrr: 0.0115
+mrr: 0.0208
+adjusted_mrr: 0.0069
 mrr_dataset_count: 1
 benchmark_categories:
-- Heterophilic Graphs
+- Heterophily Benchmark
 - Other Graph Benchmarks
 benchmark_coverage:
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
   evaluated: 1
-  total: 13
+  total: 5
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -88,139 +88,6 @@ results:
 - &id002
   dataset: Amazon2M
   rows:
-  - model: weakly supervised graph anomaly detection method
-    model_key: unigad - bwg
-    model_plain: weakly supervised graph anomaly detection method
-    value: 0.9784
-    std: null
-    metric: AUROC
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-10'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9784
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: BWGNN
-    model_key: bwgnn
-    model_plain: BWGNN
-    value: 0.885
-    std: 0.02
-    paper_value: 0.885
-    paper_std: 0.02
-    metric: AUROC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: tang2022bwgnn
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard anomaly detection task on Amazon dataset
-    date: Apr 1, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.978
-    at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-11-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.09299999999999997
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.978
-    true_std: null
-    value_gap_source_arxiv: '2411.06427'
-    value_gap_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.09299999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.978
-    sort_std: null
-    global_rank: 2
-    paper_rank: 18
-    rank_delta: 16
-    rank_delta_abs: 16
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
-    is_best: true
-    is_std_outlier: false
-  - model: weakly supervised graph anomaly detection method
-    model_key: amnet
-    model_plain: weakly supervised graph anomaly detection method
-    value: 0.9731
-    std: null
-    metric: AUROC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-10'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9731
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: weakly supervised graph anomaly detection method
     model_key: weakly supervised graph anomaly detection method
     model_plain: weakly supervised graph anomaly detection method
@@ -279,8 +146,8 @@ results:
     value_note: ''
     sort_value: 0.969
     sort_std: 0.01
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -289,73 +156,6 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.918
-    std: 0.01
-    paper_value: 0.918
-    paper_std: 0.01
-    metric: AUROC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: veličković2018gat
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard anomaly detection task on Amazon dataset
-    date: Apr 1, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9624
-    at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-11-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.044399999999999995
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9624
-    true_std: null
-    value_gap_source_arxiv: '2411.06427'
-    value_gap_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.044399999999999995
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9624
-    sort_std: null
-    global_rank: 6
-    paper_rank: 11
-    rank_delta: 5
-    rank_delta_abs: 5
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
-    is_best: false
     is_std_outlier: false
   - model: ConsisGAD
     model_key: consisgad
@@ -415,8 +215,8 @@ results:
     value_note: ''
     sort_value: 0.952
     sort_std: 0.01
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -425,6 +225,39 @@ results:
     comparison_source_title: Semi-supervised Graph Anomaly Detection via Robust Homophily
       Learning
     comparison_source_arxiv: '2506.15448'
+    is_best: true
+    is_std_outlier: false
+  - model: weakly supervised graph anomaly detection method
+    model_key: ggad
+    model_plain: weakly supervised graph anomaly detection method
+    value: 0.9443
+    std: null
+    metric: AUROC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.15448'
+    title: Semi-supervised Graph Anomaly Detection via Robust Homophily Learning
+    date: Jun 18, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-18'
+    venue: Accepted at NeurIPS 2025
+    codebase_url: https://github.com/mala-lab/RHO
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9443
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GATSep
@@ -484,8 +317,76 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: 0.01
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.918
+    std: 0.01
+    paper_value: 0.918
+    paper_std: 0.01
+    metric: AUROC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: veličković2018gat
+    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard anomaly detection task on Amazon dataset
+    date: Apr 1, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-01'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.918
+    true_std: 0.01
+    value_gap_source_arxiv: '2605.11749'
+    value_gap_source_title: Learning Feature Encoder with Synthetic Anomalies for
+      Weakly Supervised Graph Anomaly Detection
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.918
+    sort_std: 0.01
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -525,41 +426,42 @@ results:
     date_iso: '2026-04-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9217
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-11-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.011699999999999933
-    worse_than_at_pub: true
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-01'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9217
-    true_std: null
-    value_gap_source_arxiv: '2411.06427'
-    value_gap_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.011699999999999933
+    today_delta_significant: false
+    true_value: 0.91
+    true_std: 0.01
+    value_gap_source_arxiv: '2605.11749'
+    value_gap_source_title: Learning Feature Encoder with Synthetic Anomalies for
+      Weakly Supervised Graph Anomaly Detection
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.9217
-    sort_std: null
-    global_rank: 11
-    paper_rank: 12
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
+    sort_value: 0.91
+    sort_std: 0.01
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: CGNN
@@ -619,8 +521,8 @@ results:
     value_note: ''
     sort_value: 0.909
     sort_std: 0.02
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -687,8 +589,8 @@ results:
     value_note: ''
     sort_value: 0.907
     sort_std: 0.01
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -755,8 +657,8 @@ results:
     value_note: ''
     sort_value: 0.903
     sort_std: 0.01
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -823,8 +725,8 @@ results:
     value_note: ''
     sort_value: 0.899
     sort_std: 0.01
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -864,18 +766,18 @@ results:
     date_iso: '2026-04-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8453
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2026-04-01'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.048699999999999966
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -891,15 +793,85 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.01
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 13
+    paper_rank: 13
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BWGNN
+    model_key: bwgnn
+    model_plain: BWGNN
+    value: 0.885
+    std: 0.02
+    paper_value: 0.885
+    paper_std: 0.02
+    metric: AUROC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: tang2022bwgnn
+    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard anomaly detection task on Amazon dataset
+    date: Apr 1, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8312
+    at_pub_std: null
+    at_pub_source_arxiv: '2506.15448'
+    at_pub_source_title: Semi-supervised Graph Anomaly Detection via Robust Homophily
+      Learning
+    at_pub_source_date_iso: '2025-06-18'
+    at_pub_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2026-04-01'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.05379999999999996
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.885
+    true_std: 0.02
+    value_gap_source_arxiv: '2605.11749'
+    value_gap_source_title: Learning Feature Encoder with Synthetic Anomalies for
+      Weakly Supervised Graph Anomaly Detection
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.885
+    sort_std: 0.02
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
+    comparison_source_title: Semi-supervised Graph Anomaly Detection via Robust Homophily
+      Learning
+    comparison_source_arxiv: '2506.15448'
     is_best: false
     is_std_outlier: false
   - model: GHRN
@@ -959,8 +931,8 @@ results:
     value_note: ''
     sort_value: 0.885
     sort_std: 0.02
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1027,8 +999,8 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: 0.01
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1068,41 +1040,44 @@ results:
     date_iso: '2026-04-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8237
+    at_pub_value: 0.7345
     at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-11-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.0017000000000000348
-    worse_than_at_pub: true
+    at_pub_source_arxiv: '2506.15448'
+    at_pub_source_title: Semi-supervised Graph Anomaly Detection via Robust Homophily
+      Learning
+    at_pub_source_date_iso: '2025-06-18'
+    at_pub_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2026-04-01'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.08749999999999991
+    worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8237
-    true_std: null
-    value_gap_source_arxiv: '2411.06427'
-    value_gap_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0017000000000000348
+    today_delta_significant: false
+    true_value: 0.822
+    true_std: 0.0
+    value_gap_source_arxiv: '2605.11749'
+    value_gap_source_title: Learning Feature Encoder with Synthetic Anomalies for
+      Weakly Supervised Graph Anomaly Detection
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.8237
-    sort_std: null
-    global_rank: 25
-    paper_rank: 25
+    sort_value: 0.822
+    sort_std: 0.0
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
+    comparison_type: improved
+    comparison_source_title: Semi-supervised Graph Anomaly Detection via Robust Homophily
+      Learning
+    comparison_source_arxiv: '2506.15448'
     is_best: false
     is_std_outlier: false
   rank_metric: AUROC
@@ -1117,102 +1092,103 @@ results:
 - &id001
   dataset: Questions
   rows:
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.609
-    std: 0.03
-    paper_value: 0.609
-    paper_std: 0.03
+  - model: Tango GPS
+    model_key: graphsage + unigap
+    model_plain: Tango GPS
+    value: 0.8421
+    std: 0.008
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification for anomaly detection on Questions
-      dataset
-    date: Apr 1, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9733
-    at_pub_std: 0.0006
-    at_pub_source_arxiv: '2405.20445'
-    at_pub_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    at_pub_source_date_iso: '2024-05-30'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-05-30'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.36430000000000007
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9733
-    true_std: 0.0006
-    value_gap_source_arxiv: '2405.20445'
-    value_gap_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: 0.36430000000000007
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9733
-    sort_std: 0.0006
+    is_global_top: true
     global_rank: 1
-    paper_rank: 119
-    rank_delta: 118
-    rank_delta_abs: 118
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    comparison_source_arxiv: '2405.20445'
+    sort_value: 0.8421
+    sort_std: 0.008
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
-    model_key: ags-gnn
-    model_plain: topk
-    value: 0.9727
-    std: 0.0004
+  - model: Tango GPS
+    model_key: h2gcn + unigap
+    model_plain: Tango GPS
+    value: 0.8359
+    std: 0.007
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: Feb 14, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-14'
-    venue: IEEE Transactions on Knowledge and Data Engineering
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9727
-    sort_std: 0.0004
+    sort_value: 0.8359
+    sort_std: 0.007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango GPS
+    model_key: gcn + unigap
+    model_plain: Tango GPS
+    value: 0.8273
+    std: 0.009
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8273
+    sort_std: 0.009
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1249,15 +1225,16 @@ results:
     date_iso: '2026-04-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9715
-    at_pub_std: 0.0004
-    at_pub_source_arxiv: '2405.20445'
-    at_pub_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    at_pub_source_date_iso: '2024-05-30'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-05-30'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.49850000000000005
+    at_pub_value: 0.7902
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2407.19420'
+    at_pub_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    at_pub_source_date_iso: '2024-07-28'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-07-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.31720000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1265,25 +1242,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9715
-    true_std: 0.0004
-    value_gap_source_arxiv: '2405.20445'
-    value_gap_source_title: Fully-inductive Node Classification on Arbitrary Graphs
+    true_value: 0.7902
+    true_std: 0.006
+    value_gap_source_arxiv: '2407.19420'
+    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.49850000000000005
+    value_gap: 0.31720000000000004
     has_value_note: false
     value_note: ''
-    sort_value: 0.9715
-    sort_std: 0.0004
-    global_rank: 3
-    paper_rank: 148
-    rank_delta: 145
-    rank_delta_abs: 145
+    sort_value: 0.7902
+    sort_std: 0.006
+    global_rank: 17
+    paper_rank: 170
+    rank_delta: 153
+    rank_delta_abs: 153
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    comparison_source_arxiv: '2405.20445'
+    comparison_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    comparison_source_arxiv: '2407.19420'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -1317,15 +1296,15 @@ results:
     date_iso: '2026-04-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9711
-    at_pub_std: 0.0002
-    at_pub_source_arxiv: '2405.20445'
-    at_pub_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    at_pub_source_date_iso: '2024-05-30'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-05-30'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.3671
+    at_pub_value: 0.7743
+    at_pub_std: 0.012
+    at_pub_source_arxiv: '2403.12529'
+    at_pub_source_title: Contextualized Messages Boost Graph Representations
+    at_pub_source_date_iso: '2024-03-19'
+    at_pub_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2024-03-19'
+    value_gap_source_date_label: TMLR 2024
+    gap_vs_at_pub: 0.1703
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1333,161 +1312,25 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9711
-    true_std: 0.0002
-    value_gap_source_arxiv: '2405.20445'
-    value_gap_source_title: Fully-inductive Node Classification on Arbitrary Graphs
+    true_value: 0.7743
+    true_std: 0.012
+    value_gap_source_arxiv: '2403.12529'
+    value_gap_source_title: Contextualized Messages Boost Graph Representations
     value_gap_source_is_current_paper: false
-    value_gap: 0.3671
+    value_gap: 0.1703
     has_value_note: false
     value_note: ''
-    sort_value: 0.9711
-    sort_std: 0.0002
-    global_rank: 4
-    paper_rank: 120
-    rank_delta: 116
-    rank_delta_abs: 116
+    sort_value: 0.7743
+    sort_std: 0.012
+    global_rank: 40
+    paper_rank: 142
+    rank_delta: 102
+    rank_delta_abs: 102
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Fully-inductive Node Classification on Arbitrary Graphs
-    comparison_source_arxiv: '2405.20445'
-    is_best: false
-    is_std_outlier: false
-  - model: BWGNN
-    model_key: bwgnn
-    model_plain: BWGNN
-    value: 0.611
-    std: 0.03
-    paper_value: 0.611
-    paper_std: 0.03
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: tang2022bwgnn
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification for anomaly detection on Questions
-      dataset
-    date: Apr 1, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9603
-    at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-11-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.34930000000000005
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9603
-    true_std: null
-    value_gap_source_arxiv: '2411.06427'
-    value_gap_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.34930000000000005
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9603
-    sort_std: null
-    global_rank: 8
-    paper_rank: 119
-    rank_delta: 111
-    rank_delta_abs: 111
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
-    is_best: true
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.589
-    std: 0.04
-    paper_value: 0.589
-    paper_std: 0.04
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: xu2018gin
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification for anomaly detection on Questions
-      dataset
-    date: Apr 1, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8643
-    at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-11-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.2753
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8643
-    true_std: null
-    value_gap_source_arxiv: '2411.06427'
-    value_gap_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.2753
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8643
-    sort_std: null
-    global_rank: 11
-    paper_rank: 123
-    rank_delta: 112
-    rank_delta_abs: 112
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
+    comparison_source_title: Contextualized Messages Boost Graph Representations
+    comparison_source_arxiv: '2403.12529'
     is_best: false
     is_std_outlier: false
   - model: GraphSAGE
@@ -1521,15 +1364,16 @@ results:
     date_iso: '2026-04-01'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7816
-    at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-11-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.27959999999999996
+    at_pub_value: 0.7721
+    at_pub_std: 0.013
+    at_pub_source_arxiv: '2407.19420'
+    at_pub_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    at_pub_source_date_iso: '2024-07-28'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-07-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.2701
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1537,25 +1381,95 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7816
-    true_std: null
-    value_gap_source_arxiv: '2411.06427'
-    value_gap_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
+    true_value: 0.7721
+    true_std: 0.013
+    value_gap_source_arxiv: '2407.19420'
+    value_gap_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.27959999999999996
+    value_gap: 0.2701
     has_value_note: false
     value_note: ''
-    sort_value: 0.7816
-    sort_std: null
-    global_rank: 29
-    paper_rank: 147
-    rank_delta: 118
-    rank_delta_abs: 118
+    sort_value: 0.7721
+    sort_std: 0.013
+    global_rank: 48
+    paper_rank: 169
+    rank_delta: 121
+    rank_delta_abs: 121
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
+    comparison_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
+      to Mitigate Over-Smoothing in Node Classification Tasks'
+    comparison_source_arxiv: '2407.19420'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.609
+    std: 0.03
+    paper_value: 0.609
+    paper_std: 0.03
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification for anomaly detection on Questions
+      dataset
+    date: Apr 1, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7082
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2508.17531'
+    at_pub_source_title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    at_pub_source_date_iso: '2025-08-24'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-08-24'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.09920000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7082
+    true_std: 0.001
+    value_gap_source_arxiv: '2508.17531'
+    value_gap_source_title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09920000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7082
+    sort_std: 0.001
+    global_rank: 99
+    paper_rank: 141
+    rank_delta: 42
+    rank_delta_abs: 42
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    comparison_source_arxiv: '2508.17531'
     is_best: false
     is_std_outlier: false
   - model: GATSep
@@ -1617,10 +1531,81 @@ results:
     value_note: ''
     sort_value: 0.6996
     sort_std: null
-    global_rank: 101
-    paper_rank: 117
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 109
+    paper_rank: 138
+    rank_delta: 29
+    rank_delta_abs: 29
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Data Augmentation for Supervised Graph Outlier Detection
+      via Latent Diffusion Models
+    comparison_source_arxiv: '2312.17679'
+    is_best: false
+    is_std_outlier: false
+  - model: BWGNN
+    model_key: bwgnn
+    model_plain: BWGNN
+    value: 0.611
+    std: 0.03
+    paper_value: 0.611
+    paper_std: 0.03
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: tang2022bwgnn
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification for anomaly detection on Questions
+      dataset
+    date: Apr 1, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6947
+    at_pub_std: null
+    at_pub_source_arxiv: '2312.17679'
+    at_pub_source_title: Data Augmentation for Supervised Graph Outlier Detection
+      via Latent Diffusion Models
+    at_pub_source_date_iso: '2023-12-29'
+    at_pub_source_date_label: LoG 2023
+    value_gap_source_date_iso: '2023-12-29'
+    value_gap_source_date_label: LoG 2023
+    gap_vs_at_pub: 0.0837
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6947
+    true_std: null
+    value_gap_source_arxiv: '2312.17679'
+    value_gap_source_title: Data Augmentation for Supervised Graph Outlier Detection
+      via Latent Diffusion Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0837
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6947
+    sort_std: null
+    global_rank: 115
+    paper_rank: 141
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1688,10 +1673,10 @@ results:
     value_note: ''
     sort_value: 0.6838
     sort_std: null
-    global_rank: 103
-    paper_rank: 125
-    rank_delta: 22
-    rank_delta_abs: 22
+    global_rank: 117
+    paper_rank: 148
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1759,10 +1744,81 @@ results:
     value_note: ''
     sort_value: 0.6824
     sort_std: null
-    global_rank: 104
-    paper_rank: 120
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 118
+    paper_rank: 142
+    rank_delta: 24
+    rank_delta_abs: 24
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Data Augmentation for Supervised Graph Outlier Detection
+      via Latent Diffusion Models
+    comparison_source_arxiv: '2312.17679'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.589
+    std: 0.04
+    paper_value: 0.589
+    paper_std: 0.04
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: xu2018gin
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification for anomaly detection on Questions
+      dataset
+    date: Apr 1, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6776
+    at_pub_std: null
+    at_pub_source_arxiv: '2312.17679'
+    at_pub_source_title: Data Augmentation for Supervised Graph Outlier Detection
+      via Latent Diffusion Models
+    at_pub_source_date_iso: '2023-12-29'
+    at_pub_source_date_label: LoG 2023
+    value_gap_source_date_iso: '2023-12-29'
+    value_gap_source_date_label: LoG 2023
+    gap_vs_at_pub: 0.08860000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6776
+    true_std: null
+    value_gap_source_arxiv: '2312.17679'
+    value_gap_source_title: Data Augmentation for Supervised Graph Outlier Detection
+      via Latent Diffusion Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08860000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6776
+    sort_std: null
+    global_rank: 123
+    paper_rank: 146
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1829,8 +1885,8 @@ results:
     value_note: ''
     sort_value: 0.657
     sort_std: 0.02
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1899,8 +1955,8 @@ results:
     value_note: ''
     sort_value: 0.638
     sort_std: 0.06
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1969,8 +2025,8 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: 0.01
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2038,8 +2094,8 @@ results:
     value_note: ''
     sort_value: 0.595
     sort_std: 0.06
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2107,8 +2163,8 @@ results:
     value_note: ''
     sort_value: 0.565
     sort_std: 0.01
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2128,7 +2184,7 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Heterophilic Graphs
+- benchmark: Heterophily Benchmark
   datasets:
   - *id001
 - benchmark: Other Graph Benchmarks
@@ -2138,8 +2194,8 @@ datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Questions
       dataset_slug: questions
@@ -2148,5 +2204,6 @@ datasets_by_scope:
     datasets:
     - dataset: Amazon2M
       dataset_slug: amazon2m
+main_figure: /figures/2605.11749/main_figure.jpegoptim.jpg
 ---
 

@@ -12,7 +12,7 @@ stats:
   avg_nodes: 11701.0
   avg_edges: 297350.0
   num_classes: 10
-result_count: 487
+result_count: 498
 best_model:
   model: GCN
   value: 0.9302
@@ -128,6 +128,10 @@ papers:
     Models'
   date_iso: '2025-02-17'
   venue: ''
+- arxiv_id: '2501.18739'
+  title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+  date_iso: '2025-01-30'
+  venue: ICML 2025
 - arxiv_id: '2412.21151'
   title: 'PyG-SSL: A Graph Self-Supervised Learning Toolkit'
   date_iso: '2024-12-30'
@@ -351,15 +355,15 @@ variants:
     - null
     - null
     - null
-  - model: TAGs + RGCN (70b)
-    model_plain: TAGs + RGCN (70b)
-    is_baseline: false
+  - model: RSE + RGCN (70b)
+    model_plain: RSE + RGCN (70b)
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2405.18581'
     title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
       Decomposition via Large Language Models'
@@ -491,15 +495,15 @@ variants:
     - null
     - null
     - null
-  - model: TAGs + SeHGNN (70b)
-    model_plain: TAGs + SeHGNN (70b)
-    is_baseline: false
+  - model: RSE + SeHGNN (70b)
+    model_plain: RSE + SeHGNN (70b)
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2405.18581'
     title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
       Decomposition via Large Language Models'
@@ -631,15 +635,15 @@ variants:
     - null
     - null
     - null
-  - model: TAGs + UniMP (70b)
-    model_plain: TAGs + UniMP (70b)
-    is_baseline: false
+  - model: RSE + UniMP (70b)
+    model_plain: RSE + UniMP (70b)
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2405.18581'
     title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
       Decomposition via Large Language Models'
@@ -736,15 +740,15 @@ variants:
     - null
     - null
     - null
-  - model: TAGs + HAN (70b)
-    model_plain: TAGs + HAN (70b)
-    is_baseline: false
+  - model: RSE + HAN (70b)
+    model_plain: RSE + HAN (70b)
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
     arxiv_id: '2405.18581'
     title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
       Decomposition via Large Language Models'
@@ -2061,18 +2065,18 @@ variants:
     - null
     - null
     - null
-  row_count: 487
+  row_count: 498
   rows_json: /data/datasets/wikics/standard-split-rows.json
   chart_json: /data/datasets/wikics/standard-split-chart.json
   arch_counts:
-    gnn: 233
-    hybrid: 62
-    graph_transformer: 28
+    gnn: 236
+    hybrid: 60
+    graph_transformer: 30
     llm: 74
     walk: 12
     traditional: 62
   metric_counts:
-  - 456
+  - 467
   - 12
   - 7
   - 12

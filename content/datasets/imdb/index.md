@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 3
-result_count: 295
+result_count: 287
 best_model:
   model: GAT BGNN(m)-SC
   value: 0.8133
@@ -42,6 +42,10 @@ papers:
     via Large Language Models'
   date_iso: '2024-05-28'
   venue: ''
+- arxiv_id: '2405.01927'
+  title: 'SlotGAT: Slot-based Message Passing for Heterogeneous Graphs'
+  date_iso: '2024-05-03'
+  venue: ICML 2024
 - arxiv_id: '2403.04780'
   title: Graph-oriented Instruction Tuning of Large Language Models for Generic Graph
     Mining
@@ -118,6 +122,10 @@ papers:
   title: Multi-view Contrastive Graph Clustering
   date_iso: '2021-10-22'
   venue: NeurIPS 2021
+- arxiv_id: '2112.14936'
+  title: Heterogeneous Graph Benchmarks
+  date_iso: '2021-08-14'
+  venue: KDD 2021
 - arxiv_id: '2105.11122'
   title: Heterogeneous Graph Representation Learning with Relation Awareness
   date_iso: '2021-05-24'
@@ -130,10 +138,6 @@ papers:
   title: Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs
   date_iso: '2020-07-16'
   venue: NeurIPS 2020
-- arxiv_id: '2007.03424'
-  title: 'AEGCN: An uto ncoder-Constrained raph onvolutional etwork'
-  date_iso: '2020-07-03'
-  venue: ''
 - arxiv_id: '1912.10832'
   title: An Attention-based Graph Neural Network for Heterogeneous Structural Learning
   date_iso: '2019-12-19'
@@ -171,9 +175,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -235,9 +239,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -267,9 +271,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -299,9 +303,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -331,9 +335,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -395,9 +399,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -427,9 +431,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -459,9 +463,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -523,9 +527,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1767,19 +1771,19 @@ variants:
     - null
     - null
     - null
-  row_count: 295
+  row_count: 287
   rows_json: /data/datasets/imdb/standard-split-rows.json
   chart_json: /data/datasets/imdb/standard-split-chart.json
   arch_counts:
-    gnn: 168
-    hybrid: 43
+    gnn: 175
+    hybrid: 38
     graph_transformer: 10
     llm: 13
-    walk: 13
+    walk: 11
     traditional: 16
   metric_counts:
-  - 222
-  - 40
+  - 223
+  - 31
   - 33
   - 10
   milestones: &id001
@@ -1811,6 +1815,13 @@ variants:
       title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
         Graph'
       date: '2023-12-10'
+    - value: 0.7157
+      std: 0.0042
+      model: TAGs (70b)
+      arxiv_id: '2405.18581'
+      title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+        Decomposition via Large Language Models'
+      date: '2024-05-28'
     - value: 0.919
       std: null
       model: BERT-Base, Uncased

@@ -65,7 +65,7 @@ benchmark_coverage:
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
   evaluated: 1
-  total: 5
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: snap-patents
   rows:
-  - model: GCN
+  - model: LargeGT-full
     model_key: fabernet
-    model_plain: GCN
+    model_plain: LargeGT-full
     value: 0.751
     std: 0.0003
     metric: Accuracy
@@ -107,9 +107,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN
+  - model: LargeGT-full
     model_key: largescalenet
-    model_plain: GCN
+    model_plain: LargeGT-full
     value: 0.7505
     std: 0.0005
     metric: Accuracy
@@ -140,9 +140,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN
+  - model: LargeGT-full
     model_key: dirgnn
-    model_plain: GCN
+    model_plain: LargeGT-full
     value: 0.7395
     std: 0.0005
     metric: Accuracy
@@ -309,39 +309,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN
-    model_key: g^2-graphsage
-    model_plain: GCN
-    value: 0.695
-    std: 0.0039
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.00513'
-    title: Gradient Gating for Deep Multi-Rate Learning on Graphs
-    date: Oct 2, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-02'
-    venue: International Conference on Learning Representations
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 6
-    sort_value: 0.695
-    sort_std: 0.0039
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   rank_metric: Accuracy
   higher_is_better: true
   experiment_scope: node-level
@@ -364,5 +331,6 @@ datasets_by_scope:
     datasets:
     - dataset: snap-patents
       dataset_slug: snap-patents
+main_figure: /figures/2305.10498/main_figure.jpegoptim.jpg
 ---
 

@@ -69,7 +69,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -294,9 +294,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: STPGC
+  - model: ACGCL
     model_key: hg-scm
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -328,9 +328,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: advsyngnn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9486
     std: 0.0012
     metric: Accuracy
@@ -362,9 +362,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: simplehgn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9446
     std: 0.0022
     metric: Accuracy
@@ -453,8 +453,8 @@ results:
     value_note: ''
     sort_value: 0.7692
     sort_std: 0.0159
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -521,8 +521,8 @@ results:
     value_note: ''
     sort_value: 0.751
     sort_std: 0.0163
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -589,8 +589,8 @@ results:
     value_note: ''
     sort_value: 0.7487
     sort_std: 0.0181
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -657,8 +657,8 @@ results:
     value_note: ''
     sort_value: 0.7323
     sort_std: 0.0086
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -725,8 +725,8 @@ results:
     value_note: ''
     sort_value: 0.7187
     sort_std: 0.0207
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -793,8 +793,8 @@ results:
     value_note: ''
     sort_value: 0.6116
     sort_std: 0.0363
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -861,8 +861,8 @@ results:
     value_note: ''
     sort_value: 0.6116
     sort_std: 0.0363
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -929,8 +929,8 @@ results:
     value_note: ''
     sort_value: 0.4795
     sort_std: 0.0397
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 130
+    paper_rank: 130
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -970,5 +970,6 @@ datasets_by_scope:
     datasets:
     - dataset: Amazon2M
       dataset_slug: amazon2m
+main_figure: /figures/2405.15564/main_figure.jpegoptim.jpg
 ---
 

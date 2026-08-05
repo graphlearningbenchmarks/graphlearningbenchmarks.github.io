@@ -303,8 +303,8 @@ results:
     value_note: ''
     sort_value: 0.8411
     sort_std: 0.0367
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -370,8 +370,8 @@ results:
     value_note: ''
     sort_value: 0.8232
     sort_std: 0.061
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -438,8 +438,8 @@ results:
     value_note: ''
     sort_value: 0.7851
     sort_std: 0.0136
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -507,8 +507,8 @@ results:
     value_note: ''
     sort_value: 0.6357
     sort_std: 0.0352
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -575,8 +575,8 @@ results:
     value_note: ''
     sort_value: 0.539
     sort_std: 0.0474
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,10 +642,10 @@ results:
     value_note: ''
     sort_value: 0.499
     sort_std: 0.0723
-    global_rank: 23
-    paper_rank: 26
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 28
+    paper_rank: 32
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -710,8 +710,8 @@ results:
     value_note: ''
     sort_value: 0.3056
     sort_std: 0.0386
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -778,8 +778,8 @@ results:
     value_note: ''
     sort_value: 0.276
     sort_std: 0.0
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -846,8 +846,8 @@ results:
     value_note: ''
     sort_value: 0.1861
     sort_std: 0.0
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -914,8 +914,8 @@ results:
     value_note: ''
     sort_value: 0.1773
     sort_std: 0.0
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -982,8 +982,8 @@ results:
     value_note: ''
     sort_value: 0.04
     sort_std: 0.0058
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1005,9 +1005,9 @@ results:
 - &id001
   dataset: ogbl-ppa
   rows:
-  - model: SEAL-RS
+  - model: Classification
     model_key: mplp
-    model_plain: SEAL-RS
+    model_plain: Classification
     value: 0.6524
     std: 0.015
     metric: Hits@100
@@ -1038,9 +1038,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SEAL-RS
+  - model: Classification
     model_key: ogb leader
-    model_plain: SEAL-RS
+    model_plain: Classification
     value: 0.6524
     std: 0.015
     metric: Hits@100
@@ -1272,6 +1272,73 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
+  - model: RA
+    model_key: ra
+    model_plain: RA
+    value: 0.4933
+    std: 0.0
+    paper_value: 0.4933
+    paper_std: 0.0
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Offline link prediction on the PPA dataset
+    date: Nov 3, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-03'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: 0.5324
+    at_pub_std: 0.0
+    at_pub_source_arxiv: '2112.02936'
+    at_pub_source_title: Pairwise Learning for Neural Link Prediction
+    at_pub_source_date_iso: '2021-12-06'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-12-06'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.03909999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5324
+    true_std: 0.0
+    value_gap_source_arxiv: '2112.02936'
+    value_gap_source_title: Pairwise Learning for Neural Link Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03909999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5324
+    sort_std: 0.0
+    global_rank: 8
+    paper_rank: 16
+    rank_delta: 8
+    rank_delta_abs: 8
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Pairwise Learning for Neural Link Prediction
+    comparison_source_arxiv: '2112.02936'
+    is_best: false
+    is_std_outlier: false
   - model: SAGE
     model_key: sage
     model_plain: SAGE
@@ -1329,10 +1396,10 @@ results:
     value_note: ''
     sort_value: 0.5013
     sort_std: 0.0055
-    global_rank: 12
+    global_rank: 13
     paper_rank: 58
-    rank_delta: 46
-    rank_delta_abs: 46
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1398,76 +1465,8 @@ results:
     value_note: ''
     sort_value: 0.4985
     sort_std: 0.002
-    global_rank: 13
-    paper_rank: 13
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: RA
-    model_key: ra
-    model_plain: RA
-    value: 0.4933
-    std: 0.0
-    paper_value: 0.4933
-    paper_std: 0.0
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: link_prediction
-    protocol_decision: standard
-    protocol_note: Offline link prediction on the PPA dataset
-    date: Nov 3, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-03'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: 0.4933
-    at_pub_std: 0.0
-    at_pub_source_arxiv: '2112.02936'
-    at_pub_source_title: Pairwise Learning for Neural Link Prediction
-    at_pub_source_date_iso: '2021-12-06'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2022-09-30'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4933
-    true_std: 0.0
-    value_gap_source_arxiv: '2209.15486'
-    value_gap_source_title: Graph Neural Networks for Link Prediction with Subgraph
-      Sketching
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4933
-    sort_std: 0.0
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1845,5 +1844,6 @@ datasets_by_scope:
     - dataset: ogbl-ddi
       dataset_slug: ogbl-ddi
 single_proposed_model: PRB
+main_figure: /figures/2411.01410/main_figure.jpegoptim.jpg
 ---
 

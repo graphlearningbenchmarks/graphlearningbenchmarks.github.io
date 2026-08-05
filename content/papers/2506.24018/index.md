@@ -71,9 +71,9 @@ results:
 - &id002
   dataset: ogbl-citation2
   rows:
-  - model: SIGN
+  - model: Classification
     model_key: mplp
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.9072
     std: 0.0012
     metric: MRR
@@ -104,9 +104,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SIGN
+  - model: Classification
     model_key: cfg
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.8997
     std: 0.0015
     metric: MRR
@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SIGN
+  - model: Classification
     model_key: sieg
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.8987
     std: 0.0018
     metric: MRR
@@ -229,9 +229,9 @@ results:
     sort_value: 0.8912
     sort_std: 0.004
     global_rank: 5
-    paper_rank: 68
-    rank_delta: 63
-    rank_delta_abs: 63
+    paper_rank: 73
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -299,9 +299,9 @@ results:
     sort_value: 0.8767
     sort_std: 0.0032
     global_rank: 9
-    paper_rank: 68
-    rank_delta: 59
-    rank_delta_abs: 59
+    paper_rank: 73
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -368,9 +368,9 @@ results:
     sort_value: 0.8756
     sort_std: 0.0011
     global_rank: 10
-    paper_rank: 68
-    rank_delta: 58
-    rank_delta_abs: 58
+    paper_rank: 73
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -438,9 +438,9 @@ results:
     sort_value: 0.8726
     sort_std: 0.0084
     global_rank: 13
-    paper_rank: 68
-    rank_delta: 55
-    rank_delta_abs: 55
+    paper_rank: 73
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -508,9 +508,9 @@ results:
     sort_value: 0.8705
     sort_std: 0.0004
     global_rank: 14
-    paper_rank: 68
-    rank_delta: 54
-    rank_delta_abs: 54
+    paper_rank: 73
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -577,10 +577,10 @@ results:
     value_note: ''
     sort_value: 0.8367
     sort_std: 0.0007
-    global_rank: 27
-    paper_rank: 68
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 29
+    paper_rank: 73
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -646,8 +646,8 @@ results:
     value_note: ''
     sort_value: 0.2335
     sort_std: null
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1797,5 +1797,6 @@ datasets_by_scope:
       dataset_slug: ogbl-citation2
     - dataset: ogbl-ddi
       dataset_slug: ogbl-ddi
+main_figure: /figures/2506.24018/main_figure.jpegoptim.jpg
 ---
 

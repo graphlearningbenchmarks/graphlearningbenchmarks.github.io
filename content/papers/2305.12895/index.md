@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GCN
-mrr: 0.0042
-adjusted_mrr: 0.0014
+mrr: 0.004
+adjusted_mrr: 0.0013
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -72,9 +72,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -105,9 +105,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -138,9 +138,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -228,10 +228,10 @@ results:
     value_note: ''
     sort_value: 0.901
     sort_std: 0.058
-    global_rank: 156
-    paper_rank: 615
-    rank_delta: 459
-    rank_delta_abs: 459
+    global_rank: 164
+    paper_rank: 652
+    rank_delta: 488
+    rank_delta_abs: 488
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -295,10 +295,10 @@ results:
     value_note: ''
     sort_value: 0.891
     sort_std: 0.058
-    global_rank: 239
-    paper_rank: 648
-    rank_delta: 409
-    rank_delta_abs: 409
+    global_rank: 250
+    paper_rank: 688
+    rank_delta: 438
+    rank_delta_abs: 438
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -329,5 +329,6 @@ datasets_by_scope:
     - dataset: MUTAG
       dataset_slug: mutag
 single_proposed_model: GCN
+main_figure: /figures/2305.12895/main_figure.jpegoptim.jpg
 ---
 

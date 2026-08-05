@@ -12,7 +12,7 @@ stats:
   avg_nodes: 1615685872.0
   avg_edges: null
   num_classes: 172
-result_count: 135
+result_count: 137
 best_model:
   model: SGC
   value: 0.791
@@ -68,6 +68,10 @@ papers:
   title: Disentangled Condensation for Large-scale Graphs
   date_iso: '2024-01-18'
   venue: WWW 2024
+- arxiv_id: '2312.11109'
+  title: Graph Transformers for Large Graphs
+  date_iso: '2023-12-18'
+  venue: ''
 - arxiv_id: '2310.12457'
   title: 'MuseGNN: Forming Scalable, Convergent GNN Layers that Minimize a Sampling-Based
     Energy'
@@ -1603,18 +1607,18 @@ variants:
     metric_stds:
     - 0.002
     - null
-  row_count: 135
+  row_count: 137
   rows_json: /data/datasets/ogbn-papers100m/standard-split-rows.json
   chart_json: /data/datasets/ogbn-papers100m/standard-split-chart.json
   arch_counts:
     gnn: 96
-    hybrid: 17
+    hybrid: 18
     graph_transformer: 5
     llm: 3
     walk: 2
     traditional: 12
   metric_counts:
-  - 129
+  - 131
   - 6
   milestones: &id001
   - value: 0.6511

@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN (Abs(EigVecs))
+  - model: GPM
     model_key: ppgn
-    model_plain: GatedGCN (Abs(EigVecs))
+    model_plain: GPM
     value: 1.0
     std: null
     metric: Accuracy
@@ -170,9 +170,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN (Abs(EigVecs))
+  - model: GPM
     model_key: rw-agentnet
-    model_plain: GatedGCN (Abs(EigVecs))
+    model_plain: GPM
     value: 1.0
     std: null
     metric: Accuracy
@@ -203,9 +203,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN (Abs(EigVecs))
+  - model: GPM
     model_key: agentnet
-    model_plain: GatedGCN (Abs(EigVecs))
+    model_plain: GPM
     value: 1.0
     std: null
     metric: Accuracy
@@ -292,8 +292,8 @@ results:
     value_note: ''
     sort_value: 0.9933
     sort_std: 0.0133
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -359,8 +359,8 @@ results:
     value_note: ''
     sort_value: 0.978
     sort_std: 0.1091
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -428,8 +428,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.157
-    global_rank: 43
-    paper_rank: 64
+    global_rank: 58
+    paper_rank: 79
     rank_delta: 21
     rank_delta_abs: 21
     rank_delta_direction: worse
@@ -496,8 +496,8 @@ results:
     value_note: ''
     sort_value: 0.4933
     sort_std: 0.0742
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -563,8 +563,8 @@ results:
     value_note: ''
     sort_value: 0.1
     sort_std: 0.0298
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -630,8 +630,8 @@ results:
     value_note: ''
     sort_value: 0.0666
     sort_std: 0.021
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -697,8 +697,8 @@ results:
     value_note: ''
     sort_value: 0.0466
     sort_std: 0.04
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -720,9 +720,9 @@ results:
 - &id003
   dataset: Tox21
   rows:
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: himp
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.874
     std: 0.005
     metric: ROC-AUC
@@ -753,9 +753,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: gine w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -786,9 +786,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -875,8 +875,8 @@ results:
     value_note: ''
     sort_value: 0.744
     sort_std: 0.0075
-    global_rank: 224
-    paper_rank: 224
+    global_rank: 242
+    paper_rank: 242
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -942,8 +942,8 @@ results:
     value_note: ''
     sort_value: 0.7403
     sort_std: 0.0063
-    global_rank: 240
-    paper_rank: 240
+    global_rank: 258
+    paper_rank: 258
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1009,8 +1009,8 @@ results:
     value_note: ''
     sort_value: 0.7371
     sort_std: 0.0061
-    global_rank: 246
-    paper_rank: 246
+    global_rank: 263
+    paper_rank: 263
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1076,8 +1076,8 @@ results:
     value_note: ''
     sort_value: 0.6536
     sort_std: 0.0049
-    global_rank: 310
-    paper_rank: 310
+    global_rank: 315
+    paper_rank: 315
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1143,8 +1143,8 @@ results:
     value_note: ''
     sort_value: 0.6522
     sort_std: 0.0047
-    global_rank: 312
-    paper_rank: 312
+    global_rank: 317
+    paper_rank: 317
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1210,8 +1210,8 @@ results:
     value_note: ''
     sort_value: 0.6503
     sort_std: 0.0058
-    global_rank: 314
-    paper_rank: 314
+    global_rank: 319
+    paper_rank: 319
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1277,8 +1277,8 @@ results:
     value_note: ''
     sort_value: 0.6484
     sort_std: 0.0071
-    global_rank: 316
-    paper_rank: 316
+    global_rank: 320
+    paper_rank: 320
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1344,8 +1344,8 @@ results:
     value_note: ''
     sort_value: 0.647
     sort_std: 0.0081
-    global_rank: 318
-    paper_rank: 318
+    global_rank: 322
+    paper_rank: 322
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1411,8 +1411,8 @@ results:
     value_note: ''
     sort_value: 0.6451
     sort_std: 0.006
-    global_rank: 319
-    paper_rank: 319
+    global_rank: 323
+    paper_rank: 323
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1478,8 +1478,8 @@ results:
     value_note: ''
     sort_value: 0.6438
     sort_std: 0.0039
-    global_rank: 320
-    paper_rank: 320
+    global_rank: 324
+    paper_rank: 324
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1545,8 +1545,8 @@ results:
     value_note: ''
     sort_value: 0.6414
     sort_std: 0.0076
-    global_rank: 322
-    paper_rank: 322
+    global_rank: 326
+    paper_rank: 326
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1612,8 +1612,8 @@ results:
     value_note: ''
     sort_value: 0.6395
     sort_std: 0.0053
-    global_rank: 325
-    paper_rank: 325
+    global_rank: 329
+    paper_rank: 329
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1679,8 +1679,8 @@ results:
     value_note: ''
     sort_value: 0.6354
     sort_std: 0.0042
-    global_rank: 328
-    paper_rank: 328
+    global_rank: 332
+    paper_rank: 332
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1746,8 +1746,8 @@ results:
     value_note: ''
     sort_value: 0.6341
     sort_std: 0.0074
-    global_rank: 329
-    paper_rank: 329
+    global_rank: 333
+    paper_rank: 333
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1813,8 +1813,8 @@ results:
     value_note: ''
     sort_value: 0.6269
     sort_std: 0.0063
-    global_rank: 331
-    paper_rank: 331
+    global_rank: 335
+    paper_rank: 335
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1836,100 +1836,101 @@ results:
 - &id001
   dataset: ogbg-molhiv
   rows:
-  - model: MEG
-    model_key: clear
-    model_plain: MEG
-    value: 0.997
-    std: 0.002
+  - model: SigGate-GT
+    model_key: multi-rf fusion with multi-gnn blending
+    model_plain: SigGate-GT
+    value: 0.8476
+    std: 0.0002
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: Mixing pharmacophoric (FCFP) and structural (ECFP) fingerprints...
+      GNNs contributing only 12%
     is_global_top: true
     global_rank: 1
-    sort_value: 0.997
-    sort_std: 0.002
+    sort_value: 0.8476
+    sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MEG
-    model_key: random
-    model_plain: MEG
-    value: 0.897
-    std: 0.004
+  - model: SigGate-GT
+    model_key: hyperfusion
+    model_plain: SigGate-GT
+    value: 0.8475
+    std: 0.0003
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.897
-    sort_std: 0.004
+    sort_value: 0.8475
+    sort_std: 0.0003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: MEG
-    model_key: eg-ist
-    model_plain: MEG
-    value: 0.897
-    std: 0.004
+  - model: SigGate-GT
+    model_key: pas+fps
+    model_plain: SigGate-GT
+    value: 0.842
+    std: 0.0015
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-16'
-    venue: Neural Information Processing Systems
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: unknown
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.897
-    sort_std: 0.004
+    sort_value: 0.842
+    sort_std: 0.0015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1991,8 +1992,8 @@ results:
     value_note: ''
     sort_value: 0.7753
     sort_std: 0.0159
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 130
+    paper_rank: 130
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2058,8 +2059,8 @@ results:
     value_note: ''
     sort_value: 0.7683
     sort_std: 0.0188
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 176
+    paper_rank: 176
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2125,8 +2126,8 @@ results:
     value_note: ''
     sort_value: 0.751
     sort_std: 0.0073
-    global_rank: 250
-    paper_rank: 250
+    global_rank: 251
+    paper_rank: 251
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2192,8 +2193,8 @@ results:
     value_note: ''
     sort_value: 0.744
     sort_std: 0.0075
-    global_rank: 266
-    paper_rank: 266
+    global_rank: 267
+    paper_rank: 267
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2259,8 +2260,8 @@ results:
     value_note: ''
     sort_value: 0.7403
     sort_std: 0.0063
-    global_rank: 274
-    paper_rank: 274
+    global_rank: 275
+    paper_rank: 275
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2326,8 +2327,8 @@ results:
     value_note: ''
     sort_value: 0.7371
     sort_std: 0.0061
-    global_rank: 279
-    paper_rank: 279
+    global_rank: 280
+    paper_rank: 280
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2349,9 +2350,9 @@ results:
 - &id002
   dataset: ogbg-molpcba
   rows:
-  - model: UnifiedMolPretrain
+  - model: SigGate-GT
     model_key: hig with graphormer
-    model_plain: UnifiedMolPretrain
+    model_plain: SigGate-GT
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -2382,9 +2383,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: SigGate-GT
     model_key: grpe-large
-    model_plain: UnifiedMolPretrain
+    model_plain: SigGate-GT
     value: 0.315
     std: 0.001
     metric: AP
@@ -2415,9 +2416,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: SigGate-GT
     model_key: graphormer
-    model_plain: UnifiedMolPretrain
+    model_plain: SigGate-GT
     value: 0.314
     std: null
     metric: AP
@@ -2504,8 +2505,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0004
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2571,8 +2572,8 @@ results:
     value_note: ''
     sort_value: 0.236
     sort_std: 0.0002
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2638,8 +2639,8 @@ results:
     value_note: ''
     sort_value: 0.2333
     sort_std: 0.0009
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2705,8 +2706,8 @@ results:
     value_note: ''
     sort_value: 0.2325
     sort_std: 0.0
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2772,8 +2773,8 @@ results:
     value_note: ''
     sort_value: 0.2311
     sort_std: 0.0005
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2839,8 +2840,8 @@ results:
     value_note: ''
     sort_value: 0.221
     sort_std: 0.0003
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2906,8 +2907,8 @@ results:
     value_note: ''
     sort_value: 0.2125
     sort_std: 0.0025
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2973,8 +2974,8 @@ results:
     value_note: ''
     sort_value: 0.2116
     sort_std: 0.0028
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3040,8 +3041,8 @@ results:
     value_note: ''
     sort_value: 0.202
     sort_std: 0.0024
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3107,8 +3108,8 @@ results:
     value_note: ''
     sort_value: 0.201
     sort_std: 0.0008
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3174,8 +3175,8 @@ results:
     value_note: ''
     sort_value: 0.2005
     sort_std: 0.0015
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3241,8 +3242,8 @@ results:
     value_note: ''
     sort_value: 0.1904
     sort_std: 0.0003
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3308,8 +3309,8 @@ results:
     value_note: ''
     sort_value: 0.135
     sort_std: 0.0032
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3375,8 +3376,8 @@ results:
     value_note: ''
     sort_value: 0.1233
     sort_std: 0.012
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3442,8 +3443,8 @@ results:
     value_note: ''
     sort_value: 0.1169
     sort_std: 0.0141
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3494,5 +3495,6 @@ datasets_by_scope:
     datasets:
     - dataset: CSL
       dataset_slug: csl
+main_figure: /figures/2110.00577/main_figure.jpegoptim.jpg
 ---
 

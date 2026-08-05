@@ -233,8 +233,8 @@ results:
     value_note: ''
     sort_value: 0.004
     sort_std: 0.0001
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -301,8 +301,8 @@ results:
     value_note: ''
     sort_value: 0.0047
     sort_std: 0.0002
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -361,7 +361,7 @@ results:
     today_delta_significant: false
     sort_value: 0.005
     sort_std: 0.0001
-    global_rank: 9
+    global_rank: 11
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -423,7 +423,7 @@ results:
     today_delta_significant: false
     sort_value: 0.0063
     sort_std: 0.0001
-    global_rank: 11
+    global_rank: 13
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -459,5 +459,6 @@ datasets_by_scope:
     datasets:
     - dataset: MD17
       dataset_slug: md17
+main_figure: /figures/2410.11443/main_figure.jpegoptim.jpg
 ---
 

@@ -428,5 +428,6 @@ datasets_by_scope:
     - dataset: WN18RR
       dataset_slug: wn18rr
 single_proposed_model: LLMs
+main_figure: /figures/2605.12197/main_figure.jpegoptim.jpg
 ---
 

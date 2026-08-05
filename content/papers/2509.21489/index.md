@@ -56,16 +56,16 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphPFN
-mrr: 0.0089
-adjusted_mrr: 0.003
+mrr: 0.007
+adjusted_mrr: 0.0023
 mrr_dataset_count: 1
 benchmark_categories:
-- Heterophilic Graphs
+- Heterophily Benchmark
 benchmark_coverage:
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
   evaluated: 3
-  total: 13
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: Amazon-ratings
   rows:
-  - model: topk
+  - model: H2GCN
     model_key: h2gcn + unigap
-    model_plain: topk
+    model_plain: H2GCN
     value: 0.6375
     std: 0.011
     metric: Accuracy
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: H2GCN
     model_key: graphsage + unigap
-    model_plain: topk
+    model_plain: H2GCN
     value: 0.6283
     std: 0.009
     metric: Accuracy
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: H2GCN
     model_key: gcn + unigap
-    model_plain: topk
+    model_plain: H2GCN
     value: 0.5976
     std: 0.008
     metric: Accuracy
@@ -233,10 +233,10 @@ results:
     value_note: ''
     sort_value: 0.5559
     sort_std: 0.0027
-    global_rank: 15
-    paper_rank: 144
-    rank_delta: 129
-    rank_delta_abs: 129
+    global_rank: 16
+    paper_rank: 178
+    rank_delta: 162
+    rank_delta_abs: 162
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -302,10 +302,10 @@ results:
     value_note: ''
     sort_value: 0.554
     sort_std: 0.002
-    global_rank: 16
-    paper_rank: 144
-    rank_delta: 128
-    rank_delta_abs: 128
+    global_rank: 17
+    paper_rank: 178
+    rank_delta: 161
+    rank_delta_abs: 161
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -372,10 +372,10 @@ results:
     value_note: ''
     sort_value: 0.5411
     sort_std: 0.0034
-    global_rank: 24
-    paper_rank: 143
-    rank_delta: 119
-    rank_delta_abs: 119
+    global_rank: 26
+    paper_rank: 177
+    rank_delta: 151
+    rank_delta_abs: 151
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -416,9 +416,9 @@ results:
     published_conference: ''
     at_pub_value: 0.5117
     at_pub_std: 0.0066
-    at_pub_source_arxiv: '2405.16185'
-    at_pub_source_title: Differentiable Cluster Graph Neural Network
-    at_pub_source_date_iso: '2024-05-25'
+    at_pub_source_arxiv: '2405.15540'
+    at_pub_source_title: Bundle Neural Networks for message diffusion on graphs
+    at_pub_source_date_iso: '2024-05-24'
     at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-07-19'
     value_gap_source_date_label: '2025'
@@ -441,15 +441,15 @@ results:
     value_note: ''
     sort_value: 0.5117
     sort_std: 0.0066
-    global_rank: 68
-    paper_rank: 143
-    rank_delta: 75
-    rank_delta_abs: 75
+    global_rank: 79
+    paper_rank: 177
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Differentiable Cluster Graph Neural Network
-    comparison_source_arxiv: '2405.16185'
+    comparison_source_title: Bundle Neural Networks for message diffusion on graphs
+    comparison_source_arxiv: '2405.15540'
     is_best: false
     is_std_outlier: false
   - model: G2T-LimiX (FT, E)
@@ -508,8 +508,8 @@ results:
     value_note: ''
     sort_value: 0.4605
     sort_std: 0.0023
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -575,8 +575,8 @@ results:
     value_note: ''
     sort_value: 0.4589
     sort_std: 0.0053
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,8 +642,8 @@ results:
     value_note: ''
     sort_value: 0.4489
     sort_std: 0.0015
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -709,8 +709,8 @@ results:
     value_note: ''
     sort_value: 0.4397
     sort_std: 0.0052
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 161
+    paper_rank: 161
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -776,8 +776,8 @@ results:
     value_note: ''
     sort_value: 0.43
     sort_std: 0.0013
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -843,8 +843,8 @@ results:
     value_note: ''
     sort_value: 0.399
     sort_std: 0.0043
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 181
+    paper_rank: 181
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -910,8 +910,8 @@ results:
     value_note: ''
     sort_value: 0.3349
     sort_std: 0.0344
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -977,8 +977,8 @@ results:
     value_note: ''
     sort_value: 0.2936
     sort_std: 0.0124
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 191
+    paper_rank: 191
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2697,7 +2697,7 @@ results:
   uses_non_primary_metric: true
   paper_has_primary_metric: false
 results_grouped:
-- benchmark: Heterophilic Graphs
+- benchmark: Heterophily Benchmark
   datasets:
   - *id001
   - *id002
@@ -2706,8 +2706,8 @@ datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Amazon-ratings
       dataset_slug: amazon-ratings
@@ -2716,5 +2716,6 @@ datasets_by_scope:
     - dataset: Tolokers
       dataset_slug: tolokers
 single_proposed_model: GraphPFN
+main_figure: /figures/2509.21489/main_figure.jpegoptim.jpg
 ---
 

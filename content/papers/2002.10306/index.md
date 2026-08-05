@@ -43,8 +43,8 @@ paper_type: method
 proposed_models:
 - GCN
 - AP-GCN
-mrr: 0.1953
-adjusted_mrr: 0.1953
+mrr: 0.1984
+adjusted_mrr: 0.1984
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -61,9 +61,9 @@ results:
 - &id001
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -153,9 +153,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 477
-    rank_delta: 475
-    rank_delta_abs: 475
+    paper_rank: 474
+    rank_delta: 472
+    rank_delta_abs: 472
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -221,9 +221,9 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 485
-    rank_delta: 482
-    rank_delta_abs: 482
+    paper_rank: 482
+    rank_delta: 479
+    rank_delta_abs: 479
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -288,10 +288,10 @@ results:
     value_note: ''
     sort_value: 0.9093
     sort_std: 0.0018
-    global_rank: 83
-    paper_rank: 467
-    rank_delta: 384
-    rank_delta_abs: 384
+    global_rank: 84
+    paper_rank: 464
+    rank_delta: 380
+    rank_delta_abs: 380
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -424,8 +424,8 @@ results:
     value_note: ''
     sort_value: 0.8383
     sort_std: 0.0058
-    global_rank: 396
-    paper_rank: 464
+    global_rank: 393
+    paper_rank: 461
     rank_delta: 68
     rank_delta_abs: 68
     rank_delta_direction: worse
@@ -457,5 +457,6 @@ datasets_by_scope:
     datasets:
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
+main_figure: /figures/2002.10306/main_figure.jpegoptim.jpg
 ---
 

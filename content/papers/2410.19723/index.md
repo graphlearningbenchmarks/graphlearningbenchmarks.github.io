@@ -1070,5 +1070,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
+main_figure: /figures/2410.19723/main_figure.jpegoptim.jpg
 ---
 

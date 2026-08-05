@@ -36,9 +36,9 @@ paper_type: method
 proposed_models:
 - higher-order expander graph propagation
 - GIN + 3-Regular Bipartite Expander + Summation
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0303
+adjusted_mrr: 0.0101
+mrr_dataset_count: 1
 benchmark_categories:
 - OGB
 benchmark_coverage:
@@ -54,77 +54,11 @@ results:
 - &id001
   dataset: Code
   rows:
-  - model: GIN + 3-Regular Bipartite Expander + Summation
-    model_key: k-subtree sat
-    model_plain: GIN + 3-Regular Bipartite Expander + Summation
-    value: 0.1937
-    std: 0.0028
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-17'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.1937
-    sort_std: 0.0028
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GIN + 3-Regular Bipartite Expander + Summation
-    model_key: geco
-    model_plain: GIN + 3-Regular Bipartite Expander + Summation
-    value: 0.1915
+  - model: RRWP
+    model_key: gmn
+    model_plain: RRWP
+    value: 0.206
     std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-17'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.1915
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GIN + 3-Regular Bipartite Expander + Summation
-    model_key: gps
-    model_plain: GIN + 3-Regular Bipartite Expander + Summation
-    value: 0.1894
-    std: 0.0024
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -134,20 +68,86 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-17'
-    venue: AAAI Conference on Artificial Intelligence
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.206
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: RRWP
+    model_key: dirgraphssm
+    model_plain: RRWP
+    value: 0.205
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.205
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: RRWP
+    model_key: graph-mamba
+    model_plain: RRWP
+    value: 0.203
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.1894
-    sort_std: 0.0024
+    sort_value: 0.203
+    sort_std: 0.0023
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -210,8 +210,8 @@ results:
     value_note: ''
     sort_value: 0.1519
     sort_std: 0.002
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -277,8 +277,8 @@ results:
     value_note: ''
     sort_value: 0.1497
     sort_std: 0.0015
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -344,8 +344,8 @@ results:
     value_note: ''
     sort_value: 0.1495
     sort_std: 0.0023
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -411,8 +411,8 @@ results:
     value_note: ''
     sort_value: 0.1254
     sort_std: 0.0029
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -9,7 +9,7 @@ primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MD17.html
 stats: null
-result_count: 288
+result_count: 280
 best_model:
   model: QHNet
   value: 1.036e-05
@@ -92,10 +92,6 @@ papers:
     representation learning'
   date_iso: '2024-05-26'
   venue: TMLR 2024
-- arxiv_id: '2405.14253'
-  title: Higher-Rank Irreducible Cartesian Tensors for Equivariant Message Passing
-  date_iso: '2024-05-23'
-  venue: NeurIPS 2024
 - arxiv_id: '2405.10343'
   title: 'UniCorn: A Unified Contrastive Learning Approach for Multi-view Molecular
     Representation Learning'
@@ -267,6 +263,7 @@ variants:
   - FDE
   - Force
   - H
+  - RMSD
   - epsilon
   - psi
   metric_display_names:
@@ -278,6 +275,7 @@ variants:
   - FDE
   - Force
   - H
+  - RMSD
   - epsilon
   - psi
   show_all_metrics_desktop: false
@@ -318,7 +316,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -363,7 +363,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -408,7 +410,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -453,7 +457,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -497,7 +503,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -542,7 +550,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -587,7 +597,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -607,11 +619,12 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.04836'
-    title: On the Completeness of Invariant Geometric Deep Learning Models
-    date: Feb 7, 2024
-    date_iso: '2024-02-07'
-    date_display: Feb 2024
+    arxiv_id: '2407.02263'
+    title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform for Machine
+      Learning Force Fields'
+    date: Jul 2, 2024
+    date_iso: '2024-07-02'
+    date_display: Jul 2024
     codebase_url: ''
     published_conference: ICLR 2024
     published_conference_short: ICLR
@@ -631,51 +644,9 @@ variants:
     - null
     - null
     - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: 2F-DisGNN
-    model_plain: 2F-DisGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2402.04836'
-    title: On the Completeness of Invariant Geometric Deep Learning Models
-    date: Feb 7, 2024
-    date_iso: '2024-02-07'
-    date_display: Feb 2024
-    codebase_url: ''
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0013
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
     - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -719,7 +690,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -764,7 +737,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -795,8 +770,8 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2025
     uses_external_data: false
-    is_best: true
-    is_std_outlier: true
+    is_best: false
+    is_std_outlier: false
     metric_values:
     - 0.00324
     - null
@@ -806,10 +781,11 @@ variants:
     - null
     - null
     - null
+    - 0.00183
     - null
     - null
     metric_stds:
-    - 0.119
+    - 0.000119
     - null
     - null
     - null
@@ -817,6 +793,7 @@ variants:
     - null
     - null
     - null
+    - 8.0e-06
     - null
     - null
   - model: EGNO
@@ -852,8 +829,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0001
+    - null
     - null
     - null
     - null
@@ -896,8 +875,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0002
+    - null
     - null
     - null
     - null
@@ -941,52 +922,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0001
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GF-NODE
-    model_plain: GF-NODE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.04233'
-    title: 'PAINET: A Principled Efficient Transformer for 3D Dynamics Modeling'
-    date: Oct 5, 2025
-    date_iso: '2025-10-05'
-    date_display: Oct 2025
-    codebase_url: https://github.com/Icarus1411/PAINET
-    published_conference: ICLR 2025
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2025
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: true
-    metric_values:
-    - 0.00458
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.065
     - null
     - null
     - null
@@ -1030,7 +969,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1075,8 +1016,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0002
+    - null
     - null
     - null
     - null
@@ -1120,8 +1063,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0001
+    - null
     - null
     - null
     - null
@@ -1164,8 +1109,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 1.0e-05
+    - null
     - null
     - null
     - null
@@ -1208,51 +1155,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 1.0e-05
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: DimeNet++
-    model_plain: DimeNet++
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2402.04836'
-    title: On the Completeness of Invariant Geometric Deep Learning Models
-    date: Feb 7, 2024
-    date_iso: '2024-02-07'
-    date_display: Feb 2024
-    codebase_url: ''
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0061
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
     - null
     - null
     - null
@@ -1297,8 +1202,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0001
+    - null
     - null
     - null
     - null
@@ -1341,51 +1248,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 1.0e-05
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: MACE
-    model_plain: MACE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2402.04836'
-    title: On the Completeness of Invariant Geometric Deep Learning Models
-    date: Feb 7, 2024
-    date_iso: '2024-02-07'
-    date_display: Feb 2024
-    codebase_url: ''
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0069
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
     - null
     - null
     - null
@@ -1430,7 +1295,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1475,95 +1342,9 @@ variants:
     - null
     - null
     - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GemNet
-    model_plain: GemNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2402.04836'
-    title: On the Completeness of Invariant Geometric Deep Learning Models
-    date: Feb 7, 2024
-    date_iso: '2024-02-07'
-    date_display: Feb 2024
-    codebase_url: ''
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0115
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
     - null
     metric_stds:
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: DisGNN
-    model_plain: DisGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2402.04836'
-    title: On the Completeness of Invariant Geometric Deep Learning Models
-    date: Feb 7, 2024
-    date_iso: '2024-02-07'
-    date_display: Feb 2024
-    codebase_url: ''
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0117
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
     - null
     - null
     - null
@@ -1608,7 +1389,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1653,7 +1436,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1698,7 +1483,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1743,7 +1530,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1787,7 +1576,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1832,7 +1623,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1876,7 +1669,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1921,7 +1716,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1966,7 +1763,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2011,7 +1810,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2055,7 +1856,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2100,7 +1903,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2145,7 +1950,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2189,7 +1996,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2234,7 +2043,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2279,7 +2090,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2324,7 +2137,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2369,7 +2184,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2414,7 +2231,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2459,7 +2278,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2503,6 +2324,7 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - null
     - null
@@ -2514,18 +2336,297 @@ variants:
     - null
     - null
     - null
-  row_count: 288
+    - null
+  - model: 3D-ReTrans
+    model_plain: 3D-ReTrans
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2510.16780'
+    title: '3D-GSRD: 3D Molecular Graph Auto-Encoder with Selective Re-mask Decoding'
+    date: Oct 19, 2025
+    date_iso: '2025-10-19'
+    date_display: Oct 2025
+    codebase_url: https://github.com/WuChang0124/3D-GSRD
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0417
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: ENINet
+    model_plain: ENINet
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.13265'
+    title: Molecule Graph Networks with Many-body Equivariant Interactions
+    date: Jun 19, 2024
+    date_iso: '2024-06-19'
+    date_display: Jun 2024
+    codebase_url: https://github.com/tsudalab/ENINet
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.043
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Frad
+    model_plain: Frad
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2510.16780'
+    title: '3D-GSRD: 3D Molecular Graph Auto-Encoder with Selective Re-mask Decoding'
+    date: Oct 19, 2025
+    date_iso: '2025-10-19'
+    date_display: Oct 2025
+    codebase_url: https://github.com/WuChang0124/3D-GSRD
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0431
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: PhysNet-ens5
+    model_plain: PhysNet-ens5
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.09575'
+    title: Rotation Invariant Graph Neural Networks using Spin Convolutions
+    date: Jun 17, 2021
+    date_iso: '2021-06-17'
+    date_display: Jun 2021
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.044
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: UniCorn
+    model_plain: UniCorn
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2405.10343'
+    title: 'UniCorn: A Unified Contrastive Learning Approach for Multi-view Molecular
+      Representation Learning'
+    date: May 15, 2024
+    date_iso: '2024-05-15'
+    date_display: May 2024
+    codebase_url: ''
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.046
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Equiformer
+    model_plain: Equiformer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.16511'
+    title: 'SE3Set: Harnessing equivariant hypergraph neural networks for molecular
+      representation learning'
+    date: May 26, 2024
+    date_iso: '2024-05-26'
+    date_display: May 2024
+    codebase_url: ''
+    published_conference: TMLR 2024
+    published_conference_short: TMLR
+    published_conference_slug: tmlr
+    published_venue: TMLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.046
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 280
   rows_json: /data/datasets/md17/standard-split-rows.json
   chart_json: /data/datasets/md17/standard-split-chart.json
   arch_counts:
-    gnn: 220
+    gnn: 214
     hybrid: 43
     graph_transformer: 1
     llm: 1
     walk: 0
-    traditional: 19
+    traditional: 17
   metric_counts:
-  - 246
+  - 238
   - 13
   - 13
   - 10
@@ -2533,6 +2634,7 @@ variants:
   - 12
   - 19
   - 9
+  - 1
   - 4
   - 4
   milestones: &id001
@@ -2611,6 +2713,13 @@ variants:
       title: Infusing Self-Consistency into Density Functional Theory Hamiltonian
         Prediction via Deep Equilibrium Models
       date: '2024-06-06'
+    RMSD:
+    - value: 0.00183
+      std: 8.0e-06
+      model: PAINET
+      arxiv_id: '2510.04233'
+      title: 'PAINET: A Principled Efficient Transformer for 3D Dynamics Modeling'
+      date: '2025-10-05'
     epsilon:
     - value: 3.376e-05
       std: null

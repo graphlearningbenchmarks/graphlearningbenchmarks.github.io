@@ -61,8 +61,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - LEFTNet
-mrr: 0.0634
-adjusted_mrr: 0.0422
+mrr: 0.0615
+adjusted_mrr: 0.041
 mrr_dataset_count: 2
 benchmark_categories:
 - Quantum Chemistry
@@ -181,6 +181,74 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GemNet
+    model_key: gemnet
+    model_plain: GemNet
+    value: 0.145
+    std: null
+    paper_value: 0.145
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: per-atom forces prediction (Benzene, WoFE=1000)
+    date: Apr 7, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-07'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.1453
+    at_pub_std: null
+    at_pub_source_arxiv: '2302.05743'
+    at_pub_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
+    at_pub_source_date_iso: '2023-02-11'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.00030000000000002247
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.0502
+    true_std: null
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0948
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0502
+    sort_std: null
+    global_rank: 28
+    paper_rank: 66
+    rank_delta: 38
+    rank_delta_abs: 38
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
+    comparison_source_arxiv: '2302.05743'
+    is_best: false
+    is_std_outlier: false
   - model: MACE
     model_key: mace
     model_plain: MACE
@@ -218,8 +286,8 @@ results:
       with vector-scalar interactive message passing for molecules'
     at_pub_source_date_iso: '2022-10-29'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: 2.1493
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -230,19 +298,19 @@ results:
     today_delta_significant: true
     true_value: 0.0507
     true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
     value_gap_source_is_current_paper: false
     value_gap: 2.1493
     has_value_note: false
     value_note: ''
     sort_value: 0.0507
     sort_std: null
-    global_rank: 24
-    paper_rank: 65
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 29
+    paper_rank: 85
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -309,10 +377,10 @@ results:
     value_note: ''
     sort_value: 0.052
     sort_std: 0.001
-    global_rank: 27
-    paper_rank: 55
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 32
+    paper_rank: 75
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -379,10 +447,10 @@ results:
     value_note: ''
     sort_value: 0.053
     sort_std: null
-    global_rank: 29
-    paper_rank: 65
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 35
+    paper_rank: 85
+    rank_delta: 50
+    rank_delta_abs: 50
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -449,16 +517,86 @@ results:
     value_note: ''
     sort_value: 0.053
     sort_std: null
-    global_rank: 30
-    paper_rank: 65
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 36
+    paper_rank: 85
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: The design space of E(3)-equivariant atom-centred interatomic
       potentials
     comparison_source_arxiv: '2205.06643'
+    is_best: false
+    is_std_outlier: false
+  - model: NequIP
+    model_key: nequip
+    model_plain: NequIP
+    value: 2.3
+    std: null
+    paper_value: 2.3
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: batatiamace
+    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Energy prediction (E) for Aspirin
+    date: Apr 7, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-07'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.04
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.14276'
+    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
+      length-scales in molecular systems'
+    at_pub_source_date_iso: '2022-05-28'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 2.26
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.053
+    true_std: null
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    value_gap_source_is_current_paper: false
+    value_gap: 2.247
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.053
+    sort_std: null
+    global_rank: 34
+    paper_rank: 85
+    rank_delta: 51
+    rank_delta_abs: 51
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'So3krates: Equivariant attention for interactions on
+      arbitrary length-scales in molecular systems'
+    comparison_source_arxiv: '2205.14276'
     is_best: false
     is_std_outlier: false
   - model: sGDML
@@ -517,10 +655,10 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 34
-    paper_rank: 50
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 40
+    paper_rank: 70
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -586,10 +724,10 @@ results:
     value_note: ''
     sort_value: 0.061
     sort_std: 0.009
-    global_rank: 35
-    paper_rank: 59
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 41
+    paper_rank: 79
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -634,8 +772,8 @@ results:
     at_pub_source_title: Directional Message Passing for Molecular Graphs
     at_pub_source_date_iso: '2020-03-06'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.123
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -646,18 +784,18 @@ results:
     today_delta_significant: true
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.123
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 50
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 42
+    paper_rank: 70
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -723,10 +861,10 @@ results:
     value_note: ''
     sort_value: 0.077
     sort_std: null
-    global_rank: 39
-    paper_rank: 68
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 45
+    paper_rank: 88
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -772,8 +910,8 @@ results:
       Dipole Moments and Partial Charges'
     at_pub_source_date_iso: '2019-02-22'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.26
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -784,95 +922,24 @@ results:
     today_delta_significant: true
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.22999999999999998
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 58
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 46
+    paper_rank: 78
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
       Dipole Moments and Partial Charges'
     comparison_source_arxiv: '1902.08408'
-    is_best: false
-    is_std_outlier: false
-  - model: NequIP
-    model_key: nequip
-    model_plain: NequIP
-    value: 2.3
-    std: null
-    paper_value: 2.3
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 5
-    source_ref: batatiamace
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy prediction (E) for Aspirin
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.04
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.14276'
-    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
-      length-scales in molecular systems'
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 2.26
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.131
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 2.1689999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.131
-    sort_std: null
-    global_rank: 45
-    paper_rank: 65
-    rank_delta: 20
-    rank_delta_abs: 20
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'So3krates: Equivariant attention for interactions on
-      arbitrary length-scales in molecular systems'
-    comparison_source_arxiv: '2205.14276'
     is_best: false
     is_std_outlier: false
   - model: ACE
@@ -933,84 +1000,16 @@ results:
     value_note: ''
     sort_value: 0.141
     sort_std: null
-    global_rank: 47
-    paper_rank: 67
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 66
+    paper_rank: 87
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
       network with vector-scalar interactive message passing for molecules'
     comparison_source_arxiv: '2210.16518'
-    is_best: false
-    is_std_outlier: false
-  - model: GemNet
-    model_key: gemnet
-    model_plain: GemNet
-    value: 0.145
-    std: null
-    paper_value: 0.145
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: per-atom forces prediction (Benzene, WoFE=1000)
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.1453
-    at_pub_std: null
-    at_pub_source_arxiv: '2302.05743'
-    at_pub_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
-    at_pub_source_date_iso: '2023-02-11'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 0.00030000000000002247
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.145
-    true_std: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.145
-    sort_std: null
-    global_rank: 48
-    paper_rank: 48
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
-    comparison_source_arxiv: '2302.05743'
     is_best: false
     is_std_outlier: false
   - model: SphereNet
@@ -1070,8 +1069,8 @@ results:
     value_note: ''
     sort_value: 0.147
     sort_std: null
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1138,8 +1137,8 @@ results:
     value_note: ''
     sort_value: 2.1
     sort_std: null
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1206,8 +1205,8 @@ results:
     value_note: ''
     sort_value: 6.2
     sort_std: null
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1274,8 +1273,8 @@ results:
     value_note: ''
     sort_value: 16.6
     sort_std: null
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1342,8 +1341,8 @@ results:
     value_note: ''
     sort_value: 17.7
     sort_std: null
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2138,7 +2137,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 30
+    global_rank: 31
   - model: EGNN
     model_key: egnn
     model_plain: EGNN
@@ -2184,9 +2183,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_note: ''
     at_pub_value: 48.0
     at_pub_std: null
@@ -2195,8 +2193,8 @@ results:
       with vector-scalar interactive message passing for molecules'
     at_pub_source_date_iso: '2022-10-29'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2221,7 +2219,7 @@ results:
     comparison_source_arxiv: '2210.16518'
     is_best: false
     is_std_outlier: false
-    global_rank: 31
+    global_rank: 32
   - model: LieConv
     model_key: lieconv
     model_plain: LieConv
@@ -2302,7 +2300,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 32
+    global_rank: 33
   - model: SE(3)-Tr.
     model_key: se(3)-tr.
     model_plain: SE(3)-Tr.
@@ -2383,7 +2381,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 33
+    global_rank: 34
   - model: ClofNet
     model_key: clofnet
     model_plain: ClofNet
@@ -2464,7 +2462,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 34
+    global_rank: 35
   - model: TFN
     model_key: tfn
     model_plain: TFN
@@ -2545,7 +2543,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 35
+    global_rank: 36
   - model: Cormorant
     model_key: cormorant
     model_plain: Cormorant
@@ -2591,9 +2589,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2601,8 +2598,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2626,7 +2623,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 36
+    global_rank: 37
   - model: NMP
     model_key: nmp
     model_plain: NMP
@@ -2707,7 +2704,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 37
+    global_rank: 38
   metrics:
   - gap
   - alpha
@@ -2759,5 +2756,6 @@ datasets_by_scope:
     - dataset: QM9
       dataset_slug: qm9
 single_proposed_model: LEFTNet
+main_figure: /figures/2304.04757/main_figure.jpegoptim.jpg
 ---
 

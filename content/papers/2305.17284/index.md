@@ -1014,5 +1014,6 @@ datasets_by_scope:
       dataset_slug: pubmed
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
+main_figure: /figures/2305.17284/main_figure.jpegoptim.jpg
 ---
 

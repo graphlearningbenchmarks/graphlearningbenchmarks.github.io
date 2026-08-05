@@ -9,7 +9,7 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Coauthor.html
 stats: null
-result_count: 488
+result_count: 468
 best_model:
   model: GeoMancer
   value: 0.9878
@@ -129,10 +129,6 @@ papers:
   title: How Interpretable Are Interpretable Graph Neural Networks?
   date_iso: '2024-06-12'
   venue: ICML 2024
-- arxiv_id: '2406.02059'
-  title: Graph Adversarial Diffusion Convolution
-  date_iso: '2024-06-04'
-  venue: ICML 2024
 - arxiv_id: '2404.19288'
   title: Training-free Graph Neural Networks and the Power of Labels as Features
   date_iso: '2024-04-30'
@@ -168,6 +164,10 @@ papers:
   title: Rethinking and Simplifying Bootstrapped Graph Latents
   date_iso: '2023-12-05'
   venue: ''
+- arxiv_id: '2310.14527'
+  title: 'Marginal Nodes Matter: Towards Structure Fairness in Graphs'
+  date_iso: '2023-10-23'
+  venue: KDD 2023
 - arxiv_id: '2310.05296'
   title: Tailoring Self-Attention for Graph via Rooted Subtrees
   date_iso: '2023-10-08'
@@ -250,10 +250,6 @@ papers:
   title: Relational Self-Supervised Learning on Graphs
   date_iso: '2022-08-21'
   venue: ''
-- arxiv_id: '2208.06956'
-  title: 'ArieL: Adversarial Graph Contrastive Learning'
-  date_iso: '2022-08-15'
-  venue: ''
 - arxiv_id: '2206.12933'
   title: Wiener Graph Deconvolutional Network Improves Graph Self-Supervised Learning
   date_iso: '2022-06-26'
@@ -279,11 +275,6 @@ papers:
     Learning
   date_iso: '2022-05-31'
   venue: ICML 2022
-- arxiv_id: '2203.12265'
-  title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual Information
-    Maximization
-  date_iso: '2022-03-23'
-  venue: ''
 - arxiv_id: '2203.00638'
   title: 'PaSca: a Graph Neural Architecture Search System under the Scalable Paradigm'
   date_iso: '2022-03-01'
@@ -334,11 +325,11 @@ papers:
   title: Automated Self-Supervised Learning for Graphs
   date_iso: '2021-06-10'
   venue: ICLR 2021
-- arxiv_id: '2106.02466'
-  title: 'Graph Barlow Twins: A self-supervised representation learning framework
-    for graphs'
-  date_iso: '2021-06-04'
-  venue: ''
+- arxiv_id: '2103.14958'
+  title: 'SelfGNN: Self-supervised Graph Neural Networks without explicit negative
+    sampling'
+  date_iso: '2021-03-27'
+  venue: WWW 2021
 - arxiv_id: '2010.14945'
   title: Graph Contrastive Learning with Adaptive Augmentation
   date_iso: '2020-10-27'
@@ -375,11 +366,13 @@ variants:
     num_classes: null
   metrics:
   - Accuracy
+  - ACC
   - F1-Macro
   - F1-Micro
   - Normalized AUAC
   metric_display_names:
   - Accuracy
+  - ACC
   - F1-Macro
   - F1-Micro
   - Normalized AUAC
@@ -415,8 +408,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0012
+    - null
     - null
     - null
     - null
@@ -448,8 +443,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0012
+    - null
     - null
     - null
     - null
@@ -480,8 +477,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0008
+    - null
     - null
     - null
     - null
@@ -512,8 +511,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0018
+    - null
     - null
     - null
     - null
@@ -544,8 +545,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0027
+    - null
     - null
     - null
     - null
@@ -576,8 +579,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0081
+    - null
     - null
     - null
     - null
@@ -608,8 +613,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0016
+    - null
     - null
     - null
     - null
@@ -640,8 +647,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0026
+    - null
     - null
     - null
     - null
@@ -672,8 +681,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0028
+    - null
     - null
     - null
     - null
@@ -704,8 +715,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0015
+    - null
     - null
     - null
     - null
@@ -736,8 +749,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0053
+    - null
     - null
     - null
     - null
@@ -768,8 +783,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0035
+    - null
     - null
     - null
     - null
@@ -800,8 +817,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0035
+    - null
     - null
     - null
     - null
@@ -832,8 +851,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.005
+    - null
     - null
     - null
     - null
@@ -864,8 +885,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0048
+    - null
     - null
     - null
     - null
@@ -896,8 +919,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0005
+    - null
     - null
     - null
     - null
@@ -928,8 +953,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0028
+    - null
     - null
     - null
     - null
@@ -960,8 +987,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0028
+    - null
     - null
     - null
     - null
@@ -992,8 +1021,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0053
+    - null
     - null
     - null
     - null
@@ -1025,8 +1056,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0014
+    - null
     - null
     - null
     - null
@@ -1058,8 +1091,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0004
+    - null
     - null
     - null
     - null
@@ -1090,8 +1125,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0018
+    - null
     - null
     - null
     - null
@@ -1122,8 +1159,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0019
+    - null
     - null
     - null
     - null
@@ -1155,8 +1194,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0007
+    - null
     - null
     - null
     - null
@@ -1187,8 +1228,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0033
+    - null
     - null
     - null
     - null
@@ -1219,8 +1262,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.003
+    - null
     - null
     - null
     - null
@@ -1252,8 +1297,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0004
+    - null
     - null
     - null
     - null
@@ -1285,8 +1332,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0003
+    - null
     - null
     - null
     - null
@@ -1318,7 +1367,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1351,8 +1402,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0011
+    - null
     - null
     - null
     - null
@@ -1384,8 +1437,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0006
+    - null
     - null
     - null
     - null
@@ -1417,8 +1472,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1449,8 +1506,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0008
+    - null
     - null
     - null
     - null
@@ -1482,8 +1541,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0003
+    - null
     - null
     - null
     - null
@@ -1514,8 +1575,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0078
+    - null
     - null
     - null
     - null
@@ -1546,8 +1609,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0013
+    - null
     - null
     - null
     - null
@@ -1579,7 +1644,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1612,7 +1679,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1645,8 +1714,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0
+    - null
     - null
     - null
     - null
@@ -1677,8 +1748,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0006
+    - null
     - null
     - null
     - null
@@ -1709,8 +1782,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1742,8 +1817,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0004
+    - null
     - null
     - null
     - null
@@ -1774,8 +1851,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0013
+    - null
     - null
     - null
     - null
@@ -1806,8 +1885,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0019
+    - null
     - null
     - null
     - null
@@ -1839,8 +1920,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0003
+    - null
     - null
     - null
     - null
@@ -1871,8 +1954,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.002
+    - null
     - null
     - null
     - null
@@ -1903,8 +1988,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0018
+    - null
     - null
     - null
     - null
@@ -1935,8 +2022,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0005
+    - null
     - null
     - null
     - null
@@ -1968,8 +2057,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0005
+    - null
     - null
     - null
     - null
@@ -2000,23 +2091,26 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0008
     - null
     - null
     - null
-  row_count: 488
+    - null
+  row_count: 468
   rows_json: /data/datasets/coauthor-physics/standard-split-rows.json
   chart_json: /data/datasets/coauthor-physics/standard-split-chart.json
   arch_counts:
-    gnn: 325
-    hybrid: 77
+    gnn: 313
+    hybrid: 70
     graph_transformer: 28
     llm: 1
-    walk: 11
-    traditional: 40
+    walk: 8
+    traditional: 38
   metric_counts:
-  - 465
+  - 441
+  - 4
   - 9
   - 9
   - 14
@@ -2033,6 +2127,13 @@ variants:
     arxiv_id: '2010.14945'
     title: Graph Contrastive Learning with Adaptive Augmentation
     date: '2020-10-27'
+  - value: 0.965
+    std: 0.001
+    model: GCN
+    arxiv_id: '2103.14958'
+    title: 'SelfGNN: Self-supervised Graph Neural Networks without explicit negative
+      sampling'
+    date: '2021-03-27'
   - value: 0.966
     std: 0.003
     model: G-Zoom
@@ -2081,6 +2182,13 @@ variants:
     date: '2025-10-06'
   milestones_by_metric:
     Accuracy: *id001
+    ACC:
+    - value: 0.9174
+      std: null
+      model: SFairGNN
+      arxiv_id: '2310.14527'
+      title: 'Marginal Nodes Matter: Towards Structure Fairness in Graphs'
+      date: '2023-10-23'
     F1-Macro:
     - value: 0.9304
       std: null

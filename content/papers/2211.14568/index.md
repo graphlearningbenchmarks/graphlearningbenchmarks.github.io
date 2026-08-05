@@ -1339,9 +1339,9 @@ results:
 - &id003
   dataset: ogbn-proteins
   rows:
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8942
     std: 0.0007
     metric: ROC-AUC
@@ -1373,9 +1373,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: x_wo/ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8915
     std: 0.0012
     metric: ROC-AUC
@@ -1407,9 +1407,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: mog
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8904
     std: 0.0072
     metric: ROC-AUC
@@ -1497,8 +1497,8 @@ results:
     value_note: ''
     sort_value: 0.82
     sort_std: 0.003
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1565,8 +1565,8 @@ results:
     value_note: ''
     sort_value: 0.81
     sort_std: 0.003
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1633,8 +1633,8 @@ results:
     value_note: ''
     sort_value: 0.761
     sort_std: 0.011
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1701,8 +1701,8 @@ results:
     value_note: ''
     sort_value: 0.732
     sort_std: 0.002
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1769,8 +1769,8 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: 0.02
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1837,8 +1837,8 @@ results:
     value_note: ''
     sort_value: 0.694
     sort_std: 0.016
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1905,8 +1905,8 @@ results:
     value_note: ''
     sort_value: 0.69
     sort_std: 0.022
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1958,5 +1958,6 @@ datasets_by_scope:
       dataset_slug: ogbg-molhiv
     - dataset: ogbg-ppa
       dataset_slug: ogbg-ppa
+main_figure: /figures/2211.14568/main_figure.jpegoptim.jpg
 ---
 

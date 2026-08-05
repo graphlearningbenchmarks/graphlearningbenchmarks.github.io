@@ -57,7 +57,7 @@ benchmark_coverage:
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
   evaluated: 1
-  total: 5
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -66,9 +66,9 @@ results:
 - &id002
   dataset: Pokec
   rows:
-  - model: VecFormer
+  - model: FMP
     model_key: polynormer-r
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.861
     std: 0.0005
     metric: Accuracy
@@ -99,9 +99,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: VecFormer
+  - model: FMP
     model_key: polynormer
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.8595
     std: 0.0007
     metric: Accuracy
@@ -132,9 +132,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: VecFormer
+  - model: FMP
     model_key: moe-h2gcn
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.8302
     std: 0.003
     metric: Accuracy
@@ -313,9 +313,9 @@ results:
 - &id001
   dataset: ogbn-papers100M
   rows:
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: sgc
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.791
     std: null
     metric: Accuracy
@@ -346,9 +346,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: gamlp
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -379,9 +379,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: glem-gnn
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -652,5 +652,6 @@ datasets_by_scope:
     datasets:
     - dataset: Pokec
       dataset_slug: pokec
+main_figure: /figures/2504.13266/main_figure.jpegoptim.jpg
 ---
 

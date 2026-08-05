@@ -71,7 +71,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 4
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -840,79 +840,77 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: GraphEraser-BEKM
-    model_key: freekd-prompt (gcn-sage)
-    model_plain: GraphEraser-BEKM
-    value: 0.7868
-    std: null
+  - model: SGCONV
+    model_key: mixhop
+    model_plain: SGCONV
+    value: 0.78
+    std: 0.001
     metric: F1
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2307.00534'
-    title: Shared Growth of Graph Neural Networks via Prompted Free-direction Knowledge
-      Distillation
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: MixHop is a multi-scale GNN.
     is_global_top: true
     global_rank: 1
-    sort_value: 0.7868
-    sort_std: null
+    sort_value: 0.78
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphEraser-BEKM
-    model_key: teacher (gcnii)
-    model_plain: GraphEraser-BEKM
-    value: 0.786
-    std: null
+  - model: SGCONV
+    model_key: sgconv
+    model_plain: SGCONV
+    value: 0.763
+    std: 0.002
     metric: F1
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2307.00534'
-    title: Shared Growth of Graph Neural Networks via Prompted Free-direction Knowledge
-      Distillation
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: SGCONV is a graph convolutional neural network.
     is_global_top: true
     global_rank: 2
-    sort_value: 0.786
-    sort_std: null
+    sort_value: 0.763
+    sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GraphEraser-BEKM
-    model_key: cpf
-    model_plain: GraphEraser-BEKM
-    value: 0.778
-    std: null
+  - model: SGCONV
+    model_key: appnp
+    model_plain: SGCONV
+    value: 0.754
+    std: 0.001
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -922,94 +920,23 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2307.00534'
-    title: Shared Growth of Graph Neural Networks via Prompted Free-direction Knowledge
-      Distillation
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
-    codebase_url: ''
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: APPNP is a graph convolutional neural network.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.778
-    sort_std: null
+    sort_value: 0.754
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.7058
-    std: 0.0042
-    paper_value: 0.7058
-    paper_std: 0.0042
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
-    date: Sep 8, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7656
-    at_pub_std: null
-    at_pub_source_arxiv: '2307.00534'
-    at_pub_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    at_pub_source_date_iso: '2023-07-02'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.059799999999999964
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7656
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: false
-    value_gap: 0.059799999999999964
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7656
-    sort_std: null
-    global_rank: 8
-    paper_rank: 16
-    rank_delta: 8
-    rank_delta_abs: 8
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    comparison_source_arxiv: '2307.00534'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -1042,16 +969,15 @@ results:
     date_iso: '2023-09-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7566
-    at_pub_std: null
-    at_pub_source_arxiv: '2307.00534'
-    at_pub_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    at_pub_source_date_iso: '2023-07-02'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.03960000000000008
+    at_pub_value: 0.746
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2103.14991'
+    at_pub_source_title: Graph Unlearning
+    at_pub_source_date_iso: '2021-03-27'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-03-27'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.029000000000000026
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1059,27 +985,25 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7566
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
+    true_value: 0.746
+    true_std: 0.006
+    value_gap_source_arxiv: '2103.14991'
+    value_gap_source_title: Graph Unlearning
     value_gap_source_is_current_paper: false
-    value_gap: 0.03960000000000008
+    value_gap: 0.029000000000000026
     has_value_note: false
     value_note: ''
-    sort_value: 0.7566
-    sort_std: null
-    global_rank: 11
-    paper_rank: 15
-    rank_delta: 4
-    rank_delta_abs: 4
+    sort_value: 0.746
+    sort_std: 0.006
+    global_rank: 5
+    paper_rank: 17
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    comparison_source_arxiv: '2307.00534'
+    comparison_source_title: Graph Unlearning
+    comparison_source_arxiv: '2103.14991'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -1112,16 +1036,15 @@ results:
     date_iso: '2023-09-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7542
-    at_pub_std: null
-    at_pub_source_arxiv: '2307.00534'
-    at_pub_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    at_pub_source_date_iso: '2023-07-02'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.04039999999999999
+    at_pub_value: 0.742
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.028200000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1129,27 +1052,25 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7542
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
+    true_value: 0.742
+    true_std: 0.001
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
     value_gap_source_is_current_paper: false
-    value_gap: 0.04039999999999999
+    value_gap: 0.028200000000000003
     has_value_note: false
     value_note: ''
-    sort_value: 0.7542
-    sort_std: null
-    global_rank: 12
-    paper_rank: 15
-    rank_delta: 3
-    rank_delta_abs: 3
+    sort_value: 0.742
+    sort_std: 0.001
+    global_rank: 7
+    paper_rank: 18
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    comparison_source_arxiv: '2307.00534'
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
     is_best: false
     is_std_outlier: false
   - model: SGC
@@ -1209,12 +1130,79 @@ results:
     value_note: ''
     sort_value: 0.7211
     sort_std: 0.0038
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7058
+    std: 0.0042
+    paper_value: 0.7058
+    paper_std: 0.0042
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Sep 8, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.716
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '2103.14991'
+    at_pub_source_title: Graph Unlearning
+    at_pub_source_date_iso: '2021-03-27'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-03-27'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.010199999999999987
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.716
+    true_std: 0.007
+    value_gap_source_arxiv: '2103.14991'
+    value_gap_source_title: Graph Unlearning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.010199999999999987
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.716
+    sort_std: 0.007
+    global_rank: 18
+    paper_rank: 20
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1277,8 +1265,8 @@ results:
     value_note: ''
     sort_value: 0.7123
     sort_std: 0.0051
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1345,8 +1333,8 @@ results:
     value_note: ''
     sort_value: 0.7003
     sort_std: 0.0071
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1413,8 +1401,8 @@ results:
     value_note: ''
     sort_value: 0.6992
     sort_std: 0.0061
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1481,8 +1469,8 @@ results:
     value_note: ''
     sort_value: 0.6982
     sort_std: 0.0053
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1549,8 +1537,8 @@ results:
     value_note: ''
     sort_value: 0.6814
     sort_std: 0.0053
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1617,8 +1605,8 @@ results:
     value_note: ''
     sort_value: 0.6615
     sort_std: 0.0045
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1685,8 +1673,8 @@ results:
     value_note: ''
     sort_value: 0.5258
     sort_std: 0.0197
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1708,9 +1696,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: FPS-T
+  - model: SGCONV
     model_key: acm-gcn
-    model_plain: FPS-T
+    model_plain: SGCONV
     value: 0.8894
     std: 0.0054
     metric: F1
@@ -1741,11 +1729,11 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FPS-T
-    model_key: bernnet
-    model_plain: FPS-T
-    value: 0.8796
-    std: 0.0085
+  - model: SGCONV
+    model_key: appnp
+    model_plain: SGCONV
+    value: 0.888
+    std: 0.001
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -1755,30 +1743,30 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.05894'
-    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
-    date: Feb 8, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-08'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: APPNP is a standard GNN.
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8796
-    sort_std: 0.0085
+    sort_value: 0.888
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FPS-T
-    model_key: fagcn
-    model_plain: FPS-T
-    value: 0.8792
-    std: 0.0065
+  - model: SGCONV
+    model_key: graphsage
+    model_plain: SGCONV
+    value: 0.881
+    std: 0.001
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -1788,24 +1776,24 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.05894'
-    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
-    date: Feb 8, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-08'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GraphSAGE is a standard GNN that pools node attributes.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8792
-    sort_std: 0.0065
+    sort_value: 0.881
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -1837,42 +1825,41 @@ results:
     date_iso: '2023-09-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.739
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2103.14991'
-    at_pub_source_title: Graph Unlearning
-    at_pub_source_date_iso: '2021-03-27'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-02-08'
-    value_gap_source_date_label: AAAI 2024
-    gap_vs_at_pub: 0.06500000000000006
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
+    at_pub_value: 0.879
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.07499999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8566
-    true_std: 0.0078
-    value_gap_source_arxiv: '2402.05894'
-    value_gap_source_title: Large Language Model Meets Graph Neural Network in Knowledge
-      Distillation
+    true_value: 0.879
+    true_std: 0.001
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
     value_gap_source_is_current_paper: false
-    value_gap: 0.05259999999999998
+    value_gap: 0.07499999999999996
     has_value_note: false
     value_note: ''
-    sort_value: 0.8566
-    sort_std: 0.0078
-    global_rank: 8
-    paper_rank: 14
-    rank_delta: 6
-    rank_delta_abs: 6
+    sort_value: 0.879
+    sort_std: 0.001
+    global_rank: 6
+    paper_rank: 30
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Graph Unlearning
-    comparison_source_arxiv: '2103.14991'
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -1905,42 +1892,41 @@ results:
     date_iso: '2023-09-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.823
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2103.14991'
-    at_pub_source_title: Graph Unlearning
-    at_pub_source_date_iso: '2021-03-27'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-02-08'
-    value_gap_source_date_label: AAAI 2024
-    gap_vs_at_pub: 9.999999999998899e-05
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    at_pub_value: 0.867
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.04410000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8505
-    true_std: 0.0088
-    value_gap_source_arxiv: '2402.05894'
-    value_gap_source_title: Large Language Model Meets Graph Neural Network in Knowledge
-      Distillation
+    true_value: 0.867
+    true_std: 0.002
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
     value_gap_source_is_current_paper: false
-    value_gap: 0.02760000000000007
+    value_gap: 0.04410000000000003
     has_value_note: false
     value_note: ''
-    sort_value: 0.8505
-    sort_std: 0.0088
-    global_rank: 10
-    paper_rank: 13
-    rank_delta: 3
-    rank_delta_abs: 3
+    sort_value: 0.867
+    sort_std: 0.002
+    global_rank: 11
+    paper_rank: 27
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
     is_best: false
     is_std_outlier: false
   - model: SAGE
@@ -1973,15 +1959,16 @@ results:
     date_iso: '2023-09-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.824
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '2103.14991'
-    at_pub_source_title: Graph Unlearning
-    at_pub_source_date_iso: '2021-03-27'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-03-27'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.03520000000000001
+    at_pub_value: 0.8536
+    at_pub_std: null
+    at_pub_source_arxiv: '2307.00534'
+    at_pub_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    at_pub_source_date_iso: '2023-07-02'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.06480000000000008
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1989,25 +1976,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.824
-    true_std: 0.004
-    value_gap_source_arxiv: '2103.14991'
-    value_gap_source_title: Graph Unlearning
+    true_value: 0.8536
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
     value_gap_source_is_current_paper: false
-    value_gap: 0.03520000000000001
+    value_gap: 0.06480000000000008
     has_value_note: false
     value_note: ''
-    sort_value: 0.824
-    sort_std: 0.004
-    global_rank: 12
-    paper_rank: 20
-    rank_delta: 8
-    rank_delta_abs: 8
+    sort_value: 0.8536
+    sort_std: null
+    global_rank: 15
+    paper_rank: 37
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Graph Unlearning
-    comparison_source_arxiv: '2103.14991'
+    comparison_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    comparison_source_arxiv: '2307.00534'
     is_best: false
     is_std_outlier: false
   - model: FPS-T
@@ -2067,8 +2056,8 @@ results:
     value_note: ''
     sort_value: 0.8232
     sort_std: 0.007
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2135,8 +2124,8 @@ results:
     value_note: ''
     sort_value: 0.8142
     sort_std: 0.0079
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2203,8 +2192,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.0085
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2271,8 +2260,8 @@ results:
     value_note: ''
     sort_value: 0.7981
     sort_std: 0.0058
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2339,8 +2328,8 @@ results:
     value_note: ''
     sort_value: 0.7968
     sort_std: 0.0065
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2407,8 +2396,8 @@ results:
     value_note: ''
     sort_value: 0.7963
     sort_std: 0.0057
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2475,8 +2464,8 @@ results:
     value_note: ''
     sort_value: 0.793
     sort_std: 0.0051
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2542,8 +2531,8 @@ results:
     value_note: ''
     sort_value: 0.657
     sort_std: 0.019
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3325,44 +3314,44 @@ results:
 - &id003
   dataset: PubMed
   rows:
-  - model: Pre-train (All Tasks)
-    model_key: nigcn
-    model_plain: Pre-train (All Tasks)
-    value: 0.809
-    std: 0.0202
+  - model: SGCONV
+    model_key: mixhop
+    model_plain: SGCONV
+    value: 0.891
+    std: 0.001
     metric: F1
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.14000'
-    title: Node-wise Diffusion for Scalable Graph Learning
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/NIGCN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.809
-    sort_std: 0.0202
+    sort_value: 0.891
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Pre-train (All Tasks)
-    model_key: ndls
-    model_plain: Pre-train (All Tasks)
-    value: 0.8038
-    std: 0.0141
+  - model: SGCONV
+    model_key: appnp
+    model_plain: SGCONV
+    value: 0.884
+    std: 0.001
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -3372,30 +3361,32 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.14000'
-    title: Node-wise Diffusion for Scalable Graph Learning
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/NIGCN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8038
-    sort_std: 0.0141
+    sort_value: 0.884
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Pre-train (All Tasks)
-    model_key: appnp
-    model_plain: Pre-train (All Tasks)
-    value: 0.8021
-    std: 0.0179
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7837
+    std: 0.0026
+    paper_value: 0.7837
+    paper_std: 0.0026
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -3405,24 +3396,123 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.14000'
-    title: Node-wise Diffusion for Scalable Graph Learning
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    venue: The Web Conference
-    codebase_url: https://github.com/kkhuang81/NIGCN
-    uses_external_data: false
-    input_feature_source: null
+    uses_external_data: 0
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    is_global_top: true
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Sep 8, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.875
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.09130000000000005
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.875
+    true_std: 0.001
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09130000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.875
+    sort_std: 0.001
     global_rank: 3
-    sort_value: 0.8021
-    sort_std: 0.0179
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    paper_rank: 29
+    rank_delta: 26
+    rank_delta_abs: 26
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.7814
+    std: 0.0031
+    paper_value: 0.7814
+    paper_std: 0.0031
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    date: Sep 8, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.869
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.08760000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.869
+    true_std: 0.001
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08760000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.869
+    sort_std: 0.001
+    global_rank: 4
+    paper_rank: 30
+    rank_delta: 26
+    rank_delta_abs: 26
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
+    is_best: false
     is_std_outlier: false
   - model: TokenGT
     model_key: tokengt
@@ -3481,8 +3571,8 @@ results:
     value_note: ''
     sort_value: 0.7893
     sort_std: 0.0027
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3490,74 +3580,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7814
-    std: 0.0031
-    paper_value: 0.7814
-    paper_std: 0.0031
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
-    date: Sep 8, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7882
-    at_pub_std: 0.019
-    at_pub_source_arxiv: '2305.14000'
-    at_pub_source_title: Node-wise Diffusion for Scalable Graph Learning
-    at_pub_source_date_iso: '2023-04-30'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2023-04-30'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.006800000000000028
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.7882
-    true_std: 0.019
-    value_gap_source_arxiv: '2305.14000'
-    value_gap_source_title: Node-wise Diffusion for Scalable Graph Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.006800000000000028
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7882
-    sort_std: 0.019
-    global_rank: 8
-    paper_rank: 12
-    rank_delta: 4
-    rank_delta_abs: 4
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: FPS-T
     model_key: fps-t
@@ -3616,80 +3639,12 @@ results:
     value_note: ''
     sort_value: 0.7852
     sort_std: 0.0058
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7837
-    std: 0.0026
-    paper_value: 0.7837
-    paper_std: 0.0026
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
-    date: Sep 8, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7805
-    at_pub_std: 0.0164
-    at_pub_source_arxiv: '2305.14000'
-    at_pub_source_title: Node-wise Diffusion for Scalable Graph Learning
-    at_pub_source_date_iso: '2023-04-30'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2023-09-08'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.0031999999999999806
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7837
-    true_std: 0.0026
-    value_gap_source_arxiv: '2309.04082'
-    value_gap_source_title: 'Curve Your Attention: Mixed-Curvature Transformers for
-      Graph Representation Learning'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7837
-    sort_std: 0.0026
-    global_rank: 11
-    paper_rank: 11
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3752,8 +3707,8 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.0042
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3820,8 +3775,8 @@ results:
     value_note: ''
     sort_value: 0.7731
     sort_std: 0.0059
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3888,8 +3843,8 @@ results:
     value_note: ''
     sort_value: 0.7713
     sort_std: 0.0059
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3956,8 +3911,8 @@ results:
     value_note: ''
     sort_value: 0.7672
     sort_std: 0.0086
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4024,8 +3979,8 @@ results:
     value_note: ''
     sort_value: 0.7567
     sort_std: 0.0099
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4092,8 +4047,8 @@ results:
     value_note: ''
     sort_value: 0.7511
     sort_std: 0.0127
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4160,8 +4115,8 @@ results:
     value_note: ''
     sort_value: 0.6717
     sort_std: 0.0091
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

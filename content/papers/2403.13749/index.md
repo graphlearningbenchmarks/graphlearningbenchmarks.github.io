@@ -40,8 +40,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GIN
-mrr: 0.0556
-adjusted_mrr: 0.0185
+mrr: 0.0333
+adjusted_mrr: 0.0111
 mrr_dataset_count: 1
 benchmark_categories:
 - LRGB
@@ -58,9 +58,9 @@ results:
 - &id001
   dataset: Peptides-func
   rows:
-  - model: SAN+RWSE
+  - model: Tango_GPS
     model_key: s^2gcn
-    model_plain: SAN+RWSE
+    model_plain: Tango_GPS
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -86,6 +86,73 @@ results:
     global_rank: 1
     sort_value: 0.7311
     sort_std: 0.0066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: s^2 gcn + pe
+    model_plain: Tango_GPS
+    value: 0.7311
+    std: 0.0066
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_display: May 2024
+    date_iso: '2024-05-29'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: PE is described as stable positional encodings almost
+      free of cost for S2GNNs.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.7311
+    sort_std: 0.0066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: s4g
+    model_plain: Tango_GPS
+    value: 0.7293
+    std: 0.0004
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-13'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7293
+    sort_std: 0.0004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -121,17 +188,17 @@ results:
     date_iso: '2024-03-20'
     published_venue: NeurIPS 2024
     published_conference: NeurIPS 2024
-    at_pub_value: 0.593
-    at_pub_std: 0.0023
-    at_pub_source_arxiv: '2206.08164'
-    at_pub_source_title: LRGB
-    at_pub_source_date_iso: '2022-06-16'
-    at_pub_source_date_label: NeurIPS 2022
+    at_pub_value: 0.686
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.09300000000000008
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -147,48 +214,16 @@ results:
     value_note: ''
     sort_value: 0.7261
     sort_std: 0.0011
-    global_rank: 2
-    paper_rank: 114
-    rank_delta: 112
-    rank_delta_abs: 112
+    global_rank: 5
+    paper_rank: 156
+    rank_delta: 151
+    rank_delta_abs: 151
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: mpnns
-    model_plain: SAN+RWSE
-    value: 0.725
-    std: 0.0023
-    metric: AP
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2510.08450'
-    title: 'gLSTM: Mitigating Over-Squashing by Increasing Storage Capacity'
-    date: Oct 9, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-09'
-    venue: arXiv.org
-    codebase_url: https://github.com/HughBlayney/gLSTM
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.725
-    sort_std: 0.0023
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
     is_best: true
     is_std_outlier: false
   - model: GIN
@@ -247,10 +282,10 @@ results:
     value_note: ''
     sort_value: 0.7059
     sort_std: 0.0089
-    global_rank: 18
-    paper_rank: 114
-    rank_delta: 96
-    rank_delta_abs: 96
+    global_rank: 30
+    paper_rank: 156
+    rank_delta: 126
+    rank_delta_abs: 126
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -315,8 +350,8 @@ results:
     value_note: ''
     sort_value: 0.657
     sort_std: 0.006
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -383,8 +418,8 @@ results:
     value_note: ''
     sort_value: 0.5864
     sort_std: 0.0077
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

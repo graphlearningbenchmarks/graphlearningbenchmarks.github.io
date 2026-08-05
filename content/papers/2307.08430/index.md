@@ -107,10 +107,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.8605
     at_pub_std: 0.0025
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -133,9 +133,9 @@ results:
     sort_value: 0.979
     sort_std: null
     global_rank: 1
-    paper_rank: 96
-    rank_delta: 95
-    rank_delta_abs: 95
+    paper_rank: 97
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SHGN
+  - model: SlotGAT
     model_key: comch
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.947
     std: null
     metric: Micro-F1
@@ -344,10 +344,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.9141
     at_pub_std: 0.0075
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -370,9 +370,9 @@ results:
     sort_value: 0.9402
     sort_std: null
     global_rank: 7
-    paper_rank: 52
-    rank_delta: 45
-    rank_delta_abs: 45
+    paper_rank: 53
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -616,10 +616,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.9077
     at_pub_std: 0.0065
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -642,9 +642,9 @@ results:
     sort_value: 0.9361
     sort_std: null
     global_rank: 17
-    paper_rank: 58
-    rank_delta: 41
-    rank_delta_abs: 41
+    paper_rank: 59
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -682,12 +682,12 @@ results:
     date_iso: '2023-07-17'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.9335
+    at_pub_std: 0.0045
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-07-17'
     value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
@@ -847,9 +847,9 @@ results:
     sort_value: 0.9278
     sort_std: null
     global_rank: 31
-    paper_rank: 42
-    rank_delta: 11
-    rank_delta_abs: 11
+    paper_rank: 43
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -916,9 +916,9 @@ results:
     sort_value: 0.9258
     sort_std: null
     global_rank: 34
-    paper_rank: 55
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 56
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1054,9 +1054,9 @@ results:
     sort_value: 0.9246
     sort_std: null
     global_rank: 36
-    paper_rank: 44
-    rank_delta: 8
-    rank_delta_abs: 8
+    paper_rank: 45
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1122,8 +1122,8 @@ results:
     value_note: ''
     sort_value: 0.9238
     sort_std: 0.001
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1165,10 +1165,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.9079
     at_pub_std: 0.0043
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -1190,8 +1190,8 @@ results:
     value_note: ''
     sort_value: 0.9185
     sort_std: null
-    global_rank: 49
-    paper_rank: 58
+    global_rank: 50
+    paper_rank: 59
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -1233,10 +1233,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.91
     at_pub_std: 0.0076
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2024-12-01'
     value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
@@ -1258,8 +1258,8 @@ results:
     value_note: ''
     sort_value: 0.916
     sort_std: 0.006
-    global_rank: 52
-    paper_rank: 57
+    global_rank: 53
+    paper_rank: 58
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -1326,8 +1326,8 @@ results:
     value_note: ''
     sort_value: 0.9082
     sort_std: 0.0093
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1369,10 +1369,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.9032
     at_pub_std: 0.0154
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -1393,8 +1393,8 @@ results:
     value_note: ''
     sort_value: 0.9032
     sort_std: 0.0154
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1436,10 +1436,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.8991
     at_pub_std: 0.0037
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -1460,8 +1460,8 @@ results:
     value_note: ''
     sort_value: 0.8991
     sort_std: 0.0037
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1528,8 +1528,8 @@ results:
     value_note: ''
     sort_value: 0.8807
     sort_std: 0.0304
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1551,9 +1551,9 @@ results:
 - &id002
   dataset: DBLP
   rows:
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: herec
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -1643,9 +1643,9 @@ results:
     sort_value: 0.9972
     sort_std: null
     global_rank: 2
-    paper_rank: 123
-    rank_delta: 121
-    rank_delta_abs: 121
+    paper_rank: 125
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1654,9 +1654,9 @@ results:
     comparison_source_arxiv: '1912.10832'
     is_best: true
     is_std_outlier: false
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: deepwalk
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -1990,10 +1990,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.9207
     at_pub_std: 0.005
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2025-10-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -2016,9 +2016,9 @@ results:
     sort_value: 0.95
     sort_std: null
     global_rank: 18
-    paper_rank: 70
-    rank_delta: 52
-    rank_delta_abs: 52
+    paper_rank: 71
+    rank_delta: 53
+    rank_delta_abs: 53
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2290,9 +2290,9 @@ results:
     sort_value: 0.946
     sort_std: 0.0031
     global_rank: 28
-    paper_rank: 75
-    rank_delta: 47
-    rank_delta_abs: 47
+    paper_rank: 76
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2333,11 +2333,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.9339
     at_pub_std: 0.003
-    at_pub_source_arxiv: '2305.19872'
-    at_pub_source_title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative
-      Polynomials
-    at_pub_source_date_iso: '2023-05-31'
-    at_pub_source_date_label: WWW 2023
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-10-25'
     value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
@@ -2360,9 +2359,9 @@ results:
     sort_value: 0.9448
     sort_std: 0.0022
     global_rank: 29
-    paper_rank: 50
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 51
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2400,12 +2399,12 @@ results:
     date_iso: '2023-07-17'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.9446
+    at_pub_std: 0.0022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-10-25'
     value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
@@ -2631,8 +2630,8 @@ results:
     value_note: ''
     sort_value: 0.9384
     sort_std: 0.0053
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2674,10 +2673,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.9381
     at_pub_std: 0.0055
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -2698,8 +2697,8 @@ results:
     value_note: ''
     sort_value: 0.9381
     sort_std: 0.0055
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2766,8 +2765,8 @@ results:
     value_note: ''
     sort_value: 0.9376
     sort_std: 0.0045
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2835,8 +2834,8 @@ results:
     value_note: ''
     sort_value: 0.9369
     sort_std: null
-    global_rank: 45
-    paper_rank: 70
+    global_rank: 46
+    paper_rank: 71
     rank_delta: 25
     rank_delta_abs: 25
     rank_delta_direction: worse
@@ -2903,8 +2902,8 @@ results:
     value_note: ''
     sort_value: 0.9349
     sort_std: 0.0025
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2971,8 +2970,8 @@ results:
     value_note: ''
     sort_value: 0.9233
     sort_std: 0.0041
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2995,9 +2994,9 @@ results:
 - &id005
   dataset: Freebase
   rows:
-  - model: GPH^2
+  - model: SlotGAT
     model_key: gc-hgnn
-    model_plain: GPH^2
+    model_plain: SlotGAT
     value: 0.6247
     std: 0.0042
     metric: Macro-F1
@@ -3028,9 +3027,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPH^2
+  - model: SlotGAT
     model_key: hgmae
-    model_plain: GPH^2
+    model_plain: SlotGAT
     value: 0.6082
     std: 0.0051
     metric: Macro-F1
@@ -3061,9 +3060,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GPH^2
+  - model: SlotGAT
     model_key: heco
-    model_plain: GPH^2
+    model_plain: SlotGAT
     value: 0.5987
     std: 0.0033
     metric: Macro-F1
@@ -3152,9 +3151,9 @@ results:
     sort_value: 0.585
     sort_std: 0.0093
     global_rank: 8
-    paper_rank: 38
-    rank_delta: 30
-    rank_delta_abs: 30
+    paper_rank: 39
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3221,9 +3220,9 @@ results:
     sort_value: 0.583
     sort_std: 0.0072
     global_rank: 9
-    paper_rank: 34
-    rank_delta: 25
-    rank_delta_abs: 25
+    paper_rank: 35
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3601,12 +3600,12 @@ results:
     date_iso: '2023-07-17'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.4772
+    at_pub_std: 0.0148
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-07-17'
     value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
@@ -3671,10 +3670,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.4678
     at_pub_std: 0.0077
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -3695,8 +3694,8 @@ results:
     value_note: ''
     sort_value: 0.4678
     sort_std: 0.0077
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3763,8 +3762,8 @@ results:
     value_note: ''
     sort_value: 0.4137
     sort_std: 0.0449
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3832,8 +3831,8 @@ results:
     value_note: ''
     sort_value: 0.4074
     sort_std: 0.0258
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3902,8 +3901,8 @@ results:
     value_note: ''
     sort_value: 0.2935
     sort_std: null
-    global_rank: 34
-    paper_rank: 35
+    global_rank: 35
+    paper_rank: 36
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -3971,8 +3970,8 @@ results:
     value_note: ''
     sort_value: 0.2122
     sort_std: 0.0258
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3994,9 +3993,9 @@ results:
 - &id004
   dataset: IMDB
   rows:
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-sc
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8133
     std: 0.0179
     metric: Micro-F1
@@ -4005,9 +4004,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -4027,9 +4026,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: sage ban
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8073
     std: 0.002
     metric: Micro-F1
@@ -4060,9 +4059,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-cs
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8033
     std: 0.0094
     metric: Micro-F1
@@ -4071,9 +4070,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -4222,9 +4221,9 @@ results:
     sort_value: 0.7311
     sort_std: null
     global_rank: 34
-    paper_rank: 99
-    rank_delta: 65
-    rank_delta_abs: 65
+    paper_rank: 100
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4428,9 +4427,9 @@ results:
     sort_value: 0.6827
     sort_std: 0.0065
     global_rank: 43
-    paper_rank: 63
-    rank_delta: 20
-    rank_delta_abs: 20
+    paper_rank: 64
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4498,9 +4497,9 @@ results:
     sort_value: 0.6813
     sort_std: 0.0083
     global_rank: 45
-    paper_rank: 66
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 67
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4568,9 +4567,9 @@ results:
     sort_value: 0.6808
     sort_std: 0.0049
     global_rank: 46
-    paper_rank: 65
-    rank_delta: 19
-    rank_delta_abs: 19
+    paper_rank: 66
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4707,9 +4706,9 @@ results:
     sort_value: 0.6782
     sort_std: 0.0154
     global_rank: 48
-    paper_rank: 69
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 70
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4776,9 +4775,9 @@ results:
     sort_value: 0.6769
     sort_std: 0.0064
     global_rank: 49
-    paper_rank: 69
-    rank_delta: 20
-    rank_delta_abs: 20
+    paper_rank: 70
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4885,12 +4884,12 @@ results:
     date_iso: '2023-07-17'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.6736
+    at_pub_std: 0.0057
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2023-07-17'
     value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
@@ -4912,8 +4911,8 @@ results:
     value_note: ''
     sort_value: 0.6736
     sort_std: 0.0057
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4955,10 +4954,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.672
     at_pub_std: 0.0057
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -4979,8 +4978,8 @@ results:
     value_note: ''
     sort_value: 0.672
     sort_std: 0.0057
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5048,8 +5047,8 @@ results:
     value_note: ''
     sort_value: 0.6651
     sort_std: 0.0028
-    global_rank: 60
-    paper_rank: 81
+    global_rank: 61
+    paper_rank: 82
     rank_delta: 21
     rank_delta_abs: 21
     rank_delta_direction: worse
@@ -5117,8 +5116,8 @@ results:
     value_note: ''
     sort_value: 0.6618
     sort_std: 0.007
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5160,10 +5159,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.6422
     at_pub_std: 0.0103
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -5184,8 +5183,8 @@ results:
     value_note: ''
     sort_value: 0.6422
     sort_std: 0.0103
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5252,8 +5251,8 @@ results:
     value_note: ''
     sort_value: 0.6396
     sort_std: 0.0043
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5320,8 +5319,8 @@ results:
     value_note: ''
     sort_value: 0.6237
     sort_std: 0.0103
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5388,8 +5387,8 @@ results:
     value_note: ''
     sort_value: 0.5975
     sort_std: 0.0123
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5456,8 +5455,8 @@ results:
     value_note: ''
     sort_value: 0.5383
     sort_std: 0.0066
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5499,10 +5498,10 @@ results:
     published_conference: NeurIPS 2023
     at_pub_value: 0.5116
     at_pub_std: 0.0065
-    at_pub_source_arxiv: '2207.02547'
-    at_pub_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    at_pub_source_date_iso: '2022-07-06'
-    at_pub_source_date_label: AAAI 2022
+    at_pub_source_arxiv: '2112.14936'
+    at_pub_source_title: Heterogeneous Graph Benchmarks
+    at_pub_source_date_iso: '2021-08-14'
+    at_pub_source_date_label: KDD 2021
     value_gap_source_date_iso: '2022-07-06'
     value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: null
@@ -5523,8 +5522,8 @@ results:
     value_note: ''
     sort_value: 0.5116
     sort_std: 0.0065
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6313,10 +6312,10 @@ results:
     value_note: ''
     sort_value: 0.4927
     sort_std: 0.0061
-    global_rank: 33
-    paper_rank: 37
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 34
+    paper_rank: 39
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6381,10 +6380,10 @@ results:
     value_note: ''
     sort_value: 0.4811
     sort_std: 0.0048
-    global_rank: 34
-    paper_rank: 37
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 35
+    paper_rank: 39
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6451,8 +6450,8 @@ results:
     value_note: ''
     sort_value: 0.4678
     sort_std: 0.0067
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6520,8 +6519,8 @@ results:
     value_note: ''
     sort_value: 0.3514
     sort_std: 0.0378
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6589,8 +6588,8 @@ results:
     value_note: ''
     sort_value: 0.2692
     sort_std: 0.0026
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6640,5 +6639,6 @@ datasets_by_scope:
       dataset_slug: imdb
     - dataset: Freebase
       dataset_slug: freebase
+main_figure: /figures/2307.08430/main_figure.jpegoptim.jpg
 ---
 

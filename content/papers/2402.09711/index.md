@@ -76,9 +76,9 @@ results:
 - &id001
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -110,9 +110,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gcn
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9412
     std: 0.0008
     metric: Accuracy
@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gat
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -235,8 +235,8 @@ results:
     value_note: ''
     sort_value: 0.681
     sort_std: 0.0025
-    global_rank: 518
-    paper_rank: 518
+    global_rank: 514
+    paper_rank: 514
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -303,8 +303,8 @@ results:
     value_note: ''
     sort_value: 0.6687
     sort_std: 0.0047
-    global_rank: 519
-    paper_rank: 519
+    global_rank: 515
+    paper_rank: 515
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -371,8 +371,8 @@ results:
     value_note: ''
     sort_value: 0.1063
     sort_std: 0.0159
-    global_rank: 548
-    paper_rank: 548
+    global_rank: 544
+    paper_rank: 544
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -439,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.1014
     sort_std: 0.0059
-    global_rank: 549
-    paper_rank: 549
+    global_rank: 545
+    paper_rank: 545
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -507,8 +507,8 @@ results:
     value_note: ''
     sort_value: 0.0975
     sort_std: 0.0124
-    global_rank: 550
-    paper_rank: 550
+    global_rank: 546
+    paper_rank: 546
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -540,5 +540,6 @@ datasets_by_scope:
     datasets:
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
+main_figure: /figures/2402.09711/main_figure.jpegoptim.jpg
 ---
 

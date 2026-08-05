@@ -50,8 +50,8 @@ paper_type: method
 proposed_models:
 - BIND 1%
 - BIND 10%
-mrr: 0.0263
-adjusted_mrr: 0.0088
+mrr: 0.0238
+adjusted_mrr: 0.0079
 mrr_dataset_count: 1
 benchmark_categories:
 - LINKX Benchmarks
@@ -59,7 +59,7 @@ benchmark_coverage:
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
   evaluated: 1
-  total: 5
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -68,9 +68,9 @@ results:
 - &id001
   dataset: Pokec
   rows:
-  - model: VecFormer
+  - model: FMP
     model_key: polynormer-r
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.861
     std: 0.0005
     metric: Accuracy
@@ -101,9 +101,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: VecFormer
+  - model: FMP
     model_key: polynormer
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.8595
     std: 0.0007
     metric: Accuracy
@@ -134,9 +134,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: VecFormer
+  - model: FMP
     model_key: moe-h2gcn
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.8302
     std: 0.003
     metric: Accuracy
@@ -224,8 +224,8 @@ results:
     value_note: ''
     sort_value: 0.653
     sort_std: 0.002
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -292,8 +292,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: 0.007
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -360,8 +360,8 @@ results:
     value_note: ''
     sort_value: 0.635
     sort_std: 0.004
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -428,8 +428,8 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.007
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -496,8 +496,8 @@ results:
     value_note: ''
     sort_value: 0.629
     sort_std: 0.004
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -564,8 +564,8 @@ results:
     value_note: ''
     sort_value: 0.616
     sort_std: 0.009
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -597,5 +597,6 @@ datasets_by_scope:
     datasets:
     - dataset: Pokec
       dataset_slug: pokec
+main_figure: /figures/2211.14383/main_figure.jpegoptim.jpg
 ---
 

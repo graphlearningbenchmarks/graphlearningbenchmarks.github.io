@@ -211,7 +211,7 @@ results:
     today_delta_significant: false
     sort_value: 0.051
     sort_std: null
-    global_rank: 25
+    global_rank: 30
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -273,7 +273,7 @@ results:
     today_delta_significant: false
     sort_value: 0.052
     sort_std: null
-    global_rank: 28
+    global_rank: 33
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -335,7 +335,7 @@ results:
     today_delta_significant: false
     sort_value: 0.052
     sort_std: null
-    global_rank: 28
+    global_rank: 33
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -397,7 +397,7 @@ results:
     today_delta_significant: false
     sort_value: 0.066
     sort_std: null
-    global_rank: 37
+    global_rank: 43
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -459,7 +459,7 @@ results:
     today_delta_significant: false
     sort_value: 0.073
     sort_std: null
-    global_rank: 38
+    global_rank: 44
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -521,7 +521,7 @@ results:
     today_delta_significant: false
     sort_value: 0.09
     sort_std: null
-    global_rank: 43
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -583,7 +583,7 @@ results:
     today_delta_significant: false
     sort_value: 0.105
     sort_std: null
-    global_rank: 44
+    global_rank: 57
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -645,7 +645,7 @@ results:
     today_delta_significant: false
     sort_value: 0.114
     sort_std: null
-    global_rank: 44
+    global_rank: 60
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -707,7 +707,7 @@ results:
     today_delta_significant: false
     sort_value: 0.145
     sort_std: null
-    global_rank: 49
+    global_rank: 67
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -769,7 +769,7 @@ results:
     today_delta_significant: false
     sort_value: 0.349
     sort_std: null
-    global_rank: 60
+    global_rank: 80
     has_value_gap: false
     has_value_note: false
     value_gap: null

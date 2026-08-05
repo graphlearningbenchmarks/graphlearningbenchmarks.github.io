@@ -9,7 +9,7 @@ primary_metric: Macro-F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HGBDataset.html
 stats: null
-result_count: 82
+result_count: 83
 best_model:
   model: ConCH
   value: 0.6475
@@ -23,6 +23,10 @@ papers:
     Graphs via Domain-Specific Expert Encoding
   date_iso: '2026-02-13'
   venue: ''
+- arxiv_id: '2405.01927'
+  title: 'SlotGAT: Slot-based Message Passing for Heterogeneous Graphs'
+  date_iso: '2024-05-03'
+  venue: ICML 2024
 - arxiv_id: '2404.02810'
   title: Generative-Contrastive Heterogeneous Graph Neural Network
   date_iso: '2024-04-03'
@@ -48,6 +52,10 @@ papers:
   title: Simple and Efficient Heterogeneous Graph Neural Network
   date_iso: '2022-07-06'
   venue: AAAI 2022
+- arxiv_id: '2112.14936'
+  title: Heterogeneous Graph Benchmarks
+  date_iso: '2021-08-14'
+  venue: KDD 2021
 - arxiv_id: '2012.10024'
   title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
     Networks
@@ -1051,16 +1059,44 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2307.08430'
-    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
-    date: Jul 17, 2023
-    date_iso: '2023-07-17'
-    date_display: Jul 2023
-    codebase_url: ''
-    published_conference: NeurIPS 2023
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2023
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4772
+    - null
+    metric_stds:
+    - 0.0148
+    - null
+  - model: simpleHGN
+    model_plain: simpleHGN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.01927'
+    title: 'SlotGAT: Slot-based Message Passing for Heterogeneous Graphs'
+    date: May 3, 2024
+    date_iso: '2024-05-03'
+    date_display: May 2024
+    codebase_url: https://github.com/scottjiao/SlotGAT_ICML23
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1136,16 +1172,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2207.02547'
-    title: Simple and Efficient Heterogeneous Graph Neural Network
-    date: Jul 6, 2022
-    date_iso: '2022-07-06'
-    date_display: Jul 2022
-    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1278,16 +1314,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2307.08430'
-    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
-    date: Jul 17, 2023
-    date_iso: '2023-07-17'
-    date_display: Jul 2023
-    codebase_url: ''
-    published_conference: NeurIPS 2023
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2023
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: Aug 14, 2021
+    date_iso: '2021-08-14'
+    date_display: Aug 2021
+    codebase_url: https://github.com/THUDM/HGB
+    published_conference: KDD 2021
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1470,48 +1506,26 @@ variants:
     metric_stds:
     - 0.078
     - null
-  - model: HGT
-    model_plain: HGT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.02547'
-    title: Simple and Efficient Heterogeneous Graph Neural Network
-    date: Jul 6, 2022
-    date_iso: '2022-07-06'
-    date_display: Jul 2022
-    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2928
-    - null
-    metric_stds:
-    - 0.0252
-    - null
-  row_count: 82
+  row_count: 83
   rows_json: /data/datasets/freebase/standard-split-rows.json
   chart_json: /data/datasets/freebase/standard-split-chart.json
   arch_counts:
-    gnn: 37
+    gnn: 38
     hybrid: 22
     graph_transformer: 3
     llm: 10
     walk: 9
     traditional: 1
   metric_counts:
-  - 68
+  - 69
   - 14
   milestones: &id001
+  - value: 0.4772
+    std: 0.0148
+    model: Simple-HGN
+    arxiv_id: '2112.14936'
+    title: Heterogeneous Graph Benchmarks
+    date: '2021-08-14'
   - value: 0.5187
     std: 0.0086
     model: SeHGNN

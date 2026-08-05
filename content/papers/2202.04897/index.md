@@ -972,5 +972,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbl-wikikg2
       dataset_slug: ogbl-wikikg2
+main_figure: /figures/2202.04897/main_figure.jpegoptim.jpg
 ---
 

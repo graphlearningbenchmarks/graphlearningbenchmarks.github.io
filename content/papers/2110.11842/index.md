@@ -59,9 +59,9 @@ results:
 - &id004
   dataset: ACM
   rows:
-  - model: SHGN
+  - model: SlotGAT
     model_key: hetgnn
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.979
     std: null
     metric: Micro-F1
@@ -92,9 +92,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SHGN
+  - model: SlotGAT
     model_key: comch
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.947
     std: null
     metric: Micro-F1
@@ -125,9 +125,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SHGN
+  - model: SlotGAT
     model_key: lmsps
-    model_plain: SHGN
+    model_plain: SlotGAT
     value: 0.9469
     std: 0.0036
     metric: Micro-F1
@@ -206,7 +206,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9155
     sort_std: null
-    global_rank: 53
+    global_rank: 54
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -268,7 +268,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9053
     sort_std: null
-    global_rank: 62
+    global_rank: 63
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -330,7 +330,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8894
     sort_std: null
-    global_rank: 75
+    global_rank: 76
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -392,7 +392,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8225
     sort_std: null
-    global_rank: 105
+    global_rank: 106
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -454,7 +454,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6955
     sort_std: null
-    global_rank: 115
+    global_rank: 116
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -516,7 +516,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6594
     sort_std: null
-    global_rank: 118
+    global_rank: 119
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -578,7 +578,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5746
     sort_std: null
-    global_rank: 121
+    global_rank: 122
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -640,7 +640,7 @@ results:
     today_delta_significant: false
     sort_value: 0.018
     sort_std: null
-    global_rank: 129
+    global_rank: 130
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -666,9 +666,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -700,9 +700,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gcn
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9412
     std: 0.0008
     metric: Accuracy
@@ -734,9 +734,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gat
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -825,10 +825,10 @@ results:
     value_note: ''
     sort_value: 0.8861
     sort_std: 0.0064
-    global_rank: 217
-    paper_rank: 546
-    rank_delta: 329
-    rank_delta_abs: 329
+    global_rank: 222
+    paper_rank: 542
+    rank_delta: 320
+    rank_delta_abs: 320
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -884,7 +884,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5967
     sort_std: null
-    global_rank: 523
+    global_rank: 519
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -946,7 +946,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2417
     sort_std: null
-    global_rank: 547
+    global_rank: 543
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -972,9 +972,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -1005,9 +1005,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -1039,9 +1039,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -1130,10 +1130,10 @@ results:
     value_note: ''
     sort_value: 0.931
     sort_std: 0.004
-    global_rank: 202
-    paper_rank: 540
-    rank_delta: 338
-    rank_delta_abs: 338
+    global_rank: 207
+    paper_rank: 546
+    rank_delta: 339
+    rank_delta_abs: 339
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1189,7 +1189,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7164
     sort_std: null
-    global_rank: 518
+    global_rank: 524
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1251,7 +1251,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5167
     sort_std: null
-    global_rank: 540
+    global_rank: 546
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1313,7 +1313,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3678
     sort_std: null
-    global_rank: 562
+    global_rank: 568
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1339,9 +1339,9 @@ results:
 - &id003
   dataset: DBLP
   rows:
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: herec
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -1372,9 +1372,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: hetsann
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -1405,9 +1405,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: COSTA+GraphControl
+  - model: SlotGAT
     model_key: deepwalk
-    model_plain: COSTA+GraphControl
+    model_plain: SlotGAT
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -1486,7 +1486,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9252
     sort_std: null
-    global_rank: 65
+    global_rank: 66
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1548,7 +1548,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9013
     sort_std: null
-    global_rank: 82
+    global_rank: 83
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1610,7 +1610,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8976
     sort_std: null
-    global_rank: 82
+    global_rank: 83
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1672,7 +1672,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8743
     sort_std: null
-    global_rank: 86
+    global_rank: 87
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1734,7 +1734,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8546
     sort_std: null
-    global_rank: 97
+    global_rank: 98
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1796,7 +1796,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8248
     sort_std: null
-    global_rank: 115
+    global_rank: 117
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1858,7 +1858,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7966
     sort_std: null
-    global_rank: 131
+    global_rank: 133
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1920,7 +1920,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2808
     sort_std: null
-    global_rank: 182
+    global_rank: 184
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1946,9 +1946,9 @@ results:
 - &id005
   dataset: IMDB
   rows:
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-sc
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8133
     std: 0.0179
     metric: Micro-F1
@@ -1957,9 +1957,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1979,9 +1979,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: sage ban
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8073
     std: 0.002
     metric: Micro-F1
@@ -2012,9 +2012,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EM-GCN[PH]
+  - model: SlotGAT
     model_key: gat bgnn(m)-cs
-    model_plain: EM-GCN[PH]
+    model_plain: SlotGAT
     value: 0.8033
     std: 0.0094
     metric: Micro-F1
@@ -2023,9 +2023,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -2093,7 +2093,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4512
     sort_std: null
-    global_rank: 134
+    global_rank: 135
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2155,7 +2155,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4229
     sort_std: null
-    global_rank: 136
+    global_rank: 137
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2217,7 +2217,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4062
     sort_std: null
-    global_rank: 136
+    global_rank: 137
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2279,7 +2279,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3906
     sort_std: null
-    global_rank: 139
+    global_rank: 140
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2341,7 +2341,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3164
     sort_std: null
-    global_rank: 145
+    global_rank: 146
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2403,7 +2403,7 @@ results:
     today_delta_significant: false
     sort_value: 0.287
     sort_std: null
-    global_rank: 146
+    global_rank: 147
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2465,7 +2465,7 @@ results:
     today_delta_significant: false
     sort_value: 0.1459
     sort_std: null
-    global_rank: 147
+    global_rank: 148
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2527,7 +2527,7 @@ results:
     today_delta_significant: false
     sort_value: 0.0018
     sort_std: null
-    global_rank: 148
+    global_rank: 149
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2581,5 +2581,6 @@ datasets_by_scope:
     - dataset: IMDB
       dataset_slug: imdb
 single_proposed_model: MCGC
+main_figure: /figures/2110.11842/main_figure.jpegoptim.jpg
 ---
 

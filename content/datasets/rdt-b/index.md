@@ -12,7 +12,7 @@ stats:
   avg_nodes: 429.63
   avg_edges: 497.75
   num_classes: 2
-result_count: 98
+result_count: 102
 best_model:
   model: OEPG
   value: 0.963
@@ -36,6 +36,10 @@ papers:
 - arxiv_id: '2406.08897'
   title: Motif-driven Subgraph Structure Learning for Graph Classification
   date_iso: '2024-06-13'
+  venue: ''
+- arxiv_id: '2406.00403'
+  title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+  date_iso: '2024-06-01'
   venue: ''
 - arxiv_id: '2405.01350'
   title: Community-Invariant Graph Contrastive Learning
@@ -84,6 +88,14 @@ papers:
     Augmentation'
   date_iso: '2022-02-07'
   venue: WWW 2022
+- arxiv_id: '2110.03753'
+  title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness'
+  date_iso: '2021-10-07'
+  venue: ICLR 2021
+- arxiv_id: '2106.12575'
+  title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+  date_iso: '2021-06-23'
+  venue: NeurIPS 2021
 - arxiv_id: '2106.09645'
   title: Prototypical Graph Contrastive Learning
   date_iso: '2021-06-17'
@@ -186,6 +198,32 @@ variants:
     - 0.958
     metric_stds:
     - 0.009
+  - model: GNN-AK+
+    model_plain: GNN-AK+
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.03753'
+    title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness'
+    date: Oct 7, 2021
+    date_iso: '2021-10-07'
+    date_display: Oct 2021
+    codebase_url: https://github.com/LingxiaoShawn/GNNAsKernel
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.948
+    metric_stds:
+    - 0.008
   - model: AgentNet
     model_plain: AgentNet
     is_baseline: false
@@ -479,23 +517,23 @@ variants:
     - 0.025
   - model: CIN
     model_plain: CIN
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: May 21, 2025
-    date_iso: '2025-05-21'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2106.12575'
+    title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    date: Jun 23, 2021
+    date_iso: '2021-06-23'
+    date_display: Jun 2021
+    codebase_url: https://github.com/twitter-research/cwn
+    published_conference: NeurIPS 2021
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -815,6 +853,32 @@ variants:
     - 0.9108
     metric_stds:
     - 0.0056
+  - model: DC-GCL
+    model_plain: DC-GCL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2406.00403'
+    title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    date: Jun 1, 2024
+    date_iso: '2024-06-01'
+    date_display: Jun 2024
+    codebase_url: https://github.com/Celin-Yao/DC-GCL
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9104
+    metric_stds:
+    - 0.0045
   - model: CI-GCL
     model_plain: CI-GCL
     is_baseline: false
@@ -841,6 +905,32 @@ variants:
     - 0.908
     metric_stds:
     - 0.005
+  - model: DRGCL
+    model_plain: DRGCL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.00403'
+    title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    date: Jun 1, 2024
+    date_iso: '2024-06-01'
+    date_display: Jun 2024
+    codebase_url: https://github.com/Celin-Yao/DC-GCL
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.908
+    metric_stds:
+    - 0.003
   - model: EG-SimCLR
     model_plain: EG-SimCLR
     is_baseline: true
@@ -1340,21 +1430,21 @@ variants:
     - 0.8866
     metric_stds:
     - 0.0095
-  - model: GCC
-    model_plain: GCC
+  - model: GraphTrans
+    model_plain: GraphTrans
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2106.09645'
-    title: Prototypical Graph Contrastive Learning
-    date: Jun 17, 2021
-    date_iso: '2021-06-17'
-    date_display: Jun 2021
-    codebase_url: https://github.com/ha-lins/PGCL
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2406.00403'
+    title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    date: Jun 1, 2024
+    date_iso: '2024-06-01'
+    date_display: Jun 2024
+    codebase_url: https://github.com/Celin-Yao/DC-GCL
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
@@ -1363,101 +1453,21 @@ variants:
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.884
+    - 0.8858
     metric_stds:
-    - 0.003
-  - model: JOAO
-    model_plain: JOAO
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2209.06560'
-    title: Graph Contrastive Learning with Personalized Augmentation
-    date: Sep 14, 2022
-    date_iso: '2022-09-14'
-    date_display: Sep 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8814
-    metric_stds:
-    - 0.0025
-  - model: AWL
-    model_plain: AWL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2009.03294'
-    title: 'GraphNorm: A Principled Approach to Accelerating Graph Neural Network
-      Training'
-    date: Sep 7, 2020
-    date_iso: '2020-09-07'
-    date_display: Sep 2020
-    codebase_url: ''
-    published_conference: ICML 2020
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2020
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.879
-    metric_stds:
-    - 0.025
-  - model: AWE
-    model_plain: AWE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_iso: '2023-05-10'
-    date_display: May 2023
-    codebase_url: https://github.com/qslim/PDF
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8789
-    metric_stds:
-    - 0.0253
-  row_count: 98
+    - 0.013
+  row_count: 102
   rows_json: /data/datasets/rdt-b/10-fold-cv-rows.json
   chart_json: /data/datasets/rdt-b/10-fold-cv-chart.json
   arch_counts:
-    gnn: 67
-    hybrid: 15
+    gnn: 69
+    hybrid: 17
     graph_transformer: 0
     llm: 0
     walk: 4
     traditional: 12
   metric_counts:
-  - 98
+  - 102
   milestones: &id001
   - value: 0.81
     std: 0.031
@@ -1472,6 +1482,12 @@ variants:
     title: 'GraphNorm: A Principled Approach to Accelerating Graph Neural Network
       Training'
     date: '2020-09-07'
+  - value: 0.948
+    std: 0.008
+    model: GNN-AK+
+    arxiv_id: '2110.03753'
+    title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness'
+    date: '2021-10-07'
   - value: 0.963
     std: 0.009
     model: OEPG

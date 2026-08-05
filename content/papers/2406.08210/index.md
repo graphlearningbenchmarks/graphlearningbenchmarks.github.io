@@ -48,99 +48,32 @@ extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
 has_results: true
 paper_type: method
 proposed_models:
-- WL
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+- FragNet
+mrr: 0.0286
+adjusted_mrr: 0.0095
+mrr_dataset_count: 1
 benchmark_categories:
-- Classic
+- LRGB
 benchmark_coverage:
-- benchmark: Classic
-  benchmark_slug: classic
+- benchmark: LRGB
+  benchmark_slug: lrgb
   evaluated: 1
-  total: 12
+  total: 5
 task_categories:
 - graph_regression
 experiment_scopes:
 - graph-level
 results:
 - &id001
-  dataset: ZINC
+  dataset: Peptides-struct
   rows:
-  - model: Subgraphormer
-    model_key: ppgn++
-    model_plain: Subgraphormer
-    value: 0.02
-    std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2302.11556'
-    title: Equivariant Polynomials for Graph Neural Networks
-    date: Feb 22, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-22'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.02
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Subgraphormer
-    model_key: subgraphormer
-    model_plain: Subgraphormer
-    value: 0.02
-    std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2406.09291'
-    title: A Flexible, Equivariant Framework for Subgraph GNNs via Graph Products
-      and Graph Coarsening
-    date: Jun 13, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-13'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/BarSGuy/Efficient-Subgraph-GNNs
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.02
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CIN
-    model_key: cin
-    model_plain: CIN
-    value: 0.027
-    std: 0.007
-    paper_value: 0.027
-    paper_std: 0.007
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.3496
+    std: 0.0013
+    paper_value: 0.3496
+    paper_std: 0.0013
     metric: MAE
     higher_is_better: false
     is_baseline: true
@@ -151,343 +84,28 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: unknown
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
     date: Jun 12, 2024
     date_display: Jun 2024
     date_iso: '2024-06-12'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: 0.021
-    at_pub_std: 0.001
-    at_pub_source_arxiv: '2306.03561'
-    at_pub_source_title: 'CIN++: Enhancing Topological Message Passing'
-    at_pub_source_date_iso: '2023-06-06'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-06'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.005999999999999998
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.021
-    true_std: 0.001
-    value_gap_source_arxiv: '2306.03561'
-    value_gap_source_title: 'CIN++: Enhancing Topological Message Passing'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.005999999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.021
-    sort_std: 0.001
-    global_rank: 3
-    paper_rank: 10
-    rank_delta: 7
-    rank_delta_abs: 7
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: WL
-    model_key: wl
-    model_plain: WL
-    value: 0.0237
-    std: 0.0
-    paper_value: 0.0237
-    paper_std: 0.0
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 12, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-12'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.0237
-    sort_std: 0.0
-    global_rank: 8
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Graphormer-GD
-    model_key: graphormer-gd
-    model_plain: Graphormer-GD
-    value: 0.025
-    std: 0.004
-    paper_value: 0.025
-    paper_std: 0.004
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 12, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-12'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.025
-    sort_std: 0.004
-    global_rank: 9
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Graphormer-URPE
-    model_key: graphormer-urpe
-    model_plain: Graphormer-URPE
-    value: 0.028
-    std: 0.002
-    paper_value: 0.028
-    paper_std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 12, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-12'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.028
-    sort_std: 0.002
-    global_rank: 11
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AUTOBAHN
-    model_key: autobahn
-    model_plain: AUTOBAHN
-    value: 0.029
-    std: 0.001
-    paper_value: 0.029
-    paper_std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 12, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-12'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.029
-    sort_std: 0.001
-    global_rank: 13
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Graphormer
-    model_key: graphormer
-    model_plain: Graphormer
-    value: 0.052
-    std: 0.005
-    paper_value: 0.052
-    paper_std: 0.005
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 12, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-12'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.0309
-    at_pub_std: 0.0031
-    at_pub_source_arxiv: '2305.15747'
-    at_pub_source_title: Union Subgraph Neural Networks
-    at_pub_source_date_iso: '2023-05-25'
-    at_pub_source_date_label: AAAI 2023
-    value_gap_source_date_iso: '2023-05-25'
-    value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: 0.021099999999999997
+    at_pub_value: 0.246
+    at_pub_std: 0.0007
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.10360000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -495,34 +113,505 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.0309
-    true_std: 0.0031
-    value_gap_source_arxiv: '2305.15747'
-    value_gap_source_title: Union Subgraph Neural Networks
+    true_value: 0.2421
+    true_std: 0.0016
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
     value_gap_source_is_current_paper: false
-    value_gap: 0.021099999999999997
+    value_gap: 0.10750000000000001
     has_value_note: false
     value_note: ''
-    sort_value: 0.0309
-    sort_std: 0.0031
-    global_rank: 14
-    paper_rank: 20
-    rank_delta: 6
-    rank_delta_abs: 6
+    sort_value: 0.2421
+    sort_std: 0.0016
+    global_rank: 1
+    paper_rank: 169
+    rank_delta: 168
+    rank_delta_abs: 168
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Union Subgraph Neural Networks
-    comparison_source_arxiv: '2305.15747'
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
+    model_key: tango_gps
+    model_plain: GMN
+    value: 0.2422
+    std: 0.0014
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Tango does not use additional encodings.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
+    model_key: nba-gin+lappe
+    model_plain: GMN
+    value: 0.2424
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2310.07430'
+    title: Non-backtracking Graph Neural Networks
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/seonghyun26/nba-gnn
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2424
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.3547
+    std: 0.0045
+    paper_value: 0.3547
+    paper_std: 0.0045
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
+    date: Jun 12, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-12'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.3547
+    at_pub_std: 0.0045
+    at_pub_source_arxiv: '2310.01704'
+    at_pub_source_title: Transformers are efficient hierarchical chemical graph learners
+    at_pub_source_date_iso: '2023-10-02'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2429
+    true_std: 0.0019
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11180000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2429
+    sort_std: 0.0019
+    global_rank: 5
+    paper_rank: 171
+    rank_delta: 166
+    rank_delta_abs: 166
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.342
+    std: 0.0013
+    paper_value: 0.342
+    paper_std: 0.0013
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
+    date: Jun 12, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-12'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.2477
+    at_pub_std: 0.0009
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.09430000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2431
+    true_std: 0.002
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09890000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2431
+    sort_std: 0.002
+    global_rank: 7
+    paper_rank: 168
+    rank_delta: 161
+    rank_delta_abs: 161
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
+    is_best: true
+    is_std_outlier: false
+  - model: GRIT
+    model_key: grit
+    model_plain: GRIT
+    value: 0.246
+    std: 0.0012
+    paper_value: 0.246
+    paper_std: 0.0012
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
+    date: Jun 12, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-12'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.246
+    at_pub_std: 0.0012
+    at_pub_source_arxiv: '2312.01538'
+    at_pub_source_title: Recurrent Distance Filtering for Graph Representation Learning
+    at_pub_source_date_iso: '2023-12-03'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-08-14'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.246
+    true_std: 0.0012
+    value_gap_source_arxiv: '2408.07654'
+    value_gap_source_title: 'Graph Triple Attention Network: A Decoupled Perspective'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.246
+    sort_std: 0.0012
+    global_rank: 31
+    paper_rank: 31
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: FragNet
+    model_key: fragnet
+    model_plain: FragNet
+    value: 0.2462
+    std: 0.0021
+    paper_value: 0.2462
+    paper_std: 0.0021
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
+    date: Jun 12, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-12'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-06-12'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2462
+    true_std: 0.0021
+    value_gap_source_arxiv: '2406.08210'
+    value_gap_source_title: 'Expressivity and Generalization: Fragment-Biases for
+      Molecular GNNs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2462
+    sort_std: 0.0021
+    global_rank: 35
+    paper_rank: 35
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN+RWSE
+    model_key: gatedgcn+rwse
+    model_plain: GatedGCN+RWSE
+    value: 0.3357
+    std: 0.0006
+    paper_value: 0.3357
+    paper_std: 0.0006
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
+    date: Jun 12, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-12'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.2529
+    at_pub_std: 0.0009
+    at_pub_source_arxiv: '2301.11956'
+    at_pub_source_title: On the Connection Between MPNN and Graph Transformer
+    at_pub_source_date_iso: '2023-01-27'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-11-19'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: 0.08279999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2485
+    true_std: 0.0022
+    value_gap_source_arxiv: '2411.12732'
+    value_gap_source_title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0872
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2485
+    sort_std: 0.0022
+    global_rank: 67
+    paper_rank: 164
+    rank_delta: 97
+    rank_delta_abs: 97
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: On the Connection Between MPNN and Graph Transformer
+    comparison_source_arxiv: '2301.11956'
+    is_best: false
+    is_std_outlier: false
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.25
+    std: 0.0012
+    paper_value: 0.25
+    paper_std: 0.0012
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: null
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
+    date: Jun 12, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-12'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.25
+    at_pub_std: 0.0005
+    at_pub_source_arxiv: '2312.01538'
+    at_pub_source_title: Recurrent Distance Filtering for Graph Representation Learning
+    at_pub_source_date_iso: '2023-12-03'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-02-03'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.25
+    true_std: 0.0012
+    value_gap_source_arxiv: '2402.02005'
+    value_gap_source_title: Topology-Informed Graph Transformer
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.25
+    sort_std: 0.0012
+    global_rank: 81
+    paper_rank: 81
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: HIMP
     model_key: himp
     model_plain: HIMP
-    value: 0.036
-    std: 0.002
-    paper_value: 0.036
-    paper_std: 0.002
+    value: 0.2503
+    std: 0.0008
+    paper_value: 0.2503
+    paper_std: 0.0008
     metric: MAE
     higher_is_better: false
     is_baseline: true
@@ -533,28 +622,27 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: unknown
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
     date: Jun 12, 2024
     date_display: Jun 2024
     date_iso: '2024-06-12'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: 0.036
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '2210.13978'
-    at_pub_source_title: Boosting the Cycle Counting Power of Graph Neural Networks
-      with I$^2$-GNNs
-    at_pub_source_date_iso: '2022-10-22'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2023-02-22'
-    value_gap_source_date_label: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-06-12'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -563,18 +651,19 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.036
-    true_std: 0.002
-    value_gap_source_arxiv: '2302.11556'
-    value_gap_source_title: Equivariant Polynomials for Graph Neural Networks
-    value_gap_source_is_current_paper: false
+    true_value: 0.2503
+    true_std: 0.0008
+    value_gap_source_arxiv: '2406.08210'
+    value_gap_source_title: 'Expressivity and Generalization: Fragment-Biases for
+      Molecular GNNs'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.036
-    sort_std: 0.002
-    global_rank: 15
-    paper_rank: 15
+    sort_value: 0.2503
+    sort_std: 0.0008
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -584,13 +673,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CIN-Small
-    model_key: cin-small
-    model_plain: CIN-Small
-    value: 0.044
-    std: 0.003
-    paper_value: 0.044
-    paper_std: 0.003
+  - model: CIN
+    model_key: cin
+    model_plain: CIN
+    value: 0.2523
+    std: 0.0013
+    paper_value: 0.2523
+    paper_std: 0.0013
     metric: MAE
     higher_is_better: false
     is_baseline: true
@@ -601,27 +690,27 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: unknown
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
     date: Jun 12, 2024
     date_display: Jun 2024
     date_iso: '2024-06-12'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: 0.044
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2106.12575'
-    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
-    at_pub_source_date_iso: '2021-06-23'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-10-22'
-    value_gap_source_date_label: ICLR 2022
+    at_pub_value: 0.2523
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2306.03561'
+    at_pub_source_title: 'CIN++: Enhancing Topological Message Passing'
+    at_pub_source_date_iso: '2023-06-06'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-10-11'
+    value_gap_source_date_label: TMLR 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -630,19 +719,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.044
-    true_std: 0.003
-    value_gap_source_arxiv: '2210.13978'
-    value_gap_source_title: Boosting the Cycle Counting Power of Graph Neural Networks
-      with I$^2$-GNNs
+    true_value: 0.2523
+    true_std: 0.0013
+    value_gap_source_arxiv: '2310.07430'
+    value_gap_source_title: Non-backtracking Graph Neural Networks
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.044
-    sort_std: 0.003
-    global_rank: 17
-    paper_rank: 17
+    sort_value: 0.2523
+    sort_std: 0.0013
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -652,112 +740,44 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GRIT
-    model_key: grit
-    model_plain: GRIT
-    value: 0.023
-    std: 0.001
-    paper_value: 0.023
-    paper_std: 0.001
+  - model: SAN+RWSE
+    model_key: san+rwse
+    model_plain: SAN+RWSE
+    value: 0.2545
+    std: 0.0012
+    paper_value: 0.2545
+    paper_std: 0.0012
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: unknown
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
     date: Jun 12, 2024
     date_display: Jun 2024
     date_iso: '2024-06-12'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: 0.023
-    at_pub_std: 0.001
-    at_pub_source_arxiv: '2310.20519'
-    at_pub_source_title: Enhancing Graph Neural Networks with Quantum Computed Encodings
-    at_pub_source_date_iso: '2023-10-31'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-10-14'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.059
-    true_std: 0.002
-    value_gap_source_arxiv: '2510.12369'
-    value_gap_source_title: A Hierarchical Quantized Tokenization Framework for Task-Adaptive
-      Graph Representation Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.036
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.059
-    sort_std: 0.002
-    global_rank: 22
-    paper_rank: 7
-    rank_delta: -15
-    rank_delta_abs: 15
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.088
-    std: 0.002
-    paper_value: 0.088
-    paper_std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 12, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-12'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.088
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '2106.12575'
-    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
-    at_pub_source_date_iso: '2021-06-23'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-02-22'
-    value_gap_source_date_label: ICML 2023
+    at_pub_value: 0.2545
+    at_pub_std: 0.0012
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -766,18 +786,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.088
-    true_std: 0.002
-    value_gap_source_arxiv: '2302.11556'
-    value_gap_source_title: Equivariant Polynomials for Graph Neural Networks
+    true_value: 0.2545
+    true_std: 0.0012
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.088
-    sort_std: 0.002
-    global_rank: 27
-    paper_rank: 27
+    sort_value: 0.2545
+    sort_std: 0.0012
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -787,44 +807,44 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.113
-    std: 0.002
-    paper_value: 0.113
-    paper_std: 0.002
+  - model: SAN+LapPE
+    model_key: san+lappe
+    model_plain: SAN+LapPE
+    value: 0.2683
+    std: 0.0043
+    paper_value: 0.2683
+    paper_std: 0.0043
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: unknown
     feature_source_evidence: ''
-    table_ref: Table 1
+    table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on the standard Peptides-struct test split
     date: Jun 12, 2024
     date_display: Jun 2024
     date_iso: '2024-06-12'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: 0.113
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '2310.20519'
-    at_pub_source_title: Enhancing Graph Neural Networks with Quantum Computed Encodings
-    at_pub_source_date_iso: '2023-10-31'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-05-25'
-    value_gap_source_date_label: AAAI 2023
+    at_pub_value: 0.2683
+    at_pub_std: 0.0043
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2025-02-03'
+    value_gap_source_date_label: ICLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -832,157 +852,23 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.1152
-    true_std: 0.001
-    value_gap_source_arxiv: '2305.15747'
-    value_gap_source_title: Union Subgraph Neural Networks
+    today_delta_significant: false
+    true_value: 0.268
+    true_std: 0.004
+    value_gap_source_arxiv: '2502.01122'
+    value_gap_source_title: Learning Efficient Positional Encodings with Graph Neural
+      Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.0021999999999999936
+    value_gap: 0.00029999999999996696
     has_value_note: false
     value_note: ''
-    sort_value: 0.1152
-    sort_std: 0.001
-    global_rank: 30
-    paper_rank: 29
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.126
-    std: 0.003
-    paper_value: 0.126
-    paper_std: 0.003
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 12, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-12'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.1205
-    at_pub_std: 0.0034
-    at_pub_source_arxiv: '2305.15747'
-    at_pub_source_title: Union Subgraph Neural Networks
-    at_pub_source_date_iso: '2023-05-25'
-    at_pub_source_date_label: AAAI 2023
-    value_gap_source_date_iso: '2023-05-25'
-    value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: 0.005500000000000005
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.1205
-    true_std: 0.0034
-    value_gap_source_arxiv: '2305.15747'
-    value_gap_source_title: Union Subgraph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.005500000000000005
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1205
-    sort_std: 0.0034
-    global_rank: 31
-    paper_rank: 31
+    sort_value: 0.268
+    sort_std: 0.004
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.111
-    std: 0.002
-    paper_value: 0.111
-    paper_std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 12, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-12'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.111
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '2310.20519'
-    at_pub_source_title: Enhancing Graph Neural Networks with Quantum Computed Encodings
-    at_pub_source_date_iso: '2023-10-31'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2022-01-23'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.384
-    true_std: 0.007
-    value_gap_source_arxiv: '2201.09332'
-    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
-      Graphs?
-    value_gap_source_is_current_paper: false
-    value_gap: 0.273
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.384
-    sort_std: 0.007
-    global_rank: 46
-    paper_rank: 29
-    rank_delta: -17
-    rank_delta_abs: 17
-    rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -999,19 +885,19 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: Classic
+- benchmark: LRGB
   datasets:
   - *id001
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: Classic
-    benchmark_slug: classic
+  - benchmark: LRGB
+    benchmark_slug: lrgb
     datasets:
-    - dataset: ZINC
-      dataset_slug: zinc
-single_proposed_model: WL
+    - dataset: Peptides-struct
+      dataset_slug: peptides-struct
+single_proposed_model: FragNet
 main_figure: /figures/2406.08210/main_figure.jpegoptim.jpg
 ---
 

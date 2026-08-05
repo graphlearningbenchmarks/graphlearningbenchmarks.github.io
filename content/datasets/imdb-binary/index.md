@@ -13,13 +13,13 @@ stats:
   avg_nodes: 19.8
   avg_edges: 96.5
   num_classes: 2
-result_count: 200
+result_count: 212
 best_model:
-  model: ID-GNN+BEC
-  value: 0.815
+  model: GCFL
+  value: 0.8299
   metric: Accuracy
-  arxiv_id: '2503.01079'
-  paper_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+  arxiv_id: '2106.13423'
+  paper_title: Federated Graph Classification over Non-IID Graphs
 papers:
 - arxiv_id: '2510.03987'
   title: 'ICEPool: Enhancing Graph Pooling Networks with Inter-cluster Connectivity'
@@ -53,6 +53,10 @@ papers:
   title: Graph Learning with Distributional Edge Layouts
   date_iso: '2024-02-26'
   venue: ''
+- arxiv_id: '2402.16346'
+  title: Boosting Graph Pooling with Persistent Homology
+  date_iso: '2024-02-26'
+  venue: NeurIPS 2024
 - arxiv_id: '2402.15270'
   title: Smoothed Graph Contrastive Learning via Seamless Proximity Integration
   date_iso: '2024-02-23'
@@ -102,6 +106,10 @@ papers:
   title: Pooling Architecture Search for Graph Classification
   date_iso: '2021-08-24'
   venue: ''
+- arxiv_id: '2106.13423'
+  title: Federated Graph Classification over Non-IID Graphs
+  date_iso: '2021-06-25'
+  venue: NeurIPS 2021
 - arxiv_id: '2103.11155'
   title: Recognizing Predictive Substructures with Subgraph Information Bottleneck
   date_iso: '2021-03-20'
@@ -151,6 +159,36 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
+  - model: GCFL
+    model_plain: GCFL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13423'
+    title: Federated Graph Classification over Non-IID Graphs
+    date: Jun 25, 2021
+    date_iso: '2021-06-25'
+    date_display: Jun 2021
+    codebase_url: ''
+    published_conference: NeurIPS 2021
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8299
+    - null
+    - null
+    metric_stds:
+    - 0.052
+    - null
+    - null
   - model: ID-GNN+BEC
     model_plain: ID-GNN+BEC
     is_baseline: true
@@ -531,7 +569,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7828
@@ -561,7 +599,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7765
@@ -591,7 +629,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.775
@@ -599,6 +637,36 @@ variants:
     - null
     metric_stds:
     - 0.0065
+    - null
+    - null
+  - model: FedProx
+    model_plain: FedProx
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13423'
+    title: Federated Graph Classification over Non-IID Graphs
+    date: Jun 25, 2021
+    date_iso: '2021-06-25'
+    date_display: Jun 2021
+    codebase_url: ''
+    published_conference: NeurIPS 2021
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.7746
+    - null
+    - null
+    metric_stds:
+    - 0.048
     - null
     - null
   - model: GNTK
@@ -691,6 +759,96 @@ variants:
     - 0.0748
     - null
     - null
+  - model: GSN
+    model_plain: GSN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.16346'
+    title: Boosting Graph Pooling with Persistent Homology
+    date: Feb 26, 2024
+    date_iso: '2024-02-26'
+    date_display: Feb 2024
+    codebase_url: https://github.com/LOGO-CUHKSZ/TIP
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.768
+    - null
+    - null
+    metric_stds:
+    - 0.02
+    - null
+    - null
+  - model: TOGL
+    model_plain: TOGL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.16346'
+    title: Boosting Graph Pooling with Persistent Homology
+    date: Feb 26, 2024
+    date_iso: '2024-02-26'
+    date_display: Feb 2024
+    codebase_url: https://github.com/LOGO-CUHKSZ/TIP
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.7665
+    - null
+    - null
+    metric_stds:
+    - 0.0275
+    - null
+    - null
+  - model: self-train
+    model_plain: self-train
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.13423'
+    title: Federated Graph Classification over Non-IID Graphs
+    date: Jun 25, 2021
+    date_iso: '2021-06-25'
+    date_display: Jun 2021
+    codebase_url: ''
+    published_conference: NeurIPS 2021
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.7654
+    - null
+    - null
+    metric_stds:
+    - 0.057
+    - null
+    - null
   - model: Graph Transformer + MPNN
     model_plain: Graph Transformer + MPNN
     is_baseline: true
@@ -719,6 +877,36 @@ variants:
     - null
     metric_stds:
     - 0.0039
+    - null
+    - null
+  - model: DiffPool-TIP
+    model_plain: DiffPool-TIP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.16346'
+    title: Boosting Graph Pooling with Persistent Homology
+    date: Feb 26, 2024
+    date_iso: '2024-02-26'
+    date_display: Feb 2024
+    codebase_url: https://github.com/LOGO-CUHKSZ/TIP
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: true
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.764
+    - null
+    - null
+    metric_stds:
+    - 0.0313
     - null
     - null
   - model: GraphAug
@@ -861,7 +1049,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.76
@@ -899,6 +1087,36 @@ variants:
     - null
     metric_stds:
     - 0.0
+    - null
+    - null
+  - model: FedAvg
+    model_plain: FedAvg
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13423'
+    title: Federated Graph Classification over Non-IID Graphs
+    date: Jun 25, 2021
+    date_iso: '2021-06-25'
+    date_display: Jun 2021
+    codebase_url: ''
+    published_conference: NeurIPS 2021
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.7596
+    - null
+    - null
+    metric_stds:
+    - 0.049
     - null
     - null
   - model: GAT + MPNN
@@ -1011,7 +1229,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.756
@@ -1221,7 +1439,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.752
@@ -1229,6 +1447,36 @@ variants:
     - null
     metric_stds:
     - 0.028
+    - null
+    - null
+  - model: MinCutPool-TIP
+    model_plain: MinCutPool-TIP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.16346'
+    title: Boosting Graph Pooling with Persistent Homology
+    date: Feb 26, 2024
+    date_iso: '2024-02-26'
+    date_display: Feb 2024
+    codebase_url: https://github.com/LOGO-CUHKSZ/TIP
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: true
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.752
+    - null
+    - null
+    metric_stds:
+    - 0.0267
     - null
     - null
   - model: GMCL-M
@@ -1401,7 +1649,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2025
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.75
@@ -1411,258 +1659,18 @@ variants:
     - 0.0283
     - null
     - null
-  - model: SEP-G ICE
-    model_plain: SEP-G ICE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.03987'
-    title: 'ICEPool: Enhancing Graph Pooling Networks with Inter-cluster Connectivity'
-    date: Oct 5, 2025
-    date_iso: '2025-10-05'
-    date_display: Oct 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.749
-    - null
-    - null
-    metric_stds:
-    - 0.0085
-    - null
-    - null
-  - model: SAGPool
-    model_plain: SAGPool
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2108.10587'
-    title: Pooling Architecture Search for Graph Classification
-    date: Aug 24, 2021
-    date_iso: '2021-08-24'
-    date_display: Aug 2021
-    codebase_url: https://github.com/GraphNAS/GraphNAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7487
-    - null
-    - null
-    metric_stds:
-    - 0.0409
-    - null
-    - null
-  - model: rLap
-    model_plain: rLap
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2306.04004'
-    title: Randomized Schur Complement Views for Graph Contrastive Learning
-    date: Jun 6, 2023
-    date_iso: '2023-06-06'
-    date_display: Jun 2023
-    codebase_url: https://github.com/kvignesh1420/rlap
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.748
-    - null
-    - null
-    metric_stds:
-    - 0.1017
-    - null
-    - null
-  - model: G-Mixup
-    model_plain: G-Mixup
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.13248'
-    title: Automated Data Augmentations for Graph Classification
-    date: Feb 26, 2022
-    date_iso: '2022-02-26'
-    date_display: Feb 2022
-    codebase_url: ''
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.748
-    - null
-    - null
-    metric_stds:
-    - 0.004
-    - null
-    - null
-  - model: FLAG
-    model_plain: FLAG
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.13248'
-    title: Automated Data Augmentations for Graph Classification
-    date: Feb 26, 2022
-    date_iso: '2022-02-26'
-    date_display: Feb 2022
-    codebase_url: ''
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.747
-    - null
-    - null
-    metric_stds:
-    - 0.008
-    - null
-    - null
-  - model: AWL
-    model_plain: AWL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '1810.00826'
-    title: How Powerful are Graph Neural Networks?
-    date: Oct 1, 2018
-    date_iso: '2018-10-01'
-    date_display: Oct 2018
-    codebase_url: https://github.com/weihua916/powerful-gnns
-    published_conference: ICLR 2018
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2018
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.745
-    - null
-    - null
-    metric_stds:
-    - 0.059
-    - null
-    - null
-  - model: AWL kernel
-    model_plain: AWL kernel
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: svm_kernel
-    architecture_label: SVM
-    architecture_title: SVM / kernel method
-    arxiv_id: '2005.01214'
-    title: Graph Homomorphism Convolution
-    date: May 3, 2020
-    date_iso: '2020-05-03'
-    date_display: May 2020
-    codebase_url: ''
-    published_conference: ICML 2020
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2020
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.745
-    - null
-    - null
-    metric_stds:
-    - 0.059
-    - null
-    - null
-  - model: Full B12C1
-    model_plain: Full B12C1
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2302.08671'
-    title: Search to Capture Long-range Dependency with Stacking GNNs for Graph Classification
-    date: Feb 17, 2023
-    date_iso: '2023-02-17'
-    date_display: Feb 2023
-    codebase_url: https://github.com/LARS-research/LRGNN
-    published_conference: WWW 2023
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.745
-    - null
-    - null
-    metric_stds:
-    - 0.0331
-    - null
-    - null
-  row_count: 200
+  row_count: 212
   rows_json: /data/datasets/imdb-binary/10-fold-cv-rows.json
   chart_json: /data/datasets/imdb-binary/10-fold-cv-chart.json
   arch_counts:
-    gnn: 118
-    hybrid: 33
+    gnn: 125
+    hybrid: 36
     graph_transformer: 1
     llm: 0
     walk: 3
-    traditional: 39
+    traditional: 41
   metric_counts:
-  - 184
+  - 196
   - 6
   - 10
   milestones: &id001
@@ -1684,12 +1692,12 @@ variants:
     arxiv_id: '2005.01214'
     title: Graph Homomorphism Convolution
     date: '2020-05-03'
-  - value: 0.7863
-    std: 0.0054
-    model: GAT +DEL-F
-    arxiv_id: '2402.16402'
-    title: Graph Learning with Distributional Edge Layouts
-    date: '2024-02-26'
+  - value: 0.8299
+    std: 0.052
+    model: GCFL
+    arxiv_id: '2106.13423'
+    title: Federated Graph Classification over Non-IID Graphs
+    date: '2021-06-25'
   milestones_by_metric:
     Accuracy: *id001
     ROC-AUC:

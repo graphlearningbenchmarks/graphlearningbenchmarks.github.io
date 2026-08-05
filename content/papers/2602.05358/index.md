@@ -52,7 +52,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 2
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -61,9 +61,9 @@ results:
 - &id002
   dataset: Cornell
   rows:
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -161,9 +161,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: rf-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -304,7 +304,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9136
     sort_std: 0.007
-    global_rank: 25
+    global_rank: 26
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -375,10 +375,10 @@ results:
     value_note: ''
     sort_value: 0.8918
     sort_std: 0.0396
-    global_rank: 40
-    paper_rank: 55
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 41
+    paper_rank: 57
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -444,10 +444,10 @@ results:
     value_note: ''
     sort_value: 0.8878
     sort_std: null
-    global_rank: 46
-    paper_rank: 256
-    rank_delta: 210
-    rank_delta_abs: 210
+    global_rank: 47
+    paper_rank: 265
+    rank_delta: 218
+    rank_delta_abs: 218
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -514,10 +514,10 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.054
-    global_rank: 165
-    paper_rank: 238
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 171
+    paper_rank: 247
+    rank_delta: 76
+    rank_delta_abs: 76
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -573,7 +573,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8082
     sort_std: 0.036
-    global_rank: 178
+    global_rank: 185
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -643,8 +643,8 @@ results:
     value_note: ''
     sort_value: 0.8015
     sort_std: 0.0037
-    global_rank: 183
-    paper_rank: 178
+    global_rank: 190
+    paper_rank: 185
     rank_delta: -5
     rank_delta_abs: 5
     rank_delta_direction: better
@@ -702,7 +702,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7934
     sort_std: 0.055
-    global_rank: 192
+    global_rank: 200
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -764,7 +764,7 @@ results:
     today_delta_significant: false
     sort_value: 0.777
     sort_std: 0.041
-    global_rank: 219
+    global_rank: 228
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -790,9 +790,9 @@ results:
 - &id001
   dataset: Texas
   rows:
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -823,9 +823,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: dog
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -834,9 +834,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -857,9 +857,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: gpf-plus
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -948,9 +948,9 @@ results:
     sort_value: 0.9557
     sort_std: 0.036
     global_rank: 5
-    paper_rank: 49
-    rank_delta: 44
-    rank_delta_abs: 44
+    paper_rank: 50
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1138,10 +1138,10 @@ results:
     value_note: ''
     sort_value: 0.8246
     sort_std: 0.0458
-    global_rank: 214
-    paper_rank: 326
-    rank_delta: 112
-    rank_delta_abs: 112
+    global_rank: 221
+    paper_rank: 339
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1207,10 +1207,10 @@ results:
     value_note: ''
     sort_value: 0.8162
     sort_std: 0.0645
-    global_rank: 236
-    paper_rank: 293
-    rank_delta: 57
-    rank_delta_abs: 57
+    global_rank: 245
+    paper_rank: 305
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1266,7 +1266,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8082
     sort_std: 0.036
-    global_rank: 257
+    global_rank: 269
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1336,10 +1336,10 @@ results:
     value_note: ''
     sort_value: 0.7933
     sort_std: 0.0447
-    global_rank: 287
-    paper_rank: 365
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 299
+    paper_rank: 384
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1395,7 +1395,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7852
     sort_std: 0.0624
-    global_rank: 296
+    global_rank: 308
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1465,10 +1465,10 @@ results:
     value_note: ''
     sort_value: 0.7751
     sort_std: 0.0172
-    global_rank: 309
-    paper_rank: 399
-    rank_delta: 90
-    rank_delta_abs: 90
+    global_rank: 320
+    paper_rank: 420
+    rank_delta: 100
+    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1524,7 +1524,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6262
     sort_std: 0.0808
-    global_rank: 476
+    global_rank: 504
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1563,5 +1563,6 @@ datasets_by_scope:
       dataset_slug: texas
     - dataset: Cornell
       dataset_slug: cornell
+main_figure: /figures/2602.05358/main_figure.jpegoptim.jpg
 ---
 

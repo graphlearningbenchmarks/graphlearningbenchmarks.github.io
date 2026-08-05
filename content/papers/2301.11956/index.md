@@ -50,461 +50,157 @@ extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
 has_results: true
 paper_type: method
 proposed_models:
-- Graphormer
-- MPNN + VN + PE (medium)
-mrr: 0.0909
-adjusted_mrr: 0.0303
-mrr_dataset_count: 1
+- MPNN + VN + NoPE
+mrr: 0.102
+adjusted_mrr: 0.102
+mrr_dataset_count: 4
 benchmark_categories:
 - OGB
+- LRGB
 benchmark_coverage:
 - benchmark: OGB
   benchmark_slug: ogb
-  evaluated: 1
+  evaluated: 4
   total: 16
+- benchmark: LRGB
+  benchmark_slug: lrgb
+  evaluated: 3
+  total: 5
 task_categories:
+- graph_classification
 - graph_regression
+- node_classification
 experiment_scopes:
 - graph-level
+- node-level
 results:
-- &id001
-  dataset: PCQM4Mv2
+- &id004
+  dataset: Code
   rows:
-  - model: GPS-medium
-    model_key: gps-medium
-    model_plain: GPS-medium
-    value: 0.0858
-    std: null
-    paper_value: 0.0858
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 19.4
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-27'
-    published_venue: ICML 2023
-    published_conference: ICML 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.0858
-    sort_std: null
-    global_rank: 1
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: EGT
-    model_key: egt
-    model_plain: EGT
-    value: 0.0869
-    std: null
-    paper_value: 0.0869
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 89.3
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: hussain2022global
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-27'
-    published_venue: ICML 2023
-    published_conference: ICML 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.0869
-    sort_std: null
-    global_rank: 1
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TorchMD-NET + Pre-training
-    model_key: egt-large
-    model_plain: TorchMD-NET + Pre-training
-    value: 0.0872
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 110.8
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2201.12787'
-    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    date: Jan 30, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-30'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.0872
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MPNN + VN + PE (medium)
-    model_key: mpnn + vn + pe (medium)
-    model_plain: MPNN + VN + PE (medium)
-    value: 0.0889
-    std: null
-    paper_value: 0.0889
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: 16.4
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-27'
-    published_venue: ICML 2023
-    published_conference: ICML 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.0889
-    sort_std: null
-    global_rank: 2
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GRPE
-    model_key: grpe
-    model_plain: GRPE
-    value: 0.089
-    std: null
-    paper_value: 0.089
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 46.2
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: park2022grpe
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-27'
-    published_venue: ICML 2023
-    published_conference: ICML 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.089
-    sort_std: null
-    global_rank: 2
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TorchMD-NET + Pre-training
-    model_key: grpe-standard
-    model_plain: TorchMD-NET + Pre-training
-    value: 0.0898
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: 46.2
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2201.12787'
-    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    date: Jan 30, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-30'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.0898
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS-small
-    model_key: gps-small
-    model_plain: GPS-small
-    value: 0.0938
-    std: null
-    paper_value: 0.0938
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 6.2
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-27'
-    published_venue: ICML 2023
-    published_conference: ICML 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.0938
-    sort_std: null
-    global_rank: 3
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TorchMD-NET + Pre-training
-    model_key: advsyngnn
-    model_plain: TorchMD-NET + Pre-training
-    value: 0.108
+  - model: RRWP
+    model_key: gmn
+    model_plain: RRWP
+    value: 0.206
     std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.17071'
-    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
-      and Self-Corrective Propagation'
-    date: Feb 19, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-19'
-    venue: arXiv.org
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.108
+    global_rank: 1
+    sort_value: 0.206
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: GIN-virtual
-    model_key: gin-virtual
-    model_plain: GIN-virtual
-    value: 0.1083
-    std: null
-    paper_value: 0.1083
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
+  - model: RRWP
+    model_key: dirgraphssm
+    model_plain: RRWP
+    value: 0.205
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.205
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: RRWP
+    model_key: graph-mamba
+    model_plain: RRWP
+    value: 0.203
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 6.7
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.203
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: K-Subtree SAT
+    model_key: k-subtree sat
+    model_plain: K-Subtree SAT
+    value: 0.1937
+    std: 0.0028
+    paper_value: 0.1937
+    paper_std: 0.0028
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on ogbg-code2
     date: Jan 27, 2023
     date_display: Jan 2023
     date_iso: '2023-01-27'
@@ -516,8 +212,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -526,47 +222,52 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    sort_value: 0.1083
-    sort_std: null
-    global_rank: 4
-    has_value_gap: false
-    has_value_note: false
+    true_value: 0.1937
+    true_std: 0.0028
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: false
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.1937
+    sort_std: 0.0028
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN-virtual
-    model_key: gcn-virtual
-    model_plain: GCN-virtual
-    value: 0.1153
-    std: null
-    paper_value: 0.1153
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.1894
+    std: 0.0024
+    paper_value: 0.1894
+    paper_std: 0.0024
+    metric: F1
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 4.9
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on ogbg-code2
     date: Jan 27, 2023
     date_display: Jan 2023
     date_iso: '2023-01-27'
@@ -578,8 +279,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -588,31 +289,170 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    sort_value: 0.1153
-    sort_std: null
-    global_rank: 6
-    has_value_gap: false
-    has_value_note: false
+    true_value: 0.1894
+    true_std: 0.0024
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: false
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.1894
+    sort_std: 0.0024
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.1195
-    std: null
-    paper_value: 0.1195
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
+  - model: GraphTrans (GCN-Virtual)
+    model_key: graphtrans (gcn-virtual)
+    model_plain: GraphTrans (GCN-Virtual)
+    value: 0.183
+    std: 0.0024
+    paper_value: 0.183
+    paper_std: 0.0024
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on ogbg-code2
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.183
+    true_std: 0.0024
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.183
+    sort_std: 0.0024
+    global_rank: 17
+    paper_rank: 17
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MPNN + VN + NoPE
+    model_key: mpnn + vn + nope
+    model_plain: MPNN + VN + NoPE
+    value: 0.1727
+    std: 0.0017
+    paper_value: 0.1727
+    paper_std: 0.0017
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on ogbg-code2
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1727
+    true_std: 0.0017
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1727
+    sort_std: 0.0017
+    global_rank: 22
+    paper_rank: 22
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN+virtual node
+    model_key: gcn+virtual node
+    model_plain: GCN+virtual node
+    value: 0.1595
+    std: 0.0018
+    paper_value: 0.1595
+    paper_std: 0.0018
+    metric: F1
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -621,118 +461,118 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on ogbg-code2
     date: Jan 27, 2023
     date_display: Jan 2023
     date_iso: '2023-01-27'
     published_venue: ICML 2023
     published_conference: ICML 2023
-    at_pub_value: 0.1195
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2205.12454'
-    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    at_pub_source_date_iso: '2022-05-25'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: '2022'
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.1218
-    true_std: null
-    value_gap_source_arxiv: '2201.12787'
-    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0023000000000000104
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1595
+    true_std: 0.0018
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.1218
-    sort_std: null
-    global_rank: 7
-    paper_rank: 6
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
-    has_value_gap: true
+    sort_value: 0.1595
+    sort_std: 0.0018
+    global_rank: 28
+    paper_rank: 28
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Graphormer
-    model_key: graphormer
-    model_plain: Graphormer
-    value: 0.0864
-    std: null
-    paper_value: 0.0864
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
+  - model: GIN+virtual node
+    model_key: gin+virtual node
+    model_plain: GIN+virtual node
+    value: 0.1581
+    std: 0.0026
+    paper_value: 0.1581
+    paper_std: 0.0026
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 48.3
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
-    source_ref: shi2022benchmarking
+    source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on ogbg-code2
     date: Jan 27, 2023
     date_display: Jan 2023
     date_iso: '2023-01-27'
     published_venue: ICML 2023
     published_conference: ICML 2023
-    at_pub_value: 0.0864
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2205.12454'
-    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    at_pub_source_date_iso: '2022-05-25'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: '2022'
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.1328
-    true_std: null
-    value_gap_source_arxiv: '2201.12787'
-    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0464
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1581
+    true_std: 0.0026
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.1328
-    sort_std: null
-    global_rank: 11
-    paper_rank: 1
-    rank_delta: -10
-    rank_delta_abs: 10
-    rank_delta_direction: better
-    has_value_gap: true
+    sort_value: 0.1581
+    sort_std: 0.0026
+    global_rank: 30
+    paper_rank: 30
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -741,12 +581,80 @@ results:
   - model: GCN
     model_key: gcn
     model_plain: GCN
-    value: 0.1379
-    std: null
-    paper_value: 0.1379
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
+    value: 0.1507
+    std: 0.0018
+    paper_value: 0.1507
+    paper_std: 0.0018
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.508
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on ogbg-code2
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.1507
+    at_pub_std: 0.0018
+    at_pub_source_arxiv: '2201.08821'
+    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    at_pub_source_date_iso: '2022-01-21'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2025-09-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.151
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.13735'
+    value_gap_source_title: State Space Models over Directed Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0002999999999999947
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.151
+    sort_std: 0.002
+    global_rank: 34
+    paper_rank: 34
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.1495
+    std: 0.0023
+    paper_value: 0.1495
+    paper_std: 0.0023
+    metric: F1
+    higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -755,27 +663,1309 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test F1 score on ogbg-code2
     date: Jan 27, 2023
     date_display: Jan 2023
     date_iso: '2023-01-27'
     published_venue: ICML 2023
     published_conference: ICML 2023
-    at_pub_value: 0.1379
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.12454'
-    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    at_pub_source_date_iso: '2022-05-25'
+    at_pub_value: 0.1495
+    at_pub_std: 0.0023
+    at_pub_source_arxiv: '2201.08821'
+    at_pub_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    at_pub_source_date_iso: '2022-01-21'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-01-21'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1495
+    true_std: 0.0023
+    value_gap_source_arxiv: '2201.08821'
+    value_gap_source_title: Representing Long-Range Context for Graph Neural Networks
+      with Global Attention
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1495
+    sort_std: 0.0023
+    global_rank: 36
+    paper_rank: 36
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: F1
+  paper_metrics:
+  - F1
+  metric: F1
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id007
+  dataset: PascalVOC-SP
+  rows:
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.1901
+    std: 0.004
+    paper_value: 0.1901
+    paper_std: 0.004
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.508
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 9
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on PascalVOC-SP split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.1281
+    at_pub_std: 0.0025
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-11-19'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: 0.062
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.78
+    true_std: 0.31
+    value_gap_source_arxiv: '2411.12732'
+    value_gap_source_title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.5899000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.78
+    sort_std: 0.31
+    global_rank: 1
+    paper_rank: 99
+    rank_delta: 98
+    rank_delta_abs: 98
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: true
+    is_std_outlier: true
+  - model: CR-TAS
+    model_key: neuralwalker
+    model_plain: CR-TAS
+    value: 0.4912
+    std: 0.0042
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-14'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/goombalab/chimera
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.4912
+    sort_std: 0.0042
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: CR-TAS
+    model_key: ppgt
+    model_plain: CR-TAS
+    value: 0.4641
+    std: 0.0033
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: utilize relative random walk probabilities (RRWP) as
+      our demonstrating example of graph PE
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.4641
+    sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN+LapPE
+    model_key: gatedgcn+lappe
+    model_plain: GatedGCN+LapPE
+    value: 0.3103
+    std: 0.0068
+    paper_value: 0.3103
+    paper_std: 0.0068
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.502
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 9
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on PascalVOC-SP split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.289
+    at_pub_std: 0.0057
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-11-19'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: 0.02130000000000004
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.392
+    true_std: 0.0033
+    value_gap_source_arxiv: '2411.12732'
+    value_gap_source_title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0817
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.392
+    sort_std: 0.0033
+    global_rank: 40
+    paper_rank: 75
+    rank_delta: 35
+    rank_delta_abs: 35
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.2874
+    std: 0.0178
+    paper_value: 0.2874
+    paper_std: 0.0178
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.509
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 9
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on PascalVOC-SP split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.2916
+    at_pub_std: 0.0058
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-05-20'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.004200000000000037
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.388
+    true_std: 0.004
+    value_gap_source_arxiv: '2405.11951'
+    value_gap_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
+      Nodes'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10060000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.388
+    sort_std: 0.004
+    global_rank: 45
+    paper_rank: 79
+    rank_delta: 34
+    rank_delta_abs: 34
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GINE
+    model_key: gine
+    model_plain: GINE
+    value: 0.1198
+    std: 0.0073
+    paper_value: 0.1198
+    paper_std: 0.0073
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.476
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 9
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test F1 on PascalVOC-SP split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.1265
+    at_pub_std: 0.0076
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-05-20'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.006699999999999998
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2718
+    true_std: 0.0054
+    value_gap_source_arxiv: '2405.11951'
+    value_gap_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
+      Nodes'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15199999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2718
+    sort_std: 0.0054
+    global_rank: 85
+    paper_rank: 112
+    rank_delta: 27
+    rank_delta_abs: 27
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: F1
+  paper_metrics:
+  - F1
+  metric: F1
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id006
+  dataset: Peptides-func
+  rows:
+  - model: Tango_GPS
+    model_key: s^2gcn
+    model_plain: Tango_GPS
+    value: 0.7311
+    std: 0.0066
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.12732'
+    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    date: Nov 19, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-19'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7311
+    sort_std: 0.0066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: s^2 gcn + pe
+    model_plain: Tango_GPS
+    value: 0.7311
+    std: 0.0066
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_display: May 2024
+    date_iso: '2024-05-29'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: PE is described as stable positional encodings almost
+      free of cost for S2GNNs.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.7311
+    sort_std: 0.0066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: s4g
+    model_plain: Tango_GPS
+    value: 0.7293
+    std: 0.0004
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-13'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7293
+    sort_std: 0.0004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6623
+    std: 0.0038
+    paper_value: 0.6623
+    paper_std: 0.0038
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.508
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: Standard MPNN configuration using graph topology and
+      VN.
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test AP with VN (after VN) on standard split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.593
+    at_pub_std: 0.0023
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.06930000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7261
+    true_std: 0.0011
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06379999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7261
+    sort_std: 0.0011
+    global_rank: 5
+    paper_rank: 91
+    rank_delta: 86
+    rank_delta_abs: 86
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.6635
+    std: 0.0024
+    paper_value: 0.6635
+    paper_std: 0.0024
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.509
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: Standard MPNN configuration using graph topology and
+      VN.
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test AP with VN (after VN) on standard split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.5864
+    at_pub_std: 0.0077
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.07709999999999995
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7006
+    true_std: 0.0033
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03710000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7006
+    sort_std: 0.0033
+    global_rank: 40
+    paper_rank: 88
+    rank_delta: 48
+    rank_delta_abs: 48
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN+RWSE
+    model_key: gatedgcn+rwse
+    model_plain: GatedGCN+RWSE
+    value: 0.6685
+    std: 0.0062
+    paper_value: 0.6685
+    paper_std: 0.0062
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.506
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: Standard MPNN configuration using graph topology and
+      VN.
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test AP with VN (after VN) on standard split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.6069
+    at_pub_std: 0.0035
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.06159999999999999
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6685
+    true_std: 0.0062
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6685
+    sort_std: 0.0062
+    global_rank: 87
+    paper_rank: 87
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: false
+    is_std_outlier: false
+  - model: GINE
+    model_key: gine
+    model_plain: GINE
+    value: 0.6346
+    std: 0.0071
+    paper_value: 0.6346
+    paper_std: 0.0071
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.476
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: Standard MPNN configuration using graph topology and
+      VN.
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test AP with VN (after VN) on standard split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.5498
+    at_pub_std: 0.0079
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.0848000000000001
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6621
+    true_std: 0.0067
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.02749999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6621
+    sort_std: 0.0067
+    global_rank: 92
+    paper_rank: 132
+    rank_delta: 40
+    rank_delta_abs: 40
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: AP
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: AP
+  paper_metrics:
+  - AP
+  metric: AP
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id005
+  dataset: Peptides-struct
+  rows:
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.2488
+    std: 0.0021
+    paper_value: 0.2488
+    paper_std: 0.0021
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.508
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE after VN on Peptides-struct split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.3496
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.10080000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2421
+    true_std: 0.0016
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006699999999999984
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2421
+    sort_std: 0.0016
+    global_rank: 1
+    paper_rank: 71
+    rank_delta: 70
+    rank_delta_abs: 70
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
+    model_key: tango_gps
+    model_plain: GMN
+    value: 0.2422
+    std: 0.0014
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Tango does not use additional encodings.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
+    model_key: nba-gin+lappe
+    model_plain: GMN
+    value: 0.2424
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2310.07430'
+    title: Non-backtracking Graph Neural Networks
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/seonghyun26/nba-gnn
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2424
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.2523
+    std: 0.0016
+    paper_value: 0.2523
+    paper_std: 0.0016
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.509
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE after VN on Peptides-struct split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.342
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.0897
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2431
+    true_std: 0.002
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.009200000000000014
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2431
+    sort_std: 0.002
+    global_rank: 7
+    paper_rank: 102
+    rank_delta: 95
+    rank_delta_abs: 95
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: true
+    is_std_outlier: false
+  - model: GINE
+    model_key: gine
+    model_plain: GINE
+    value: 0.2584
+    std: 0.0011
+    paper_value: 0.2584
+    paper_std: 0.0011
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.476
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE after VN on Peptides-struct split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.3547
+    at_pub_std: 0.0045
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-11-19'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: 0.0963
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2473
+    true_std: 0.0017
+    value_gap_source_arxiv: '2411.12732'
+    value_gap_source_title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.011100000000000027
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2473
+    sort_std: 0.0017
+    global_rank: 48
+    paper_rank: 131
+    rank_delta: 83
+    rank_delta_abs: 83
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN+RWSE
+    model_key: gatedgcn+rwse
+    model_plain: GatedGCN+RWSE
+    value: 0.2529
+    std: 0.0009
+    paper_value: 0.2529
+    paper_std: 0.0009
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.506
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE after VN on Peptides-struct split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.3357
+    at_pub_std: 0.0006
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-11-19'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: 0.08279999999999998
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2485
+    true_std: 0.0022
+    value_gap_source_arxiv: '2411.12732'
+    value_gap_source_title: Benchmarking Positional Encodings for GNNs and Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.004400000000000015
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2485
+    sort_std: 0.0022
+    global_rank: 67
+    paper_rank: 104
+    rank_delta: 37
+    rank_delta_abs: 37
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: LRGB
+    comparison_source_arxiv: '2206.08164'
+    is_best: false
+    is_std_outlier: false
+  - model: Transformer+LapPE
+    model_key: transformer+lappe
+    model_plain: Transformer+LapPE
+    value: 0.2529
+    std: 0.0016
+    paper_value: 0.2529
+    paper_std: 0.0016
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.488
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE before VN on Peptides-struct split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.2529
+    at_pub_std: 0.0016
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2529
+    true_std: 0.0016
+    value_gap_source_arxiv: '2605.12358'
+    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2529
+    sort_std: 0.0016
+    global_rank: 105
+    paper_rank: 105
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAN+RWSE
+    model_key: san+rwse
+    model_plain: SAN+RWSE
+    value: 0.2545
+    std: 0.0012
+    paper_value: 0.2545
+    paper_std: 0.0012
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.5
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE before VN on Peptides-struct split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.2545
+    at_pub_std: 0.0012
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2545
+    true_std: 0.0012
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2545
+    sort_std: 0.0012
+    global_rank: 118
+    paper_rank: 118
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAN+LapPE
+    model_key: san+lappe
+    model_plain: SAN+LapPE
+    value: 0.2683
+    std: 0.0043
+    paper_value: 0.2683
+    paper_std: 0.0043
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.493
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE before VN on Peptides-struct split
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.2683
+    at_pub_std: 0.0043
+    at_pub_source_arxiv: '2206.08164'
+    at_pub_source_title: LRGB
+    at_pub_source_date_iso: '2022-06-16'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2025-02-03'
+    value_gap_source_date_label: ICLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -783,22 +1973,23 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.1398
-    true_std: null
-    value_gap_source_arxiv: '2201.12787'
-    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    today_delta_significant: false
+    true_value: 0.268
+    true_std: 0.004
+    value_gap_source_arxiv: '2502.01122'
+    value_gap_source_title: Learning Efficient Positional Encodings with Graph Neural
+      Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.0019000000000000128
+    value_gap: 0.00029999999999996696
     has_value_note: false
     value_note: ''
-    sort_value: 0.1398
-    sort_std: null
-    global_rank: 18
-    paper_rank: 17
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
+    sort_value: 0.268
+    sort_std: 0.004
+    global_rank: 146
+    paper_rank: 146
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -814,19 +2005,1839 @@ results:
   metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
+- &id001
+  dataset: ogbg-molhiv
+  rows:
+  - model: SigGate-GT
+    model_key: multi-rf fusion with multi-gnn blending
+    model_plain: SigGate-GT
+    value: 0.8476
+    std: 0.0002
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: mixed
+    feature_source_evidence: Mixing pharmacophoric (FCFP) and structural (ECFP) fingerprints...
+      GNNs contributing only 12%
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8476
+    sort_std: 0.0002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SigGate-GT
+    model_key: hyperfusion
+    model_plain: SigGate-GT
+    value: 0.8475
+    std: 0.0003
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8475
+    sort_std: 0.0003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SigGate-GT
+    model_key: pas+fps
+    model_plain: SigGate-GT
+    value: 0.842
+    std: 0.0015
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: Mar 21, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.842
+    sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.788
+    std: 0.0101
+    paper_value: 0.788
+    paper_std: 0.0101
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using official OGB scaffold split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-29'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.788
+    true_std: 0.0101
+    value_gap_source_arxiv: '2509.24886'
+    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
+      Anisotropic Geometric Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.788
+    sort_std: 0.0101
+    global_rank: 73
+    paper_rank: 73
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAN
+    model_key: san
+    model_plain: SAN
+    value: 0.7785
+    std: 0.247
+    paper_value: 0.7785
+    paper_std: 0.247
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using official OGB scaffold split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-29'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7785
+    true_std: 0.247
+    value_gap_source_arxiv: '2509.24886'
+    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
+      Anisotropic Geometric Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7785
+    sort_std: 0.247
+    global_rank: 117
+    paper_rank: 117
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: true
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7558
+    std: 0.014
+    paper_value: 0.7558
+    paper_std: 0.014
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using official OGB scaffold split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.778
+    at_pub_std: 0.0182
+    at_pub_source_arxiv: '2201.12787'
+    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    at_pub_source_date_iso: '2022-01-30'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-01-30'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.022199999999999998
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.778
+    true_std: 0.0182
+    value_gap_source_arxiv: '2201.12787'
+    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.022199999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.778
+    sort_std: 0.0182
+    global_rank: 120
+    paper_rank: 237
+    rank_delta: 117
+    rank_delta_abs: 117
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN+virtual node
+    model_key: gin+virtual node
+    model_plain: GIN+virtual node
+    value: 0.7707
+    std: 0.0149
+    paper_value: 0.7707
+    paper_std: 0.0149
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using official OGB scaffold split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.771
+    at_pub_std: 0.015
+    at_pub_source_arxiv: '2006.09430'
+    at_pub_source_title: Wasserstein Embedding for Graph Learning
+    at_pub_source_date_iso: '2020-06-16'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2020-06-16'
+    value_gap_source_date_label: ICLR 2020
+    gap_vs_at_pub: 0.00029999999999996696
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.771
+    true_std: 0.015
+    value_gap_source_arxiv: '2006.09430'
+    value_gap_source_title: Wasserstein Embedding for Graph Learning
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00029999999999996696
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.771
+    sort_std: 0.015
+    global_rank: 158
+    paper_rank: 162
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MPNN + VN + NoPE
+    model_key: mpnn + vn + nope
+    model_plain: MPNN + VN + NoPE
+    value: 0.7676
+    std: 0.0172
+    paper_value: 0.7676
+    paper_std: 0.0172
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using official OGB scaffold split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7676
+    true_std: 0.0172
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7676
+    sort_std: 0.0172
+    global_rank: 181
+    paper_rank: 181
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7606
+    std: 0.0097
+    paper_value: 0.7606
+    paper_std: 0.0097
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.508
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using official OGB scaffold split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.763
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2208.04529'
+    at_pub_source_title: Motif-based Graph Representation Learning with Application
+      to Chemical Molecules
+    at_pub_source_date_iso: '2022-08-09'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-08-09'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.0023999999999999577
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.763
+    true_std: 0.003
+    value_gap_source_arxiv: '2208.04529'
+    value_gap_source_title: Motif-based Graph Representation Learning with Application
+      to Chemical Molecules
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0023999999999999577
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.763
+    sort_std: 0.003
+    global_rank: 203
+    paper_rank: 216
+    rank_delta: 13
+    rank_delta_abs: 13
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN+virtual node
+    model_key: gcn+virtual node
+    model_plain: GCN+virtual node
+    value: 0.7599
+    std: 0.0119
+    paper_value: 0.7599
+    paper_std: 0.0119
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: ROC-AUC on ogbg-molhiv using official OGB scaffold split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7599
+    true_std: 0.0119
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7599
+    sort_std: 0.0119
+    global_rank: 222
+    paper_rank: 222
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: ROC-AUC
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: ROC-AUC
+  paper_metrics:
+  - ROC-AUC
+  metric: ROC-AUC
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: ogbg-molpcba
+  rows:
+  - model: SigGate-GT
+    model_key: hig with graphormer
+    model_plain: SigGate-GT
+    value: 0.3167
+    std: 0.0034
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2205.11678'
+    title: Compressing Deep Graph Neural Networks via Adversarial Knowledge Distillation
+    date: May 24, 2022
+    date_display: May 2022
+    date_iso: '2022-05-24'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/TencentYoutuResearch/HIG-GraphClassification
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.3167
+    sort_std: 0.0034
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SigGate-GT
+    model_key: grpe-large
+    model_plain: SigGate-GT
+    value: 0.315
+    std: 0.001
+    metric: AP
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2201.12787'
+    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    date: Jan 30, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-30'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.315
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SigGate-GT
+    model_key: graphormer
+    model_plain: SigGate-GT
+    value: 0.314
+    std: null
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2207.08806'
+    title: Unified 2D and 3D Pre-Training of Molecular Representations
+    date: Jul 14, 2022
+    date_display: Jul 2022
+    date_iso: '2022-07-14'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.314
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.2907
+    std: 0.0028
+    paper_value: 0.2907
+    paper_std: 0.0028
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-29'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2907
+    true_std: 0.0028
+    value_gap_source_arxiv: '2509.24886'
+    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
+      Anisotropic Geometric Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2907
+    sort_std: 0.0028
+    global_rank: 31
+    paper_rank: 31
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.2266
+    std: 0.0028
+    paper_value: 0.2266
+    paper_std: 0.0028
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.2902
+    at_pub_std: 0.0017
+    at_pub_source_arxiv: '2201.12787'
+    at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    at_pub_source_date_iso: '2022-01-30'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-01-30'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.06360000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2902
+    true_std: 0.0017
+    value_gap_source_arxiv: '2201.12787'
+    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06360000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2902
+    sort_std: 0.0017
+    global_rank: 32
+    paper_rank: 95
+    rank_delta: 63
+    rank_delta_abs: 63
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    comparison_source_arxiv: '2201.12787'
+    is_best: false
+    is_std_outlier: false
+  - model: MPNN + VN + NoPE
+    model_key: mpnn + vn + nope
+    model_plain: MPNN + VN + NoPE
+    value: 0.2823
+    std: 0.0026
+    paper_value: 0.2823
+    paper_std: 0.0026
+    metric: AP
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2823
+    true_std: 0.0026
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2823
+    sort_std: 0.0026
+    global_rank: 42
+    paper_rank: 42
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAN
+    model_key: san
+    model_plain: SAN
+    value: 0.2765
+    std: 0.0042
+    paper_value: 0.2765
+    paper_std: 0.0042
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-29'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2765
+    true_std: 0.0042
+    value_gap_source_arxiv: '2509.24886'
+    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
+      Anisotropic Geometric Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2765
+    sort_std: 0.0042
+    global_rank: 51
+    paper_rank: 51
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphTrans (GCN-Virtual)
+    model_key: graphtrans (gcn-virtual)
+    model_plain: GraphTrans (GCN-Virtual)
+    value: 0.2761
+    std: 0.0029
+    paper_value: 0.2761
+    paper_std: 0.0029
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2761
+    true_std: 0.0029
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2761
+    sort_std: 0.0029
+    global_rank: 53
+    paper_rank: 53
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN+virtual node
+    model_key: gin+virtual node
+    model_plain: GIN+virtual node
+    value: 0.2703
+    std: 0.0023
+    paper_value: 0.2703
+    paper_std: 0.0023
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.2703
+    at_pub_std: 0.0023
+    at_pub_source_arxiv: '2206.11010'
+    at_pub_source_title: Agent-based Graph Neural Networks
+    at_pub_source_date_iso: '2022-06-22'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-22'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2703
+    true_std: 0.0023
+    value_gap_source_arxiv: '2206.11010'
+    value_gap_source_title: Agent-based Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2703
+    sort_std: 0.0023
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.202
+    std: 0.0024
+    paper_value: 0.202
+    paper_std: 0.0024
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.508
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.2424
+    at_pub_std: 0.0034
+    at_pub_source_arxiv: '2103.16584'
+    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
+      Classification
+    at_pub_source_date_iso: '2021-03-30'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2026-04-27'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.04039999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.269
+    true_std: 0.002
+    value_gap_source_arxiv: '2604.24293'
+    value_gap_source_title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature
+      Evolution via Continuous Phase Transitions'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.067
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.269
+    sort_std: 0.002
+    global_rank: 59
+    paper_rank: 103
+    rank_delta: 44
+    rank_delta_abs: 44
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Parameterized Hypercomplex Graph Neural Networks for
+      Graph Classification
+    comparison_source_arxiv: '2103.16584'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN+virtual node
+    model_key: gcn+virtual node
+    model_plain: GCN+virtual node
+    value: 0.2424
+    std: 0.0034
+    paper_value: 0.2424
+    paper_std: 0.0034
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2424
+    true_std: 0.0034
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2424
+    sort_std: 0.0034
+    global_rank: 86
+    paper_rank: 86
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: AP
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: AP
+  paper_metrics:
+  - AP
+  metric: AP
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: ogbg-ppa
+  rows:
+  - model: differential encoding
+    model_key: a-nlsf
+    model_plain: differential encoding
+    value: 0.8149
+    std: 0.0067
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.24886'
+    title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
+      Networks
+    date: Sep 29, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-29'
+    venue: arXiv.org
+    codebase_url: https://github.com/ywelld/_ac
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8149
+    sort_std: 0.0067
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: differential encoding
+    model_key: differential encoding
+    model_plain: differential encoding
+    value: 0.8096
+    std: 0.0029
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: Jul 3, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-03'
+    venue: IEEE Transactions on Big Data
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8096
+    sort_std: 0.0029
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MPNN + VN + NoPE
+    model_key: mpnn + vn + nope
+    model_plain: MPNN + VN + NoPE
+    value: 0.8055
+    std: 0.0038
+    paper_value: 0.8055
+    paper_std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbg-ppa using the official OGB species split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8055
+    true_std: 0.0038
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8055
+    sort_std: 0.0038
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.8015
+    std: 0.0033
+    paper_value: 0.8015
+    paper_std: 0.0033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbg-ppa using the official OGB species split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-09-29'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8015
+    true_std: 0.0033
+    value_gap_source_arxiv: '2509.24886'
+    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
+      Anisotropic Geometric Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8015
+    sort_std: 0.0033
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: K-Subtree SAT
+    model_key: k-subtree sat
+    model_plain: K-Subtree SAT
+    value: 0.7522
+    std: 0.0056
+    paper_value: 0.7522
+    paper_std: 0.0056
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbg-ppa using the official OGB species split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.7522
+    at_pub_std: 0.0056
+    at_pub_source_arxiv: '2202.03036'
+    at_pub_source_title: Structure-Aware Transformer for Graph Representation Learning
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: AAAI 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7522
+    true_std: 0.0056
+    value_gap_source_arxiv: '2406.12059'
+    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7522
+    sort_std: 0.0056
+    global_rank: 18
+    paper_rank: 18
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.6892
+    std: 0.01
+    paper_value: 0.6892
+    paper_std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbg-ppa using the official OGB species split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.6892
+    at_pub_std: 0.01
+    at_pub_source_arxiv: '2103.16584'
+    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
+      Classification
+    at_pub_source_date_iso: '2021-03-30'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2025-09-29'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.7037
+    true_std: 0.0107
+    value_gap_source_arxiv: '2509.24886'
+    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
+      Anisotropic Geometric Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.014499999999999957
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7037
+    sort_std: 0.0107
+    global_rank: 33
+    paper_rank: 39
+    rank_delta: 6
+    rank_delta_abs: 6
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN+virtual node
+    model_key: gin+virtual node
+    model_plain: GIN+virtual node
+    value: 0.7037
+    std: 0.0107
+    paper_value: 0.7037
+    paper_std: 0.0107
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbg-ppa using the official OGB species split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.7037
+    at_pub_std: 0.0107
+    at_pub_source_arxiv: '2206.11010'
+    at_pub_source_title: Agent-based Graph Neural Networks
+    at_pub_source_date_iso: '2022-06-22'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-22'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7037
+    true_std: 0.0107
+    value_gap_source_arxiv: '2206.11010'
+    value_gap_source_title: Agent-based Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7037
+    sort_std: 0.0107
+    global_rank: 35
+    paper_rank: 35
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6839
+    std: 0.0084
+    paper_value: 0.6839
+    paper_std: 0.0084
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.508
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbg-ppa using the official OGB species split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: 0.6839
+    at_pub_std: 0.0084
+    at_pub_source_arxiv: '2103.16584'
+    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
+      Classification
+    at_pub_source_date_iso: '2021-03-30'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2025-09-29'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.6857
+    true_std: 0.0061
+    value_gap_source_arxiv: '2509.24886'
+    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
+      Anisotropic Geometric Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0018000000000000238
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6857
+    sort_std: 0.0061
+    global_rank: 40
+    paper_rank: 42
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN+virtual node
+    model_key: gcn+virtual node
+    model_plain: GCN+virtual node
+    value: 0.6857
+    std: 0.0061
+    paper_value: 0.6857
+    paper_std: 0.0061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbg-ppa using the official OGB species split.
+    date: Jan 27, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-27'
+    published_venue: ICML 2023
+    published_conference: ICML 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6857
+    true_std: 0.0061
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6857
+    sort_std: 0.0061
+    global_rank: 41
+    paper_rank: 41
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
 results_grouped:
 - benchmark: OGB
   datasets:
   - *id001
+  - *id002
+  - *id003
+  - *id004
+- benchmark: LRGB
+  datasets:
+  - *id005
+  - *id006
+  - *id007
 datasets_by_scope:
+- scope: node-level
+  label: Node-level
+  benchmarks:
+  - benchmark: LRGB
+    benchmark_slug: lrgb
+    datasets:
+    - dataset: PascalVOC-SP
+      dataset_slug: pascalvoc-sp
 - scope: graph-level
   label: Graph-level
   benchmarks:
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
-    - dataset: PCQM4Mv2
-      dataset_slug: pcqm4mv2
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+    - dataset: ogbg-molpcba
+      dataset_slug: ogbg-molpcba
+    - dataset: ogbg-ppa
+      dataset_slug: ogbg-ppa
+    - dataset: Code
+      dataset_slug: code
+  - benchmark: LRGB
+    benchmark_slug: lrgb
+    datasets:
+    - dataset: Peptides-struct
+      dataset_slug: peptides-struct
+    - dataset: Peptides-func
+      dataset_slug: peptides-func
+single_proposed_model: MPNN + VN + NoPE
 main_figure: /figures/2301.11956/main_figure.jpegoptim.jpg
 ---
 

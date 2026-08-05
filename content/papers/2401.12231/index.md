@@ -63,8 +63,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - DisCo
-mrr: 0.0098
-adjusted_mrr: 0.0065
+mrr: 0.0096
+adjusted_mrr: 0.0064
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -86,9 +86,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: GCNII
+  - model: TinyGraph
     model_key: ne-asgcn
-    model_plain: GCNII
+    model_plain: TinyGraph
     value: 0.9758
     std: 0.0027
     metric: Accuracy
@@ -120,9 +120,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCNII
+  - model: TinyGraph
+    model_key: hsgt
+    model_plain: TinyGraph
+    value: 0.973
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.02866'
+    title: Hierarchical Transformer for Scalable Graph Learning
+    date: May 4, 2023
+    date_display: May 2023
+    date_iso: '2023-05-04'
+    venue: International Joint Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.973
+    sort_std: 0.0024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: TinyGraph
     model_key: gcmae
-    model_plain: GCNII
+    model_plain: TinyGraph
     value: 0.9713
     std: 0.0017
     metric: Accuracy
@@ -146,42 +179,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9713
     sort_std: 0.0017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gat+norm.adj.
-    model_plain: GCNII
-    value: 0.9706
-    std: 0.0005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2103.13355'
-    title: Bag of Tricks for Node Classification with Graph Neural Networks
-    date: Mar 24, 2021
-    date_display: Mar 2021
-    date_iso: '2021-03-24'
-    venue: null
-    codebase_url: https://github.com/espylapiza/Bag-of-Tricks-for-Node-Classification-with-Graph-Neural-Networks
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9706
-    sort_std: 0.0005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -243,8 +243,8 @@ results:
     value_note: ''
     sort_value: 0.935
     sort_std: 0.001
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -252,6 +252,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGDD
+    model_key: sgdd
+    model_plain: SGDD
+    value: 0.867
+    std: 0.008
+    paper_value: 0.867
+    paper_std: 0.008
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 with 0.05% reduction rate
+    date: Jan 18, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-18'
+    published_venue: WWW 2024
+    published_conference: WWW 2024
+    at_pub_value: 0.918
+    at_pub_std: 0.019
+    at_pub_source_arxiv: '2310.09202'
+    at_pub_source_title: Graph Distillation with Eigenbasis Matching
+    at_pub_source_date_iso: '2023-10-13'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-10-13'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.051000000000000045
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.918
+    true_std: 0.019
+    value_gap_source_arxiv: '2310.09202'
+    value_gap_source_title: Graph Distillation with Eigenbasis Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.051000000000000045
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.918
+    sort_std: 0.019
+    global_rank: 97
+    paper_rank: 130
+    rank_delta: 33
+    rank_delta_abs: 33
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph Distillation with Eigenbasis Matching
+    comparison_source_arxiv: '2310.09202'
     is_best: false
     is_std_outlier: false
   - model: DisCo
@@ -310,8 +377,8 @@ results:
     value_note: ''
     sort_value: 0.913
     sort_std: 0.003
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -379,10 +446,10 @@ results:
     value_note: ''
     sort_value: 0.911
     sort_std: null
-    global_rank: 95
-    paper_rank: 126
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 106
+    paper_rank: 142
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -427,7 +494,7 @@ results:
     at_pub_source_title: Graph Condensation for Inductive Node Representation Learning
     at_pub_source_date_iso: '2023-07-29'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-07-03'
+    value_gap_source_date_iso: '2024-07-10'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.07230000000000003
     worse_than_at_pub: true
@@ -437,20 +504,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.904
-    true_std: 0.0041
-    value_gap_source_arxiv: '2407.11025'
-    value_gap_source_title: Backdoor Graph Condensation
+    true_value: 0.903
+    true_std: 0.031
+    value_gap_source_arxiv: '2407.08064'
+    value_gap_source_title: 'TinyGraph: Joint Feature and Node Condensation for Graph
+      Neural Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.08000000000000007
+    value_gap: 0.07900000000000007
     has_value_note: false
     value_note: ''
-    sort_value: 0.904
-    sort_std: 0.0041
-    global_rank: 99
-    paper_rank: 118
-    rank_delta: 19
-    rank_delta_abs: 19
+    sort_value: 0.903
+    sort_std: 0.031
+    global_rank: 111
+    paper_rank: 135
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -458,7 +526,7 @@ results:
       Learning
     comparison_source_arxiv: '2307.15967'
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: SFGC
     model_key: sfgc
     model_plain: SFGC
@@ -517,10 +585,10 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.003
-    global_rank: 104
-    paper_rank: 111
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 114
+    paper_rank: 122
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -586,79 +654,12 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: 0.002
-    global_rank: 105
-    paper_rank: 118
-    rank_delta: 13
-    rank_delta_abs: 13
+    global_rank: 115
+    paper_rank: 135
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SGDD
-    model_key: sgdd
-    model_plain: SGDD
-    value: 0.867
-    std: 0.008
-    paper_value: 0.867
-    paper_std: 0.008
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on Reddit2 with 0.05% reduction rate
-    date: Jan 18, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-18'
-    published_venue: WWW 2024
-    published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.867
-    true_std: 0.008
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.867
-    sort_std: 0.008
-    global_rank: 115
-    paper_rank: 115
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -720,8 +721,8 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: 0.016
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -788,8 +789,8 @@ results:
     value_note: ''
     sort_value: 0.574
     sort_std: 0.018
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -811,9 +812,9 @@ results:
 - &id003
   dataset: ogbn-papers100M
   rows:
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: sgc
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.791
     std: null
     metric: Accuracy
@@ -844,9 +845,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: gamlp
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -877,9 +878,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: glem-gnn
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -968,8 +969,8 @@ results:
     value_note: ''
     sort_value: 0.633
     sort_std: null
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1037,8 +1038,8 @@ results:
     value_note: ''
     sort_value: 0.633
     sort_std: null
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1106,8 +1107,8 @@ results:
     value_note: ''
     sort_value: 0.633
     sort_std: null
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1174,8 +1175,8 @@ results:
     value_note: ''
     sort_value: 0.633
     sort_std: null
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1197,9 +1198,9 @@ results:
 - &id002
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -1231,9 +1232,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -1264,9 +1265,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -1354,8 +1355,8 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: 0.001
-    global_rank: 274
-    paper_rank: 274
+    global_rank: 294
+    paper_rank: 294
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1423,10 +1424,10 @@ results:
     value_note: ''
     sort_value: 0.704
     sort_std: 0.006
-    global_rank: 315
-    paper_rank: 346
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 333
+    paper_rank: 366
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1491,8 +1492,8 @@ results:
     value_note: ''
     sort_value: 0.646
     sort_std: 0.008
-    global_rank: 341
-    paper_rank: 341
+    global_rank: 361
+    paper_rank: 361
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1558,8 +1559,8 @@ results:
     value_note: ''
     sort_value: 0.644
     sort_std: 0.004
-    global_rank: 342
-    paper_rank: 342
+    global_rank: 362
+    paper_rank: 362
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1625,8 +1626,8 @@ results:
     value_note: ''
     sort_value: 0.624
     sort_std: 0.005
-    global_rank: 347
-    paper_rank: 347
+    global_rank: 367
+    paper_rank: 367
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1692,8 +1693,8 @@ results:
     value_note: ''
     sort_value: 0.593
     sort_std: 0.017
-    global_rank: 356
-    paper_rank: 356
+    global_rank: 376
+    paper_rank: 376
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1759,8 +1760,8 @@ results:
     value_note: ''
     sort_value: 0.591
     sort_std: 0.001
-    global_rank: 357
-    paper_rank: 357
+    global_rank: 377
+    paper_rank: 377
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1826,8 +1827,8 @@ results:
     value_note: ''
     sort_value: 0.564
     sort_std: 0.01
-    global_rank: 358
-    paper_rank: 358
+    global_rank: 378
+    paper_rank: 378
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1893,8 +1894,8 @@ results:
     value_note: ''
     sort_value: 0.535
     sort_std: 0.011
-    global_rank: 361
-    paper_rank: 361
+    global_rank: 381
+    paper_rank: 381
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1938,5 +1939,6 @@ datasets_by_scope:
     - dataset: ogbn-papers100M
       dataset_slug: ogbn-papers100m
 single_proposed_model: DisCo
+main_figure: /figures/2401.12231/main_figure.jpegoptim.jpg
 ---
 

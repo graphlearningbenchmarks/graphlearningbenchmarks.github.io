@@ -143,10 +143,10 @@ results:
     date_iso: '2023-01-01'
     venue: Journal of machine learning research
     codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: The suffix -PE denote the use of Laplacian Eigenvectors
-      as node positional encodings
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: suffix -PE denote the use of Laplacian Eigenvectors as
+      node positional encodings
     is_global_top: true
     global_rank: 3
     sort_value: 0.996
@@ -926,5 +926,6 @@ datasets_by_scope:
     datasets:
     - dataset: AQSOL
       dataset_slug: aqsol
+main_figure: /figures/2505.13087/main_figure.jpegoptim.jpg
 ---
 

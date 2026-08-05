@@ -13,15 +13,22 @@ stats:
   avg_nodes: 32.6
   avg_edges: 62.1
   num_classes: 6
-result_count: 452
+result_count: 455
 best_model:
-  model: MSA-AUD
-  value: 0.892
+  model: BGNN(m)-CS
+  value: 0.8068
   metric: Accuracy
-  arxiv_id: '2312.10943'
-  paper_title: Model Stealing Attack against Graph Classification with Authenticity,
-    Uncertainty and Diversity
+  arxiv_id: '2210.05920'
+  paper_title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
 papers:
+- arxiv_id: '2602.05567'
+  title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+  date_iso: '2026-02-05'
+  venue: ''
+- arxiv_id: '2601.07419'
+  title: 'Position: Don''t be Afraid of Over-Smoothing And Over-Squashing'
+  date_iso: '2026-01-12'
+  venue: ''
 - arxiv_id: '2510.22643'
   title: Enhancing Graph Classification Robustness with Singular Pooling
   date_iso: '2025-10-26'
@@ -101,6 +108,10 @@ papers:
   title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
   date_iso: '2024-06-03'
   venue: NeurIPS 2024
+- arxiv_id: '2402.16346'
+  title: Boosting Graph Pooling with Persistent Homology
+  date_iso: '2024-02-26'
+  venue: NeurIPS 2024
 - arxiv_id: '2402.15270'
   title: Smoothed Graph Contrastive Learning via Seamless Proximity Integration
   date_iso: '2024-02-23'
@@ -117,11 +128,6 @@ papers:
   title: Fine-tuning Graph Neural Networks by Preserving Graph Generative Patterns
   date_iso: '2023-12-21'
   venue: AAAI 2023
-- arxiv_id: '2312.10943'
-  title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-    and Diversity
-  date_iso: '2023-12-18'
-  venue: ''
 - arxiv_id: '2311.14864'
   title: Effective Structural Encodings via Local Curvature Profiles
   date_iso: '2023-11-24'
@@ -307,6 +313,8 @@ variants:
   - AUROC
   - Clustering
   - Degree
+  - F (macro)
+  - F (micro)
   - Joint Node Label & Degree
   - NSPDK
   - Orbit
@@ -317,6 +325,8 @@ variants:
   - AUROC
   - Clustering
   - Degree
+  - F (macro)
+  - F (micro)
   - Joint Node Label & Degree
   - NSPDK
   - Orbit
@@ -325,273 +335,15 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: MSA-AUD
-    model_plain: MSA-AUD
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.892
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: MSA-AD
-    model_plain: MSA-AD
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.89
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: MSA-AU
-    model_plain: MSA-AU
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.854
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Random
-    model_plain: Random
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.85
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: JbDA
-    model_plain: JbDA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.84
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: T-RND
-    model_plain: T-RND
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.827
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: BGNN(m)-CS
     model_plain: BGNN(m)-CS
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -603,7 +355,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8068
@@ -615,8 +367,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0149
+    - null
+    - null
     - null
     - null
     - null
@@ -645,10 +401,12 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7936
+    - null
+    - null
     - null
     - null
     - null
@@ -667,15 +425,17 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
   - model: BGNN(m)-SC
     model_plain: BGNN(m)-SC
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -687,7 +447,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7889
@@ -699,8 +459,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0079
+    - null
+    - null
     - null
     - null
     - null
@@ -741,7 +505,11 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -757,9 +525,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -783,8 +551,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0049
+    - null
+    - null
     - null
     - null
     - null
@@ -799,9 +571,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -813,7 +585,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7778
@@ -825,8 +597,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0157
+    - null
+    - null
     - null
     - null
     - null
@@ -856,7 +632,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7658
@@ -868,8 +644,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0549
+    - null
+    - null
     - null
     - null
     - null
@@ -911,50 +691,11 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.028
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: MSA-Real
-    model_plain: MSA-Real
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.76
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
     - null
     - null
     - null
@@ -996,7 +737,11 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -1026,7 +771,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.751
@@ -1038,8 +783,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.05
+    - null
+    - null
     - null
     - null
     - null
@@ -1081,8 +830,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.025
+    - null
+    - null
     - null
     - null
     - null
@@ -1123,8 +876,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.046
+    - null
+    - null
     - null
     - null
     - null
@@ -1154,7 +911,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.735
@@ -1166,8 +923,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0639
+    - null
+    - null
     - null
     - null
     - null
@@ -1196,7 +957,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2023
     uses_external_data: null
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.735
@@ -1208,8 +969,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0639
+    - null
+    - null
     - null
     - null
     - null
@@ -1238,7 +1003,7 @@ variants:
     published_conference_slug: icml
     published_venue: ICML 2021
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7333
@@ -1250,8 +1015,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0796
+    - null
+    - null
     - null
     - null
     - null
@@ -1292,8 +1061,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0087
+    - null
+    - null
     - null
     - null
     - null
@@ -1335,8 +1108,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.008
+    - null
+    - null
     - null
     - null
     - null
@@ -1365,7 +1142,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.729
@@ -1377,8 +1154,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0755
+    - null
+    - null
     - null
     - null
     - null
@@ -1419,8 +1200,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0579
+    - null
+    - null
     - null
     - null
     - null
@@ -1461,8 +1246,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.04
+    - null
+    - null
     - null
     - null
     - null
@@ -1504,7 +1293,11 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -1546,8 +1339,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0585
+    - null
+    - null
     - null
     - null
     - null
@@ -1562,9 +1359,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1588,8 +1385,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0245
+    - null
+    - null
     - null
     - null
     - null
@@ -1631,7 +1432,11 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -1673,8 +1478,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.062
+    - null
+    - null
     - null
     - null
     - null
@@ -1715,8 +1524,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0558
+    - null
+    - null
     - null
     - null
     - null
@@ -1731,9 +1544,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1757,8 +1570,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0136
+    - null
+    - null
     - null
     - null
     - null
@@ -1799,8 +1616,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.04944
+    - null
+    - null
     - null
     - null
     - null
@@ -1841,8 +1662,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.01
+    - null
+    - null
     - null
     - null
     - null
@@ -1883,8 +1708,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.032
+    - null
+    - null
     - null
     - null
     - null
@@ -1926,7 +1755,11 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -1968,8 +1801,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.05241
+    - null
+    - null
     - null
     - null
     - null
@@ -2010,8 +1847,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0147
+    - null
+    - null
     - null
     - null
     - null
@@ -2052,8 +1893,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0745
+    - null
+    - null
     - null
     - null
     - null
@@ -2095,7 +1940,11 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -2138,7 +1987,11 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -2180,8 +2033,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.057
+    - null
+    - null
     - null
     - null
     - null
@@ -2222,8 +2079,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0792
+    - null
+    - null
     - null
     - null
     - null
@@ -2264,8 +2125,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0687
+    - null
+    - null
     - null
     - null
     - null
@@ -2306,8 +2171,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.061
+    - null
+    - null
     - null
     - null
     - null
@@ -2348,8 +2217,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.053
+    - null
+    - null
     - null
     - null
     - null
@@ -2390,8 +2263,12 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.0374
+    - null
+    - null
     - null
     - null
     - null
@@ -2432,6 +2309,8 @@ variants:
     - null
     - null
     - null
+    - null
+    - null
     metric_stds:
     - 0.043
     - null
@@ -2442,27 +2321,363 @@ variants:
     - null
     - null
     - null
-  row_count: 452
+    - null
+    - null
+  - model: S-Mixup
+    model_plain: S-Mixup
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2406.01899'
+    title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
+    date: Jun 4, 2024
+    date_iso: '2024-06-04'
+    date_display: Jun 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6685
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0704
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GCN^2
+    model_plain: GCN^2
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.06102'
+    title: Towards Better Graph Representation Learning with Parameterized Decomposition
+      & Filtering
+    date: May 10, 2023
+    date_iso: '2023-05-10'
+    date_display: May 2023
+    codebase_url: https://github.com/qslim/PDF
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6684
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0179
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2012.08734'
+    title: Hierarchical Graph Capsule Network
+    date: Dec 16, 2020
+    date_iso: '2020-12-16'
+    date_display: Dec 2020
+    codebase_url: https://github.com/uta-smile/HGCN
+    published_conference: AAAI 2020
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2020
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.665
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0691
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GCN + 2FC
+    model_plain: GCN + 2FC
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2008.12578'
+    title: Graph Convolutional Neural Networks with Node Transition Probability-based
+      Message Passing and DropNode Regularization
+    date: Aug 28, 2020
+    date_iso: '2020-08-28'
+    date_display: Aug 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6645
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: HGK-SP
+    model_plain: HGK-SP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '1906.01277'
+    title: Wasserstein Weisfeiler-Lehman Graph Kernels
+    date: Jun 4, 2019
+    date_iso: '2019-06-04'
+    date_display: Jun 2019
+    codebase_url: https://github.com/BorgwardtLab/WWL
+    published_conference: NeurIPS 2019
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2019
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6636
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0037
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: FCN (2FC)
+    model_plain: FCN (2FC)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2008.12578'
+    title: Graph Convolutional Neural Networks with Node Transition Probability-based
+      Message Passing and DropNode Regularization
+    date: Aug 28, 2020
+    date_iso: '2020-08-28'
+    date_display: Aug 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6617
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: PGCN_g+2FC
+    model_plain: PGCN_g+2FC
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2008.12578'
+    title: Graph Convolutional Neural Networks with Node Transition Probability-based
+      Message Passing and DropNode Regularization
+    date: Aug 28, 2020
+    date_iso: '2020-08-28'
+    date_display: Aug 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6617
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 455
   rows_json: /data/datasets/enzymes/10-fold-cv-rows.json
   chart_json: /data/datasets/enzymes/10-fold-cv-chart.json
   arch_counts:
-    gnn: 250
-    hybrid: 63
+    gnn: 268
+    hybrid: 64
     graph_transformer: 3
     llm: 1
     walk: 4
     traditional: 104
   metric_counts:
-  - 408
+  - 411
   - 10
   - 31
   - 1
   - 1
+  - 5
+  - 5
   - 2
   - 2
   - 3
   - 2
   milestones: &id001
+  - value: 0.2155
+    std: null
+    model: deepwl
+    arxiv_id: '1511.02136'
+    title: Diffusion-Convolutional Neural Networks
+    date: '2015-11-06'
   - value: 0.599
     std: 0.011
     model: WL-OA
@@ -2481,6 +2696,12 @@ variants:
     arxiv_id: '1805.08090'
     title: Graph Capsule Convolutional Neural Networks
     date: '2018-05-21'
+  - value: 0.65
+    std: null
+    model: EigenPooling-1
+    arxiv_id: '1904.13107'
+    title: Graph Convolutional Networks with EigenPooling
+    date: '2019-04-30'
   - value: 0.7325
     std: 0.0087
     model: WWL
@@ -2499,13 +2720,6 @@ variants:
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: '2022-10-12'
-  - value: 0.892
-    std: null
-    model: MSA-AUD
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: '2023-12-18'
   milestones_by_metric:
     Accuracy: *id001
     AUC:
@@ -2544,6 +2758,20 @@ variants:
       arxiv_id: '2406.04843'
       title: Variational Flow Matching for Graph Generation
       date: '2024-06-07'
+    F (macro):
+    - value: 0.1431
+      std: null
+      model: deepwl
+      arxiv_id: '1511.02136'
+      title: Diffusion-Convolutional Neural Networks
+      date: '2015-11-06'
+    F (micro):
+    - value: 0.2155
+      std: null
+      model: deepwl
+      arxiv_id: '1511.02136'
+      title: Diffusion-Convolutional Neural Networks
+      date: '2015-11-06'
     Joint Node Label & Degree:
     - value: 0.249
       std: null

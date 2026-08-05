@@ -64,8 +64,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - VQ-GNN
-mrr: 0.0188
-adjusted_mrr: 0.0125
+mrr: 0.0171
+adjusted_mrr: 0.0114
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -89,9 +89,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: gamlp(jk)
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.9982
     std: 0.01
     metric: F1
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: graphcon-gcn
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.996
     std: null
     metric: F1
@@ -155,34 +155,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
-    model_key: graphsaint
-    model_plain: Whole Dataset
-    value: 0.995
-    std: null
+  - model: Cluster-GCN
+    model_key: gcnii
+    model_plain: Cluster-GCN
+    value: 0.9956
+    std: 0.02
     metric: F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2007.02133'
+    title: Simple and Deep Graph Convolutional Networks
+    date: Jul 4, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/DropEdge/DropEdge
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.995
-    sort_std: null
+    sort_value: 0.9956
+    sort_std: 0.02
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -221,11 +221,10 @@ results:
     published_conference: NeurIPS 2021
     at_pub_value: 0.9936
     at_pub_std: null
-    at_pub_source_arxiv: '1905.07953'
-    at_pub_source_title: 'Cluster-GCN: An Efficient Algorithm for Training Deep and
-      Large Graph Convolutional Networks'
-    at_pub_source_date_iso: '2019-05-20'
-    at_pub_source_date_label: KDD 2019
+    at_pub_source_arxiv: '1901.00596'
+    at_pub_source_title: A Comprehensive Survey on Graph Neural Networks
+    at_pub_source_date_iso: '2019-01-01'
+    at_pub_source_date_label: '2019'
     value_gap_source_date_iso: '2022-02-04'
     value_gap_source_date_label: ICML 2022
     gap_vs_at_pub: 0.08850000000000002
@@ -247,16 +246,84 @@ results:
     sort_value: 0.994
     sort_std: null
     global_rank: 8
-    paper_rank: 82
-    rank_delta: 74
-    rank_delta_abs: 74
+    paper_rank: 83
+    rank_delta: 75
+    rank_delta_abs: 75
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Cluster-GCN: An Efficient Algorithm for Training Deep
-      and Large Graph Convolutional Networks'
-    comparison_source_arxiv: '1905.07953'
+    comparison_source_title: A Comprehensive Survey on Graph Neural Networks
+    comparison_source_arxiv: '1901.00596'
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAINT-RW
+    model_key: graphsaint-rw
+    model_plain: GraphSAINT-RW
+    value: 0.9612
+    std: 0.0042
+    paper_value: 0.9612
+    paper_std: 0.0042
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Inductive node classification task as specified in the text and
+      table caption.
+    date: Oct 27, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-27'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.981
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '1907.04931'
+    at_pub_source_title: 'GraphSAINT: mpling Based ductive Learning Me hod'
+    at_pub_source_date_iso: '2019-07-10'
+    at_pub_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2021-03-10'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.01979999999999993
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.981
+    true_std: 0.004
+    value_gap_source_arxiv: '2103.05872'
+    value_gap_source_title: 'Sampling methods for efficient training of graph convolutional
+      networks: A survey'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.01979999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.981
+    sort_std: 0.004
+    global_rank: 27
+    paper_rank: 65
+    rank_delta: 38
+    rank_delta_abs: 38
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GraphSAINT: mpling Based ductive Learning Me hod'
+    comparison_source_arxiv: '1907.04931'
+    is_best: false
     is_std_outlier: false
   - model: VQ-GNN
     model_key: vq-gnn
@@ -316,8 +383,8 @@ results:
     value_note: ''
     sort_value: 0.9737
     sort_std: 0.0033
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -385,8 +452,8 @@ results:
     value_note: ''
     sort_value: 0.9722
     sort_std: 0.0035
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -394,75 +461,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAINT-RW
-    model_key: graphsaint-rw
-    model_plain: GraphSAINT-RW
-    value: 0.9612
-    std: 0.0042
-    paper_value: 0.9612
-    paper_std: 0.0042
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Inductive node classification task as specified in the text and
-      table caption.
-    date: Oct 27, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-27'
-    published_venue: NeurIPS 2021
-    published_conference: NeurIPS 2021
-    at_pub_value: 0.981
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '1907.04931'
-    at_pub_source_title: 'GraphSAINT: mpling Based ductive Learning Me hod'
-    at_pub_source_date_iso: '2019-07-10'
-    at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2021-10-27'
-    value_gap_source_date_label: NeurIPS 2021
-    gap_vs_at_pub: 0.01979999999999993
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9612
-    true_std: 0.0042
-    value_gap_source_arxiv: '2110.14363'
-    value_gap_source_title: 'VQ-GNN: A Universal Framework to Scale-up Graph Neural
-      Networks using Vector Quantization'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9612
-    sort_std: 0.0042
-    global_rank: 64
-    paper_rank: 64
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GraphSAINT: mpling Based ductive Learning Me hod'
-    comparison_source_arxiv: '1907.04931'
     is_best: false
     is_std_outlier: false
   - model: NS-SAGE
@@ -523,8 +521,8 @@ results:
     value_note: ''
     sort_value: 0.9407
     sort_std: 0.0025
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -613,34 +611,34 @@ results:
     is_best: false
     is_std_outlier: false
   - model: SIGN
-    model_key: sign
+    model_key: gidn
     model_plain: SIGN
-    value: 0.6664
-    std: 0.0064
+    value: 0.7096
+    std: 0.0055
     metric: Hits@50
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2409.17475'
-    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
-      Networks
-    date: Sep 26, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-26'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/tensor-gales/HeteLinkPred
+    arxiv_id: '2210.01301'
+    title: 'GIDN: A Lightweight Graph Inception Diffusion Network for High-efficient
+      Link Prediction'
+    date: Oct 4, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-04'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.6664
-    sort_std: 0.0064
+    sort_value: 0.7096
+    sort_std: 0.0055
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -703,8 +701,8 @@ results:
     value_note: ''
     sort_value: 0.481
     sort_std: 0.0081
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -771,8 +769,8 @@ results:
     value_note: ''
     sort_value: 0.4776
     sort_std: 0.0041
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -839,8 +837,8 @@ results:
     value_note: ''
     sort_value: 0.4673
     sort_std: 0.0164
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -907,8 +905,8 @@ results:
     value_note: ''
     sort_value: 0.4402
     sort_std: 0.0137
-    global_rank: 64
-    paper_rank: 68
+    global_rank: 79
+    paper_rank: 83
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -975,8 +973,8 @@ results:
     value_note: ''
     sort_value: 0.4368
     sort_std: 0.0169
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1020,5 +1018,6 @@ datasets_by_scope:
     - dataset: ogbl-collab
       dataset_slug: ogbl-collab
 single_proposed_model: VQ-GNN
+main_figure: /figures/2110.14363/main_figure.jpegoptim.jpg
 ---
 

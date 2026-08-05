@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GCN
-mrr: 0.1795
-adjusted_mrr: 0.1795
+mrr: 0.1788
+adjusted_mrr: 0.1788
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -62,9 +62,9 @@ results:
 - &id001
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -126,15 +126,15 @@ results:
     date_iso: '2022-11-29'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: 0.8803
-    at_pub_std: 0.0141
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.8785
+    at_pub_std: null
+    at_pub_source_arxiv: '2011.01623'
+    at_pub_source_title: Learning on Attribute-Missing Graphs
+    at_pub_source_date_iso: '2020-10-01'
+    at_pub_source_date_label: '2020'
     value_gap_source_date_iso: '2026-05-18'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.21829999999999994
+    gap_vs_at_pub: 0.21649999999999991
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -154,14 +154,14 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 520
-    rank_delta: 518
-    rank_delta_abs: 518
+    paper_rank: 516
+    rank_delta: 514
+    rank_delta_abs: 514
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_source_title: Learning on Attribute-Missing Graphs
+    comparison_source_arxiv: '2011.01623'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -223,9 +223,9 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 502
-    rank_delta: 499
-    rank_delta_abs: 499
+    paper_rank: 498
+    rank_delta: 495
+    rank_delta_abs: 495
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -291,10 +291,10 @@ results:
     value_note: ''
     sort_value: 0.8626
     sort_std: 0.0056
-    global_rank: 324
-    paper_rank: 520
-    rank_delta: 196
-    rank_delta_abs: 196
+    global_rank: 327
+    paper_rank: 516
+    rank_delta: 189
+    rank_delta_abs: 189
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -326,5 +326,6 @@ datasets_by_scope:
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
 single_proposed_model: GCN
+main_figure: /figures/2211.16494/main_figure.jpegoptim.jpg
 ---
 

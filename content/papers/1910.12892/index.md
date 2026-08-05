@@ -52,9 +52,42 @@ results:
 - &id001
   dataset: ZINC
   rows:
-  - model: Subgraphormer
+  - model: GPS
+    model_key: tigt
+    model_plain: GPS
+    value: 0.014
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: GRaM
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.014
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPS
     model_key: ppgn++
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.001
     metric: MAE
@@ -77,17 +110,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.02
     sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: subgraphormer
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.002
     metric: MAE
@@ -111,47 +144,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.02
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Subgraphormer
-    model_key: cin
-    model_plain: Subgraphormer
-    value: 0.021
-    std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2306.03561'
-    title: 'CIN++: Enhancing Topological Message Passing'
-    date: Jun 6, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-06'
-    venue: arXiv.org
-    codebase_url: https://github.com/twitter-research/cwn
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Without any use of feature augmentation such as positional
-      encoding, our model exhibits particularly strong performance
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.021
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: Lorentz
     model_key: lorentz
@@ -201,7 +200,7 @@ results:
     today_delta_significant: false
     sort_value: 0.024
     sort_std: 0.0002
-    global_rank: 9
+    global_rank: 12
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -263,7 +262,7 @@ results:
     today_delta_significant: false
     sort_value: 0.031
     sort_std: 0.0001
-    global_rank: 15
+    global_rank: 20
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -325,7 +324,7 @@ results:
     today_delta_significant: false
     sort_value: 0.032
     sort_std: 0.002
-    global_rank: 15
+    global_rank: 20
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -387,7 +386,7 @@ results:
     today_delta_significant: false
     sort_value: 0.033
     sort_std: 0.0
-    global_rank: 15
+    global_rank: 20
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -449,7 +448,7 @@ results:
     today_delta_significant: false
     sort_value: 0.04
     sort_std: 0.0003
-    global_rank: 16
+    global_rank: 26
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -511,7 +510,7 @@ results:
     today_delta_significant: false
     sort_value: 0.041
     sort_std: 0.0002
-    global_rank: 16
+    global_rank: 26
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -547,5 +546,6 @@ datasets_by_scope:
     datasets:
     - dataset: ZINC
       dataset_slug: zinc
+main_figure: /figures/1910.12892/main_figure.jpegoptim.jpg
 ---
 

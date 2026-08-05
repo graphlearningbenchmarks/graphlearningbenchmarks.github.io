@@ -13,7 +13,7 @@ stats:
   avg_nodes: 21111007.0
   avg_edges: null
   num_classes: 1
-result_count: 111
+result_count: 101
 best_model:
   model: LMSPS+LP+MS
   value: 0.5784
@@ -30,11 +30,6 @@ papers:
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
   date_iso: '2024-10-03'
   venue: TMLR 2024
-- arxiv_id: '2408.00295'
-  title: Contrastive Graph Representation Learning with Adversarial Cross-view Reconstruction
-    and Information Bottleneck
-  date_iso: '2024-08-01'
-  venue: ''
 - arxiv_id: '2312.02619'
   title: Rethinking and Simplifying Bootstrapped Graph Latents
   date_iso: '2023-12-05'
@@ -1625,18 +1620,18 @@ variants:
     - 0.0038
     - null
     - null
-  row_count: 111
+  row_count: 101
   rows_json: /data/datasets/ogbn-mag/standard-split-rows.json
   chart_json: /data/datasets/ogbn-mag/standard-split-chart.json
   arch_counts:
-    gnn: 76
-    hybrid: 19
+    gnn: 69
+    hybrid: 18
     graph_transformer: 5
     llm: 0
-    walk: 2
-    traditional: 8
+    walk: 1
+    traditional: 7
   metric_counts:
-  - 102
+  - 92
   - 9
   - 9
   milestones: &id001
@@ -1646,6 +1641,13 @@ variants:
     arxiv_id: '2011.09679'
     title: Scalable Graph Neural Networks for Heterogeneous Graphs
     date: '2020-11-19'
+  - value: 0.4969
+    std: 0.0022
+    model: GraphSAINT + metapath2vec
+    arxiv_id: '2105.08330'
+    title: 'Residual Network and Embedding Usage: New Tricks of Node Classification
+      with Graph Convolutional Networks'
+    date: '2021-05-18'
   - value: 0.559
     std: 0.0027
     model: NARS-GAMLP+RLU

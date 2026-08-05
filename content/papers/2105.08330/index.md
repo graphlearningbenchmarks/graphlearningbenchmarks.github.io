@@ -39,26 +39,24 @@ abstract: Graph Convolutional Networks (GCNs) and subsequent variants have been 
 codebase_url: https://github.com/ytchx1999/PyG-OGB-Tricks
 extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
 has_results: true
-paper_type: method
-proposed_models:
-- GCN
-- GCN_res
-mrr: 0.0385
-adjusted_mrr: 0.0128
-mrr_dataset_count: 1
+paper_type: dataset
+proposed_models: []
+mrr: null
+adjusted_mrr: null
+mrr_dataset_count: 0
 benchmark_categories:
 - OGB
 benchmark_coverage:
 - benchmark: OGB
   benchmark_slug: ogb
-  evaluated: 2
+  evaluated: 3
   total: 16
 task_categories:
 - node_classification
 experiment_scopes:
 - node-level
 results:
-- &id002
+- &id003
   dataset: ogbn-mag
   rows:
   - model: ALS (GraphSAINT)
@@ -177,14 +175,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: uses metapath2vec embeddings and FLAG augmentation
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbn-mag using standard OGB split
     date: May 18, 2021
     date_display: May 2021
     date_iso: '2021-05-18'
@@ -196,8 +194,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -206,17 +204,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4969
+    true_std: 0.0022
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4969
     sort_std: 0.0022
     global_rank: 33
+    paper_rank: 33
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -239,14 +243,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: zeng2019graphsaint
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbn-mag using standard OGB split
     date: May 18, 2021
     date_display: May 2021
     date_iso: '2021-05-18'
@@ -258,8 +262,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -268,17 +272,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4751
+    true_std: 0.0022
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4751
     sort_std: 0.0022
-    global_rank: 38
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -296,9 +306,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -330,9 +340,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -363,9 +373,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -414,14 +424,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: mixed
+    feature_source_evidence: uses node2vec embeddings as part of the model configuration
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbn-products using standard split
     date: May 18, 2021
     date_display: May 2021
     date_iso: '2021-05-18'
@@ -433,8 +443,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -443,17 +453,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8154
+    true_std: 0.005
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8154
     sort_std: 0.005
-    global_rank: 103
+    global_rank: 104
+    paper_rank: 104
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -476,14 +492,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbn-products using standard split
     date: May 18, 2021
     date_display: May 2021
     date_iso: '2021-05-18'
@@ -495,8 +511,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -505,17 +521,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8041
+    true_std: 0.0022
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8041
     sort_std: 0.0022
-    global_rank: 128
+    global_rank: 133
+    paper_rank: 133
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -538,14 +560,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbn-products using standard split
     date: May 18, 2021
     date_display: May 2021
     date_iso: '2021-05-18'
@@ -557,8 +579,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -567,17 +589,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7936
+    true_std: 0.0057
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7936
     sort_std: 0.0057
-    global_rank: 158
+    global_rank: 169
+    paper_rank: 169
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -600,14 +628,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbn-products using standard split
     date: May 18, 2021
     date_display: May 2021
     date_iso: '2021-05-18'
@@ -619,8 +647,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -629,17 +657,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.787
+    true_std: 0.0036
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.787
     sort_std: 0.0036
-    global_rank: 192
+    global_rank: 204
+    paper_rank: 204
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -662,14 +696,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: hamilton2017inductive
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on ogbn-products using standard split
     date: May 18, 2021
     date_display: May 2021
     date_iso: '2021-05-18'
@@ -681,8 +715,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -691,17 +725,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.785
+    true_std: 0.0014
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.785
     sort_std: 0.0014
-    global_rank: 198
+    global_rank: 212
+    paper_rank: 212
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -716,11 +756,332 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
+- &id002
+  dataset: ogbn-proteins
+  rows:
+  - model: RevGNN
+    model_key: ld
+    model_plain: RevGNN
+    value: 0.8942
+    std: 0.0007
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2309.14907'
+    title: Label Deconvolution for Node Representation Learning on Large-scale Attributed
+      Graphs against Learning Bias
+    date: Sep 26, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-26'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8942
+    sort_std: 0.0007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: RevGNN
+    model_key: x_wo/ld
+    model_plain: RevGNN
+    value: 0.8915
+    std: 0.0012
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2309.14907'
+    title: Label Deconvolution for Node Representation Learning on Large-scale Attributed
+      Graphs against Learning Bias
+    date: Sep 26, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-26'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8915
+    sort_std: 0.0012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: RevGNN
+    model_key: mog
+    model_plain: RevGNN
+    value: 0.8904
+    std: 0.0072
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.14260'
+    title: Graph Sparsification via Mixture of Graphs
+    date: May 23, 2024
+    date_display: May 2024
+    date_iso: '2024-05-23'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/yanweiyue/MoG
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8904
+    sort_std: 0.0072
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GEN + FLAG + node2vec
+    model_key: gen + flag + node2vec
+    model_plain: GEN + FLAG + node2vec
+    value: 0.8251
+    std: 0.0043
+    paper_value: 0.8251
+    paper_std: 0.0043
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 1
+    input_feature_source: mixed
+    feature_source_evidence: GEN + FLAG + node2vec combines adversarial augmentation
+      with node2vec embeddings
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test ROC-AUC on ogbn-proteins standard split
+    date: May 18, 2021
+    date_display: May 2021
+    date_iso: '2021-05-18'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8251
+    true_std: 0.0043
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8251
+    sort_std: 0.0043
+    global_rank: 19
+    paper_rank: 19
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GEN
+    model_key: gen
+    model_plain: GEN
+    value: 0.813
+    std: 0.0065
+    paper_value: 0.813
+    paper_std: 0.0065
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: li2020deepergcn, li2019deepgcns
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test ROC-AUC on ogbn-proteins standard split
+    date: May 18, 2021
+    date_display: May 2021
+    date_iso: '2021-05-18'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7936
+    at_pub_std: 0.0086
+    at_pub_source_arxiv: '2006.07107'
+    at_pub_source_title: Understanding and Resolving Performance Degradation in Deep
+      Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-06-12'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.019399999999999973
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.813
+    true_std: 0.0065
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.813
+    sort_std: 0.0065
+    global_rank: 22
+    paper_rank: 22
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Understanding and Resolving Performance Degradation in
+      Deep Graph Convolutional Networks
+    comparison_source_arxiv: '2006.07107'
+    is_best: false
+    is_std_outlier: false
+  - model: GEN + FLAG
+    model_key: gen + flag
+    model_plain: GEN + FLAG
+    value: 0.8129
+    std: 0.0067
+    paper_value: 0.8129
+    paper_std: 0.0067
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: FLAG is a large-scale adversarial augmentation on graphs
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test ROC-AUC on ogbn-proteins standard split
+    date: May 18, 2021
+    date_display: May 2021
+    date_iso: '2021-05-18'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-18'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8129
+    true_std: 0.0067
+    value_gap_source_arxiv: '2105.08330'
+    value_gap_source_title: 'Residual Network and Embedding Usage: New Tricks of Node
+      Classification with Graph Convolutional Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8129
+    sort_std: 0.0067
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: ROC-AUC
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: ROC-AUC
+  paper_metrics:
+  - ROC-AUC
+  metric: ROC-AUC
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
 results_grouped:
 - benchmark: OGB
   datasets:
   - *id001
   - *id002
+  - *id003
 datasets_by_scope:
 - scope: node-level
   label: Node-level
@@ -730,7 +1091,10 @@ datasets_by_scope:
     datasets:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
+    - dataset: ogbn-proteins
+      dataset_slug: ogbn-proteins
     - dataset: ogbn-mag
       dataset_slug: ogbn-mag
+main_figure: /figures/2105.08330/main_figure.jpegoptim.jpg
 ---
 

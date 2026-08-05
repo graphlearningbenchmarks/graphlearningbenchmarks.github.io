@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GeoRecon
-mrr: 0.0303
-adjusted_mrr: 0.0101
+mrr: 0.0256
+adjusted_mrr: 0.0085
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -224,10 +224,10 @@ results:
     value_note: ''
     sort_value: 0.0529
     sort_std: null
-    global_rank: 28
-    paper_rank: 35
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 33
+    paper_rank: 41
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -295,8 +295,8 @@ results:
     value_note: ''
     sort_value: 0.05755
     sort_std: null
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -329,5 +329,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: GeoRecon
+main_figure: /figures/2506.13174/main_figure.jpegoptim.jpg
 ---
 

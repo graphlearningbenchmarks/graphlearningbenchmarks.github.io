@@ -64,8 +64,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GPH^2
-mrr: 0.0385
-adjusted_mrr: 0.0128
+mrr: 0.037
+adjusted_mrr: 0.0123
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -82,9 +82,9 @@ results:
 - &id001
   dataset: Freebase
   rows:
-  - model: GPH^2
+  - model: SlotGAT
     model_key: gc-hgnn
-    model_plain: GPH^2
+    model_plain: SlotGAT
     value: 0.6247
     std: 0.0042
     metric: Macro-F1
@@ -172,9 +172,9 @@ results:
     sort_value: 0.6082
     sort_std: 0.0051
     global_rank: 2
-    paper_rank: 30
-    rank_delta: 28
-    rank_delta_abs: 28
+    paper_rank: 31
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -239,9 +239,9 @@ results:
     sort_value: 0.5987
     sort_std: 0.0033
     global_rank: 3
-    paper_rank: 30
-    rank_delta: 27
-    rank_delta_abs: 27
+    paper_rank: 31
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -306,9 +306,9 @@ results:
     sort_value: 0.5599
     sort_std: 0.0059
     global_rank: 11
-    paper_rank: 31
-    rank_delta: 20
-    rank_delta_abs: 20
+    paper_rank: 32
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -373,8 +373,8 @@ results:
     value_note: ''
     sort_value: 0.4478
     sort_std: 0.0547
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -441,8 +441,8 @@ results:
     value_note: ''
     sort_value: 0.4078
     sort_std: 0.0323
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -509,8 +509,8 @@ results:
     value_note: ''
     sort_value: 0.3139
     sort_std: 0.078
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -577,8 +577,8 @@ results:
     value_note: ''
     sort_value: 0.2903
     sort_std: 0.0654
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -611,5 +611,6 @@ datasets_by_scope:
     - dataset: Freebase
       dataset_slug: freebase
 single_proposed_model: GPH^2
+main_figure: /figures/2602.13075/main_figure.jpegoptim.jpg
 ---
 

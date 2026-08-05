@@ -55,8 +55,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - LGCN
-mrr: 0.0026
-adjusted_mrr: 0.0026
+mrr: 0.0022
+adjusted_mrr: 0.0022
 mrr_dataset_count: 3
 benchmark_categories:
 - Other Graph Benchmarks
@@ -64,7 +64,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -651,5 +651,6 @@ datasets_by_scope:
     - dataset: Amazon2M
       dataset_slug: amazon2m
 single_proposed_model: LGCN
+main_figure: /figures/2104.07477/main_figure.jpegoptim.jpg
 ---
 

@@ -12,7 +12,7 @@ stats:
   avg_nodes: 61859140.0
   avg_edges: null
   num_classes: 47
-result_count: 605
+result_count: 598
 best_model:
   model: Jacobi
   value: 0.8968
@@ -53,6 +53,10 @@ papers:
   title: Quantizing Text-attributed Graphs for Semantic-Structural Integration
   date_iso: '2025-07-20'
   venue: KDD 2025
+- arxiv_id: '2507.14570'
+  title: 'LPS-GNN: Deploying Graph Neural Networks on Graphs with 100-Billion Edges'
+  date_iso: '2025-07-19'
+  venue: ''
 - arxiv_id: '2507.14484'
   title: 'ReDiSC: A Reparameterized Masked Diffusion Model for Scalable Node Classification
     with Structured Predictions'
@@ -130,11 +134,6 @@ papers:
     Networks?
   date_iso: '2024-08-16'
   venue: KDD 2024
-- arxiv_id: '2408.00295'
-  title: Contrastive Graph Representation Learning with Adversarial Cross-view Reconstruction
-    and Information Bottleneck
-  date_iso: '2024-08-01'
-  venue: ''
 - arxiv_id: '2407.14996'
   title: 'All Against Some: Efficient Integration of Large Language Models for Message
     Passing in Graph Neural Networks'
@@ -160,6 +159,10 @@ papers:
   title: Fully-inductive Node Classification on Arbitrary Graphs
   date_iso: '2024-05-30'
   venue: ICLR 2024
+- arxiv_id: '2405.19121'
+  title: Spatio-Spectral Graph Neural Networks
+  date_iso: '2024-05-29'
+  venue: NeurIPS 2024
 - arxiv_id: '2404.17099'
   title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
     with FROND
@@ -170,9 +173,9 @@ papers:
     Function Slices Approach'
   date_iso: '2024-04-15'
   venue: WWW 2024
-- arxiv_id: '2404.04559'
-  title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-  date_iso: '2024-04-06'
+- arxiv_id: '2403.14951'
+  title: Simple Graph Condensation
+  date_iso: '2024-03-22'
   venue: ''
 - arxiv_id: '2403.13268'
   title: 'Unifews: You Need Fewer Operations for Efficient Graph Neural Networks'
@@ -207,10 +210,10 @@ papers:
   title: Disentangled Condensation for Large-scale Graphs
   date_iso: '2024-01-18'
   venue: WWW 2024
-- arxiv_id: '2312.04737'
-  title: Efficient End-to-end Language Model Fine-tuning on Graphs
-  date_iso: '2023-12-07'
-  venue: KDD 2023
+- arxiv_id: '2312.11109'
+  title: Graph Transformers for Large Graphs
+  date_iso: '2023-12-18'
+  venue: ''
 - arxiv_id: '2312.02619'
   title: Rethinking and Simplifying Bootstrapped Graph Latents
   date_iso: '2023-12-05'
@@ -267,6 +270,10 @@ papers:
     and Simpler Choice towards Powerful Attention'
   date_iso: '2023-05-22'
   venue: IJCAI 2023
+- arxiv_id: '2305.02866'
+  title: Hierarchical Transformer for Scalable Graph Learning
+  date_iso: '2023-05-04'
+  venue: IJCAI 2023
 - arxiv_id: '2304.10668'
   title: 'Train Your Own GNN Teacher: Graph-Aware Distillation on Textual Graphs'
   date_iso: '2023-04-20'
@@ -293,6 +300,10 @@ papers:
   title: 'TuneUp: A Simple Improved Training Strategy for Graph Neural Networks'
   date_iso: '2022-10-26'
   venue: ''
+- arxiv_id: '2210.07494'
+  title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and Rethinking'
+  date_iso: '2022-10-14'
+  venue: NeurIPS 2022
 - arxiv_id: '2210.03930'
   title: Hierarchical Graph Transformer with Adaptive Node Sampling
   date_iso: '2022-10-08'
@@ -373,11 +384,6 @@ papers:
 - arxiv_id: '2108.00955'
   title: Evaluating Deep Graph Neural Networks
   date_iso: '2021-08-02'
-  venue: ''
-- arxiv_id: '2106.02466'
-  title: 'Graph Barlow Twins: A self-supervised representation learning framework
-    for graphs'
-  date_iso: '2021-06-04'
   venue: ''
 - arxiv_id: '2105.08330'
   title: 'Residual Network and Embedding Usage: New Tricks of Node Classification
@@ -883,6 +889,43 @@ variants:
     - null
     metric_stds:
     - 0.0005
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: EnGCN
+    model_plain: EnGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_iso: '2022-10-14'
+    date_display: Oct 2022
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8799
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0004
     - null
     - null
     - null
@@ -1396,37 +1439,38 @@ variants:
     - null
     - null
     - null
-  - model: LEADING (DeBERTa)
-    model_plain: LEADING (DeBERTa)
-    is_baseline: false
+  - model: GIANT-XRT+SAGN+MCR+C&S
+    model_plain: GIANT-XRT+SAGN+MCR+C&S
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.04737'
-    title: Efficient End-to-end Language Model Fine-tuning on Graphs
-    date: Dec 7, 2023
-    date_iso: '2023-12-07'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: KDD 2023
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2023
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_iso: '2022-10-14'
+    date_display: Oct 2022
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.865
+    - 0.8673
     - null
     - null
     - null
     - null
     - null
     metric_stds:
-    - null
+    - 0.0008
     - null
     - null
     - null
@@ -2086,74 +2130,38 @@ variants:
     - null
     - null
     - null
-  - model: GLEM (DeBERTa)
-    model_plain: GLEM (DeBERTa)
+  - model: C&S
+    model_plain: C&S
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.04737'
-    title: Efficient End-to-end Language Model Fine-tuning on Graphs
-    date: Dec 7, 2023
-    date_iso: '2023-12-07'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: KDD 2023
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2023
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.851
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: CGRL
-    model_plain: CGRL
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2408.00295'
-    title: Contrastive Graph Representation Learning with Adversarial Cross-view Reconstruction
-      and Information Bottleneck
-    date: Aug 1, 2024
-    date_iso: '2024-08-01'
-    date_display: Aug 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_iso: '2022-10-14'
+    date_display: Oct 2022
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.851
+    - 0.8511
     - null
     - null
     - null
     - null
     - null
     metric_stds:
-    - 0.003
+    - 0.0007
     - null
     - null
     - null
@@ -2268,18 +2276,18 @@ variants:
     - null
     - null
     - null
-  row_count: 605
+  row_count: 598
   rows_json: /data/datasets/ogbn-products/standard-split-rows.json
   chart_json: /data/datasets/ogbn-products/standard-split-chart.json
   arch_counts:
-    gnn: 337
-    hybrid: 88
-    graph_transformer: 26
-    llm: 57
-    walk: 5
-    traditional: 72
+    gnn: 332
+    hybrid: 87
+    graph_transformer: 30
+    llm: 53
+    walk: 3
+    traditional: 71
   metric_counts:
-  - 559
+  - 552
   - 11
   - 12
   - 12
@@ -2318,6 +2326,13 @@ variants:
     arxiv_id: '2210.14709'
     title: Learning on Large-scale Text-attributed Graphs via Variational Inference
     date: '2022-10-01'
+  - value: 0.8799
+    std: 0.0004
+    model: EnGCN
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: '2022-10-14'
   - value: 0.8834
     std: null
     model: GOFA-F

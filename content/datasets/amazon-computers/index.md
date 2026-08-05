@@ -8,7 +8,7 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html
 stats: null
-result_count: 867
+result_count: 848
 best_model:
   model: GraphTARIF
   value: 0.9461
@@ -107,6 +107,11 @@ papers:
   title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
   date_iso: '2025-05-21'
   venue: ''
+- arxiv_id: '2505.15845'
+  title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+    Learning Models'
+  date_iso: '2025-05-19'
+  venue: ''
 - arxiv_id: '2505.10307'
   title: Negative Metric Learning for Graphs
   date_iso: '2025-05-15'
@@ -196,11 +201,6 @@ papers:
   title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised Learning
   date_iso: '2024-08-09'
   venue: ''
-- arxiv_id: '2408.00295'
-  title: Contrastive Graph Representation Learning with Adversarial Cross-view Reconstruction
-    and Information Bottleneck
-  date_iso: '2024-08-01'
-  venue: ''
 - arxiv_id: '2408.00165'
   title: Non-convolutional Graph Neural Networks
   date_iso: '2024-07-31'
@@ -279,6 +279,10 @@ papers:
 - arxiv_id: '2402.15270'
   title: Smoothed Graph Contrastive Learning via Seamless Proximity Integration
   date_iso: '2024-02-23'
+  venue: ''
+- arxiv_id: '2402.10468'
+  title: Adversarial Curriculum Graph Contrastive Learning with Pair-wise Augmentation
+  date_iso: '2024-02-16'
   venue: ''
 - arxiv_id: '2402.09711'
   title: Node Duplication Improves Cold-start Link Prediction
@@ -443,10 +447,6 @@ papers:
   title: Relational Self-Supervised Learning on Graphs
   date_iso: '2022-08-21'
   venue: ''
-- arxiv_id: '2208.06956'
-  title: 'ArieL: Adversarial Graph Contrastive Learning'
-  date_iso: '2022-08-15'
-  venue: ''
 - arxiv_id: '2206.12933'
   title: Wiener Graph Deconvolutional Network Improves Graph Self-Supervised Learning
   date_iso: '2022-06-26'
@@ -486,10 +486,6 @@ papers:
   title: Graph Masked Autoencoders with Transformers
   date_iso: '2022-02-17'
   venue: ''
-- arxiv_id: '2202.08057'
-  title: Understanding and Improving Graph Injection Attack by Promoting Unnoticeability
-  date_iso: '2022-02-16'
-  venue: ICLR 2022
 - arxiv_id: '2201.12843'
   title: Graph Representation Learning via Aggregation Enhancement
   date_iso: '2022-01-30'
@@ -565,10 +561,6 @@ papers:
 - arxiv_id: '2012.03476'
   title: 'NCGNN: Node-Level Capsule Graph Neural Network for Semisupervised Classification'
   date_iso: '2020-12-07'
-  venue: ''
-- arxiv_id: '2011.10988'
-  title: Adaptive Stacked Graph Filter
-  date_iso: '2020-11-22'
   venue: ''
 - arxiv_id: '2010.14945'
   title: Graph Contrastive Learning with Adaptive Augmentation
@@ -1030,44 +1022,6 @@ variants:
     - null
     metric_stds:
     - 0.0018
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Clean
-    model_plain: Clean
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2202.08057'
-    title: Understanding and Improving Graph Injection Attack by Promoting Unnoticeability
-    date: Feb 16, 2022
-    date_iso: '2022-02-16'
-    date_display: Feb 2022
-    codebase_url: https://github.com/LFhase/GIA-HAO
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9317
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
     - null
@@ -1763,44 +1717,6 @@ variants:
     - null
     - null
     - null
-  - model: SGF
-    model_plain: SGF
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2011.10988'
-    title: Adaptive Stacked Graph Filter
-    date: Nov 22, 2020
-    date_iso: '2020-11-22'
-    date_display: Nov 2020
-    codebase_url: https://github.com/gear/sgf
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9215
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0041
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: WaveNet
     model_plain: WaveNet
     is_baseline: true
@@ -2339,6 +2255,45 @@ variants:
     - null
     - null
     - null
+  - model: NAGphormer-LGTL
+    model_plain: NAGphormer-LGTL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9178
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: AdNGCL
     model_plain: AdNGCL
     is_baseline: false
@@ -2570,18 +2525,56 @@ variants:
     - null
     - null
     - null
-  row_count: 867
+  - model: DEFT
+    model_plain: DEFT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.13806'
+    title: A General Graph Spectral Wavelet Convolution via Chebyshev Order Decomposition
+    date: May 22, 2024
+    date_iso: '2024-05-22'
+    date_display: May 2024
+    codebase_url: https://github.com/liun-online/WaveGC
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9163
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0052
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 848
   rows_json: /data/datasets/amazon-computers/standard-split-rows.json
   chart_json: /data/datasets/amazon-computers/standard-split-chart.json
   arch_counts:
-    gnn: 570
-    hybrid: 136
-    graph_transformer: 42
+    gnn: 566
+    hybrid: 135
+    graph_transformer: 44
     llm: 23
     walk: 12
-    traditional: 53
+    traditional: 45
   metric_counts:
-  - 805
+  - 786
   - 18
   - 7
   - 12
@@ -2608,12 +2601,6 @@ variants:
     title: 'Designing the Topology of Graph Neural Networks: A Novel Feature Fusion
       Perspective'
     date: '2021-12-29'
-  - value: 0.9317
-    std: null
-    model: Clean
-    arxiv_id: '2202.08057'
-    title: Understanding and Improving Graph Injection Attack by Promoting Unnoticeability
-    date: '2022-02-16'
   - value: 0.9368
     std: 0.0021
     model: Polynormer-r

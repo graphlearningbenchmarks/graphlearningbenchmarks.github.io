@@ -227,7 +227,7 @@ results:
     today_delta_significant: false
     sort_value: 0.044
     sort_std: null
-    global_rank: 22
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -289,7 +289,7 @@ results:
     today_delta_significant: false
     sort_value: 0.058
     sort_std: null
-    global_rank: 34
+    global_rank: 40
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -339,8 +339,8 @@ results:
     at_pub_source_title: Directional Message Passing for Molecular Graphs
     at_pub_source_date_iso: '2020-03-06'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.0050000000000000044
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -351,16 +351,16 @@ results:
     today_delta_significant: true
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.0050000000000000044
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -428,8 +428,8 @@ results:
     value_note: ''
     sort_value: 0.07
     sort_std: null
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -477,8 +477,8 @@ results:
       Dipole Moments and Partial Charges'
     at_pub_source_date_iso: '2019-02-22'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.09099999999999998
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -489,19 +489,18 @@ results:
     today_delta_significant: true
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: 0.060999999999999985
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 46
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 46
+    paper_rank: 65
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -568,10 +567,10 @@ results:
     value_note: ''
     sort_value: 0.23
     sort_std: null
-    global_rank: 52
-    paper_rank: 32
-    rank_delta: -20
-    rank_delta_abs: 20
+    global_rank: 72
+    paper_rank: 38
+    rank_delta: -34
+    rank_delta_abs: 34
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: behind

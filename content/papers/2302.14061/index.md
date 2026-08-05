@@ -81,9 +81,9 @@ results:
 - &id002
   dataset: ACM
   rows:
-  - model: RF-GCN
+  - model: AM-GCN
     model_key: sync ssl
-    model_plain: RF-GCN
+    model_plain: AM-GCN
     value: 0.9274
     std: 0.0004
     metric: F1
@@ -115,9 +115,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RF-GCN
+  - model: AM-GCN
     model_key: idcrn
-    model_plain: RF-GCN
+    model_plain: AM-GCN
     value: 0.926
     std: 0.0008
     metric: F1
@@ -149,9 +149,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: RF-GCN
+  - model: AM-GCN
     model_key: agc-drr
-    model_plain: RF-GCN
+    model_plain: AM-GCN
     value: 0.9255
     std: 0.0009
     metric: F1
@@ -231,7 +231,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6384
     sort_std: 0.0078
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -293,7 +293,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6257
     sort_std: 0.0169
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -355,7 +355,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6245
     sort_std: 0.0141
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -417,7 +417,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6206
     sort_std: 0.0297
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -479,7 +479,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6192
     sort_std: 0.0189
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -541,7 +541,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6145
     sort_std: 0.0123
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -603,7 +603,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6116
     sort_std: 0.0211
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -665,7 +665,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6113
     sort_std: 0.0093
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -727,7 +727,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6102
     sort_std: 0.012
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -789,7 +789,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5975
     sort_std: 0.0053
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2792,5 +2792,6 @@ datasets_by_scope:
     - dataset: IMDB
       dataset_slug: imdb
 single_proposed_model: SNS
+main_figure: /figures/2302.14061/main_figure.jpegoptim.jpg
 ---
 

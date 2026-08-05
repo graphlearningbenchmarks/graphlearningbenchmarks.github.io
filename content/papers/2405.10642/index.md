@@ -643,5 +643,6 @@ datasets_by_scope:
     - dataset: QM7b
       dataset_slug: qm7b
 single_proposed_model: Hi-GMAE-F
+main_figure: /figures/2405.10642/main_figure.jpegoptim.jpg
 ---
 

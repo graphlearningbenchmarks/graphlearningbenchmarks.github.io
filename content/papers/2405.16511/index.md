@@ -222,7 +222,7 @@ results:
     today_delta_significant: false
     sort_value: 0.039
     sort_std: null
-    global_rank: 19
+    global_rank: 21
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -284,7 +284,7 @@ results:
     today_delta_significant: false
     sort_value: 0.039
     sort_std: null
-    global_rank: 19
+    global_rank: 21
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -356,8 +356,8 @@ results:
     value_note: ''
     sort_value: 0.039
     sort_std: null
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -415,7 +415,7 @@ results:
     today_delta_significant: false
     sort_value: 0.039
     sort_std: null
-    global_rank: 19
+    global_rank: 21
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -477,7 +477,7 @@ results:
     today_delta_significant: false
     sort_value: 0.046
     sort_std: null
-    global_rank: 23
+    global_rank: 26
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -489,6 +489,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GemNet
+    model_key: gemnet
+    model_plain: GemNet
+    value: 0.051
+    std: null
+    paper_value: 0.051
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 26, 2024
+    date_display: May 2024
+    date_iso: '2024-05-26'
+    published_venue: TMLR 2024
+    published_conference: TMLR 2024
+    at_pub_value: 0.0502
+    at_pub_std: null
+    at_pub_source_arxiv: '2402.04836'
+    at_pub_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    at_pub_source_date_iso: '2024-02-07'
+    at_pub_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.0007999999999999952
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.0502
+    true_std: null
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0007999999999999952
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0502
+    sort_std: null
+    global_rank: 28
+    paper_rank: 29
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    comparison_source_arxiv: '2402.04836'
     is_best: false
     is_std_outlier: false
   - model: ET
@@ -549,8 +619,8 @@ results:
     value_note: ''
     sort_value: 0.052
     sort_std: null
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -590,17 +660,16 @@ results:
     date_iso: '2024-05-26'
     published_venue: TMLR 2024
     published_conference: TMLR 2024
-    at_pub_value: 0.0061
+    at_pub_value: 0.064
     at_pub_std: null
-    at_pub_source_arxiv: '2402.04836'
-    at_pub_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    at_pub_source_date_iso: '2024-02-07'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
-    gap_vs_at_pub: 0.0579
-    worse_than_at_pub: true
+    at_pub_source_arxiv: '2003.03123'
+    at_pub_source_title: Directional Message Passing for Molecular Graphs
+    at_pub_source_date_iso: '2020-03-06'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
@@ -609,24 +678,23 @@ results:
     today_delta_significant: false
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    comparison_source_arxiv: '2402.04836'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: PaiNN
@@ -687,8 +755,8 @@ results:
     value_note: ''
     sort_value: 0.077
     sort_std: null
-    global_rank: 39
-    paper_rank: 37
+    global_rank: 45
+    paper_rank: 43
     rank_delta: -2
     rank_delta_abs: 2
     rank_delta_direction: better
@@ -736,8 +804,8 @@ results:
       Dipole Moments and Partial Charges'
     at_pub_source_date_iso: '2019-02-22'
     at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.03
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -748,17 +816,16 @@ results:
     today_delta_significant: false
     true_value: 0.08
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.08
     sort_std: null
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -767,76 +834,6 @@ results:
     comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
       Dipole Moments and Partial Charges'
     comparison_source_arxiv: '1902.08408'
-    is_best: false
-    is_std_outlier: false
-  - model: GemNet
-    model_key: gemnet
-    model_plain: GemNet
-    value: 0.051
-    std: null
-    paper_value: 0.051
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 26, 2024
-    date_display: May 2024
-    date_iso: '2024-05-26'
-    published_venue: TMLR 2024
-    published_conference: TMLR 2024
-    at_pub_value: 0.0115
-    at_pub_std: null
-    at_pub_source_arxiv: '2402.04836'
-    at_pub_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    at_pub_source_date_iso: '2024-02-07'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 0.03949999999999999
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.145
-    true_std: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.094
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.145
-    sort_std: null
-    global_rank: 48
-    paper_rank: 25
-    rank_delta: -23
-    rank_delta_abs: 23
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    comparison_source_arxiv: '2402.04836'
     is_best: false
     is_std_outlier: false
   rank_metric: MAE

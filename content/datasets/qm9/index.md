@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 19
-result_count: 132
+result_count: 129
 best_model:
   model: PF-GNN
   value: 0.017
@@ -22,13 +22,13 @@ best_model:
   paper_title: 'PF-GNN: Differentiable particle filtering based approximation of universal
     graph representations'
 papers:
-- arxiv_id: '2510.13615'
-  title: 'Message Passing on the Edge: Towards Scalable and Expressive GNNs'
-  date_iso: '2025-10-15'
-  venue: ''
 - arxiv_id: '2505.23086'
   title: Equivariant Spherical Transformer for Efficient Molecular Modeling
   date_iso: '2025-05-29'
+  venue: ''
+- arxiv_id: '2406.13265'
+  title: Molecule Graph Networks with Many-body Equivariant Interactions
+  date_iso: '2024-06-19'
   venue: ''
 - arxiv_id: '2406.03145'
   title: E(n) Equivariant Message Passing Cellular Networks
@@ -48,6 +48,10 @@ papers:
     Space
   date_iso: '2023-10-04'
   venue: ICLR 2023
+- arxiv_id: '2305.13987'
+  title: On Structural Expressive Power of Graph Transformers
+  date_iso: '2023-05-23'
+  venue: KDD 2023
 - arxiv_id: '2305.04963'
   title: 'From Relational Pooling to Subgraph GNNs: A Universal Framework for More
     Expressive Graph Neural Networks'
@@ -2018,6 +2022,56 @@ variants:
     - null
     - null
     - null
+  - model: ENINet
+    model_plain: ENINet
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.13265'
+    title: Molecule Graph Networks with Many-body Equivariant Interactions
+    date: Jun 19, 2024
+    date_iso: '2024-06-19'
+    date_display: Jun 2024
+    codebase_url: https://github.com/tsudalab/ENINet
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 37.2
+    - 9.3
+    - 45.4
+    - 5.52
+    - 5.37
+    - 6.55
+    - 23.2
+    - null
+    - 20.1
+    - 16.5
+    - 1.09
+    - null
+    - 5.57
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: SEGNN
     model_plain: SEGNN
     is_baseline: true
@@ -2630,80 +2684,30 @@ variants:
     - null
     - null
     - null
-  - model: True 3D SMP
-    model_plain: True 3D SMP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.04126'
-    title: 3D Infomax improves GNNs for Molecular Property Prediction
-    date: Oct 8, 2021
-    date_iso: '2021-10-08'
-    date_display: Oct 2021
-    codebase_url: https://github.com/HannesStark/3DInfomax
-    published_conference: ICML 2021
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2021
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 85.1
-    - 0.0726
-    - 0.1542
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  row_count: 132
+  row_count: 129
   rows_json: /data/datasets/qm9/standard-split-rows.json
   chart_json: /data/datasets/qm9/standard-split-chart.json
   arch_counts:
-    gnn: 105
+    gnn: 98
     hybrid: 13
-    graph_transformer: 6
+    graph_transformer: 10
     llm: 1
     walk: 0
     traditional: 2
   metric_counts:
-  - 68
-  - 127
-  - 127
-  - 100
-  - 93
-  - 93
-  - 94
-  - 4
-  - 94
-  - 94
-  - 86
-  - 27
+  - 69
+  - 124
+  - 124
+  - 97
+  - 90
+  - 90
   - 91
+  - 4
+  - 87
+  - 91
+  - 83
+  - 19
+  - 88
   milestones: &id001
   - value: 0.025
     std: null

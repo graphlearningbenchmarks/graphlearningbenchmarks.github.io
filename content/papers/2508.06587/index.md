@@ -427,5 +427,6 @@ datasets_by_scope:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
 single_proposed_model: HGMN (L)
+main_figure: /figures/2508.06587/main_figure.jpegoptim.jpg
 ---
 

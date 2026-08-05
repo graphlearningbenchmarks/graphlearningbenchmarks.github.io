@@ -12,7 +12,7 @@ stats:
   avg_nodes: 13.0
   avg_edges: 65.9
   num_classes: 3
-result_count: 118
+result_count: 121
 best_model:
   model: GraphSNN
   value: 0.779
@@ -68,6 +68,10 @@ papers:
   title: 'AutoGEL: An Automated Graph Neural Network with Explicit Link Information'
   date_iso: '2021-12-02'
   venue: NeurIPS 2021
+- arxiv_id: '2110.07875'
+  title: Graph Neural Networks with Learnable Structural and Positional Representations
+  date_iso: '2021-10-15'
+  venue: ICLR 2021
 - arxiv_id: '2108.10587'
   title: Pooling Architecture Search for Graph Classification
   date_iso: '2021-08-24'
@@ -1515,18 +1519,18 @@ variants:
     metric_stds:
     - 0.009
     - null
-  row_count: 118
+  row_count: 121
   rows_json: /data/datasets/imdb-multi/10-fold-cv-rows.json
   chart_json: /data/datasets/imdb-multi/10-fold-cv-chart.json
   arch_counts:
-    gnn: 71
+    gnn: 74
     hybrid: 15
     graph_transformer: 2
     llm: 0
     walk: 4
     traditional: 22
   metric_counts:
-  - 116
+  - 119
   - 2
   milestones: &id001
   - value: 0.485

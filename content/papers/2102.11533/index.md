@@ -47,8 +47,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GMT
-mrr: 0.0075
-adjusted_mrr: 0.0025
+mrr: 0.0068
+adjusted_mrr: 0.0023
 mrr_dataset_count: 1
 benchmark_categories:
 - MoleculeNet
@@ -65,9 +65,9 @@ results:
 - &id001
   dataset: Tox21
   rows:
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: himp
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.874
     std: 0.005
     metric: ROC-AUC
@@ -98,9 +98,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: gine w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -131,9 +131,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -220,10 +220,10 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.004
-    global_rank: 18
-    paper_rank: 207
-    rank_delta: 189
-    rank_delta_abs: 189
+    global_rank: 15
+    paper_rank: 225
+    rank_delta: 210
+    rank_delta_abs: 210
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -289,10 +289,10 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.0069
-    global_rank: 28
-    paper_rank: 256
-    rank_delta: 228
-    rank_delta_abs: 228
+    global_rank: 25
+    paper_rank: 274
+    rank_delta: 249
+    rank_delta_abs: 249
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -359,10 +359,10 @@ results:
     value_note: ''
     sort_value: 0.8237
     sort_std: 0.009
-    global_rank: 34
-    paper_rank: 214
-    rank_delta: 180
-    rank_delta_abs: 180
+    global_rank: 31
+    paper_rank: 232
+    rank_delta: 201
+    rank_delta_abs: 201
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -428,8 +428,8 @@ results:
     value_note: ''
     sort_value: 0.773
     sort_std: 0.0059
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -496,8 +496,8 @@ results:
     value_note: ''
     sort_value: 0.7543
     sort_std: 0.0079
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 206
+    paper_rank: 206
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -564,8 +564,8 @@ results:
     value_note: ''
     sort_value: 0.7511
     sort_std: 0.0069
-    global_rank: 205
-    paper_rank: 205
+    global_rank: 223
+    paper_rank: 223
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -632,8 +632,8 @@ results:
     value_note: ''
     sort_value: 0.741
     sort_std: 0.0113
-    global_rank: 238
-    paper_rank: 238
+    global_rank: 256
+    paper_rank: 256
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -700,8 +700,8 @@ results:
     value_note: ''
     sort_value: 0.7377
     sort_std: 0.0068
-    global_rank: 245
-    paper_rank: 245
+    global_rank: 262
+    paper_rank: 262
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -768,8 +768,8 @@ results:
     value_note: ''
     sort_value: 0.7224
     sort_std: 0.0166
-    global_rank: 267
-    paper_rank: 267
+    global_rank: 282
+    paper_rank: 282
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -836,8 +836,8 @@ results:
     value_note: ''
     sort_value: 0.711
     sort_std: 0.0106
-    global_rank: 277
-    paper_rank: 277
+    global_rank: 290
+    paper_rank: 290
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -904,8 +904,8 @@ results:
     value_note: ''
     sort_value: 0.6954
     sort_std: 0.0075
-    global_rank: 285
-    paper_rank: 285
+    global_rank: 300
+    paper_rank: 300
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -972,8 +972,8 @@ results:
     value_note: ''
     sort_value: 0.6939
     sort_std: 0.0202
-    global_rank: 286
-    paper_rank: 286
+    global_rank: 301
+    paper_rank: 301
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1006,5 +1006,6 @@ datasets_by_scope:
     - dataset: Tox21
       dataset_slug: tox21
 single_proposed_model: GMT
+main_figure: /figures/2102.11533/main_figure.jpegoptim.jpg
 ---
 

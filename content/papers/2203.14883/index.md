@@ -510,5 +510,6 @@ datasets_by_scope:
     - dataset: Reddit
       dataset_slug: reddit
 single_proposed_model: TGL
+main_figure: /figures/2203.14883/main_figure.jpegoptim.jpg
 ---
 

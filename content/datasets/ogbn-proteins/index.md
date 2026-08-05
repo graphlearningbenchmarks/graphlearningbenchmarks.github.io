@@ -13,7 +13,7 @@ stats:
   avg_nodes: 39561252.0
   avg_edges: null
   num_classes: 112
-result_count: 101
+result_count: 117
 best_model:
   model: LD
   value: 0.8942
@@ -68,6 +68,10 @@ papers:
     Graphs against Learning Bias
   date_iso: '2023-09-26'
   venue: ''
+- arxiv_id: '2305.02866'
+  title: Hierarchical Transformer for Scalable Graph Learning
+  date_iso: '2023-05-04'
+  venue: IJCAI 2023
 - arxiv_id: '2304.02806'
   title: 'Graph Mixture of Experts: Learning on Large-Scale Graphs with Explicit Diversity
     Modeling'
@@ -86,6 +90,15 @@ papers:
 - arxiv_id: '2110.07141'
   title: 'SoGCN: Second-Order Graph Convolutional Networks'
   date_iso: '2021-10-14'
+  venue: ''
+- arxiv_id: '2106.07476'
+  title: Training Graph Neural Networks with 1000 Layers
+  date_iso: '2021-06-14'
+  venue: ICML 2021
+- arxiv_id: '2105.08330'
+  title: 'Residual Network and Embedding Usage: New Tricks of Node Classification
+    with Graph Convolutional Networks'
+  date_iso: '2021-05-18'
   venue: ''
 - arxiv_id: '2009.03509'
   title: 'Masked Label Prediction: Unified Message Passing Model for Semi-Supervised
@@ -321,6 +334,134 @@ variants:
     - null
     - null
     - null
+  - model: RevGNN
+    model_plain: RevGNN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.07476'
+    title: Training Graph Neural Networks with 1000 Layers
+    date: Jun 14, 2021
+    date_iso: '2021-06-14'
+    date_display: Jun 2021
+    codebase_url: https://github.com/ShunliRen/dgl
+    published_conference: ICML 2021
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8824
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0015
+    - null
+    - null
+    - null
+  - model: RevGNN-Deep
+    model_plain: RevGNN-Deep
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 20.03
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.07476'
+    title: Training Graph Neural Networks with 1000 Layers
+    date: Jun 14, 2021
+    date_iso: '2021-06-14'
+    date_display: Jun 2021
+    codebase_url: https://github.com/ShunliRen/dgl
+    published_conference: ICML 2021
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8774
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0013
+    - null
+    - null
+    - null
+  - model: UniMP+CEF
+    model_plain: UniMP+CEF
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 1.96
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.07476'
+    title: Training Graph Neural Networks with 1000 Layers
+    date: Jun 14, 2021
+    date_iso: '2021-06-14'
+    date_display: Jun 2021
+    codebase_url: https://github.com/ShunliRen/dgl
+    published_conference: ICML 2021
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8691
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0018
+    - null
+    - null
+    - null
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.48
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.07476'
+    title: Training Graph Neural Networks with 1000 Layers
+    date: Jun 14, 2021
+    date_iso: '2021-06-14'
+    date_display: Jun 2021
+    codebase_url: https://github.com/ShunliRen/dgl
+    published_conference: ICML 2021
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8682
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0021
+    - null
+    - null
+    - null
   - model: UniMP
     model_plain: UniMP
     is_baseline: false
@@ -351,6 +492,38 @@ variants:
     - null
     metric_stds:
     - 0.0008
+    - null
+    - null
+    - null
+  - model: DeeperGCN
+    model_plain: DeeperGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.37
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.07476'
+    title: Training Graph Neural Networks with 1000 Layers
+    date: Jun 14, 2021
+    date_iso: '2021-06-14'
+    date_display: Jun 2021
+    codebase_url: https://github.com/ShunliRen/dgl
+    published_conference: ICML 2021
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8616
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0016
     - null
     - null
     - null
@@ -618,6 +791,39 @@ variants:
     - null
     - null
     - null
+  - model: GEN + FLAG + node2vec
+    model_plain: GEN + FLAG + node2vec
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2105.08330'
+    title: 'Residual Network and Embedding Usage: New Tricks of Node Classification
+      with Graph Convolutional Networks'
+    date: May 18, 2021
+    date_iso: '2021-05-18'
+    date_display: May 2021
+    codebase_url: https://github.com/ytchx1999/PyG-OGB-Tricks
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8251
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0043
+    - null
+    - null
+    - null
   - model: NodeNorm
     model_plain: NodeNorm
     is_baseline: false
@@ -681,6 +887,72 @@ variants:
     - null
     metric_stds:
     - 0.003
+    - null
+    - null
+    - null
+  - model: GEN
+    model_plain: GEN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.08330'
+    title: 'Residual Network and Embedding Usage: New Tricks of Node Classification
+      with Graph Convolutional Networks'
+    date: May 18, 2021
+    date_iso: '2021-05-18'
+    date_display: May 2021
+    codebase_url: https://github.com/ytchx1999/PyG-OGB-Tricks
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.813
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0065
+    - null
+    - null
+    - null
+  - model: GEN + FLAG
+    model_plain: GEN + FLAG
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.08330'
+    title: 'Residual Network and Embedding Usage: New Tricks of Node Classification
+      with Graph Convolutional Networks'
+    date: May 18, 2021
+    date_iso: '2021-05-18'
+    date_display: May 2021
+    codebase_url: https://github.com/ytchx1999/PyG-OGB-Tricks
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: true
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8129
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0067
     - null
     - null
     - null
@@ -1440,6 +1712,38 @@ variants:
     - null
     - null
     - null
+  - model: HSGT
+    model_plain: HSGT
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.02866'
+    title: Hierarchical Transformer for Scalable Graph Learning
+    date: May 4, 2023
+    date_iso: '2023-05-04'
+    date_display: May 2023
+    codebase_url: ''
+    published_conference: IJCAI 2023
+    published_conference_short: IJCAI
+    published_conference_slug: ijcai
+    published_venue: IJCAI 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7813
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0025
+    - null
+    - null
+    - null
   - model: GaAN
     model_plain: GaAN
     is_baseline: true
@@ -1473,313 +1777,18 @@ variants:
     - null
     - null
     - null
-  - model: GCN
-    model_plain: GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.24293'
-    title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
-      via Continuous Phase Transitions'
-    date: Apr 27, 2026
-    date_iso: '2026-04-27'
-    date_display: Apr 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7784
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0056
-    - null
-    - null
-    - null
-  - model: GraphSAGE
-    model_plain: GraphSAGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.07141'
-    title: 'SoGCN: Second-Order Graph Convolutional Networks'
-    date: Oct 14, 2021
-    date_iso: '2021-10-14'
-    date_display: Oct 2021
-    codebase_url: https://github.com/yuehaowang/SoGCN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7753
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.003
-    - null
-    - null
-    - null
-  - model: GraphSAGE +CAP
-    model_plain: GraphSAGE +CAP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.14855'
-    title: 'CAP: Co-Adversarial Perturbation on Weights and Features for Improving
-      Generalization of Graph Neural Networks'
-    date: Oct 28, 2021
-    date_iso: '2021-10-28'
-    date_display: Oct 2021
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7753
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.007
-    - null
-    - null
-    - null
-  - model: NodeFormer
-    model_plain: NodeFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7745
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0115
-    - null
-    - null
-    - null
-  - model: GraphGPS
-    model_plain: GraphGPS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2604.24293'
-    title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
-      via Continuous Phase Transitions'
-    date: Apr 27, 2026
-    date_iso: '2026-04-27'
-    date_display: Apr 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7725
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0042
-    - null
-    - null
-    - null
-  - model: LinkDist
-    model_plain: LinkDist
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2409.05573'
-    title: Learning to Model Graph Structural Information on MLPs via Graph Structure
-      Self-Contrasting
-    date: Sep 9, 2024
-    date_iso: '2024-09-09'
-    date_display: Sep 2024
-    codebase_url: https://github.com/LirongWu/GSSC
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.772
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-  - model: CGNN
-    model_plain: CGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2604.24293'
-    title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
-      via Continuous Phase Transitions'
-    date: Apr 27, 2026
-    date_iso: '2026-04-27'
-    date_display: Apr 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7712
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0061
-    - null
-    - null
-    - null
-  - model: GraphSAGE + Vanilla
-    model_plain: GraphSAGE + Vanilla
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.14855'
-    title: 'CAP: Co-Adversarial Perturbation on Weights and Features for Improving
-      Generalization of Graph Neural Networks'
-    date: Oct 28, 2021
-    date_iso: '2021-10-28'
-    date_display: Oct 2021
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7691
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0102
-    - null
-    - null
-    - null
-  - model: GIN
-    model_plain: GIN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.07141'
-    title: 'SoGCN: Second-Order Graph Convolutional Networks'
-    date: Oct 14, 2021
-    date_iso: '2021-10-14'
-    date_display: Oct 2021
-    codebase_url: https://github.com/yuehaowang/SoGCN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7677
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.002
-    - null
-    - null
-    - null
-  row_count: 101
+  row_count: 117
   rows_json: /data/datasets/ogbn-proteins/standard-split-rows.json
   chart_json: /data/datasets/ogbn-proteins/standard-split-chart.json
   arch_counts:
-    gnn: 70
-    hybrid: 12
-    graph_transformer: 7
+    gnn: 81
+    hybrid: 13
+    graph_transformer: 11
     llm: 0
     walk: 0
     traditional: 11
   metric_counts:
-  - 74
+  - 90
   - 19
   - 2
   - 8
@@ -1798,6 +1807,12 @@ variants:
     title: 'Masked Label Prediction: Unified Message Passing Model for Semi-Supervised
       Classification'
     date: '2020-09-08'
+  - value: 0.8824
+    std: 0.0015
+    model: RevGNN
+    arxiv_id: '2106.07476'
+    title: Training Graph Neural Networks with 1000 Layers
+    date: '2021-06-14'
   - value: 0.8942
     std: 0.0007
     model: LD

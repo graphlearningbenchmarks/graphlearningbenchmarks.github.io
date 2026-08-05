@@ -71,9 +71,9 @@ results:
 - &id001
   dataset: ESOL
   rows:
-  - model: KCL
+  - model: AMCT
     model_key: mat
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.278
     std: 0.02
     metric: RMSE
@@ -105,9 +105,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: KCL
+  - model: AMCT
     model_key: smiles
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.356
     std: 0.017
     metric: RMSE
@@ -139,34 +139,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: KCL
-    model_key: conan-fgw
-    model_plain: KCL
-    value: 0.514
-    std: 0.019
+  - model: AMCT
+    model_key: graphormer-spis
+    model_plain: AMCT
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2402.01975'
-    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
-    date: Feb 3, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-03'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.514
-    sort_std: 0.019
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -228,8 +228,8 @@ results:
     value_note: ''
     sort_value: 0.58
     sort_std: 0.03
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -295,8 +295,8 @@ results:
     value_note: ''
     sort_value: 0.61
     sort_std: 0.07
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -362,8 +362,8 @@ results:
     value_note: ''
     sort_value: 0.82
     sort_std: 0.08
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -421,7 +421,7 @@ results:
     today_delta_significant: false
     sort_value: 0.97
     sort_std: 0.01
-    global_rank: 61
+    global_rank: 71
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -491,8 +491,8 @@ results:
     value_note: ''
     sort_value: 0.99
     sort_std: 0.14
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -559,8 +559,8 @@ results:
     value_note: ''
     sort_value: 1.07
     sort_std: 0.19
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -626,8 +626,8 @@ results:
     value_note: ''
     sort_value: 1.12
     sort_std: 0.19
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -693,8 +693,8 @@ results:
     value_note: ''
     sort_value: 1.53
     sort_std: 0.06
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1053,7 +1053,7 @@ results:
     today_delta_significant: false
     sort_value: 1.87
     sort_std: 0.07
-    global_rank: 33
+    global_rank: 32
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1124,8 +1124,8 @@ results:
     value_note: ''
     sort_value: 2.03
     sort_std: 0.22
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1183,7 +1183,7 @@ results:
     today_delta_significant: false
     sort_value: 2.11
     sort_std: 0.07
-    global_rank: 48
+    global_rank: 45
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1254,10 +1254,10 @@ results:
     value_note: ''
     sort_value: 2.398
     sort_std: 0.25
-    global_rank: 66
+    global_rank: 59
     paper_rank: 14
-    rank_delta: -52
-    rank_delta_abs: 52
+    rank_delta: -45
+    rank_delta_abs: 45
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
@@ -1322,10 +1322,10 @@ results:
     value_note: ''
     sort_value: 2.975
     sort_std: 0.775
-    global_rank: 92
+    global_rank: 85
     paper_rank: 13
-    rank_delta: -79
-    rank_delta_abs: 79
+    rank_delta: -72
+    rank_delta_abs: 72
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
@@ -2453,5 +2453,6 @@ datasets_by_scope:
     datasets:
     - dataset: QM7b
       dataset_slug: qm7b
+main_figure: /figures/1703.00564/main_figure.jpegoptim.jpg
 ---
 

@@ -634,5 +634,6 @@ datasets_by_scope:
     - dataset: ogbg-molhiv
       dataset_slug: ogbg-molhiv
 single_proposed_model: MSE-GNN
+main_figure: /figures/2408.07340/main_figure.jpegoptim.jpg
 ---
 

@@ -78,9 +78,9 @@ results:
 - &id002
   dataset: D&D
   rows:
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: gc-gnn (graphsage)
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -89,9 +89,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2309.00738'
     title: Rethinking the Power of Graph Canonization in Graph Representation Learning
       with Stability
@@ -112,9 +112,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: sugar
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8403
     std: 0.0133
     metric: Accuracy
@@ -146,9 +146,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: ortho-g-u-nets
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8387
     std: null
     metric: Accuracy
@@ -177,76 +177,6 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Mixup
-    model_key: mixup
-    model_plain: Mixup
-    value: 0.586
-    std: 0.035
-    paper_value: 0.586
-    paper_std: 0.035
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 3-layer GIN trained on 50 samples
-    date: Feb 7, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-07'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7153
-    at_pub_std: 0.0127
-    at_pub_source_arxiv: '2308.08344'
-    at_pub_source_title: Graph Out-of-Distribution Generalization with Controllable
-      Data Augmentation
-    at_pub_source_date_iso: '2023-08-16'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-16'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.12930000000000008
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7153
-    true_std: 0.0127
-    value_gap_source_arxiv: '2308.08344'
-    value_gap_source_title: Graph Out-of-Distribution Generalization with Controllable
-      Data Augmentation
-    value_gap_source_is_current_paper: false
-    value_gap: 0.12930000000000008
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7153
-    sort_std: 0.0127
-    global_rank: 169
-    paper_rank: 197
-    rank_delta: 28
-    rank_delta_abs: 28
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Graph Out-of-Distribution Generalization with Controllable
-      Data Augmentation
-    comparison_source_arxiv: '2308.08344'
     is_best: false
     is_std_outlier: false
   - model: Aug_GE
@@ -305,8 +235,8 @@ results:
     value_note: ''
     sort_value: 0.693
     sort_std: 0.052
-    global_rank: 179
-    paper_rank: 179
+    global_rank: 181
+    paper_rank: 181
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -372,8 +302,8 @@ results:
     value_note: ''
     sort_value: 0.682
     sort_std: 0.043
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 183
+    paper_rank: 183
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -439,8 +369,8 @@ results:
     value_note: ''
     sort_value: 0.677
     sort_std: 0.043
-    global_rank: 183
-    paper_rank: 183
+    global_rank: 184
+    paper_rank: 184
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -506,8 +436,8 @@ results:
     value_note: ''
     sort_value: 0.667
     sort_std: 0.038
-    global_rank: 184
-    paper_rank: 184
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -573,8 +503,8 @@ results:
     value_note: ''
     sort_value: 0.667
     sort_std: 0.029
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 186
+    paper_rank: 186
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -640,8 +570,8 @@ results:
     value_note: ''
     sort_value: 0.651
     sort_std: 0.043
-    global_rank: 191
-    paper_rank: 191
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -707,8 +637,75 @@ results:
     value_note: ''
     sort_value: 0.647
     sort_std: 0.054
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 188
+    paper_rank: 188
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Mixup
+    model_key: mixup
+    model_plain: Mixup
+    value: 0.586
+    std: 0.035
+    paper_value: 0.586
+    paper_std: 0.035
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 3-layer GIN trained on 50 samples
+    date: Feb 7, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-07'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.586
+    true_std: 0.035
+    value_gap_source_arxiv: '2402.05039'
+    value_gap_source_title: PAC Learnability under Explanation-Preserving Graph Perturbations
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.586
+    sort_std: 0.035
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -730,9 +727,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -763,9 +760,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -796,9 +793,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -886,8 +883,8 @@ results:
     value_note: ''
     sort_value: 0.872
     sort_std: 0.014
-    global_rank: 344
-    paper_rank: 344
+    global_rank: 360
+    paper_rank: 360
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -953,8 +950,8 @@ results:
     value_note: ''
     sort_value: 0.872
     sort_std: 0.026
-    global_rank: 345
-    paper_rank: 345
+    global_rank: 361
+    paper_rank: 361
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1020,8 +1017,8 @@ results:
     value_note: ''
     sort_value: 0.856
     sort_std: 0.02
-    global_rank: 399
-    paper_rank: 399
+    global_rank: 421
+    paper_rank: 421
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1087,8 +1084,8 @@ results:
     value_note: ''
     sort_value: 0.847
     sort_std: 0.034
-    global_rank: 422
-    paper_rank: 422
+    global_rank: 448
+    paper_rank: 448
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1154,8 +1151,8 @@ results:
     value_note: ''
     sort_value: 0.847
     sort_std: 0.034
-    global_rank: 423
-    paper_rank: 423
+    global_rank: 449
+    paper_rank: 449
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1221,8 +1218,8 @@ results:
     value_note: ''
     sort_value: 0.843
     sort_std: 0.032
-    global_rank: 447
-    paper_rank: 447
+    global_rank: 474
+    paper_rank: 474
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1288,8 +1285,8 @@ results:
     value_note: ''
     sort_value: 0.836
     sort_std: 0.035
-    global_rank: 478
-    paper_rank: 478
+    global_rank: 507
+    paper_rank: 507
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1355,8 +1352,8 @@ results:
     value_note: ''
     sort_value: 0.745
     sort_std: 0.016
-    global_rank: 680
-    paper_rank: 680
+    global_rank: 726
+    paper_rank: 726
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1391,5 +1388,6 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: D&D
       dataset_slug: d-d
+main_figure: /figures/2402.05039/main_figure.jpegoptim.jpg
 ---
 

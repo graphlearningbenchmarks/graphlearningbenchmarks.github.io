@@ -2304,5 +2304,6 @@ datasets_by_scope:
     - dataset: FB15k-237
       dataset_slug: fb15k-237
 single_proposed_model: A*Net
+main_figure: /figures/2206.04798/main_figure.jpegoptim.jpg
 ---
 

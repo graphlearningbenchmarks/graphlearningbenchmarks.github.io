@@ -368,9 +368,9 @@ results:
     sort_value: 0.5289
     sort_std: 0.0011
     global_rank: 19
-    paper_rank: 38
-    rank_delta: 19
-    rank_delta_abs: 19
+    paper_rank: 40
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -571,8 +571,8 @@ results:
     value_note: ''
     sort_value: 0.4927
     sort_std: 0.0061
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -639,10 +639,10 @@ results:
     value_note: ''
     sort_value: 0.4811
     sort_std: 0.0048
-    global_rank: 34
-    paper_rank: 37
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 35
+    paper_rank: 39
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -708,8 +708,8 @@ results:
     value_note: ''
     sort_value: 0.3544
     sort_std: 0.0036
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -741,5 +741,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbn-mag
       dataset_slug: ogbn-mag
+main_figure: /figures/2205.15653/main_figure.jpegoptim.jpg
 ---
 

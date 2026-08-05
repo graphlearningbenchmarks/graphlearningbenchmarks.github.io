@@ -61,12 +61,12 @@ mrr: 0.0
 adjusted_mrr: 0.0
 mrr_dataset_count: 0
 benchmark_categories:
-- Heterophilic Graphs
+- Heterophily Benchmark
 benchmark_coverage:
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
   evaluated: 1
-  total: 13
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -629,18 +629,19 @@ results:
   uses_non_primary_metric: true
   paper_has_primary_metric: false
 results_grouped:
-- benchmark: Heterophilic Graphs
+- benchmark: Heterophily Benchmark
   datasets:
   - *id001
 datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Amazon-ratings
       dataset_slug: amazon-ratings
 single_proposed_model: GPN
+main_figure: /figures/2006.12739/main_figure.jpegoptim.jpg
 ---
 

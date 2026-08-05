@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FedGL
-mrr: 0.0037
-adjusted_mrr: 0.0012
+mrr: 0.0031
+adjusted_mrr: 0.001
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -66,9 +66,9 @@ results:
 - &id001
   dataset: CiteSeer
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -99,9 +99,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: is-gib
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -133,9 +133,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: eerm
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -224,8 +224,8 @@ results:
     value_note: ''
     sort_value: 0.734
     sort_std: null
-    global_rank: 268
-    paper_rank: 268
+    global_rank: 326
+    paper_rank: 326
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -292,8 +292,8 @@ results:
     value_note: ''
     sort_value: 0.705
     sort_std: null
-    global_rank: 575
-    paper_rank: 575
+    global_rank: 652
+    paper_rank: 652
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -360,8 +360,8 @@ results:
     value_note: ''
     sort_value: 0.676
     sort_std: null
-    global_rank: 674
-    paper_rank: 674
+    global_rank: 761
+    paper_rank: 761
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -394,5 +394,6 @@ datasets_by_scope:
     - dataset: CiteSeer
       dataset_slug: citeseer
 single_proposed_model: FedGL
+main_figure: /figures/2105.03170/main_figure.jpegoptim.jpg
 ---
 

@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 5
-result_count: 870
+result_count: 892
 best_model:
   model: P^2GNN
   value: 0.9541
@@ -173,6 +173,11 @@ papers:
     Graphs
   date_iso: '2025-05-23'
   venue: NeurIPS 2025
+- arxiv_id: '2505.15845'
+  title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+    Learning Models'
+  date_iso: '2025-05-19'
+  venue: ''
 - arxiv_id: '2505.11346'
   title: What Can We Learn From MIMO Graph Convolutions?
   date_iso: '2025-05-16'
@@ -203,11 +208,6 @@ papers:
     GNNs
   date_iso: '2025-02-17'
   venue: NeurIPS 2025
-- arxiv_id: '2502.02017'
-  title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology
-    Alignment'
-  date_iso: '2025-02-04'
-  venue: ICML 2025
 - arxiv_id: '2501.19089'
   title: Resolving Oversmoothing with Opinion Dissensus
   date_iso: '2025-01-31'
@@ -220,6 +220,10 @@ papers:
   title: Distributed-Order Fractional Graph Operating Network
   date_iso: '2024-11-08'
   venue: NeurIPS 2024
+- arxiv_id: '2410.05593'
+  title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+  date_iso: '2024-10-08'
+  venue: ICLR 2024
 - arxiv_id: '2410.02158'
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
   date_iso: '2024-10-03'
@@ -278,10 +282,6 @@ papers:
     in GNNs
   date_iso: '2024-06-05'
   venue: ICLR 2024
-- arxiv_id: '2406.02059'
-  title: Graph Adversarial Diffusion Convolution
-  date_iso: '2024-06-04'
-  venue: ICML 2024
 - arxiv_id: '2406.01899'
   title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
   date_iso: '2024-06-04'
@@ -338,10 +338,20 @@ papers:
   title: Smoothed Graph Contrastive Learning via Seamless Proximity Integration
   date_iso: '2024-02-23'
   venue: ''
+- arxiv_id: '2401.14580'
+  title: 'Design your own universe: a physics-informed agnostic method for enhancing
+    graph neural networks'
+  date_iso: '2024-01-26'
+  venue: ''
 - arxiv_id: '2312.08672'
   title: 'CAT: A Causal Graph Attention Network for Trimming Heterophilic Graphs'
   date_iso: '2023-12-14'
   venue: ''
+- arxiv_id: '2312.08221'
+  title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization for Over-smoothness
+    in Deep GNNs
+  date_iso: '2023-12-13'
+  venue: AAAI 2023
 - arxiv_id: '2312.04111'
   title: Breaking the Entanglement of Homophily and Heterophily in Semi-supervised
     Node Classification
@@ -463,6 +473,11 @@ papers:
   title: 'TIDE: Time Derivative Diffusion for Deep Learning on Graphs'
   date_iso: '2022-12-05'
   venue: ICML 2022
+- arxiv_id: '2211.15081'
+  title: Mitigating Overfitting in Graph Neural Networks via Feature and Hyperplane
+    Perturbation
+  date_iso: '2022-11-28'
+  venue: ''
 - arxiv_id: '2211.15779'
   title: Revisiting Over-smoothing and Over-squashing using Ollivier's Ricci Curvature
   date_iso: '2022-11-28'
@@ -504,10 +519,6 @@ papers:
 - arxiv_id: '2207.08629'
   title: Comprehensive Graph Gradual Pruning for Sparse Training in Graph Neural Networks
   date_iso: '2022-07-18'
-  venue: ''
-- arxiv_id: '2207.05887'
-  title: Tuning the Geometry of Graph Neural Networks
-  date_iso: '2022-07-12'
   venue: ''
 - arxiv_id: '2206.14418'
   title: Optimization-Induced Graph Implicit Nonlinear Diffusion
@@ -619,10 +630,6 @@ papers:
     for Graph Convolutional Networks'
   date_iso: '2020-08-20'
   venue: NeurIPS 2020
-- arxiv_id: '2007.02133'
-  title: Simple and Deep Graph Convolutional Networks
-  date_iso: '2020-07-04'
-  venue: ICML 2020
 - arxiv_id: '2005.14612'
   title: Non-Local Graph Neural Networks
   date_iso: '2020-05-29'
@@ -1538,6 +1545,44 @@ variants:
     - null
     - null
     - null
+  - model: DMD++
+    model_plain: DMD++
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_iso: '2024-10-08'
+    date_display: Oct 2024
+    codebase_url: ''
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.914
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.017
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: GPR-GCN
     model_plain: GPR-GCN
     is_baseline: true
@@ -1879,44 +1924,6 @@ variants:
     - null
     metric_stds:
     - 0.0467
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: TWIRLS
-    model_plain: TWIRLS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.03580'
-    title: Convolutional Neural Networks on Graphs with Chebyshev Approximation, Revisited
-    date: Feb 4, 2022
-    date_iso: '2022-02-04'
-    date_display: Feb 2022
-    codebase_url: https://github.com/ivam-he/ChebNetII
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8983
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0229
     - null
     - null
     - null
@@ -2575,18 +2582,18 @@ variants:
     - null
     - null
     - null
-  row_count: 870
+  row_count: 892
   rows_json: /data/datasets/cornell/standard-split-rows.json
   chart_json: /data/datasets/cornell/standard-split-chart.json
   arch_counts:
-    gnn: 601
+    gnn: 604
     hybrid: 151
-    graph_transformer: 23
-    llm: 10
+    graph_transformer: 26
+    llm: 9
     walk: 4
-    traditional: 54
+    traditional: 58
   metric_counts:
-  - 834
+  - 856
   - 3
   - 9
   - 20
@@ -2602,7 +2609,7 @@ variants:
     date: '2020-05-29'
   - value: 0.8676
     std: 0.0505
-    model: transparent GNN architecture
+    model: TWIRLS
     arxiv_id: '2103.06064'
     title: Graph Neural Networks Inspired by Classical Iterative Algorithms
     date: '2021-03-10'

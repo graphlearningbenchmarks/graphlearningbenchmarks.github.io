@@ -138,34 +138,34 @@ results:
     is_best: false
     is_std_outlier: false
   - model: SIGN
-    model_key: sign
+    model_key: gidn
     model_plain: SIGN
-    value: 0.6664
-    std: 0.0064
+    value: 0.7096
+    std: 0.0055
     metric: Hits@50
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2409.17475'
-    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
-      Networks
-    date: Sep 26, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-26'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/tensor-gales/HeteLinkPred
+    arxiv_id: '2210.01301'
+    title: 'GIDN: A Lightweight Graph Inception Diffusion Network for High-efficient
+      Link Prediction'
+    date: Oct 4, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-04'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.6664
-    sort_std: 0.0064
+    sort_value: 0.7096
+    sort_std: 0.0055
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -228,10 +228,10 @@ results:
     value_note: ''
     sort_value: 0.6621
     sort_std: 0.0033
-    global_rank: 4
-    paper_rank: 60
-    rank_delta: 56
-    rank_delta_abs: 56
+    global_rank: 7
+    paper_rank: 75
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -287,7 +287,7 @@ results:
     today_delta_significant: false
     sort_value: 0.5474
     sort_std: 0.0106
-    global_rank: 27
+    global_rank: 31
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -358,8 +358,8 @@ results:
     value_note: ''
     sort_value: 0.5463
     sort_std: 0.0112
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -417,7 +417,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4927
     sort_std: 0.0096
-    global_rank: 49
+    global_rank: 57
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -479,7 +479,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3303
     sort_std: 0.0511
-    global_rank: 75
+    global_rank: 90
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -541,7 +541,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2839
     sort_std: 0.0251
-    global_rank: 76
+    global_rank: 91
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -715,7 +715,7 @@ results:
     today_delta_significant: false
     sort_value: 0.66
     sort_std: 0.0949
-    global_rank: 15
+    global_rank: 18
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -777,7 +777,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6591
     sort_std: 0.035
-    global_rank: 15
+    global_rank: 18
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -848,8 +848,8 @@ results:
     value_note: ''
     sort_value: 0.539
     sort_std: 0.0474
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -915,10 +915,10 @@ results:
     value_note: ''
     sort_value: 0.499
     sort_std: 0.0723
-    global_rank: 23
-    paper_rank: 26
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 28
+    paper_rank: 32
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -974,7 +974,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4226
     sort_std: 0.0485
-    global_rank: 25
+    global_rank: 31
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1036,7 +1036,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2043
     sort_std: 0.0466
-    global_rank: 44
+    global_rank: 51
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1098,7 +1098,7 @@ results:
     today_delta_significant: false
     sort_value: 0.1387
     sort_std: 0.0481
-    global_rank: 51
+    global_rank: 58
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1160,7 +1160,7 @@ results:
     today_delta_significant: false
     sort_value: 0.1056
     sort_std: 0.0677
-    global_rank: 53
+    global_rank: 60
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1586,5 +1586,6 @@ datasets_by_scope:
       dataset_slug: ogbl-ppa
     - dataset: ogbl-ddi
       dataset_slug: ogbl-ddi
+main_figure: /figures/2201.02534/main_figure.jpegoptim.jpg
 ---
 

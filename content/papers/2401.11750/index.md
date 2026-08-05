@@ -78,9 +78,9 @@ results:
 - &id001
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -170,9 +170,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 466
-    rank_delta: 464
-    rank_delta_abs: 464
+    paper_rank: 463
+    rank_delta: 461
+    rank_delta_abs: 461
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -180,9 +180,9 @@ results:
     comparison_source_arxiv: '2306.02285'
     is_best: false
     is_std_outlier: false
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: gat
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -271,10 +271,10 @@ results:
     value_note: ''
     sort_value: 0.9181
     sort_std: 0.002
-    global_rank: 35
-    paper_rank: 463
-    rank_delta: 428
-    rank_delta_abs: 428
+    global_rank: 34
+    paper_rank: 460
+    rank_delta: 426
+    rank_delta_abs: 426
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -312,15 +312,16 @@ results:
     date_iso: '2024-01-22'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8882
-    at_pub_std: 0.0008
-    at_pub_source_arxiv: '2305.06142'
-    at_pub_source_title: Feature Expansion for Graph Neural Networks
-    at_pub_source_date_iso: '2023-05-10'
-    at_pub_source_date_label: ICML 2023
+    at_pub_value: 0.8482
+    at_pub_std: 0.01
+    at_pub_source_arxiv: '2310.17132'
+    at_pub_source_title: 'BiKT: Unleashing the potential of GNNs via Bi-directional
+      Knowledge Transfer'
+    at_pub_source_date_iso: '2023-10-26'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2024-03-02'
     value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.07819999999999994
+    gap_vs_at_pub: 0.0381999999999999
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -339,15 +340,16 @@ results:
     value_note: ''
     sort_value: 0.9104
     sort_std: 0.0041
-    global_rank: 72
-    paper_rank: 463
-    rank_delta: 391
-    rank_delta_abs: 391
+    global_rank: 73
+    paper_rank: 460
+    rank_delta: 387
+    rank_delta_abs: 387
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Feature Expansion for Graph Neural Networks
-    comparison_source_arxiv: '2305.06142'
+    comparison_source_title: 'BiKT: Unleashing the potential of GNNs via Bi-directional
+      Knowledge Transfer'
+    comparison_source_arxiv: '2310.17132'
     is_best: false
     is_std_outlier: false
   - model: GPRGNN
@@ -408,10 +410,10 @@ results:
     value_note: ''
     sort_value: 0.905
     sort_std: 0.0091
-    global_rank: 97
-    paper_rank: 464
-    rank_delta: 367
-    rank_delta_abs: 367
+    global_rank: 99
+    paper_rank: 461
+    rank_delta: 362
+    rank_delta_abs: 362
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -478,10 +480,10 @@ results:
     value_note: ''
     sort_value: 0.8912
     sort_std: 0.0033
-    global_rank: 185
-    paper_rank: 463
-    rank_delta: 278
-    rank_delta_abs: 278
+    global_rank: 188
+    paper_rank: 460
+    rank_delta: 272
+    rank_delta_abs: 272
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -547,8 +549,8 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.005
-    global_rank: 381
-    paper_rank: 463
+    global_rank: 378
+    paper_rank: 460
     rank_delta: 82
     rank_delta_abs: 82
     rank_delta_direction: worse
@@ -615,8 +617,8 @@ results:
     value_note: ''
     sort_value: 0.836
     sort_std: 0.004
-    global_rank: 403
-    paper_rank: 403
+    global_rank: 400
+    paper_rank: 400
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -683,8 +685,8 @@ results:
     value_note: ''
     sort_value: 0.821
     sort_std: 0.012
-    global_rank: 440
-    paper_rank: 440
+    global_rank: 437
+    paper_rank: 437
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -751,8 +753,8 @@ results:
     value_note: ''
     sort_value: 0.815
     sort_std: 0.003
-    global_rank: 453
-    paper_rank: 453
+    global_rank: 450
+    paper_rank: 450
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -819,8 +821,8 @@ results:
     value_note: ''
     sort_value: 0.813
     sort_std: 0.009
-    global_rank: 456
-    paper_rank: 456
+    global_rank: 453
+    paper_rank: 453
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -887,8 +889,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.002
-    global_rank: 472
-    paper_rank: 472
+    global_rank: 469
+    paper_rank: 469
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -921,5 +923,6 @@ datasets_by_scope:
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
 single_proposed_model: AdaFGL
+main_figure: /figures/2401.11750/main_figure.jpegoptim.jpg
 ---
 

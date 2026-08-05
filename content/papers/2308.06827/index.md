@@ -2746,5 +2746,6 @@ datasets_by_scope:
     - dataset: BAT
       dataset_slug: bat
 single_proposed_model: RGC
+main_figure: /figures/2308.06827/main_figure.jpegoptim.jpg
 ---
 

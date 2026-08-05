@@ -80,9 +80,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -114,9 +114,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -238,8 +238,8 @@ results:
     value_note: ''
     sort_value: 0.8189
     sort_std: 0.0035
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -306,8 +306,8 @@ results:
     value_note: ''
     sort_value: 0.8155
     sort_std: 0.0035
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -374,10 +374,10 @@ results:
     value_note: ''
     sort_value: 0.7986
     sort_std: 0.0015
-    global_rank: 141
-    paper_rank: 188
-    rank_delta: 47
-    rank_delta_abs: 47
+    global_rank: 149
+    paper_rank: 203
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -442,8 +442,8 @@ results:
     value_note: ''
     sort_value: 0.7945
     sort_std: 0.0059
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -510,8 +510,8 @@ results:
     value_note: ''
     sort_value: 0.7933
     sort_std: 0.0031
-    global_rank: 161
-    paper_rank: 161
+    global_rank: 173
+    paper_rank: 173
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -578,8 +578,8 @@ results:
     value_note: ''
     sort_value: 0.7933
     sort_std: 0.0031
-    global_rank: 162
-    paper_rank: 162
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -646,8 +646,8 @@ results:
     value_note: ''
     sort_value: 0.7909
     sort_std: 0.0042
-    global_rank: 172
-    paper_rank: 172
+    global_rank: 186
+    paper_rank: 186
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -714,8 +714,8 @@ results:
     value_note: ''
     sort_value: 0.7909
     sort_std: 0.0042
-    global_rank: 173
-    paper_rank: 173
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -782,8 +782,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.0036
-    global_rank: 190
-    paper_rank: 190
+    global_rank: 206
+    paper_rank: 206
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -805,9 +805,9 @@ results:
 - &id002
   dataset: ogbn-proteins
   rows:
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8942
     std: 0.0007
     metric: ROC-AUC
@@ -839,9 +839,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: x_wo/ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8915
     std: 0.0012
     metric: ROC-AUC
@@ -873,9 +873,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: mog
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8904
     std: 0.0072
     metric: ROC-AUC
@@ -963,8 +963,8 @@ results:
     value_note: ''
     sort_value: 0.7753
     sort_std: 0.007
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1031,8 +1031,8 @@ results:
     value_note: ''
     sort_value: 0.7691
     sort_std: 0.0102
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1099,8 +1099,8 @@ results:
     value_note: ''
     sort_value: 0.7644
     sort_std: 0.0081
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1167,8 +1167,8 @@ results:
     value_note: ''
     sort_value: 0.735
     sort_std: 0.0116
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1235,8 +1235,8 @@ results:
     value_note: ''
     sort_value: 0.7251
     sort_std: 0.0035
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1303,8 +1303,8 @@ results:
     value_note: ''
     sort_value: 0.7171
     sort_std: 0.005
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1339,5 +1339,6 @@ datasets_by_scope:
       dataset_slug: ogbn-products
     - dataset: ogbn-proteins
       dataset_slug: ogbn-proteins
+main_figure: /figures/2110.14855/main_figure.jpegoptim.jpg
 ---
 

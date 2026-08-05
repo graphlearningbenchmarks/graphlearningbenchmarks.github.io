@@ -16,17 +16,17 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 274,
-    "recent_results_per_dataset": 12.5,
-    "total_result_count": 2462,
+    "paper_count": 283,
+    "recent_results_per_dataset": 13.7,
+    "total_result_count": 2484,
     "datasets": [
       {
         "name": "ogbn-products",
         "slug": "ogbn-products",
         "task_type": "node_classification",
-        "paper_count": 90,
-        "result_count": 605,
-        "recent_result_count": 33,
+        "paper_count": 92,
+        "result_count": 598,
+        "recent_result_count": 27,
         "variants": [
           {
             "name": "Standard split",
@@ -38,9 +38,9 @@
         "name": "ogbg-molhiv",
         "slug": "ogbg-molhiv",
         "task_type": "graph_classification",
-        "paper_count": 72,
-        "result_count": 377,
-        "recent_result_count": 11,
+        "paper_count": 75,
+        "result_count": 380,
+        "recent_result_count": 14,
         "variants": [
           {
             "name": "Standard split",
@@ -52,23 +52,9 @@
         "name": "ogbn-papers100M",
         "slug": "ogbn-papers100m",
         "task_type": "node_classification",
-        "paper_count": 33,
-        "result_count": 135,
+        "paper_count": 34,
+        "result_count": 137,
         "recent_result_count": 4,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "ogbn-arxiv",
-        "slug": "ogbn-arxiv",
-        "task_type": "node_classification",
-        "paper_count": 29,
-        "result_count": 180,
-        "recent_result_count": 27,
         "variants": [
           {
             "name": "Standard split",
@@ -80,9 +66,23 @@
         "name": "ogbg-molpcba",
         "slug": "ogbg-molpcba",
         "task_type": "graph_classification",
-        "paper_count": 27,
-        "result_count": 189,
-        "recent_result_count": 23,
+        "paper_count": 31,
+        "result_count": 184,
+        "recent_result_count": 25,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "ogbn-arxiv",
+        "slug": "ogbn-arxiv",
+        "task_type": "node_classification",
+        "paper_count": 30,
+        "result_count": 171,
+        "recent_result_count": 29,
         "variants": [
           {
             "name": "Standard split",
@@ -109,7 +109,7 @@
         "slug": "ogbl-ppa",
         "task_type": "link_prediction",
         "paper_count": 26,
-        "result_count": 99,
+        "result_count": 100,
         "recent_result_count": 0,
         "variants": [
           {
@@ -123,7 +123,7 @@
         "slug": "ogbl-citation2",
         "task_type": "link_prediction",
         "paper_count": 24,
-        "result_count": 111,
+        "result_count": 112,
         "recent_result_count": 3,
         "variants": [
           {
@@ -147,11 +147,39 @@
         ]
       },
       {
+        "name": "ogbn-proteins",
+        "slug": "ogbn-proteins",
+        "task_type": "node_classification",
+        "paper_count": 19,
+        "result_count": 117,
+        "recent_result_count": 37,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "ogbn-mag",
+        "slug": "ogbn-mag",
+        "task_type": "node_classification",
+        "paper_count": 18,
+        "result_count": 101,
+        "recent_result_count": 19,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
         "name": "PCQM4Mv2",
         "slug": "pcqm4mv2",
         "task_type": "graph_regression",
-        "paper_count": 21,
-        "result_count": 126,
+        "paper_count": 17,
+        "result_count": 117,
         "recent_result_count": 32,
         "variants": [
           {
@@ -165,39 +193,11 @@
         ]
       },
       {
-        "name": "ogbn-mag",
-        "slug": "ogbn-mag",
-        "task_type": "node_classification",
-        "paper_count": 19,
-        "result_count": 111,
-        "recent_result_count": 19,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "ogbn-proteins",
-        "slug": "ogbn-proteins",
-        "task_type": "node_classification",
-        "paper_count": 16,
-        "result_count": 101,
-        "recent_result_count": 38,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
         "name": "ogbg-ppa",
         "slug": "ogbg-ppa",
         "task_type": "graph_classification",
-        "paper_count": 13,
-        "result_count": 44,
+        "paper_count": 16,
+        "result_count": 53,
         "recent_result_count": 8,
         "variants": [
           {
@@ -221,224 +221,11 @@
         ]
       },
       {
-        "name": "ogbl-biokg",
-        "slug": "ogbl-biokg",
-        "task_type": "link_prediction",
-        "paper_count": 6,
-        "result_count": 12,
-        "recent_result_count": 0,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
         "name": "Code",
         "slug": "code",
         "task_type": "graph_classification",
-        "paper_count": 3,
-        "result_count": 17,
-        "recent_result_count": 0,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Heterophilic Graphs",
-    "slug": "heterophilic-graphs",
-    "description": "Non-homophilous node classification benchmarks (WebKB, Wikipedia, LINKX, and related).",
-    "arxiv_id": "2110.14446",
-    "paper_title": "LINKX Benchmarks",
-    "source_papers": [
-      {
-        "arxiv_id": "2110.14446",
-        "title": "LINKX Benchmarks",
-        "role": "Benchmark paper",
-        "url": "https://arxiv.org/abs/2110.14446",
-        "is_local": false
-      }
-    ],
-    "no_single_introduction_paper": false,
-    "is_legacy": false,
-    "paper_count": 253,
-    "recent_results_per_dataset": 84.2,
-    "total_result_count": 5056,
-    "datasets": [
-      {
-        "name": "Texas",
-        "slug": "texas",
-        "task_type": "node_classification",
-        "paper_count": 159,
-        "result_count": 987,
-        "recent_result_count": 193,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Cornell",
-        "slug": "cornell",
-        "task_type": "node_classification",
-        "paper_count": 141,
-        "result_count": 870,
-        "recent_result_count": 151,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Actor",
-        "slug": "actor",
-        "task_type": "node_classification",
-        "paper_count": 116,
-        "result_count": 722,
-        "recent_result_count": 109,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Chameleon",
-        "slug": "chameleon",
-        "task_type": "node_classification",
-        "paper_count": 58,
-        "result_count": 401,
-        "recent_result_count": 104,
-        "variants": [
-          {
-            "name": "Filtered split",
-            "slug": "filtered-split"
-          },
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Squirrel",
-        "slug": "squirrel",
-        "task_type": "node_classification",
-        "paper_count": 54,
-        "result_count": 402,
-        "recent_result_count": 95,
-        "variants": [
-          {
-            "name": "Filtered split",
-            "slug": "filtered-split"
-          },
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Roman-empire",
-        "slug": "roman-empire",
-        "task_type": "node_classification",
-        "paper_count": 38,
-        "result_count": 265,
-        "recent_result_count": 81,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Wisconsin",
-        "slug": "wisconsin",
-        "task_type": "node_classification",
-        "paper_count": 37,
-        "result_count": 279,
-        "recent_result_count": 49,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Amazon-ratings",
-        "slug": "amazon-ratings",
-        "task_type": "node_classification",
-        "paper_count": 35,
-        "result_count": 263,
-        "recent_result_count": 71,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Questions",
-        "slug": "questions",
-        "task_type": "node_classification",
-        "paper_count": 29,
-        "result_count": 266,
-        "recent_result_count": 67,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Tolokers",
-        "slug": "tolokers",
-        "task_type": "node_classification",
-        "paper_count": 28,
-        "result_count": 235,
-        "recent_result_count": 58,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Minesweeper",
-        "slug": "minesweeper",
-        "task_type": "node_classification",
-        "paper_count": 26,
-        "result_count": 255,
-        "recent_result_count": 93,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "Film",
-        "slug": "film",
-        "task_type": "node_classification",
-        "paper_count": 17,
-        "result_count": 92,
+        "paper_count": 7,
+        "result_count": 47,
         "recent_result_count": 19,
         "variants": [
           {
@@ -448,12 +235,12 @@
         ]
       },
       {
-        "name": "Deezer",
-        "slug": "deezer",
-        "task_type": "node_classification",
-        "paper_count": 2,
-        "result_count": 19,
-        "recent_result_count": 5,
+        "name": "ogbl-biokg",
+        "slug": "ogbl-biokg",
+        "task_type": "link_prediction",
+        "paper_count": 6,
+        "result_count": 12,
+        "recent_result_count": 0,
         "variants": [
           {
             "name": "Standard split",
@@ -480,31 +267,17 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 107,
-    "recent_results_per_dataset": 36.7,
-    "total_result_count": 2766,
+    "paper_count": 113,
+    "recent_results_per_dataset": 32.9,
+    "total_result_count": 2681,
     "datasets": [
       {
         "name": "Tox21",
         "slug": "tox21",
         "task_type": "graph_classification",
-        "paper_count": 65,
-        "result_count": 489,
-        "recent_result_count": 58,
-        "variants": [
-          {
-            "name": "Scaffold split",
-            "slug": "scaffold-split"
-          }
-        ]
-      },
-      {
-        "name": "BBBP",
-        "slug": "bbbp",
-        "task_type": "graph_classification",
-        "paper_count": 62,
-        "result_count": 422,
-        "recent_result_count": 69,
+        "paper_count": 68,
+        "result_count": 481,
+        "recent_result_count": 50,
         "variants": [
           {
             "name": "Scaffold split",
@@ -516,9 +289,23 @@
         "name": "BACE",
         "slug": "bace",
         "task_type": "graph_classification",
-        "paper_count": 62,
-        "result_count": 427,
-        "recent_result_count": 71,
+        "paper_count": 64,
+        "result_count": 413,
+        "recent_result_count": 72,
+        "variants": [
+          {
+            "name": "Scaffold split",
+            "slug": "scaffold-split"
+          }
+        ]
+      },
+      {
+        "name": "BBBP",
+        "slug": "bbbp",
+        "task_type": "graph_classification",
+        "paper_count": 63,
+        "result_count": 400,
+        "recent_result_count": 54,
         "variants": [
           {
             "name": "Scaffold split",
@@ -530,9 +317,9 @@
         "name": "ClinTox",
         "slug": "clintox",
         "task_type": "graph_classification",
-        "paper_count": 50,
-        "result_count": 338,
-        "recent_result_count": 52,
+        "paper_count": 52,
+        "result_count": 310,
+        "recent_result_count": 35,
         "variants": [
           {
             "name": "Scaffold split",
@@ -544,9 +331,9 @@
         "name": "SIDER",
         "slug": "sider",
         "task_type": "graph_classification",
-        "paper_count": 47,
-        "result_count": 292,
-        "recent_result_count": 21,
+        "paper_count": 51,
+        "result_count": 302,
+        "recent_result_count": 26,
         "variants": [
           {
             "name": "Scaffold split",
@@ -558,8 +345,8 @@
         "name": "ToxCast",
         "slug": "toxcast",
         "task_type": "graph_classification",
-        "paper_count": 45,
-        "result_count": 299,
+        "paper_count": 46,
+        "result_count": 285,
         "recent_result_count": 0,
         "variants": [
           {
@@ -572,8 +359,8 @@
         "name": "ESOL",
         "slug": "esol",
         "task_type": "graph_regression",
-        "paper_count": 28,
-        "result_count": 191,
+        "paper_count": 29,
+        "result_count": 198,
         "recent_result_count": 31,
         "variants": [
           {
@@ -586,8 +373,8 @@
         "name": "FreeSolv",
         "slug": "freesolv",
         "task_type": "graph_regression",
-        "paper_count": 26,
-        "result_count": 179,
+        "paper_count": 25,
+        "result_count": 163,
         "recent_result_count": 17,
         "variants": [
           {
@@ -616,28 +403,35 @@
     "name": "Heterogeneous Graph Benchmarks",
     "slug": "heterogeneous-graph-benchmarks",
     "description": "Heterogeneous graph datasets from the MAGNN and HGB benchmark papers.",
-    "arxiv_id": "2002.01680",
+    "arxiv_id": "2112.14936",
     "paper_title": "Heterogeneous Graph Benchmarks",
     "source_papers": [
       {
+        "arxiv_id": "2112.14936",
+        "title": "Heterogeneous Graph Benchmarks",
+        "role": "Heterogeneous Graph Benchmark (HGB) introduction",
+        "url": "/papers/2112.14936/",
+        "is_local": true
+      },
+      {
         "arxiv_id": "2002.01680",
         "title": "Heterogeneous Graph Benchmarks",
-        "role": "Benchmark paper",
+        "role": "MAGNN dataset provenance",
         "url": "https://arxiv.org/abs/2002.01680",
         "is_local": false
       }
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 84,
+    "paper_count": 89,
     "recent_results_per_dataset": 38.5,
-    "total_result_count": 1328,
+    "total_result_count": 1358,
     "datasets": [
       {
         "name": "DBLP",
         "slug": "dblp",
         "task_type": "node_classification",
-        "paper_count": 64,
+        "paper_count": 67,
         "result_count": 590,
         "recent_result_count": 84,
         "variants": [
@@ -651,8 +445,8 @@
         "name": "ACM",
         "slug": "acm",
         "task_type": "node_classification",
-        "paper_count": 38,
-        "result_count": 361,
+        "paper_count": 42,
+        "result_count": 398,
         "recent_result_count": 38,
         "variants": [
           {
@@ -665,8 +459,8 @@
         "name": "IMDB",
         "slug": "imdb",
         "task_type": "node_classification",
-        "paper_count": 28,
-        "result_count": 295,
+        "paper_count": 29,
+        "result_count": 287,
         "recent_result_count": 25,
         "variants": [
           {
@@ -679,8 +473,8 @@
         "name": "Freebase",
         "slug": "freebase",
         "task_type": "node_classification",
-        "paper_count": 8,
-        "result_count": 82,
+        "paper_count": 10,
+        "result_count": 83,
         "recent_result_count": 7,
         "variants": [
           {
@@ -708,17 +502,17 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 77,
-    "recent_results_per_dataset": 8.3,
-    "total_result_count": 518,
+    "paper_count": 76,
+    "recent_results_per_dataset": 3.7,
+    "total_result_count": 505,
     "datasets": [
       {
         "name": "MD17",
         "slug": "md17",
         "task_type": "graph_regression",
-        "paper_count": 50,
-        "result_count": 288,
-        "recent_result_count": 17,
+        "paper_count": 49,
+        "result_count": 280,
+        "recent_result_count": 11,
         "variants": [
           {
             "name": "Standard split",
@@ -730,9 +524,9 @@
         "name": "QM9",
         "slug": "qm9",
         "task_type": "graph_regression",
-        "paper_count": 18,
-        "result_count": 132,
-        "recent_result_count": 8,
+        "paper_count": 19,
+        "result_count": 129,
+        "recent_result_count": 0,
         "variants": [
           {
             "name": "Standard split",
@@ -744,8 +538,8 @@
         "name": "QM7b",
         "slug": "qm7b",
         "task_type": "graph_regression",
-        "paper_count": 14,
-        "result_count": 98,
+        "paper_count": 13,
+        "result_count": 96,
         "recent_result_count": 0,
         "variants": [
           {
@@ -773,17 +567,17 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 60,
-    "recent_results_per_dataset": 20.0,
-    "total_result_count": 690,
+    "paper_count": 75,
+    "recent_results_per_dataset": 33.8,
+    "total_result_count": 862,
     "datasets": [
       {
         "name": "Peptides-struct",
         "slug": "peptides-struct",
         "task_type": "graph_regression",
-        "paper_count": 31,
-        "result_count": 222,
-        "recent_result_count": 29,
+        "paper_count": 44,
+        "result_count": 252,
+        "recent_result_count": 30,
         "variants": [
           {
             "name": "Standard split",
@@ -795,9 +589,23 @@
         "name": "Peptides-func",
         "slug": "peptides-func",
         "task_type": "graph_classification",
-        "paper_count": 27,
-        "result_count": 197,
-        "recent_result_count": 49,
+        "paper_count": 41,
+        "result_count": 254,
+        "recent_result_count": 62,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "PascalVOC-SP",
+        "slug": "pascalvoc-sp",
+        "task_type": "node_classification",
+        "paper_count": 22,
+        "result_count": 142,
+        "recent_result_count": 29,
         "variants": [
           {
             "name": "Standard split",
@@ -820,12 +628,49 @@
         ]
       },
       {
-        "name": "PascalVOC-SP",
-        "slug": "pascalvoc-sp",
+        "name": "COCO-SP",
+        "slug": "coco-sp",
         "task_type": "node_classification",
-        "paper_count": 13,
-        "result_count": 100,
-        "recent_result_count": 4,
+        "paper_count": 14,
+        "result_count": 104,
+        "recent_result_count": 45,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Heterophily Benchmark",
+    "slug": "heterophily-benchmark",
+    "description": "Five replacement datasets proposed for more reliable evaluation under graph heterophily.",
+    "arxiv_id": "2302.11640",
+    "paper_title": "Heterophily Benchmark",
+    "source_papers": [
+      {
+        "arxiv_id": "2302.11640",
+        "title": "Heterophily Benchmark",
+        "role": "Replacement five-dataset benchmark",
+        "url": "https://arxiv.org/abs/2302.11640",
+        "is_local": false
+      }
+    ],
+    "no_single_introduction_paper": false,
+    "is_legacy": false,
+    "paper_count": 74,
+    "recent_results_per_dataset": 89.0,
+    "total_result_count": 1432,
+    "datasets": [
+      {
+        "name": "Roman-empire",
+        "slug": "roman-empire",
+        "task_type": "node_classification",
+        "paper_count": 44,
+        "result_count": 314,
+        "recent_result_count": 117,
         "variants": [
           {
             "name": "Standard split",
@@ -834,12 +679,54 @@
         ]
       },
       {
-        "name": "COCO-SP",
-        "slug": "coco-sp",
+        "name": "Amazon-ratings",
+        "slug": "amazon-ratings",
         "task_type": "node_classification",
-        "paper_count": 8,
-        "result_count": 61,
-        "recent_result_count": 15,
+        "paper_count": 39,
+        "result_count": 292,
+        "recent_result_count": 86,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Questions",
+        "slug": "questions",
+        "task_type": "node_classification",
+        "paper_count": 33,
+        "result_count": 291,
+        "recent_result_count": 85,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Tolokers",
+        "slug": "tolokers",
+        "task_type": "node_classification",
+        "paper_count": 32,
+        "result_count": 260,
+        "recent_result_count": 61,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Minesweeper",
+        "slug": "minesweeper",
+        "task_type": "node_classification",
+        "paper_count": 31,
+        "result_count": 275,
+        "recent_result_count": 96,
         "variants": [
           {
             "name": "Standard split",
@@ -866,17 +753,31 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 59,
-    "recent_results_per_dataset": 11.2,
-    "total_result_count": 704,
+    "paper_count": 69,
+    "recent_results_per_dataset": 8.8,
+    "total_result_count": 817,
     "datasets": [
       {
         "name": "MNIST",
         "slug": "mnist",
         "task_type": "graph_classification",
-        "paper_count": 30,
+        "paper_count": 33,
         "result_count": 175,
-        "recent_result_count": 26,
+        "recent_result_count": 12,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "CIFAR10",
+        "slug": "cifar10",
+        "task_type": "graph_classification",
+        "paper_count": 28,
+        "result_count": 162,
+        "recent_result_count": 4,
         "variants": [
           {
             "name": "Standard split",
@@ -888,8 +789,8 @@
         "name": "CLUSTER",
         "slug": "cluster",
         "task_type": "node_classification",
-        "paper_count": 22,
-        "result_count": 157,
+        "paper_count": 26,
+        "result_count": 178,
         "recent_result_count": 16,
         "variants": [
           {
@@ -902,23 +803,9 @@
         "name": "PATTERN",
         "slug": "pattern",
         "task_type": "node_classification",
-        "paper_count": 21,
-        "result_count": 146,
+        "paper_count": 26,
+        "result_count": 165,
         "recent_result_count": 17,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "CIFAR10",
-        "slug": "cifar10",
-        "task_type": "graph_classification",
-        "paper_count": 19,
-        "result_count": 121,
-        "recent_result_count": 4,
         "variants": [
           {
             "name": "Standard split",
@@ -930,8 +817,8 @@
         "name": "CSL",
         "slug": "csl",
         "task_type": "graph_classification",
-        "paper_count": 16,
-        "result_count": 78,
+        "paper_count": 22,
+        "result_count": 110,
         "recent_result_count": 4,
         "variants": [
           {
@@ -959,30 +846,30 @@
   {
     "name": "LINKX Benchmarks",
     "slug": "linkx-benchmarks",
-    "description": "Large-scale non-homophilous graph benchmarks from the LINKX paper.",
+    "description": "Large-scale non-homophilous graph benchmarks from LINKX and related evaluations.",
     "arxiv_id": "2110.14446",
     "paper_title": "LINKX Benchmarks",
     "source_papers": [
       {
         "arxiv_id": "2110.14446",
         "title": "LINKX Benchmarks",
-        "role": "Benchmark paper",
+        "role": "Benchmark introduction",
         "url": "https://arxiv.org/abs/2110.14446",
         "is_local": false
       }
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 46,
-    "recent_results_per_dataset": 10.4,
-    "total_result_count": 374,
+    "paper_count": 51,
+    "recent_results_per_dataset": 9.5,
+    "total_result_count": 417,
     "datasets": [
       {
         "name": "Penn94",
         "slug": "penn94",
         "task_type": "node_classification",
-        "paper_count": 21,
-        "result_count": 114,
+        "paper_count": 20,
+        "result_count": 106,
         "recent_result_count": 11,
         "variants": [
           {
@@ -1009,8 +896,8 @@
         "name": "Pokec",
         "slug": "pokec",
         "task_type": "node_classification",
-        "paper_count": 11,
-        "result_count": 74,
+        "paper_count": 12,
+        "result_count": 80,
         "recent_result_count": 24,
         "variants": [
           {
@@ -1023,8 +910,8 @@
         "name": "arxiv-year",
         "slug": "arxiv-year",
         "task_type": "node_classification",
-        "paper_count": 11,
-        "result_count": 62,
+        "paper_count": 12,
+        "result_count": 64,
         "recent_result_count": 10,
         "variants": [
           {
@@ -1037,9 +924,23 @@
         "name": "snap-patents",
         "slug": "snap-patents",
         "task_type": "node_classification",
-        "paper_count": 8,
-        "result_count": 34,
+        "paper_count": 9,
+        "result_count": 43,
         "recent_result_count": 0,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Deezer",
+        "slug": "deezer",
+        "task_type": "node_classification",
+        "paper_count": 3,
+        "result_count": 34,
+        "recent_result_count": 5,
         "variants": [
           {
             "name": "Standard split",
@@ -1059,30 +960,16 @@
     "no_single_introduction_paper": true,
     "is_legacy": false,
     "paper_count": 45,
-    "recent_results_per_dataset": 16.5,
-    "total_result_count": 388,
+    "recent_results_per_dataset": 13.6,
+    "total_result_count": 372,
     "datasets": [
       {
         "name": "Amazon2M",
         "slug": "amazon2m",
         "task_type": "node_classification",
-        "paper_count": 33,
-        "result_count": 306,
-        "recent_result_count": 45,
-        "variants": [
-          {
-            "name": "Standard split",
-            "slug": "standard-split"
-          }
-        ]
-      },
-      {
-        "name": "ShapeNet-Part",
-        "slug": "shapenet-part",
-        "task_type": "node_classification",
-        "paper_count": 5,
-        "result_count": 40,
-        "recent_result_count": 16,
+        "paper_count": 31,
+        "result_count": 283,
+        "recent_result_count": 38,
         "variants": [
           {
             "name": "Standard split",
@@ -1094,9 +981,23 @@
         "name": "MalNet-Tiny",
         "slug": "malnet-tiny",
         "task_type": "graph_classification",
+        "paper_count": 6,
+        "result_count": 37,
+        "recent_result_count": 14,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "ShapeNet-Part",
+        "slug": "shapenet-part",
+        "task_type": "node_classification",
         "paper_count": 4,
-        "result_count": 21,
-        "recent_result_count": 5,
+        "result_count": 24,
+        "recent_result_count": 16,
         "variants": [
           {
             "name": "Standard split",
@@ -1110,6 +1011,20 @@
         "task_type": "graph_classification",
         "paper_count": 3,
         "result_count": 21,
+        "recent_result_count": 0,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "MovieLens Film",
+        "slug": "movielens-film",
+        "task_type": "node_classification",
+        "paper_count": 1,
+        "result_count": 7,
         "recent_result_count": 0,
         "variants": [
           {
@@ -1365,9 +1280,9 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 8,
-    "recent_results_per_dataset": 3.6,
-    "total_result_count": 73,
+    "paper_count": 9,
+    "recent_results_per_dataset": 4.1,
+    "total_result_count": 88,
     "datasets": [
       {
         "name": "ER graph",
@@ -1450,6 +1365,84 @@
             "slug": "standard-split"
           }
         ]
+      },
+      {
+        "name": "MST",
+        "slug": "mst",
+        "task_type": "graph_classification",
+        "paper_count": 1,
+        "result_count": 5,
+        "recent_result_count": 5,
+        "variants": [
+          {
+            "name": "Easy",
+            "slug": "easy"
+          },
+          {
+            "name": "Hard",
+            "slug": "hard"
+          },
+          {
+            "name": "Medium",
+            "slug": "medium"
+          },
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Bridges",
+        "slug": "bridges",
+        "task_type": "graph_classification",
+        "paper_count": 1,
+        "result_count": 5,
+        "recent_result_count": 5,
+        "variants": [
+          {
+            "name": "Easy",
+            "slug": "easy"
+          },
+          {
+            "name": "Hard",
+            "slug": "hard"
+          },
+          {
+            "name": "Medium",
+            "slug": "medium"
+          },
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Flow",
+        "slug": "flow",
+        "task_type": "graph_regression",
+        "paper_count": 1,
+        "result_count": 5,
+        "recent_result_count": 5,
+        "variants": [
+          {
+            "name": "Easy",
+            "slug": "easy"
+          },
+          {
+            "name": "Hard",
+            "slug": "hard"
+          },
+          {
+            "name": "Medium",
+            "slug": "medium"
+          },
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
       }
     ]
   },
@@ -1472,14 +1465,14 @@
     "is_legacy": false,
     "paper_count": 4,
     "recent_results_per_dataset": 0.0,
-    "total_result_count": 69,
+    "total_result_count": 54,
     "datasets": [
       {
         "name": "SSSP",
         "slug": "sssp",
         "task_type": "graph_regression",
         "paper_count": 4,
-        "result_count": 45,
+        "result_count": 33,
         "recent_result_count": 0,
         "variants": [
           {
@@ -1492,8 +1485,8 @@
         "name": "Eccentricity",
         "slug": "eccentricity",
         "task_type": "graph_regression",
-        "paper_count": 4,
-        "result_count": 24,
+        "paper_count": 3,
+        "result_count": 21,
         "recent_result_count": 0,
         "variants": [
           {
@@ -1521,9 +1514,9 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 2,
+    "paper_count": 3,
     "recent_results_per_dataset": 0.0,
-    "total_result_count": 50,
+    "total_result_count": 54,
     "datasets": [
       {
         "name": "Ribonanza",
@@ -1554,11 +1547,11 @@
         ]
       },
       {
-        "name": "COVID",
-        "slug": "covid",
+        "name": "TorsionAngle",
+        "slug": "torsionangle",
         "task_type": "graph_regression",
-        "paper_count": 1,
-        "result_count": 8,
+        "paper_count": 2,
+        "result_count": 12,
         "recent_result_count": 0,
         "variants": [
           {
@@ -1568,8 +1561,8 @@
         ]
       },
       {
-        "name": "TorsionAngle",
-        "slug": "torsionangle",
+        "name": "COVID",
+        "slug": "covid",
         "task_type": "graph_regression",
         "paper_count": 1,
         "result_count": 8,
@@ -1733,8 +1726,16 @@
     "description": "LRIM — the Long-Range Ising Model Graph Benchmark, a physics-grounded suite for controlled long-range graph learning evaluation across ten datasets spanning multiple graph sizes and difficulty levels.\n",
     "arxiv_id": "",
     "paper_title": "",
-    "source_papers": [],
-    "no_single_introduction_paper": true,
+    "source_papers": [
+      {
+        "arxiv_id": "",
+        "title": "Long-Range Ising Model Graph Benchmark",
+        "role": "Benchmark introduction",
+        "url": "https://openreview.net/forum?id=IAZXEX1dVV",
+        "is_local": false
+      }
+    ],
+    "no_single_introduction_paper": false,
     "is_legacy": false,
     "paper_count": 2,
     "recent_results_per_dataset": 8.0,
@@ -1903,17 +1904,17 @@
     "source_papers": [],
     "no_single_introduction_paper": true,
     "is_legacy": true,
-    "paper_count": 498,
-    "recent_results_per_dataset": 76.0,
-    "total_result_count": 7717,
+    "paper_count": 541,
+    "recent_results_per_dataset": 77.2,
+    "total_result_count": 8402,
     "datasets": [
       {
         "name": "Cora",
         "slug": "cora",
         "task_type": "node_classification",
-        "paper_count": 180,
-        "result_count": 1220,
-        "recent_result_count": 218,
+        "paper_count": 224,
+        "result_count": 1463,
+        "recent_result_count": 228,
         "variants": [
           {
             "name": "Random 10-fold",
@@ -1929,9 +1930,9 @@
         "name": "CiteSeer",
         "slug": "citeseer",
         "task_type": "node_classification",
-        "paper_count": 167,
-        "result_count": 1156,
-        "recent_result_count": 91,
+        "paper_count": 203,
+        "result_count": 1365,
+        "recent_result_count": 105,
         "variants": [
           {
             "name": "Planetoid split",
@@ -1943,9 +1944,9 @@
         "name": "PubMed",
         "slug": "pubmed",
         "task_type": "node_classification",
-        "paper_count": 164,
-        "result_count": 1094,
-        "recent_result_count": 125,
+        "paper_count": 201,
+        "result_count": 1324,
+        "recent_result_count": 123,
         "variants": [
           {
             "name": "Planetoid split",
@@ -1957,9 +1958,9 @@
         "name": "Amazon-Photo",
         "slug": "amazon-photo",
         "task_type": "node_classification",
-        "paper_count": 164,
-        "result_count": 988,
-        "recent_result_count": 137,
+        "paper_count": 161,
+        "result_count": 948,
+        "recent_result_count": 138,
         "variants": [
           {
             "name": "Standard split",
@@ -1971,8 +1972,8 @@
         "name": "Amazon-Computers",
         "slug": "amazon-computers",
         "task_type": "node_classification",
-        "paper_count": 140,
-        "result_count": 867,
+        "paper_count": 138,
+        "result_count": 848,
         "recent_result_count": 82,
         "variants": [
           {
@@ -1985,9 +1986,9 @@
         "name": "Reddit",
         "slug": "reddit",
         "task_type": "node_classification",
-        "paper_count": 88,
-        "result_count": 602,
-        "recent_result_count": 43,
+        "paper_count": 96,
+        "result_count": 657,
+        "recent_result_count": 41,
         "variants": [
           {
             "name": "Standard split",
@@ -1999,8 +2000,8 @@
         "name": "Coauthor-Physics",
         "slug": "coauthor-physics",
         "task_type": "node_classification",
-        "paper_count": 80,
-        "result_count": 488,
+        "paper_count": 78,
+        "result_count": 468,
         "recent_result_count": 56,
         "variants": [
           {
@@ -2013,9 +2014,9 @@
         "name": "WikiCS",
         "slug": "wikics",
         "task_type": "node_classification",
-        "paper_count": 61,
-        "result_count": 487,
-        "recent_result_count": 86,
+        "paper_count": 62,
+        "result_count": 498,
+        "recent_result_count": 79,
         "variants": [
           {
             "name": "Standard split",
@@ -2028,7 +2029,7 @@
         "slug": "coauthor-cs",
         "task_type": "node_classification",
         "paper_count": 54,
-        "result_count": 338,
+        "result_count": 346,
         "recent_result_count": 55,
         "variants": [
           {
@@ -2041,8 +2042,8 @@
         "name": "PPI",
         "slug": "ppi",
         "task_type": "node_classification",
-        "paper_count": 52,
-        "result_count": 290,
+        "paper_count": 54,
+        "result_count": 295,
         "recent_result_count": 3,
         "variants": [
           {
@@ -2055,8 +2056,8 @@
         "name": "ZINC",
         "slug": "zinc",
         "task_type": "graph_regression",
-        "paper_count": 32,
-        "result_count": 147,
+        "paper_count": 30,
+        "result_count": 150,
         "recent_result_count": 16,
         "variants": [
           {
@@ -2102,17 +2103,17 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": true,
-    "paper_count": 269,
-    "recent_results_per_dataset": 23.5,
-    "total_result_count": 4164,
+    "paper_count": 284,
+    "recent_results_per_dataset": 25.4,
+    "total_result_count": 4212,
     "datasets": [
       {
         "name": "MUTAG",
         "slug": "mutag",
         "task_type": "graph_classification",
-        "paper_count": 198,
-        "result_count": 1025,
-        "recent_result_count": 51,
+        "paper_count": 204,
+        "result_count": 1016,
+        "recent_result_count": 66,
         "variants": [
           {
             "name": "10-fold CV",
@@ -2124,9 +2125,9 @@
         "name": "NCI1",
         "slug": "nci1",
         "task_type": "graph_classification",
-        "paper_count": 137,
-        "result_count": 816,
-        "recent_result_count": 60,
+        "paper_count": 144,
+        "result_count": 826,
+        "recent_result_count": 59,
         "variants": [
           {
             "name": "10-fold CV",
@@ -2138,8 +2139,8 @@
         "name": "PROTEINS",
         "slug": "proteins",
         "task_type": "graph_classification",
-        "paper_count": 93,
-        "result_count": 544,
+        "paper_count": 104,
+        "result_count": 589,
         "recent_result_count": 18,
         "variants": [
           {
@@ -2152,8 +2153,8 @@
         "name": "COLLAB",
         "slug": "collab",
         "task_type": "graph_classification",
-        "paper_count": 93,
-        "result_count": 557,
+        "paper_count": 97,
+        "result_count": 561,
         "recent_result_count": 27,
         "variants": [
           {
@@ -2166,9 +2167,9 @@
         "name": "ENZYMES",
         "slug": "enzymes",
         "task_type": "graph_classification",
-        "paper_count": 63,
-        "result_count": 452,
-        "recent_result_count": 37,
+        "paper_count": 66,
+        "result_count": 455,
+        "recent_result_count": 45,
         "variants": [
           {
             "name": "10-fold CV",
@@ -2180,9 +2181,9 @@
         "name": "D&D",
         "slug": "d-d",
         "task_type": "graph_classification",
-        "paper_count": 38,
-        "result_count": 245,
-        "recent_result_count": 27,
+        "paper_count": 40,
+        "result_count": 226,
+        "recent_result_count": 26,
         "variants": [
           {
             "name": "10-fold CV",
@@ -2194,8 +2195,8 @@
         "name": "IMDB-BINARY",
         "slug": "imdb-binary",
         "task_type": "graph_classification",
-        "paper_count": 26,
-        "result_count": 200,
+        "paper_count": 28,
+        "result_count": 212,
         "recent_result_count": 10,
         "variants": [
           {
@@ -2208,8 +2209,8 @@
         "name": "RDT-B",
         "slug": "rdt-b",
         "task_type": "graph_classification",
-        "paper_count": 22,
-        "result_count": 98,
+        "paper_count": 25,
+        "result_count": 102,
         "recent_result_count": 0,
         "variants": [
           {
@@ -2222,8 +2223,8 @@
         "name": "IMDB-MULTI",
         "slug": "imdb-multi",
         "task_type": "graph_classification",
-        "paper_count": 18,
-        "result_count": 118,
+        "paper_count": 19,
+        "result_count": 121,
         "recent_result_count": 1,
         "variants": [
           {
@@ -2236,8 +2237,8 @@
         "name": "REDDIT-BINARY",
         "slug": "reddit-binary",
         "task_type": "graph_classification",
-        "paper_count": 8,
-        "result_count": 60,
+        "paper_count": 7,
+        "result_count": 55,
         "recent_result_count": 25,
         "variants": [
           {
@@ -2257,6 +2258,128 @@
           {
             "name": "10-fold CV",
             "slug": "10-fold-cv"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Heterophilic Graphs",
+    "slug": "heterophilic-graphs",
+    "description": "Legacy heterophilic node classification benchmarks with known evaluation problems (WebKB, Wikipedia, and the five-class Actor graph).",
+    "arxiv_id": "2110.14446",
+    "paper_title": "LINKX Benchmarks",
+    "source_papers": [
+      {
+        "arxiv_id": "2002.05287",
+        "title": "Heterophilic Graphs",
+        "role": "Original six-dataset benchmark (Geom-GCN)",
+        "url": "/papers/2002.05287/",
+        "is_local": true
+      },
+      {
+        "arxiv_id": "2110.14446",
+        "title": "LINKX Benchmarks",
+        "role": "Large-scale heterophily benchmark context (LINKX)",
+        "url": "https://arxiv.org/abs/2110.14446",
+        "is_local": false
+      }
+    ],
+    "no_single_introduction_paper": false,
+    "is_legacy": true,
+    "paper_count": 225,
+    "recent_results_per_dataset": 121.5,
+    "total_result_count": 3866,
+    "datasets": [
+      {
+        "name": "Texas",
+        "slug": "texas",
+        "task_type": "node_classification",
+        "paper_count": 164,
+        "result_count": 1003,
+        "recent_result_count": 194,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Cornell",
+        "slug": "cornell",
+        "task_type": "node_classification",
+        "paper_count": 142,
+        "result_count": 892,
+        "recent_result_count": 152,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Actor",
+        "slug": "actor",
+        "task_type": "node_classification",
+        "paper_count": 135,
+        "result_count": 792,
+        "recent_result_count": 118,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Chameleon",
+        "slug": "chameleon",
+        "task_type": "node_classification",
+        "paper_count": 65,
+        "result_count": 442,
+        "recent_result_count": 115,
+        "variants": [
+          {
+            "name": "Filtered split",
+            "slug": "filtered-split"
+          },
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Squirrel",
+        "slug": "squirrel",
+        "task_type": "node_classification",
+        "paper_count": 58,
+        "result_count": 427,
+        "recent_result_count": 101,
+        "variants": [
+          {
+            "name": "Filtered split",
+            "slug": "filtered-split"
+          },
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
+          }
+        ]
+      },
+      {
+        "name": "Wisconsin",
+        "slug": "wisconsin",
+        "task_type": "node_classification",
+        "paper_count": 40,
+        "result_count": 310,
+        "recent_result_count": 49,
+        "variants": [
+          {
+            "name": "Standard split",
+            "slug": "standard-split"
           }
         ]
       }

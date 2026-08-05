@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -174,6 +174,73 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: InstructGLM
+    model_key: instructglm
+    model_plain: InstructGLM
+    value: 0.7859
+    std: null
+    paper_value: 0.7859
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: instructglm
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Original instruction accuracy on Cora node classification
+    date: May 5, 2026
+    date_display: May 2026
+    date_iso: '2026-05-05'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9077
+    at_pub_std: null
+    at_pub_source_arxiv: '2310.16421'
+    at_pub_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    at_pub_source_date_iso: '2023-10-25'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-10-25'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.12179999999999991
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9077
+    true_std: null
+    value_gap_source_arxiv: '2310.16421'
+    value_gap_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.12179999999999991
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9077
+    sort_std: null
+    global_rank: 26
+    paper_rank: 820
+    rank_delta: 794
+    rank_delta_abs: 794
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    comparison_source_arxiv: '2310.16421'
     is_best: false
     is_std_outlier: false
   - model: LLaGA
@@ -234,86 +301,16 @@ results:
     value_note: ''
     sort_value: 0.8875
     sort_std: null
-    global_rank: 69
-    paper_rank: 142
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 87
+    paper_rank: 171
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Toward Graph-Tokenizing Large Language Models with Reconstructive
       Graph Instruction Tuning
     comparison_source_arxiv: '2603.01385'
-    is_best: false
-    is_std_outlier: false
-  - model: InstructGLM
-    model_key: instructglm
-    model_plain: InstructGLM
-    value: 0.7859
-    std: null
-    paper_value: 0.7859
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: instructglm
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Original instruction accuracy on Cora node classification
-    date: May 5, 2026
-    date_display: May 2026
-    date_iso: '2026-05-05'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8708
-    at_pub_std: 0.0012
-    at_pub_source_arxiv: '2506.07168'
-    at_pub_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
-    at_pub_source_date_iso: '2025-06-08'
-    at_pub_source_date_label: TMLR 2025
-    value_gap_source_date_iso: '2025-06-08'
-    value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: 0.08489999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8708
-    true_std: 0.0012
-    value_gap_source_arxiv: '2506.07168'
-    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08489999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8708
-    sort_std: 0.0012
-    global_rank: 166
-    paper_rank: 706
-    rank_delta: 540
-    rank_delta_abs: 540
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
-    comparison_source_arxiv: '2506.07168'
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -338,5 +335,6 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
+main_figure: /figures/2605.03514/main_figure.jpegoptim.jpg
 ---
 

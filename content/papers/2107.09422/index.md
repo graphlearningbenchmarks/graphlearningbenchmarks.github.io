@@ -280,5 +280,6 @@ datasets_by_scope:
     - dataset: PCQM4Mv2
       dataset_slug: pcqm4mv2
 single_proposed_model: ILSVRC
+main_figure: /figures/2107.09422/main_figure.jpegoptim.jpg
 ---
 

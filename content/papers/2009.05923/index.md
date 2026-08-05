@@ -45,8 +45,8 @@ proposed_models:
 - CSSL-Reg A1-all
 - CSSL-Reg A3-specific
 - CSSL-Reg A3-all
-mrr: 0.0097
-adjusted_mrr: 0.0065
+mrr: 0.0094
+adjusted_mrr: 0.0062
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
@@ -63,9 +63,9 @@ results:
 - &id002
   dataset: D&D
   rows:
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: gc-gnn (graphsage)
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -74,9 +74,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2309.00738'
     title: Rethinking the Power of Graph Canonization in Graph Representation Learning
       with Stability
@@ -97,9 +97,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: sugar
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8403
     std: 0.0133
     metric: Accuracy
@@ -131,9 +131,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: ortho-g-u-nets
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8387
     std: null
     metric: Accuracy
@@ -222,9 +222,9 @@ results:
     sort_value: 0.8243
     sort_std: null
     global_rank: 7
-    paper_rank: 106
-    rank_delta: 99
-    rank_delta_abs: 99
+    paper_rank: 111
+    rank_delta: 104
+    rank_delta_abs: 104
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -599,11 +599,10 @@ results:
     published_conference: AAAI 2020
     at_pub_value: 0.8064
     at_pub_std: null
-    at_pub_source_arxiv: '2007.11202'
-    at_pub_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
-      Graph Representation and Learning'
-    at_pub_source_date_iso: '2020-07-22'
-    at_pub_source_date_label: '2020'
+    at_pub_source_arxiv: '1905.05178'
+    at_pub_source_title: Graph U-Nets
+    at_pub_source_date_iso: '2019-05-11'
+    at_pub_source_date_label: '2019'
     value_gap_source_date_iso: '2020-07-22'
     value_gap_source_date_label: '2020'
     gap_vs_at_pub: 0.020299999999999985
@@ -626,15 +625,14 @@ results:
     sort_value: 0.8064
     sort_std: null
     global_rank: 21
-    paper_rank: 62
-    rank_delta: 41
-    rank_delta_abs: 41
+    paper_rank: 64
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis
-      for Graph Representation and Learning'
-    comparison_source_arxiv: '2007.11202'
+    comparison_source_title: Graph U-Nets
+    comparison_source_arxiv: '1905.05178'
     is_best: false
     is_std_outlier: false
   - model: CSSL-Reg A1-all
@@ -829,10 +827,10 @@ results:
     value_note: ''
     sort_value: 0.7978
     sort_std: null
-    global_rank: 28
-    paper_rank: 110
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 29
+    paper_rank: 117
+    rank_delta: 88
+    rank_delta_abs: 88
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -897,8 +895,8 @@ results:
     value_note: ''
     sort_value: 0.7966
     sort_std: 0.0171
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -964,8 +962,8 @@ results:
     value_note: ''
     sort_value: 0.7958
     sort_std: 0.0141
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1032,10 +1030,10 @@ results:
     value_note: ''
     sort_value: 0.7937
     sort_std: null
-    global_rank: 40
-    paper_rank: 178
-    rank_delta: 138
-    rank_delta_abs: 138
+    global_rank: 41
+    paper_rank: 180
+    rank_delta: 139
+    rank_delta_abs: 139
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1099,8 +1097,8 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.0261
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1166,10 +1164,10 @@ results:
     value_note: ''
     sort_value: 0.7912
     sort_std: 0.0307
-    global_rank: 46
-    paper_rank: 156
-    rank_delta: 110
-    rank_delta_abs: 110
+    global_rank: 48
+    paper_rank: 164
+    rank_delta: 116
+    rank_delta_abs: 116
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1235,8 +1233,8 @@ results:
     value_note: ''
     sort_value: 0.79
     sort_std: 0.006
-    global_rank: 48
-    paper_rank: 58
+    global_rank: 50
+    paper_rank: 60
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -1302,8 +1300,8 @@ results:
     value_note: ''
     sort_value: 0.7874
     sort_std: 0.0092
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1370,8 +1368,8 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.0229
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1438,8 +1436,8 @@ results:
     value_note: ''
     sort_value: 0.7863
     sort_std: 0.0136
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1505,8 +1503,8 @@ results:
     value_note: ''
     sort_value: 0.7849
     sort_std: 0.0094
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1574,10 +1572,10 @@ results:
     value_note: ''
     sort_value: 0.7845
     sort_std: null
-    global_rank: 65
-    paper_rank: 162
-    rank_delta: 97
-    rank_delta_abs: 97
+    global_rank: 68
+    paper_rank: 167
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1642,8 +1640,8 @@ results:
     value_note: ''
     sort_value: 0.7773
     sort_std: 0.0173
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1709,11 +1707,78 @@ results:
     value_note: ''
     sort_value: 0.773
     sort_std: 0.0368
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7578
+    std: 0.0391
+    paper_value: 0.7578
+    paper_std: 0.0391
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Sep 13, 2020
+    date_display: Sep 2020
+    date_iso: '2020-09-13'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.766
+    at_pub_std: null
+    at_pub_source_arxiv: '1904.13107'
+    at_pub_source_title: Graph Convolutional Networks with EigenPooling
+    at_pub_source_date_iso: '2019-04-30'
+    at_pub_source_date_label: KDD 2019
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
+    gap_vs_at_pub: 0.008199999999999985
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.766
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: false
+    value_gap: 0.008199999999999985
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.766
+    sort_std: null
+    global_rank: 117
+    paper_rank: 133
+    rank_delta: 16
+    rank_delta_abs: 16
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1776,79 +1841,12 @@ results:
     value_note: ''
     sort_value: 0.7596
     sort_std: 0.016
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.7578
-    std: 0.0391
-    paper_value: 0.7578
-    paper_std: 0.0391
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Sep 13, 2020
-    date_display: Sep 2020
-    date_iso: '2020-09-13'
-    published_venue: AAAI 2020
-    published_conference: AAAI 2020
-    at_pub_value: 0.766
-    at_pub_std: null
-    at_pub_source_arxiv: '1904.13107'
-    at_pub_source_title: Graph Convolutional Networks with EigenPooling
-    at_pub_source_date_iso: '2019-04-30'
-    at_pub_source_date_label: KDD 2019
-    value_gap_source_date_iso: '2020-09-13'
-    value_gap_source_date_label: AAAI 2020
-    gap_vs_at_pub: 0.008199999999999985
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.7578
-    true_std: 0.0391
-    value_gap_source_arxiv: '2009.05923'
-    value_gap_source_title: Contrastive Self-supervised Learning for Graph Classification
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7578
-    sort_std: 0.0391
-    global_rank: 126
-    paper_rank: 126
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1910,8 +1908,8 @@ results:
     value_note: ''
     sort_value: 0.7563
     sort_std: 0.0322
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1977,8 +1975,8 @@ results:
     value_note: ''
     sort_value: 0.7546
     sort_std: 0.0244
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1986,6 +1984,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Set2Set
+    model_key: set2set
+    model_plain: Set2Set
+    value: 0.7083
+    std: 0.0084
+    paper_value: 0.7083
+    paper_std: 0.0084
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Sep 13, 2020
+    date_display: Sep 2020
+    date_iso: '2020-09-13'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: 0.745
+    at_pub_std: null
+    at_pub_source_arxiv: '1904.13107'
+    at_pub_source_title: Graph Convolutional Networks with EigenPooling
+    at_pub_source_date_iso: '2019-04-30'
+    at_pub_source_date_label: KDD 2019
+    value_gap_source_date_iso: '2019-04-30'
+    value_gap_source_date_label: KDD 2019
+    gap_vs_at_pub: 0.036699999999999955
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.745
+    true_std: null
+    value_gap_source_arxiv: '1904.13107'
+    value_gap_source_title: Graph Convolutional Networks with EigenPooling
+    value_gap_source_is_current_paper: false
+    value_gap: 0.036699999999999955
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.745
+    sort_std: null
+    global_rank: 156
+    paper_rank: 176
+    rank_delta: 20
+    rank_delta_abs: 20
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph Convolutional Networks with EigenPooling
+    comparison_source_arxiv: '1904.13107'
     is_best: false
     is_std_outlier: false
   - model: InfoGraph
@@ -2044,8 +2109,8 @@ results:
     value_note: ''
     sort_value: 0.7424
     sort_std: 0.0086
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2055,13 +2120,92 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Set2Set
-    model_key: set2set
-    model_plain: Set2Set
-    value: 0.7083
-    std: 0.0084
-    paper_value: 0.7083
-    paper_std: 0.0084
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id001
+  dataset: NCI1
+  rows:
+  - model: ECC
+    model_key: wl-mlp
+    model_plain: ECC
+    value: 0.9954
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9954
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ECC
+    model_key: gin
+    model_plain: ECC
+    value: 0.9934
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: GNNs ... use node features
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9934
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7629
+    std: 0.0179
+    paper_value: 0.7629
+    paper_std: 0.0179
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -2085,15 +2229,16 @@ results:
     date_iso: '2020-09-13'
     published_venue: AAAI 2020
     published_conference: AAAI 2020
-    at_pub_value: 0.745
-    at_pub_std: null
-    at_pub_source_arxiv: '1904.13107'
-    at_pub_source_title: Graph Convolutional Networks with EigenPooling
-    at_pub_source_date_iso: '2019-04-30'
-    at_pub_source_date_label: KDD 2019
-    value_gap_source_date_iso: '2023-06-22'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.036699999999999955
+    at_pub_value: 0.802
+    at_pub_std: 0.02
+    at_pub_source_arxiv: '1905.13192'
+    at_pub_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
+      with Graph Kernels'
+    at_pub_source_date_iso: '2019-05-30'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2022-02-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.039100000000000024
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -2101,138 +2246,91 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7265
-    true_std: 0.0047
-    value_gap_source_arxiv: '2306.12726'
-    value_gap_source_title: On Exploring Node-feature and Graph-structure Diversities
-      for Node Drop Graph Pooling
+    true_value: 0.9727
+    true_std: null
+    value_gap_source_arxiv: '2202.10156'
+    value_gap_source_title: 1-WL Expressiveness Is (Almost) All You Need
     value_gap_source_is_current_paper: false
-    value_gap: 0.018199999999999994
+    value_gap: 0.2098
     has_value_note: false
     value_note: ''
-    sort_value: 0.7265
-    sort_std: 0.0047
-    global_rank: 162
-    paper_rank: 173
-    rank_delta: 11
-    rank_delta_abs: 11
+    sort_value: 0.9727
+    sort_std: null
+    global_rank: 3
+    paper_rank: 403
+    rank_delta: 400
+    rank_delta_abs: 400
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Graph Convolutional Networks with EigenPooling
-    comparison_source_arxiv: '1904.13107'
+    comparison_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
+      with Graph Kernels'
+    comparison_source_arxiv: '1905.13192'
     is_best: false
     is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: graph-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id001
-  dataset: NCI1
-  rows:
-  - model: Diverse B12C3
-    model_key: msa-aud
-    model_plain: Diverse B12C3
-    value: 0.969
-    std: null
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.749
+    std: 0.0172
+    paper_value: 0.749
+    paper_std: 0.0172
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.969
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Sep 13, 2020
+    date_display: Sep 2020
+    date_iso: '2020-09-13'
+    published_venue: AAAI 2020
+    published_conference: AAAI 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9623
+    true_std: null
+    value_gap_source_arxiv: '2202.10156'
+    value_gap_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    value_gap_source_is_current_paper: false
+    value_gap: 0.21330000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9623
     sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-au
-    model_plain: Diverse B12C3
-    value: 0.966
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.966
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-ad
-    model_plain: Diverse B12C3
-    value: 0.963
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.963
-    sort_std: null
-    comparison_type: global_top
+    global_rank: 4
+    paper_rank: 438
+    rank_delta: 434
+    rank_delta_abs: 434
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2294,10 +2392,10 @@ results:
     value_note: ''
     sort_value: 0.921
     sort_std: 0.026
-    global_rank: 7
-    paper_rank: 332
-    rank_delta: 325
-    rank_delta_abs: 325
+    global_rank: 5
+    paper_rank: 347
+    rank_delta: 342
+    rank_delta_abs: 342
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -2361,84 +2459,15 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.018
-    global_rank: 13
-    paper_rank: 375
-    rank_delta: 362
-    rank_delta_abs: 362
+    global_rank: 10
+    paper_rank: 392
+    rank_delta: 382
+    rank_delta_abs: 382
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Propagation Kernels
     comparison_source_arxiv: '1410.3314'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7629
-    std: 0.0179
-    paper_value: 0.7629
-    paper_std: 0.0179
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Sep 13, 2020
-    date_display: Sep 2020
-    date_iso: '2020-09-13'
-    published_venue: AAAI 2020
-    published_conference: AAAI 2020
-    at_pub_value: 0.802
-    at_pub_std: 0.02
-    at_pub_source_arxiv: '1905.13192'
-    at_pub_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
-      with Graph Kernels'
-    at_pub_source_date_iso: '2019-05-30'
-    at_pub_source_date_label: NeurIPS 2019
-    value_gap_source_date_iso: '2021-07-08'
-    value_gap_source_date_label: NeurIPS 2021
-    gap_vs_at_pub: 0.039100000000000024
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.84
-    true_std: null
-    value_gap_source_arxiv: '2107.04086'
-    value_gap_source_title: Robust Counterfactual Explanations on Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07709999999999995
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.84
-    sort_std: null
-    global_rank: 39
-    paper_rank: 386
-    rank_delta: 347
-    rank_delta_abs: 347
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
-      with Graph Kernels'
-    comparison_source_arxiv: '1905.13192'
     is_best: false
     is_std_outlier: false
   - model: GraphSAGE
@@ -2499,84 +2528,16 @@ results:
     value_note: ''
     sort_value: 0.8303
     sort_std: 0.0137
-    global_rank: 75
-    paper_rank: 421
-    rank_delta: 346
-    rank_delta_abs: 346
+    global_rank: 76
+    paper_rank: 440
+    rank_delta: 364
+    rank_delta_abs: 364
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
       with Graph Kernels'
     comparison_source_arxiv: '1905.13192'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.749
-    std: 0.0172
-    paper_value: 0.749
-    paper_std: 0.0172
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Sep 13, 2020
-    date_display: Sep 2020
-    date_iso: '2020-09-13'
-    published_venue: AAAI 2020
-    published_conference: AAAI 2020
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-31'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.81
-    true_std: 0.01
-    value_gap_source_arxiv: '2201.13410'
-    value_gap_source_title: 'Weisfeiler and Leman Go Infinite: Spectral and Combinatorial
-      Pre-Colorings'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.061000000000000054
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.81
-    sort_std: 0.01
-    global_rank: 172
-    paper_rank: 419
-    rank_delta: 247
-    rank_delta_abs: 247
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: CSSL-Reg A3-specific
@@ -2635,8 +2596,8 @@ results:
     value_note: ''
     sort_value: 0.8009
     sort_std: 0.0107
-    global_rank: 221
-    paper_rank: 221
+    global_rank: 224
+    paper_rank: 224
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2702,8 +2663,8 @@ results:
     value_note: ''
     sort_value: 0.8007
     sort_std: 0.006
-    global_rank: 222
-    paper_rank: 222
+    global_rank: 225
+    paper_rank: 225
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2769,8 +2730,8 @@ results:
     value_note: ''
     sort_value: 0.7944
     sort_std: 0.0067
-    global_rank: 250
-    paper_rank: 250
+    global_rank: 257
+    paper_rank: 257
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2836,10 +2797,10 @@ results:
     value_note: ''
     sort_value: 0.791
     sort_std: 0.03
-    global_rank: 260
-    paper_rank: 326
-    rank_delta: 66
-    rank_delta_abs: 66
+    global_rank: 268
+    paper_rank: 341
+    rank_delta: 73
+    rank_delta_abs: 73
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2903,10 +2864,10 @@ results:
     value_note: ''
     sort_value: 0.7893
     sort_std: 0.0222
-    global_rank: 270
-    paper_rank: 376
-    rank_delta: 106
-    rank_delta_abs: 106
+    global_rank: 278
+    paper_rank: 393
+    rank_delta: 115
+    rank_delta_abs: 115
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2970,10 +2931,10 @@ results:
     value_note: ''
     sort_value: 0.787
     sort_std: 0.019
-    global_rank: 279
-    paper_rank: 354
-    rank_delta: 75
-    rank_delta_abs: 75
+    global_rank: 288
+    paper_rank: 369
+    rank_delta: 81
+    rank_delta_abs: 81
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3037,8 +2998,8 @@ results:
     value_note: ''
     sort_value: 0.7862
     sort_std: 0.0063
-    global_rank: 287
-    paper_rank: 287
+    global_rank: 296
+    paper_rank: 296
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3104,8 +3065,8 @@ results:
     value_note: ''
     sort_value: 0.7845
     sort_std: 0.0077
-    global_rank: 300
-    paper_rank: 300
+    global_rank: 310
+    paper_rank: 310
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3171,10 +3132,10 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.0074
-    global_rank: 343
-    paper_rank: 475
-    rank_delta: 132
-    rank_delta_abs: 132
+    global_rank: 358
+    paper_rank: 496
+    rank_delta: 138
+    rank_delta_abs: 138
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3238,10 +3199,10 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.019
-    global_rank: 377
-    paper_rank: 435
-    rank_delta: 58
-    rank_delta_abs: 58
+    global_rank: 394
+    paper_rank: 456
+    rank_delta: 62
+    rank_delta_abs: 62
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3305,8 +3266,8 @@ results:
     value_note: ''
     sort_value: 0.7625
     sort_std: 0.0139
-    global_rank: 389
-    paper_rank: 389
+    global_rank: 406
+    paper_rank: 406
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3374,10 +3335,10 @@ results:
     value_note: ''
     sort_value: 0.745
     sort_std: 0.003
-    global_rank: 424
-    paper_rank: 508
-    rank_delta: 84
-    rank_delta_abs: 84
+    global_rank: 443
+    paper_rank: 529
+    rank_delta: 86
+    rank_delta_abs: 86
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3442,8 +3403,8 @@ results:
     value_note: ''
     sort_value: 0.727
     sort_std: 0.0194
-    global_rank: 460
-    paper_rank: 460
+    global_rank: 481
+    paper_rank: 481
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3509,8 +3470,8 @@ results:
     value_note: ''
     sort_value: 0.726
     sort_std: 0.0143
-    global_rank: 463
-    paper_rank: 463
+    global_rank: 484
+    paper_rank: 484
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3577,8 +3538,8 @@ results:
     value_note: ''
     sort_value: 0.717
     sort_std: 0.0073
-    global_rank: 466
-    paper_rank: 491
+    global_rank: 487
+    paper_rank: 512
     rank_delta: 25
     rank_delta_abs: 25
     rank_delta_direction: worse
@@ -3644,8 +3605,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.0178
-    global_rank: 474
-    paper_rank: 474
+    global_rank: 495
+    paper_rank: 495
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3711,8 +3672,8 @@ results:
     value_note: ''
     sort_value: 0.6633
     sort_std: 0.0265
-    global_rank: 515
-    paper_rank: 515
+    global_rank: 535
+    paper_rank: 535
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3752,41 +3713,44 @@ results:
     date_iso: '2020-09-13'
     published_venue: AAAI 2020
     published_conference: AAAI 2020
-    at_pub_value: 0.624
-    at_pub_std: 0.0027
-    at_pub_source_arxiv: '1603.06186'
-    at_pub_source_title: The Multiscale Laplacian Graph Kernel
-    at_pub_source_date_iso: '2016-03-01'
-    at_pub_source_date_label: NeurIPS 2016
-    value_gap_source_date_iso: '2020-09-22'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.0008000000000000229
-    worse_than_at_pub: false
+    at_pub_value: 0.66
+    at_pub_std: null
+    at_pub_source_arxiv: '1603.05629'
+    at_pub_source_title: Discriminative Embeddings of Latent Variable Models for Structured
+      Data
+    at_pub_source_date_iso: '2016-03-17'
+    at_pub_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2016-03-17'
+    value_gap_source_date_label: ICML 2016
+    gap_vs_at_pub: 0.03520000000000001
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.643
-    true_std: 0.022
-    value_gap_source_arxiv: '2009.10564'
-    value_gap_source_title: 'GraphCrop: Subgraph Cropping for Graph Classification'
+    today_delta_significant: true
+    true_value: 0.66
+    true_std: null
+    value_gap_source_arxiv: '1603.05629'
+    value_gap_source_title: Discriminative Embeddings of Latent Variable Models for
+      Structured Data
     value_gap_source_is_current_paper: false
-    value_gap: 0.018199999999999994
+    value_gap: 0.03520000000000001
     has_value_note: false
     value_note: ''
-    sort_value: 0.643
-    sort_std: 0.022
-    global_rank: 530
-    paper_rank: 539
-    rank_delta: 9
-    rank_delta_abs: 9
+    sort_value: 0.66
+    sort_std: null
+    global_rank: 539
+    paper_rank: 563
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: Discriminative Embeddings of Latent Variable Models for
+      Structured Data
+    comparison_source_arxiv: '1603.05629'
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -3814,5 +3778,6 @@ datasets_by_scope:
       dataset_slug: nci1
     - dataset: D&D
       dataset_slug: d-d
+main_figure: /figures/2009.05923/main_figure.jpegoptim.jpg
 ---
 

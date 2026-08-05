@@ -75,9 +75,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: 501.0
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
     arxiv_id: '2204.13957'
     title: 'PIE: a Parameter and Inference Efficient Solution for Large Scale Knowledge
       Graph Embedding Reasoning'
@@ -395,7 +395,7 @@ variants:
     graph_transformer: 0
     llm: 0
     walk: 0
-    traditional: 4
+    traditional: 5
   metric_counts:
   - 12
   milestones: &id001

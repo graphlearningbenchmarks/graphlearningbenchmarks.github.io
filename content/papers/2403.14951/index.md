@@ -1,0 +1,2954 @@
+---
+title: Simple Graph Condensation
+arxiv_id: '2403.14951'
+source_url: ''
+authors:
+- name: Zhenbang Xiao
+  orcid: null
+  s2_author_id: '2280374120'
+  s2_url: null
+- name: Yu Wang
+  orcid: null
+  s2_author_id: '2267219423'
+  s2_url: null
+- name: Shunyu Liu
+  orcid: null
+  s2_author_id: '2128786021'
+  s2_url: null
+- name: Huiqiong Wang
+  orcid: null
+  s2_author_id: '2214073'
+  s2_url: null
+- name: Mingli Song
+  orcid: null
+  s2_author_id: '2290081578'
+  s2_url: null
+- name: Tongya Zheng
+  orcid: null
+  s2_author_id: '2062719264'
+  s2_url: null
+published_date: Mar 22, 2024
+published_date_iso: '2024-03-22'
+published_venue: ''
+published_conference: ''
+published_conference_short: ''
+published_conference_slug: ''
+abstract: The burdensome training costs on large-scale graphs have aroused significant
+  interest in graph condensation, which involves tuning Graph Neural Networks (GNNs)
+  on a small condensed graph for use on the large-scale original graph. Existing methods
+  primarily focus on aligning key metrics between the condensed and original graphs,
+  such as gradients, output distribution and trajectories of GNNs, satisfactory performance
+  on downstream tasks. However, these complex metrics necessitate intricate external
+  parameters and can potentially disrupt the optimization process of the condensation
+  graph, making the condensation process highly demanding and unstable. This straightforward
+  yet effective strategy achieves a significant speedup of up to 10 times compared
+  to existing graph condensation methods while performing on par with state-of-the-art
+  baselines. Comprehensive experiments conducted on seven benchmark datasets demonstrate
+  the effectiveness of SimGC in prediction accuracy, condensation time, and generalization
+  capability. Our code is available at.
+codebase_url: https://github.com/BangHonor/SimGC
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: method
+proposed_models:
+- SimGC
+mrr: 0.0026
+adjusted_mrr: 0.0026
+mrr_dataset_count: 3
+benchmark_categories:
+- Classic
+- OGB
+benchmark_coverage:
+- benchmark: Classic
+  benchmark_slug: classic
+  evaluated: 3
+  total: 12
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
+task_categories:
+- node_classification
+experiment_scopes:
+- node-level
+results:
+- &id002
+  dataset: CiteSeer
+  rows:
+  - model: SGC+TSC
+    model_key: cna
+    model_plain: SGC+TSC
+    value: 0.9575
+    std: 0.0058
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.04064'
+    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
+    date: Dec 5, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-05'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/ml-research/cna_modules
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9575
+    sort_std: 0.0058
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SGC+TSC
+    model_key: is-gib
+    model_plain: SGC+TSC
+    value: 0.939
+    std: 0.0187
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2306.15902'
+    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
+      Generalization
+    date: Jun 28, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-28'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/YangLing0818/GraphOOD
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.939
+    sort_std: 0.0187
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SGC+TSC
+    model_key: eerm
+    model_plain: SGC+TSC
+    value: 0.9112
+    std: 0.0145
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2306.15902'
+    title: Individual and Structural Graph Information Bottlenecks for Out-of-Distribution
+      Generalization
+    date: Jun 28, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-28'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/YangLing0818/GraphOOD
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9112
+    sort_std: 0.0145
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SimGC
+    model_key: simgc
+    model_plain: SimGC
+    value: 0.738
+    std: 0.025
+    paper_value: 0.738
+    paper_std: 0.025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on Planetoid split (Yang et al. 2016) at 0.9% reduction
+      rate.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.738
+    true_std: 0.025
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.738
+    sort_std: 0.025
+    global_rank: 285
+    paper_rank: 285
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SFGC
+    model_key: sfgc
+    model_plain: SFGC
+    value: 0.724
+    std: 0.004
+    paper_value: 0.724
+    paper_std: 0.004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on Planetoid split (Yang et al. 2016) at 1.8% reduction
+      rate.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.714
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2402.04924'
+    at_pub_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    at_pub_source_date_iso: '2024-02-07'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.010000000000000009
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.724
+    true_std: 0.004
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.724
+    sort_std: 0.004
+    global_rank: 468
+    paper_rank: 468
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    comparison_source_arxiv: '2402.04924'
+    is_best: false
+    is_std_outlier: false
+  - model: Whole Dataset
+    model_key: whole dataset
+    model_plain: Whole Dataset
+    value: 0.717
+    std: 0.001
+    paper_value: 0.717
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on Planetoid split (Yang et al. 2016) using the full
+      original dataset.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.717
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.07746'
+    at_pub_source_title: Condensing Graphs via One-Step Gradient Matching
+    at_pub_source_date_iso: '2022-06-15'
+    at_pub_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2022-06-15'
+    value_gap_source_date_label: KDD 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.717
+    true_std: null
+    value_gap_source_arxiv: '2206.07746'
+    value_gap_source_title: Condensing Graphs via One-Step Gradient Matching
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.717
+    sort_std: null
+    global_rank: 549
+    paper_rank: 549
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCond
+    model_key: gcond
+    model_plain: GCond
+    value: 0.706
+    std: 0.009
+    paper_value: 0.706
+    paper_std: 0.009
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on Planetoid split (Yang et al. 2016) at 1.8% reduction
+      rate.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.706
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.07746'
+    at_pub_source_title: Condensing Graphs via One-Step Gradient Matching
+    at_pub_source_date_iso: '2022-06-15'
+    at_pub_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-07-10'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.708
+    true_std: 0.045
+    value_gap_source_arxiv: '2407.08064'
+    value_gap_source_title: 'TinyGraph: Joint Feature and Node Condensation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0020000000000000018
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.708
+    sort_std: 0.045
+    global_rank: 636
+    paper_rank: 646
+    rank_delta: 10
+    rank_delta_abs: 10
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Random
+    model_key: random
+    model_plain: Random
+    value: 0.691
+    std: 0.001
+    paper_value: 0.691
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on Planetoid split (Yang et al. 2016) at 3.6% reduction
+      rate.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7049
+    at_pub_std: 0.0008
+    at_pub_source_arxiv: '2206.09166'
+    at_pub_source_title: 'NAS-Bench-Graph: Benchmarking Graph Neural Architecture
+      Search'
+    at_pub_source_date_iso: '2022-06-18'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-06-18'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: 0.013900000000000023
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7049
+    true_std: 0.0008
+    value_gap_source_arxiv: '2206.09166'
+    value_gap_source_title: 'NAS-Bench-Graph: Benchmarking Graph Neural Architecture
+      Search'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.013900000000000023
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7049
+    sort_std: 0.0008
+    global_rank: 654
+    paper_rank: 710
+    rank_delta: 56
+    rank_delta_abs: 56
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'NAS-Bench-Graph: Benchmarking Graph Neural Architecture
+      Search'
+    comparison_source_arxiv: '2206.09166'
+    is_best: false
+    is_std_outlier: false
+  - model: SGDD
+    model_key: sgdd
+    model_plain: SGDD
+    value: 0.703
+    std: 0.017
+    paper_value: 0.703
+    paper_std: 0.017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on Planetoid split (Yang et al. 2016) at 3.6% reduction
+      rate.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.703
+    true_std: 0.017
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.703
+    sort_std: 0.017
+    global_rank: 669
+    paper_rank: 669
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCDM
+    model_key: gcdm
+    model_plain: GCDM
+    value: 0.698
+    std: 0.002
+    paper_value: 0.698
+    paper_std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on Planetoid split (Yang et al. 2016) at 3.6% reduction
+      rate.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.698
+    true_std: 0.002
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.698
+    sort_std: 0.002
+    global_rank: 693
+    paper_rank: 693
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: K-Center
+    model_key: k-center
+    model_plain: K-Center
+    value: 0.691
+    std: 0.001
+    paper_value: 0.691
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on Planetoid split (Yang et al. 2016) at 3.6% reduction
+      rate.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.524
+    at_pub_std: 0.028
+    at_pub_source_arxiv: '2402.04924'
+    at_pub_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    at_pub_source_date_iso: '2024-02-07'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.16699999999999993
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.691
+    true_std: 0.001
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.691
+    sort_std: 0.001
+    global_rank: 712
+    paper_rank: 712
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    comparison_source_arxiv: '2402.04924'
+    is_best: false
+    is_std_outlier: false
+  - model: Herding
+    model_key: herding
+    model_plain: Herding
+    value: 0.69
+    std: 0.001
+    paper_value: 0.69
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on Planetoid split (Yang et al. 2016) at 3.6% reduction
+      rate.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.571
+    at_pub_std: 0.015
+    at_pub_source_arxiv: '2402.04924'
+    at_pub_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    at_pub_source_date_iso: '2024-02-07'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.119
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.69
+    true_std: 0.001
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.69
+    sort_std: 0.001
+    global_rank: 714
+    paper_rank: 714
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    comparison_source_arxiv: '2402.04924'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id001
+  dataset: Cora
+  rows:
+  - model: SGC+TSC
+    model_key: exphormer
+    model_plain: SGC+TSC
+    value: 0.9635
+    std: 0.0019
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9635
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SGC+TSC
+    model_key: sgformer
+    model_plain: SGC+TSC
+    value: 0.9629
+    std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9629
+    sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SGC+TSC
+    model_key: coral
+    model_plain: SGC+TSC
+    value: 0.9574
+    std: 0.0039
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9574
+    sort_std: 0.0039
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Random
+    model_key: random
+    model_plain: Random
+    value: 0.768
+    std: 0.001
+    paper_value: 0.768
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split) at 5.2% reduction ratio.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8699
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2112.14531'
+    at_pub_source_title: 'Designing the Topology of Graph Neural Networks: A Novel
+      Feature Fusion Perspective'
+    at_pub_source_date_iso: '2021-12-29'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2021-12-29'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: 0.10189999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8699
+    true_std: 0.006
+    value_gap_source_arxiv: '2112.14531'
+    value_gap_source_title: 'Designing the Topology of Graph Neural Networks: A Novel
+      Feature Fusion Perspective'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10189999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8699
+    sort_std: 0.006
+    global_rank: 204
+    paper_rank: 852
+    rank_delta: 648
+    rank_delta_abs: 648
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Designing the Topology of Graph Neural Networks: A Novel
+      Feature Fusion Perspective'
+    comparison_source_arxiv: '2112.14531'
+    is_best: false
+    is_std_outlier: false
+  - model: SimGC
+    model_key: simgc
+    model_plain: SimGC
+    value: 0.821
+    std: 0.013
+    paper_value: 0.821
+    paper_std: 0.013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split) at 5.2% reduction ratio.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.821
+    true_std: 0.013
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.821
+    sort_std: 0.013
+    global_rank: 640
+    paper_rank: 640
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SFGC
+    model_key: sfgc
+    model_plain: SFGC
+    value: 0.817
+    std: 0.005
+    paper_value: 0.817
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split) at 2.6% reduction ratio.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.817
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2402.04924'
+    at_pub_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    at_pub_source_date_iso: '2024-02-07'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.817
+    true_std: 0.005
+    value_gap_source_arxiv: '2402.04924'
+    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.817
+    sort_std: 0.005
+    global_rank: 682
+    paper_rank: 682
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCond
+    model_key: gcond
+    model_plain: GCond
+    value: 0.801
+    std: 0.006
+    paper_value: 0.801
+    paper_std: 0.006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split) at 2.6% reduction ratio.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.801
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2402.04924'
+    at_pub_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    at_pub_source_date_iso: '2024-02-07'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-07-10'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.809
+    true_std: 0.032
+    value_gap_source_arxiv: '2407.08064'
+    value_gap_source_title: 'TinyGraph: Joint Feature and Node Condensation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.008000000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.809
+    sort_std: 0.032
+    global_rank: 744
+    paper_rank: 773
+    rank_delta: 29
+    rank_delta_abs: 29
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGDD
+    model_key: sgdd
+    model_plain: SGDD
+    value: 0.806
+    std: 0.008
+    paper_value: 0.806
+    paper_std: 0.008
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split) at 2.6% reduction ratio.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.806
+    true_std: 0.008
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.806
+    sort_std: 0.008
+    global_rank: 753
+    paper_rank: 753
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCDM
+    model_key: gcdm
+    model_plain: GCDM
+    value: 0.794
+    std: 0.001
+    paper_value: 0.794
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split) at 5.2% reduction ratio.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.794
+    true_std: 0.001
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.794
+    sort_std: 0.001
+    global_rank: 799
+    paper_rank: 799
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Herding
+    model_key: herding
+    model_plain: Herding
+    value: 0.768
+    std: 0.001
+    paper_value: 0.768
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split) at 5.2% reduction ratio.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.768
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2310.11046'
+    at_pub_source_title: Fast Graph Condensation with Structure-based Neural Tangent
+      Kernel
+    at_pub_source_date_iso: '2023-10-17'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.768
+    true_std: 0.001
+    value_gap_source_arxiv: '2402.04924'
+    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.768
+    sort_std: 0.001
+    global_rank: 853
+    paper_rank: 853
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: K-Center
+    model_key: k-center
+    model_plain: K-Center
+    value: 0.767
+    std: 0.001
+    paper_value: 0.767
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Planetoid split (Yang et al. 2016 fixed 20-per-class
+      train split) at 5.2% reduction ratio.
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.767
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2310.11046'
+    at_pub_source_title: Fast Graph Condensation with Structure-based Neural Tangent
+      Kernel
+    at_pub_source_date_iso: '2023-10-17'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.767
+    true_std: 0.001
+    value_gap_source_arxiv: '2402.04924'
+    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
+      Rational Gradient Matching'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.767
+    sort_std: 0.001
+    global_rank: 854
+    paper_rank: 854
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: Reddit
+  rows:
+  - model: TinyGraph
+    model_key: ne-asgcn
+    model_plain: TinyGraph
+    value: 0.9758
+    std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.16097'
+    title: Neighbor Enhanced Graph Convolutional Networks for Node Classification
+      and Recommendation
+    date: Mar 1, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-01'
+    venue: Knowledge-Based Systems
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9758
+    sort_std: 0.0027
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: TinyGraph
+    model_key: hsgt
+    model_plain: TinyGraph
+    value: 0.973
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.02866'
+    title: Hierarchical Transformer for Scalable Graph Learning
+    date: May 4, 2023
+    date_display: May 2023
+    date_iso: '2023-05-04'
+    venue: International Joint Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.973
+    sort_std: 0.0024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: TinyGraph
+    model_key: gcmae
+    model_plain: TinyGraph
+    value: 0.9713
+    std: 0.0017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.15523'
+    title: Generative and Contrastive Paradigms Are Complementary for Graph Self-Supervised
+      Learning
+    date: Oct 24, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-24'
+    venue: IEEE International Conference on Data Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9713
+    sort_std: 0.0017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Whole Dataset
+    model_key: whole dataset
+    model_plain: Whole Dataset
+    value: 0.935
+    std: 0.001
+    paper_value: 0.935
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 using the whole dataset (no condensation)
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.935
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.935
+    true_std: 0.001
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.935
+    sort_std: 0.001
+    global_rank: 84
+    paper_rank: 84
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGDD
+    model_key: sgdd
+    model_plain: SGDD
+    value: 0.867
+    std: 0.008
+    paper_value: 0.867
+    paper_std: 0.008
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 with 0.05% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.918
+    at_pub_std: 0.019
+    at_pub_source_arxiv: '2310.09202'
+    at_pub_source_title: Graph Distillation with Eigenbasis Matching
+    at_pub_source_date_iso: '2023-10-13'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-10-13'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.051000000000000045
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.918
+    true_std: 0.019
+    value_gap_source_arxiv: '2310.09202'
+    value_gap_source_title: Graph Distillation with Eigenbasis Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.051000000000000045
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.918
+    sort_std: 0.019
+    global_rank: 97
+    paper_rank: 130
+    rank_delta: 33
+    rank_delta_abs: 33
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph Distillation with Eigenbasis Matching
+    comparison_source_arxiv: '2310.09202'
+    is_best: false
+    is_std_outlier: false
+  - model: SimGC
+    model_key: simgc
+    model_plain: SimGC
+    value: 0.914
+    std: 0.002
+    paper_value: 0.914
+    paper_std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 with 0.2% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.914
+    true_std: 0.002
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.914
+    sort_std: 0.002
+    global_rank: 102
+    paper_rank: 102
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Random
+    model_key: random
+    model_plain: Random
+    value: 0.655
+    std: 0.025
+    paper_value: 0.655
+    paper_std: 0.025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 with 0.2% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.911
+    at_pub_std: null
+    at_pub_source_arxiv: '2108.00219'
+    at_pub_source_title: 'Grain: Improving Data Efficiency of Graph Neural Networks
+      via Diversified Influence Maximization'
+    at_pub_source_date_iso: '2021-07-01'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-07-01'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.256
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.911
+    true_std: null
+    value_gap_source_arxiv: '2108.00219'
+    value_gap_source_title: 'Grain: Improving Data Efficiency of Graph Neural Networks
+      via Diversified Influence Maximization'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.256
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.911
+    sort_std: null
+    global_rank: 106
+    paper_rank: 142
+    rank_delta: 36
+    rank_delta_abs: 36
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Grain: Improving Data Efficiency of Graph Neural Networks
+      via Diversified Influence Maximization'
+    comparison_source_arxiv: '2108.00219'
+    is_best: false
+    is_std_outlier: false
+  - model: GCond
+    model_key: gcond
+    model_plain: GCond
+    value: 0.824
+    std: 0.01
+    paper_value: 0.824
+    paper_std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 with 0.1% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8963
+    at_pub_std: 0.0025
+    at_pub_source_arxiv: '2307.15967'
+    at_pub_source_title: Graph Condensation for Inductive Node Representation Learning
+    at_pub_source_date_iso: '2023-07-29'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-07-10'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.07230000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.903
+    true_std: 0.031
+    value_gap_source_arxiv: '2407.08064'
+    value_gap_source_title: 'TinyGraph: Joint Feature and Node Condensation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07900000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.903
+    sort_std: 0.031
+    global_rank: 111
+    paper_rank: 135
+    rank_delta: 24
+    rank_delta_abs: 24
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph Condensation for Inductive Node Representation
+      Learning
+    comparison_source_arxiv: '2307.15967'
+    is_best: false
+    is_std_outlier: true
+  - model: SFGC
+    model_key: sfgc
+    model_plain: SFGC
+    value: 0.886
+    std: 0.011
+    paper_value: 0.886
+    paper_std: 0.011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 with 0.2% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2306.02664'
+    at_pub_source_title: 'Structure-free Graph Condensation: From Large-scale Graphs
+      to Condensed Graph-free Data'
+    at_pub_source_date_iso: '2023-06-05'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-05'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.014000000000000012
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9
+    true_std: 0.003
+    value_gap_source_arxiv: '2306.02664'
+    value_gap_source_title: 'Structure-free Graph Condensation: From Large-scale Graphs
+      to Condensed Graph-free Data'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.014000000000000012
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9
+    sort_std: 0.003
+    global_rank: 114
+    paper_rank: 122
+    rank_delta: 8
+    rank_delta_abs: 8
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Structure-free Graph Condensation: From Large-scale
+      Graphs to Condensed Graph-free Data'
+    comparison_source_arxiv: '2306.02664'
+    is_best: false
+    is_std_outlier: false
+  - model: GCDM
+    model_key: gcdm
+    model_plain: GCDM
+    value: 0.808
+    std: 0.031
+    paper_value: 0.808
+    paper_std: 0.031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 with 0.2% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.808
+    at_pub_std: 0.031
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-05-22'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.897
+    true_std: 0.002
+    value_gap_source_arxiv: '2405.13707'
+    value_gap_source_title: 'Rethinking and Accelerating Graph Condensation: A Training-Free
+      Approach with Class Partition'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08899999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.897
+    sort_std: 0.002
+    global_rank: 115
+    paper_rank: 135
+    rank_delta: 20
+    rank_delta_abs: 20
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Herding
+    model_key: herding
+    model_plain: Herding
+    value: 0.714
+    std: 0.016
+    paper_value: 0.714
+    paper_std: 0.016
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 with 0.2% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.714
+    at_pub_std: 0.016
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.714
+    true_std: 0.016
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.714
+    sort_std: 0.016
+    global_rank: 141
+    paper_rank: 141
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: K-Center
+    model_key: k-center
+    model_plain: K-Center
+    value: 0.574
+    std: 0.018
+    paper_value: 0.574
+    paper_std: 0.018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to reddit (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit2 with 0.2% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.574
+    at_pub_std: 0.018
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.574
+    true_std: 0.018
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.574
+    sort_std: 0.018
+    global_rank: 148
+    paper_rank: 148
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: F1
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
+- &id004
+  dataset: ogbn-products
+  rows:
+  - model: LargeGT-full
+    model_key: advsyngnn
+    model_plain: LargeGT-full
+    value: 0.8931
+    std: 0.0013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.17071'
+    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
+      and Self-Corrective Propagation'
+    date: Feb 19, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-19'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8931
+    sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: LargeGT-full
+    model_key: gofa-f
+    model_plain: LargeGT-full
+    value: 0.8834
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2407.09709'
+    title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
+    date: Jul 12, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-12'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/JiaruiFeng/GOFA
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8834
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LargeGT-full
+    model_key: llms
+    model_plain: LargeGT-full
+    value: 0.882
+    std: 0.0005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    arxiv_id: '2412.16441'
+    title: 'Towards Graph Foundation Models: Learning Generalities Across Graphs via
+      Task-Trees'
+    date: Dec 21, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-21'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/Zehong-Wang/GIT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.882
+    sort_std: 0.0005
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Whole Dataset
+    model_key: whole dataset
+    model_plain: Whole Dataset
+    value: 0.74
+    std: 0.001
+    paper_value: 0.74
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-products using the whole dataset without
+      condensation
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.74
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.74
+    true_std: 0.001
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.74
+    sort_std: 0.001
+    global_rank: 294
+    paper_rank: 294
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Random
+    model_key: random
+    model_plain: Random
+    value: 0.63
+    std: 0.012
+    paper_value: 0.63
+    paper_std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-products with 0.08% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.704
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2310.04668'
+    at_pub_source_title: Label-free Node Classification on Graphs with Large Language
+      Models (LLMs)
+    at_pub_source_date_iso: '2023-10-07'
+    at_pub_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2023-10-07'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: 0.07399999999999995
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.704
+    true_std: 0.006
+    value_gap_source_arxiv: '2310.04668'
+    value_gap_source_title: Label-free Node Classification on Graphs with Large Language
+      Models (LLMs)
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07399999999999995
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.704
+    sort_std: 0.006
+    global_rank: 333
+    paper_rank: 366
+    rank_delta: 33
+    rank_delta_abs: 33
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Label-free Node Classification on Graphs with Large Language
+      Models (LLMs)
+    comparison_source_arxiv: '2310.04668'
+    is_best: false
+    is_std_outlier: false
+  - model: SimGC
+    model_key: simgc
+    model_plain: SimGC
+    value: 0.67
+    std: 0.007
+    paper_value: 0.67
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-products with 0.08% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.67
+    true_std: 0.007
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.67
+    sort_std: 0.007
+    global_rank: 348
+    paper_rank: 348
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SFGC
+    model_key: sfgc
+    model_plain: SFGC
+    value: 0.644
+    std: 0.004
+    paper_value: 0.644
+    paper_std: 0.004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-products with 0.08% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.644
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.644
+    true_std: 0.004
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.644
+    sort_std: 0.004
+    global_rank: 362
+    paper_rank: 362
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: K-Center
+    model_key: k-center
+    model_plain: K-Center
+    value: 0.624
+    std: 0.005
+    paper_value: 0.624
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-products with 0.08% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.624
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.624
+    true_std: 0.005
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.624
+    sort_std: 0.005
+    global_rank: 367
+    paper_rank: 367
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGDD
+    model_key: sgdd
+    model_plain: SGDD
+    value: 0.593
+    std: 0.017
+    paper_value: 0.593
+    paper_std: 0.017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-products with 0.08% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.593
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.593
+    true_std: 0.017
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.593
+    sort_std: 0.017
+    global_rank: 376
+    paper_rank: 376
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Herding
+    model_key: herding
+    model_plain: Herding
+    value: 0.591
+    std: 0.001
+    paper_value: 0.591
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-products with 0.04% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.591
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.591
+    true_std: 0.001
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.591
+    sort_std: 0.001
+    global_rank: 377
+    paper_rank: 377
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCond
+    model_key: gcond
+    model_plain: GCond
+    value: 0.564
+    std: 0.01
+    paper_value: 0.564
+    paper_std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-products with 0.04% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.564
+    at_pub_std: 0.01
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.564
+    true_std: 0.01
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.564
+    sort_std: 0.01
+    global_rank: 378
+    paper_rank: 378
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCDM
+    model_key: gcdm
+    model_plain: GCDM
+    value: 0.535
+    std: 0.011
+    paper_value: 0.535
+    paper_std: 0.011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-products with 0.04% reduction ratio
+    date: Mar 22, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.535
+    at_pub_std: 0.011
+    at_pub_source_arxiv: '2401.12231'
+    at_pub_source_title: Disentangled Condensation for Large-scale Graphs
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-01-18'
+    value_gap_source_date_label: WWW 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.535
+    true_std: 0.011
+    value_gap_source_arxiv: '2401.12231'
+    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.535
+    sort_std: 0.011
+    global_rank: 381
+    paper_rank: 381
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+results_grouped:
+- benchmark: Classic
+  datasets:
+  - *id001
+  - *id002
+  - *id003
+- benchmark: OGB
+  datasets:
+  - *id004
+datasets_by_scope:
+- scope: node-level
+  label: Node-level
+  benchmarks:
+  - benchmark: Classic
+    benchmark_slug: classic
+    datasets:
+    - dataset: Cora
+      dataset_slug: cora
+    - dataset: CiteSeer
+      dataset_slug: citeseer
+    - dataset: Reddit
+      dataset_slug: reddit
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbn-products
+      dataset_slug: ogbn-products
+single_proposed_model: SimGC
+main_figure: /figures/2403.14951/main_figure.jpegoptim.jpg
+---
+

@@ -62,9 +62,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -95,9 +95,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -129,9 +129,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -221,8 +221,8 @@ results:
     value_note: ''
     sort_value: 0.948
     sort_std: 0.006
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -290,8 +290,8 @@ results:
     value_note: ''
     sort_value: 0.927
     sort_std: 0.016
-    global_rank: 252
-    paper_rank: 252
+    global_rank: 259
+    paper_rank: 259
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -360,8 +360,8 @@ results:
     value_note: ''
     sort_value: 0.918
     sort_std: 0.009
-    global_rank: 338
-    paper_rank: 338
+    global_rank: 344
+    paper_rank: 344
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -429,8 +429,8 @@ results:
     value_note: ''
     sort_value: 0.915
     sort_std: 0.015
-    global_rank: 358
-    paper_rank: 358
+    global_rank: 362
+    paper_rank: 362
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -498,8 +498,8 @@ results:
     value_note: ''
     sort_value: 0.902
     sort_std: 0.009
-    global_rank: 419
-    paper_rank: 419
+    global_rank: 425
+    paper_rank: 425
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -567,8 +567,8 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.014
-    global_rank: 438
-    paper_rank: 438
+    global_rank: 444
+    paper_rank: 444
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -637,8 +637,8 @@ results:
     value_note: ''
     sort_value: 0.886
     sort_std: 0.013
-    global_rank: 457
-    paper_rank: 457
+    global_rank: 463
+    paper_rank: 463
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -706,8 +706,8 @@ results:
     value_note: ''
     sort_value: 0.848
     sort_std: 0.006
-    global_rank: 480
-    paper_rank: 480
+    global_rank: 487
+    paper_rank: 487
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -775,8 +775,8 @@ results:
     value_note: ''
     sort_value: 0.771
     sort_std: 0.012
-    global_rank: 504
-    paper_rank: 504
+    global_rank: 510
+    paper_rank: 510
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -844,8 +844,8 @@ results:
     value_note: ''
     sort_value: 0.746
     sort_std: 0.007
-    global_rank: 509
-    paper_rank: 509
+    global_rank: 515
+    paper_rank: 515
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -878,5 +878,6 @@ datasets_by_scope:
     - dataset: Amazon-Photo
       dataset_slug: amazon-photo
 single_proposed_model: Graph-DG
+main_figure: /figures/2602.05571/main_figure.jpegoptim.jpg
 ---
 

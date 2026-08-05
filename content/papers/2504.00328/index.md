@@ -1040,5 +1040,6 @@ datasets_by_scope:
     - dataset: Reddit
       dataset_slug: reddit
 single_proposed_model: SPLASH
+main_figure: /figures/2504.00328/main_figure.jpegoptim.jpg
 ---
 

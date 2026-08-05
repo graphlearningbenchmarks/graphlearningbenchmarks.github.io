@@ -41,16 +41,16 @@ adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
 - TU Dortmund
-- Heterophilic Graphs
+- Heterophily Benchmark
 benchmark_coverage:
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 2
   total: 11
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
   evaluated: 5
-  total: 13
+  total: 5
 task_categories:
 - graph_classification
 - node_classification
@@ -61,9 +61,9 @@ results:
 - &id004
   dataset: Amazon-ratings
   rows:
-  - model: topk
+  - model: H2GCN
     model_key: h2gcn + unigap
-    model_plain: topk
+    model_plain: H2GCN
     value: 0.6375
     std: 0.011
     metric: Accuracy
@@ -95,9 +95,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: H2GCN
     model_key: graphsage + unigap
-    model_plain: topk
+    model_plain: H2GCN
     value: 0.6283
     std: 0.009
     metric: Accuracy
@@ -129,9 +129,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: H2GCN
     model_key: gcn + unigap
-    model_plain: topk
+    model_plain: H2GCN
     value: 0.5976
     std: 0.008
     metric: Accuracy
@@ -188,7 +188,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as proposed in the original paper [platonov2023a]
+    protocol_note: Test accuracy on Amazon-Ratings using 10 public data folds as per
+      Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -221,8 +222,8 @@ results:
     value_note: ''
     sort_value: 0.44
     sort_std: 0.01
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -257,7 +258,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as proposed in the original paper [platonov2023a]
+    protocol_note: Test accuracy on Amazon-Ratings using 10 public data folds as per
+      Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -290,8 +292,8 @@ results:
     value_note: ''
     sort_value: 0.43
     sort_std: 0.01
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -326,7 +328,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as proposed in the original paper [platonov2023a]
+    protocol_note: Test accuracy on Amazon-Ratings using 10 public data folds as per
+      Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -359,8 +362,8 @@ results:
     value_note: ''
     sort_value: 0.42
     sort_std: 0.01
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -395,7 +398,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as proposed in the original paper [platonov2023a]
+    protocol_note: Test accuracy on Amazon-Ratings using 10 public data folds as per
+      Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -428,8 +432,8 @@ results:
     value_note: ''
     sort_value: 0.4
     sort_std: 0.02
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -464,7 +468,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as proposed in the original paper [platonov2023a]
+    protocol_note: Test accuracy on Amazon-Ratings using 10 public data folds as per
+      Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -497,8 +502,8 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: 0.01
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 184
+    paper_rank: 184
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -520,9 +525,42 @@ results:
 - &id007
   dataset: Minesweeper
   rows:
-  - model: topk
+  - model: Tango_GPS
+    model_key: bunn
+    model_plain: Tango_GPS
+    value: 0.9899
+    std: 0.0016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2405.15540'
+    title: Bundle Neural Networks for message diffusion on graphs
+    date: May 24, 2024
+    date_display: May 2024
+    date_iso: '2024-05-24'
+    venue: arXiv.org
+    codebase_url: https://github.com/jacobbamberger/BuNN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9899
+    sort_std: 0.0016
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
     model_key: dc-gnn
-    model_plain: topk
+    model_plain: Tango_GPS
     value: 0.985
     std: 0.0021
     metric: ROC-AUC
@@ -545,79 +583,46 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.985
     sort_std: 0.0021
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: topk
-    model_key: polynormer-r
-    model_plain: topk
-    value: 0.9746
-    std: 0.0036
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9746
-    sort_std: 0.0036
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: topk
-    model_key: polynormer + wideformer
-    model_plain: topk
-    value: 0.9726
-    std: 0.0001
+  - model: Tango_GPS
+    model_key: tango_gps
+    model_plain: Tango_GPS
+    value: 0.9839
+    std: 0.0054
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.21267'
-    title: Relieving the Over-Aggregating Effect in Graph Transformers
-    date: Oct 24, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-24'
-    venue: Accepted by NeurIPS 2025
-    codebase_url: https://github.com/sunjss/over-aggregating
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9726
-    sort_std: 0.0001
+    sort_value: 0.9839
+    sort_std: 0.0054
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: ASAP
     model_key: asap
@@ -637,15 +642,14 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout with GIN (32 hidden
-      units, ReLU) and an MLP readout.
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Performance reported over 10 public data folds following the setting
-      in Platonov et al. 2023a.
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -678,8 +682,8 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: 0.05
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -707,15 +711,14 @@ results:
     architecture_title: Traditional / classical method
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout with GIN (32 hidden
-      units, ReLU) and an MLP readout.
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Performance reported over 10 public data folds following the setting
-      in Platonov et al. 2023a.
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -748,8 +751,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.01
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -777,15 +780,14 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout with GIN (32 hidden
-      units, ReLU) and an MLP readout.
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Performance reported over 10 public data folds following the setting
-      in Platonov et al. 2023a.
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -818,8 +820,8 @@ results:
     value_note: ''
     sort_value: 0.66
     sort_std: 0.02
-    global_rank: 111
-    paper_rank: 111
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -847,15 +849,14 @@ results:
     architecture_title: Traditional / classical method
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout with GIN (32 hidden
-      units, ReLU) and an MLP readout.
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Performance reported over 10 public data folds following the setting
-      in Platonov et al. 2023a.
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -888,8 +889,8 @@ results:
     value_note: ''
     sort_value: 0.63
     sort_std: 0.04
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -917,15 +918,14 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout with GIN (32 hidden
-      units, ReLU) and an MLP readout.
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Performance reported over 10 public data folds following the setting
-      in Platonov et al. 2023a.
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -958,8 +958,8 @@ results:
     value_note: ''
     sort_value: 0.62
     sort_std: 0.01
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -981,44 +981,44 @@ results:
 - &id001
   dataset: NCI1
   rows:
-  - model: Diverse B12C3
-    model_key: msa-aud
-    model_plain: Diverse B12C3
-    value: 0.969
+  - model: ECC
+    model_key: wl-mlp
+    model_plain: ECC
+    value: 0.9954
     std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
     is_global_top: true
     global_rank: 1
-    sort_value: 0.969
+    sort_value: 0.9954
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-au
-    model_plain: Diverse B12C3
-    value: 0.966
+  - model: ECC
+    model_key: gin
+    model_plain: ECC
+    value: 0.9934
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -1026,33 +1026,32 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GNNs ... use node features
     is_global_top: true
     global_rank: 2
-    sort_value: 0.966
+    sort_value: 0.9934
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-ad
-    model_plain: Diverse B12C3
-    value: 0.963
+  - model: ECC
+    model_key: gcn
+    model_plain: ECC
+    value: 0.9727
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -1060,23 +1059,22 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: GNNs ... use node features
     is_global_top: true
     global_rank: 3
-    sort_value: 0.963
+    sort_value: 0.9727
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -1107,7 +1105,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1139,10 +1137,10 @@ results:
     value_note: ''
     sort_value: 0.812
     sort_std: 0.034
-    global_rank: 164
-    paper_rank: 393
-    rank_delta: 229
-    rank_delta_abs: 229
+    global_rank: 166
+    paper_rank: 411
+    rank_delta: 245
+    rank_delta_abs: 245
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1174,7 +1172,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1206,10 +1204,10 @@ results:
     value_note: ''
     sort_value: 0.801
     sort_std: 0.026
-    global_rank: 220
-    paper_rank: 316
-    rank_delta: 96
-    rank_delta_abs: 96
+    global_rank: 223
+    paper_rank: 330
+    rank_delta: 107
+    rank_delta_abs: 107
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1241,7 +1239,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1273,10 +1271,77 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.033
-    global_rank: 232
-    paper_rank: 316
-    rank_delta: 84
-    rank_delta_abs: 84
+    global_rank: 236
+    paper_rank: 330
+    rank_delta: 94
+    rank_delta_abs: 94
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: topk
+    model_key: topk
+    model_plain: topk
+    value: 0.75
+    std: 0.02
+    paper_value: 0.75
+    paper_std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 7
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
+    date: Dec 14, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-14'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7943
+    at_pub_std: 0.035
+    at_pub_source_arxiv: '2402.16346'
+    at_pub_source_title: Boosting Graph Pooling with Persistent Homology
+    at_pub_source_date_iso: '2024-02-26'
+    at_pub_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2024-02-26'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.044300000000000006
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.7943
+    true_std: 0.035
+    value_gap_source_arxiv: '2402.16346'
+    value_gap_source_title: Boosting Graph Pooling with Persistent Homology
+    value_gap_source_is_current_paper: false
+    value_gap: 0.044300000000000006
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7943
+    sort_std: 0.035
+    global_rank: 258
+    paper_rank: 431
+    rank_delta: 173
+    rank_delta_abs: 173
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1308,7 +1373,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1340,10 +1405,10 @@ results:
     value_note: ''
     sort_value: 0.7935
     sort_std: 0.0033
-    global_rank: 254
-    paper_rank: 361
-    rank_delta: 107
-    rank_delta_abs: 107
+    global_rank: 262
+    paper_rank: 376
+    rank_delta: 114
+    rank_delta_abs: 114
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1375,7 +1440,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1407,10 +1472,10 @@ results:
     value_note: ''
     sort_value: 0.785
     sort_std: 0.014
-    global_rank: 296
-    paper_rank: 361
-    rank_delta: 65
-    rank_delta_abs: 65
+    global_rank: 305
+    paper_rank: 376
+    rank_delta: 71
+    rank_delta_abs: 71
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1442,7 +1507,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1474,10 +1539,10 @@ results:
     value_note: ''
     sort_value: 0.7821
     sort_std: 0.0175
-    global_rank: 309
-    paper_rank: 393
-    rank_delta: 84
-    rank_delta_abs: 84
+    global_rank: 320
+    paper_rank: 411
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1509,7 +1574,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1542,8 +1607,8 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: 0.02
-    global_rank: 322
-    paper_rank: 322
+    global_rank: 336
+    paper_rank: 336
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1577,7 +1642,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1610,8 +1675,8 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: 0.02
-    global_rank: 323
-    paper_rank: 323
+    global_rank: 337
+    paper_rank: 337
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1645,7 +1710,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1678,8 +1743,8 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: 0.02
-    global_rank: 324
-    paper_rank: 324
+    global_rank: 338
+    paper_rank: 338
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1713,7 +1778,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1746,8 +1811,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.02
-    global_rank: 366
-    paper_rank: 366
+    global_rank: 382
+    paper_rank: 382
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1781,7 +1846,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1814,8 +1879,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.03
-    global_rank: 367
-    paper_rank: 367
+    global_rank: 383
+    paper_rank: 383
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1849,7 +1914,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1882,8 +1947,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.02
-    global_rank: 368
-    paper_rank: 368
+    global_rank: 384
+    paper_rank: 384
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1917,7 +1982,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -1950,8 +2015,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.02
-    global_rank: 369
-    paper_rank: 369
+    global_rank: 385
+    paper_rank: 385
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1985,7 +2050,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2018,8 +2083,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.02
-    global_rank: 370
-    paper_rank: 370
+    global_rank: 386
+    paper_rank: 386
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2053,7 +2118,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2086,8 +2151,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.03
-    global_rank: 365
-    paper_rank: 365
+    global_rank: 381
+    paper_rank: 381
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2122,7 +2187,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2155,8 +2220,8 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: 0.02
-    global_rank: 399
-    paper_rank: 399
+    global_rank: 418
+    paper_rank: 418
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2164,76 +2229,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: topk
-    model_key: topk
-    model_plain: topk
-    value: 0.75
-    std: 0.02
-    paper_value: 0.75
-    paper_std: 0.02
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 7
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Dec 14, 2025
-    date_display: Dec 2025
-    date_iso: '2025-12-14'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6702
-    at_pub_std: 0.0225
-    at_pub_source_arxiv: '1911.07979'
-    at_pub_source_title: 'ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical
-      Graph Representations'
-    at_pub_source_date_iso: '2019-11-18'
-    at_pub_source_date_label: AAAI 2019
-    value_gap_source_date_iso: '2025-12-14'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.07979999999999998
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.75
-    true_std: 0.02
-    value_gap_source_arxiv: '2512.12642'
-    value_gap_source_title: 'Torch Geometric Pool: the Pytorch library for pooling
-      in Graph Neural Networks'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.75
-    sort_std: 0.02
-    global_rank: 412
-    paper_rank: 412
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'ASAP: Adaptive Structure Aware Pooling for Learning
-      Hierarchical Graph Representations'
-    comparison_source_arxiv: '1911.07979'
     is_best: false
     is_std_outlier: false
   - model: pan
@@ -2260,7 +2255,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2293,8 +2288,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.03
-    global_rank: 475
-    paper_rank: 475
+    global_rank: 496
+    paper_rank: 496
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2328,7 +2323,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold CV
+    protocol_note: Test accuracy on NCI1 using 10-fold CV
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2361,8 +2356,8 @@ results:
     value_note: ''
     sort_value: 0.69
     sort_std: 0.02
-    global_rank: 499
-    paper_rank: 499
+    global_rank: 520
+    paper_rank: 520
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2384,104 +2379,107 @@ results:
 - &id005
   dataset: Questions
   rows:
-  - model: topk
-    model_key: mlp
-    model_plain: topk
-    value: 0.9733
-    std: 0.0006
+  - model: Tango GPS
+    model_key: graphsage + unigap
+    model_plain: Tango GPS
+    value: 0.8421
+    std: 0.008
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2405.20445'
-    title: Fully-inductive Node Classification on Arbitrary Graphs
-    date: May 30, 2024
-    date_display: May 2024
-    date_iso: '2024-05-30'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/DeepGraphLearning/GraphAny
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9733
-    sort_std: 0.0006
+    sort_value: 0.8421
+    sort_std: 0.008
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
-    model_key: ags-gnn
-    model_plain: topk
-    value: 0.9727
-    std: 0.0004
+  - model: Tango GPS
+    model_key: h2gcn + unigap
+    model_plain: Tango GPS
+    value: 0.8359
+    std: 0.007
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: Feb 14, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-14'
-    venue: IEEE Transactions on Knowledge and Data Engineering
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9727
-    sort_std: 0.0004
+    sort_value: 0.8359
+    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
-    model_key: gcn
-    model_plain: topk
-    value: 0.9715
-    std: 0.0004
+  - model: Tango GPS
+    model_key: gcn + unigap
+    model_plain: Tango GPS
+    value: 0.8273
+    std: 0.009
     metric: ROC-AUC
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2405.20445'
-    title: Fully-inductive Node Classification on Arbitrary Graphs
-    date: May 30, 2024
-    date_display: May 2024
-    date_iso: '2024-05-30'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/DeepGraphLearning/GraphAny
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9715
-    sort_std: 0.0004
+    sort_value: 0.8273
+    sort_std: 0.009
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: kmis
     model_key: kmis
@@ -2508,8 +2506,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds following the setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as proposed in the original paper
+      [platonov2023a]
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2542,8 +2540,8 @@ results:
     value_note: ''
     sort_value: 0.66
     sort_std: 0.01
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2578,8 +2576,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds following the setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as proposed in the original paper
+      [platonov2023a]
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2612,8 +2610,8 @@ results:
     value_note: ''
     sort_value: 0.65
     sort_std: 0.02
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2648,8 +2646,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds following the setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as proposed in the original paper
+      [platonov2023a]
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2682,8 +2680,8 @@ results:
     value_note: ''
     sort_value: 0.62
     sort_std: 0.06
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 140
+    paper_rank: 140
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2718,8 +2716,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds following the setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as proposed in the original paper
+      [platonov2023a]
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2752,8 +2750,8 @@ results:
     value_note: ''
     sort_value: 0.62
     sort_std: 0.03
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2788,8 +2786,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds following the setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as proposed in the original paper
+      [platonov2023a]
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2822,8 +2820,8 @@ results:
     value_note: ''
     sort_value: 0.59
     sort_std: 0.06
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2869,7 +2867,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -2937,7 +2935,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3005,7 +3003,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3073,7 +3071,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3141,7 +3139,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3209,7 +3207,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3242,8 +3240,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.03
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3277,7 +3275,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3310,8 +3308,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.02
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3345,7 +3343,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3378,8 +3376,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.02
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3413,7 +3411,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3446,8 +3444,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.03
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3481,7 +3479,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3514,8 +3512,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.02
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3549,7 +3547,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3582,8 +3580,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.01
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3617,7 +3615,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3650,8 +3648,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.02
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3685,7 +3683,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3718,8 +3716,8 @@ results:
     value_note: ''
     sort_value: 0.89
     sort_std: 0.03
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3753,7 +3751,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3786,8 +3784,8 @@ results:
     value_note: ''
     sort_value: 0.88
     sort_std: 0.03
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3821,7 +3819,211 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
+    date: Dec 14, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-14'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-12-14'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.87
+    true_std: 0.03
+    value_gap_source_arxiv: '2512.12642'
+    value_gap_source_title: 'Torch Geometric Pool: the Pytorch library for pooling
+      in Graph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.87
+    sort_std: 0.03
+    global_rank: 21
+    paper_rank: 21
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ndp
+    model_key: ndp
+    model_plain: ndp
+    value: 0.87
+    std: 0.02
+    paper_value: 0.87
+    paper_std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 7
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
+    date: Dec 14, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-14'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-12-14'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.87
+    true_std: 0.02
+    value_gap_source_arxiv: '2512.12642'
+    value_gap_source_title: 'Torch Geometric Pool: the Pytorch library for pooling
+      in Graph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.87
+    sort_std: 0.02
+    global_rank: 22
+    paper_rank: 22
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: pan
+    model_key: pan
+    model_plain: pan
+    value: 0.87
+    std: 0.05
+    paper_value: 0.87
+    paper_std: 0.05
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 7
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
+    date: Dec 14, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-14'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-12-14'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.87
+    true_std: 0.05
+    value_gap_source_arxiv: '2512.12642'
+    value_gap_source_title: 'Torch Geometric Pool: the Pytorch library for pooling
+      in Graph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.87
+    sort_std: 0.05
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: sag
+    model_key: sag
+    model_plain: sag
+    value: 0.87
+    std: 0.03
+    paper_value: 0.87
+    paper_std: 0.03
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 7
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -3865,210 +4067,6 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ndp
-    model_key: ndp
-    model_plain: ndp
-    value: 0.87
-    std: 0.02
-    paper_value: 0.87
-    paper_std: 0.02
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 7
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
-    date: Dec 14, 2025
-    date_display: Dec 2025
-    date_iso: '2025-12-14'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-12-14'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.87
-    true_std: 0.02
-    value_gap_source_arxiv: '2512.12642'
-    value_gap_source_title: 'Torch Geometric Pool: the Pytorch library for pooling
-      in Graph Neural Networks'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.87
-    sort_std: 0.02
-    global_rank: 25
-    paper_rank: 25
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: pan
-    model_key: pan
-    model_plain: pan
-    value: 0.87
-    std: 0.05
-    paper_value: 0.87
-    paper_std: 0.05
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 7
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
-    date: Dec 14, 2025
-    date_display: Dec 2025
-    date_iso: '2025-12-14'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-12-14'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.87
-    true_std: 0.05
-    value_gap_source_arxiv: '2512.12642'
-    value_gap_source_title: 'Torch Geometric Pool: the Pytorch library for pooling
-      in Graph Neural Networks'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.87
-    sort_std: 0.05
-    global_rank: 26
-    paper_rank: 26
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: sag
-    model_key: sag
-    model_plain: sag
-    value: 0.87
-    std: 0.03
-    paper_value: 0.87
-    paper_std: 0.03
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 7
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
-    date: Dec 14, 2025
-    date_display: Dec 2025
-    date_iso: '2025-12-14'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-12-14'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.87
-    true_std: 0.03
-    value_gap_source_arxiv: '2512.12642'
-    value_gap_source_title: 'Torch Geometric Pool: the Pytorch library for pooling
-      in Graph Neural Networks'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.87
-    sort_std: 0.03
-    global_rank: 27
-    paper_rank: 27
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: topk
     model_key: topk
     model_plain: topk
@@ -4093,7 +4091,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on graph-level classification
+    protocol_note: Test accuracy on Reddit-binary graph classification task.
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4126,8 +4124,8 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.03
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4149,9 +4147,9 @@ results:
 - &id003
   dataset: Roman-empire
   rows:
-  - model: topk
+  - model: GPS + Mamba
     model_key: dir-nt
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9477
     std: 0.0031
     metric: Accuracy
@@ -4183,9 +4181,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: GPS + Mamba
     model_key: dir-poly
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9451
     std: 0.0022
     metric: Accuracy
@@ -4217,9 +4215,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: GPS + Mamba
     model_key: largescalenet
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9358
     std: 0.0024
     metric: Accuracy
@@ -4269,13 +4267,14 @@ results:
     uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
-      with GIN (32 hidden units, ReLU) and an MLP readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as per Platonov et al. 2023a
+    protocol_note: Test accuracy on Roman-Empire using 10 public data folds as per
+      Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4308,8 +4307,8 @@ results:
     value_note: ''
     sort_value: 0.36
     sort_std: 0.02
-    global_rank: 156
-    paper_rank: 156
+    global_rank: 191
+    paper_rank: 191
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4338,13 +4337,14 @@ results:
     uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
-      with GIN (32 hidden units, ReLU) and an MLP readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as per Platonov et al. 2023a
+    protocol_note: Test accuracy on Roman-Empire using 10 public data folds as per
+      Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4377,8 +4377,8 @@ results:
     value_note: ''
     sort_value: 0.32
     sort_std: 0.01
-    global_rank: 161
-    paper_rank: 161
+    global_rank: 197
+    paper_rank: 197
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4407,13 +4407,14 @@ results:
     uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
-      with GIN (32 hidden units, ReLU) and an MLP readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as per Platonov et al. 2023a
+    protocol_note: Test accuracy on Roman-Empire using 10 public data folds as per
+      Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4446,8 +4447,8 @@ results:
     value_note: ''
     sort_value: 0.27
     sort_std: 0.01
-    global_rank: 165
-    paper_rank: 165
+    global_rank: 201
+    paper_rank: 201
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4476,13 +4477,14 @@ results:
     uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
-      with GIN (32 hidden units, ReLU) and an MLP readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as per Platonov et al. 2023a
+    protocol_note: Test accuracy on Roman-Empire using 10 public data folds as per
+      Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4515,8 +4517,8 @@ results:
     value_note: ''
     sort_value: 0.23
     sort_std: 0.01
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 203
+    paper_rank: 203
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4545,13 +4547,14 @@ results:
     uses_external_data: 0
     input_feature_source: raw_features
     feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
-      with GIN (32 hidden units, ReLU) and an MLP readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: 10 public data folds as per Platonov et al. 2023a
+    protocol_note: Test accuracy on Roman-Empire using 10 public data folds as per
+      Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4584,8 +4587,8 @@ results:
     value_note: ''
     sort_value: 0.21
     sort_std: 0.02
-    global_rank: 173
-    paper_rank: 173
+    global_rank: 209
+    paper_rank: 209
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4607,9 +4610,9 @@ results:
 - &id006
   dataset: Tolokers
   rows:
-  - model: topk
+  - model: Schrödinger
     model_key: polynormer-r
-    model_plain: topk
+    model_plain: Schrödinger
     value: 0.8591
     std: 0.0074
     metric: ROC-AUC
@@ -4640,9 +4643,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: Schrödinger
     model_key: dc-gnn
-    model_plain: topk
+    model_plain: Schrödinger
     value: 0.8588
     std: 0.0081
     metric: ROC-AUC
@@ -4673,9 +4676,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: Schrödinger
     model_key: polynormer + wideformer
-    model_plain: topk
+    model_plain: Schrödinger
     value: 0.8533
     std: 0.0023
     metric: ROC-AUC
@@ -4724,15 +4727,14 @@ results:
     architecture_title: Traditional / classical method
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout... with GIN (32
-      hidden units, ReLU)
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds, following the same setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4765,8 +4767,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.01
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4794,15 +4796,14 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout... with GIN (32
-      hidden units, ReLU)
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds, following the same setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4835,8 +4836,8 @@ results:
     value_note: ''
     sort_value: 0.79
     sort_std: 0.01
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4864,15 +4865,14 @@ results:
     architecture_title: Traditional / classical method
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout... with GIN (32
-      hidden units, ReLU)
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds, following the same setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4905,8 +4905,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: 0.05
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4934,15 +4934,14 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout... with GIN (32
-      hidden units, ReLU)
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds, following the same setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -4975,8 +4974,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.06
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5004,15 +5003,14 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: The benchmark instantiates this layout... with GIN (32
-      hidden units, ReLU)
+    feature_source_evidence: The benchmark instantiates this layout as MP-Pool-MP-Unpool-MP-Readout
+      with GIN (32 hidden units, ReLU)
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: AUROC over 10 public data folds, following the same setting proposed
-      in the original paper [platonov2023a]
+    protocol_note: AUROC over 10 public data folds as per Platonov et al. 2023a
     date: Dec 14, 2025
     date_display: Dec 2025
     date_iso: '2025-12-14'
@@ -5045,8 +5043,8 @@ results:
     value_note: ''
     sort_value: 0.7
     sort_std: 0.03
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5070,7 +5068,7 @@ results_grouped:
   datasets:
   - *id001
   - *id002
-- benchmark: Heterophilic Graphs
+- benchmark: Heterophily Benchmark
   datasets:
   - *id003
   - *id004
@@ -5081,8 +5079,8 @@ datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Roman-empire
       dataset_slug: roman-empire
@@ -5104,5 +5102,6 @@ datasets_by_scope:
       dataset_slug: nci1
     - dataset: REDDIT-BINARY
       dataset_slug: reddit-binary
+main_figure: /figures/2512.12642/main_figure.jpegoptim.jpg
 ---
 

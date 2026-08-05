@@ -2376,5 +2376,6 @@ datasets_by_scope:
       dataset_slug: cluster
     - dataset: PATTERN
       dataset_slug: pattern
+main_figure: /figures/2606.04647/main_figure.jpegoptim.jpg
 ---
 

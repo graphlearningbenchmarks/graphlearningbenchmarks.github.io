@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - UniMP
-mrr: 0.0779
-adjusted_mrr: 0.0519
+mrr: 0.0519
+adjusted_mrr: 0.0346
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -72,9 +72,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -106,9 +106,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -139,9 +139,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -230,10 +230,10 @@ results:
     value_note: ''
     sort_value: 0.8383
     sort_std: 0.0014
-    global_rank: 49
-    paper_rank: 131
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 51
+    paper_rank: 137
+    rank_delta: 86
+    rank_delta_abs: 86
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -299,8 +299,8 @@ results:
     value_note: ''
     sort_value: 0.8256
     sort_std: 0.0031
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -366,8 +366,8 @@ results:
     value_note: ''
     sort_value: 0.8098
     sort_std: 0.002
-    global_rank: 117
-    paper_rank: 118
+    global_rank: 122
+    paper_rank: 123
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -434,8 +434,8 @@ results:
     value_note: ''
     sort_value: 0.7945
     sort_std: 0.0059
-    global_rank: 153
-    paper_rank: 153
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -502,8 +502,8 @@ results:
     value_note: ''
     sort_value: 0.7923
     sort_std: 0.0078
-    global_rank: 165
-    paper_rank: 165
+    global_rank: 178
+    paper_rank: 178
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -570,8 +570,8 @@ results:
     value_note: ''
     sort_value: 0.7897
     sort_std: 0.0036
-    global_rank: 179
-    paper_rank: 179
+    global_rank: 193
+    paper_rank: 193
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -593,9 +593,9 @@ results:
 - &id002
   dataset: ogbn-proteins
   rows:
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8942
     std: 0.0007
     metric: ROC-AUC
@@ -627,9 +627,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: x_wo/ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8915
     std: 0.0012
     metric: ROC-AUC
@@ -661,9 +661,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: mog
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8904
     std: 0.0072
     metric: ROC-AUC
@@ -753,8 +753,8 @@ results:
     value_note: ''
     sort_value: 0.8642
     sort_std: 0.0008
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -800,33 +800,32 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-09-08'
-    value_gap_source_date_label: IJCAI 2020
+    value_gap_source_date_iso: '2021-06-14'
+    value_gap_source_date_label: ICML 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.858
-    true_std: 0.0017
-    value_gap_source_arxiv: '2009.03509'
-    value_gap_source_title: 'Masked Label Prediction: Unified Message Passing Model
-      for Semi-Supervised Classification'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    today_delta_significant: true
+    true_value: 0.8616
+    true_std: 0.0016
+    value_gap_source_arxiv: '2106.07476'
+    value_gap_source_title: Training Graph Neural Networks with 1000 Layers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0036000000000000476
     has_value_note: false
     value_note: ''
-    sort_value: 0.858
-    sort_std: 0.0017
-    global_rank: 8
-    paper_rank: 8
+    sort_value: 0.8616
+    sort_std: 0.0016
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -889,8 +888,8 @@ results:
     value_note: ''
     sort_value: 0.8496
     sort_std: 0.0028
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -957,8 +956,8 @@ results:
     value_note: ''
     sort_value: 0.8436
     sort_std: 0.0065
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1025,8 +1024,8 @@ results:
     value_note: ''
     sort_value: 0.7825
     sort_std: 0.0035
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1093,8 +1092,8 @@ results:
     value_note: ''
     sort_value: 0.7803
     sort_std: 0.0073
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1130,5 +1129,6 @@ datasets_by_scope:
     - dataset: ogbn-proteins
       dataset_slug: ogbn-proteins
 single_proposed_model: UniMP
+main_figure: /figures/2009.03509/main_figure.jpegoptim.jpg
 ---
 

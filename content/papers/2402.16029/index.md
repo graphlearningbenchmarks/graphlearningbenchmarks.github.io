@@ -53,7 +53,7 @@ benchmark_coverage:
 - benchmark: GraphBench
   benchmark_slug: graphbench
   evaluated: 2
-  total: 5
+  total: 8
 task_categories:
 - graph_classification
 experiment_scopes:
@@ -809,5 +809,6 @@ datasets_by_scope:
       dataset_slug: er-graph
     - dataset: BA graph
       dataset_slug: ba-graph
+main_figure: /figures/2402.16029/main_figure.jpegoptim.jpg
 ---
 

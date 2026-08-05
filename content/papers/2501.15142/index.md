@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - DAGPrompt
-mrr: 0.0027
-adjusted_mrr: 0.0018
+mrr: 0.0025
+adjusted_mrr: 0.0017
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
@@ -66,107 +66,104 @@ results:
 - &id002
   dataset: ENZYMES
   rows:
-  - model: 3WLGNN
-    model_key: msa-aud
-    model_plain: 3WLGNN
-    value: 0.892
-    std: null
+  - model: WL
+    model_key: bgnn(m)-cs
+    model_plain: WL
+    value: 0.8068
+    std: 0.0149
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.892
-    sort_std: null
+    sort_value: 0.8068
+    sort_std: 0.0149
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-ad
-    model_plain: 3WLGNN
-    value: 0.89
-    std: null
+  - model: WL
+    model_key: bgnn
+    model_plain: WL
+    value: 0.7936
+    std: 0.0281
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.89
-    sort_std: null
+    sort_value: 0.7936
+    sort_std: 0.0281
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-au
-    model_plain: 3WLGNN
-    value: 0.854
-    std: null
+  - model: WL
+    model_key: bgnn(m)-sc
+    model_plain: WL
+    value: 0.7889
+    std: 0.0079
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.854
-    sort_std: null
+    sort_value: 0.7889
+    sort_std: 0.0079
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GraphPrompt
     model_key: graphprompt
@@ -224,8 +221,8 @@ results:
     value_note: ''
     sort_value: 0.302
     sort_std: 0.0193
-    global_rank: 242
-    paper_rank: 260
+    global_rank: 267
+    paper_rank: 285
     rank_delta: 18
     rank_delta_abs: 18
     rank_delta_direction: worse
@@ -291,8 +288,8 @@ results:
     value_note: ''
     sort_value: 0.2907
     sort_std: 0.0116
-    global_rank: 247
-    paper_rank: 260
+    global_rank: 272
+    paper_rank: 285
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -359,8 +356,8 @@ results:
     value_note: ''
     sort_value: 0.2671
     sort_std: 0.0422
-    global_rank: 258
-    paper_rank: 258
+    global_rank: 283
+    paper_rank: 283
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -427,8 +424,8 @@ results:
     value_note: ''
     sort_value: 0.2565
     sort_std: 0.0397
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 286
+    paper_rank: 286
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -495,8 +492,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0538
-    global_rank: 262
-    paper_rank: 262
+    global_rank: 287
+    paper_rank: 287
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -563,8 +560,8 @@ results:
     value_note: ''
     sort_value: 0.249
     sort_std: 0.0474
-    global_rank: 264
-    paper_rank: 264
+    global_rank: 289
+    paper_rank: 289
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -631,8 +628,8 @@ results:
     value_note: ''
     sort_value: 0.2275
     sort_std: 0.0487
-    global_rank: 273
-    paper_rank: 273
+    global_rank: 298
+    paper_rank: 298
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -699,8 +696,8 @@ results:
     value_note: ''
     sort_value: 0.2265
     sort_std: 0.0385
-    global_rank: 276
-    paper_rank: 276
+    global_rank: 301
+    paper_rank: 301
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -767,8 +764,8 @@ results:
     value_note: ''
     sort_value: 0.2058
     sort_std: 0.0197
-    global_rank: 293
-    paper_rank: 293
+    global_rank: 318
+    paper_rank: 318
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -790,9 +787,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -823,9 +820,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -856,9 +853,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -946,10 +943,10 @@ results:
     value_note: ''
     sort_value: 0.7987
     sort_std: 0.0534
-    global_rank: 594
-    paper_rank: 679
-    rank_delta: 85
-    rank_delta_abs: 85
+    global_rank: 629
+    paper_rank: 725
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1014,8 +1011,8 @@ results:
     value_note: ''
     sort_value: 0.7601
     sort_std: 0.0179
-    global_rank: 660
-    paper_rank: 660
+    global_rank: 703
+    paper_rank: 703
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1082,8 +1079,8 @@ results:
     value_note: ''
     sort_value: 0.7398
     sort_std: 0.0264
-    global_rank: 686
-    paper_rank: 686
+    global_rank: 732
+    paper_rank: 732
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1150,8 +1147,8 @@ results:
     value_note: ''
     sort_value: 0.7386
     sort_std: 0.019
-    global_rank: 692
-    paper_rank: 692
+    global_rank: 738
+    paper_rank: 738
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1218,8 +1215,8 @@ results:
     value_note: ''
     sort_value: 0.7385
     sort_std: 0.0197
-    global_rank: 693
-    paper_rank: 693
+    global_rank: 739
+    paper_rank: 739
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1286,8 +1283,8 @@ results:
     value_note: ''
     sort_value: 0.7346
     sort_std: 0.0137
-    global_rank: 695
-    paper_rank: 695
+    global_rank: 741
+    paper_rank: 741
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1354,8 +1351,8 @@ results:
     value_note: ''
     sort_value: 0.7068
     sort_std: 0.0275
-    global_rank: 719
-    paper_rank: 719
+    global_rank: 764
+    paper_rank: 764
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1422,8 +1419,8 @@ results:
     value_note: ''
     sort_value: 0.5887
     sort_std: 0.0165
-    global_rank: 746
-    paper_rank: 746
+    global_rank: 792
+    paper_rank: 792
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1490,8 +1487,8 @@ results:
     value_note: ''
     sort_value: 0.5643
     sort_std: 0.0285
-    global_rank: 749
-    paper_rank: 749
+    global_rank: 795
+    paper_rank: 795
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1527,5 +1524,6 @@ datasets_by_scope:
     - dataset: ENZYMES
       dataset_slug: enzymes
 single_proposed_model: DAGPrompt
+main_figure: /figures/2501.15142/main_figure.jpegoptim.jpg
 ---
 

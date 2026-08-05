@@ -60,8 +60,8 @@ proposed_models:
 - 3D Infomax QM9
 - 3D Infomax Drugs
 - 3D Infomax QMugs
-mrr: 0.0191
-adjusted_mrr: 0.0127
+mrr: 0.0185
+adjusted_mrr: 0.0123
 mrr_dataset_count: 2
 benchmark_categories:
 - MoleculeNet
@@ -83,9 +83,9 @@ results:
 - &id001
   dataset: ESOL
   rows:
-  - model: KCL
+  - model: AMCT
     model_key: mat
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.278
     std: 0.02
     metric: RMSE
@@ -117,9 +117,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: KCL
+  - model: AMCT
     model_key: smiles
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.356
     std: 0.017
     metric: RMSE
@@ -151,34 +151,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: KCL
-    model_key: conan-fgw
-    model_plain: KCL
-    value: 0.514
-    std: 0.019
+  - model: AMCT
+    model_key: graphormer-spis
+    model_plain: AMCT
+    value: 0.484
+    std: 0.005
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2402.01975'
-    title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation Networks
-    date: Feb 3, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-03'
-    venue: International Conference on Machine Learning
-    codebase_url: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.514
-    sort_std: 0.019
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -240,8 +240,8 @@ results:
     value_note: ''
     sort_value: 0.867
     sort_std: 0.045
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -307,8 +307,8 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.028
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -374,8 +374,8 @@ results:
     value_note: ''
     sort_value: 0.947
     sort_std: 0.038
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -441,8 +441,8 @@ results:
     value_note: ''
     sort_value: 0.959
     sort_std: 0.047
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -508,8 +508,8 @@ results:
     value_note: ''
     sort_value: 0.986
     sort_std: 0.025
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -691,10 +691,10 @@ results:
     value_note: ''
     sort_value: 2.23
     sort_std: 0.26
-    global_rank: 55
-    paper_rank: 60
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 50
+    paper_rank: 54
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -758,8 +758,8 @@ results:
     value_note: ''
     sort_value: 2.233
     sort_std: 0.261
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -825,8 +825,8 @@ results:
     value_note: ''
     sort_value: 2.428
     sort_std: 0.155
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -892,8 +892,8 @@ results:
     value_note: ''
     sort_value: 2.486
     sort_std: 0.222
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -960,10 +960,10 @@ results:
     value_note: ''
     sort_value: 3.166
     sort_std: 0.027
-    global_rank: 99
-    paper_rank: 112
-    rank_delta: 13
-    rank_delta_abs: 13
+    global_rank: 91
+    paper_rank: 101
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1210,7 +1210,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 43
+    global_rank: 44
   - model: True 3D SMP
     model_key: true 3d smp
     model_plain: True 3D SMP
@@ -1282,7 +1282,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 38
+    global_rank: 39
   - model: 3D Infomax QM9
     model_key: 3d infomax qm9
     model_plain: 3D Infomax QM9
@@ -1354,7 +1354,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 45
+    global_rank: 46
   - model: 3D Infomax Drugs
     model_key: 3d infomax drugs
     model_plain: 3D Infomax Drugs
@@ -1426,7 +1426,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 47
+    global_rank: 48
   - model: 3D Infomax QMugs
     model_key: 3d infomax qmugs
     model_plain: 3D Infomax QMugs
@@ -1498,7 +1498,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 48
+    global_rank: 49
   - model: ConfGen
     model_key: confgen
     model_plain: ConfGen
@@ -1570,7 +1570,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 50
+    global_rank: 51
   - model: RDKit
     model_key: rdkit
     model_plain: RDKit
@@ -1642,7 +1642,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 51
+    global_rank: 52
   - model: DisPred
     model_key: dispred
     model_plain: DisPred
@@ -1714,7 +1714,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 52
+    global_rank: 53
   - model: GraphCL
     model_key: graphcl
     model_plain: GraphCL
@@ -1786,7 +1786,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 53
+    global_rank: 54
   - model: Rand Init
     model_key: rand init
     model_plain: Rand Init
@@ -1858,7 +1858,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: true
-    global_rank: 54
+    global_rank: 55
   - model: ProPred
     model_key: propred
     model_plain: ProPred
@@ -1930,7 +1930,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 55
+    global_rank: 56
   metrics:
   - gap
   - HOMO
@@ -1981,5 +1981,6 @@ datasets_by_scope:
     datasets:
     - dataset: QM9
       dataset_slug: qm9
+main_figure: /figures/2110.04126/main_figure.jpegoptim.jpg
 ---
 

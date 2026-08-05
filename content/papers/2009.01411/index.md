@@ -971,5 +971,6 @@ datasets_by_scope:
     - dataset: Case 1
       dataset_slug: case-1
 single_proposed_model: GVP-GNN
+main_figure: /figures/2009.01411/main_figure.jpegoptim.jpg
 ---
 

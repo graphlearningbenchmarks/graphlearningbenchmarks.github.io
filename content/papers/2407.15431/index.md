@@ -84,9 +84,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -117,9 +117,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -151,9 +151,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -242,8 +242,8 @@ results:
     value_note: ''
     sort_value: 0.9072
     sort_std: 0.0058
-    global_rank: 393
-    paper_rank: 393
+    global_rank: 398
+    paper_rank: 398
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -310,8 +310,8 @@ results:
     value_note: ''
     sort_value: 0.7652
     sort_std: 0.0237
-    global_rank: 505
-    paper_rank: 505
+    global_rank: 511
+    paper_rank: 511
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -378,8 +378,8 @@ results:
     value_note: ''
     sort_value: 0.7601
     sort_std: 0.0112
-    global_rank: 507
-    paper_rank: 507
+    global_rank: 513
+    paper_rank: 513
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -446,8 +446,8 @@ results:
     value_note: ''
     sort_value: 0.7354
     sort_std: 0.0122
-    global_rank: 514
-    paper_rank: 514
+    global_rank: 520
+    paper_rank: 520
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -514,8 +514,8 @@ results:
     value_note: ''
     sort_value: 0.7219
     sort_std: 0.0203
-    global_rank: 517
-    paper_rank: 517
+    global_rank: 523
+    paper_rank: 523
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -582,8 +582,8 @@ results:
     value_note: ''
     sort_value: 0.5057
     sort_std: 0.0138
-    global_rank: 540
-    paper_rank: 540
+    global_rank: 546
+    paper_rank: 546
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -616,5 +616,6 @@ datasets_by_scope:
     - dataset: Amazon-Photo
       dataset_slug: amazon-photo
 single_proposed_model: P2TAG
+main_figure: /figures/2407.15431/main_figure.jpegoptim.jpg
 ---
 

@@ -66,8 +66,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GEOM
-mrr: 0.0037
-adjusted_mrr: 0.0012
+mrr: 0.0033
+adjusted_mrr: 0.0011
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -84,9 +84,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -118,9 +118,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -152,9 +152,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -245,10 +245,10 @@ results:
     value_note: ''
     sort_value: 0.8527
     sort_std: null
-    global_rank: 271
-    paper_rank: 478
-    rank_delta: 207
-    rank_delta_abs: 207
+    global_rank: 304
+    paper_rank: 546
+    rank_delta: 242
+    rank_delta_abs: 242
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -316,10 +316,10 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: 0.005
-    global_rank: 585
-    paper_rank: 836
-    rank_delta: 251
-    rank_delta_abs: 251
+    global_rank: 682
+    paper_rank: 980
+    rank_delta: 298
+    rank_delta_abs: 298
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -366,7 +366,7 @@ results:
       Rational Gradient Matching'
     at_pub_source_date_iso: '2024-02-07'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_iso: '2024-07-10'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.18700000000000006
     worse_than_at_pub: true
@@ -376,21 +376,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.801
-    true_std: 0.006
-    value_gap_source_arxiv: '2402.04924'
-    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
-      Rational Gradient Matching'
+    true_value: 0.809
+    true_std: 0.032
+    value_gap_source_arxiv: '2407.08064'
+    value_gap_source_title: 'TinyGraph: Joint Feature and Node Condensation for Graph
+      Neural Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.18700000000000006
+    value_gap: 0.19500000000000006
     has_value_note: false
     value_note: ''
-    sort_value: 0.801
-    sort_std: 0.006
-    global_rank: 666
-    paper_rank: 840
-    rank_delta: 174
-    rank_delta_abs: 174
+    sort_value: 0.809
+    sort_std: 0.032
+    global_rank: 744
+    paper_rank: 985
+    rank_delta: 241
+    rank_delta_abs: 241
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -457,8 +457,8 @@ results:
     value_note: ''
     sort_value: 0.593
     sort_std: 0.016
-    global_rank: 848
-    paper_rank: 848
+    global_rank: 994
+    paper_rank: 994
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

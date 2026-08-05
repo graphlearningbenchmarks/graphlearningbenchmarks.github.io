@@ -61,9 +61,9 @@ results:
   dataset: QM9
   is_multi_metric: true
   rows:
-  - model: DimeNet++
+  - model: Graphormer-SPIS
     model_key: pf-gnn
-    model_plain: DimeNet++
+    model_plain: Graphormer-SPIS
     metric_values:
     - 0.017
     - null
@@ -200,9 +200,9 @@ results:
     is_best: true
     is_std_outlier: false
     global_rank: 2
-  - model: DimeNet++
+  - model: Graphormer-SPIS
     model_key: fgnn
-    model_plain: DimeNet++
+    model_plain: Graphormer-SPIS
     metric_values:
     - 0.027
     - null
@@ -1053,7 +1053,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 43
+    global_rank: 40
   - model: SchNet
     model_key: schnet
     model_plain: SchNet
@@ -1133,7 +1133,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 50
+    global_rank: 46
   - model: MPSN
     model_key: mpsn
     model_plain: MPSN
@@ -1211,7 +1211,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 58
+    global_rank: 56
   metrics:
   - gap
   - alpha
@@ -1257,5 +1257,6 @@ datasets_by_scope:
     - dataset: QM9
       dataset_slug: qm9
 single_proposed_model: Decoupled EMPCN
+main_figure: /figures/2406.03145/main_figure.jpegoptim.jpg
 ---
 

@@ -35,7 +35,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphSVX
-mrr: 0.0015
+mrr: 0.0014
 adjusted_mrr: 0.0005
 mrr_dataset_count: 1
 benchmark_categories:
@@ -53,9 +53,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -86,9 +86,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -119,9 +119,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -211,10 +211,10 @@ results:
     value_note: ''
     sort_value: 0.88
     sort_std: 0.03
-    global_rank: 294
-    paper_rank: 741
-    rank_delta: 447
-    rank_delta_abs: 447
+    global_rank: 309
+    paper_rank: 787
+    rank_delta: 478
+    rank_delta_abs: 478
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -280,10 +280,10 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: 0.03
-    global_rank: 354
-    paper_rank: 615
-    rank_delta: 261
-    rank_delta_abs: 261
+    global_rank: 372
+    paper_rank: 652
+    rank_delta: 280
+    rank_delta_abs: 280
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -349,8 +349,8 @@ results:
     value_note: ''
     sort_value: 0.77
     sort_std: null
-    global_rank: 651
-    paper_rank: 651
+    global_rank: 691
+    paper_rank: 691
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -418,8 +418,8 @@ results:
     value_note: ''
     sort_value: 0.72
     sort_std: null
-    global_rank: 711
-    paper_rank: 711
+    global_rank: 756
+    paper_rank: 756
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -452,5 +452,6 @@ datasets_by_scope:
     - dataset: MUTAG
       dataset_slug: mutag
 single_proposed_model: GraphSVX
+main_figure: /figures/2104.10482/main_figure.jpegoptim.jpg
 ---
 

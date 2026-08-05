@@ -9,7 +9,7 @@ primary_metric: MAE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.QM7b.html
 stats: null
-result_count: 98
+result_count: 96
 best_model:
   model: DTNN
   value: 0.074
@@ -21,10 +21,6 @@ papers:
   title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for 3D Molecule Generation'
   date_iso: '2025-02-18'
   venue: ICLR 2025
-- arxiv_id: '2406.13265'
-  title: Molecule Graph Networks with Many-body Equivariant Interactions
-  date_iso: '2024-06-19'
-  venue: ''
 - arxiv_id: '2405.10642'
   title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
   date_iso: '2024-05-17'
@@ -1605,20 +1601,20 @@ variants:
     - 0.5
     - null
     - null
-  row_count: 98
+  row_count: 96
   rows_json: /data/datasets/qm7b/standard-split-rows.json
   chart_json: /data/datasets/qm7b/standard-split-chart.json
   arch_counts:
-    gnn: 52
+    gnn: 51
     hybrid: 9
     graph_transformer: 5
     llm: 4
     walk: 1
-    traditional: 12
+    traditional: 11
   metric_counts:
   - 71
   - 8
-  - 19
+  - 17
   milestones: &id001
   - value: 2.86
     std: 0.25

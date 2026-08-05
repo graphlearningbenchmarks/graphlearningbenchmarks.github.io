@@ -78,9 +78,9 @@ results:
 - &id001
   dataset: PCQM-Contact
   rows:
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: exphormer
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -111,9 +111,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: exphormer + lappe
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: graphgps + rwse
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4685
     std: 0.0009
     metric: MRR
@@ -234,9 +234,9 @@ results:
     sort_value: 0.467
     sort_std: 0.0004
     global_rank: 5
-    paper_rank: 46
-    rank_delta: 41
-    rank_delta_abs: 41
+    paper_rank: 47
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -301,9 +301,9 @@ results:
     sort_value: 0.4617
     sort_std: 0.0005
     global_rank: 12
-    paper_rank: 46
-    rank_delta: 34
-    rank_delta_abs: 34
+    paper_rank: 47
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -368,9 +368,9 @@ results:
     sort_value: 0.4526
     sort_std: 0.0006
     global_rank: 24
-    paper_rank: 51
-    rank_delta: 27
-    rank_delta_abs: 27
+    paper_rank: 52
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -434,8 +434,8 @@ results:
     value_note: ''
     sort_value: 0.335
     sort_std: 0.0003
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -493,7 +493,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3337
     sort_std: 0.0006
-    global_rank: 43
+    global_rank: 44
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -555,7 +555,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3262
     sort_std: 0.001
-    global_rank: 44
+    global_rank: 45
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -625,8 +625,8 @@ results:
     value_note: ''
     sort_value: 0.3242
     sort_std: 0.0008
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -692,8 +692,8 @@ results:
     value_note: ''
     sort_value: 0.3174
     sort_std: 0.002
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -739,8 +739,8 @@ results:
     at_pub_source_title: LRGB
     at_pub_source_date_iso: '2022-06-16'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-06-16'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-07-03'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -751,16 +751,17 @@ results:
     today_delta_significant: false
     true_value: 0.3161
     true_std: 0.0004
-    value_gap_source_arxiv: '2206.08164'
-    value_gap_source_title: LRGB
+    value_gap_source_arxiv: '2407.02758'
+    value_gap_source_title: Differential Encoding for Improved Representation Learning
+      Over Graphs
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.3161
     sort_std: 0.0004
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -818,7 +819,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3126
     sort_std: 0.0021
-    global_rank: 50
+    global_rank: 51
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -880,7 +881,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3049
     sort_std: 0.0006
-    global_rank: 50
+    global_rank: 51
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -942,7 +943,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2534
     sort_std: 0.02
-    global_rank: 52
+    global_rank: 53
     has_value_gap: false
     has_value_note: false
     value_gap: null

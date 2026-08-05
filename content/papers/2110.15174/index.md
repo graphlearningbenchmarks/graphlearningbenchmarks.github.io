@@ -879,5 +879,6 @@ datasets_by_scope:
     - dataset: ogbn-arxiv
       dataset_slug: ogbn-arxiv
 single_proposed_model: DGCN
+main_figure: /figures/2110.15174/main_figure.jpegoptim.jpg
 ---
 

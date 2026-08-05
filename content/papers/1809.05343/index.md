@@ -62,9 +62,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: GCNII
+  - model: TinyGraph
     model_key: ne-asgcn
-    model_plain: GCNII
+    model_plain: TinyGraph
     value: 0.9758
     std: 0.0027
     metric: Accuracy
@@ -96,9 +96,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCNII
+  - model: TinyGraph
+    model_key: hsgt
+    model_plain: TinyGraph
+    value: 0.973
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.02866'
+    title: Hierarchical Transformer for Scalable Graph Learning
+    date: May 4, 2023
+    date_display: May 2023
+    date_iso: '2023-05-04'
+    venue: International Joint Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.973
+    sort_std: 0.0024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: TinyGraph
     model_key: gcmae
-    model_plain: GCNII
+    model_plain: TinyGraph
     value: 0.9713
     std: 0.0017
     metric: Accuracy
@@ -122,42 +155,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9713
     sort_std: 0.0017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gat+norm.adj.
-    model_plain: GCNII
-    value: 0.9706
-    std: 0.0005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2103.13355'
-    title: Bag of Tricks for Node Classification with Graph Neural Networks
-    date: Mar 24, 2021
-    date_display: Mar 2021
-    date_iso: '2021-03-24'
-    venue: null
-    codebase_url: https://github.com/espylapiza/Bag-of-Tricks-for-Node-Classification-with-Graph-Neural-Networks
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9706
-    sort_std: 0.0005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -199,8 +199,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2019-07-25'
-    value_gap_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2023-05-04'
+    value_gap_source_date_label: IJCAI 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -209,21 +209,20 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9647
-    true_std: null
-    value_gap_source_arxiv: '1907.10903'
-    value_gap_source_title: 'DropEdge: Towards Deep Graph Convolutional Networks on
-      Node Classification'
+    true_value: 0.9653
+    true_std: 0.0011
+    value_gap_source_arxiv: '2305.02866'
+    value_gap_source_title: Hierarchical Transformer for Scalable Graph Learning
     value_gap_source_is_current_paper: false
-    value_gap: 0.021499999999999964
+    value_gap: 0.02210000000000001
     has_value_note: false
     value_note: ''
-    sort_value: 0.9647
-    sort_std: null
-    global_rank: 23
-    paper_rank: 62
-    rank_delta: 39
-    rank_delta_abs: 39
+    sort_value: 0.9653
+    sort_std: 0.0011
+    global_rank: 19
+    paper_rank: 68
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -287,8 +286,8 @@ results:
     value_note: ''
     sort_value: 0.9627
     sort_std: 0.0032
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -354,8 +353,8 @@ results:
     value_note: ''
     sort_value: 0.9568
     sort_std: 0.0069
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -421,8 +420,8 @@ results:
     value_note: ''
     sort_value: 0.9449
     sort_std: 0.0026
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -489,10 +488,10 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 71
-    paper_rank: 85
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 78
+    paper_rank: 94
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -556,8 +555,8 @@ results:
     value_note: ''
     sort_value: 0.8611
     sort_std: 0.0437
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -589,5 +588,6 @@ datasets_by_scope:
     datasets:
     - dataset: Reddit
       dataset_slug: reddit
+main_figure: /figures/1809.05343/main_figure.jpegoptim.jpg
 ---
 

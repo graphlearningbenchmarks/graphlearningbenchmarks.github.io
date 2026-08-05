@@ -85,9 +85,9 @@ results:
 - &id004
   dataset: DBLP
   rows:
-  - model: STPGC
+  - model: ACGCL
     model_key: hg-scm
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -188,9 +188,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: simplehgn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9446
     std: 0.0022
     metric: Accuracy
@@ -765,9 +765,9 @@ results:
     sort_value: 0.8758
     sort_std: 0.002
     global_rank: 28
-    paper_rank: 34
-    rank_delta: 6
-    rank_delta_abs: 6
+    paper_rank: 33
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -903,8 +903,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.0019
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -923,7 +923,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id002
+- &id003
   dataset: PCQM4Mv2
   rows:
   - model: TorchMD-NET + Pre-training
@@ -1819,9 +1819,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -1852,9 +1852,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -1944,10 +1944,10 @@ results:
     value_note: ''
     sort_value: 0.8691
     sort_std: 0.0005
-    global_rank: 11
-    paper_rank: 48
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 12
+    paper_rank: 50
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2013,8 +2013,8 @@ results:
     value_note: ''
     sort_value: 0.8475
     sort_std: 0.0014
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2081,8 +2081,8 @@ results:
     value_note: ''
     sort_value: 0.8418
     sort_std: 0.0015
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2149,8 +2149,8 @@ results:
     value_note: ''
     sort_value: 0.8395
     sort_std: 0.0016
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2217,8 +2217,8 @@ results:
     value_note: ''
     sort_value: 0.838
     sort_std: 0.0018
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2285,8 +2285,8 @@ results:
     value_note: ''
     sort_value: 0.8345
     sort_std: 0.0019
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2353,8 +2353,8 @@ results:
     value_note: ''
     sort_value: 0.831
     sort_std: 0.0017
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2421,8 +2421,8 @@ results:
     value_note: ''
     sort_value: 0.8267
     sort_std: 0.002
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2489,8 +2489,8 @@ results:
     value_note: ''
     sort_value: 0.8025
     sort_std: 0.0024
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 138
+    paper_rank: 138
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2557,8 +2557,8 @@ results:
     value_note: ''
     sort_value: 0.7981
     sort_std: 0.0026
-    global_rank: 145
-    paper_rank: 145
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2577,7 +2577,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: ogbn-proteins
   rows:
   - model: AdvSynGNN
@@ -3470,5 +3470,6 @@ datasets_by_scope:
     - dataset: PCQM4Mv2
       dataset_slug: pcqm4mv2
 single_proposed_model: AdvSynGNN
+main_figure: /figures/2602.17071/main_figure.jpegoptim.jpg
 ---
 

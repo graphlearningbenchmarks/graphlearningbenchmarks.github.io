@@ -1887,172 +1887,6 @@ results:
   dataset: MUTAG
   rows:
   - model: LGKDE
-    model_key: bwgnn
-    model_plain: LGKDE
-    value: 0.995
-    std: null
-    metric: AUROC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-10'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.995
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: LGKDE
-    model_key: gat
-    model_plain: LGKDE
-    value: 0.9942
-    std: null
-    metric: AUROC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-10'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9942
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LGKDE
-    model_key: gin
-    model_plain: LGKDE
-    value: 0.9939
-    std: null
-    metric: AUROC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06427'
-    title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    date: Nov 10, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-10'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/lllyyq1121/UniGAD
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9939
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: OCGTL
-    model_key: ocgtl
-    model_plain: OCGTL
-    value: 0.8802
-    std: 0.0043
-    paper_value: 0.8802
-    paper_std: 0.0043
-    metric: AUROC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard AUROC for graph-level anomaly detection on MUTAG.
-    date: May 27, 2025
-    date_display: May 2025
-    date_iso: '2025-05-27'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.9219
-    at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-11-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.04170000000000007
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9219
-    true_std: null
-    value_gap_source_arxiv: '2411.06427'
-    value_gap_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.04170000000000007
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9219
-    sort_std: null
-    global_rank: 12
-    paper_rank: 17
-    rank_delta: 5
-    rank_delta_abs: 5
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
-    is_best: false
-    is_std_outlier: false
-  - model: LGKDE
     model_key: lgkde
     model_plain: LGKDE
     value: 0.9163
@@ -2108,8 +1942,8 @@ results:
     value_note: ''
     sort_value: 0.9163
     sort_std: 0.0031
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2117,74 +1951,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: OCGIN
-    model_key: ocgin
-    model_plain: OCGIN
-    value: 0.7955
-    std: 0.0022
-    paper_value: 0.7955
-    paper_std: 0.0022
-    metric: AUROC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard AUROC for graph-level anomaly detection on MUTAG.
-    date: May 27, 2025
-    date_display: May 2025
-    date_iso: '2025-05-27'
-    published_venue: ICML 2025
-    published_conference: ICML 2025
-    at_pub_value: 0.895
-    at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-11-10'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.09950000000000003
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.895
-    true_std: null
-    value_gap_source_arxiv: '2411.06427'
-    value_gap_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.09950000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.895
-    sort_std: null
-    global_rank: 14
-    paper_rank: 21
-    rank_delta: 7
-    rank_delta_abs: 7
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: SIGNET
     model_key: signet
@@ -2242,8 +2009,8 @@ results:
     value_note: ''
     sort_value: 0.8884
     sort_std: 0.0015
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2309,8 +2076,75 @@ results:
     value_note: ''
     sort_value: 0.8845
     sort_std: 0.0024
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OCGTL
+    model_key: ocgtl
+    model_plain: OCGTL
+    value: 0.8802
+    std: 0.0043
+    paper_value: 0.8802
+    paper_std: 0.0043
+    metric: AUROC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard AUROC for graph-level anomaly detection on MUTAG.
+    date: May 27, 2025
+    date_display: May 2025
+    date_iso: '2025-05-27'
+    published_venue: ICML 2025
+    published_conference: ICML 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-27'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8802
+    true_std: 0.0043
+    value_gap_source_arxiv: '2505.21285'
+    value_gap_source_title: Learnable Kernel Density Estimation for Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8802
+    sort_std: 0.0043
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2376,8 +2210,8 @@ results:
     value_note: ''
     sort_value: 0.8664
     sort_std: 0.0032
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2417,18 +2251,18 @@ results:
     date_iso: '2025-05-27'
     published_venue: ICML 2025
     published_conference: ICML 2025
-    at_pub_value: 0.7277
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2411.06427'
-    at_pub_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    at_pub_source_date_iso: '2024-11-10'
-    at_pub_source_date_label: NeurIPS 2024
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-27'
     value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: 0.13480000000000003
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -2443,15 +2277,15 @@ results:
     value_note: ''
     sort_value: 0.8625
     sort_std: 0.0057
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-    comparison_source_arxiv: '2411.06427'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MUSE
@@ -2510,8 +2344,8 @@ results:
     value_note: ''
     sort_value: 0.8592
     sort_std: 0.0028
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2577,8 +2411,75 @@ results:
     value_note: ''
     sort_value: 0.8307
     sort_std: 0.0029
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OCGIN
+    model_key: ocgin
+    model_plain: OCGIN
+    value: 0.7955
+    std: 0.0022
+    paper_value: 0.7955
+    paper_std: 0.0022
+    metric: AUROC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard AUROC for graph-level anomaly detection on MUTAG.
+    date: May 27, 2025
+    date_display: May 2025
+    date_iso: '2025-05-27'
+    published_venue: ICML 2025
+    published_conference: ICML 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-27'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7955
+    true_std: 0.0022
+    value_gap_source_arxiv: '2505.21285'
+    value_gap_source_title: Learnable Kernel Density Estimation for Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7955
+    sort_std: 0.0022
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2644,8 +2545,8 @@ results:
     value_note: ''
     sort_value: 0.6571
     sort_std: 0.0038
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2711,8 +2612,8 @@ results:
     value_note: ''
     sort_value: 0.6218
     sort_std: 0.0029
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2778,8 +2679,8 @@ results:
     value_note: ''
     sort_value: 0.4798
     sort_std: 0.0041
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2845,8 +2746,8 @@ results:
     value_note: ''
     sort_value: 0.4606
     sort_std: 0.0047
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3781,5 +3682,6 @@ datasets_by_scope:
     - dataset: ENZYMES
       dataset_slug: enzymes
 single_proposed_model: LGKDE
+main_figure: /figures/2505.21285/main_figure.jpegoptim.jpg
 ---
 

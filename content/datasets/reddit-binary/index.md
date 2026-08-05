@@ -13,7 +13,7 @@ stats:
   avg_nodes: 429.63
   avg_edges: 497.75
   num_classes: 2
-result_count: 60
+result_count: 55
 best_model:
   model: GIN-0
   value: 0.924
@@ -41,10 +41,6 @@ papers:
   title: Fine-grained Expressivity of Graph Neural Networks
   date_iso: '2023-06-06'
   venue: NeurIPS 2023
-- arxiv_id: '2210.11790'
-  title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
-  date_iso: '2022-10-21'
-  venue: ICLR 2022
 - arxiv_id: '2210.00643'
   title: Spectral Augmentation for Self-Supervised Learning on Graphs
   date_iso: '2022-10-02'
@@ -261,32 +257,6 @@ variants:
     - 0.91
     metric_stds:
     - 0.03
-  - model: Last layer FA
-    model_plain: Last layer FA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.11790'
-    title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
-    date: Oct 21, 2022
-    date_iso: '2022-10-21'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9022
-    metric_stds:
-    - 0.00475
   - model: acc
     model_plain: acc
     is_baseline: true
@@ -475,32 +445,6 @@ variants:
     - 0.8973
     metric_stds:
     - 0.0037
-  - model: FoSR
-    model_plain: FoSR
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.11790'
-    title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
-    date: Oct 21, 2022
-    date_iso: '2022-10-21'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.89665
-    metric_stds:
-    - 0.00416
   - model: SEP
     model_plain: SEP
     is_baseline: true
@@ -633,32 +577,6 @@ variants:
     - 0.88
     metric_stds:
     - 0.03
-  - model: None
-    model_plain: None
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.11790'
-    title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
-    date: Oct 21, 2022
-    date_iso: '2022-10-21'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.87965
-    metric_stds:
-    - 0.00564
   - model: JOAO
     model_plain: JOAO
     is_baseline: true
@@ -793,32 +711,6 @@ variants:
     - 0.87
     metric_stds:
     - 0.03
-  - model: SDRF
-    model_plain: SDRF
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.11790'
-    title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
-    date: Oct 21, 2022
-    date_iso: '2022-10-21'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.86825
-    metric_stds:
-    - 0.00523
   - model: No-Pre-Train-GIN
     model_plain: No-Pre-Train-GIN
     is_baseline: true
@@ -1184,6 +1076,32 @@ variants:
     - 0.845
     metric_stds:
     - 0.006
+  - model: SDRF
+    model_plain: SDRF
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.01668'
+    title: Locality-Aware Graph Rewiring in GNNs
+    date: Oct 2, 2023
+    date_iso: '2023-10-02'
+    date_display: Oct 2023
+    codebase_url: https://github.com/Fedzbar/laser-release
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8442
+    metric_stds:
+    - 0.02785
   - model: InfoGraph
     model_plain: InfoGraph
     is_baseline: true
@@ -1340,32 +1258,6 @@ variants:
     - 0.773
     metric_stds:
     - 0.002
-  - model: DIGL
-    model_plain: DIGL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.11790'
-    title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
-    date: Oct 21, 2022
-    date_iso: '2022-10-21'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.76035
-    metric_stds:
-    - 0.00774
   - model: graph2vec
     model_plain: graph2vec
     is_baseline: true
@@ -1392,18 +1284,122 @@ variants:
     - 0.758
     metric_stds:
     - 0.01
-  row_count: 60
+  - model: Sub2Vec
+    model_plain: Sub2Vec
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2006.05582'
+    title: Contrastive Multi-View Representation Learning on Graphs
+    date: Jun 1, 2020
+    date_iso: '2020-06-01'
+    date_display: Jun 2020
+    codebase_url: ''
+    published_conference: ICML 2020
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2020
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.715
+    metric_stds:
+    - 0.004
+  - model: FoSR
+    model_plain: FoSR
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2508.20597'
+    title: Local Virtual Nodes for Alleviating Over-Squashing in Graph Neural Networks
+    date: Aug 28, 2025
+    date_iso: '2025-08-28'
+    date_display: Aug 2025
+    codebase_url: https://github.com/ALLab-Boun/LVN
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7002
+    metric_stds:
+    - 0.00911
+  - model: WL
+    model_plain: WL
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2006.05582'
+    title: Contrastive Multi-View Representation Learning on Graphs
+    date: Jun 1, 2020
+    date_iso: '2020-06-01'
+    date_display: Jun 2020
+    codebase_url: ''
+    published_conference: ICML 2020
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2020
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.688
+    metric_stds:
+    - 0.004
+  - model: SP
+    model_plain: SP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2006.05582'
+    title: Contrastive Multi-View Representation Learning on Graphs
+    date: Jun 1, 2020
+    date_iso: '2020-06-01'
+    date_display: Jun 2020
+    codebase_url: ''
+    published_conference: ICML 2020
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2020
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.641
+    metric_stds:
+    - 0.001
+  row_count: 55
   rows_json: /data/datasets/reddit-binary/10-fold-cv-rows.json
   chart_json: /data/datasets/reddit-binary/10-fold-cv-chart.json
   arch_counts:
-    gnn: 35
+    gnn: 32
     hybrid: 3
     graph_transformer: 0
     llm: 0
     walk: 2
-    traditional: 19
+    traditional: 17
   metric_counts:
-  - 60
+  - 55
   milestones: &id001
   - value: 0.8872
     std: 0.0153
@@ -1411,12 +1407,12 @@ variants:
     arxiv_id: '2210.00643'
     title: Spectral Augmentation for Self-Supervised Learning on Graphs
     date: '2022-10-02'
-  - value: 0.9022
-    std: 0.00475
-    model: Last layer FA
-    arxiv_id: '2210.11790'
-    title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
-    date: '2022-10-21'
+  - value: 0.8973
+    std: 0.0037
+    model: GIN-m (trained)
+    arxiv_id: '2306.03698'
+    title: Fine-grained Expressivity of Graph Neural Networks
+    date: '2023-06-06'
   - value: 0.91
     std: 0.02
     model: bnpool

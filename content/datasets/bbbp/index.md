@@ -8,14 +8,13 @@ primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
 stats: null
-result_count: 422
+result_count: 400
 best_model:
-  model: CamS-LLaMA
-  value: 0.942
+  model: MAGPrompt+
+  value: 0.9432
   metric: ROC-AUC
-  arxiv_id: '2601.02530'
-  paper_title: 'Multi-scale Graph Autoregressive Modeling: Molecular Property Prediction
-    via Next Token Prediction'
+  arxiv_id: '2602.05567'
+  paper_title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
 papers:
 - arxiv_id: '2605.06462'
   title: Invariant-Based Diagnostics for Graph Benchmarks
@@ -26,9 +25,9 @@ papers:
     Prediction in the Foundation Model Era
   date_iso: '2026-04-17'
   venue: ''
-- arxiv_id: '2603.29644'
-  title: Disentangled Graph Prompting for Out-Of-Distribution Detection
-  date_iso: '2026-03-31'
+- arxiv_id: '2602.05567'
+  title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+  date_iso: '2026-02-05'
   venue: ''
 - arxiv_id: '2602.01771'
   title: '<SO$ _k$>: One LLM Token for Explicit Graph Structural Understanding'
@@ -152,10 +151,6 @@ papers:
   title: 'Generative Explanations for Graph Neural Network: Methods and Evaluations'
   date_iso: '2023-11-09'
   venue: ''
-- arxiv_id: '2311.04837'
-  title: Identifying Semantic Component for Robust Molecular Property Prediction
-  date_iso: '2023-11-08'
-  venue: ''
 - arxiv_id: '2310.14753'
   title: Rethinking Tokenizer and Decoder in Masked Graph Modeling for Molecules
   date_iso: '2023-10-23'
@@ -163,6 +158,10 @@ papers:
 - arxiv_id: '2310.14216'
   title: 'UniMAP: Universal SMILES-Graph Representation Learning'
   date_iso: '2023-10-22'
+  venue: ''
+- arxiv_id: '2310.07351'
+  title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+  date_iso: '2023-10-11'
   venue: ''
 - arxiv_id: '2309.04589'
   title: Motif-aware Attribute Masking for Molecular Graph Pre-training
@@ -288,6 +287,10 @@ papers:
   title: Molecule Attention Transformer
   date_iso: '2020-02-19'
   venue: NeurIPS 2020
+- arxiv_id: '1905.12265'
+  title: Strategies for Pre-training Graph Neural Networks
+  date_iso: '2019-05-29'
+  venue: ICLR 2019
 variants:
 - slug: scaffold-split
   name: Scaffold split
@@ -311,6 +314,34 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
+  - model: MAGPrompt+
+    model_plain: MAGPrompt+
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_iso: '2026-02-05'
+    date_display: Feb 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9432
+    - null
+    metric_stds:
+    - 0.0238
+    - null
   - model: CamS-LLaMA
     model_plain: CamS-LLaMA
     is_baseline: false
@@ -397,6 +428,146 @@ variants:
     metric_stds:
     - 0.025
     - null
+  - model: GPF-plus
+    model_plain: GPF-plus
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_iso: '2026-02-05'
+    date_display: Feb 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9319
+    - null
+    metric_stds:
+    - 0.0206
+    - null
+  - model: Fine-tune
+    model_plain: Fine-tune
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_iso: '2026-02-05'
+    date_display: Feb 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9299
+    - null
+    metric_stds:
+    - 0.0371
+    - null
+  - model: EdgePrompt+
+    model_plain: EdgePrompt+
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_iso: '2026-02-05'
+    date_display: Feb 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9279
+    - null
+    metric_stds:
+    - 0.0357
+    - null
+  - model: GPF
+    model_plain: GPF
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_iso: '2026-02-05'
+    date_display: Feb 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9273
+    - null
+    metric_stds:
+    - 0.0282
+    - null
+  - model: AMCT
+    model_plain: AMCT
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.07351'
+    title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+    date: Oct 11, 2023
+    date_iso: '2023-10-11'
+    date_display: Oct 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.927
+    - null
+    metric_stds:
+    - 0.008
+    - null
   - model: Context Prediction
     model_plain: Context Prediction
     is_baseline: true
@@ -417,7 +588,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: true
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9268
@@ -445,7 +616,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: true
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9263
@@ -473,7 +644,7 @@ variants:
     published_conference_slug: aaai
     published_venue: AAAI 2021
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.926
@@ -530,7 +701,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: true
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9231
@@ -558,7 +729,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9227
@@ -642,7 +813,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.92
@@ -707,6 +878,34 @@ variants:
     metric_stds:
     - 0.031
     - null
+  - model: Graphormer
+    model_plain: Graphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.07351'
+    title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+    date: Oct 11, 2023
+    date_iso: '2023-10-11'
+    date_display: Oct 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.917
+    - null
+    metric_stds:
+    - 0.01
+    - null
   - model: Supervised
     model_plain: Supervised
     is_baseline: true
@@ -727,7 +926,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9165
@@ -812,7 +1011,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2023
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.913
@@ -984,7 +1183,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.9
@@ -1224,34 +1423,6 @@ variants:
     metric_stds:
     - 0.036
     - null
-  - model: SEGO
-    model_plain: SEGO
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.29644'
-    title: Disentangled Graph Prompting for Out-Of-Distribution Detection
-    date: Mar 31, 2026
-    date_iso: '2026-03-31'
-    date_display: Mar 2026
-    codebase_url: https://github.com/BUPT-GAMMA/DGP
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8755
-    - null
-    metric_stds:
-    - null
-    - null
   - model: Contextpred+Sup
     model_plain: Contextpred+Sup
     is_baseline: true
@@ -1455,6 +1626,34 @@ variants:
     metric_stds:
     - 0.034
     - null
+  - model: TF-Robust
+    model_plain: TF-Robust
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.07351'
+    title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+    date: Oct 11, 2023
+    date_iso: '2023-10-11'
+    date_display: Oct 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.86
+    - null
+    metric_stds:
+    - 0.087
+    - null
   - model: Masking+Sup
     model_plain: Masking+Sup
     is_baseline: true
@@ -1541,219 +1740,26 @@ variants:
     metric_stds:
     - null
     - null
-  - model: SchNet
-    model_plain: SchNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.01191'
-    title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular Graphs'
-    date: Oct 4, 2021
-    date_iso: '2021-10-04'
-    date_display: Oct 2021
-    codebase_url: https://github.com/smiles724/Molformer
-    published_conference: AAAI 2021
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2021
-    uses_external_data: null
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.847
-    - null
-    metric_stds:
-    - null
-    - null
-  - model: GraphLoG
-    model_plain: GraphLoG
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2206.03364'
-    title: 'KPGT: Knowledge-Guided Pre-training of Graph Transformer for Molecular
-      Property Prediction'
-    date: Jun 2, 2022
-    date_iso: '2022-06-02'
-    date_display: Jun 2022
-    codebase_url: https://github.com/lihan97/KPGT
-    published_conference: KDD 2022
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2022
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.846
-    - null
-    metric_stds:
-    - 0.008
-    - null
-  - model: Infomax
-    model_plain: Infomax
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2206.03364'
-    title: 'KPGT: Knowledge-Guided Pre-training of Graph Transformer for Molecular
-      Property Prediction'
-    date: Jun 2, 2022
-    date_iso: '2022-06-02'
-    date_display: Jun 2022
-    codebase_url: https://github.com/lihan97/KPGT
-    published_conference: KDD 2022
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2022
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.84
-    - null
-    metric_stds:
-    - 0.026
-    - null
-  - model: Weave
-    model_plain: Weave
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.01191'
-    title: 'Molformer: Motif-based Transformer on 3D Heterogeneous Molecular Graphs'
-    date: Oct 4, 2021
-    date_iso: '2021-10-04'
-    date_display: Oct 2021
-    codebase_url: https://github.com/smiles724/Molformer
-    published_conference: AAAI 2021
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2021
-    uses_external_data: null
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.837
-    - null
-    metric_stds:
-    - null
-    - null
-  - model: HGOE
-    model_plain: HGOE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2603.29644'
-    title: Disentangled Graph Prompting for Out-Of-Distribution Detection
-    date: Mar 31, 2026
-    date_iso: '2026-03-31'
-    date_display: Mar 2026
-    codebase_url: https://github.com/BUPT-GAMMA/DGP
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8346
-    - null
-    metric_stds:
-    - null
-    - null
-  - model: GraphSAGE
-    model_plain: GraphSAGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2412.15589'
-    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
-      Graph Information Bottleneck
-    date: Dec 20, 2024
-    date_iso: '2024-12-20'
-    date_display: Dec 2024
-    codebase_url: https://github.com/NSLab-CUK/S-CGIB
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8304
-    - null
-    metric_stds:
-    - 0.0038
-    - null
-  - model: GOOD-D
-    model_plain: GOOD-D
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.29644'
-    title: Disentangled Graph Prompting for Out-Of-Distribution Detection
-    date: Mar 31, 2026
-    date_iso: '2026-03-31'
-    date_display: Mar 2026
-    codebase_url: https://github.com/BUPT-GAMMA/DGP
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8291
-    - null
-    metric_stds:
-    - null
-    - null
-  row_count: 422
+  row_count: 400
   rows_json: /data/datasets/bbbp/scaffold-split-rows.json
   chart_json: /data/datasets/bbbp/scaffold-split-chart.json
   arch_counts:
-    gnn: 234
-    hybrid: 85
-    graph_transformer: 12
+    gnn: 217
+    hybrid: 82
+    graph_transformer: 14
     llm: 15
     walk: 1
-    traditional: 48
+    traditional: 44
   metric_counts:
-  - 405
+  - 383
   - 17
   milestones: &id001
+  - value: 0.688
+    std: 0.008
+    model: GIN (Node-level Infomax)
+    arxiv_id: '1905.12265'
+    title: Strategies for Pre-training Graph Neural Networks
+    date: '2019-05-29'
   - value: 0.725
     std: 0.006
     model: rf
@@ -1786,6 +1792,12 @@ variants:
     title: 'Multi-scale Graph Autoregressive Modeling: Molecular Property Prediction
       via Next Token Prediction'
     date: '2026-01-05'
+  - value: 0.9432
+    std: 0.0238
+    model: MAGPrompt+
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: '2026-02-05'
   milestones_by_metric:
     ROC-AUC: *id001
     Accuracy:

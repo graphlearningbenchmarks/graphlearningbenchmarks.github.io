@@ -12,7 +12,7 @@ stats:
   avg_nodes: 243.4
   avg_edges: 2266.1
   num_classes: 37
-result_count: 44
+result_count: 53
 best_model:
   model: A-NLSF
   value: 0.8149
@@ -35,6 +35,10 @@ papers:
   title: Graph Self-Supervised Learning with Learnable Structural and Positional Encodings
   date_iso: '2025-02-22'
   venue: WWW 2025
+- arxiv_id: '2407.02758'
+  title: Differential Encoding for Improved Representation Learning Over Graphs
+  date_iso: '2024-07-03'
+  venue: ''
 - arxiv_id: '2407.00696'
   title: Graph in Graph Neural Network
   date_iso: '2024-06-30'
@@ -47,6 +51,10 @@ papers:
   title: Towards Better Graph Representation Learning with Parameterized Decomposition
     & Filtering
   date_iso: '2023-05-10'
+  venue: ICML 2023
+- arxiv_id: '2301.11956'
+  title: On the Connection Between MPNN and Graph Transformer
+  date_iso: '2023-01-27'
   venue: ICML 2023
 - arxiv_id: '2211.14568'
   title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for Graph
@@ -70,6 +78,10 @@ papers:
   title: Empowering GNNs via Edge-Aware Weisfeiler-Leman Algorithm
   date_iso: '2022-06-04'
   venue: TMLR 2022
+- arxiv_id: '2202.03036'
+  title: Structure-Aware Transformer for Graph Representation Learning
+  date_iso: '2022-02-07'
+  venue: ICML 2022
 - arxiv_id: '2103.16584'
   title: Parameterized Hypercomplex Graph Neural Networks for Graph Classification
   date_iso: '2021-03-30'
@@ -131,6 +143,62 @@ variants:
     metric_stds:
     - 0.0067
     - null
+  - model: differential encoding
+    model_plain: differential encoding
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: Jul 3, 2024
+    date_iso: '2024-07-03'
+    date_display: Jul 2024
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8096
+    - null
+    metric_stds:
+    - 0.0029
+    - null
+  - model: MPNN + VN + NoPE
+    model_plain: MPNN + VN + NoPE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8055
+    - null
+    metric_stds:
+    - 0.0038
+    - null
   - model: CNNs
     model_plain: CNNs
     is_baseline: false
@@ -164,17 +232,16 @@ variants:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 0.424
+    params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_iso: '2023-05-10'
-    date_display: May 2023
-    codebase_url: https://github.com/qslim/PDF
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
     published_conference: ICML 2023
     published_conference_short: ICML
     published_conference_slug: icml
@@ -254,17 +321,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_iso: '2023-05-10'
-    date_display: May 2023
-    codebase_url: https://github.com/qslim/PDF
-    published_conference: ICML 2023
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
     published_conference_short: ICML
     published_conference_slug: icml
-    published_venue: ICML 2023
+    published_venue: ICML 2022
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -532,34 +598,6 @@ variants:
     metric_stds:
     - 0.0056
     - null
-  - model: K-Subtree SAT
-    model_plain: K-Subtree SAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7522
-    - null
-    metric_stds:
-    - 0.0056
-    - null
   - model: KS-SAT
     model_plain: KS-SAT
     is_baseline: true
@@ -588,6 +626,118 @@ variants:
     - null
     metric_stds:
     - 0.0056
+    - null
+  - model: K-Subtree SAT
+    model_plain: K-Subtree SAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7522
+    - null
+    metric_stds:
+    - 0.0056
+    - null
+  - model: k-subtree SAT-PNA
+    model_plain: k-subtree SAT-PNA
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7522
+    - null
+    metric_stds:
+    - 0.0056
+    - null
+  - model: k-subtree SAT-GCN
+    model_plain: k-subtree SAT-GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7483
+    - null
+    metric_stds:
+    - 0.0048
+    - null
+  - model: k-subtree SAT-GIN
+    model_plain: k-subtree SAT-GIN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7306
+    - null
+    metric_stds:
+    - 0.0076
     - null
   - model: GIN+VN+Flag
     model_plain: GIN+VN+Flag
@@ -930,6 +1080,34 @@ variants:
     metric_stds:
     - 0.0107
     - null
+  - model: GIN-Virtual Node
+    model_plain: GIN-Virtual Node
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7037
+    - null
+    metric_stds:
+    - 0.0107
+    - null
   - model: GIN + EGP
     model_plain: GIN + EGP
     is_baseline: true
@@ -1042,6 +1220,62 @@ variants:
     metric_stds:
     - 0.01
     - null
+  - model: GCN+virtual node
+    model_plain: GCN+virtual node
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6857
+    - null
+    metric_stds:
+    - 0.0061
+    - null
+  - model: GCN-Virtual Node
+    model_plain: GCN-Virtual Node
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6857
+    - null
+    metric_stds:
+    - 0.0061
+    - null
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -1127,6 +1361,34 @@ variants:
     - null
     metric_stds:
     - null
+    - null
+  - model: Transformer
+    model_plain: Transformer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6454
+    - null
+    metric_stds:
+    - 0.0033
     - null
   - model: S2
     model_plain: S2
@@ -1273,105 +1535,18 @@ variants:
     metric_stds:
     - null
     - 1.7
-  - model: MAS
-    model_plain: MAS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 8.5
-    metric_stds:
-    - null
-    - 1.4
-  - model: GEM
-    model_plain: GEM
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 18.1
-    metric_stds:
-    - null
-    - 2.0
-  - model: TWP
-    model_plain: TWP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14568'
-    title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for
-      Graph Continual Learning'
-    date: Nov 26, 2022
-    date_iso: '2022-11-26'
-    date_display: Nov 2022
-    codebase_url: https://github.com/ShinhwanKang/BeGin
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 12.0
-    metric_stds:
-    - null
-    - 1.3
-  row_count: 44
-  rows_json: ''
+  row_count: 53
+  rows_json: /data/datasets/ogbg-ppa/standard-split-rows.json
   chart_json: /data/datasets/ogbg-ppa/standard-split-chart.json
   arch_counts:
-    gnn: 28
-    hybrid: 7
-    graph_transformer: 3
+    gnn: 32
+    hybrid: 10
+    graph_transformer: 4
     llm: 0
     walk: 0
     traditional: 5
   metric_counts:
-  - 38
+  - 47
   - 6
   milestones: &id001
   - value: 0.7198
@@ -1387,26 +1562,24 @@ variants:
     arxiv_id: '2103.16584'
     title: Parameterized Hypercomplex Graph Neural Networks for Graph Classification
     date: '2021-03-30'
-  - value: 0.78
-    std: 0.0037
-    model: regularization term
-    arxiv_id: '2211.06605'
-    title: Comprehensive Analysis of Over-smoothing in Graph Neural Networks from
-      Markov Chains Perspective
-    date: '2022-11-12'
-  - value: 0.8015
-    std: 0.0033
-    model: GPS
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: '2023-05-10'
-  - value: 0.8017
-    std: null
-    model: CNNs
-    arxiv_id: '2407.00696'
-    title: Graph in Graph Neural Network
-    date: '2024-06-30'
+  - value: 0.7976
+    std: 0.0072
+    model: ExpC
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: '2022-02-07'
+  - value: 0.8055
+    std: 0.0038
+    model: MPNN + VN + NoPE
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: '2023-01-27'
+  - value: 0.8096
+    std: 0.0029
+    model: differential encoding
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: '2024-07-03'
   - value: 0.8149
     std: 0.0067
     model: A-NLSF

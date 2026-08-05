@@ -60,27 +60,3446 @@ has_results: true
 paper_type: method
 proposed_models:
 - CIN
-mrr: 0.3333
-adjusted_mrr: 0.1111
-mrr_dataset_count: 1
+mrr: 0.0964
+adjusted_mrr: 0.0964
+mrr_dataset_count: 6
 benchmark_categories:
 - Classic
+- TU Dortmund
+- GNNBenchmark
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 1
   total: 12
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 4
+  total: 11
+- benchmark: GNNBenchmark
+  benchmark_slug: gnnbenchmark
+  evaluated: 1
+  total: 6
 task_categories:
+- graph_classification
 - graph_regression
 experiment_scopes:
 - graph-level
 results:
+- &id006
+  dataset: CSL
+  rows:
+  - model: CIN
+    model_key: cin
+    model_plain: CIN
+    value: 1.0
+    std: 0.0
+    paper_value: 1.0
+    paper_std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Classification accuracy on CSL (Mean value)
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-06-23'
+    value_gap_source_date_label: NeurIPS 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 1.0
+    true_std: 0.0
+    value_gap_source_arxiv: '2106.12575'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 1.0
+    sort_std: 0.0
+    global_rank: 29
+    paper_rank: 29
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPM
+    model_key: ppgn
+    model_plain: GPM
+    value: 1.0
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.01214'
+    title: Revisiting Random Walks for Learning on Graphs
+    date: Jul 1, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-01'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/jw9730/random-walk
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 1.0
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPM
+    model_key: rw-agentnet
+    model_plain: GPM
+    value: 1.0
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2407.01214'
+    title: Revisiting Random Walks for Learning on Graphs
+    date: Jul 1, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-01'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/jw9730/random-walk
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 1.0
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPM
+    model_key: agentnet
+    model_plain: GPM
+    value: 1.0
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.01214'
+    title: Revisiting Random Walks for Learning on Graphs
+    date: Jul 1, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-01'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/jw9730/random-walk
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 1.0
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: 3WLGNN
+    model_key: 3wlgnn
+    model_plain: 3WLGNN
+    value: 0.978
+    std: 0.10916
+    paper_value: 0.978
+    paper_std: 0.10916
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Classification accuracy on CSL (Mean value)
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-22'
+    value_gap_source_date_label: WWW 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.978
+    true_std: 0.109
+    value_gap_source_arxiv: '2502.16233'
+    value_gap_source_title: Graph Self-Supervised Learning with Learnable Structural
+      and Positional Encodings
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.978
+    sort_std: 0.109
+    global_rank: 48
+    paper_rank: 48
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: RingGNN
+    model_key: ringgnn
+    model_plain: RingGNN
+    value: 0.1
+    std: 0.0
+    paper_value: 0.1
+    paper_std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Classification accuracy on CSL (Mean value)
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-01'
+    value_gap_source_date_label: JMLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.17233
+    true_std: 0.06326
+    value_gap_source_arxiv: '2003.00982'
+    value_gap_source_title: GNNBenchmark
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07233
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.17233
+    sort_std: 0.06326
+    global_rank: 74
+    paper_rank: 79
+    rank_delta: 5
+    rank_delta_abs: 5
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MP-GNNs
+    model_key: mp-gnns
+    model_plain: MP-GNNs
+    value: 0.1
+    std: 0.0
+    paper_value: 0.1
+    paper_std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Classification accuracy on CSL (Mean value)
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-06-23'
+    value_gap_source_date_label: NeurIPS 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1
+    true_std: 0.0
+    value_gap_source_arxiv: '2106.12575'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1
+    sort_std: 0.0
+    global_rank: 91
+    paper_rank: 91
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: MUTAG
+  rows:
+  - model: ECC
+    model_key: msh-gnn
+    model_plain: ECC
+    value: 0.991
+    std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.991
+    sort_std: 0.003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ECC
+    model_key: supcosine
+    model_plain: ECC
+    value: 0.983
+    std: 0.025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.07691'
+    title: Supervised Contrastive Learning with Structure Inference for Graph Classification
+    date: Mar 15, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-15'
+    venue: IEEE Transactions on Network Science and Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.025
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ECC
+    model_key: cauemo
+    model_plain: ECC
+    value: 0.9692
+    std: 0.0136
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2505.06283'
+    title: 'Soft causal learning for generalized molecule property prediction: An
+      environment modeling perspective'
+    date: May 7, 2025
+    date_display: May 2025
+    date_iso: '2025-05-07'
+    venue: Knowledge and Information Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9692
+    sort_std: 0.0136
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CIN
+    model_key: cin
+    model_plain: CIN
+    value: 0.927
+    std: 0.061
+    paper_value: 0.927
+    paper_std: 0.061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-06'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.944
+    true_std: 0.037
+    value_gap_source_arxiv: '2306.03561'
+    value_gap_source_title: 'CIN++: Enhancing Topological Message Passing'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.016999999999999904
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.944
+    sort_std: 0.037
+    global_rank: 21
+    paper_rank: 40
+    rank_delta: 19
+    rank_delta_abs: 19
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.894
+    std: 0.056
+    paper_value: 0.894
+    paper_std: 0.056
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: GIN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.9206
+    at_pub_std: null
+    at_pub_source_arxiv: '2103.00959'
+    at_pub_source_title: 'CogDL: A Comprehensive Library for Graph Deep Learning'
+    at_pub_source_date_iso: '2021-03-01'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: 0.026599999999999957
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.933
+    true_std: 0.029
+    value_gap_source_arxiv: '2112.00911'
+    value_gap_source_title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.039000000000000035
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.933
+    sort_std: 0.029
+    global_rank: 34
+    paper_rank: 217
+    rank_delta: 183
+    rank_delta_abs: 183
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GSN
+    model_key: gsn
+    model_plain: GSN
+    value: 0.922
+    std: 0.075
+    paper_value: 0.922
+    paper_std: 0.075
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: bouritsas2020improving
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-16'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.922
+    true_std: 0.075
+    value_gap_source_arxiv: '2209.08179'
+    value_gap_source_title: Cell Attention Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.922
+    sort_std: 0.075
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PPGNs
+    model_key: ppgns
+    model_plain: PPGNs
+    value: 0.906
+    std: 0.087
+    paper_value: 0.906
+    paper_std: 0.087
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: maron2019provably
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-16'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.906
+    true_std: 0.087
+    value_gap_source_arxiv: '2209.08179'
+    value_gap_source_title: Cell Attention Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.906
+    sort_std: 0.087
+    global_rank: 123
+    paper_rank: 123
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: WL kernel
+    model_key: wl kernel
+    model_plain: WL kernel
+    value: 0.904
+    std: 0.057
+    paper_value: 0.904
+    paper_std: 0.057
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: shervashidze2011weisfeiler
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.904
+    at_pub_std: 0.057
+    at_pub_source_arxiv: '2005.01214'
+    at_pub_source_title: Graph Homomorphism Convolution
+    at_pub_source_date_iso: '2020-05-03'
+    at_pub_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2023-06-06'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.904
+    true_std: 0.057
+    value_gap_source_arxiv: '2306.03561'
+    value_gap_source_title: 'CIN++: Enhancing Topological Message Passing'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.904
+    sort_std: 0.057
+    global_rank: 145
+    paper_rank: 145
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Natural GN
+    model_key: natural gn
+    model_plain: Natural GN
+    value: 0.894
+    std: 0.016
+    paper_value: 0.894
+    paper_std: 0.016
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: de2020natural
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-06'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.894
+    true_std: 0.016
+    value_gap_source_arxiv: '2306.03561'
+    value_gap_source_title: 'CIN++: Enhancing Topological Message Passing'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.894
+    sort_std: 0.016
+    global_rank: 222
+    paper_rank: 222
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: dgcnn
+    model_plain: DGCNN
+    value: 0.858
+    std: 0.018
+    paper_value: 0.858
+    paper_std: 0.018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: zhang2018end
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.8583
+    at_pub_std: null
+    at_pub_source_arxiv: '1901.08296'
+    at_pub_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
+    at_pub_source_date_iso: '2018-12-14'
+    at_pub_source_date_label: '2018'
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.00029999999999996696
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.8583
+    true_std: 0.0166
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00029999999999996696
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8583
+    sort_std: 0.0166
+    global_rank: 408
+    paper_rank: 408
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PK
+    model_key: pk
+    model_plain: PK
+    value: 0.76
+    std: 0.027
+    paper_value: 0.76
+    paper_std: 0.027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: neumann2016propagation
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.845
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '1410.3314'
+    at_pub_source_title: Propagation Kernels
+    at_pub_source_date_iso: '2014-10-13'
+    at_pub_source_date_label: '2014'
+    value_gap_source_date_iso: '2014-10-13'
+    value_gap_source_date_label: '2014'
+    gap_vs_at_pub: 0.08499999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.845
+    true_std: 0.006
+    value_gap_source_arxiv: '1410.3314'
+    value_gap_source_title: Propagation Kernels
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08499999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.845
+    sort_std: 0.006
+    global_rank: 460
+    paper_rank: 703
+    rank_delta: 243
+    rank_delta_abs: 243
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Propagation Kernels
+    comparison_source_arxiv: '1410.3314'
+    is_best: false
+    is_std_outlier: false
+  - model: IGN
+    model_key: ign
+    model_plain: IGN
+    value: 0.839
+    std: 0.13
+    paper_value: 0.839
+    paper_std: 0.13
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: maron2018invariant
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-16'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.839
+    true_std: 0.013
+    value_gap_source_arxiv: '2209.08179'
+    value_gap_source_title: Cell Attention Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.839
+    sort_std: 0.013
+    global_rank: 493
+    paper_rank: 493
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GK (k=3)
+    model_key: gk (k=3)
+    model_plain: GK (k=3)
+    value: 0.814
+    std: 0.017
+    paper_value: 0.814
+    paper_std: 0.017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: shervashidze2009efficient
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-16'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.814
+    true_std: 0.017
+    value_gap_source_arxiv: '2209.08179'
+    value_gap_source_title: Cell Attention Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.814
+    sort_std: 0.017
+    global_rank: 590
+    paper_rank: 590
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: RWK
+    model_key: rwk
+    model_plain: RWK
+    value: 0.792
+    std: 0.021
+    paper_value: 0.792
+    paper_std: 0.021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: gartner2003graph
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on MUTAG
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-16'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.792
+    true_std: 0.021
+    value_gap_source_arxiv: '2209.08179'
+    value_gap_source_title: Cell Attention Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.792
+    sort_std: 0.021
+    global_rank: 650
+    paper_rank: 650
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: NCI1
+  rows:
+  - model: ECC
+    model_key: wl-mlp
+    model_plain: ECC
+    value: 0.9954
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9954
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.827
+    std: 0.017
+    paper_value: 0.827
+    paper_std: 0.017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: GIN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.827
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '1905.11136'
+    at_pub_source_title: Provably Powerful Graph Networks
+    at_pub_source_date_iso: '2019-05-27'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2022-02-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9934
+    true_std: null
+    value_gap_source_arxiv: '2202.10156'
+    value_gap_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1664
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9934
+    sort_std: null
+    global_rank: 2
+    paper_rank: 93
+    rank_delta: 91
+    rank_delta_abs: 91
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: ECC
+    model_key: gcn
+    model_plain: ECC
+    value: 0.9727
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: GNNs ... use node features
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9727
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: WL kernel
+    model_key: wl kernel
+    model_plain: WL kernel
+    value: 0.86
+    std: 0.018
+    paper_value: 0.86
+    paper_std: 0.018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: shervashidze2011weisfeiler
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.86
+    at_pub_std: 0.018
+    at_pub_source_arxiv: '2103.03212'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing Simplicial
+      Networks'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.86
+    true_std: 0.018
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.86
+    sort_std: 0.018
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CIN
+    model_key: cin
+    model_plain: CIN
+    value: 0.836
+    std: 0.014
+    paper_value: 0.836
+    paper_std: 0.014
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.853
+    true_std: 0.012
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.017000000000000015
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.853
+    sort_std: 0.012
+    global_rank: 20
+    paper_rank: 48
+    rank_delta: 28
+    rank_delta_abs: 28
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PK
+    model_key: pk
+    model_plain: PK
+    value: 0.825
+    std: 0.005
+    paper_value: 0.825
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: neumann2016propagation
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.845
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1410.3314'
+    at_pub_source_title: Propagation Kernels
+    at_pub_source_date_iso: '2014-10-13'
+    at_pub_source_date_label: '2014'
+    value_gap_source_date_iso: '2014-10-13'
+    value_gap_source_date_label: '2014'
+    gap_vs_at_pub: 0.020000000000000018
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.845
+    true_std: 0.001
+    value_gap_source_arxiv: '1410.3314'
+    value_gap_source_title: Propagation Kernels
+    value_gap_source_is_current_paper: false
+    value_gap: 0.020000000000000018
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.845
+    sort_std: 0.001
+    global_rank: 29
+    paper_rank: 103
+    rank_delta: 74
+    rank_delta_abs: 74
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Propagation Kernels
+    comparison_source_arxiv: '1410.3314'
+    is_best: false
+    is_std_outlier: false
+  - model: GSN
+    model_key: gsn
+    model_plain: GSN
+    value: 0.835
+    std: 0.02
+    paper_value: 0.835
+    paper_std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: bouritsas2020improving
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.835
+    at_pub_std: 0.02
+    at_pub_source_arxiv: '2103.03212'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing Simplicial
+      Networks'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.835
+    true_std: 0.02
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.835
+    sort_std: 0.02
+    global_rank: 51
+    paper_rank: 51
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PPGNs
+    model_key: ppgns
+    model_plain: PPGNs
+    value: 0.832
+    std: 0.011
+    paper_value: 0.832
+    paper_std: 0.011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: maron2019provably
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.832
+    at_pub_std: 0.011
+    at_pub_source_arxiv: '2103.03212'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing Simplicial
+      Networks'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.832
+    true_std: 0.011
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.832
+    sort_std: 0.011
+    global_rank: 67
+    paper_rank: 67
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SIN
+    model_key: sin
+    model_plain: SIN
+    value: 0.827
+    std: 0.021
+    paper_value: 0.827
+    paper_std: 0.021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: bodnar2021weisfeiler
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.828
+    at_pub_std: 0.022
+    at_pub_source_arxiv: '2103.03212'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing Simplicial
+      Networks'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2021-03-04'
+    value_gap_source_date_label: ICML 2021
+    gap_vs_at_pub: 0.0010000000000000009
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.828
+    true_std: 0.022
+    value_gap_source_arxiv: '2103.03212'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing
+      Simplicial Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0010000000000000009
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.828
+    sort_std: 0.022
+    global_rank: 85
+    paper_rank: 93
+    rank_delta: 8
+    rank_delta_abs: 8
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Natural GN
+    model_key: natural gn
+    model_plain: Natural GN
+    value: 0.824
+    std: 0.013
+    paper_value: 0.824
+    paper_std: 0.013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: de2020natural
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.824
+    at_pub_std: 0.013
+    at_pub_source_arxiv: '2103.03212'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing Simplicial
+      Networks'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.824
+    true_std: 0.013
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.824
+    sort_std: 0.013
+    global_rank: 108
+    paper_rank: 108
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: dgcnn
+    model_plain: DGCNN
+    value: 0.744
+    std: 0.005
+    paper_value: 0.744
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: zhang2018end
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.765
+    at_pub_std: 0.019
+    at_pub_source_arxiv: '2009.10564'
+    at_pub_source_title: 'GraphCrop: Subgraph Cropping for Graph Classification'
+    at_pub_source_date_iso: '2020-09-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-09-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.02100000000000002
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.765
+    true_std: 0.019
+    value_gap_source_arxiv: '2009.10564'
+    value_gap_source_title: 'GraphCrop: Subgraph Cropping for Graph Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.02100000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.765
+    sort_std: 0.019
+    global_rank: 394
+    paper_rank: 445
+    rank_delta: 51
+    rank_delta_abs: 51
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: IGN
+    model_key: ign
+    model_plain: IGN
+    value: 0.743
+    std: 0.027
+    paper_value: 0.743
+    paper_std: 0.027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: maron2018invariant
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on NCI1 using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.743
+    at_pub_std: 0.027
+    at_pub_source_arxiv: '2103.03212'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing Simplicial
+      Networks'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7433
+    true_std: 0.0271
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00029999999999996696
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7433
+    sort_std: 0.0271
+    global_rank: 448
+    paper_rank: 449
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id004
+  dataset: PROTEINS
+  rows:
+  - model: Graphormer-SPIS
+    model_key: gmn
+    model_plain: Graphormer-SPIS
+    value: 0.8225
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8225
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Graphormer-SPIS
+    model_key: ci-gnn
+    model_plain: Graphormer-SPIS
+    value: 0.82
+    std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2301.01642'
+    title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network for Interpretable
+      Brain Network-Based Psychiatric Diagnosis'
+    date: Jan 4, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-04'
+    venue: Neural Networks
+    codebase_url: https://github.com/ZKZ-Brain/CI-GNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.82
+    sort_std: 0.02
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Graphormer-SPIS
+    model_key: diffpool+gpl
+    model_plain: Graphormer-SPIS
+    value: 0.8196
+    std: 0.0286
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.11361'
+    title: 'Graph Structure Prompt Learning: A Novel Methodology to Improve Performance
+      of Graph Neural Networks'
+    date: Jul 16, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-16'
+    venue: Applied intelligence (Boston)
+    codebase_url: https://github.com/PreckLi/graph_prompt_learning
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.8196
+    sort_std: 0.0286
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: CIN
+    model_key: cin
+    model_plain: CIN
+    value: 0.77
+    std: 0.043
+    paper_value: 0.77
+    paper_std: 0.043
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.805
+    true_std: 0.039
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03500000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.805
+    sort_std: 0.039
+    global_rank: 8
+    paper_rank: 79
+    rank_delta: 71
+    rank_delta_abs: 71
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.762
+    std: 0.028
+    paper_value: 0.762
+    paper_std: 0.028
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: GIN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.762
+    at_pub_std: 0.028
+    at_pub_source_arxiv: '1905.12560'
+    at_pub_source_title: On the Equivalence between Graph Isomorphism Testing and
+      Function Approximation with GNNs
+    at_pub_source_date_iso: '2019-05-29'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2023-12-14'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.788
+    true_std: 0.041
+    value_gap_source_arxiv: '2312.08671'
+    value_gap_source_title: 'Permutation-Invariant graph partitioning: How graph neural
+      networks capture structural interactions?'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.026000000000000023
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.788
+    sort_std: 0.041
+    global_rank: 27
+    paper_rank: 136
+    rank_delta: 109
+    rank_delta_abs: 109
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PPGNs
+    model_key: ppgns
+    model_plain: PPGNs
+    value: 0.772
+    std: 0.047
+    paper_value: 0.772
+    paper_std: 0.047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: maron2019provably
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.772
+    true_std: 0.047
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.772
+    sort_std: 0.047
+    global_rank: 67
+    paper_rank: 67
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: IGN
+    model_key: ign
+    model_plain: IGN
+    value: 0.766
+    std: 0.055
+    paper_value: 0.766
+    paper_std: 0.055
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: maron2018invariant
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.766
+    true_std: 0.055
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.766
+    sort_std: 0.055
+    global_rank: 98
+    paper_rank: 98
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GSN
+    model_key: gsn
+    model_plain: GSN
+    value: 0.766
+    std: 0.05
+    paper_value: 0.766
+    paper_std: 0.05
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: bouritsas2020improving
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.766
+    true_std: 0.05
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.766
+    sort_std: 0.05
+    global_rank: 99
+    paper_rank: 99
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SIN
+    model_key: sin
+    model_plain: SIN
+    value: 0.764
+    std: 0.033
+    paper_value: 0.764
+    paper_std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: bodnar2021weisfeiler
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-28'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.765
+    true_std: 0.034
+    value_gap_source_arxiv: '2205.14368'
+    value_gap_source_title: Going Deeper into Permutation-Sensitive Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0010000000000000009
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.765
+    sort_std: 0.034
+    global_rank: 105
+    paper_rank: 118
+    rank_delta: 13
+    rank_delta_abs: 13
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: dgcnn
+    model_plain: DGCNN
+    value: 0.755
+    std: 0.009
+    paper_value: 0.755
+    paper_std: 0.009
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: zhang2018end
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.7554
+    at_pub_std: 0.0094
+    at_pub_source_arxiv: '1805.08090'
+    at_pub_source_title: Graph Capsule Convolutional Neural Networks
+    at_pub_source_date_iso: '2018-05-21'
+    at_pub_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2021-09-23'
+    value_gap_source_date_label: AAAI 2021
+    gap_vs_at_pub: 0.00039999999999995595
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7626
+    true_std: null
+    value_gap_source_arxiv: '2109.11338'
+    value_gap_source_title: Orthogonal Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00759999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7626
+    sort_std: null
+    global_rank: 133
+    paper_rank: 198
+    rank_delta: 65
+    rank_delta_abs: 65
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: WL kernel
+    model_key: wl kernel
+    model_plain: WL kernel
+    value: 0.75
+    std: 0.031
+    paper_value: 0.75
+    paper_std: 0.031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: shervashidze2011weisfeiler
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.7292
+    at_pub_std: 0.0056
+    at_pub_source_arxiv: '1707.05005'
+    at_pub_source_title: 'graph2vec: Learning Distributed Representations of Graphs'
+    at_pub_source_date_iso: '2017-07-17'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: 0.02080000000000004
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.75
+    true_std: 0.031
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.75
+    sort_std: 0.031
+    global_rank: 258
+    paper_rank: 258
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PK
+    model_key: pk
+    model_plain: PK
+    value: 0.737
+    std: 0.007
+    paper_value: 0.737
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: neumann2016propagation
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.737
+    true_std: 0.007
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.737
+    sort_std: 0.007
+    global_rank: 338
+    paper_rank: 338
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Natural GN
+    model_key: natural gn
+    model_plain: Natural GN
+    value: 0.717
+    std: 0.01
+    paper_value: 0.717
+    paper_std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: de2020natural
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.717
+    true_std: 0.01
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.717
+    sort_std: 0.01
+    global_rank: 423
+    paper_rank: 423
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GK (k=3)
+    model_key: gk (k=3)
+    model_plain: GK (k=3)
+    value: 0.714
+    std: 0.003
+    paper_value: 0.714
+    paper_std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: shervashidze2009efficient
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.714
+    true_std: 0.003
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.714
+    sort_std: 0.003
+    global_rank: 431
+    paper_rank: 431
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DCNN
+    model_key: dcnn
+    model_plain: DCNN
+    value: 0.613
+    std: 0.016
+    paper_value: 0.613
+    paper_std: 0.016
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: DCNN_2016
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.613
+    at_pub_std: null
+    at_pub_source_arxiv: '1810.00826'
+    at_pub_source_title: How Powerful are Graph Neural Networks?
+    at_pub_source_date_iso: '2018-10-01'
+    at_pub_source_date_label: ICLR 2018
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.613
+    true_std: 0.016
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.613
+    sort_std: 0.016
+    global_rank: 504
+    paper_rank: 504
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: RWK
+    model_key: rwk
+    model_plain: RWK
+    value: 0.596
+    std: 0.001
+    paper_value: 0.596
+    paper_std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: gartner2003graph
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV on PROTEINS
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-08-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.596
+    true_std: 0.001
+    value_gap_source_arxiv: '2308.06838'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
+      Features via Path Complexes'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.596
+    sort_std: 0.001
+    global_rank: 514
+    paper_rank: 514
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id005
+  dataset: RDT-B
+  rows:
+  - model: CIN
+    model_key: oepg
+    model_plain: CIN
+    value: 0.963
+    std: 0.009
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2205.15746'
+    title: Omni-Granular Ego-Semantic Propagation for Self-Supervised Graph Representation
+      Learning
+    date: May 31, 2022
+    date_display: May 2022
+    date_iso: '2022-05-31'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.963
+    sort_std: 0.009
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: CIN
+    model_key: msh-gnn
+    model_plain: CIN
+    value: 0.958
+    std: 0.009
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15015'
+    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.958
+    sort_std: 0.009
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: CIN
+    model_key: gnn-ak+
+    model_plain: CIN
+    value: 0.948
+    std: 0.008
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.03753'
+    title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness'
+    date: Oct 7, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-07'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/LingxiaoShawn/GNNAsKernel
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.948
+    sort_std: 0.008
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: CIN
+    model_key: cin
+    model_plain: CIN
+    value: 0.924
+    std: 0.021
+    paper_value: 0.924
+    paper_std: 0.021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on RDT-B using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.924
+    true_std: 0.021
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.924
+    sort_std: 0.021
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.924
+    std: 0.025
+    paper_value: 0.924
+    paper_std: 0.025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: GIN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on RDT-B using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.924
+    at_pub_std: null
+    at_pub_source_arxiv: '2103.00111'
+    at_pub_source_title: 'Graph Self-Supervised Learning: A Survey'
+    at_pub_source_date_iso: '2021-02-27'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.924
+    true_std: 0.025
+    value_gap_source_arxiv: '2305.06102'
+    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
+      Decomposition & Filtering
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.924
+    sort_std: 0.025
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SIN
+    model_key: sin
+    model_plain: SIN
+    value: 0.922
+    std: 0.01
+    paper_value: 0.922
+    paper_std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: bodnar2021weisfeiler
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on RDT-B using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.922
+    at_pub_std: 0.01
+    at_pub_source_arxiv: '2103.03212'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing Simplicial
+      Networks'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2021-03-04'
+    value_gap_source_date_label: ICML 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.922
+    true_std: 0.01
+    value_gap_source_arxiv: '2103.03212'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing
+      Simplicial Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.922
+    sort_std: 0.01
+    global_rank: 16
+    paper_rank: 16
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: WL kernel
+    model_key: wl kernel
+    model_plain: WL kernel
+    value: 0.81
+    std: 0.031
+    paper_value: 0.81
+    paper_std: 0.031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: svm_kernel
+    architecture_label: SVM
+    architecture_title: SVM / kernel method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: shervashidze2011weisfeiler
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on RDT-B using 10-fold CV
+    date: Jun 23, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-23'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.81
+    at_pub_std: 0.031
+    at_pub_source_arxiv: '2103.03212'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing Simplicial
+      Networks'
+    at_pub_source_date_iso: '2021-03-04'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2021-03-04'
+    value_gap_source_date_label: ICML 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.81
+    true_std: 0.031
+    value_gap_source_arxiv: '2103.03212'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing
+      Simplicial Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.81
+    sort_std: 0.031
+    global_rank: 61
+    paper_rank: 61
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: graph-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
 - &id001
   dataset: ZINC
   rows:
-  - model: Subgraphormer
+  - model: GPS
+    model_key: tigt
+    model_plain: GPS
+    value: 0.014
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: GRaM
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.014
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPS
     model_key: ppgn++
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.001
     metric: MAE
@@ -103,17 +3522,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.02
     sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: subgraphormer
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.002
     metric: MAE
@@ -137,13 +3556,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.02
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: CIN
     model_key: cin
@@ -162,14 +3581,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on ZINC-FULL test set
     date: Jun 23, 2021
     date_display: Jun 2021
     date_iso: '2021-06-23'
@@ -201,16 +3620,16 @@ results:
     value_note: ''
     sort_value: 0.021
     sort_std: 0.001
-    global_rank: 3
-    paper_rank: 4
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 4
+    paper_rank: 6
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: CIN-Small
     model_key: cin-small
@@ -229,14 +3648,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on ZINC-FULL test set
     date: Jun 23, 2021
     date_display: Jun 2021
     date_iso: '2021-06-23'
@@ -248,8 +3667,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-22'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2021-06-23'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -260,17 +3679,16 @@ results:
     today_delta_significant: false
     true_value: 0.044
     true_std: 0.003
-    value_gap_source_arxiv: '2210.13978'
-    value_gap_source_title: Boosting the Cycle Counting Power of Graph Neural Networks
-      with I$^2$-GNNs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2106.12575'
+    value_gap_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.044
     sort_std: 0.003
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -297,14 +3715,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: MAE on ZINC-FULL test set
     date: Jun 23, 2021
     date_display: Jun 2021
     date_iso: '2021-06-23'
@@ -336,8 +3754,8 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -360,6 +3778,15 @@ results_grouped:
 - benchmark: Classic
   datasets:
   - *id001
+- benchmark: TU Dortmund
+  datasets:
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+- benchmark: GNNBenchmark
+  datasets:
+  - *id006
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
@@ -369,6 +3796,22 @@ datasets_by_scope:
     datasets:
     - dataset: ZINC
       dataset_slug: zinc
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: MUTAG
+      dataset_slug: mutag
+    - dataset: NCI1
+      dataset_slug: nci1
+    - dataset: PROTEINS
+      dataset_slug: proteins
+    - dataset: RDT-B
+      dataset_slug: rdt-b
+  - benchmark: GNNBenchmark
+    benchmark_slug: gnnbenchmark
+    datasets:
+    - dataset: CSL
+      dataset_slug: csl
 single_proposed_model: CIN
 main_figure: /figures/2106.12575/main_figure.jpegoptim.jpg
 ---

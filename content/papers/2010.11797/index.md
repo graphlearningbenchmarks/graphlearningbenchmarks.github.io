@@ -73,9 +73,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -107,9 +107,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -141,9 +141,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -205,15 +205,15 @@ results:
     date_iso: '2020-10-22'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.843
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '2009.14332'
-    at_pub_source_title: Multi-hop Attention Graph Neural Networks
-    at_pub_source_date_iso: '2020-09-29'
-    at_pub_source_date_label: IJCAI 2020
+    at_pub_value: 0.877
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
     value_gap_source_date_iso: '2023-10-16'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.025000000000000022
+    gap_vs_at_pub: 0.05900000000000005
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -231,15 +231,16 @@ results:
     value_note: ''
     sort_value: 0.8904
     sort_std: 0.015
-    global_rank: 55
-    paper_rank: 573
-    rank_delta: 518
-    rank_delta_abs: 518
+    global_rank: 69
+    paper_rank: 670
+    rank_delta: 601
+    rank_delta_abs: 601
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Multi-hop Attention Graph Neural Networks
-    comparison_source_arxiv: '2009.14332'
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
     is_best: false
     is_std_outlier: false
   - model: APPNP_CGI
@@ -299,8 +300,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: null
-    global_rank: 520
-    paper_rank: 520
+    global_rank: 602
+    paper_rank: 602
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -367,8 +368,8 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: null
-    global_rank: 714
-    paper_rank: 714
+    global_rank: 830
+    paper_rank: 830
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -435,8 +436,8 @@ results:
     value_note: ''
     sort_value: 0.693
     sort_std: null
-    global_rank: 800
-    paper_rank: 800
+    global_rank: 941
+    paper_rank: 941
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -468,5 +469,6 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
+main_figure: /figures/2010.11797/main_figure.jpegoptim.jpg
 ---
 

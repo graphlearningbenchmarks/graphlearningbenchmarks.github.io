@@ -667,5 +667,6 @@ datasets_by_scope:
     datasets:
     - dataset: Coauthor-Physics
       dataset_slug: coauthor-physics
+main_figure: /figures/2302.14643/main_figure.jpegoptim.jpg
 ---
 

@@ -48,8 +48,8 @@ paper_type: method
 proposed_models:
 - DGCN
 - SGC+DGCN
-mrr: 0.0025
-adjusted_mrr: 0.0025
+mrr: 0.0023
+adjusted_mrr: 0.0023
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -71,9 +71,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -164,9 +164,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 445
-    rank_delta: 443
-    rank_delta_abs: 443
+    paper_rank: 442
+    rank_delta: 440
+    rank_delta_abs: 440
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -233,9 +233,9 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 458
-    rank_delta: 455
-    rank_delta_abs: 455
+    paper_rank: 455
+    rank_delta: 452
+    rank_delta_abs: 452
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -303,9 +303,9 @@ results:
     sort_value: 0.912
     sort_std: 0.0029
     global_rank: 62
-    paper_rank: 467
-    rank_delta: 405
-    rank_delta_abs: 405
+    paper_rank: 464
+    rank_delta: 402
+    rank_delta_abs: 402
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -371,10 +371,10 @@ results:
     value_note: ''
     sort_value: 0.9022
     sort_std: 0.0021
-    global_rank: 111
-    paper_rank: 467
-    rank_delta: 356
-    rank_delta_abs: 356
+    global_rank: 113
+    paper_rank: 464
+    rank_delta: 351
+    rank_delta_abs: 351
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -439,10 +439,10 @@ results:
     value_note: ''
     sort_value: 0.8782
     sort_std: 0.0072
-    global_rank: 262
-    paper_rank: 500
-    rank_delta: 238
-    rank_delta_abs: 238
+    global_rank: 266
+    paper_rank: 496
+    rank_delta: 230
+    rank_delta_abs: 230
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -507,8 +507,8 @@ results:
     value_note: ''
     sort_value: 0.82
     sort_std: 0.017
-    global_rank: 443
-    paper_rank: 443
+    global_rank: 440
+    paper_rank: 440
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -530,9 +530,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -563,9 +563,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -597,9 +597,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -662,19 +662,20 @@ results:
     date_iso: '2020-04-29'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9186
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '1911.05485'
-    at_pub_source_title: Diffusion Improves Graph Learning
-    at_pub_source_date_iso: '2019-10-28'
-    at_pub_source_date_label: NeurIPS 2019
+    at_pub_value: 0.897
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '1909.03211'
+    at_pub_source_title: Measuring and Relieving the Over-smoothing Problem for Graph
+      Neural Networks from the Topological View
+    at_pub_source_date_iso: '2019-09-07'
+    at_pub_source_date_label: AAAI 2019
     value_gap_source_date_iso: '2026-05-18'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.01859999999999995
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: 0.0030000000000000027
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
-    insignificant_improvement_at_pub: false
+    insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
@@ -690,14 +691,14 @@ results:
     sort_value: 0.9669
     sort_std: 0.0014
     global_rank: 5
-    paper_rank: 427
-    rank_delta: 422
-    rank_delta_abs: 422
+    paper_rank: 433
+    rank_delta: 428
+    rank_delta_abs: 428
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Diffusion Improves Graph Learning
-    comparison_source_arxiv: '1911.05485'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -731,17 +732,18 @@ results:
     date_iso: '2020-04-29'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9282
-    at_pub_std: 0.0023
-    at_pub_source_arxiv: '1911.05485'
-    at_pub_source_title: Diffusion Improves Graph Learning
-    at_pub_source_date_iso: '2019-10-28'
-    at_pub_source_date_label: NeurIPS 2019
+    at_pub_value: 0.906
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '1909.03211'
+    at_pub_source_title: Measuring and Relieving the Over-smoothing Problem for Graph
+      Neural Networks from the Topological View
+    at_pub_source_date_iso: '2019-09-07'
+    at_pub_source_date_label: AAAI 2019
     value_gap_source_date_iso: '2026-05-18'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.0242
-    worse_than_at_pub: true
-    surpassed_since_pub: false
+    gap_vs_at_pub: 0.0020000000000000018
+    worse_than_at_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -759,14 +761,14 @@ results:
     sort_value: 0.9632
     sort_std: 0.0008
     global_rank: 16
-    paper_rank: 412
-    rank_delta: 396
-    rank_delta_abs: 396
+    paper_rank: 418
+    rank_delta: 402
+    rank_delta_abs: 402
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Diffusion Improves Graph Learning
-    comparison_source_arxiv: '1911.05485'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SGC
@@ -827,10 +829,10 @@ results:
     value_note: ''
     sort_value: 0.9511
     sort_std: 0.0009
-    global_rank: 63
-    paper_rank: 437
-    rank_delta: 374
-    rank_delta_abs: 374
+    global_rank: 66
+    paper_rank: 443
+    rank_delta: 377
+    rank_delta_abs: 377
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -896,10 +898,10 @@ results:
     value_note: ''
     sort_value: 0.9508
     sort_std: 0.0026
-    global_rank: 68
-    paper_rank: 432
-    rank_delta: 364
-    rank_delta_abs: 364
+    global_rank: 71
+    paper_rank: 438
+    rank_delta: 367
+    rank_delta_abs: 367
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -964,10 +966,10 @@ results:
     value_note: ''
     sort_value: 0.9377
     sort_std: 0.0032
-    global_rank: 133
-    paper_rank: 491
-    rank_delta: 358
-    rank_delta_abs: 358
+    global_rank: 139
+    paper_rank: 498
+    rank_delta: 359
+    rank_delta_abs: 359
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1032,8 +1034,8 @@ results:
     value_note: ''
     sort_value: 0.908
     sort_std: 0.011
-    global_rank: 390
-    paper_rank: 390
+    global_rank: 395
+    paper_rank: 395
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1055,9 +1057,9 @@ results:
 - &id003
   dataset: DBLP
   rows:
-  - model: STPGC
+  - model: ACGCL
     model_key: hg-scm
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -1089,9 +1091,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: advsyngnn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9486
     std: 0.0012
     metric: Accuracy
@@ -1123,9 +1125,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: simplehgn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9446
     std: 0.0022
     metric: Accuracy
@@ -1217,9 +1219,9 @@ results:
     sort_value: 0.8859
     sort_std: 0.001
     global_rank: 23
-    paper_rank: 110
-    rank_delta: 87
-    rank_delta_abs: 87
+    paper_rank: 109
+    rank_delta: 86
+    rank_delta_abs: 86
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1288,9 +1290,9 @@ results:
     sort_value: 0.8758
     sort_std: 0.002
     global_rank: 28
-    paper_rank: 113
-    rank_delta: 85
-    rank_delta_abs: 85
+    paper_rank: 111
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1356,8 +1358,8 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: null
-    global_rank: 68
-    paper_rank: 116
+    global_rank: 66
+    paper_rank: 114
     rank_delta: 48
     rank_delta_abs: 48
     rank_delta_direction: worse
@@ -1425,8 +1427,8 @@ results:
     value_note: ''
     sort_value: 0.7455
     sort_std: 0.0061
-    global_rank: 105
-    paper_rank: 117
+    global_rank: 104
+    paper_rank: 116
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -1493,8 +1495,8 @@ results:
     value_note: ''
     sort_value: 0.725
     sort_std: 0.025
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1561,8 +1563,8 @@ results:
     value_note: ''
     sort_value: 0.711
     sort_std: 0.023
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1629,8 +1631,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: 0.028
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1673,5 +1675,6 @@ datasets_by_scope:
     datasets:
     - dataset: DBLP
       dataset_slug: dblp
+main_figure: /figures/2004.13970/main_figure.jpegoptim.jpg
 ---
 

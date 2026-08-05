@@ -375,9 +375,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -409,9 +409,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -442,9 +442,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -524,7 +524,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7987
     sort_std: null
-    global_rank: 141
+    global_rank: 149
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -568,5 +568,6 @@ datasets_by_scope:
     datasets:
     - dataset: Cora-CA
       dataset_slug: cora-ca
+main_figure: /figures/2305.18965/main_figure.jpegoptim.jpg
 ---
 

@@ -128,9 +128,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: gine w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -161,9 +161,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: HOD-GNN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: UnifiedMolPretrain
+    model_plain: HOD-GNN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -250,10 +250,10 @@ results:
     value_note: ''
     sort_value: 0.85
     sort_std: 0.009
-    global_rank: 8
+    global_rank: 7
     paper_rank: 5
-    rank_delta: -3
-    rank_delta_abs: 3
+    rank_delta: -2
+    rank_delta_abs: 2
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -309,7 +309,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8495
     sort_std: 0.0058
-    global_rank: 10
+    global_rank: 9
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -371,7 +371,7 @@ results:
     today_delta_significant: false
     sort_value: 0.794
     sort_std: 0.01
-    global_rank: 88
+    global_rank: 84
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -433,7 +433,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7795
     sort_std: 0.004
-    global_rank: 117
+    global_rank: 127
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -495,7 +495,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7639
     sort_std: 0.0118
-    global_rank: 161
+    global_rank: 176
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -521,9 +521,42 @@ results:
 - &id001
   dataset: ZINC
   rows:
-  - model: Subgraphormer
+  - model: GPS
+    model_key: tigt
+    model_plain: GPS
+    value: 0.014
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: GRaM
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.014
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPS
     model_key: ppgn++
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.001
     metric: MAE
@@ -546,17 +579,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.02
     sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: subgraphormer
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.002
     metric: MAE
@@ -580,13 +613,13 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.02
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: CIN
     model_key: cin
@@ -644,16 +677,16 @@ results:
     value_note: ''
     sort_value: 0.021
     sort_std: 0.001
-    global_rank: 3
-    paper_rank: 4
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 4
+    paper_rank: 6
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: MPNNs
     model_key: mpnns
@@ -703,7 +736,7 @@ results:
     today_delta_significant: false
     sort_value: 0.024
     sort_std: 0.001
-    global_rank: 9
+    global_rank: 12
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -765,7 +798,7 @@ results:
     today_delta_significant: false
     sort_value: 0.024
     sort_std: 0.001
-    global_rank: 9
+    global_rank: 12
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -836,8 +869,8 @@ results:
     value_note: ''
     sort_value: 0.036
     sort_std: 0.002
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -845,6 +878,74 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PNA
+    model_key: pna
+    model_plain: PNA
+    value: 0.32
+    std: 0.032
+    paper_value: 0.32
+    paper_std: 0.032
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: corso2020principal
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jun 19, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-19'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.142
+    at_pub_std: 0.01
+    at_pub_source_arxiv: '2201.09332'
+    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
+    at_pub_source_date_iso: '2022-01-23'
+    at_pub_source_date_label: TMLR 2022
+    value_gap_source_date_iso: '2025-01-30'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.17800000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.067
+    true_std: 0.009
+    value_gap_source_arxiv: '2501.18739'
+    value_gap_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.253
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.067
+    sort_std: 0.009
+    global_rank: 35
+    paper_rank: 63
+    rank_delta: 28
+    rank_delta_abs: 28
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: How Expressive are Transformers in Spectral Domain for
+      Graphs?
+    comparison_source_arxiv: '2201.09332'
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -903,8 +1004,8 @@ results:
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -962,7 +1063,7 @@ results:
     today_delta_significant: false
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 28
+    global_rank: 42
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -974,75 +1075,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PNA
-    model_key: pna
-    model_plain: PNA
-    value: 0.32
-    std: 0.032
-    paper_value: 0.32
-    paper_std: 0.032
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: corso2020principal
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 19, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-19'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.142
-    at_pub_std: 0.01
-    at_pub_source_arxiv: '2201.09332'
-    at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
-    at_pub_source_date_iso: '2022-01-23'
-    at_pub_source_date_label: TMLR 2022
-    value_gap_source_date_iso: '2022-01-23'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: 0.17800000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.142
-    true_std: 0.01
-    value_gap_source_arxiv: '2201.09332'
-    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
-      Graphs?
-    value_gap_source_is_current_paper: false
-    value_gap: 0.17800000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.142
-    sort_std: 0.01
-    global_rank: 34
-    paper_rank: 43
-    rank_delta: 9
-    rank_delta_abs: 9
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: How Expressive are Transformers in Spectral Domain for
-      Graphs?
-    comparison_source_arxiv: '2201.09332'
     is_best: false
     is_std_outlier: false
   rank_metric: MAE
@@ -1076,5 +1108,6 @@ datasets_by_scope:
     - dataset: Tox21
       dataset_slug: tox21
 single_proposed_model: MPNNs
+main_figure: /figures/2306.10767/main_figure.jpegoptim.jpg
 ---
 

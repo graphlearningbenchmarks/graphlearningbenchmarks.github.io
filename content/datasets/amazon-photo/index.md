@@ -8,7 +8,7 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.Amazon.html
 stats: null
-result_count: 988
+result_count: 948
 best_model:
   model: MSH-GNN
   value: 0.9766
@@ -160,6 +160,11 @@ papers:
   title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
   date_iso: '2025-05-21'
   venue: ''
+- arxiv_id: '2505.15845'
+  title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+    Learning Models'
+  date_iso: '2025-05-19'
+  venue: ''
 - arxiv_id: '2505.10307'
   title: Negative Metric Learning for Graphs
   date_iso: '2025-05-15'
@@ -276,11 +281,6 @@ papers:
     Generalization
   date_iso: '2024-08-03'
   venue: ''
-- arxiv_id: '2408.00295'
-  title: Contrastive Graph Representation Learning with Adversarial Cross-view Reconstruction
-    and Information Bottleneck
-  date_iso: '2024-08-01'
-  venue: ''
 - arxiv_id: '2408.00165'
   title: Non-convolutional Graph Neural Networks
   date_iso: '2024-07-31'
@@ -392,6 +392,10 @@ papers:
   title: Simple and Asymmetric Graph Contrastive Learning without Augmentations
   date_iso: '2023-10-29'
   venue: NeurIPS 2023
+- arxiv_id: '2310.14527'
+  title: 'Marginal Nodes Matter: Towards Structure Fairness in Graphs'
+  date_iso: '2023-10-23'
+  venue: KDD 2023
 - arxiv_id: '2310.13845'
   title: Spectral-Aware Augmentation for Enhanced Graph Representation Learning
   date_iso: '2023-10-20'
@@ -476,6 +480,10 @@ papers:
   title: Feature Expansion for Graph Neural Networks
   date_iso: '2023-05-10'
   venue: ICML 2023
+- arxiv_id: '2305.02866'
+  title: Hierarchical Transformer for Scalable Graph Learning
+  date_iso: '2023-05-04'
+  venue: IJCAI 2023
 - arxiv_id: '2305.00139'
   title: Leveraging Label Non-Uniformity for Node Classification in Graph Neural Networks
   date_iso: '2023-04-29'
@@ -540,10 +548,6 @@ papers:
   title: Relational Self-Supervised Learning on Graphs
   date_iso: '2022-08-21'
   venue: ''
-- arxiv_id: '2208.06956'
-  title: 'ArieL: Adversarial Graph Contrastive Learning'
-  date_iso: '2022-08-15'
-  venue: ''
 - arxiv_id: '2207.05887'
   title: Tuning the Geometry of Graph Neural Networks
   date_iso: '2022-07-12'
@@ -590,11 +594,6 @@ papers:
 - arxiv_id: '2205.09335'
   title: A Simple Yet Effective SVD-GCN for Directed Graphs
   date_iso: '2022-05-19'
-  venue: ''
-- arxiv_id: '2203.12265'
-  title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual Information
-    Maximization
-  date_iso: '2022-03-23'
   venue: ''
 - arxiv_id: '2203.00638'
   title: 'PaSca: a Graph Neural Architecture Search System under the Scalable Paradigm'
@@ -658,11 +657,6 @@ papers:
   title: Automated Self-Supervised Learning for Graphs
   date_iso: '2021-06-10'
   venue: ICLR 2021
-- arxiv_id: '2106.02466'
-  title: 'Graph Barlow Twins: A self-supervised representation learning framework
-    for graphs'
-  date_iso: '2021-06-04'
-  venue: ''
 - arxiv_id: '2105.05682'
   title: Multi-Scale Contrastive Siamese Networks for Self-Supervised Graph Representation
     Learning
@@ -675,10 +669,6 @@ papers:
 - arxiv_id: '2012.03476'
   title: 'NCGNN: Node-Level Capsule Graph Neural Network for Semisupervised Classification'
   date_iso: '2020-12-07'
-  venue: ''
-- arxiv_id: '2011.10988'
-  title: Adaptive Stacked Graph Filter
-  date_iso: '2020-11-22'
   venue: ''
 - arxiv_id: '2010.14945'
   title: Graph Contrastive Learning with Adaptive Augmentation
@@ -716,10 +706,6 @@ papers:
   title: Spectral Graph Attention Network with Fast Eigen-approximation
   date_iso: '2020-03-17'
   venue: ''
-- arxiv_id: '1911.05485'
-  title: Diffusion Improves Graph Learning
-  date_iso: '2019-10-28'
-  venue: NeurIPS 2019
 - arxiv_id: '1909.03211'
   title: Measuring and Relieving the Over-smoothing Problem for Graph Neural Networks
     from the Topological View
@@ -740,20 +726,20 @@ variants:
     num_classes: null
   metrics:
   - Accuracy
+  - ACC
   - AUROC
   - Macro-F1
   - Micro-F1
-  - Micro-f1
   - Normalized AUAC
   - ROC-AUC
   - Recall
   - Weighted-F1
   metric_display_names:
   - Accuracy
+  - ACC
   - AUROC
   - Macro-F1
   - Micro-F1
-  - Micro-f1
   - Normalized AUAC
   - ROC-AUC
   - Recall
@@ -1618,6 +1604,49 @@ variants:
     - null
     - null
     - null
+  - model: NAGphormer-LGTL
+    model_plain: NAGphormer-LGTL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9601
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0015
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: CNA (TransformerConv)
     model_plain: CNA (TransformerConv)
     is_baseline: false
@@ -1695,6 +1724,49 @@ variants:
     - null
     metric_stds:
     - 0.0058
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: VCR-Graphormer-LGTL
+    model_plain: VCR-Graphormer-LGTL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9582
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0017
     - null
     - null
     - null
@@ -2379,48 +2451,6 @@ variants:
     - null
     - null
     - null
-  - model: SGF
-    model_plain: SGF
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2011.10988'
-    title: Adaptive Stacked Graph Filter
-    date: Nov 22, 2020
-    date_iso: '2020-11-22'
-    date_display: Nov 2020
-    codebase_url: https://github.com/gear/sgf
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9558
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0055
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: SGFormer
     model_plain: SGFormer
     is_baseline: true
@@ -2557,11 +2587,11 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.17660'
-    title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
-      for Node Classification'
-    date: May 23, 2025
-    date_iso: '2025-05-23'
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
     date_display: May 2025
     codebase_url: ''
     published_conference: ''
@@ -2582,7 +2612,7 @@ variants:
     - null
     - null
     metric_stds:
-    - 0.0014
+    - 0.0023
     - null
     - null
     - null
@@ -2845,64 +2875,22 @@ variants:
     - null
     - null
     - null
-  - model: H2GCN
-    model_plain: H2GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2306.02285'
-    title: Clarify Confused Nodes via Separated Learning
-    date: Jun 4, 2023
-    date_iso: '2023-06-04'
-    date_display: Jun 2023
-    codebase_url: https://github.com/GISec-Team/NCGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9548
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0043
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  row_count: 988
+  row_count: 948
   rows_json: /data/datasets/amazon-photo/standard-split-rows.json
   chart_json: /data/datasets/amazon-photo/standard-split-chart.json
   arch_counts:
-    gnn: 649
-    hybrid: 149
-    graph_transformer: 48
+    gnn: 618
+    hybrid: 140
+    graph_transformer: 54
     llm: 25
-    walk: 19
-    traditional: 69
+    walk: 16
+    traditional: 65
   metric_counts:
-  - 905
+  - 884
+  - 4
   - 12
   - 12
   - 12
-  - 23
   - 14
   - 16
   - 1
@@ -2951,6 +2939,12 @@ variants:
     arxiv_id: '2303.13750'
     title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
     date: '2023-03-24'
+  - value: 0.9545
+    std: 0.0015
+    model: FE-GNN
+    arxiv_id: '2305.06142'
+    title: Feature Expansion for Graph Neural Networks
+    date: '2023-05-10'
   - value: 0.9661
     std: 0.0021
     model: NAGphormer
@@ -2966,6 +2960,13 @@ variants:
     date: '2025-05-21'
   milestones_by_metric:
     Accuracy: *id001
+    ACC:
+    - value: 0.9109
+      std: null
+      model: SAGE
+      arxiv_id: '2310.14527'
+      title: 'Marginal Nodes Matter: Towards Structure Fairness in Graphs'
+      date: '2023-10-23'
     AUROC:
     - value: 0.7129
       std: null
@@ -2987,7 +2988,6 @@ variants:
       arxiv_id: '2110.14863'
       title: Graph Communal Contrastive Learning
       date: '2021-10-28'
-    Micro-f1: []
     Normalized AUAC: []
     ROC-AUC:
     - value: 0.955

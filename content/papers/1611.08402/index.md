@@ -54,31 +54,406 @@ extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
 has_results: true
 paper_type: method
 proposed_models:
-- MoNet
-mrr: 0.0047
-adjusted_mrr: 0.0047
-mrr_dataset_count: 3
+- mixture model CNNs
+mrr: 0.0015
+adjusted_mrr: 0.001
+mrr_dataset_count: 2
 benchmark_categories:
-- GNNBenchmark
+- Classic
 benchmark_coverage:
-- benchmark: GNNBenchmark
-  benchmark_slug: gnnbenchmark
-  evaluated: 1
-  total: 6
+- benchmark: Classic
+  benchmark_slug: classic
+  evaluated: 2
+  total: 12
 task_categories:
-- graph_classification
+- node_classification
 experiment_scopes:
-- graph-level
+- node-level
 results:
 - &id001
-  dataset: MNIST
+  dataset: Cora
   rows:
-  - model: LeNet5
-    model_key: lenet5
-    model_plain: LeNet5
-    value: 0.9933
+  - model: SGC+TSC
+    model_key: exphormer
+    model_plain: SGC+TSC
+    value: 0.9635
+    std: 0.0019
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9635
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SGC+TSC
+    model_key: sgformer
+    model_plain: SGC+TSC
+    value: 0.9629
+    std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9629
+    sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SGC+TSC
+    model_key: coral
+    model_plain: SGC+TSC
+    value: 0.9574
+    std: 0.0039
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9574
+    sort_std: 0.0039
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8159
+    std: 0.0042
+    paper_value: 0.8159
+    paper_std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: Welling 2016
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016). Averaged
+      over 50 runs.
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.815
+    at_pub_std: null
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
+    value_gap_source_date_iso: '2024-01-17'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.0009000000000000119
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9004
+    true_std: null
+    value_gap_source_arxiv: '2401.09125'
+    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08450000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9004
+    sort_std: null
+    global_rank: 33
+    paper_rank: 694
+    rank_delta: 661
+    rank_delta_abs: 661
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DCNN
+    model_key: dcnn
+    model_plain: DCNN
+    value: 0.768
+    std: 0.006
+    paper_value: 0.768
+    paper_std: 0.006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: Atwood 2016
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016). Averaged
+      over 50 runs.
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-08-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.868
+    true_std: null
+    value_gap_source_arxiv: '2008.09864'
+    value_gap_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09999999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.868
+    sort_std: null
+    global_rank: 218
+    paper_rank: 852
+    rank_delta: 634
+    rank_delta_abs: 634
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DeepWalk
+    model_key: deepwalk
+    model_plain: DeepWalk
+    value: 0.672
     std: null
-    paper_value: 0.9933
+    paper_value: 0.672
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: Perozzi 2014
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.672
+    at_pub_std: null
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
+    value_gap_source_date_iso: '2019-09-03'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.829
+    true_std: null
+    value_gap_source_arxiv: '1909.00958'
+    value_gap_source_title: 'Graph Representation Learning: A Survey'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15699999999999992
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.829
+    sort_std: null
+    global_rank: 547
+    paper_rank: 958
+    rank_delta: 411
+    rank_delta_abs: 411
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: mixture model CNNs
+    model_key: mixture model cnns
+    model_plain: mixture model CNNs
+    value: 0.8169
+    std: 0.0048
+    paper_value: 0.8169
+    paper_std: 0.0048
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016). Averaged
+      over 50 runs.
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2016-11-25'
+    value_gap_source_date_label: '2016'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8169
+    true_std: 0.0048
+    value_gap_source_arxiv: '1611.08402'
+    value_gap_source_title: Geometric deep learning on graphs and manifolds using
+      mixture model CNNs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8169
+    sort_std: 0.0048
+    global_rank: 689
+    paper_rank: 689
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Planetoid
+    model_key: planetoid
+    model_plain: Planetoid
+    value: 0.757
+    std: null
+    paper_value: 0.757
     paper_std: null
     metric: Accuracy
     higher_is_better: true
@@ -90,27 +465,27 @@ results:
     architecture_label: Trad
     architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: lecun1998gradient
+    table_ref: Table 2
+    source_ref: Yang 2016
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
     date: Nov 25, 2016
     date_display: Nov 2016
     date_iso: '2016-11-25'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.757
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
+    value_gap_source_date_iso: '2020-03-17'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -119,194 +494,168 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    sort_value: 0.9933
-    sort_std: null
-    global_rank: 1
-    has_value_gap: false
-    has_value_note: false
+    true_value: 0.757
+    true_std: null
+    value_gap_source_arxiv: '2003.07450'
+    value_gap_source_title: Spectral Graph Attention Network with Fast Eigen-approximation
+    value_gap_source_is_current_paper: false
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.757
+    sort_std: null
+    global_rank: 872
+    paper_rank: 872
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: 3WLGNN
-    model_key: graphcon-gat
-    model_plain: 3WLGNN
-    value: 0.9891
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2202.02296'
-    title: Graph-Coupled Oscillator Networks
-    date: Feb 4, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-04'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/tk-rusch/GraphCON
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9891
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: gig-gatedgcn
-    model_plain: 3WLGNN
-    value: 0.988
-    std: 0.0003
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.00696'
-    title: Graph in Graph Neural Network
-    date: Jun 30, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-30'
-    venue: International Journal of Computer Vision
-    codebase_url: https://github.com/wangjs96/Graph-in-Graph-Neural-Network
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.988
-    sort_std: 0.0003
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: 3WLGNN
-    model_key: pncnn
-    model_plain: 3WLGNN
-    value: 0.9876
+  - model: LP
+    model_key: lp
+    model_plain: LP
+    value: 0.68
     std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.02296'
-    title: Graph-Coupled Oscillator Networks
-    date: Feb 4, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-04'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/tk-rusch/GraphCON
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9876
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MoNet
-    model_key: monet
-    model_plain: MoNet
-    value: 0.9919
-    std: null
-    paper_value: 0.9919
+    paper_value: 0.68
     paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
+    table_ref: Table 2
+    source_ref: Zhu 2003
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
     date: Nov 25, 2016
     date_display: Nov 2016
     date_iso: '2016-11-25'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.68
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: ICML 2022
+    at_pub_source_arxiv: '1603.08861'
+    at_pub_source_title: Revisiting Semi-Supervised Learning with Graph Embeddings
+    at_pub_source_date_iso: '2016-03-29'
+    at_pub_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2025-07-19'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9111
-    true_std: null
-    value_gap_source_arxiv: '2202.02296'
-    value_gap_source_title: Graph-Coupled Oscillator Networks
+    true_value: 0.71
+    true_std: 0.0
+    value_gap_source_arxiv: '2507.14484'
+    value_gap_source_title: 'ReDiSC: A Reparameterized Masked Diffusion Model for
+      Scalable Node Classification with Structured Predictions'
     value_gap_source_is_current_paper: false
-    value_gap: 0.08079999999999998
+    value_gap: 0.029999999999999916
     has_value_note: false
     value_note: ''
-    sort_value: 0.9111
-    sort_std: null
-    global_rank: 96
-    paper_rank: 1
-    rank_delta: -95
-    rank_delta_abs: 95
-    rank_delta_direction: better
+    sort_value: 0.71
+    sort_std: 0.0
+    global_rank: 925
+    paper_rank: 951
+    rank_delta: 26
+    rank_delta_abs: 26
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ChebNet
-    model_key: chebnet
-    model_plain: ChebNet
-    value: 0.9914
+  - model: ManiReg
+    model_key: manireg
+    model_plain: ManiReg
+    value: 0.595
     std: null
-    paper_value: 0.9914
+    paper_value: 0.595
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: Belkin 2006
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.595
+    at_pub_std: null
+    at_pub_source_arxiv: '1603.08861'
+    at_pub_source_title: Revisiting Semi-Supervised Learning with Graph Embeddings
+    at_pub_source_date_iso: '2016-03-29'
+    at_pub_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2023-01-23'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.604
+    true_std: 0.008
+    value_gap_source_arxiv: '2301.09474'
+    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.009000000000000008
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.604
+    sort_std: 0.008
+    global_rank: 990
+    paper_rank: 993
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SemiEmb
+    model_key: semiemb
+    model_plain: SemiEmb
+    value: 0.59
+    std: null
+    paper_value: 0.59
     paper_std: null
     metric: Accuracy
     higher_is_better: true
@@ -318,51 +667,51 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: defferrard2016convolutional
+    table_ref: Table 2
+    source_ref: Weston 2012
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
     date: Nov 25, 2016
     date_display: Nov 2016
     date_iso: '2016-11-25'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.59
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: ICML 2022
+    at_pub_source_arxiv: '1603.08861'
+    at_pub_source_title: Revisiting Semi-Supervised Learning with Graph Embeddings
+    at_pub_source_date_iso: '2016-03-29'
+    at_pub_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2019-07-10'
+    value_gap_source_date_label: '2019'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.7562
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.59
     true_std: null
-    value_gap_source_arxiv: '2202.02296'
-    value_gap_source_title: Graph-Coupled Oscillator Networks
+    value_gap_source_arxiv: '1907.04786'
+    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.23519999999999996
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7562
+    sort_value: 0.59
     sort_std: null
-    global_rank: 107
-    paper_rank: 1
-    rank_delta: -106
-    rank_delta_abs: 106
-    rank_delta_direction: better
-    has_value_gap: true
+    global_rank: 999
+    paper_rank: 999
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -370,7 +719,666 @@ results:
     is_std_outlier: false
   rank_metric: Accuracy
   higher_is_better: true
-  experiment_scope: graph-level
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: PubMed
+  rows:
+  - model: R-SoftGraphAIN
+    model_key: lgtl
+    model_plain: R-SoftGraphAIN
+    value: 0.9518
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9518
+    sort_std: 0.0011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: sagn
+    model_plain: R-SoftGraphAIN
+    value: 0.9517
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9517
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: mixhop (lo)
+    model_plain: R-SoftGraphAIN
+    value: 0.9513
+    std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/QiaoYRan/LOGIN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9513
+    sort_std: 0.0038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7872
+    std: 0.0025
+    paper_value: 0.7872
+    paper_std: 0.0025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: welling2016
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016). Averaged
+      over 50 runs.
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.79
+    at_pub_std: null
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
+    value_gap_source_date_iso: '2026-05-24'
+    value_gap_source_date_label: ICML 2026
+    gap_vs_at_pub: 0.0028000000000000247
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9296
+    true_std: null
+    value_gap_source_arxiv: '2605.24867'
+    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
+      Chain-of-Thought Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.14239999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9296
+    sort_std: null
+    global_rank: 21
+    paper_rank: 655
+    rank_delta: 634
+    rank_delta_abs: 634
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Semi-Supervised Classification with Graph Convolutional
+      Networks
+    comparison_source_arxiv: '1609.02907'
+    is_best: false
+    is_std_outlier: false
+  - model: DCNN
+    model_key: dcnn
+    model_plain: DCNN
+    value: 0.73
+    std: 0.0052
+    paper_value: 0.73
+    paper_std: 0.0052
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: atwood2016search
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016). Averaged
+      over 50 runs.
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-08-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.898
+    true_std: null
+    value_gap_source_arxiv: '2008.09864'
+    value_gap_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.16800000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.898
+    sort_std: null
+    global_rank: 93
+    paper_rank: 849
+    rank_delta: 756
+    rank_delta_abs: 756
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DeepWalk
+    model_key: deepwalk
+    model_plain: DeepWalk
+    value: 0.653
+    std: null
+    paper_value: 0.653
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: perozzi2014deepwalk
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.653
+    at_pub_std: null
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
+    value_gap_source_date_iso: '2022-03-23'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8652
+    true_std: 0.0012
+    value_gap_source_arxiv: '2203.12265'
+    value_gap_source_title: Node Representation Learning in Graph via Node-to-Neighbourhood
+      Mutual Information Maximization
+    value_gap_source_is_current_paper: false
+    value_gap: 0.21219999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8652
+    sort_std: 0.0012
+    global_rank: 244
+    paper_rank: 893
+    rank_delta: 649
+    rank_delta_abs: 649
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: mixture model CNNs
+    model_key: mixture model cnns
+    model_plain: mixture model CNNs
+    value: 0.7881
+    std: 0.0044
+    paper_value: 0.7881
+    paper_std: 0.0044
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016). Averaged
+      over 50 runs.
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2016-11-25'
+    value_gap_source_date_label: '2016'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7881
+    true_std: 0.0044
+    value_gap_source_arxiv: '1611.08402'
+    value_gap_source_title: Geometric deep learning on graphs and manifolds using
+      mixture model CNNs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7881
+    sort_std: 0.0044
+    global_rank: 643
+    paper_rank: 643
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Planetoid
+    model_key: planetoid
+    model_plain: Planetoid
+    value: 0.772
+    std: null
+    paper_value: 0.772
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: yang2016revisiting
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.772
+    at_pub_std: null
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
+    value_gap_source_date_iso: '2020-03-17'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.772
+    true_std: null
+    value_gap_source_arxiv: '2003.07450'
+    value_gap_source_title: Spectral Graph Attention Network with Fast Eigen-approximation
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.772
+    sort_std: null
+    global_rank: 759
+    paper_rank: 759
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LP
+    model_key: lp
+    model_plain: LP
+    value: 0.63
+    std: null
+    paper_value: 0.63
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: zhu2003semi
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.63
+    at_pub_std: null
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
+    value_gap_source_date_iso: '2025-07-19'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.716
+    true_std: 0.0
+    value_gap_source_arxiv: '2507.14484'
+    value_gap_source_title: 'ReDiSC: A Reparameterized Masked Diffusion Model for
+      Scalable Node Classification with Structured Predictions'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08599999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.716
+    sort_std: 0.0
+    global_rank: 858
+    paper_rank: 898
+    rank_delta: 40
+    rank_delta_abs: 40
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ManiReg
+    model_key: manireg
+    model_plain: ManiReg
+    value: 0.707
+    std: null
+    paper_value: 0.707
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: belkin2006manifold
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.707
+    at_pub_std: null
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
+    value_gap_source_date_iso: '2023-01-23'
+    value_gap_source_date_label: ICLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.713
+    true_std: 0.014
+    value_gap_source_arxiv: '2301.09474'
+    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006000000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.713
+    sort_std: 0.014
+    global_rank: 863
+    paper_rank: 868
+    rank_delta: 5
+    rank_delta_abs: 5
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SemiEmb
+    model_key: semiemb
+    model_plain: SemiEmb
+    value: 0.711
+    std: null
+    paper_value: 0.711
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: weston2012deep
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Vertex classification on Planetoid split (Yang et al. 2016).
+    date: Nov 25, 2016
+    date_display: Nov 2016
+    date_iso: '2016-11-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.711
+    at_pub_std: null
+    at_pub_source_arxiv: '1609.02907'
+    at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
+    at_pub_source_date_iso: '2016-09-09'
+    at_pub_source_date_label: ICLR 2016
+    value_gap_source_date_iso: '2019-07-10'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.711
+    true_std: null
+    value_gap_source_arxiv: '1907.04786'
+    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.711
+    sort_std: null
+    global_rank: 865
+    paper_rank: 865
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
   dataset_primary_metric: Accuracy
   paper_metrics:
   - Accuracy
@@ -378,18 +1386,22 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: GNNBenchmark
+- benchmark: Classic
   datasets:
   - *id001
+  - *id002
 datasets_by_scope:
-- scope: graph-level
-  label: Graph-level
+- scope: node-level
+  label: Node-level
   benchmarks:
-  - benchmark: GNNBenchmark
-    benchmark_slug: gnnbenchmark
+  - benchmark: Classic
+    benchmark_slug: classic
     datasets:
-    - dataset: MNIST
-      dataset_slug: mnist
-single_proposed_model: MoNet
+    - dataset: Cora
+      dataset_slug: cora
+    - dataset: PubMed
+      dataset_slug: pubmed
+single_proposed_model: mixture model CNNs
+main_figure: /figures/1611.08402/main_figure.jpegoptim.jpg
 ---
 

@@ -61,8 +61,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - DGMLP
-mrr: 0.0147
-adjusted_mrr: 0.0098
+mrr: 0.0145
+adjusted_mrr: 0.0097
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -137,9 +137,9 @@ results:
     sort_value: 0.791
     sort_std: null
     global_rank: 1
-    paper_rank: 61
-    rank_delta: 60
-    rank_delta_abs: 60
+    paper_rank: 62
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: gamlp
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -180,9 +180,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GAT+C&S
+  - model: LargeGT-full
     model_key: glem-gnn
-    model_plain: GAT+C&S
+    model_plain: LargeGT-full
     value: 0.7036
     std: 0.0002
     metric: Accuracy
@@ -272,9 +272,9 @@ results:
     sort_value: 0.6636
     sort_std: 0.0005
     global_rank: 27
-    paper_rank: 53
-    rank_delta: 26
-    rank_delta_abs: 26
+    paper_rank: 54
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -542,10 +542,10 @@ results:
     sort_value: 0.6473
     sort_std: 0.0021
     global_rank: 50
-    paper_rank: 50
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    paper_rank: 51
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -564,9 +564,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -598,9 +598,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -631,9 +631,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -722,10 +722,10 @@ results:
     value_note: ''
     sort_value: 0.835
     sort_std: 0.008
-    global_rank: 59
-    paper_rank: 211
-    rank_delta: 152
-    rank_delta_abs: 152
+    global_rank: 61
+    paper_rank: 226
+    rank_delta: 165
+    rank_delta_abs: 165
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -791,10 +791,10 @@ results:
     value_note: ''
     sort_value: 0.831
     sort_std: 0.008
-    global_rank: 65
-    paper_rank: 222
-    rank_delta: 157
-    rank_delta_abs: 157
+    global_rank: 67
+    paper_rank: 237
+    rank_delta: 170
+    rank_delta_abs: 170
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -860,10 +860,10 @@ results:
     value_note: ''
     sort_value: 0.831
     sort_std: 0.007
-    global_rank: 66
-    paper_rank: 219
-    rank_delta: 153
-    rank_delta_abs: 153
+    global_rank: 68
+    paper_rank: 234
+    rank_delta: 166
+    rank_delta_abs: 166
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -929,10 +929,10 @@ results:
     value_note: ''
     sort_value: 0.8287
     sort_std: null
-    global_rank: 72
-    paper_rank: 203
-    rank_delta: 131
-    rank_delta_abs: 131
+    global_rank: 74
+    paper_rank: 219
+    rank_delta: 145
+    rank_delta_abs: 145
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -998,10 +998,10 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: 0.009
-    global_rank: 86
-    paper_rank: 229
-    rank_delta: 143
-    rank_delta_abs: 143
+    global_rank: 87
+    paper_rank: 247
+    rank_delta: 160
+    rank_delta_abs: 160
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1066,8 +1066,8 @@ results:
     value_note: ''
     sort_value: 0.785
     sort_std: 0.002
-    global_rank: 196
-    paper_rank: 196
+    global_rank: 213
+    paper_rank: 213
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1103,5 +1103,6 @@ datasets_by_scope:
     - dataset: ogbn-papers100M
       dataset_slug: ogbn-papers100m
 single_proposed_model: DGMLP
+main_figure: /figures/2108.00955/main_figure.jpegoptim.jpg
 ---
 

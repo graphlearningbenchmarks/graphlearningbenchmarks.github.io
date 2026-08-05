@@ -3154,5 +3154,6 @@ datasets_by_scope:
     - dataset: EAT
       dataset_slug: eat
 single_proposed_model: GraphLearner
+main_figure: /figures/2212.03559/main_figure.jpegoptim.jpg
 ---
 

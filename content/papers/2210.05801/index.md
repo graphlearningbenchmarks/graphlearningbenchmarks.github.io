@@ -302,5 +302,6 @@ datasets_by_scope:
     - dataset: ogbl-citation2
       dataset_slug: ogbl-citation2
 single_proposed_model: LLP
+main_figure: /figures/2210.05801/main_figure.jpegoptim.jpg
 ---
 

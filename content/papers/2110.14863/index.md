@@ -3139,5 +3139,6 @@ datasets_by_scope:
       dataset_slug: wikics
     - dataset: Coauthor-CS
       dataset_slug: coauthor-cs
+main_figure: /figures/2110.14863/main_figure.jpegoptim.jpg
 ---
 

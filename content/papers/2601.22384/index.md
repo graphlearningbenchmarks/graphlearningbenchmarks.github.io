@@ -78,7 +78,7 @@ benchmark_coverage:
 - benchmark: GraphBench
   benchmark_slug: graphbench
   evaluated: 1
-  total: 5
+  total: 8
 task_categories:
 - graph_classification
 experiment_scopes:
@@ -646,5 +646,6 @@ datasets_by_scope:
     - dataset: Algorithmic Reasoning
       dataset_slug: algorithmic-reasoning
 single_proposed_model: G-Substrate
+main_figure: /figures/2601.22384/main_figure.jpegoptim.jpg
 ---
 

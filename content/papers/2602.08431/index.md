@@ -78,9 +78,9 @@ results:
 - &id002
   dataset: D&D
   rows:
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: gc-gnn (graphsage)
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -89,9 +89,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2309.00738'
     title: Rethinking the Power of Graph Canonization in Graph Representation Learning
       with Stability
@@ -112,9 +112,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: sugar
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8403
     std: 0.0133
     metric: Accuracy
@@ -146,9 +146,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DiffPool-det +Both (GAT)
+  - model: ECC
     model_key: ortho-g-u-nets
-    model_plain: DiffPool-det +Both (GAT)
+    model_plain: ECC
     value: 0.8387
     std: null
     metric: Accuracy
@@ -235,10 +235,10 @@ results:
     value_note: ''
     sort_value: 0.7912
     sort_std: 0.0307
-    global_rank: 46
-    paper_rank: 201
-    rank_delta: 155
-    rank_delta_abs: 155
+    global_rank: 48
+    paper_rank: 191
+    rank_delta: 143
+    rank_delta_abs: 143
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -302,10 +302,10 @@ results:
     value_note: ''
     sort_value: 0.7872
     sort_std: 0.0059
-    global_rank: 59
-    paper_rank: 197
-    rank_delta: 138
-    rank_delta_abs: 138
+    global_rank: 61
+    paper_rank: 189
+    rank_delta: 128
+    rank_delta_abs: 128
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -369,10 +369,10 @@ results:
     value_note: ''
     sort_value: 0.7805
     sort_std: 0.0189
-    global_rank: 78
-    paper_rank: 199
-    rank_delta: 121
-    rank_delta_abs: 121
+    global_rank: 81
+    paper_rank: 191
+    rank_delta: 110
+    rank_delta_abs: 110
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -428,7 +428,7 @@ results:
     today_delta_significant: false
     sort_value: 0.662
     sort_std: 0.014
-    global_rank: 188
+    global_rank: 187
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -490,7 +490,7 @@ results:
     today_delta_significant: false
     sort_value: 0.656
     sort_std: 0.013
-    global_rank: 189
+    global_rank: 187
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -552,7 +552,7 @@ results:
     today_delta_significant: false
     sort_value: 0.644
     sort_std: 0.013
-    global_rank: 193
+    global_rank: 189
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -614,7 +614,7 @@ results:
     today_delta_significant: false
     sort_value: 0.622
     sort_std: 0.017
-    global_rank: 195
+    global_rank: 189
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -676,7 +676,7 @@ results:
     today_delta_significant: false
     sort_value: 0.606
     sort_std: null
-    global_rank: 197
+    global_rank: 190
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -738,7 +738,7 @@ results:
     today_delta_significant: false
     sort_value: 0.606
     sort_std: 0.019
-    global_rank: 197
+    global_rank: 190
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -800,7 +800,7 @@ results:
     today_delta_significant: false
     sort_value: 0.593
     sort_std: 0.012
-    global_rank: 198
+    global_rank: 190
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -862,7 +862,7 @@ results:
     today_delta_significant: false
     sort_value: 0.592
     sort_std: 0.011
-    global_rank: 198
+    global_rank: 190
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -924,7 +924,7 @@ results:
     today_delta_significant: false
     sort_value: 0.592
     sort_std: 0.021
-    global_rank: 198
+    global_rank: 190
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -986,7 +986,7 @@ results:
     today_delta_significant: false
     sort_value: 0.591
     sort_std: 0.026
-    global_rank: 198
+    global_rank: 190
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1048,7 +1048,7 @@ results:
     today_delta_significant: false
     sort_value: 0.587
     sort_std: 0.013
-    global_rank: 198
+    global_rank: 190
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1110,7 +1110,7 @@ results:
     today_delta_significant: false
     sort_value: 0.579
     sort_std: 0.018
-    global_rank: 200
+    global_rank: 192
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1136,107 +1136,173 @@ results:
 - &id001
   dataset: NCI1
   rows:
-  - model: Diverse B12C3
-    model_key: msa-aud
-    model_plain: Diverse B12C3
-    value: 0.969
+  - model: ECC
+    model_key: wl-mlp
+    model_plain: ECC
+    value: 0.9954
     std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-21'
+    venue: IEEE International Joint Conference on Neural Network
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: WL-based multi-layer perpetration baseline (WL-MLP) can
+      successfully learn the datasets with node features
     is_global_top: true
     global_rank: 1
-    sort_value: 0.969
+    sort_value: 0.9954
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-au
-    model_plain: Diverse B12C3
-    value: 0.966
-    std: null
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.619
+    std: 0.019
+    paper_value: 0.619
+    paper_std: 0.019
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 9, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-09'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9934
+    at_pub_std: null
+    at_pub_source_arxiv: '2202.10156'
+    at_pub_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    at_pub_source_date_iso: '2022-02-21'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-02-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.37439999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9934
+    true_std: null
+    value_gap_source_arxiv: '2202.10156'
+    value_gap_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    value_gap_source_is_current_paper: false
+    value_gap: 0.37439999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9934
+    sort_std: null
     global_rank: 2
-    sort_value: 0.966
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
+    paper_rank: 564
+    rank_delta: 562
+    rank_delta_abs: 562
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    comparison_source_arxiv: '2202.10156'
+    is_best: true
     is_std_outlier: false
-  - model: Diverse B12C3
-    model_key: msa-ad
-    model_plain: Diverse B12C3
-    value: 0.963
-    std: null
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.609
+    std: 0.023
+    paper_value: 0.609
+    paper_std: 0.023
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.963
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 9, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-09'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9727
+    at_pub_std: null
+    at_pub_source_arxiv: '2202.10156'
+    at_pub_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    at_pub_source_date_iso: '2022-02-21'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-02-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.3637
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9727
+    true_std: null
+    value_gap_source_arxiv: '2202.10156'
+    value_gap_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3637
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9727
     sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
+    global_rank: 3
+    paper_rank: 568
+    rank_delta: 565
+    rank_delta_abs: 565
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 1-WL Expressiveness Is (Almost) All You Need
+    comparison_source_arxiv: '2202.10156'
+    is_best: true
     is_std_outlier: false
   - model: WL subtree
     model_key: wl subtree
@@ -1295,10 +1361,10 @@ results:
     value_note: ''
     sort_value: 0.86
     sort_std: 0.018
-    global_rank: 15
-    paper_rank: 585
-    rank_delta: 570
-    rank_delta_abs: 570
+    global_rank: 12
+    paper_rank: 600
+    rank_delta: 588
+    rank_delta_abs: 588
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1363,152 +1429,15 @@ results:
     value_note: ''
     sort_value: 0.853
     sort_std: 0.012
-    global_rank: 23
-    paper_rank: 557
-    rank_delta: 534
-    rank_delta_abs: 534
+    global_rank: 20
+    paper_rank: 579
+    rank_delta: 559
+    rank_delta_abs: 559
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'CIN++: Enhancing Topological Message Passing'
     comparison_source_arxiv: '2306.03561'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.609
-    std: 0.023
-    paper_value: 0.609
-    paper_std: 0.023
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 9, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-09'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.84
-    at_pub_std: null
-    at_pub_source_arxiv: '2107.04086'
-    at_pub_source_title: Robust Counterfactual Explanations on Graph Neural Networks
-    at_pub_source_date_iso: '2021-07-08'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-07-08'
-    value_gap_source_date_label: NeurIPS 2021
-    gap_vs_at_pub: 0.23099999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.84
-    true_std: null
-    value_gap_source_arxiv: '2107.04086'
-    value_gap_source_title: Robust Counterfactual Explanations on Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.23099999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.84
-    sort_std: null
-    global_rank: 39
-    paper_rank: 545
-    rank_delta: 506
-    rank_delta_abs: 506
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Robust Counterfactual Explanations on Graph Neural Networks
-    comparison_source_arxiv: '2107.04086'
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.619
-    std: 0.019
-    paper_value: 0.619
-    paper_std: 0.019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 9, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-09'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8365
-    at_pub_std: 0.0201
-    at_pub_source_arxiv: '2310.01794'
-    at_pub_source_title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based
-      Gnn Explainers through In-depth Benchmarking'
-    at_pub_source_date_iso: '2023-10-03'
-    at_pub_source_date_label: ICLR 2023
-    value_gap_source_date_iso: '2023-10-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 0.21750000000000003
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8365
-    true_std: 0.0201
-    value_gap_source_arxiv: '2310.01794'
-    value_gap_source_title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based
-      Gnn Explainers through In-depth Benchmarking'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.21750000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8365
-    sort_std: 0.0201
-    global_rank: 48
-    paper_rank: 541
-    rank_delta: 493
-    rank_delta_abs: 493
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based
-      Gnn Explainers through In-depth Benchmarking'
-    comparison_source_arxiv: '2310.01794'
     is_best: false
     is_std_outlier: false
   - model: PathNN
@@ -1569,10 +1498,10 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.019
-    global_rank: 111
-    paper_rank: 572
-    rank_delta: 461
-    rank_delta_abs: 461
+    global_rank: 113
+    paper_rank: 592
+    rank_delta: 479
+    rank_delta_abs: 479
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1639,10 +1568,10 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.004
-    global_rank: 226
-    paper_rank: 577
-    rank_delta: 351
-    rank_delta_abs: 351
+    global_rank: 230
+    paper_rank: 596
+    rank_delta: 366
+    rank_delta_abs: 366
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1699,7 +1628,7 @@ results:
     today_delta_significant: false
     sort_value: 0.667
     sort_std: 0.019
-    global_rank: 514
+    global_rank: 534
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1761,7 +1690,7 @@ results:
     today_delta_significant: false
     sort_value: 0.66
     sort_std: 0.025
-    global_rank: 519
+    global_rank: 540
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1823,7 +1752,7 @@ results:
     today_delta_significant: false
     sort_value: 0.654
     sort_std: 0.018
-    global_rank: 520
+    global_rank: 541
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1885,7 +1814,7 @@ results:
     today_delta_significant: false
     sort_value: 0.632
     sort_std: 0.018
-    global_rank: 535
+    global_rank: 558
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1947,7 +1876,7 @@ results:
     today_delta_significant: false
     sort_value: 0.617
     sort_std: 0.018
-    global_rank: 542
+    global_rank: 566
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2009,7 +1938,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6
     sort_std: 0.018
-    global_rank: 550
+    global_rank: 572
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2071,7 +2000,7 @@ results:
     today_delta_significant: false
     sort_value: 0.599
     sort_std: 0.015
-    global_rank: 551
+    global_rank: 573
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2133,7 +2062,7 @@ results:
     today_delta_significant: false
     sort_value: 0.597
     sort_std: 0.021
-    global_rank: 552
+    global_rank: 574
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2195,7 +2124,7 @@ results:
     today_delta_significant: false
     sort_value: 0.596
     sort_std: 0.02
-    global_rank: 553
+    global_rank: 575
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2235,5 +2164,6 @@ datasets_by_scope:
     - dataset: D&D
       dataset_slug: d-d
 single_proposed_model: USBD
+main_figure: /figures/2602.08431/main_figure.jpegoptim.jpg
 ---
 

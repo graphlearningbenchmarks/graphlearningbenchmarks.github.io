@@ -773,5 +773,6 @@ datasets_by_scope:
     - dataset: MUTAG
       dataset_slug: mutag
 single_proposed_model: D4Explainer
+main_figure: /figures/2310.19321/main_figure.jpegoptim.jpg
 ---
 

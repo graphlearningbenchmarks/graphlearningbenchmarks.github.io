@@ -832,5 +832,6 @@ datasets_by_scope:
     datasets:
     - dataset: PCQM4Mv2
       dataset_slug: pcqm4mv2
+main_figure: /figures/2303.01028/main_figure.jpegoptim.jpg
 ---
 

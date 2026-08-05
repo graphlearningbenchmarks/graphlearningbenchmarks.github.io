@@ -64,9 +64,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -97,9 +97,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -130,9 +130,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -194,22 +194,21 @@ results:
     date_iso: '2023-03-27'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8353
-    at_pub_std: 0.0417
-    at_pub_source_arxiv: '2206.09345'
-    at_pub_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    at_pub_source_date_iso: '2022-06-19'
-    at_pub_source_date_label: '2022'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-05-07'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.059699999999999975
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: true
     true_value: 0.9601
     true_std: 0.0224
@@ -223,9 +222,9 @@ results:
     sort_value: 0.9601
     sort_std: 0.0224
     global_rank: 10
-    paper_rank: 199
-    rank_delta: 189
-    rank_delta_abs: 189
+    paper_rank: 208
+    rank_delta: 198
+    rank_delta_abs: 198
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -356,8 +355,8 @@ results:
     value_note: ''
     sort_value: 0.917
     sort_std: 0.012
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -423,8 +422,8 @@ results:
     value_note: ''
     sort_value: 0.913
     sort_std: 0.007
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -464,19 +463,18 @@ results:
     date_iso: '2023-03-27'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6974
-    at_pub_std: 0.0335
-    at_pub_source_arxiv: '2206.09345'
-    at_pub_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    at_pub_source_date_iso: '2022-06-19'
-    at_pub_source_date_label: '2022'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-03-27'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.2126
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -491,16 +489,15 @@ results:
     value_note: ''
     sort_value: 0.91
     sort_std: 0.015
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    comparison_source_arxiv: '2206.09345'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: ERM
@@ -533,19 +530,18 @@ results:
     date_iso: '2023-03-27'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7011
-    at_pub_std: 0.0323
-    at_pub_source_arxiv: '2206.09345'
-    at_pub_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    at_pub_source_date_iso: '2022-06-19'
-    at_pub_source_date_label: '2022'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-03-27'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.20190000000000008
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -560,16 +556,15 @@ results:
     value_note: ''
     sort_value: 0.903
     sort_std: 0.009
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 159
+    paper_rank: 159
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    comparison_source_arxiv: '2206.09345'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: V-REx
@@ -602,19 +597,18 @@ results:
     date_iso: '2023-03-27'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7049
-    at_pub_std: 0.0473
-    at_pub_source_arxiv: '2206.09345'
-    at_pub_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    at_pub_source_date_iso: '2022-06-19'
-    at_pub_source_date_label: '2022'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-03-27'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.19510000000000005
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -629,16 +623,15 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.02
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 176
+    paper_rank: 176
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    comparison_source_arxiv: '2206.09345'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GIB
@@ -671,19 +664,18 @@ results:
     date_iso: '2023-03-27'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.5683
-    at_pub_std: 0.0359
-    at_pub_source_arxiv: '2206.09345'
-    at_pub_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    at_pub_source_date_iso: '2022-06-19'
-    at_pub_source_date_label: '2022'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-03-27'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.3187
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -698,16 +690,15 @@ results:
     value_note: ''
     sort_value: 0.887
     sort_std: 0.053
-    global_rank: 266
-    paper_rank: 266
+    global_rank: 278
+    paper_rank: 278
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Finding Diverse and Predictable Subgraphs for Graph Domain
-      Generalization
-    comparison_source_arxiv: '2206.09345'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -733,5 +724,6 @@ datasets_by_scope:
     - dataset: MUTAG
       dataset_slug: mutag
 single_proposed_model: LiSA
+main_figure: /figures/2303.14859/main_figure.jpegoptim.jpg
 ---
 

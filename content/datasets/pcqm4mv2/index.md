@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: null
-result_count: 126
+result_count: 117
 best_model:
   model: DeMol
   value: 0.0603
@@ -40,10 +40,6 @@ papers:
     graph learning'
   date_iso: '2025-10-07'
   venue: ''
-- arxiv_id: '2504.12588'
-  title: Plain Transformers Can be Powerful Graph Learners
-  date_iso: '2025-04-17'
-  venue: ''
 - arxiv_id: '2402.04538'
   title: 'Triplet Interaction Improves Graph Transformers: Accurate Molecular Graph
     Learning with Triplet Graph Transformers'
@@ -53,10 +49,6 @@ papers:
   title: Towards Principled Graph Transformers
   date_iso: '2024-01-18'
   venue: NeurIPS 2024
-- arxiv_id: '2312.13136'
-  title: Molecular Hypergraph Neural Networks
-  date_iso: '2023-12-20'
-  venue: ''
 - arxiv_id: '2312.04234'
   title: Graph Convolutions Enrich the Self-Attention in Transformers!
   date_iso: '2023-12-07'
@@ -65,10 +57,6 @@ papers:
   title: Enhancing Graph Neural Networks with Quantum Computed Encodings
   date_iso: '2023-10-31'
   venue: ''
-- arxiv_id: '2305.13987'
-  title: On Structural Expressive Power of Graph Transformers
-  date_iso: '2023-05-23'
-  venue: KDD 2023
 - arxiv_id: '2305.11424'
   title: IJCAI--23 Formatting Instructions
   date_iso: '2023-05-19'
@@ -77,10 +65,6 @@ papers:
   title: 'Specformer: Spectral Graph Neural Networks Meet Transformers'
   date_iso: '2023-03-02'
   venue: ICLR 2023
-- arxiv_id: '2301.11956'
-  title: On the Connection Between MPNN and Graph Transformer
-  date_iso: '2023-01-27'
-  venue: ICML 2023
 - arxiv_id: '2210.01765'
   title: One Transformer Can Understand Both 2D & 3D Molecular Data
   date_iso: '2022-10-04'
@@ -606,32 +590,6 @@ variants:
     - 0.0842
     metric_stds:
     - null
-  - model: GraphGPS-SPIS
-    model_plain: GraphGPS-SPIS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.13987'
-    title: On Structural Expressive Power of Graph Transformers
-    date: May 23, 2023
-    date_iso: '2023-05-23'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: KDD 2023
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.085
-    metric_stds:
-    - null
   - model: GPS-Deep
     model_plain: GPS-Deep
     is_baseline: true
@@ -685,84 +643,6 @@ variants:
     - 0.0852
     metric_stds:
     - null
-  - model: GraphGPS-SPD
-    model_plain: GraphGPS-SPD
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.13987'
-    title: On Structural Expressive Power of Graph Transformers
-    date: May 23, 2023
-    date_iso: '2023-05-23'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: KDD 2023
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0853
-    metric_stds:
-    - null
-  - model: PPGT
-    model_plain: PPGT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2504.12588'
-    title: Plain Transformers Can be Powerful Graph Learners
-    date: Apr 17, 2025
-    date_iso: '2025-04-17'
-    date_display: Apr 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0856
-    metric_stds:
-    - null
-  - model: GraphGPS-Neighbor
-    model_plain: GraphGPS-Neighbor
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.13987'
-    title: On Structural Expressive Power of Graph Transformers
-    date: May 23, 2023
-    date_iso: '2023-05-23'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: KDD 2023
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0856
-    metric_stds:
-    - null
   - model: GraphGPS Medium
     model_plain: GraphGPS Medium
     is_baseline: true
@@ -782,32 +662,6 @@ variants:
     published_conference_short: NeurIPS
     published_conference_slug: neurips
     published_venue: NeurIPS 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0858
-    metric_stds:
-    - null
-  - model: GPS-medium
-    model_plain: GPS-medium
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 19.4
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2301.11956'
-    title: On the Connection Between MPNN and Graph Transformer
-    date: Jan 27, 2023
-    date_iso: '2023-01-27'
-    date_display: Jan 2023
-    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -841,25 +695,25 @@ variants:
     - 0.0858
     metric_stds:
     - null
-  - model: GraphGPS (medium) -id
-    model_plain: GraphGPS (medium) -id
+  - model: GPS-medium
+    model_plain: GPS-medium
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
+    params_millions: 19.4
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.13987'
-    title: On Structural Expressive Power of Graph Transformers
-    date: May 23, 2023
-    date_iso: '2023-05-23'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: KDD 2023
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2023
+    arxiv_id: '2303.01028'
+    title: 'Specformer: Spectral Graph Neural Networks Meet Transformers'
+    date: Mar 2, 2023
+    date_iso: '2023-03-02'
+    date_display: Mar 2023
+    codebase_url: https://github.com/bdy9527/Specformer
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -945,32 +799,6 @@ variants:
     - 0.0859
     metric_stds:
     - null
-  - model: Graphormer-SPIS
-    model_plain: Graphormer-SPIS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.13987'
-    title: On Structural Expressive Power of Graph Transformers
-    date: May 23, 2023
-    date_iso: '2023-05-23'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: KDD 2023
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0861
-    metric_stds:
-    - null
   - model: OSAN
     model_plain: OSAN
     is_baseline: true
@@ -1043,32 +871,6 @@ variants:
     published_conference_short: NeurIPS
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0864
-    metric_stds:
-    - null
-  - model: Graphormer-SPD
-    model_plain: Graphormer-SPD
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.13987'
-    title: On Structural Expressive Power of Graph Transformers
-    date: May 23, 2023
-    date_iso: '2023-05-23'
-    date_display: May 2023
-    codebase_url: ''
-    published_conference: KDD 2023
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1337,32 +1139,6 @@ variants:
     - 0.0883
     metric_stds:
     - null
-  - model: MPNN + VN + PE (medium)
-    model_plain: MPNN + VN + PE (medium)
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: 16.4
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2301.11956'
-    title: On the Connection Between MPNN and Graph Transformer
-    date: Jan 27, 2023
-    date_iso: '2023-01-27'
-    date_display: Jan 2023
-    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.0889
-    metric_stds:
-    - null
   - model: GRPE-Standard
     model_plain: GRPE-Standard
     is_baseline: true
@@ -1441,18 +1217,226 @@ variants:
     - 0.089
     metric_stds:
     - null
-  row_count: 126
+  - model: GRPE-Standard
+    model_plain: GRPE-Standard
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 46.2
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2201.12787'
+    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    date: Jan 30, 2022
+    date_iso: '2022-01-30'
+    date_display: Jan 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0898
+    metric_stds:
+    - null
+  - model: EGT-Small
+    model_plain: EGT-Small
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 11.5
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2305.11424'
+    title: IJCAI--23 Formatting Instructions
+    date: May 19, 2023
+    date_iso: '2023-05-19'
+    date_display: May 2023
+    codebase_url: https://github.com/czczup/GPTrans
+    published_conference: IJCAI 2023
+    published_conference_short: IJCAI
+    published_conference_slug: ijcai
+    published_venue: IJCAI 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0899
+    metric_stds:
+    - null
+  - model: Graphormer-B
+    model_plain: Graphormer-B
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 47.1
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.11424'
+    title: IJCAI--23 Formatting Instructions
+    date: May 19, 2023
+    date_iso: '2023-05-19'
+    date_display: May 2023
+    codebase_url: https://github.com/czczup/GPTrans
+    published_conference: IJCAI 2023
+    published_conference_short: IJCAI
+    published_conference_slug: ijcai
+    published_venue: IJCAI 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0906
+    metric_stds:
+    - null
+  - model: Graphormer-S
+    model_plain: Graphormer-S
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 12.5
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.11424'
+    title: IJCAI--23 Formatting Instructions
+    date: May 19, 2023
+    date_iso: '2023-05-19'
+    date_display: May 2023
+    codebase_url: https://github.com/czczup/GPTrans
+    published_conference: IJCAI 2023
+    published_conference_short: IJCAI
+    published_conference_slug: ijcai
+    published_venue: IJCAI 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.091
+    metric_stds:
+    - null
+  - model: TokenGT Lap
+    model_plain: TokenGT Lap
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 48.5
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2401.10119'
+    title: Towards Principled Graph Transformers
+    date: Jan 18, 2024
+    date_iso: '2024-01-18'
+    date_display: Jan 2024
+    codebase_url: https://github.com/luis-mueller/towards-principled-gts
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.091
+    metric_stds:
+    - null
+  - model: TokenGT (Lap)
+    model_plain: TokenGT (Lap)
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2207.02505'
+    title: Pure Transformers are Powerful Graph Learners
+    date: Jul 6, 2022
+    date_iso: '2022-07-06'
+    date_display: Jul 2022
+    codebase_url: https://github.com/jw9730/tokengt
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.091
+    metric_stds:
+    - null
+  - model: TokenGT
+    model_plain: TokenGT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 48.5
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2210.01765'
+    title: One Transformer Can Understand Both 2D & 3D Molecular Data
+    date: Oct 4, 2022
+    date_iso: '2022-10-04'
+    date_display: Oct 2022
+    codebase_url: https://github.com/lsj2408/Transformer-M
+    published_conference: ICLR 2022
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.091
+    metric_stds:
+    - null
+  - model: Specformer-medium
+    model_plain: Specformer-medium
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2303.01028'
+    title: 'Specformer: Spectral Graph Neural Networks Meet Transformers'
+    date: Mar 2, 2023
+    date_iso: '2023-03-02'
+    date_display: Mar 2023
+    codebase_url: https://github.com/bdy9527/Specformer
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.0916
+    metric_stds:
+    - null
+  row_count: 117
   rows_json: /data/datasets/pcqm4mv2/standard-split-rows.json
   chart_json: /data/datasets/pcqm4mv2/standard-split-chart.json
   arch_counts:
-    gnn: 47
-    hybrid: 28
-    graph_transformer: 45
+    gnn: 45
+    hybrid: 24
+    graph_transformer: 42
     llm: 0
     walk: 0
     traditional: 2
   metric_counts:
-  - 126
+  - 117
   milestones: &id001
   - value: 0.1205
     std: null

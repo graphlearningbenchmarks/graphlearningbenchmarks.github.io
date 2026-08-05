@@ -500,5 +500,6 @@ datasets_by_scope:
     datasets:
     - dataset: PPI
       dataset_slug: ppi
+main_figure: /figures/2207.12600/main_figure.jpegoptim.jpg
 ---
 

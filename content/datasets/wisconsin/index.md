@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 5
-result_count: 279
+result_count: 310
 best_model:
   model: ACM-GCN
   value: 0.958
@@ -54,6 +54,11 @@ papers:
     Study on Oversquashing in Simplicial Message-Passing'
   date_iso: '2025-06-06'
   venue: ICLR 2025
+- arxiv_id: '2505.15845'
+  title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+    Learning Models'
+  date_iso: '2025-05-19'
+  venue: ''
 - arxiv_id: '2505.11346'
   title: What Can We Learn From MIMO Graph Convolutions?
   date_iso: '2025-05-16'
@@ -70,6 +75,10 @@ papers:
   title: Resolving Oversmoothing with Opinion Dissensus
   date_iso: '2025-01-31'
   venue: ''
+- arxiv_id: '2410.05593'
+  title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+  date_iso: '2024-10-08'
+  venue: ICLR 2024
 - arxiv_id: '2408.07654'
   title: 'Graph Triple Attention Network: A Decoupled Perspective'
   date_iso: '2024-08-14'
@@ -93,6 +102,11 @@ papers:
     on Heterophilic Graphs'
   date_iso: '2024-05-31'
   venue: ICML 2024
+- arxiv_id: '2405.18581'
+  title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation Decomposition
+    via Large Language Models'
+  date_iso: '2024-05-28'
+  venue: ''
 - arxiv_id: '2405.13902'
   title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training Framework'
   date_iso: '2024-05-22'
@@ -102,6 +116,11 @@ papers:
     with FROND
   date_iso: '2024-04-26'
   venue: ICLR 2024
+- arxiv_id: '2312.08221'
+  title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization for Over-smoothness
+    in Deep GNNs
+  date_iso: '2023-12-13'
+  venue: AAAI 2023
 - arxiv_id: '2311.14864'
   title: Effective Structural Encodings via Local Curvature Profiles
   date_iso: '2023-11-24'
@@ -170,10 +189,6 @@ papers:
   title: 'Beyond Low-Pass Filters: Adaptive Feature Propagation on Graphs'
   date_iso: '2021-03-26'
   venue: ''
-- arxiv_id: '2103.06064'
-  title: Graph Neural Networks Inspired by Classical Iterative Algorithms
-  date_iso: '2021-03-10'
-  venue: ICML 2021
 - arxiv_id: '2005.14612'
   title: Non-Local Graph Neural Networks
   date_iso: '2020-05-29'
@@ -261,6 +276,36 @@ variants:
     - null
     metric_stds:
     - 0.024
+    - null
+    - null
+  - model: DMD++
+    model_plain: DMD++
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_iso: '2024-10-08'
+    date_display: Oct 2024
+    codebase_url: ''
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.919
+    - null
+    - null
+    metric_stds:
+    - 0.026
     - null
     - null
   - model: F-GREAD-BS
@@ -416,6 +461,36 @@ variants:
     - 0.0474
     - null
     - null
+  - model: DMD-ACMP
+    model_plain: DMD-ACMP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_iso: '2024-10-08'
+    date_display: Oct 2024
+    codebase_url: ''
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.894
+    - null
+    - null
+    metric_stds:
+    - 0.022
+    - null
+    - null
   - model: M2M-GNN
     model_plain: M2M-GNN
     is_baseline: false
@@ -445,6 +520,36 @@ variants:
     - null
     metric_stds:
     - 0.041
+    - null
+    - null
+  - model: Framelets
+    model_plain: Framelets
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_iso: '2024-10-08'
+    date_display: Oct 2024
+    codebase_url: ''
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.889
+    - null
+    - null
+    metric_stds:
+    - 0.032
     - null
     - null
   - model: SGOS-Expn
@@ -505,6 +610,36 @@ variants:
     - null
     metric_stds:
     - 0.0275
+    - null
+    - null
+  - model: GRAND
+    model_plain: GRAND
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_iso: '2024-10-08'
+    date_display: Oct 2024
+    codebase_url: ''
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.886
+    - null
+    - null
+    metric_stds:
+    - 0.021
     - null
     - null
   - model: MM-FGCN
@@ -1122,55 +1257,25 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2103.06064'
-    title: Graph Neural Networks Inspired by Classical Iterative Algorithms
-    date: Mar 10, 2021
-    date_iso: '2021-03-10'
-    date_display: Mar 2021
-    codebase_url: https://github.com/FFTYYY/TWIRLS
-    published_conference: ICML 2021
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2021
+    arxiv_id: '2206.02386'
+    title: Restructuring Graphs for Higher Homophily via Adaptive Spectral Clustering
+    date: Jun 6, 2022
+    date_iso: '2022-06-06'
+    date_display: Jun 2022
+    codebase_url: https://github.com/seanli3/graph_restructure
+    published_conference: AAAI 2022
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2022
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.8667
+    - 0.867
     - null
     - null
     metric_stds:
-    - 0.0469
-    - null
-    - null
-  - model: transparent GNN architecture
-    model_plain: transparent GNN architecture
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2103.06064'
-    title: Graph Neural Networks Inspired by Classical Iterative Algorithms
-    date: Mar 10, 2021
-    date_iso: '2021-03-10'
-    date_display: Mar 2021
-    codebase_url: https://github.com/FFTYYY/TWIRLS
-    published_conference: ICML 2021
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2021
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8667
-    - null
-    - null
-    metric_stds:
-    - 0.0419
+    - 0.047
     - null
     - null
   - model: SANE
@@ -1596,139 +1701,48 @@ variants:
     - 0.0588
     - null
     - null
-  - model: KuramotoGNN
-    model_plain: KuramotoGNN
+  - model: DMD-GCN
+    model_plain: DMD-GCN
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2501.19089'
-    title: Resolving Oversmoothing with Opinion Dissensus
-    date: Jan 31, 2025
-    date_iso: '2025-01-31'
-    date_display: Jan 2025
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_iso: '2024-10-08'
+    date_display: Oct 2024
     codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.8509
+    - 0.852
     - null
     - null
     metric_stds:
-    - 0.0442
+    - 0.021
     - null
     - null
-  - model: MLP
-    model_plain: MLP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2005.14612'
-    title: Non-Local Graph Neural Networks
-    date: May 29, 2020
-    date_iso: '2020-05-29'
-    date_display: May 2020
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.849
-    - null
-    - null
-    metric_stds:
-    - 0.053
-    - null
-    - null
-  - model: GREET
-    model_plain: GREET
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2211.14065'
-    title: 'Beyond Smoothing: Unsupervised Graph Representation Learning with Edge
-      Heterophily Discriminating'
-    date: Nov 25, 2022
-    date_iso: '2022-11-25'
-    date_display: Nov 2022
-    codebase_url: https://github.com/yixinliu233/GREET
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.849
-    - null
-    - null
-    metric_stds:
-    - 0.0448
-    - null
-    - null
-  - model: BernNet
-    model_plain: BernNet
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2206.02386'
-    title: Restructuring Graphs for Higher Homophily via Adaptive Spectral Clustering
-    date: Jun 6, 2022
-    date_iso: '2022-06-06'
-    date_display: Jun 2022
-    codebase_url: https://github.com/seanli3/graph_restructure
-    published_conference: AAAI 2022
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.849
-    - null
-    - null
-    metric_stds:
-    - 0.045
-    - null
-    - null
-  row_count: 279
+  row_count: 310
   rows_json: /data/datasets/wisconsin/standard-split-rows.json
   chart_json: /data/datasets/wisconsin/standard-split-chart.json
   arch_counts:
-    gnn: 210
-    hybrid: 45
-    graph_transformer: 4
+    gnn: 230
+    hybrid: 50
+    graph_transformer: 10
     llm: 0
     walk: 2
     traditional: 14
   metric_counts:
-  - 256
+  - 287
   - 11
   - 12
   milestones: &id001
@@ -1757,6 +1771,12 @@ variants:
     title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
       with FROND
     date: '2024-04-26'
+  - value: 0.919
+    std: 0.026
+    model: DMD++
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: '2024-10-08'
   - value: 0.958
     std: 0.02
     model: ACM-GCN

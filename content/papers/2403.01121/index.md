@@ -43,8 +43,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - OpenGraph
-mrr: 0.0018
-adjusted_mrr: 0.0012
+mrr: 0.0016
+adjusted_mrr: 0.0011
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -69,9 +69,9 @@ results:
   dataset: CiteSeer
   is_multi_metric: true
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     metric_values:
     - 0.9575
     - null
@@ -108,9 +108,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: is-gib
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     metric_values:
     - 0.939
     - null
@@ -148,9 +148,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: eerm
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     metric_values:
     - 0.9112
     - null
@@ -188,66 +188,6 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    metric_values:
-    - 0.281
-    - 0.2025
-    metric_stds:
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.8075
-    sort_std: 0.0078
-    true_value: 0.8075
-    true_std: 0.0078
-    paper_value: 0.281
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.5265
-    value_gap_source_arxiv: '2310.11762'
-    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    value_note: ''
-    at_pub_value: 0.8075
-    at_pub_std: 0.0078
-    at_pub_source_arxiv: '2310.11762'
-    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-18'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2023-10-18'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.5265
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Mar 2, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-02'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    comparison_source_arxiv: '2310.11762'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 32
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -264,28 +204,27 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.8033
-    sort_std: 0.0088
-    true_value: 0.8033
-    true_std: 0.0088
+    sort_value: 0.8769
+    sort_std: 0.004
+    true_value: 0.8769
+    true_std: 0.004
     paper_value: 0.32
     paper_std: null
     has_value_gap: true
     has_value_note: false
-    value_gap: 0.4833
-    value_gap_source_arxiv: '2406.19249'
-    value_gap_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer
-      for Node Classification'
+    value_gap: 0.5569
+    value_gap_source_arxiv: '2305.06142'
+    value_gap_source_title: Feature Expansion for Graph Neural Networks
     value_note: ''
-    at_pub_value: 0.7998
-    at_pub_std: 0.0084
-    at_pub_source_arxiv: '2310.11762'
-    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-18'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2024-06-27'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.47979999999999995
+    at_pub_value: 0.8769
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2305.06142'
+    at_pub_source_title: Feature Expansion for Graph Neural Networks
+    at_pub_source_date_iso: '2023-05-10'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.5569
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -304,11 +243,71 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     comparison_type: behind
-    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    comparison_source_arxiv: '2310.11762'
+    comparison_source_title: Feature Expansion for Graph Neural Networks
+    comparison_source_arxiv: '2305.06142'
     is_best: false
     is_std_outlier: false
-    global_rank: 37
+    global_rank: 21
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    metric_values:
+    - 0.281
+    - 0.2025
+    metric_stds:
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.808
+    sort_std: 0.0026
+    true_value: 0.808
+    true_std: 0.0026
+    paper_value: 0.281
+    paper_std: null
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.527
+    value_gap_source_arxiv: '2305.06142'
+    value_gap_source_title: Feature Expansion for Graph Neural Networks
+    value_note: ''
+    at_pub_value: 0.808
+    at_pub_std: 0.0026
+    at_pub_source_arxiv: '2305.06142'
+    at_pub_source_title: Feature Expansion for Graph Neural Networks
+    at_pub_source_date_iso: '2023-05-10'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.527
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: ''
+    date: Mar 2, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-02'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: behind
+    comparison_source_title: Feature Expansion for Graph Neural Networks
+    comparison_source_arxiv: '2305.06142'
+    is_best: false
+    is_std_outlier: false
+    global_rank: 46
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -368,7 +367,7 @@ results:
     comparison_source_arxiv: '2306.02117'
     is_best: false
     is_std_outlier: false
-    global_rank: 56
+    global_rank: 83
   - model: GIN
     model_key: gin
     model_plain: GIN
@@ -428,7 +427,7 @@ results:
     comparison_source_arxiv: '2010.00238'
     is_best: false
     is_std_outlier: false
-    global_rank: 115
+    global_rank: 155
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -488,7 +487,7 @@ results:
     comparison_source_arxiv: '2310.00183'
     is_best: false
     is_std_outlier: false
-    global_rank: 338
+    global_rank: 401
   - model: GraphCL
     model_key: graphcl
     model_plain: GraphCL
@@ -551,7 +550,7 @@ results:
     comparison_source_arxiv: '2207.11996'
     is_best: false
     is_std_outlier: false
-    global_rank: 379
+    global_rank: 445
   - model: OpenGraph
     model_key: opengraph
     model_plain: OpenGraph
@@ -611,7 +610,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 426
+    global_rank: 493
   - model: GPrompt
     model_key: gprompt
     model_plain: GPrompt
@@ -671,7 +670,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: true
-    global_rank: 815
+    global_rank: 926
   - model: GPF
     model_key: gpf
     model_plain: GPF
@@ -688,18 +687,18 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.4489
-    sort_std: 0.0661
-    true_value: 0.4489
-    true_std: 0.0661
+    sort_value: 0.4902
+    sort_std: 0.0453
+    true_value: 0.4902
+    true_std: 0.0453
     paper_value: 0.311
     paper_std: null
     has_value_gap: true
     has_value_note: false
-    value_gap: 0.13790000000000002
-    value_gap_source_arxiv: '2509.22416'
-    value_gap_source_title: 'One Prompt Fits All: Universal Graph Adaptation for Pretrained
-      Models'
+    value_gap: 0.17920000000000003
+    value_gap_source_arxiv: '2602.05567'
+    value_gap_source_title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph
+      Neural Networks'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -707,8 +706,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-26'
-    value_gap_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2026-02-05'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -732,7 +731,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 835
+    global_rank: 940
   - model: MF
     model_key: mf
     model_plain: MF
@@ -792,7 +791,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 859
+    global_rank: 980
   metrics:
   - Accuracy
   - F1
@@ -811,9 +810,49 @@ results:
   dataset: PubMed
   is_multi_metric: true
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
+    model_key: lgtl
+    model_plain: R-SoftGraphAIN
+    metric_values:
+    - 0.9518
+    - null
+    metric_stds:
+    - 0.0011
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    published_venue: ''
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 1
+    is_best: true
+    sort_value: 0.9518
+    sort_std: 0.0011
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: sagn
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     metric_values:
     - 0.9517
     - null
@@ -837,7 +876,7 @@ results:
     codebase_url: https://github.com/Uncnbb/KCoT
     uses_external_data: false
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     is_best: true
     sort_value: 0.9517
     sort_std: null
@@ -851,9 +890,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
     model_key: mixhop (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     metric_values:
     - 0.9513
     - null
@@ -877,50 +916,10 @@ results:
     codebase_url: https://github.com/QiaoYRan/LOGIN
     uses_external_data: false
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     is_best: true
     sort_value: 0.9513
     sort_std: 0.0038
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
-    model_key: graphsage (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
-    metric_values:
-    - 0.9511
-    - null
-    metric_stds:
-    - 0.0036
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.13902'
-    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
-      Framework'
-    published_venue: ''
-    date: May 22, 2024
-    date_display: May 2024
-    date_iso: '2024-05-22'
-    codebase_url: https://github.com/QiaoYRan/LOGIN
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: true
-    sort_value: 0.9511
-    sort_std: 0.0036
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -960,15 +959,15 @@ results:
     value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
       Chain-of-Thought Graph Learning'
     value_note: ''
-    at_pub_value: 0.889
-    at_pub_std: 0.0032
-    at_pub_source_arxiv: '2308.07134'
-    at_pub_source_title: Language is All a Graph Needs
-    at_pub_source_date_iso: '2023-08-14'
-    at_pub_source_date_label: '2023'
+    at_pub_value: 0.897
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.462
+    gap_vs_at_pub: 0.47000000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -987,11 +986,12 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     comparison_type: behind
-    comparison_source_title: Language is All a Graph Needs
-    comparison_source_arxiv: '2308.07134'
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
     is_best: false
     is_std_outlier: false
-    global_rank: 17
+    global_rank: 21
   - model: GAT
     model_key: gat
     model_plain: GAT
@@ -1021,15 +1021,15 @@ results:
     value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
       Chain-of-Thought Graph Learning'
     value_note: ''
-    at_pub_value: 0.8787
-    at_pub_std: 0.0046
-    at_pub_source_arxiv: '2310.07430'
-    at_pub_source_title: Non-backtracking Graph Neural Networks
-    at_pub_source_date_iso: '2023-10-11'
-    at_pub_source_date_label: TMLR 2023
+    at_pub_value: 0.897
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.40670000000000006
+    gap_vs_at_pub: 0.42500000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1048,11 +1048,12 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     comparison_type: behind
-    comparison_source_title: Non-backtracking Graph Neural Networks
-    comparison_source_arxiv: '2310.07430'
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
     is_best: false
     is_std_outlier: false
-    global_rank: 19
+    global_rank: 23
   - model: GraphCL
     model_key: graphcl
     model_plain: GraphCL
@@ -1114,7 +1115,7 @@ results:
     comparison_source_arxiv: '2206.03601'
     is_best: false
     is_std_outlier: false
-    global_rank: 44
+    global_rank: 64
   - model: GIN
     model_key: gin
     model_plain: GIN
@@ -1177,7 +1178,7 @@ results:
     comparison_source_arxiv: '2308.10737'
     is_best: false
     is_std_outlier: false
-    global_rank: 147
+    global_rank: 176
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -1207,15 +1208,16 @@ results:
     value_gap_source_title: Noise-Resilient Unsupervised Graph Representation Learning
       via Multi-Hop Feature Quality Estimation
     value_note: ''
-    at_pub_value: 0.862
-    at_pub_std: 0.001
-    at_pub_source_arxiv: '2306.02117'
-    at_pub_source_title: 'Oversmoothing: A Nightmare for Graph Contrastive Learning?'
-    at_pub_source_date_iso: '2023-06-03'
-    at_pub_source_date_label: '2023'
+    at_pub_value: 0.8703
+    at_pub_std: 0.0008
+    at_pub_source_arxiv: '2203.12265'
+    at_pub_source_title: Node Representation Learning in Graph via Node-to-Neighbourhood
+      Mutual Information Maximization
+    at_pub_source_date_iso: '2022-03-23'
+    at_pub_source_date_label: '2022'
     value_gap_source_date_iso: '2024-07-29'
     value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.433
+    gap_vs_at_pub: 0.44129999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1234,11 +1236,12 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     comparison_type: behind
-    comparison_source_title: 'Oversmoothing: A Nightmare for Graph Contrastive Learning?'
-    comparison_source_arxiv: '2306.02117'
+    comparison_source_title: Node Representation Learning in Graph via Node-to-Neighbourhood
+      Mutual Information Maximization
+    comparison_source_arxiv: '2203.12265'
     is_best: false
     is_std_outlier: false
-    global_rank: 185
+    global_rank: 226
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -1298,7 +1301,7 @@ results:
     comparison_source_arxiv: '2310.00183'
     is_best: false
     is_std_outlier: false
-    global_rank: 192
+    global_rank: 233
   - model: OpenGraph
     model_key: opengraph
     model_plain: OpenGraph
@@ -1358,7 +1361,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 747
+    global_rank: 882
   - model: GPF
     model_key: gpf
     model_plain: GPF
@@ -1418,7 +1421,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: true
-    global_rank: 768
+    global_rank: 905
   - model: GPrompt
     model_key: gprompt
     model_plain: GPrompt
@@ -1478,7 +1481,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 778
+    global_rank: 915
   - model: MF
     model_key: mf
     model_plain: MF
@@ -1538,7 +1541,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 792
+    global_rank: 932
   metrics:
   - Accuracy
   - F1
@@ -2263,5 +2266,6 @@ datasets_by_scope:
     - dataset: ogbl-ddi
       dataset_slug: ogbl-ddi
 single_proposed_model: OpenGraph
+main_figure: /figures/2403.01121/main_figure.jpegoptim.jpg
 ---
 

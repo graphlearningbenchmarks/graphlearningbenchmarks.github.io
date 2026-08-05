@@ -138,9 +138,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: X_OGB
+  - model: EGP (GCN)
     model_key: giant-xrt
-    model_plain: X_OGB
+    model_plain: EGP (GCN)
     value: 0.7612
     std: 0.0016
     metric: Accuracy
@@ -171,9 +171,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: X_OGB
+  - model: EGP (GCN)
     model_key: gegcn
-    model_plain: X_OGB
+    model_plain: EGP (GCN)
     value: 0.7576
     std: 0.0064
     metric: Accuracy
@@ -263,10 +263,10 @@ results:
     value_note: ''
     sort_value: 0.7391
     sort_std: null
-    global_rank: 14
-    paper_rank: 92
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 13
+    paper_rank: 94
+    rank_delta: 81
+    rank_delta_abs: 81
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -331,8 +331,8 @@ results:
     value_note: ''
     sort_value: 0.731
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -398,10 +398,10 @@ results:
     value_note: ''
     sort_value: 0.7176
     sort_std: null
-    global_rank: 64
-    paper_rank: 90
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 62
+    paper_rank: 91
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -465,15 +465,85 @@ results:
     value_note: ''
     sort_value: 0.7175
     sort_std: 0.0017
-    global_rank: 65
+    global_rank: 63
     paper_rank: 89
-    rank_delta: 24
-    rank_delta_abs: 24
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Rethinking and Simplifying Bootstrapped Graph Latents
     comparison_source_arxiv: '2312.02619'
+    is_best: false
+    is_std_outlier: false
+  - model: DGI
+    model_key: dgi
+    model_plain: DGI
+    value: 0.6577
+    std: null
+    paper_value: 0.6577
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning on official OGB split
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7034
+    at_pub_std: 0.0016
+    at_pub_source_arxiv: '2106.02466'
+    at_pub_source_title: 'Graph Barlow Twins: A self-supervised representation learning
+      framework for graphs'
+    at_pub_source_date_iso: '2021-06-04'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-06-04'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: 0.045700000000000074
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7034
+    true_std: 0.0016
+    value_gap_source_arxiv: '2106.02466'
+    value_gap_source_title: 'Graph Barlow Twins: A self-supervised representation
+      learning framework for graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.045700000000000074
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7034
+    sort_std: 0.0016
+    global_rank: 94
+    paper_rank: 115
+    rank_delta: 21
+    rank_delta_abs: 21
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Graph Barlow Twins: A self-supervised representation
+      learning framework for graphs'
+    comparison_source_arxiv: '2106.02466'
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -533,76 +603,8 @@ results:
     value_note: ''
     sort_value: 0.6831
     sort_std: null
-    global_rank: 105
-    paper_rank: 105
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Rethinking and Simplifying Bootstrapped Graph Latents
-    comparison_source_arxiv: '2312.02619'
-    is_best: false
-    is_std_outlier: false
-  - model: DGI
-    model_key: dgi
-    model_plain: DGI
-    value: 0.6577
-    std: null
-    paper_value: 0.6577
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Supervised learning on official OGB split
-    date: Jul 29, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.651
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '2312.02619'
-    at_pub_source_title: Rethinking and Simplifying Bootstrapped Graph Latents
-    at_pub_source_date_iso: '2023-12-05'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-07-29'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.006699999999999928
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6577
-    true_std: null
-    value_gap_source_arxiv: '2407.19941'
-    value_gap_source_title: Boosting Cross-Domain and Cross-Task Generalization for
-      Text-Attributed Graphs from Structural Perspective
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6577
-    sort_std: null
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -669,8 +671,8 @@ results:
     value_note: ''
     sort_value: 0.6094
     sort_std: null
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -703,5 +705,6 @@ datasets_by_scope:
     - dataset: ogbn-arxiv
       dataset_slug: ogbn-arxiv
 single_proposed_model: BooG
+main_figure: /figures/2407.19941/main_figure.jpegoptim.jpg
 ---
 

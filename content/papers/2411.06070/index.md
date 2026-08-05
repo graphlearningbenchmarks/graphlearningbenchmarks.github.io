@@ -53,8 +53,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GFT
-mrr: 0.5008
-adjusted_mrr: 0.3339
+mrr: 0.5007
+adjusted_mrr: 0.3338
 mrr_dataset_count: 2
 benchmark_categories:
 - Knowledge Graphs
@@ -734,5 +734,6 @@ datasets_by_scope:
     - dataset: WN18RR
       dataset_slug: wn18rr
 single_proposed_model: GFT
+main_figure: /figures/2411.06070/main_figure.jpegoptim.jpg
 ---
 

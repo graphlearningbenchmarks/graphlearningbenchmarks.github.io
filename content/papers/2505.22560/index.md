@@ -1683,5 +1683,6 @@ datasets_by_scope:
       dataset_slug: ribonanza
     - dataset: Tc-Ribo
       dataset_slug: tc-ribo
+main_figure: /figures/2505.22560/main_figure.jpegoptim.jpg
 ---
 

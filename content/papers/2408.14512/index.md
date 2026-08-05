@@ -67,9 +67,9 @@ results:
 - &id001
   dataset: Amazon-Computers
   rows:
-  - model: Matrix-valued
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: Matrix-valued
+    model_plain: C (orthogonal)
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -159,9 +159,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 535
-    rank_delta: 533
-    rank_delta_abs: 533
+    paper_rank: 531
+    rank_delta: 529
+    rank_delta_abs: 529
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -228,9 +228,9 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 522
-    rank_delta: 519
-    rank_delta_abs: 519
+    paper_rank: 518
+    rank_delta: 515
+    rank_delta_abs: 515
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -297,10 +297,10 @@ results:
     value_note: ''
     sort_value: 0.9199
     sort_std: 0.0076
-    global_rank: 28
-    paper_rank: 521
-    rank_delta: 493
-    rank_delta_abs: 493
+    global_rank: 27
+    paper_rank: 517
+    rank_delta: 490
+    rank_delta_abs: 490
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -368,9 +368,9 @@ results:
     sort_value: 0.912
     sort_std: 0.0029
     global_rank: 62
-    paper_rank: 528
-    rank_delta: 466
-    rank_delta_abs: 466
+    paper_rank: 524
+    rank_delta: 462
+    rank_delta_abs: 462
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -437,10 +437,10 @@ results:
     value_note: ''
     sort_value: 0.9112
     sort_std: 0.0019
-    global_rank: 64
-    paper_rank: 534
-    rank_delta: 470
-    rank_delta_abs: 470
+    global_rank: 65
+    paper_rank: 530
+    rank_delta: 465
+    rank_delta_abs: 465
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -479,15 +479,16 @@ results:
     date_iso: '2024-08-25'
     published_venue: NeurIPS 2024
     published_conference: NeurIPS 2024
-    at_pub_value: 0.8878
-    at_pub_std: 0.0043
-    at_pub_source_arxiv: '2208.06956'
-    at_pub_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    at_pub_source_date_iso: '2022-08-15'
-    at_pub_source_date_label: '2022'
+    at_pub_value: 0.8798
+    at_pub_std: 0.0081
+    at_pub_source_arxiv: '2408.05087'
+    at_pub_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
+      Learning
+    at_pub_source_date_iso: '2024-08-09'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2024-08-09'
     value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.29380000000000006
+    gap_vs_at_pub: 0.28580000000000005
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -506,15 +507,16 @@ results:
     value_note: ''
     sort_value: 0.8798
     sort_std: 0.0081
-    global_rank: 252
-    paper_rank: 522
-    rank_delta: 270
-    rank_delta_abs: 270
+    global_rank: 256
+    paper_rank: 518
+    rank_delta: 262
+    rank_delta_abs: 262
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'ArieL: Adversarial Graph Contrastive Learning'
-    comparison_source_arxiv: '2208.06956'
+    comparison_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
+      Learning
+    comparison_source_arxiv: '2408.05087'
     is_best: false
     is_std_outlier: false
   - model: LLaGA
@@ -575,10 +577,10 @@ results:
     value_note: ''
     sort_value: 0.8775
     sort_std: null
-    global_rank: 270
-    paper_rank: 520
-    rank_delta: 250
-    rank_delta_abs: 250
+    global_rank: 274
+    paper_rank: 516
+    rank_delta: 242
+    rank_delta_abs: 242
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -643,10 +645,10 @@ results:
     value_note: ''
     sort_value: 0.875
     sort_std: 0.006
-    global_rank: 284
-    paper_rank: 537
-    rank_delta: 253
-    rank_delta_abs: 253
+    global_rank: 288
+    paper_rank: 533
+    rank_delta: 245
+    rank_delta_abs: 245
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -711,10 +713,10 @@ results:
     value_note: ''
     sort_value: 0.8578
     sort_std: 0.0013
-    global_rank: 335
-    paper_rank: 489
-    rank_delta: 154
-    rank_delta_abs: 154
+    global_rank: 337
+    paper_rank: 486
+    rank_delta: 149
+    rank_delta_abs: 149
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -779,8 +781,8 @@ results:
     value_note: ''
     sort_value: 0.578
     sort_std: 0.002
-    global_rank: 525
-    paper_rank: 525
+    global_rank: 521
+    paper_rank: 521
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -848,8 +850,8 @@ results:
     value_note: ''
     sort_value: 0.42
     sort_std: 0.006
-    global_rank: 536
-    paper_rank: 536
+    global_rank: 532
+    paper_rank: 532
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -916,8 +918,8 @@ results:
     value_note: ''
     sort_value: 0.372
     sort_std: 0.01
-    global_rank: 544
-    paper_rank: 544
+    global_rank: 540
+    paper_rank: 540
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -984,8 +986,8 @@ results:
     value_note: ''
     sort_value: 0.351
     sort_std: 0.031
-    global_rank: 546
-    paper_rank: 546
+    global_rank: 542
+    paper_rank: 542
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1018,5 +1020,6 @@ datasets_by_scope:
     - dataset: Amazon-Computers
       dataset_slug: amazon-computers
 single_proposed_model: TEA-GLM
+main_figure: /figures/2408.14512/main_figure.jpegoptim.jpg
 ---
 

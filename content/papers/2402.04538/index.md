@@ -1361,9 +1361,10 @@ results:
     date_iso: '2023-01-01'
     venue: Journal of machine learning research
     codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
-    uses_external_data: true
-    input_feature_source: mixed
-    feature_source_evidence: suffix -E denotes the use of available edge features
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: nodes in these graphs already have features describing
+      their positions in R^2
     is_global_top: true
     global_rank: 3
     sort_value: 0.838

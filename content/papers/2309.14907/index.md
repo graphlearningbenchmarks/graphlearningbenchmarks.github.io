@@ -65,8 +65,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - LD
-mrr: 0.5357
-adjusted_mrr: 0.3571
+mrr: 0.5312
+adjusted_mrr: 0.3542
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -83,9 +83,9 @@ results:
 - &id002
   dataset: ogbn-arxiv
   rows:
-  - model: X_OGB
+  - model: EGP (GCN)
     model_key: ofa
-    model_plain: X_OGB
+    model_plain: EGP (GCN)
     value: 0.7764
     std: null
     metric: Accuracy
@@ -117,9 +117,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: X_OGB
+  - model: EGP (GCN)
     model_key: giant-xrt
-    model_plain: X_OGB
+    model_plain: EGP (GCN)
     value: 0.7612
     std: 0.0016
     metric: Accuracy
@@ -150,9 +150,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: X_OGB
+  - model: EGP (GCN)
     model_key: gegcn
-    model_plain: X_OGB
+    model_plain: EGP (GCN)
     value: 0.7576
     std: 0.0064
     metric: Accuracy
@@ -242,8 +242,8 @@ results:
     value_note: ''
     sort_value: 0.7174
     sort_std: 0.0029
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -265,9 +265,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -299,9 +299,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -332,9 +332,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -424,8 +424,8 @@ results:
     value_note: ''
     sort_value: 0.8736
     sort_std: 0.0007
-    global_rank: 4
-    paper_rank: 8
+    global_rank: 5
+    paper_rank: 9
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -493,8 +493,8 @@ results:
     value_note: ''
     sort_value: 0.8645
     sort_std: 0.0012
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -561,8 +561,8 @@ results:
     value_note: ''
     sort_value: 0.8509
     sort_std: 0.0021
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -629,8 +629,8 @@ results:
     value_note: ''
     sort_value: 0.8451
     sort_std: 0.0005
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -670,15 +670,16 @@ results:
     date_iso: '2023-09-26'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.8354
-    at_pub_std: 0.0009
-    at_pub_source_arxiv: '2108.10097'
-    at_pub_source_title: Graph Attention MLP with Reliable Label Utilization
-    at_pub_source_date_iso: '2021-08-23'
-    at_pub_source_date_label: '2021'
+    at_pub_value: 0.8376
+    at_pub_std: 0.0019
+    at_pub_source_arxiv: '2210.07494'
+    at_pub_source_title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking
+      and Rethinking'
+    at_pub_source_date_iso: '2022-10-14'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2025-12-16'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.0021999999999999797
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -697,8 +698,8 @@ results:
     value_note: ''
     sort_value: 0.8376
     sort_std: 0.0019
-    global_rank: 52
-    paper_rank: 58
+    global_rank: 54
+    paper_rank: 60
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -765,8 +766,8 @@ results:
     value_note: ''
     sort_value: 0.8316
     sort_std: 0.0007
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -833,8 +834,8 @@ results:
     value_note: ''
     sort_value: 0.8288
     sort_std: 0.0005
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -992,9 +993,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: mog
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8904
     std: 0.0072
     metric: ROC-AUC
@@ -1258,5 +1259,6 @@ datasets_by_scope:
     - dataset: ogbn-proteins
       dataset_slug: ogbn-proteins
 single_proposed_model: LD
+main_figure: /figures/2309.14907/main_figure.jpegoptim.jpg
 ---
 

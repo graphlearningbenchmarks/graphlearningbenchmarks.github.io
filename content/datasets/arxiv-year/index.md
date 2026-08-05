@@ -13,7 +13,7 @@ stats:
   avg_nodes: 169343.0
   avg_edges: 1166243.0
   num_classes: 40
-result_count: 62
+result_count: 64
 best_model:
   model: LargeScaleNet
   value: 0.6582
@@ -38,6 +38,10 @@ papers:
     Accepted in March 2024.
   date_iso: '2024-06-16'
   venue: ''
+- arxiv_id: '2405.19121'
+  title: Spatio-Spectral Graph Neural Networks
+  date_iso: '2024-05-29'
+  venue: NeurIPS 2024
 - arxiv_id: '2401.09125'
   title: Understanding Heterophily for Graph Neural Networks
   date_iso: '2024-01-17'
@@ -113,6 +117,32 @@ variants:
     - 0.6582
     metric_stds:
     - 0.0036
+  - model: S² DirGCN
+    model_plain: S² DirGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_iso: '2024-05-29'
+    date_display: May 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6495
+    metric_stds:
+    - 0.0033
   - model: FaberNet
     model_plain: FaberNet
     is_baseline: true
@@ -139,6 +169,32 @@ variants:
     - 0.6462
     metric_stds:
     - 0.0101
+  - model: DirGCN
+    model_plain: DirGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_iso: '2024-05-29'
+    date_display: May 2024
+    codebase_url: ''
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6444
+    metric_stds:
+    - 0.0027
   - model: DirGNN
     model_plain: DirGNN
     is_baseline: true
@@ -1337,70 +1393,18 @@ variants:
     - 0.403
     metric_stds:
     - 0.0004
-  - model: DGI
-    model_plain: DGI
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2310.18884'
-    title: Simple and Asymmetric Graph Contrastive Learning without Augmentations
-    date: Oct 29, 2023
-    date_iso: '2023-10-29'
-    date_display: Oct 2023
-    codebase_url: https://github.com/tengxiao1/GraphACL
-    published_conference: NeurIPS 2023
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.3926
-    metric_stds:
-    - 0.0072
-  - model: ASGC
-    model_plain: ASGC
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2110.08128'
-    title: Label-Wise Graph Convolutional Network for Heterophilic Graphs
-    date: Oct 15, 2021
-    date_iso: '2021-10-15'
-    date_display: Oct 2021
-    codebase_url: https://github.com/ChandlerBang/SimP-GCN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.392
-    metric_stds:
-    - 0.001
-  row_count: 62
+  row_count: 64
   rows_json: /data/datasets/arxiv-year/standard-split-rows.json
   chart_json: /data/datasets/arxiv-year/standard-split-chart.json
   arch_counts:
-    gnn: 51
+    gnn: 52
     hybrid: 6
     graph_transformer: 2
     llm: 0
     walk: 1
     traditional: 2
   metric_counts:
-  - 62
+  - 64
   milestones: &id001
   - value: 0.56
     std: 0.013
@@ -1420,6 +1424,12 @@ variants:
     arxiv_id: '2310.02232'
     title: 'HoloNets: Spectral Convolutions do extend to Directed Graphs'
     date: '2023-10-03'
+  - value: 0.6495
+    std: 0.0033
+    model: S² DirGCN
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: '2024-05-29'
   - value: 0.6582
     std: 0.0036
     model: LargeScaleNet

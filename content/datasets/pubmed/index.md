@@ -12,14 +12,14 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 3
-result_count: 1094
+result_count: 1324
 best_model:
-  model: SAGN
-  value: 0.9517
+  model: LGTL
+  value: 0.9518
   metric: Accuracy
-  arxiv_id: '2605.24867'
-  paper_title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-    Graph Learning'
+  arxiv_id: '2505.15845'
+  paper_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized
+    Graph Learning Models'
 papers:
 - arxiv_id: '2606.00757'
   title: 'RADE: Random Add-Drop Edge as a Regularizer'
@@ -75,6 +75,10 @@ papers:
   title: Generalizing GNNs with Tokenized Mixture of Experts
   date_iso: '2026-02-09'
   venue: KDD 2026
+- arxiv_id: '2601.07419'
+  title: 'Position: Don''t be Afraid of Over-Smoothing And Over-Squashing'
+  date_iso: '2026-01-12'
+  venue: ''
 - arxiv_id: '2511.19976'
   title: Rethinking Semi-Supervised Node Classification with Self-Supervised Graph
     Clustering
@@ -115,6 +119,11 @@ papers:
   title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
     for Node Classification'
   date_iso: '2025-05-23'
+  venue: ''
+- arxiv_id: '2505.15845'
+  title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+    Learning Models'
+  date_iso: '2025-05-19'
   venue: ''
 - arxiv_id: '2505.10307'
   title: Negative Metric Learning for Graphs
@@ -176,6 +185,10 @@ papers:
     Space'
   date_iso: '2024-10-20'
   venue: ''
+- arxiv_id: '2410.05593'
+  title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+  date_iso: '2024-10-08'
+  venue: ICLR 2024
 - arxiv_id: '2410.02158'
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
   date_iso: '2024-10-03'
@@ -188,11 +201,10 @@ papers:
   title: Disentangled Generative Graph Representation Learning
   date_iso: '2024-08-24'
   venue: ''
-- arxiv_id: '2408.00295'
-  title: Contrastive Graph Representation Learning with Adversarial Cross-view Reconstruction
-    and Information Bottleneck
-  date_iso: '2024-08-01'
-  venue: ''
+- arxiv_id: '2408.03152'
+  title: 'TSC: A Simple Two-Sided Constraint against Over-Smoothing'
+  date_iso: '2024-08-06'
+  venue: KDD 2024
 - arxiv_id: '2407.19944'
   title: Noise-Resilient Unsupervised Graph Representation Learning via Multi-Hop
     Feature Quality Estimation
@@ -222,6 +234,11 @@ papers:
     with New Insights'
   date_iso: '2024-06-24'
   venue: NeurIPS 2024
+- arxiv_id: '2406.11945'
+  title: 'GAugLLM: Improving Graph Contrastive Learning for Text-Attributed Graphs
+    with Large Language Models'
+  date_iso: '2024-06-17'
+  venue: KDD 2024
 - arxiv_id: '2406.10871'
   title: Graph Neural Reaction Diffusion Models Submitted to the editors June 2023.
     Accepted in March 2024.
@@ -239,6 +256,11 @@ papers:
   title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
   date_iso: '2024-06-04'
   venue: NeurIPS 2024
+- arxiv_id: '2405.18581'
+  title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation Decomposition
+    via Large Language Models'
+  date_iso: '2024-05-28'
+  venue: ''
 - arxiv_id: '2405.14742'
   title: 'HC-GAE: The Hierarchical Cluster-based Graph Auto-Encoder for Graph Representation
     Learning'
@@ -269,6 +291,11 @@ papers:
   title: 'ADEdgeDrop: Adversarial Edge Dropping for Robust Graph Neural Networks'
   date_iso: '2024-03-14'
   venue: ''
+- arxiv_id: '2403.07943'
+  title: Revisiting Edge Perturbation for Graph Neural Network in Graph Data Augmentation
+    and Attack
+  date_iso: '2024-03-10'
+  venue: ''
 - arxiv_id: '2403.01079'
   title: 'Teaching MLP More Graph Information: A Three-stage Multitask Knowledge Distillation
     Framework.'
@@ -278,11 +305,38 @@ papers:
   title: 'OpenGraph: Towards Open Graph Foundation Models'
   date_iso: '2024-03-02'
   venue: ''
+- arxiv_id: '2402.10468'
+  title: Adversarial Curriculum Graph Contrastive Learning with Pair-wise Augmentation
+  date_iso: '2024-02-16'
+  venue: ''
+- arxiv_id: '2401.14580'
+  title: 'Design your own universe: a physics-informed agnostic method for enhancing
+    graph neural networks'
+  date_iso: '2024-01-26'
+  venue: ''
+- arxiv_id: '2312.08221'
+  title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization for Over-smoothness
+    in Deep GNNs
+  date_iso: '2023-12-13'
+  venue: AAAI 2023
+- arxiv_id: '2311.18177'
+  title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+  date_iso: '2023-11-30'
+  venue: ''
+- arxiv_id: '2311.17781'
+  title: 'Propagate & Distill: Towards Effective Graph Learners Using Propagation-Embracing
+    MLPs'
+  date_iso: '2023-11-29'
+  venue: LoG 2023
 - arxiv_id: '2310.15523'
   title: Generative and Contrastive Paradigms Are Complementary for Graph Self-Supervised
     Learning
   date_iso: '2023-10-24'
   venue: ''
+- arxiv_id: '2310.14527'
+  title: 'Marginal Nodes Matter: Towards Structure Fairness in Graphs'
+  date_iso: '2023-10-23'
+  venue: KDD 2023
 - arxiv_id: '2310.13845'
   title: Spectral-Aware Augmentation for Enhanced Graph Representation Learning
   date_iso: '2023-10-20'
@@ -344,6 +398,11 @@ papers:
   title: Frameless Graph Knowledge Distillation
   date_iso: '2023-07-13'
   venue: ''
+- arxiv_id: '2306.14052'
+  title: 'A Survey on Graph Neural Network Acceleration: Algorithms, Systems, and
+    Customized Hardware'
+  date_iso: '2023-06-24'
+  venue: ''
 - arxiv_id: '2306.10466'
   title: 'Graph Ladling: Shockingly Simple Parallel GNN Training without Intermediate
     Communication'
@@ -361,6 +420,14 @@ papers:
   title: 'GC-Flow: A Graph-Based Flow Network for Effective Clustering'
   date_iso: '2023-05-26'
   venue: ICML 2023
+- arxiv_id: '2305.06142'
+  title: Feature Expansion for Graph Neural Networks
+  date_iso: '2023-05-10'
+  venue: ICML 2023
+- arxiv_id: '2305.02866'
+  title: Hierarchical Transformer for Scalable Graph Learning
+  date_iso: '2023-05-04'
+  venue: IJCAI 2023
 - arxiv_id: '2305.14000'
   title: Node-wise Diffusion for Scalable Graph Learning
   date_iso: '2023-04-30'
@@ -394,6 +461,16 @@ papers:
   title: 'TIDE: Time Derivative Diffusion for Deep Learning on Graphs'
   date_iso: '2022-12-05'
   venue: ICML 2022
+- arxiv_id: '2211.15081'
+  title: Mitigating Overfitting in Graph Neural Networks via Feature and Hyperplane
+    Perturbation
+  date_iso: '2022-11-28'
+  venue: ''
+- arxiv_id: '2211.15335'
+  title: 'You Can Have Better Graph Neural Networks by Not Training Weights at All:
+    Finding Untrained GNNs Tickets'
+  date_iso: '2022-11-28'
+  venue: LoG 2022
 - arxiv_id: '2211.14065'
   title: 'Beyond Smoothing: Unsupervised Graph Representation Learning with Edge Heterophily
     Discriminating'
@@ -408,6 +485,11 @@ papers:
   title: Transformers over Directed Acyclic Graphs
   date_iso: '2022-10-24'
   venue: NeurIPS 2022
+- arxiv_id: '2210.07715'
+  title: 'Not All Neighbors Are Worth Attending to: Graph Selective Attention Networks
+    for Semi-supervised Learning'
+  date_iso: '2022-10-14'
+  venue: ''
 - arxiv_id: '2210.08122'
   title: 'Old can be Gold: Better Gradient Flow can Make Vanilla-GCNs Great Again'
   date_iso: '2022-10-14'
@@ -431,6 +513,10 @@ papers:
 - arxiv_id: '2209.15454'
   title: 'GPNet: Simplifying Graph Neural Networks via Multi-channel Geometric Polynomials'
   date_iso: '2022-09-30'
+  venue: ''
+- arxiv_id: '2208.06743'
+  title: Enhancing Graph Contrastive Learning with Node Similarity
+  date_iso: '2022-08-13'
   venue: ''
 - arxiv_id: '2207.11996'
   title: Generative Subgraph Contrast for Self-Supervised Graph Representation Learning
@@ -468,6 +554,11 @@ papers:
   title: 'Reinforcement learning on graphs: A survey'
   date_iso: '2022-04-13'
   venue: ''
+- arxiv_id: '2203.12265'
+  title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual Information
+    Maximization
+  date_iso: '2022-03-23'
+  venue: ''
 - arxiv_id: '2203.16097'
   title: Neighbor Enhanced Graph Convolutional Networks for Node Classification and
     Recommendation
@@ -477,14 +568,15 @@ papers:
   title: 'PaSca: a Graph Neural Architecture Search System under the Scalable Paradigm'
   date_iso: '2022-03-01'
   venue: WWW 2022
+- arxiv_id: '2203.00199'
+  title: Equivariant and Stable Positional Encoding for More Powerful Graph Neural
+    Networks
+  date_iso: '2022-03-01'
+  venue: ICLR 2022
 - arxiv_id: '2202.08391'
   title: Graph Masked Autoencoders with Transformers
   date_iso: '2022-02-17'
   venue: ''
-- arxiv_id: '2202.04936'
-  title: Robust Graph Representation Learning for Local Corruption Recovery
-  date_iso: '2022-02-10'
-  venue: WWW 2022
 - arxiv_id: '2202.02296'
   title: Graph-Coupled Oscillator Networks
   date_iso: '2022-02-04'
@@ -525,6 +617,10 @@ papers:
   title: Orthogonal Graph Neural Networks
   date_iso: '2021-09-23'
   venue: AAAI 2021
+- arxiv_id: '2108.12055'
+  title: Towards Self-Explainable Graph Neural Network
+  date_iso: '2021-08-26'
+  venue: ''
 - arxiv_id: '2108.06280'
   title: Understanding Structural Vulnerability in Graph Convolutional Networks
   date_iso: '2021-08-01'
@@ -550,14 +646,32 @@ papers:
   title: Improving Graph Neural Networks with Simple Architecture Design
   date_iso: '2021-05-17'
   venue: ''
+- arxiv_id: '2104.10569'
+  title: 'GraphTheta: A Distributed Graph Neural Network Learning System With Flexible
+    Training Strategy'
+  date_iso: '2021-04-21'
+  venue: ''
 - arxiv_id: '2104.04987'
   title: 'AutoGL: A Library for Automated Graph Learning'
   date_iso: '2021-04-11'
   venue: ICLR 2021
+- arxiv_id: '2103.14958'
+  title: 'SelfGNN: Self-supervised Graph Neural Networks without explicit negative
+    sampling'
+  date_iso: '2021-03-27'
+  venue: WWW 2021
 - arxiv_id: '2103.13355'
   title: Bag of Tricks for Node Classification with Graph Neural Networks
   date_iso: '2021-03-24'
   venue: ''
+- arxiv_id: '2103.07295'
+  title: Adversarial Graph Disentanglement with Component-specific Aggregation
+  date_iso: '2021-03-12'
+  venue: ''
+- arxiv_id: '2103.06064'
+  title: Graph Neural Networks Inspired by Classical Iterative Algorithms
+  date_iso: '2021-03-10'
+  venue: ICML 2021
 - arxiv_id: '2103.02885'
   title: 'Extract the Knowledge of Graph Neural Networks and Go Beyond it: An Effective
     Knowledge Distillation Framework'
@@ -567,6 +681,10 @@ papers:
   title: How Framelets Enhance Graph Neural Networks
   date_iso: '2021-02-13'
   venue: ICML 2021
+- arxiv_id: '2102.03147'
+  title: Learning Conjoint Attentions for Graph Neural Nets
+  date_iso: '2021-02-05'
+  venue: NeurIPS 2021
 - arxiv_id: '2101.11525'
   title: Calibrating and Improving Graph Contrastive Learning
   date_iso: '2021-01-27'
@@ -588,6 +706,10 @@ papers:
   title: On the Equivalence of Decoupled Graph Convolution Network and Label Propagation
   date_iso: '2020-10-23'
   venue: WWW 2020
+- arxiv_id: '2010.07565'
+  title: 'Bi-GCN: Binary Graph Convolutional Network'
+  date_iso: '2020-10-15'
+  venue: ''
 - arxiv_id: '2010.00238'
   title: Multi-grained Semantics-aware Graph Neural Networks
   date_iso: '2020-10-01'
@@ -613,10 +735,18 @@ papers:
   title: 'SAIL: Self-Augmented Graph Contrastive Learning'
   date_iso: '2020-09-02'
   venue: AAAI 2020
+- arxiv_id: '2008.09864'
+  title: Tackling Over-Smoothing for General Graph Convolutional Networks
+  date_iso: '2020-08-22'
+  venue: ''
 - arxiv_id: '2007.09296'
   title: Towards Deeper Graph Neural Networks
   date_iso: '2020-07-06'
   venue: KDD 2020
+- arxiv_id: '2007.02133'
+  title: Simple and Deep Graph Convolutional Networks
+  date_iso: '2020-07-04'
+  venue: ICML 2020
 - arxiv_id: '2006.10141'
   title: 'Self-supervised Learning on Graphs: Deep Insights and New Directions'
   date_iso: '2020-06-17'
@@ -642,6 +772,10 @@ papers:
   title: Spectral Graph Attention Network with Fast Eigen-approximation
   date_iso: '2020-03-17'
   venue: ''
+- arxiv_id: '2001.05140'
+  title: 'Graph-Bert: Only Attention is Needed for Learning Graph Representations'
+  date_iso: '2020-01-15'
+  venue: ''
 - arxiv_id: '1912.00967'
   title: Continuous Graph Neural Networks
   date_iso: '2019-12-02'
@@ -650,6 +784,11 @@ papers:
   title: Graph Neural Ordinary Differential Equations
   date_iso: '2019-11-18'
   venue: AAAI 2019
+- arxiv_id: '1911.07323'
+  title: Layer-Dependent Importance Sampling for Training Deep and Large Graph Convolutional
+    Networks
+  date_iso: '2019-11-17'
+  venue: NeurIPS 2019
 - arxiv_id: '1910.02370'
   title: 'GraphZoom: A Multi-level Spectral Approach for Accurate and Scalable Graph
     Embedding'
@@ -659,15 +798,14 @@ papers:
   title: 'GraphMix: Improved Training of GNNs for Semi-Supervised Learning'
   date_iso: '2019-09-25'
   venue: ''
+- arxiv_id: '1909.13021'
+  title: Multi-Scale Attributed Node Embedding
+  date_iso: '2019-09-25'
+  venue: ''
 - arxiv_id: '1909.03184'
   title: 'Auto-GNN: Neural Architecture Search of Graph Neural Networks'
   date_iso: '2019-09-07'
   venue: ''
-- arxiv_id: '1908.01297'
-  title: A Restricted Black-box Adversarial Framework Towards Attacking Graph Embedding
-    Models
-  date_iso: '2019-08-04'
-  venue: AAAI 2019
 - arxiv_id: '2101.03464'
   title: 'SPAGAN: Shortest Path Graph Attention Network'
   date_iso: '2019-08-01'
@@ -684,9 +822,21 @@ papers:
   title: Power up! Robust Graph Convolutional Network via Graph Powering
   date_iso: '2019-05-24'
   venue: AAAI 2019
+- arxiv_id: '1905.05178'
+  title: Graph U-Nets
+  date_iso: '2019-05-11'
+  venue: ''
+- arxiv_id: '1903.02428'
+  title: Fast Graph Representation Learning with PyTorch Geometric
+  date_iso: '2019-03-06'
+  venue: ICLR 2019
 - arxiv_id: '1901.01343'
   title: Graph Neural Networks With Convolutional ARMA Filters
   date_iso: '2019-01-05'
+  venue: ''
+- arxiv_id: '1901.00596'
+  title: A Comprehensive Survey on Graph Neural Networks
+  date_iso: '2019-01-01'
   venue: ''
 - arxiv_id: '1812.04202'
   title: 'Deep Learning on Graphs: A Survey'
@@ -696,6 +846,10 @@ papers:
   title: Bayesian graph convolutional neural networks for semi-supervised classification
   date_iso: '2018-11-27'
   venue: AAAI 2018
+- arxiv_id: '1810.05997'
+  title: 'Predict then Propagate: Graph Neural Networks meet Personalized PageRank'
+  date_iso: '2018-09-27'
+  venue: ICLR 2018
 - arxiv_id: '1803.03735'
   title: Attention-based Graph Neural Network for Semi-supervised Learning
   date_iso: '2018-02-15'
@@ -704,6 +858,14 @@ papers:
   title: Topology Adaptive Graph Convolutional Networks
   date_iso: '2017-10-28'
   venue: ''
+- arxiv_id: '1611.08402'
+  title: Geometric deep learning on graphs and manifolds using mixture model CNNs
+  date_iso: '2016-11-25'
+  venue: ''
+- arxiv_id: '1609.02907'
+  title: Semi-Supervised Classification with Graph Convolutional Networks
+  date_iso: '2016-09-09'
+  venue: ICLR 2016
 variants:
 - slug: planetoid-split
   name: Planetoid split
@@ -733,6 +895,41 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
+  - model: LGTL
+    model_plain: LGTL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9518
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0011
+    - null
+    - null
+    - null
+    - null
   - model: SAGN
     model_plain: SAGN
     is_baseline: true
@@ -873,6 +1070,76 @@ variants:
     - null
     - null
     - null
+  - model: LLAGA-HO
+    model_plain: LLAGA-HO
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9503
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    - null
+    - null
+    - null
+  - model: LLAGA-ND
+    model_plain: LLAGA-ND
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9503
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0014
+    - null
+    - null
+    - null
+    - null
   - model: NodeFormer
     model_plain: NodeFormer
     is_baseline: true
@@ -882,19 +1149,19 @@ variants:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_iso: '2026-05-24'
-    date_display: May 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    published_conference: ICML 2026
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2026
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.949
@@ -903,7 +1170,7 @@ variants:
     - null
     - null
     metric_stds:
-    - null
+    - 0.0019
     - null
     - null
     - null
@@ -1255,6 +1522,41 @@ variants:
     - null
     - null
     - null
+  - model: H2GCN
+    model_plain: H2GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9361
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0013
+    - null
+    - null
+    - null
+    - null
   - model: APPNP
     model_plain: APPNP
     is_baseline: true
@@ -1299,17 +1601,17 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_iso: '2026-05-24'
-    date_display: May 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    published_conference: ICML 2026
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2026
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1320,7 +1622,7 @@ variants:
     - null
     - null
     metric_stds:
-    - null
+    - 0.0015
     - null
     - null
     - null
@@ -1369,17 +1671,17 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: May 24, 2026
-    date_iso: '2026-05-24'
-    date_display: May 2026
-    codebase_url: https://github.com/Uncnbb/KCoT
-    published_conference: ICML 2026
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2026
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_iso: '2025-05-19'
+    date_display: May 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1390,7 +1692,7 @@ variants:
     - null
     - null
     metric_stds:
-    - null
+    - 0.0018
     - null
     - null
     - null
@@ -1499,6 +1801,74 @@ variants:
     - null
     - null
     - null
+  - model: JKNet
+    model_plain: JKNet
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2008.09864'
+    title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    date: Aug 22, 2020
+    date_iso: '2020-08-22'
+    date_display: Aug 2020
+    codebase_url: https://github.com/STAC-USC/Graph_Learning
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.916
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: JKNet+DropEdge
+    model_plain: JKNet+DropEdge
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2008.09864'
+    title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    date: Aug 22, 2020
+    date_iso: '2020-08-22'
+    date_display: Aug 2020
+    codebase_url: https://github.com/STAC-USC/Graph_Learning
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.916
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: TADropEdge-CDF
     model_plain: TADropEdge-CDF
     is_baseline: false
@@ -1601,6 +1971,40 @@ variants:
     - null
     - null
     - null
+  - model: UniFilter
+    model_plain: UniFilter
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.18177'
+    title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+    date: Nov 30, 2023
+    date_iso: '2023-11-30'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9144
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.005
+    - null
+    - null
+    - null
+    - null
   - model: ACM-Snowball-3
     model_plain: ACM-Snowball-3
     is_baseline: true
@@ -1631,6 +2035,74 @@ variants:
     - null
     metric_stds:
     - 0.0059
+    - null
+    - null
+    - null
+    - null
+  - model: GCN-b
+    model_plain: GCN-b
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2008.09864'
+    title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    date: Aug 22, 2020
+    date_iso: '2020-08-22'
+    date_display: Aug 2020
+    codebase_url: https://github.com/STAC-USC/Graph_Learning
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.913
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GCN-b+DropEdge
+    model_plain: GCN-b+DropEdge
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2008.09864'
+    title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    date: Aug 22, 2020
+    date_iso: '2020-08-22'
+    date_display: Aug 2020
+    codebase_url: https://github.com/STAC-USC/Graph_Learning
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.913
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
     - null
     - null
     - null
@@ -1771,6 +2243,109 @@ variants:
     - null
     - null
     - null
+  - model: ResGCN
+    model_plain: ResGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2008.09864'
+    title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    date: Aug 22, 2020
+    date_iso: '2020-08-22'
+    date_display: Aug 2020
+    codebase_url: https://github.com/STAC-USC/Graph_Learning
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.911
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: ResGCN+DropEdge
+    model_plain: ResGCN+DropEdge
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2008.09864'
+    title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    date: Aug 22, 2020
+    date_iso: '2020-08-22'
+    date_display: Aug 2020
+    codebase_url: https://github.com/STAC-USC/Graph_Learning
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.911
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: N2N-TAPS-1 (JL)
+    model_plain: N2N-TAPS-1 (JL)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.12265'
+    title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual
+      Information Maximization
+    date: Mar 23, 2022
+    date_iso: '2022-03-23'
+    date_display: Mar 2022
+    codebase_url: https://github.com/dongwei156/n2n
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9108
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0016
+    - null
+    - null
+    - null
+    - null
   - model: contrastive loss
     model_plain: contrastive loss
     is_baseline: true
@@ -1795,6 +2370,40 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.9104
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GCN+DropEdge
+    model_plain: GCN+DropEdge
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2008.09864'
+    title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    date: Aug 22, 2020
+    date_iso: '2020-08-22'
+    date_display: Aug 2020
+    codebase_url: https://github.com/STAC-USC/Graph_Learning
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.91
     - null
     - null
     - null
@@ -1839,6 +2448,41 @@ variants:
     - null
     - null
     - null
+  - model: N2N
+    model_plain: N2N
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.12265'
+    title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual
+      Information Maximization
+    date: Mar 23, 2022
+    date_iso: '2022-03-23'
+    date_display: Mar 2022
+    codebase_url: https://github.com/dongwei156/n2n
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9092
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0009
+    - null
+    - null
+    - null
+    - null
   - model: DropEdge
     model_plain: DropEdge
     is_baseline: true
@@ -1873,8 +2517,8 @@ variants:
     - null
     - null
     - null
-  - model: LGD
-    model_plain: LGD
+  - model: EvenNet
+    model_plain: EvenNet
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1882,34 +2526,33 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2603.01385'
-    title: Toward Graph-Tokenizing Large Language Models with Reconstructive Graph
-      Instruction Tuning
-    date: Mar 2, 2026
-    date_iso: '2026-03-02'
-    date_display: Mar 2026
-    codebase_url: https://github.com/zhongjian-zhang/RGLM
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
+    arxiv_id: '2311.18177'
+    title: An Effective Universal Polynomial Basis for Spectral Graph Neural Networks
+    date: Nov 30, 2023
+    date_iso: '2023-11-30'
+    date_display: Nov 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.9077
+    - 0.9087
     - null
     - null
     - null
     - null
     metric_stds:
+    - 0.0034
     - null
     - null
     - null
     - null
-    - null
-  - model: NE-SAGE
-    model_plain: NE-SAGE
+  - model: N2N-TAPS-4 (JL)
+    model_plain: N2N-TAPS-4 (JL)
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1917,13 +2560,13 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2203.16097'
-    title: Neighbor Enhanced Graph Convolutional Networks for Node Classification
-      and Recommendation
-    date: Mar 1, 2022
-    date_iso: '2022-03-01'
+    arxiv_id: '2203.12265'
+    title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual
+      Information Maximization
+    date: Mar 23, 2022
+    date_iso: '2022-03-23'
     date_display: Mar 2022
-    codebase_url: ''
+    codebase_url: https://github.com/dongwei156/n2n
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
@@ -1932,33 +2575,33 @@ variants:
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.907
+    - 0.9078
     - null
     - null
     - null
     - null
     metric_stds:
-    - 0.0098
+    - 0.0007
     - null
     - null
     - null
     - null
-  - model: origin-ASGCN
-    model_plain: origin-ASGCN
+  - model: N2N-TAPS-5 (JL)
+    model_plain: N2N-TAPS-5 (JL)
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2203.16097'
-    title: Neighbor Enhanced Graph Convolutional Networks for Node Classification
-      and Recommendation
-    date: Mar 1, 2022
-    date_iso: '2022-03-01'
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.12265'
+    title: Node Representation Learning in Graph via Node-to-Neighbourhood Mutual
+      Information Maximization
+    date: Mar 23, 2022
+    date_iso: '2022-03-23'
     date_display: Mar 2022
-    codebase_url: ''
+    codebase_url: https://github.com/dongwei156/n2n
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
@@ -1967,388 +2610,7 @@ variants:
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.906
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0016
-    - null
-    - null
-    - null
-    - null
-  - model: AS-GCN
-    model_plain: AS-GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2106.02892'
-    title: Training Robust Graph Neural Networks with Topology Adaptive Edge Dropping
-    date: Jun 5, 2021
-    date_iso: '2021-06-05'
-    date_display: Jun 2021
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.906
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: ADR-GNN_S
-    model_plain: ADR-GNN_S
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2307.16092'
-    title: Feature Transportation Improves Graph Neural Networks
-    date: Jul 29, 2023
-    date_iso: '2023-07-29'
-    date_display: Jul 2023
-    codebase_url: ''
-    published_conference: AAAI 2023
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9055
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GraphSAGE
-    model_plain: GraphSAGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.01385'
-    title: Toward Graph-Tokenizing Large Language Models with Reconstructive Graph
-      Instruction Tuning
-    date: Mar 2, 2026
-    date_iso: '2026-03-02'
-    date_display: Mar 2026
-    codebase_url: https://github.com/zhongjian-zhang/RGLM
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9054
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: SCNode
-    model_plain: SCNode
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2410.02158'
-    title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
-    date: Oct 3, 2024
-    date_iso: '2024-10-03'
-    date_display: Oct 2024
-    codebase_url: https://github.com/joshem163/SCNode
-    published_conference: TMLR 2024
-    published_conference_short: TMLR
-    published_conference_slug: tmlr
-    published_venue: TMLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9053
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0061
-    - null
-    - null
-    - null
-    - null
-  - model: VecFormer
-    model_plain: VecFormer
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9047
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0028
-    - null
-    - null
-    - null
-    - null
-  - model: DAM-GT
-    model_plain: DAM-GT
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2505.17660'
-    title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking Graph Transformer
-      for Node Classification'
-    date: May 23, 2025
-    date_iso: '2025-05-23'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9045
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0016
-    - null
-    - null
-    - null
-    - null
-  - model: Polynormer
-    model_plain: Polynormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9044
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0021
-    - null
-    - null
-    - null
-    - null
-  - model: Original
-    model_plain: Original
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2106.02892'
-    title: Training Robust Graph Neural Networks with Topology Adaptive Edge Dropping
-    date: Jun 5, 2021
-    date_iso: '2021-06-05'
-    date_display: Jun 2021
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.904
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GraphCL
-    model_plain: GraphCL
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.01385'
-    title: Toward Graph-Tokenizing Large Language Models with Reconstructive Graph
-      Instruction Tuning
-    date: Mar 2, 2026
-    date_iso: '2026-03-02'
-    date_display: Mar 2026
-    codebase_url: https://github.com/zhongjian-zhang/RGLM
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9039
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: RDGNN-I
-    model_plain: RDGNN-I
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.10871'
-    title: Graph Neural Reaction Diffusion Models Submitted to the editors June 2023.
-      Accepted in March 2024.
-    date: Jun 16, 2024
-    date_iso: '2024-06-16'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9037
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0043
-    - null
-    - null
-    - null
-    - null
-  - model: SGFormer
-    model_plain: SGFormer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_iso: '2026-02-23'
-    date_display: Feb 2026
-    codebase_url: ''
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9037
+    - 0.9078
     - null
     - null
     - null
@@ -2359,127 +2621,29 @@ variants:
     - null
     - null
     - null
-  - model: UniMP
-    model_plain: UniMP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2603.01385'
-    title: Toward Graph-Tokenizing Large Language Models with Reconstructive Graph
-      Instruction Tuning
-    date: Mar 2, 2026
-    date_iso: '2026-03-02'
-    date_display: Mar 2026
-    codebase_url: https://github.com/zhongjian-zhang/RGLM
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9034
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: LLaGA
-    model_plain: LLaGA
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.01385'
-    title: Toward Graph-Tokenizing Large Language Models with Reconstructive Graph
-      Instruction Tuning
-    date: Mar 2, 2026
-    date_iso: '2026-03-02'
-    date_display: Mar 2026
-    codebase_url: https://github.com/zhongjian-zhang/RGLM
-    published_conference: WWW 2026
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2026
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9034
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GCNII
-    model_plain: GCNII
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2105.07634'
-    title: Improving Graph Neural Networks with Simple Architecture Design
-    date: May 17, 2021
-    date_iso: '2021-05-17'
-    date_display: May 2021
-    codebase_url: https://github.com/sunilkmaurya/FSGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.903
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0037
-    - null
-    - null
-    - null
-    - null
-  row_count: 1094
+  row_count: 1324
   rows_json: /data/datasets/pubmed/planetoid-split-rows.json
   chart_json: /data/datasets/pubmed/planetoid-split-chart.json
   arch_counts:
-    gnn: 733
-    hybrid: 140
-    graph_transformer: 34
+    gnn: 896
+    hybrid: 158
+    graph_transformer: 41
     llm: 12
-    walk: 12
-    traditional: 97
+    walk: 24
+    traditional: 116
   metric_counts:
-  - 1050
-  - 36
+  - 1257
+  - 60
   - 9
   - 9
   - 9
   milestones: &id001
+  - value: 0.79
+    std: null
+    model: GCN
+    arxiv_id: '1609.02907'
+    title: Semi-Supervised Classification with Graph Convolutional Networks
+    date: '2016-09-09'
   - value: 0.811
     std: 0.004
     model: TAGCN
@@ -2498,36 +2662,12 @@ variants:
     arxiv_id: '2006.10141'
     title: 'Self-supervised Learning on Graphs: Deep Insights and New Directions'
     date: '2020-06-17'
-  - value: 0.838
-    std: 0.001
-    model: SAIL
-    arxiv_id: '2009.00934'
-    title: 'SAIL: Self-Augmented Graph Contrastive Learning'
-    date: '2020-09-02'
-  - value: 0.896
-    std: 0.001
-    model: LPGNAS
-    arxiv_id: '2009.09232'
-    title: Learned Low Precision Graph Neural Networks
-    date: '2020-09-19'
-  - value: 0.8981
+  - value: 0.916
     std: null
-    model: AdamGNN
-    arxiv_id: '2010.00238'
-    title: Multi-grained Semantics-aware Graph Neural Networks
-    date: '2020-10-01'
-  - value: 0.903
-    std: 0.0037
-    model: GCNII
-    arxiv_id: '2105.07634'
-    title: Improving Graph Neural Networks with Simple Architecture Design
-    date: '2021-05-17'
-  - value: 0.915
-    std: null
-    model: TADropEdge-CDF
-    arxiv_id: '2106.02892'
-    title: Training Robust Graph Neural Networks with Topology Adaptive Edge Dropping
-    date: '2021-06-05'
+    model: JKNet
+    arxiv_id: '2008.09864'
+    title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    date: '2020-08-22'
   - value: 0.917
     std: 0.0015
     model: NE-ASGCN
@@ -2554,28 +2694,28 @@ variants:
     title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
       Framework'
     date: '2024-05-22'
-  - value: 0.9517
-    std: null
-    model: SAGN
-    arxiv_id: '2605.24867'
-    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
-      Graph Learning'
-    date: '2026-05-24'
+  - value: 0.9518
+    std: 0.0011
+    model: LGTL
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: '2025-05-19'
   milestones_by_metric:
     Accuracy: *id001
     F1:
-    - value: 0.66
-      std: 0.014
-      model: Pre-train (All Tasks)
-      arxiv_id: '1905.13728'
-      title: Pre-Training Graph Neural Networks for Generic Structural Feature Extraction
-      date: '2019-05-31'
-    - value: 0.809
-      std: 0.0202
-      model: NIGCN
-      arxiv_id: '2305.14000'
-      title: Node-wise Diffusion for Scalable Graph Learning
-      date: '2023-04-30'
+    - value: 0.7966
+      std: 0.0031
+      model: APPNP
+      arxiv_id: '1810.05997'
+      title: 'Predict then Propagate: Graph Neural Networks meet Personalized PageRank'
+      date: '2018-09-27'
+    - value: 0.891
+      std: 0.001
+      model: MixHop
+      arxiv_id: '1909.13021'
+      title: Multi-Scale Attributed Node Embedding
+      date: '2019-09-25'
     Instability:
     - value: 0.139
       std: 0.002

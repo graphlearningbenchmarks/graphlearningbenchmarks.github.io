@@ -1367,9 +1367,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: STPGC
+  - model: ACGCL
     model_key: hg-scm
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -1401,9 +1401,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: advsyngnn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9486
     std: 0.0012
     metric: Accuracy
@@ -1435,9 +1435,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: simplehgn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9446
     std: 0.0022
     metric: Accuracy
@@ -2275,8 +2275,8 @@ results:
     value_note: ''
     sort_value: 0.8671
     sort_std: 0.012
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2342,8 +2342,8 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.001
-    global_rank: 53
-    paper_rank: 135
+    global_rank: 52
+    paper_rank: 134
     rank_delta: 82
     rank_delta_abs: 82
     rank_delta_direction: worse
@@ -2545,8 +2545,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: null
-    global_rank: 80
-    paper_rank: 109
+    global_rank: 79
+    paper_rank: 108
     rank_delta: 29
     rank_delta_abs: 29
     rank_delta_direction: worse
@@ -2613,8 +2613,8 @@ results:
     value_note: ''
     sort_value: 0.7659
     sort_std: 0.076
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 88
+    paper_rank: 88
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2681,8 +2681,8 @@ results:
     value_note: ''
     sort_value: 0.7657
     sort_std: 0.006
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2722,5 +2722,6 @@ datasets_by_scope:
     datasets:
     - dataset: Cora-CA
       dataset_slug: cora-ca
+main_figure: /figures/2206.04739/main_figure.jpegoptim.jpg
 ---
 

@@ -15,18 +15,26 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 5
-result_count: 21
+result_count: 37
 best_model:
-  model: Transformer
-  value: 0.935
+  model: GMN
+  value: 0.9415
   metric: Accuracy
-  arxiv_id: '2205.12454'
-  paper_title: Recipe for a General, Powerful, Scalable Graph Transformer
+  arxiv_id: '2402.08678'
+  paper_title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
 papers:
 - arxiv_id: '2510.13615'
   title: 'Message Passing on the Edge: Towards Scalable and Expressive GNNs'
   date_iso: '2025-10-15'
   venue: ''
+- arxiv_id: '2509.13735'
+  title: State Space Models over Directed Graphs
+  date_iso: '2025-09-17'
+  venue: ''
+- arxiv_id: '2402.08678'
+  title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+  date_iso: '2024-02-13'
+  venue: KDD 2024
 - arxiv_id: '2210.13148'
   title: Transformers over Directed Acyclic Graphs
   date_iso: '2022-10-24'
@@ -60,6 +68,162 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
+  - model: GMN
+    model_plain: GMN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9415
+    metric_stds:
+    - 0.002
+  - model: DirGraphSSM
+    model_plain: DirGraphSSM
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9409
+    metric_stds:
+    - 0.0023
+  - model: DAG+SAT-plus
+    model_plain: DAG+SAT-plus
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9407
+    metric_stds:
+    - 0.002
+  - model: Graph-Mamba
+    model_plain: Graph-Mamba
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9406
+    metric_stds:
+    - 0.0018
+  - model: DAG+Transformer-plus
+    model_plain: DAG+Transformer-plus
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9404
+    metric_stds:
+    - 0.0019
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9402
+    metric_stds:
+    - 0.002
   - model: Transformer
     model_plain: Transformer
     is_baseline: true
@@ -106,7 +270,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.9345
@@ -158,12 +322,64 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.9313
     metric_stds:
     - null
+  - model: GPS + Mamba
+    model_plain: GPS + Mamba
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9311
+    metric_stds:
+    - 0.0042
+  - model: GPS
+    model_plain: GPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9298
+    metric_stds:
+    - 0.0047
   - model: HyMN
     model_plain: HyMN
     is_baseline: true
@@ -184,7 +400,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.9284
@@ -262,7 +478,7 @@ variants:
     published_conference_slug: neurips
     published_venue: NeurIPS 2022
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.9264
@@ -372,6 +588,32 @@ variants:
     - 0.9257
     metric_stds:
     - null
+  - model: SAT
+    model_plain: SAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9256
+    metric_stds:
+    - 0.0031
   - model: NC-GNN
     model_plain: NC-GNN
     is_baseline: true
@@ -392,7 +634,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.925
@@ -476,6 +718,32 @@ variants:
     - 0.9227
     metric_stds:
     - null
+  - model: Gated-GCN
+    model_plain: Gated-GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9223
+    metric_stds:
+    - 0.0065
   - model: GPS (Perf.)
     model_plain: GPS (Perf.)
     is_baseline: true
@@ -554,6 +822,110 @@ variants:
     - 0.911
     metric_stds:
     - 0.0098
+  - model: MagNet
+    model_plain: MagNet
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9095
+    metric_stds:
+    - 0.0025
+  - model: DiGCN
+    model_plain: DiGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9081
+    metric_stds:
+    - 0.0017
+  - model: DirGNN
+    model_plain: DirGNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9073
+    metric_stds:
+    - 0.0015
+  - model: GIN
+    model_plain: GIN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8898
+    metric_stds:
+    - 0.0055
   - model: Feather
     model_plain: Feather
     is_baseline: true
@@ -606,18 +978,70 @@ variants:
     - 0.86
     metric_stds:
     - null
-  row_count: 21
+  - model: GAT
+    model_plain: GAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_iso: '2025-09-17'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8509
+    metric_stds:
+    - 0.0025
+  - model: GCN
+    model_plain: GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.81
+    metric_stds:
+    - 0.0
+  row_count: 37
   rows_json: ''
   chart_json: /data/datasets/malnet-tiny/standard-split-chart.json
   arch_counts:
-    gnn: 9
-    hybrid: 1
-    graph_transformer: 6
+    gnn: 16
+    hybrid: 5
+    graph_transformer: 11
     llm: 0
     walk: 1
     traditional: 0
   metric_counts:
-  - 21
+  - 37
   milestones: &id001
   - value: 0.9345
     std: 0.0041
@@ -625,6 +1049,12 @@ variants:
     arxiv_id: '2210.13148'
     title: Transformers over Directed Acyclic Graphs
     date: '2022-10-24'
+  - value: 0.9415
+    std: 0.002
+    model: GMN
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: '2024-02-13'
   milestones_by_metric:
     Accuracy: *id001
 ---

@@ -62,9 +62,9 @@ results:
   dataset: QM9
   is_multi_metric: true
   rows:
-  - model: DimeNet++
+  - model: Graphormer-SPIS
     model_key: equiformer v2
-    model_plain: DimeNet++
+    model_plain: Graphormer-SPIS
     metric_values:
     - 0.01
     - null
@@ -119,9 +119,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: DimeNet++
+  - model: Graphormer-SPIS
     model_key: eqgat
-    model_plain: DimeNet++
+    model_plain: Graphormer-SPIS
     metric_values:
     - 0.011
     - null
@@ -176,9 +176,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: DimeNet++
+  - model: Graphormer-SPIS
     model_key: equiformer
-    model_plain: DimeNet++
+    model_plain: Graphormer-SPIS
     metric_values:
     - 0.011
     - null
@@ -594,5 +594,6 @@ datasets_by_scope:
     - dataset: QM9
       dataset_slug: qm9
 single_proposed_model: DimeNet++
+main_figure: /figures/2011.14115/main_figure.jpegoptim.jpg
 ---
 

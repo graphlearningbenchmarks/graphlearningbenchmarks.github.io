@@ -66,12 +66,12 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id003
+- &id001
   dataset: CIFAR10
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: randalign
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.7942
     std: 0.00072
     metric: Accuracy
@@ -80,9 +80,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2404.09774'
     title: 'RandAlign: A Parameter-Free Method for Regularizing Graph Convolutional
       Networks'
@@ -103,45 +103,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: tau-grit
-    model_plain: 3WLGNN
-    value: 0.77784
-    std: 0.0049
+  - model: Tango_GPS
+    model_key: differential encoding
+    model_plain: Tango_GPS
+    value: 0.79067
+    std: 0.00269
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.12369'
-    title: A Hierarchical Quantized Tokenization Framework for Task-Adaptive Graph
-      Representation Learning
-    date: Oct 14, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-14'
-    venue: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: Jul 3, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-03'
+    venue: IEEE Transactions on Big Data
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.77784
-    sort_std: 0.0049
+    sort_value: 0.79067
+    sort_std: 0.00269
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: degta
-    model_plain: 3WLGNN
-    value: 0.76756
-    std: 0.00927
+  - model: Tango_GPS
+    model_key: ppgt
+    model_plain: Tango_GPS
+    value: 0.7856
+    std: 0.007
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -151,20 +150,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2408.07654'
-    title: 'Graph Triple Attention Network: A Decoupled Perspective'
-    date: Aug 14, 2024
-    date_display: Aug 2024
-    date_iso: '2024-08-14'
-    venue: arXiv.org
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.76756
-    sort_std: 0.00927
+    sort_value: 0.7856
+    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -218,7 +217,7 @@ results:
     today_delta_significant: false
     sort_value: 0.678
     sort_std: 0.002
-    global_rank: 58
+    global_rank: 84
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -280,7 +279,7 @@ results:
     today_delta_significant: false
     sort_value: 0.677
     sort_std: 0.004
-    global_rank: 58
+    global_rank: 84
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -350,10 +349,10 @@ results:
     value_note: ''
     sort_value: 0.6611
     sort_std: 0.0098
-    global_rank: 69
-    paper_rank: 80
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 98
+    paper_rank: 112
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -417,10 +416,10 @@ results:
     value_note: ''
     sort_value: 0.65911
     sort_std: 0.02515
-    global_rank: 71
-    paper_rank: 81
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 100
+    paper_rank: 113
+    rank_delta: 13
+    rank_delta_abs: 13
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -484,8 +483,8 @@ results:
     value_note: ''
     sort_value: 0.6577
     sort_std: 0.0031
-    global_rank: 72
-    paper_rank: 61
+    global_rank: 101
+    paper_rank: 90
     rank_delta: -11
     rank_delta_abs: 11
     rank_delta_direction: better
@@ -551,11 +550,79 @@ results:
     value_note: ''
     sort_value: 0.5982
     sort_std: 0.0033
-    global_rank: 83
-    paper_rank: 78
-    rank_delta: -5
-    rank_delta_abs: 5
+    global_rank: 118
+    paper_rank: 107
+    rank_delta: -11
+    rank_delta_abs: 11
     rank_delta_direction: better
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.551
+    std: 0.004
+    paper_value: 0.551
+    paper_std: 0.004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semi
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jul 10, 2021
+    date_display: Jul 2021
+    date_iso: '2021-07-10'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5571
+    at_pub_std: 0.0038
+    at_pub_source_arxiv: '2006.07846'
+    at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
+    at_pub_source_date_iso: '2020-06-14'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2021-10-07'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.006099999999999994
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5839
+    true_std: 0.0073
+    value_gap_source_arxiv: '2110.03753'
+    value_gap_source_title: 'From Stars to Subgraphs: Uplifting Any GNN with Local
+      Structure Awareness'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03289999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5839
+    sort_std: 0.0073
+    global_rank: 121
+    paper_rank: 127
+    rank_delta: 6
+    rank_delta_abs: 6
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -618,77 +685,10 @@ results:
     value_note: ''
     sort_value: 0.5634
     sort_std: 0.00181
-    global_rank: 87
-    paper_rank: 91
+    global_rank: 124
+    paper_rank: 128
     rank_delta: 4
     rank_delta_abs: 4
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.551
-    std: 0.004
-    paper_value: 0.551
-    paper_std: 0.004
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kipf2017semi
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jul 10, 2021
-    date_display: Jul 2021
-    date_iso: '2021-07-10'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.5571
-    at_pub_std: 0.0038
-    at_pub_source_arxiv: '2006.07846'
-    at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    at_pub_source_date_iso: '2020-06-14'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-06-14'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.006099999999999994
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.5571
-    true_std: 0.0038
-    value_gap_source_arxiv: '2006.07846'
-    value_gap_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    value_gap_source_is_current_paper: false
-    value_gap: 0.006099999999999994
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5571
-    sort_std: 0.0038
-    global_rank: 88
-    paper_rank: 90
-    rank_delta: 2
-    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -744,7 +744,7 @@ results:
     today_delta_significant: false
     sort_value: 0.542
     sort_std: 0.003
-    global_rank: 92
+    global_rank: 129
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -806,7 +806,7 @@ results:
     today_delta_significant: false
     sort_value: 0.523
     sort_std: 0.009
-    global_rank: 92
+    global_rank: 129
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -829,7 +829,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: CLUSTER
   rows:
   - model: AutoGCN
@@ -1461,7 +1461,7 @@ results:
   metric: ACC
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id002
+- &id003
   dataset: PATTERN
   rows:
   - model: APGCN
@@ -2119,5 +2119,6 @@ datasets_by_scope:
     - dataset: CIFAR10
       dataset_slug: cifar10
 single_proposed_model: AutoGCN
+main_figure: /figures/2107.04755/main_figure.jpegoptim.jpg
 ---
 

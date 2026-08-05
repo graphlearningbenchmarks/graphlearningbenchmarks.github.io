@@ -87,9 +87,9 @@ results:
 - &id002
   dataset: ACM
   rows:
-  - model: SAGE
+  - model: GCN+P+D
     model_key: signgt
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -121,9 +121,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
+  - model: GCN+P+D
     model_key: nodeformer
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -155,9 +155,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
+  - model: GCN+P+D
     model_key: fagcn
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9487
     std: 0.0059
     metric: Accuracy
@@ -184,40 +184,6 @@ results:
     global_rank: 3
     sort_value: 0.9487
     sort_std: 0.0059
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAGE
-    model_key: specformer
-    model_plain: SAGE
-    value: 0.9454
-    std: 0.0043
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2310.11025'
-    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
-      Learning'
-    date: Oct 17, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-17'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 4
-    sort_value: 0.9454
-    sort_std: 0.0043
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -280,8 +246,8 @@ results:
     value_note: ''
     sort_value: 0.9356
     sort_std: 0.0032
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -348,8 +314,8 @@ results:
     value_note: ''
     sort_value: 0.9351
     sort_std: 0.0045
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -416,8 +382,8 @@ results:
     value_note: ''
     sort_value: 0.9335
     sort_std: 0.0045
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -483,8 +449,8 @@ results:
     value_note: ''
     sort_value: 0.922
     sort_std: 0.002
-    global_rank: 25
-    paper_rank: 31
+    global_rank: 42
+    paper_rank: 48
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -550,8 +516,8 @@ results:
     value_note: ''
     sort_value: 0.919
     sort_std: 0.003
-    global_rank: 26
-    paper_rank: 30
+    global_rank: 43
+    paper_rank: 47
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -618,8 +584,8 @@ results:
     value_note: ''
     sort_value: 0.9175
     sort_std: 0.0035
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -659,16 +625,16 @@ results:
     date_iso: '2023-12-10'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9265
+    at_pub_value: null
     at_pub_std: null
-    at_pub_source_arxiv: '2007.03424'
-    at_pub_source_title: 'AEGCN: An uto ncoder-Constrained raph onvolutional etwork'
-    at_pub_source_date_iso: '2020-07-03'
-    at_pub_source_date_label: '2020'
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-12-10'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.014499999999999957
-    worse_than_at_pub: true
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
@@ -686,15 +652,15 @@ results:
     value_note: ''
     sort_value: 0.912
     sort_std: 0.0071
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'AEGCN: An uto ncoder-Constrained raph onvolutional etwork'
-    comparison_source_arxiv: '2007.03424'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MAGNN
@@ -754,8 +720,8 @@ results:
     value_note: ''
     sort_value: 0.9077
     sort_std: 0.0065
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -822,8 +788,8 @@ results:
     value_note: ''
     sort_value: 0.9032
     sort_std: 0.0154
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -890,8 +856,8 @@ results:
     value_note: ''
     sort_value: 0.8991
     sort_std: 0.0037
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -958,8 +924,8 @@ results:
     value_note: ''
     sort_value: 0.8505
     sort_std: 0.0025
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2421,5 +2387,6 @@ datasets_by_scope:
     - dataset: IMDB
       dataset_slug: imdb
 single_proposed_model: HG-SCM
+main_figure: /figures/2312.05757/main_figure.jpegoptim.jpg
 ---
 

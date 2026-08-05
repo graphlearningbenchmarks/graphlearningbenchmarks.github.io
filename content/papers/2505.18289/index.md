@@ -259,5 +259,6 @@ datasets_by_scope:
     - dataset: ogbg-molhiv
       dataset_slug: ogbg-molhiv
 single_proposed_model: MPNNs
+main_figure: /figures/2505.18289/main_figure.jpegoptim.jpg
 ---
 

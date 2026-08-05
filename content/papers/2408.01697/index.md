@@ -78,9 +78,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -111,9 +111,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -145,9 +145,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -237,10 +237,10 @@ results:
     value_note: ''
     sort_value: 0.918
     sort_std: 0.009
-    global_rank: 338
-    paper_rank: 390
-    rank_delta: 52
-    rank_delta_abs: 52
+    global_rank: 344
+    paper_rank: 395
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -306,8 +306,8 @@ results:
     value_note: ''
     sort_value: 0.9173
     sort_std: 0.0047
-    global_rank: 343
-    paper_rank: 343
+    global_rank: 349
+    paper_rank: 349
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -375,8 +375,8 @@ results:
     value_note: ''
     sort_value: 0.886
     sort_std: 0.013
-    global_rank: 457
-    paper_rank: 463
+    global_rank: 463
+    paper_rank: 469
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -409,5 +409,6 @@ datasets_by_scope:
     - dataset: Amazon-Photo
       dataset_slug: amazon-photo
 single_proposed_model: InfoIGL
+main_figure: /figures/2408.01697/main_figure.jpegoptim.jpg
 ---
 

@@ -707,5 +707,6 @@ datasets_by_scope:
     - dataset: PCQM4Mv2
       dataset_slug: pcqm4mv2
 single_proposed_model: GEM-2
+main_figure: /figures/2208.05863/main_figure.jpegoptim.jpg
 ---
 

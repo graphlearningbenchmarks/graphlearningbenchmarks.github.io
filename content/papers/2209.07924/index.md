@@ -213,5 +213,6 @@ datasets_by_scope:
       dataset_slug: mutag
 single_proposed_model: probabilistic generative model-level explanation method for
   explaining GNNs
+main_figure: /figures/2209.07924/main_figure.jpegoptim.jpg
 ---
 

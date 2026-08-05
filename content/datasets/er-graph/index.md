@@ -3,7 +3,7 @@ title: ER graph
 slug: er-graph
 benchmark: GraphBench
 task_type: graph_classification
-description: Graph classification on Erdos-Renyi random graphs (GraphBench algorithmic
+description: Graph classification on Erdős–Rényi random graphs (GraphBench algorithmic
   reasoning).
 primary_metric: Accuracy
 higher_is_better: true

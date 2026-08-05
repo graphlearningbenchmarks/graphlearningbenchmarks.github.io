@@ -59,22 +59,22 @@ adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 - GNNBenchmark
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 2
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 2
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 6
@@ -141,16 +141,16 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: The suffix -PE denote the use of Laplacian Eigenvectors
-      as node positional encodings
+    uses_external_data: 1
+    input_feature_source: mixed
+    feature_source_evidence: suffix -PE denote the use of Laplacian Eigenvectors as
+      node positional encodings
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -250,7 +250,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -317,7 +317,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -384,7 +384,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -452,7 +452,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -520,7 +520,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -587,7 +587,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -654,7 +654,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -721,7 +721,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -788,7 +788,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -855,7 +855,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -922,7 +922,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -989,7 +989,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1056,7 +1056,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: Test set evaluation on AQSOL
+    protocol_note: Test MAE on AQSOL dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1108,12 +1108,12 @@ results:
   metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id009
+- &id007
   dataset: CIFAR10
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: randalign
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.7942
     std: 0.00072
     metric: Accuracy
@@ -1122,9 +1122,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2404.09774'
     title: 'RandAlign: A Parameter-Free Method for Regularizing Graph Convolutional
       Networks'
@@ -1145,45 +1145,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: tau-grit
-    model_plain: 3WLGNN
-    value: 0.77784
-    std: 0.0049
+  - model: Tango_GPS
+    model_key: differential encoding
+    model_plain: Tango_GPS
+    value: 0.79067
+    std: 0.00269
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2510.12369'
-    title: A Hierarchical Quantized Tokenization Framework for Task-Adaptive Graph
-      Representation Learning
-    date: Oct 14, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-14'
-    venue: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2407.02758'
+    title: Differential Encoding for Improved Representation Learning Over Graphs
+    date: Jul 3, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-03'
+    venue: IEEE Transactions on Big Data
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.77784
-    sort_std: 0.0049
+    sort_value: 0.79067
+    sort_std: 0.00269
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: degta
-    model_plain: 3WLGNN
-    value: 0.76756
-    std: 0.00927
+  - model: Tango_GPS
+    model_key: ppgt
+    model_plain: Tango_GPS
+    value: 0.7856
+    std: 0.007
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
@@ -1193,20 +1192,20 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2408.07654'
-    title: 'Graph Triple Attention Network: A Decoupled Perspective'
-    date: Aug 14, 2024
-    date_display: Aug 2024
-    date_iso: '2024-08-14'
-    venue: arXiv.org
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.76756
-    sort_std: 0.00927
+    sort_value: 0.7856
+    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1236,7 +1235,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1268,10 +1267,10 @@ results:
     value_note: ''
     sort_value: 0.7133
     sort_std: 0.0039
-    global_rank: 38
-    paper_rank: 58
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 57
+    paper_rank: 85
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1303,7 +1302,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1335,10 +1334,10 @@ results:
     value_note: ''
     sort_value: 0.6611
     sort_std: 0.0098
-    global_rank: 69
-    paper_rank: 79
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 98
+    paper_rank: 109
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1370,7 +1369,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1402,10 +1401,10 @@ results:
     value_note: ''
     sort_value: 0.65911
     sort_std: 0.02515
-    global_rank: 71
-    paper_rank: 90
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 100
+    paper_rank: 127
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1437,7 +1436,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1470,8 +1469,8 @@ results:
     value_note: ''
     sort_value: 0.6577
     sort_std: 0.0031
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1506,7 +1505,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1539,10 +1538,10 @@ results:
     value_note: ''
     sort_value: 0.5982
     sort_std: 0.0033
-    global_rank: 83
-    paper_rank: 89
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 118
+    paper_rank: 126
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1575,7 +1574,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1607,8 +1606,8 @@ results:
     value_note: ''
     sort_value: 0.59175
     sort_std: 0.01593
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1616,6 +1615,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.54142
+    std: 0.00394
+    paper_value: 0.54142
+    paper_std: 0.00394
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: 0.5839
+    at_pub_std: 0.0073
+    at_pub_source_arxiv: '2110.03753'
+    at_pub_source_title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure
+      Awareness'
+    at_pub_source_date_iso: '2021-10-07'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2021-10-07'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.04247999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5839
+    true_std: 0.0073
+    value_gap_source_arxiv: '2110.03753'
+    value_gap_source_title: 'From Stars to Subgraphs: Uplifting Any GNN with Local
+      Structure Awareness'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.04247999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5839
+    sort_std: 0.0073
+    global_rank: 121
+    paper_rank: 128
+    rank_delta: 7
+    rank_delta_abs: 7
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'From Stars to Subgraphs: Uplifting Any GNN with Local
+      Structure Awareness'
+    comparison_source_arxiv: '2110.03753'
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -1642,7 +1711,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1675,8 +1744,8 @@ results:
     value_note: ''
     sort_value: 0.5634
     sort_std: 0.00181
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1711,7 +1780,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1743,8 +1812,8 @@ results:
     value_note: ''
     sort_value: 0.5571
     sort_std: 0.00381
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1752,73 +1821,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.54142
-    std: 0.00394
-    paper_value: 0.54142
-    paper_std: 0.00394
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
-    date: Jan 1, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-01'
-    published_venue: JMLR 2023
-    published_conference: JMLR 2023
-    at_pub_value: 0.5571
-    at_pub_std: 0.0038
-    at_pub_source_arxiv: '2006.07846'
-    at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    at_pub_source_date_iso: '2020-06-14'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-06-14'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.015680000000000027
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.5571
-    true_std: 0.0038
-    value_gap_source_arxiv: '2006.07846'
-    value_gap_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    value_gap_source_is_current_paper: false
-    value_gap: 0.015680000000000027
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5571
-    sort_std: 0.0038
-    global_rank: 88
-    paper_rank: 91
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    comparison_source_arxiv: '2006.07846'
     is_best: false
     is_std_outlier: false
   - model: RingGNN
@@ -1845,7 +1847,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CIFAR10 super-pixels
+    protocol_note: Test Accuracy on CIFAR10 graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -1877,8 +1879,8 @@ results:
     value_note: ''
     sort_value: 0.193
     sort_std: 0.16108
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1897,12 +1899,12 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id008
   dataset: CLUSTER
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: grpe-small
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.81586
     std: 0.0019
     metric: Accuracy
@@ -1933,11 +1935,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Tango_GPS
+    model_key: tango_gps
+    model_plain: Tango_GPS
+    value: 0.80113
+    std: 0.00138
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.80113
+    sort_std: 0.00138
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Tango_GPS
     model_key: grit
-    model_plain: 3WLGNN
-    value: 0.80026
-    std: 0.00277
+    model_plain: Tango_GPS
+    value: 0.8003
+    std: 0.0028
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1947,56 +1982,89 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2605.05689'
-    title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive Consistency
-      Model'
-    date: May 7, 2026
-    date_display: May 2026
-    date_iso: '2026-05-07'
-    venue: null
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_display: May 2024
+    date_iso: '2024-05-29'
+    venue: Neural Information Processing Systems
     codebase_url: ''
     uses_external_data: false
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.80026
-    sort_std: 0.00277
+    global_rank: 3
+    sort_value: 0.8003
+    sort_std: 0.0028
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: egtas
-    model_plain: 3WLGNN
-    value: 0.79236
-    std: 0.00215
+  - model: GatedGCN-PE
+    model_key: gatedgcn-pe
+    model_plain: GatedGCN-PE
+    value: 0.76082
+    std: 0.00196
+    paper_value: 0.76082
+    paper_std: 0.00196
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2510.14336'
-    title: 'DARTS-GT: Differentiable Architecture Search for Graph Transformers with
-      Quantifiable Instance-Specific Interpretability Analysis'
-    date: Oct 16, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/shrutiOx/DARTS_GT
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.79236
-    sort_std: 0.00215
-    comparison_type: global_top
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: mixed
+    feature_source_evidence: The suffix -PE denote the use of Laplacian Eigenvectors
+      as node positional encodings
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on CLUSTER dataset (L=16) with Laplacian PE
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-01'
+    value_gap_source_date_label: JMLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.76082
+    true_std: 0.00196
+    value_gap_source_arxiv: '2003.00982'
+    value_gap_source_title: GNNBenchmark
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.76082
+    sort_std: 0.00196
+    global_rank: 56
+    paper_rank: 56
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2025,7 +2093,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CLUSTER dataset (L=16)
+    protocol_note: Test Accuracy on CLUSTER dataset (L=16)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2058,8 +2126,8 @@ results:
     value_note: ''
     sort_value: 0.70587
     sort_std: 0.00447
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2093,7 +2161,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CLUSTER dataset (L=16)
+    protocol_note: Test Accuracy on CLUSTER dataset (L=16)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2125,8 +2193,8 @@ results:
     value_note: ''
     sort_value: 0.69026
     sort_std: 0.01372
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2160,7 +2228,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CLUSTER dataset (L=16)
+    protocol_note: Test Accuracy on CLUSTER dataset (L=16)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2192,8 +2260,8 @@ results:
     value_note: ''
     sort_value: 0.68498
     sort_std: 0.00976
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2227,7 +2295,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CLUSTER dataset (L=16)
+    protocol_note: Test Accuracy on CLUSTER dataset (L=16)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2260,8 +2328,8 @@ results:
     value_note: ''
     sort_value: 0.66407
     sort_std: 0.0054
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2295,7 +2363,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CLUSTER dataset (L=16)
+    protocol_note: Test Accuracy on CLUSTER dataset (L=16)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2328,8 +2396,8 @@ results:
     value_note: ''
     sort_value: 0.64716
     sort_std: 0.01553
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2363,7 +2431,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CLUSTER dataset (L=16)
+    protocol_note: Test Accuracy on CLUSTER dataset (L=16)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2396,8 +2464,8 @@ results:
     value_note: ''
     sort_value: 0.63844
     sort_std: 0.0011
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2431,7 +2499,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CLUSTER dataset (L=3)
+    protocol_note: Test Accuracy on CLUSTER dataset (L=3)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2463,8 +2531,8 @@ results:
     value_note: ''
     sort_value: 0.60404
     sort_std: 0.00419
-    global_rank: 77
-    paper_rank: 84
+    global_rank: 92
+    paper_rank: 99
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -2498,7 +2566,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CLUSTER dataset (L=2)
+    protocol_note: Test Accuracy on CLUSTER dataset (L=2)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2530,8 +2598,8 @@ results:
     value_note: ''
     sort_value: 0.42418
     sort_std: 0.20063
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2545,9 +2613,9 @@ results:
     model_key: mlp
     model_plain: MLP
     value: 0.20973
-    std: 0.004
+    std: 4.0e-05
     paper_value: 0.20973
-    paper_std: 0.004
+    paper_std: 4.0e-05
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -2565,7 +2633,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test accuracy on CLUSTER dataset
+    protocol_note: Test Accuracy on CLUSTER dataset
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2588,7 +2656,7 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.20973
-    true_std: 0.004
+    true_std: 4.0e-05
     value_gap_source_arxiv: '2003.00982'
     value_gap_source_title: GNNBenchmark
     value_gap_source_is_current_paper: true
@@ -2596,9 +2664,9 @@ results:
     has_value_note: false
     value_note: ''
     sort_value: 0.20973
-    sort_std: 0.004
-    global_rank: 107
-    paper_rank: 107
+    sort_std: 4.0e-05
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2638,30 +2706,30 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-fold cross validation
+    protocol_note: Test Accuracy (Mean) on CSL using 5-fold cross validation
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
     published_venue: JMLR 2023
     published_conference: JMLR 2023
-    at_pub_value: null
+    at_pub_value: 0.0
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2212.13350'
+    at_pub_source_title: A Generalization of ViT/MLP-Mixer to Graphs
+    at_pub_source_date_iso: '2022-12-27'
+    at_pub_source_date_label: ICML 2022
     value_gap_source_date_iso: '2023-01-01'
     value_gap_source_date_label: JMLR 2023
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 1.0
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -2681,15 +2749,15 @@ results:
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: A Generalization of ViT/MLP-Mixer to Graphs
+    comparison_source_arxiv: '2212.13350'
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN (Abs(EigVecs))
+  - model: GPM
     model_key: ppgn
-    model_plain: GatedGCN (Abs(EigVecs))
+    model_plain: GPM
     value: 1.0
     std: null
     metric: Accuracy
@@ -2720,9 +2788,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN (Abs(EigVecs))
+  - model: GPM
     model_key: rw-agentnet
-    model_plain: GatedGCN (Abs(EigVecs))
+    model_plain: GPM
     value: 1.0
     std: null
     metric: Accuracy
@@ -2753,9 +2821,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN (Abs(EigVecs))
+  - model: GPM
     model_key: agentnet
-    model_plain: GatedGCN (Abs(EigVecs))
+    model_plain: GPM
     value: 1.0
     std: null
     metric: Accuracy
@@ -2804,13 +2872,13 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-fold cross validation
+    protocol_note: Test Accuracy (Mean) on CSL using 5-fold cross validation
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2842,8 +2910,8 @@ results:
     value_note: ''
     sort_value: 0.99967
     sort_std: 0.00332
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2871,13 +2939,13 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-fold cross validation
+    protocol_note: Test Accuracy (Mean) on CSL using 5-fold cross validation
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2909,8 +2977,8 @@ results:
     value_note: ''
     sort_value: 0.99933
     sort_std: 0.00467
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2938,13 +3006,13 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-fold cross validation
+    protocol_note: Test Accuracy (Mean) on CSL using 5-fold cross validation
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -2976,8 +3044,8 @@ results:
     value_note: ''
     sort_value: 0.99933
     sort_std: 0.00467
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3005,13 +3073,13 @@ results:
     architecture_title: ''
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Rand sign(EigVecs)
     table_ref: Table 12
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: study of positional encodings (pes) with the gatedgcn model
+    protocol_note: Test Accuracy on CSL with GatedGCN model
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -3043,8 +3111,8 @@ results:
     value_note: ''
     sort_value: 0.99767
     sort_std: 0.00394
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3072,30 +3140,30 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-fold cross validation
+    protocol_note: Test Accuracy (Mean) on CSL using 5-fold cross validation
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
     published_venue: JMLR 2023
     published_conference: JMLR 2023
-    at_pub_value: null
+    at_pub_value: 0.0
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2212.13350'
+    at_pub_source_title: A Generalization of ViT/MLP-Mixer to Graphs
+    at_pub_source_date_iso: '2022-12-27'
+    at_pub_source_date_label: ICML 2022
     value_gap_source_date_iso: '2023-01-01'
     value_gap_source_date_label: JMLR 2023
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.996
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -3110,15 +3178,15 @@ results:
     value_note: ''
     sort_value: 0.996
     sort_std: 0.01083
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: A Generalization of ViT/MLP-Mixer to Graphs
+    comparison_source_arxiv: '2212.13350'
     is_best: true
     is_std_outlier: false
   - model: GatedGCN (Abs(EigVecs))
@@ -3139,13 +3207,13 @@ results:
     architecture_title: ''
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Abs(EigVecs)
     table_ref: Table 12
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: study of positional encodings (pes) with the gatedgcn model
+    protocol_note: Test Accuracy on CSL with GatedGCN model
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -3177,8 +3245,8 @@ results:
     value_note: ''
     sort_value: 0.99433
     sort_std: 0.01133
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3206,13 +3274,13 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-fold cross validation
+    protocol_note: Test Accuracy (Mean) on CSL using 5-fold cross validation
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -3245,8 +3313,8 @@ results:
     value_note: ''
     sort_value: 0.99333
     sort_std: 0.01333
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3275,27 +3343,27 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: No Node Positional Encoding
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-fold cross validation
+    protocol_note: Test Accuracy (Mean) on CSL using 5-fold cross validation (No PE)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
     published_venue: JMLR 2023
     published_conference: JMLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.978
+    at_pub_std: 0.10916
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2025-02-22'
     value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.02100000000000002
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -3314,8 +3382,8 @@ results:
     value_note: ''
     sort_value: 0.978
     sort_std: 0.109
-    global_rank: 35
-    paper_rank: 37
+    global_rank: 48
+    paper_rank: 50
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -3324,74 +3392,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.22567
-    std: 0.06089
-    paper_value: 0.22567
-    paper_std: 0.06089
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 5-fold cross validation
-    date: Jan 1, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-01'
-    published_venue: JMLR 2023
-    published_conference: JMLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-01'
-    value_gap_source_date_label: JMLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.22567
-    true_std: 0.06089
-    value_gap_source_arxiv: '2003.00982'
-    value_gap_source_title: GNNBenchmark
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.22567
-    sort_std: 0.06089
-    global_rank: 55
-    paper_rank: 55
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: RingGNN
     model_key: ringgnn
     model_plain: RingGNN
@@ -3410,30 +3411,30 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-fold cross validation
+    protocol_note: Test Accuracy (Mean) on CSL using 5-fold cross validation
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
     published_venue: JMLR 2023
     published_conference: JMLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.1
+    at_pub_std: 0.0
+    at_pub_source_arxiv: '2106.12575'
+    at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    at_pub_source_date_iso: '2021-06-23'
+    at_pub_source_date_label: NeurIPS 2021
     value_gap_source_date_iso: '2023-01-01'
     value_gap_source_date_label: JMLR 2023
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.07233
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -3448,15 +3449,15 @@ results:
     value_note: ''
     sort_value: 0.17233
     sort_std: 0.06326
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    comparison_source_arxiv: '2106.12575'
     is_best: false
     is_std_outlier: false
   - model: All MP-GCNs
@@ -3477,13 +3478,13 @@ results:
     architecture_title: Message-passing GNN
     uses_external_data: 0
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: No Node Positional Encoding
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 5-fold cross validation
+    protocol_note: Test Accuracy (Mean) on CSL using 5-fold cross validation (No PE)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -3515,8 +3516,8 @@ results:
     value_note: ''
     sort_value: 0.01
     sort_std: 0.0
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3535,110 +3536,107 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id004
   dataset: ENZYMES
   rows:
-  - model: 3WLGNN
-    model_key: msa-aud
-    model_plain: 3WLGNN
-    value: 0.892
-    std: null
+  - model: WL
+    model_key: bgnn(m)-cs
+    model_plain: WL
+    value: 0.8068
+    std: 0.0149
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.892
-    sort_std: null
+    sort_value: 0.8068
+    sort_std: 0.0149
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-ad
-    model_plain: 3WLGNN
-    value: 0.89
-    std: null
+  - model: WL
+    model_key: bgnn
+    model_plain: WL
+    value: 0.7936
+    std: 0.0281
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.89
-    sort_std: null
+    sort_value: 0.7936
+    sort_std: 0.0281
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-au
-    model_plain: 3WLGNN
-    value: 0.854
-    std: null
+  - model: WL
+    model_key: bgnn(m)-sc
+    model_plain: WL
+    value: 0.7889
+    std: 0.0079
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.854
-    sort_std: null
+    sort_value: 0.7889
+    sort_std: 0.0079
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -3664,7 +3662,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split (seed 2)
+    protocol_note: 10-fold CV split, Test Accuracy (seed 2)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -3698,10 +3696,10 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.028
-    global_rank: 14
-    paper_rank: 50
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 8
+    paper_rank: 43
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3733,7 +3731,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split (seed 2)
+    protocol_note: 10-fold CV split, Test Accuracy (seed 2)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -3765,8 +3763,8 @@ results:
     value_note: ''
     sort_value: 0.7
     sort_std: 0.04944
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3800,7 +3798,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split
+    protocol_note: 10-fold CV split, Test Accuracy
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -3832,8 +3830,8 @@ results:
     value_note: ''
     sort_value: 0.685
     sort_std: 0.05241
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3867,7 +3865,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split (seed 2)
+    protocol_note: 10-fold CV split, Test Accuracy (seed 2)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -3899,8 +3897,8 @@ results:
     value_note: ''
     sort_value: 0.68167
     sort_std: 0.05449
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3934,7 +3932,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split
+    protocol_note: 10-fold CV split, Test Accuracy
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -3966,8 +3964,8 @@ results:
     value_note: ''
     sort_value: 0.65833
     sort_std: 0.0461
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4001,7 +3999,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split
+    protocol_note: 10-fold CV split, Test Accuracy
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4033,8 +4031,8 @@ results:
     value_note: ''
     sort_value: 0.63
     sort_std: 0.0809
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4068,7 +4066,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split
+    protocol_note: 10-fold CV split, Test Accuracy
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4100,8 +4098,8 @@ results:
     value_note: ''
     sort_value: 0.61
     sort_std: 0.06799
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4135,7 +4133,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split
+    protocol_note: 10-fold CV split, Test Accuracy
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4202,7 +4200,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split (seed 2)
+    protocol_note: 10-fold CV split, Test Accuracy (seed 2)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4234,8 +4232,8 @@ results:
     value_note: ''
     sort_value: 0.45333
     sort_std: 0.04522
-    global_rank: 190
-    paper_rank: 190
+    global_rank: 202
+    paper_rank: 202
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4257,77 +4255,44 @@ results:
 - &id006
   dataset: MNIST
   rows:
-  - model: 3WLGNN
-    model_key: graphcon-gat
-    model_plain: 3WLGNN
-    value: 0.9891
-    std: null
+  - model: Tango_GPS
+    model_key: schrödinger gnn
+    model_plain: Tango_GPS
+    value: 0.9913
+    std: 0.0004
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2202.02296'
-    title: Graph-Coupled Oscillator Networks
-    date: Feb 4, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-04'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/tk-rusch/GraphCON
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9891
-    sort_std: null
+    sort_value: 0.9913
+    sort_std: 0.0004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: gig-gatedgcn
-    model_plain: 3WLGNN
-    value: 0.988
-    std: 0.0003
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.00696'
-    title: Graph in Graph Neural Network
-    date: Jun 30, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-30'
-    venue: International Journal of Computer Vision
-    codebase_url: https://github.com/wangjs96/Graph-in-Graph-Neural-Network
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.988
-    sort_std: 0.0003
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: 3WLGNN
-    model_key: pncnn
-    model_plain: 3WLGNN
-    value: 0.9876
-    std: null
+  - model: Tango_GPS
+    model_key: cnn
+    model_plain: Tango_GPS
+    value: 0.9907
+    std: 0.0007
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -4337,20 +4302,53 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2202.02296'
-    title: Graph-Coupled Oscillator Networks
-    date: Feb 4, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-04'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/tk-rusch/GraphCON
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9907
+    sort_std: 0.0007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: mpnn
+    model_plain: Tango_GPS
+    value: 0.9895
+    std: 0.0006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9876
-    sort_std: null
+    sort_value: 0.9895
+    sort_std: 0.0006
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4381,7 +4379,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
+    protocol_note: Test Accuracy on MNIST graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4393,8 +4391,8 @@ results:
     at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
     at_pub_source_date_iso: '2020-06-14'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-06-14'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2024-04-15'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.009000000000000008
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -4403,93 +4401,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9824
-    true_std: 0.0004
-    value_gap_source_arxiv: '2006.07846'
-    value_gap_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
+    true_value: 0.98552
+    true_std: 0.00023
+    value_gap_source_arxiv: '2404.09774'
+    value_gap_source_title: 'RandAlign: A Parameter-Free Method for Regularizing Graph
+      Convolutional Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.009000000000000008
+    value_gap: 0.012119999999999909
     has_value_note: false
     value_note: ''
-    sort_value: 0.9824
-    sort_std: 0.0004
-    global_rank: 22
-    paper_rank: 59
-    rank_delta: 37
-    rank_delta_abs: 37
+    sort_value: 0.98552
+    sort_std: 0.00023
+    global_rank: 11
+    paper_rank: 85
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
     comparison_source_arxiv: '2006.07846'
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.97312
-    std: 0.00097
-    paper_value: 0.97312
-    paper_std: 0.00097
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: nodes in these graphs already have features describing
-      their positions in R^2
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
-    date: Jan 1, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-01'
-    published_venue: JMLR 2023
-    published_conference: JMLR 2023
-    at_pub_value: 0.97312
-    at_pub_std: 0.00097
-    at_pub_source_arxiv: '2110.07141'
-    at_pub_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
-    at_pub_source_date_iso: '2021-10-14'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-10-14'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.97312
-    true_std: 0.00097
-    value_gap_source_arxiv: '2110.07141'
-    value_gap_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.97312
-    sort_std: 0.00097
-    global_rank: 64
-    paper_rank: 64
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -4517,7 +4448,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
+    protocol_note: Test Accuracy on MNIST graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4529,8 +4460,8 @@ results:
     at_pub_source_title: Graph-Coupled Oscillator Networks
     at_pub_source_date_iso: '2022-02-04'
     at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.007450000000000068
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -4539,20 +4470,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9723
-    true_std: null
-    value_gap_source_arxiv: '2202.02296'
-    value_gap_source_title: Graph-Coupled Oscillator Networks
+    true_value: 0.9833
+    true_std: 0.0011
+    value_gap_source_arxiv: '2605.13383'
+    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
+      in GNNs Via Observables'
     value_gap_source_is_current_paper: false
-    value_gap: 0.007450000000000068
+    value_gap: 0.018449999999999966
     has_value_note: false
     value_note: ''
-    sort_value: 0.9723
-    sort_std: null
-    global_rank: 68
-    paper_rank: 74
-    rank_delta: 6
-    rank_delta_abs: 6
+    sort_value: 0.9833
+    sort_std: 0.0011
+    global_rank: 31
+    paper_rank: 103
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4585,7 +4517,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
+    protocol_note: Test Accuracy on MNIST graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4597,8 +4529,8 @@ results:
     at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
     at_pub_source_date_iso: '2020-06-14'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-06-14'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2024-04-15'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.009649999999999936
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -4607,25 +4539,94 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.965
-    true_std: 0.0018
-    value_gap_source_arxiv: '2006.07846'
-    value_gap_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
+    true_value: 0.97553
+    true_std: 0.00034
+    value_gap_source_arxiv: '2404.09774'
+    value_gap_source_title: 'RandAlign: A Parameter-Free Method for Regularizing Graph
+      Convolutional Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.009649999999999936
+    value_gap: 0.020179999999999976
     has_value_note: false
     value_note: ''
-    sort_value: 0.965
-    sort_std: 0.0018
-    global_rank: 74
-    paper_rank: 81
-    rank_delta: 7
-    rank_delta_abs: 7
+    sort_value: 0.97553
+    sort_std: 0.00034
+    global_rank: 81
+    paper_rank: 114
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
     comparison_source_arxiv: '2006.07846'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.97312
+    std: 0.00097
+    paper_value: 0.97312
+    paper_std: 0.00097
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: nodes in these graphs already have features describing
+      their positions in R^2
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on MNIST graph classification task
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: 0.97312
+    at_pub_std: 0.00097
+    at_pub_source_arxiv: '2110.07141'
+    at_pub_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
+    at_pub_source_date_iso: '2021-10-14'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-10-14'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.97312
+    true_std: 0.00097
+    value_gap_source_arxiv: '2110.07141'
+    value_gap_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.97312
+    sort_std: 0.00097
+    global_rank: 91
+    paper_rank: 91
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -4653,7 +4654,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
+    protocol_note: Test Accuracy on MNIST graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4685,8 +4686,8 @@ results:
     value_note: ''
     sort_value: 0.9534
     sort_std: 0.00138
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4721,7 +4722,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
+    protocol_note: Test Accuracy on MNIST graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4753,8 +4754,8 @@ results:
     value_note: ''
     sort_value: 0.95075
     sort_std: 0.00961
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4763,7 +4764,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -4789,21 +4790,21 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
+    protocol_note: Test Accuracy on MNIST graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
     published_venue: JMLR 2023
     published_conference: JMLR 2023
-    at_pub_value: 0.9139
-    at_pub_std: 0.0025
-    at_pub_source_arxiv: '2006.07846'
-    at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    at_pub_source_date_iso: '2020-06-14'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-06-14'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.012700000000000045
+    at_pub_value: 0.9269
+    at_pub_std: 0.0023
+    at_pub_source_arxiv: '2212.13350'
+    at_pub_source_title: A Generalization of ViT/MLP-Mixer to Graphs
+    at_pub_source_date_iso: '2022-12-27'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-04-15'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.025699999999999945
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -4811,25 +4812,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9139
-    true_std: 0.0025
-    value_gap_source_arxiv: '2006.07846'
-    value_gap_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
+    true_value: 0.94051
+    true_std: 0.00052
+    value_gap_source_arxiv: '2404.09774'
+    value_gap_source_title: 'RandAlign: A Parameter-Free Method for Regularizing Graph
+      Convolutional Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.012700000000000045
+    value_gap: 0.039309999999999956
     has_value_note: false
     value_note: ''
-    sort_value: 0.9139
-    sort_std: 0.0025
-    global_rank: 95
-    paper_rank: 101
-    rank_delta: 6
-    rank_delta_abs: 6
+    sort_value: 0.94051
+    sort_std: 0.00052
+    global_rank: 129
+    paper_rank: 136
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
-    comparison_source_arxiv: '2006.07846'
+    comparison_source_title: A Generalization of ViT/MLP-Mixer to Graphs
+    comparison_source_arxiv: '2212.13350'
     is_best: false
     is_std_outlier: false
   - model: MoNet
@@ -4857,22 +4859,21 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
+    protocol_note: Test Accuracy on MNIST graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
     published_venue: JMLR 2023
     published_conference: JMLR 2023
-    at_pub_value: 0.9919
+    at_pub_value: 0.9111
     at_pub_std: null
-    at_pub_source_arxiv: '1611.08402'
-    at_pub_source_title: Geometric deep learning on graphs and manifolds using mixture
-      model CNNs
-    at_pub_source_date_iso: '2016-11-25'
-    at_pub_source_date_label: '2016'
+    at_pub_source_arxiv: '2202.02296'
+    at_pub_source_title: Graph-Coupled Oscillator Networks
+    at_pub_source_date_iso: '2022-02-04'
+    at_pub_source_date_label: ICML 2022
     value_gap_source_date_iso: '2022-02-04'
     value_gap_source_date_label: ICML 2022
-    gap_vs_at_pub: 0.08384999999999998
+    gap_vs_at_pub: 0.003049999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -4890,16 +4891,15 @@ results:
     value_note: ''
     sort_value: 0.9111
     sort_std: null
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Geometric deep learning on graphs and manifolds using
-      mixture model CNNs
-    comparison_source_arxiv: '1611.08402'
+    comparison_source_title: Graph-Coupled Oscillator Networks
+    comparison_source_arxiv: '2202.02296'
     is_best: false
     is_std_outlier: false
   - model: vanilla GCN
@@ -4927,7 +4927,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
+    protocol_note: Test Accuracy on MNIST graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -4959,8 +4959,8 @@ results:
     value_note: ''
     sort_value: 0.90705
     sort_std: 0.00218
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 134
+    paper_rank: 134
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4995,7 +4995,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: Standard graph classification task on MNIST super-pixels
+    protocol_note: Test Accuracy on MNIST graph classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5027,8 +5027,8 @@ results:
     value_note: ''
     sort_value: 0.1135
     sort_std: 0.0
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5047,12 +5047,12 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id009
   dataset: PATTERN
   rows:
-  - model: 3WLGNN
+  - model: Tango_GPS
     model_key: deepgraph (48)
-    model_plain: 3WLGNN
+    model_plain: Tango_GPS
     value: 0.90657
     std: 0.00062
     metric: Accuracy
@@ -5083,11 +5083,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: grit
-    model_plain: 3WLGNN
-    value: 0.8722
+  - model: Tango_GPS
+    model_key: ppgt
+    model_plain: Tango_GPS
+    value: 0.89752
     std: 0.0003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.89752
+    sort_std: 0.0003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: ckgcn
+    model_plain: Tango_GPS
+    value: 0.88661
+    std: 0.00143
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -5097,54 +5130,223 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.8722
-    sort_std: 0.0003
+    global_rank: 3
+    sort_value: 0.88661
+    sort_std: 0.00143
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: sparsegrit
-    model_plain: 3WLGNN
-    value: 0.8717
-    std: 0.0004
+  - model: GatedGCN-PE
+    model_key: gatedgcn-pe
+    model_plain: GatedGCN-PE
+    value: 0.86508
+    std: 0.085
+    paper_value: 0.86508
+    paper_std: 0.085
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8717
-    sort_std: 0.0004
-    comparison_type: global_top
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: mixed
+    feature_source_evidence: suffix -PE denote the use of Laplacian Eigenvectors as
+      node positional encodings
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on PATTERN dataset with L=16 and Laplacian PE
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-01'
+    value_gap_source_date_label: JMLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.86508
+    true_std: 0.085
+    value_gap_source_arxiv: '2003.00982'
+    value_gap_source_title: GNNBenchmark
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.86508
+    sort_std: 0.085
+    global_rank: 62
+    paper_rank: 62
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN (Rand sign(EigVecs))
+    model_key: gatedgcn (rand sign(eigvecs))
+    model_plain: GatedGCN (Rand sign(EigVecs))
+    value: 0.86508
+    std: 0.085
+    paper_value: 0.86508
+    paper_std: 0.085
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 1
+    input_feature_source: mixed
+    feature_source_evidence: Rand sign(EigVecs)
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on PATTERN dataset with L=16 and Rand sign(EigVecs)
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-01'
+    value_gap_source_date_label: JMLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.86508
+    true_std: 0.085
+    value_gap_source_arxiv: '2003.00982'
+    value_gap_source_title: GNNBenchmark
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.86508
+    sort_std: 0.085
+    global_rank: 63
+    paper_rank: 63
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN (Abs(EigVecs))
+    model_key: gatedgcn (abs(eigvecs))
+    model_plain: GatedGCN (Abs(EigVecs))
+    value: 0.86393
+    std: 0.037
+    paper_value: 0.86393
+    paper_std: 0.037
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    uses_external_data: 1
+    input_feature_source: mixed
+    feature_source_evidence: Abs(EigVecs)
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on PATTERN dataset with L=16 and Abs(EigVecs)
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-01'
+    value_gap_source_date_label: JMLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.86393
+    true_std: 0.037
+    value_gap_source_arxiv: '2003.00982'
+    value_gap_source_title: GNNBenchmark
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.86393
+    sort_std: 0.037
+    global_rank: 65
+    paper_rank: 65
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -5173,7 +5375,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split for PATTERN node classification
+    protocol_note: Test Accuracy on PATTERN dataset with L=2
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5205,8 +5407,142 @@ results:
     value_note: ''
     sort_value: 0.86245
     sort_std: 0.00013
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 68
+    paper_rank: 68
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN (EigVecs-2)
+    model_key: gatedgcn (eigvecs-2)
+    model_plain: GatedGCN (EigVecs-2)
+    value: 0.86029
+    std: 0.085
+    paper_value: 0.86029
+    paper_std: 0.085
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: mixed
+    feature_source_evidence: EigVecs-2
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on PATTERN dataset with L=16 and EigVecs-2
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-01'
+    value_gap_source_date_label: JMLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.86029
+    true_std: 0.085
+    value_gap_source_arxiv: '2003.00982'
+    value_gap_source_title: GNNBenchmark
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.86029
+    sort_std: 0.085
+    global_rank: 71
+    paper_rank: 71
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN (Rand node ordering)
+    model_key: gatedgcn (rand node ordering)
+    model_plain: GatedGCN (Rand node ordering)
+    value: 0.85767
+    std: 0.044
+    paper_value: 0.85767
+    paper_std: 0.044
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: Rand node ordering
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on PATTERN dataset with L=16 and Rand node ordering
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-01-01'
+    value_gap_source_date_label: JMLR 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.85767
+    true_std: 0.044
+    value_gap_source_arxiv: '2003.00982'
+    value_gap_source_title: GNNBenchmark
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.85767
+    sort_std: 0.044
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5240,7 +5576,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split for PATTERN node classification
+    protocol_note: Test Accuracy on PATTERN dataset with L=3
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5272,8 +5608,8 @@ results:
     value_note: ''
     sort_value: 0.85661
     sort_std: 0.00353
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5307,7 +5643,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split for PATTERN node classification
+    protocol_note: Test Accuracy on PATTERN dataset with L=16
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5339,8 +5675,8 @@ results:
     value_note: ''
     sort_value: 0.85614
     sort_std: 0.032
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5350,7 +5686,7 @@ results:
       Graphs?
     comparison_source_arxiv: '2201.09332'
     is_best: false
-    is_std_outlier: true
+    is_std_outlier: false
   - model: GIN
     model_key: gin
     model_plain: GIN
@@ -5375,7 +5711,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split for PATTERN node classification
+    protocol_note: Test Accuracy on PATTERN dataset with L=4
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5407,8 +5743,8 @@ results:
     value_note: ''
     sort_value: 0.8559
     sort_std: 0.0001
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5442,7 +5778,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split for PATTERN node classification
+    protocol_note: Test Accuracy on PATTERN dataset with L=16
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5475,8 +5811,8 @@ results:
     value_note: ''
     sort_value: 0.85582
     sort_std: 0.00038
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5510,7 +5846,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split for PATTERN node classification
+    protocol_note: Test Accuracy on PATTERN dataset with L=16
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5543,8 +5879,8 @@ results:
     value_note: ''
     sort_value: 0.78271
     sort_std: 0.186
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5553,7 +5889,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: true
+    is_std_outlier: false
   - model: vanilla GCN
     model_key: vanilla gcn
     model_plain: vanilla GCN
@@ -5578,7 +5914,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split for PATTERN node classification
+    protocol_note: Test Accuracy on PATTERN dataset with L=16
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5610,8 +5946,8 @@ results:
     value_note: ''
     sort_value: 0.71892
     sort_std: 0.334
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5645,7 +5981,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split for PATTERN node classification
+    protocol_note: Test Accuracy on PATTERN dataset with L=4
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5677,8 +6013,8 @@ results:
     value_note: ''
     sort_value: 0.5052
     sort_std: 0.0
-    global_rank: 104
-    paper_rank: 105
+    global_rank: 123
+    paper_rank: 124
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -5712,7 +6048,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Test split for PATTERN node classification
+    protocol_note: Test Accuracy on PATTERN dataset with L=4
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5744,8 +6080,8 @@ results:
     value_note: ''
     sort_value: 0.50519
     sort_std: 0.0
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5764,12 +6100,12 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: PROTEINS
   rows:
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: gmn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8225
     std: null
     metric: Accuracy
@@ -5800,9 +6136,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: ci-gnn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -5834,9 +6170,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: diffpool+gpl
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -5892,7 +6228,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split
+    protocol_note: 10-fold CV split, Test Accuracy
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5926,10 +6262,10 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.041
-    global_rank: 23
-    paper_rank: 291
-    rank_delta: 268
-    rank_delta_abs: 268
+    global_rank: 27
+    paper_rank: 319
+    rank_delta: 292
+    rank_delta_abs: 292
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5961,7 +6297,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split
+    protocol_note: 10-fold CV split, Test Accuracy
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -5994,10 +6330,10 @@ results:
     value_note: ''
     sort_value: 0.78
     sort_std: 0.03
-    global_rank: 38
-    paper_rank: 118
-    rank_delta: 80
-    rank_delta_abs: 80
+    global_rank: 47
+    paper_rank: 132
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6029,7 +6365,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split (seed 2)
+    protocol_note: 10-fold CV split, Test Accuracy (seed 2)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6061,12 +6397,79 @@ results:
     value_note: ''
     sort_value: 0.76721
     sort_std: 0.03106
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.75559
+    std: 0.01907
+    paper_value: 0.75559
+    paper_std: 0.01907
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV split, Test Accuracy (seed 2)
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: 0.759
+    at_pub_std: 0.032
+    at_pub_source_arxiv: '2006.09430'
+    at_pub_source_title: Wasserstein Embedding for Graph Learning
+    at_pub_source_date_iso: '2020-06-16'
+    at_pub_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-02-26'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.003410000000000024
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7667
+    true_std: 0.0305
+    value_gap_source_arxiv: '2402.16346'
+    value_gap_source_title: Boosting Graph Pooling with Persistent Homology
+    value_gap_source_is_current_paper: false
+    value_gap: 0.011110000000000064
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7667
+    sort_std: 0.0305
+    global_rank: 93
+    paper_rank: 198
+    rank_delta: 105
+    rank_delta_abs: 105
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6096,7 +6499,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split (seed 2)
+    protocol_note: 10-fold CV split, Test Accuracy (seed 2)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6128,8 +6531,8 @@ results:
     value_note: ''
     sort_value: 0.76453
     sort_std: 0.02892
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6163,7 +6566,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split
+    protocol_note: 10-fold CV split, Test Accuracy
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6195,8 +6598,8 @@ results:
     value_note: ''
     sort_value: 0.76098
     sort_std: 0.02406
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6230,7 +6633,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split (seed 2)
+    protocol_note: 10-fold CV split, Test Accuracy (seed 2)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6263,77 +6666,10 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: 0.032
-    global_rank: 138
-    paper_rank: 153
+    global_rank: 153
+    paper_rank: 168
     rank_delta: 15
     rank_delta_abs: 15
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.75559
-    std: 0.01907
-    paper_value: 0.75559
-    paper_std: 0.01907
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold cross validation split (seed 2)
-    date: Jan 1, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-01'
-    published_venue: JMLR 2023
-    published_conference: JMLR 2023
-    at_pub_value: 0.759
-    at_pub_std: 0.032
-    at_pub_source_arxiv: '2006.09430'
-    at_pub_source_title: Wasserstein Embedding for Graph Learning
-    at_pub_source_date_iso: '2020-06-16'
-    at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-06-16'
-    value_gap_source_date_label: ICLR 2020
-    gap_vs_at_pub: 0.003410000000000024
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.759
-    true_std: 0.032
-    value_gap_source_arxiv: '2006.09430'
-    value_gap_source_title: Wasserstein Embedding for Graph Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.003410000000000024
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.759
-    sort_std: 0.032
-    global_rank: 145
-    paper_rank: 178
-    rank_delta: 33
-    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6365,7 +6701,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split
+    protocol_note: 10-fold CV split, Test Accuracy
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6397,8 +6733,8 @@ results:
     value_note: ''
     sort_value: 0.67564
     sort_std: 0.07551
-    global_rank: 440
-    paper_rank: 440
+    global_rank: 473
+    paper_rank: 473
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6432,7 +6768,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: graph_classification
     protocol_decision: standard
-    protocol_note: 10-fold cross validation split (seed 2)
+    protocol_note: 10-fold CV split, Test Accuracy (seed 2)
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6464,8 +6800,8 @@ results:
     value_note: ''
     sort_value: 0.64682
     sort_std: 0.05877
-    global_rank: 454
-    paper_rank: 454
+    global_rank: 487
+    paper_rank: 487
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6545,7 +6881,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6604,15 +6940,16 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: mixed
-    feature_source_evidence: suffix -E denotes the use of available edge features
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: nodes in these graphs already have features describing
+      their positions in R^2
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6680,7 +7017,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6748,7 +7085,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6816,7 +7153,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6884,7 +7221,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -6952,7 +7289,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7020,7 +7357,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7088,7 +7425,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7156,7 +7493,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7224,7 +7561,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7292,7 +7629,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: Test split results for edge classification task
+    protocol_note: Test F1 on TSP edge classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7371,7 +7708,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on WikiCS split
+    protocol_note: Test Accuracy on WikiCS node classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7406,9 +7743,9 @@ results:
     sort_value: 0.9302
     sort_std: 0.0011
     global_rank: 1
-    paper_rank: 128
-    rank_delta: 127
-    rank_delta_abs: 127
+    paper_rank: 144
+    rank_delta: 143
+    rank_delta_abs: 143
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7417,70 +7754,208 @@ results:
     comparison_source_arxiv: '2204.04874'
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: graphssr
-    model_plain: GraphAny
-    value: 0.8793
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
-    venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8793
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphAny
-    model_key: graph-r1
-    model_plain: GraphAny
-    value: 0.8689
-    std: null
+  - model: GPM
+    model_key: rse + rgcn (70b)
+    model_plain: GPM
+    value: 0.8852
+    std: 0.0019
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.02938'
-    title: 'Beyond One-Size-Fits-All: Adaptive Subgraph Denoising for Zero-Shot Graph
-      Learning with Large Language Models'
-    date: Mar 3, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-03'
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
     venue: null
-    codebase_url: https://github.com/mysteriouslfz/GraphSSR
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8852
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPM
+    model_key: rse + sehgnn (70b)
+    model_plain: GPM
+    value: 0.8796
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
+      to decompose the graph structure by analyzing raw text attributes
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8689
-    sort_std: null
+    sort_value: 0.8796
+    sort_std: 0.002
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.75857
+    std: 0.00577
+    paper_value: 0.75857
+    paper_std: 0.00577
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on WikiCS node classification task
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: 0.759
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '2201.09830'
+    at_pub_source_title: Learning Graph Augmentations to Learn Graph Representations
+    at_pub_source_date_iso: '2022-01-24'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-05-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.00043000000000004146
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8303
+    true_std: 0.0021
+    value_gap_source_arxiv: '2405.18581'
+    value_gap_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07173000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8303
+    sort_std: 0.0021
+    global_rank: 20
+    paper_rank: 167
+    rank_delta: 147
+    rank_delta_abs: 147
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.76908
+    std: 0.00821
+    paper_value: 0.76908
+    paper_std: 0.00821
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test Accuracy on WikiCS node classification task
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    published_venue: JMLR 2023
+    published_conference: JMLR 2023
+    at_pub_value: 0.777
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2201.09830'
+    at_pub_source_title: Learning Graph Augmentations to Learn Graph Representations
+    at_pub_source_date_iso: '2022-01-24'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-05-28'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.007920000000000038
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8279
+    true_std: 0.0016
+    value_gap_source_arxiv: '2405.18581'
+    value_gap_source_title: 'Unleashing the Potential of Text-attributed Graphs: Automatic
+      Relation Decomposition via Large Language Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05881999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8279
+    sort_std: 0.0016
+    global_rank: 23
+    paper_rank: 156
+    rank_delta: 133
+    rank_delta_abs: 133
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -7509,7 +7984,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on WikiCS split
+    protocol_note: Test Accuracy on WikiCS node classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7542,78 +8017,10 @@ results:
     value_note: ''
     sort_value: 0.8146
     sort_std: 0.001
-    global_rank: 25
-    paper_rank: 164
-    rank_delta: 139
-    rank_delta_abs: 139
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.76908
-    std: 0.00821
-    paper_value: 0.76908
-    paper_std: 0.00821
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on WikiCS split
-    date: Jan 1, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-01'
-    published_venue: JMLR 2023
-    published_conference: JMLR 2023
-    at_pub_value: 0.777
-    at_pub_std: 0.001
-    at_pub_source_arxiv: '2201.09830'
-    at_pub_source_title: Learning Graph Augmentations to Learn Graph Representations
-    at_pub_source_date_iso: '2022-01-24'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.007920000000000038
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8103
-    true_std: 0.0092
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.041220000000000034
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8103
-    sort_std: 0.0092
-    global_rank: 29
-    paper_rank: 140
-    rank_delta: 111
-    rank_delta_abs: 111
+    global_rank: 36
+    paper_rank: 183
+    rank_delta: 147
+    rank_delta_abs: 147
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -7633,7 +8040,7 @@ results:
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
+    params_millions: 0.107862
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
@@ -7646,7 +8053,8 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on WikiCS split
+    protocol_note: Test Accuracy on WikiCS node classification task using Laplacian
+      PE
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7678,8 +8086,8 @@ results:
     value_note: ''
     sort_value: 0.77481
     sort_std: 0.00712
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7713,7 +8121,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on WikiCS split
+    protocol_note: Test Accuracy on WikiCS node classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7745,8 +8153,8 @@ results:
     value_note: ''
     sort_value: 0.77431
     sort_std: 0.00669
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7780,7 +8188,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on WikiCS split
+    protocol_note: Test Accuracy on WikiCS node classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7812,79 +8220,12 @@ results:
     value_note: ''
     sort_value: 0.77103
     sort_std: 0.0083
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.75857
-    std: 0.00577
-    paper_value: 0.75857
-    paper_std: 0.00577
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on WikiCS split
-    date: Jan 1, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-01'
-    published_venue: JMLR 2023
-    published_conference: JMLR 2023
-    at_pub_value: 0.759
-    at_pub_std: 0.007
-    at_pub_source_arxiv: '2201.09830'
-    at_pub_source_title: Learning Graph Augmentations to Learn Graph Representations
-    at_pub_source_date_iso: '2022-01-24'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-01-24'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.00043000000000004146
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.759
-    true_std: 0.007
-    value_gap_source_arxiv: '2201.09830'
-    value_gap_source_title: Learning Graph Augmentations to Learn Graph Representations
-    value_gap_source_is_current_paper: false
-    value_gap: 0.00043000000000004146
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.759
-    sort_std: 0.007
-    global_rank: 151
-    paper_rank: 151
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -7914,7 +8255,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Standard node classification task on WikiCS split
+    protocol_note: Test Accuracy on WikiCS node classification task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -7947,8 +8288,8 @@ results:
     value_note: ''
     sort_value: 0.734
     sort_std: 0.006
-    global_rank: 172
-    paper_rank: 246
+    global_rank: 191
+    paper_rank: 265
     rank_delta: 74
     rank_delta_abs: 74
     rank_delta_direction: worse
@@ -7968,7 +8309,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: ogbl-collab
   rows:
   - model: SIGN
@@ -8038,34 +8379,34 @@ results:
     is_best: false
     is_std_outlier: false
   - model: SIGN
-    model_key: sign
+    model_key: gidn
     model_plain: SIGN
-    value: 0.6664
-    std: 0.0064
+    value: 0.7096
+    std: 0.0055
     metric: Hits@50
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2409.17475'
-    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
-      Networks
-    date: Sep 26, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-26'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/tensor-gales/HeteLinkPred
+    arxiv_id: '2210.01301'
+    title: 'GIDN: A Lightweight Graph Inception Diffusion Network for High-efficient
+      Link Prediction'
+    date: Oct 4, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-04'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.6664
-    sort_std: 0.0064
+    sort_value: 0.7096
+    sort_std: 0.0055
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -8095,7 +8436,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8128,10 +8469,10 @@ results:
     value_note: ''
     sort_value: 0.6621
     sort_std: 0.0033
-    global_rank: 4
-    paper_rank: 51
-    rank_delta: 47
-    rank_delta_abs: 47
+    global_rank: 7
+    paper_rank: 60
+    rank_delta: 53
+    rank_delta_abs: 53
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -8163,7 +8504,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8197,10 +8538,10 @@ results:
     value_note: ''
     sort_value: 0.5643
     sort_std: 0.0086
-    global_rank: 23
-    paper_rank: 38
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 27
+    paper_rank: 44
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -8233,7 +8574,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8266,10 +8607,10 @@ results:
     value_note: ''
     sort_value: 0.5463
     sort_std: 0.0112
-    global_rank: 27
-    paper_rank: 38
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 31
+    paper_rank: 44
+    rank_delta: 13
+    rank_delta_abs: 13
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8302,7 +8643,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8334,8 +8675,8 @@ results:
     value_note: ''
     sort_value: 0.52849
     sort_std: 0.01345
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8369,7 +8710,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8401,8 +8742,8 @@ results:
     value_note: ''
     sort_value: 0.52635
     sort_std: 0.01168
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8436,7 +8777,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8468,8 +8809,8 @@ results:
     value_note: ''
     sort_value: 0.50422
     sort_std: 0.01131
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8496,14 +8837,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: mixed
+    input_feature_source: raw_features
     feature_source_evidence: suffix -E denotes the use of available edge features
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8535,8 +8876,8 @@ results:
     value_note: ''
     sort_value: 0.49212
     sort_std: 0.0156
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8570,7 +8911,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8604,8 +8945,8 @@ results:
     value_note: ''
     sort_value: 0.4438
     sort_std: 0.0347
-    global_rank: 62
-    paper_rank: 75
+    global_rank: 77
+    paper_rank: 90
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -8639,7 +8980,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8671,8 +9012,8 @@ results:
     value_note: ''
     sort_value: 0.44206
     sort_std: 0.00452
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8706,7 +9047,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8738,8 +9079,8 @@ results:
     value_note: ''
     sort_value: 0.4173
     sort_std: 0.02284
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8773,7 +9114,7 @@ results:
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: link_prediction
     protocol_decision: standard
-    protocol_note: OGB link prediction task on ogbl-collab
+    protocol_note: Test Hits@50 on ogbl-collab link prediction task
     date: Jan 1, 2023
     date_display: Jan 2023
     date_iso: '2023-01-01'
@@ -8805,8 +9146,8 @@ results:
     value_note: ''
     sort_value: 0.36144
     sort_std: 0.02191
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8830,12 +9171,12 @@ results_grouped:
   datasets:
   - *id001
   - *id002
-- benchmark: OGB
-  datasets:
-  - *id003
 - benchmark: TU Dortmund
   datasets:
+  - *id003
   - *id004
+- benchmark: OGB
+  datasets:
   - *id005
 - benchmark: GNNBenchmark
   datasets:
@@ -8898,5 +9239,6 @@ datasets_by_scope:
     datasets:
     - dataset: TSP
       dataset_slug: tsp
+main_figure: /figures/2003.00982/main_figure.jpegoptim.jpg
 ---
 

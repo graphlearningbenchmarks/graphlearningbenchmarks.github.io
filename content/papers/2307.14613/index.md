@@ -2393,5 +2393,6 @@ datasets_by_scope:
     - dataset: EAT
       dataset_slug: eat
 single_proposed_model: SCGDN
+main_figure: /figures/2307.14613/main_figure.jpegoptim.jpg
 ---
 

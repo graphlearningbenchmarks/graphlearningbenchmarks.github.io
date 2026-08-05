@@ -1,0 +1,5094 @@
+---
+title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization for Over-smoothness
+  in Deep GNNs
+arxiv_id: '2312.08221'
+source_url: ''
+authors:
+- name: Jin Li
+  orcid: null
+  s2_author_id: '2155200837'
+  s2_url: null
+- name: Qirong Zhang
+  orcid: null
+  s2_author_id: '2243687375'
+  s2_url: null
+- name: Shuling Xu
+  orcid: null
+  s2_author_id: '2274091173'
+  s2_url: null
+- name: Xinlong Chen
+  orcid: null
+  s2_author_id: '2216398660'
+  s2_url: null
+- name: Longkun Guo
+  orcid: null
+  s2_author_id: '2243912827'
+  s2_url: null
+- name: Yanglan Fu
+  orcid: null
+  s2_author_id: '2145104654'
+  s2_url: null
+published_date: Dec 13, 2023
+published_date_iso: '2023-12-13'
+published_venue: AAAI 2023
+published_conference: AAAI 2023
+published_conference_short: AAAI
+published_conference_slug: aaai
+abstract: Despite Graph neural networks' significant performance gain over many classic
+  techniques in various graph-related downstream tasks, their successes are restricted
+  in shallow models due to over-smoothness and the difficulties of optimizations among
+  many other issues. In this paper, to alleviate the over-smoothing issue, we propose
+  a soft graph normalization method to preserve the diversities of node embeddings
+  and prevent indiscrimination due to possible over-closeness. Combined with residual
+  connections, we analyze the reason why the method can effectively capture the knowledge
+  in both input graph structures and node features even with deep networks. Additionally,
+  inspired by Curriculum Learning that learns easy examples before the hard ones,
+  we propose a novel label-smoothing-based learning framework to enhance the optimization
+  of deep GNNs, which iteratively smooths labels in an auxiliary graph and constructs
+  many gradual non-smooth tasks for extracting increasingly complex knowledge and
+  gradually discriminating nodes from coarse to fine. The method arguably reduces
+  the risk of overfitting and generalizes better results. Finally, extensive experiments
+  are carried out to demonstrate the effectiveness and potential of the proposed model
+  and learning framework through comparison with twelve existing baselines including
+  the state-of-the-art methods on twelve real-world node classification benchmarks.
+codebase_url: https://github.com/jslijin/Research-Paper-Codes
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
+has_results: true
+paper_type: method
+proposed_models:
+- R-SoftGraphAIN
+mrr: 0.0093
+adjusted_mrr: 0.0093
+mrr_dataset_count: 5
+benchmark_categories:
+- Classic
+- Heterophilic Graphs
+benchmark_coverage:
+- benchmark: Classic
+  benchmark_slug: classic
+  evaluated: 1
+  total: 12
+- benchmark: Heterophilic Graphs
+  benchmark_slug: heterophilic-graphs
+  evaluated: 4
+  total: 6
+task_categories:
+- node_classification
+experiment_scopes:
+- node-level
+results:
+- &id004
+  dataset: Actor
+  rows:
+  - model: R-SoftGraphAIN
+    model_key: nodeformer
+    model_plain: R-SoftGraphAIN
+    value: 0.7623
+    std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7623
+    sort_std: 0.0042
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: diggr
+    model_plain: R-SoftGraphAIN
+    value: 0.4535
+    std: 0.0353
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2408.13471'
+    title: Disentangled Generative Graph Representation Learning
+    date: Aug 24, 2024
+    date_display: Aug 2024
+    date_iso: '2024-08-24'
+    venue: IEEE Transactions on Neural Networks and Learning Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.4535
+    sort_std: 0.0353
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: dog
+    model_plain: R-SoftGraphAIN
+    value: 0.432
+    std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.432
+    sort_std: 0.012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BernNet
+    model_key: bernnet
+    model_plain: BernNet
+    value: 0.3631
+    std: 0.0039
+    paper_value: 0.3631
+    paper_std: 0.0039
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 11
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 16 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.4179
+    at_pub_std: 0.0101
+    at_pub_source_arxiv: '2303.13750'
+    at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    at_pub_source_date_iso: '2023-03-24'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-03-24'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.054800000000000015
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4179
+    true_std: 0.0101
+    value_gap_source_arxiv: '2303.13750'
+    value_gap_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.054800000000000015
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4179
+    sort_std: 0.0101
+    global_rank: 21
+    paper_rank: 179
+    rank_delta: 158
+    rank_delta_abs: 158
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    comparison_source_arxiv: '2303.13750'
+    is_best: false
+    is_std_outlier: false
+  - model: GCNII
+    model_key: gcnii
+    model_plain: GCNII
+    value: 0.3464
+    std: 0.0071
+    paper_value: 0.3464
+    paper_std: 0.0071
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 64 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.3861
+    at_pub_std: 0.0026
+    at_pub_source_arxiv: '2305.06142'
+    at_pub_source_title: Feature Expansion for Graph Neural Networks
+    at_pub_source_date_iso: '2023-05-10'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2026-03-10'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.03970000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4082
+    true_std: 0.0179
+    value_gap_source_arxiv: '2603.09195'
+    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06180000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4082
+    sort_std: 0.0179
+    global_rank: 39
+    paper_rank: 264
+    rank_delta: 225
+    rank_delta_abs: 225
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Feature Expansion for Graph Neural Networks
+    comparison_source_arxiv: '2305.06142'
+    is_best: false
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.2865
+    std: 0.0128
+    paper_value: 0.2865
+    paper_std: 0.0128
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.4046
+    at_pub_std: 0.0064
+    at_pub_source_arxiv: '2310.11762'
+    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    at_pub_source_date_iso: '2023-10-18'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2023-10-18'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: 0.11810000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4046
+    true_std: 0.0064
+    value_gap_source_arxiv: '2310.11762'
+    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11810000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4046
+    sort_std: 0.0064
+    global_rank: 46
+    paper_rank: 396
+    rank_delta: 350
+    rank_delta_abs: 350
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    comparison_source_arxiv: '2310.11762'
+    is_best: false
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.3283
+    std: 0.0088
+    paper_value: 0.3283
+    paper_std: 0.0088
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 11
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 16 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.3992
+    at_pub_std: 0.0067
+    at_pub_source_arxiv: '2303.13750'
+    at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    at_pub_source_date_iso: '2023-03-24'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-03-24'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.07090000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.3992
+    true_std: 0.0067
+    value_gap_source_arxiv: '2303.13750'
+    value_gap_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07090000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3992
+    sort_std: 0.0067
+    global_rank: 54
+    paper_rank: 308
+    rank_delta: 254
+    rank_delta_abs: 254
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    comparison_source_arxiv: '2303.13750'
+    is_best: false
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: r-softgraphain
+    model_plain: R-SoftGraphAIN
+    value: 0.3849
+    std: 0.0034
+    paper_value: 0.3849
+    paper_std: 0.0034
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 64 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-12-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3849
+    true_std: 0.0034
+    value_gap_source_arxiv: '2312.08221'
+    value_gap_source_title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization
+      for Over-smoothness in Deep GNNs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3849
+    sort_std: 0.0034
+    global_rank: 83
+    paper_rank: 83
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ChebNet
+    model_key: chebnet
+    model_plain: ChebNet
+    value: 0.3471
+    std: 0.0011
+    paper_value: 0.3471
+    paper_std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 11
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 16 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.3802
+    at_pub_std: 0.0023
+    at_pub_source_arxiv: '2212.03654'
+    at_pub_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    at_pub_source_date_iso: '2022-12-07'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-12-07'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.03309999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.3802
+    true_std: 0.0023
+    value_gap_source_arxiv: '2212.03654'
+    value_gap_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03309999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3802
+    sort_std: 0.0023
+    global_rank: 92
+    paper_rank: 259
+    rank_delta: 167
+    rank_delta_abs: 167
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    comparison_source_arxiv: '2212.03654'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.2516
+    std: 0.003
+    paper_value: 0.2516
+    paper_std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.369
+    at_pub_std: null
+    at_pub_source_arxiv: '2101.00797'
+    at_pub_source_title: Beyond Low-frequency Information in Graph Convolutional Networks
+    at_pub_source_date_iso: '2021-01-04'
+    at_pub_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.1174
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.362
+    true_std: 0.01
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1104
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.362
+    sort_std: 0.01
+    global_rank: 184
+    paper_rank: 445
+    rank_delta: 261
+    rank_delta_abs: 261
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Beyond Low-frequency Information in Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2101.00797'
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.2617
+    std: 0.0115
+    paper_value: 0.2617
+    paper_std: 0.0115
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.349
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2024-05-21'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.08729999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.361
+    true_std: 0.0155
+    value_gap_source_arxiv: '2405.12474'
+    value_gap_source_title: 'How Universal Polynomial Bases Enhance Spectral Graph
+      Neural Networks: Heterophily, Over-smoothing, and Over-squashing'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.361
+    sort_std: 0.0155
+    global_rank: 189
+    paper_rank: 429
+    rank_delta: 240
+    rank_delta_abs: 240
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.267
+    std: 0.0013
+    paper_value: 0.267
+    paper_std: 0.0013
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 11
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 16 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.3605
+    at_pub_std: 0.0035
+    at_pub_source_arxiv: '2210.03930'
+    at_pub_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    at_pub_source_date_iso: '2022-10-08'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-10-08'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: 0.09349999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.3605
+    true_std: 0.0035
+    value_gap_source_arxiv: '2210.03930'
+    value_gap_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09349999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3605
+    sort_std: 0.0035
+    global_rank: 191
+    paper_rank: 422
+    rank_delta: 231
+    rank_delta_abs: 231
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    comparison_source_arxiv: '2210.03930'
+    is_best: false
+    is_std_outlier: false
+  - model: DAGNN
+    model_key: dagnn
+    model_plain: DAGNN
+    value: 0.2773
+    std: 0.0108
+    paper_value: 0.2773
+    paper_std: 0.0108
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.3551
+    at_pub_std: 0.011
+    at_pub_source_arxiv: '2211.11761'
+    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    at_pub_source_date_iso: '2022-11-21'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-11-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.07780000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.3551
+    true_std: 0.011
+    value_gap_source_arxiv: '2211.11761'
+    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07780000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3551
+    sort_std: 0.011
+    global_rank: 226
+    paper_rank: 411
+    rank_delta: 185
+    rank_delta_abs: 185
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    comparison_source_arxiv: '2211.11761'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.2478
+    std: 0.0108
+    paper_value: 0.2478
+    paper_std: 0.0108
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 11
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 16 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.3237
+    at_pub_std: 0.0156
+    at_pub_source_arxiv: '2310.11762'
+    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    at_pub_source_date_iso: '2023-10-18'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2025-05-16'
+    value_gap_source_date_label: IJCAI 2025
+    gap_vs_at_pub: 0.0759
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.341
+    true_std: 0.003
+    value_gap_source_arxiv: '2505.11346'
+    value_gap_source_title: What Can We Learn From MIMO Graph Convolutions?
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09320000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.341
+    sort_std: 0.003
+    global_rank: 282
+    paper_rank: 448
+    rank_delta: 166
+    rank_delta_abs: 166
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    comparison_source_arxiv: '2310.11762'
+    is_best: false
+    is_std_outlier: false
+  - model: JKNet
+    model_key: jknet
+    model_plain: JKNet
+    value: 0.2923
+    std: 0.0065
+    paper_value: 0.2923
+    paper_std: 0.0065
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 11
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 16 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.3342
+    at_pub_std: 0.0028
+    at_pub_source_arxiv: '2210.03930'
+    at_pub_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    at_pub_source_date_iso: '2022-10-08'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-10-08'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: 0.04189999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.3342
+    true_std: 0.0028
+    value_gap_source_arxiv: '2210.03930'
+    value_gap_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: 0.04189999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3342
+    sort_std: 0.0028
+    global_rank: 298
+    paper_rank: 380
+    rank_delta: 82
+    rank_delta_abs: 82
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    comparison_source_arxiv: '2210.03930'
+    is_best: false
+    is_std_outlier: false
+  - model: PairNorm
+    model_key: pairnorm
+    model_plain: PairNorm
+    value: 0.2433
+    std: 0.016
+    paper_value: 0.2433
+    paper_std: 0.016
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, standard split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.274
+    at_pub_std: 0.0124
+    at_pub_source_arxiv: '2206.10991'
+    at_pub_source_title: Understanding convolution on graphs via energies
+    at_pub_source_date_iso: '2022-06-22'
+    at_pub_source_date_label: TMLR 2022
+    value_gap_source_date_iso: '2024-06-01'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.030700000000000033
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.274
+    true_std: null
+    value_gap_source_arxiv: '2406.10863'
+    value_gap_source_title: Global-Local Graph Neural Networks for Node-Classification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.030700000000000033
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.274
+    sort_std: null
+    global_rank: 420
+    paper_rank: 452
+    rank_delta: 32
+    rank_delta_abs: 32
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Understanding convolution on graphs via energies
+    comparison_source_arxiv: '2206.10991'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: Cornell
+  rows:
+  - model: R-SoftGraphAIN
+    model_key: p^2gnn
+    model_plain: R-SoftGraphAIN
+    value: 0.9541
+    std: 0.0272
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2603.09195'
+    title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    date: Mar 10, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-10'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9541
+    sort_std: 0.0272
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: acm-gcn
+    model_plain: R-SoftGraphAIN
+    value: 0.948
+    std: 0.038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.19785'
+    title: Heterophily-informed Message Passing
+    date: Apr 28, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-28'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/AaltoML/heterophily-imp
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.948
+    sort_std: 0.038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: rf-gcn
+    model_plain: R-SoftGraphAIN
+    value: 0.9429
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9429
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: BernNet
+    model_key: bernnet
+    model_plain: BernNet
+    value: 0.7297
+    std: 0.0171
+    paper_value: 0.7297
+    paper_std: 0.0171
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 11
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 16 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.9213
+    at_pub_std: 0.0164
+    at_pub_source_arxiv: '2202.03580'
+    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
+      Revisited
+    at_pub_source_date_iso: '2022-02-04'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-03-24'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.1916
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9213
+    true_std: 0.0164
+    value_gap_source_arxiv: '2303.13750'
+    value_gap_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1916
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9213
+    sort_std: 0.0164
+    global_rank: 15
+    paper_rank: 276
+    rank_delta: 261
+    rank_delta_abs: 261
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Convolutional Neural Networks on Graphs with Chebyshev
+      Approximation, Revisited
+    comparison_source_arxiv: '2202.03580'
+    is_best: true
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.5843
+    std: null
+    paper_value: 0.5843
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.9181
+    at_pub_std: 0.0196
+    at_pub_source_arxiv: '2303.13750'
+    at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    at_pub_source_date_iso: '2023-03-24'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-03-24'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.3338
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9181
+    true_std: 0.0196
+    value_gap_source_arxiv: '2303.13750'
+    value_gap_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3338
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9181
+    sort_std: 0.0196
+    global_rank: 20
+    paper_rank: 416
+    rank_delta: 396
+    rank_delta_abs: 396
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    comparison_source_arxiv: '2303.13750'
+    is_best: true
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.5827
+    std: null
+    paper_value: 0.5827
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.9137
+    at_pub_std: 0.0181
+    at_pub_source_arxiv: '2303.13750'
+    at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    at_pub_source_date_iso: '2023-03-24'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-03-06'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.33099999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9157
+    true_std: 0.0196
+    value_gap_source_arxiv: '2403.03676'
+    value_gap_source_title: Simplified PCNet with Robustness
+    value_gap_source_is_current_paper: false
+    value_gap: 0.33299999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9157
+    sort_std: 0.0196
+    global_rank: 22
+    paper_rank: 422
+    rank_delta: 400
+    rank_delta_abs: 400
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    comparison_source_arxiv: '2303.13750'
+    is_best: true
+    is_std_outlier: false
+  - model: GCNII
+    model_key: gcnii
+    model_plain: GCNII
+    value: 0.7416
+    std: null
+    paper_value: 0.7416
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.8426
+    at_pub_std: 0.0213
+    at_pub_source_arxiv: '2202.03580'
+    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
+      Revisited
+    at_pub_source_date_iso: '2022-02-04'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-03-10'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.10099999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8918
+    true_std: 0.0396
+    value_gap_source_arxiv: '2603.09195'
+    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1502
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8918
+    sort_std: 0.0396
+    global_rank: 41
+    paper_rank: 270
+    rank_delta: 229
+    rank_delta_abs: 229
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Convolutional Neural Networks on Graphs with Chebyshev
+      Approximation, Revisited
+    comparison_source_arxiv: '2202.03580'
+    is_best: true
+    is_std_outlier: false
+  - model: JKNet
+    model_key: jknet
+    model_plain: JKNet
+    value: 0.573
+    std: null
+    paper_value: 0.573
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.6426
+    at_pub_std: 0.0116
+    at_pub_source_arxiv: '2210.03930'
+    at_pub_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    at_pub_source_date_iso: '2022-10-08'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-06-18'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: 0.0696
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8878
+    true_std: null
+    value_gap_source_arxiv: '2406.12539'
+    value_gap_source_title: 'The Heterophilic Snowflake Hypothesis: Training and Empowering
+      GNNs for Heterophilic Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3148000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8878
+    sort_std: null
+    global_rank: 47
+    paper_rank: 438
+    rank_delta: 391
+    rank_delta_abs: 391
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    comparison_source_arxiv: '2210.03930'
+    is_best: false
+    is_std_outlier: false
+  - model: ChebNet
+    model_key: chebnet
+    model_plain: ChebNet
+    value: 0.5586
+    std: null
+    paper_value: 0.5586
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.8533
+    at_pub_std: 0.0104
+    at_pub_source_arxiv: '2212.03654'
+    at_pub_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    at_pub_source_date_iso: '2022-12-07'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-12-07'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.29469999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8533
+    true_std: 0.0104
+    value_gap_source_arxiv: '2212.03654'
+    value_gap_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.29469999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8533
+    sort_std: 0.0104
+    global_rank: 101
+    paper_rank: 452
+    rank_delta: 351
+    rank_delta_abs: 351
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    comparison_source_arxiv: '2212.03654'
+    is_best: false
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: r-softgraphain
+    model_plain: R-SoftGraphAIN
+    value: 0.827
+    std: 0.0148
+    paper_value: 0.827
+    paper_std: 0.0148
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 11
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-12-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.827
+    true_std: 0.0148
+    value_gap_source_arxiv: '2312.08221'
+    value_gap_source_title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization
+      for Over-smoothness in Deep GNNs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.827
+    sort_std: 0.0148
+    global_rank: 151
+    paper_rank: 151
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.5405
+    std: null
+    paper_value: 0.5405
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.819
+    at_pub_std: 0.054
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.27849999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.819
+    true_std: 0.054
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.27849999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.819
+    sort_std: 0.054
+    global_rank: 171
+    paper_rank: 467
+    rank_delta: 296
+    rank_delta_abs: 296
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.5676
+    std: null
+    paper_value: 0.5676
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.792
+    at_pub_std: 0.063
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2024-05-25'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.22440000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8015
+    true_std: 0.0037
+    value_gap_source_arxiv: '2405.16185'
+    value_gap_source_title: Differentiable Cluster Graph Neural Network
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2339
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8015
+    sort_std: 0.0037
+    global_rank: 190
+    paper_rank: 445
+    rank_delta: 255
+    rank_delta_abs: 255
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.5568
+    std: 0.0242
+    paper_value: 0.5568
+    paper_std: 0.0242
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 11
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 16 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.78
+    at_pub_std: 0.019
+    at_pub_source_arxiv: '2309.02769'
+    at_pub_source_title: 'Unifying over-smoothing and over-squashing in graph neural
+      networks: A physics informed approach and beyond'
+    at_pub_source_date_iso: '2023-09-06'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-01-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.22320000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.78
+    true_std: 0.019
+    value_gap_source_arxiv: '2401.14580'
+    value_gap_source_title: 'Design your own universe: a physics-informed agnostic
+      method for enhancing graph neural networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.22320000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.78
+    sort_std: 0.019
+    global_rank: 222
+    paper_rank: 453
+    rank_delta: 231
+    rank_delta_abs: 231
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Unifying over-smoothing and over-squashing in graph
+      neural networks: A physics informed approach and beyond'
+    comparison_source_arxiv: '2309.02769'
+    is_best: false
+    is_std_outlier: false
+  - model: DAGNN
+    model_key: dagnn
+    model_plain: DAGNN
+    value: 0.5843
+    std: null
+    paper_value: 0.5843
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.7351
+    at_pub_std: 0.0718
+    at_pub_source_arxiv: '2211.11761'
+    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    at_pub_source_date_iso: '2022-11-21'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-11-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.15079999999999993
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7351
+    true_std: 0.0718
+    value_gap_source_arxiv: '2211.11761'
+    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15079999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7351
+    sort_std: 0.0718
+    global_rank: 273
+    paper_rank: 416
+    rank_delta: 143
+    rank_delta_abs: 143
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    comparison_source_arxiv: '2211.11761'
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.5857
+    std: null
+    paper_value: 0.5857
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.735
+    at_pub_std: 0.043
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.1493
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.735
+    true_std: 0.043
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1493
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.735
+    sort_std: 0.043
+    global_rank: 275
+    paper_rank: 415
+    rank_delta: 140
+    rank_delta_abs: 140
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: PairNorm
+    model_key: pairnorm
+    model_plain: PairNorm
+    value: 0.3689
+    std: null
+    paper_value: 0.3689
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: node classification, 32 layers, test split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.5892
+    at_pub_std: 0.0315
+    at_pub_source_arxiv: '2206.10991'
+    at_pub_source_title: Understanding convolution on graphs via energies
+    at_pub_source_date_iso: '2022-06-22'
+    at_pub_source_date_label: TMLR 2022
+    value_gap_source_date_iso: '2024-06-01'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.22029999999999994
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5892
+    true_std: null
+    value_gap_source_arxiv: '2406.10863'
+    value_gap_source_title: Global-Local Graph Neural Networks for Node-Classification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.22029999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5892
+    sort_std: null
+    global_rank: 409
+    paper_rank: 571
+    rank_delta: 162
+    rank_delta_abs: 162
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Understanding convolution on graphs via energies
+    comparison_source_arxiv: '2206.10991'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id001
+  dataset: PubMed
+  rows:
+  - model: R-SoftGraphAIN
+    model_key: lgtl
+    model_plain: R-SoftGraphAIN
+    value: 0.9518
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9518
+    sort_std: 0.0011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: sagn
+    model_plain: R-SoftGraphAIN
+    value: 0.9517
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9517
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: mixhop (lo)
+    model_plain: R-SoftGraphAIN
+    value: 0.9513
+    std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.13902'
+    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
+      Framework'
+    date: May 22, 2024
+    date_display: May 2024
+    date_iso: '2024-05-22'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/QiaoYRan/LOGIN
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9513
+    sort_std: 0.0038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.8024
+    std: 0.0033
+    paper_value: 0.8024
+    paper_std: 0.0033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 32 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.905
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2024-05-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.10260000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9355
+    true_std: 0.006
+    value_gap_source_arxiv: '2405.13902'
+    value_gap_source_title: 'LOGIN: A Large Language Model Consulted Graph Neural
+      Network Training Framework'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1331
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9355
+    sort_std: 0.006
+    global_rank: 20
+    paper_rank: 451
+    rank_delta: 431
+    rank_delta_abs: 431
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.4422
+    std: 0.0093
+    paper_value: 0.4422
+    paper_std: 0.0093
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 32 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.897
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2026-05-24'
+    value_gap_source_date_label: ICML 2026
+    gap_vs_at_pub: 0.45480000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9296
+    true_std: null
+    value_gap_source_arxiv: '2605.24867'
+    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
+      Chain-of-Thought Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.4874
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9296
+    sort_std: null
+    global_rank: 21
+    paper_rank: 916
+    rank_delta: 895
+    rank_delta_abs: 895
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.7872
+    std: 0.0022
+    paper_value: 0.7872
+    paper_std: 0.0022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 32 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.897
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2026-05-24'
+    value_gap_source_date_label: ICML 2026
+    gap_vs_at_pub: 0.10980000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9233
+    true_std: null
+    value_gap_source_arxiv: '2605.24867'
+    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
+      Chain-of-Thought Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1361
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9233
+    sort_std: null
+    global_rank: 23
+    paper_rank: 655
+    rank_delta: 632
+    rank_delta_abs: 632
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
+    is_best: false
+    is_std_outlier: false
+  - model: JKNet
+    model_key: jknet
+    model_plain: JKNet
+    value: 0.691
+    std: 0.0733
+    paper_value: 0.691
+    paper_std: 0.0733
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 64 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.916
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-08-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.2250000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.916
+    true_std: null
+    value_gap_source_arxiv: '2008.09864'
+    value_gap_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2250000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.916
+    sort_std: null
+    global_rank: 27
+    paper_rank: 879
+    rank_delta: 852
+    rank_delta_abs: 852
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
+    is_best: true
+    is_std_outlier: true
+  - model: GCNII
+    model_key: gcnii
+    model_plain: GCNII
+    value: 0.7988
+    std: 0.0017
+    paper_value: 0.7988
+    paper_std: 0.0017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 64 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.903
+    at_pub_std: 0.0037
+    at_pub_source_arxiv: '2105.07634'
+    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
+      Design
+    at_pub_source_date_iso: '2021-05-17'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-07-29'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: 0.10420000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.903
+    true_std: null
+    value_gap_source_arxiv: '2307.16092'
+    value_gap_source_title: Feature Transportation Improves Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10420000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.903
+    sort_std: null
+    global_rank: 70
+    paper_rank: 490
+    rank_delta: 420
+    rank_delta_abs: 420
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Improving Graph Neural Networks with Simple Architecture
+      Design
+    comparison_source_arxiv: '2105.07634'
+    is_best: false
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.7892
+    std: 0.0145
+    paper_value: 0.7892
+    paper_std: 0.0145
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 64 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.823
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2307.09768'
+    at_pub_source_title: How Curvature Enhance the Adaptation Power of Framelet GCNs
+    at_pub_source_date_iso: '2023-07-19'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-23'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.03379999999999994
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8934
+    true_std: 0.0025
+    value_gap_source_arxiv: '2505.17660'
+    value_gap_source_title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking
+      Graph Transformer for Node Classification'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10419999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8934
+    sort_std: 0.0025
+    global_rank: 112
+    paper_rank: 627
+    rank_delta: 515
+    rank_delta_abs: 515
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: How Curvature Enhance the Adaptation Power of Framelet
+      GCNs
+    comparison_source_arxiv: '2307.09768'
+    is_best: false
+    is_std_outlier: false
+  - model: BernNet
+    model_key: bernnet
+    model_plain: BernNet
+    value: 0.7024
+    std: 0.1007
+    paper_value: 0.7024
+    paper_std: 0.1007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 32 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.8851
+    at_pub_std: 0.0039
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-11-30'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.18269999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8851
+    true_std: 0.0039
+    value_gap_source_arxiv: '2311.18177'
+    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.18269999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8851
+    sort_std: 0.0039
+    global_rank: 148
+    paper_rank: 871
+    rank_delta: 723
+    rank_delta_abs: 723
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: An Effective Universal Polynomial Basis for Spectral
+      Graph Neural Networks
+    comparison_source_arxiv: '2311.18177'
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.707
+    std: 0.0032
+    paper_value: 0.707
+    paper_std: 0.0032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 32 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.8714
+    at_pub_std: 0.009
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-22'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.1644
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8832
+    true_std: 0.0055
+    value_gap_source_arxiv: '2405.13902'
+    value_gap_source_title: 'LOGIN: A Large Language Model Consulted Graph Neural
+      Network Training Framework'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.17620000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8832
+    sort_std: 0.0055
+    global_rank: 159
+    paper_rank: 868
+    rank_delta: 709
+    rank_delta_abs: 709
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: An Effective Universal Polynomial Basis for Spectral
+      Graph Neural Networks
+    comparison_source_arxiv: '2311.18177'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7294
+    std: 0.0437
+    paper_value: 0.7294
+    paper_std: 0.0437
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 32 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.881
+    at_pub_std: null
+    at_pub_source_arxiv: '2308.10737'
+    at_pub_source_title: 'UGSL: A Unified Framework for Benchmarking Graph Structure
+      Learning'
+    at_pub_source_date_iso: '2023-08-21'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-08-21'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.15159999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.881
+    true_std: null
+    value_gap_source_arxiv: '2308.10737'
+    value_gap_source_title: 'UGSL: A Unified Framework for Benchmarking Graph Structure
+      Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15159999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.881
+    sort_std: null
+    global_rank: 176
+    paper_rank: 850
+    rank_delta: 674
+    rank_delta_abs: 674
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'UGSL: A Unified Framework for Benchmarking Graph Structure
+      Learning'
+    comparison_source_arxiv: '2308.10737'
+    is_best: false
+    is_std_outlier: false
+  - model: ChebNet
+    model_key: chebnet
+    model_plain: ChebNet
+    value: 0.4867
+    std: 0.032
+    paper_value: 0.4867
+    paper_std: 0.032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 32 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.8782
+    at_pub_std: 0.0024
+    at_pub_source_arxiv: '2311.18177'
+    at_pub_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    at_pub_source_date_iso: '2023-11-30'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-11-30'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.39149999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8782
+    true_std: 0.0024
+    value_gap_source_arxiv: '2311.18177'
+    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.39149999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8782
+    sort_std: 0.0024
+    global_rank: 185
+    paper_rank: 913
+    rank_delta: 728
+    rank_delta_abs: 728
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: An Effective Universal Polynomial Basis for Spectral
+      Graph Neural Networks
+    comparison_source_arxiv: '2311.18177'
+    is_best: false
+    is_std_outlier: false
+  - model: DAGNN
+    model_key: dagnn
+    model_plain: DAGNN
+    value: 0.8058
+    std: 0.0051
+    paper_value: 0.8058
+    paper_std: 0.0051
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 32 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.864
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-08-22'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.05820000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.864
+    true_std: null
+    value_gap_source_arxiv: '2008.09864'
+    value_gap_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05820000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.864
+    sort_std: null
+    global_rank: 247
+    paper_rank: 420
+    rank_delta: 173
+    rank_delta_abs: 173
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
+    is_best: false
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: r-softgraphain
+    model_plain: R-SoftGraphAIN
+    value: 0.8158
+    std: 0.0066
+    paper_value: 0.8158
+    paper_std: 0.0066
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 64 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-12-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8158
+    true_std: 0.0066
+    value_gap_source_arxiv: '2312.08221'
+    value_gap_source_title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization
+      for Over-smoothness in Deep GNNs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8158
+    sort_std: 0.0066
+    global_rank: 359
+    paper_rank: 359
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PairNorm
+    model_key: pairnorm
+    model_plain: PairNorm
+    value: 0.7212
+    std: 0.0301
+    paper_value: 0.7212
+    paper_std: 0.0301
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Pubmed using 32 layers, Planetoid split.
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.768
+    at_pub_std: null
+    at_pub_source_arxiv: '2006.07107'
+    at_pub_source_title: Understanding and Resolving Performance Degradation in Deep
+      Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-06-12'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2024-05-02'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.046800000000000064
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.78
+    true_std: null
+    value_gap_source_arxiv: '2405.01663'
+    value_gap_source_title: 'Oversmoothing alleviation in graph neural networks: a
+      survey and unified view'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.058800000000000074
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.78
+    sort_std: null
+    global_rank: 712
+    paper_rank: 855
+    rank_delta: 143
+    rank_delta_abs: 143
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Understanding and Resolving Performance Degradation in
+      Deep Graph Convolutional Networks
+    comparison_source_arxiv: '2006.07107'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id002
+  dataset: Texas
+  rows:
+  - model: R-SoftGraphAIN
+    model_key: p^2gnn
+    model_plain: R-SoftGraphAIN
+    value: 0.9672
+    std: 0.0147
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2603.09195'
+    title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    date: Mar 10, 2026
+    date_display: Mar 2026
+    date_iso: '2026-03-10'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9672
+    sort_std: 0.0147
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: dog
+    model_plain: R-SoftGraphAIN
+    value: 0.966
+    std: 0.021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
+    input_feature_source: raw_features
+    feature_source_evidence: DoG generates synthetic graph structures to boost the
+      performance of GNNs.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.966
+    sort_std: 0.021
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: gpf-plus
+    model_plain: R-SoftGraphAIN
+    value: 0.9583
+    std: 0.0419
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.05346'
+    title: 'ProG: A Graph Prompt Learning Benchmark'
+    date: Jun 8, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-08'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/sheldonresearch/ProG
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9583
+    sort_std: 0.0419
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: BernNet
+    model_key: bernnet
+    model_plain: BernNet
+    value: 0.7622
+    std: 0.0202
+    paper_value: 0.7622
+    paper_std: 0.0202
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 16 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.9328
+    at_pub_std: 0.0148
+    at_pub_source_arxiv: '2310.11762'
+    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    at_pub_source_date_iso: '2023-10-18'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2023-10-18'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: 0.17059999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9328
+    true_std: 0.0148
+    value_gap_source_arxiv: '2310.11762'
+    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.17059999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9328
+    sort_std: 0.0148
+    global_rank: 24
+    paper_rank: 335
+    rank_delta: 311
+    rank_delta_abs: 311
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    comparison_source_arxiv: '2310.11762'
+    is_best: false
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.627
+    std: 0.0265
+    paper_value: 0.627
+    paper_std: 0.0265
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 16 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.9292
+    at_pub_std: 0.0061
+    at_pub_source_arxiv: '2212.03654'
+    at_pub_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    at_pub_source_date_iso: '2022-12-07'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-12-07'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.3022
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9292
+    true_std: 0.0061
+    value_gap_source_arxiv: '2212.03654'
+    value_gap_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3022
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9292
+    sort_std: 0.0061
+    global_rank: 37
+    paper_rank: 500
+    rank_delta: 463
+    rank_delta_abs: 463
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    comparison_source_arxiv: '2212.03654'
+    is_best: false
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.6446
+    std: 0.0311
+    paper_value: 0.6446
+    paper_std: 0.0311
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 16 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.9131
+    at_pub_std: 0.0197
+    at_pub_source_arxiv: '2310.11762'
+    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    at_pub_source_date_iso: '2023-10-18'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2023-10-18'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: 0.26850000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9131
+    true_std: 0.0197
+    value_gap_source_arxiv: '2310.11762'
+    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.26850000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9131
+    sort_std: 0.0197
+    global_rank: 55
+    paper_rank: 482
+    rank_delta: 427
+    rank_delta_abs: 427
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    comparison_source_arxiv: '2310.11762'
+    is_best: false
+    is_std_outlier: false
+  - model: ChebNet
+    model_key: chebnet
+    model_plain: ChebNet
+    value: 0.6937
+    std: 0.0156
+    paper_value: 0.6937
+    paper_std: 0.0156
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 16 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.8628
+    at_pub_std: 0.0262
+    at_pub_source_arxiv: '2202.03580'
+    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
+      Revisited
+    at_pub_source_date_iso: '2022-02-04'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-02-04'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: 0.16910000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8628
+    true_std: 0.0262
+    value_gap_source_arxiv: '2202.03580'
+    value_gap_source_title: Convolutional Neural Networks on Graphs with Chebyshev
+      Approximation, Revisited
+    value_gap_source_is_current_paper: false
+    value_gap: 0.16910000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8628
+    sort_std: 0.0262
+    global_rank: 122
+    paper_rank: 428
+    rank_delta: 306
+    rank_delta_abs: 306
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Convolutional Neural Networks on Graphs with Chebyshev
+      Approximation, Revisited
+    comparison_source_arxiv: '2202.03580'
+    is_best: false
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: r-softgraphain
+    model_plain: R-SoftGraphAIN
+    value: 0.8595
+    std: 0.0121
+    paper_value: 0.8595
+    paper_std: 0.0121
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 16 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-12-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8595
+    true_std: 0.0121
+    value_gap_source_arxiv: '2312.08221'
+    value_gap_source_title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization
+      for Over-smoothness in Deep GNNs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8595
+    sort_std: 0.0121
+    global_rank: 143
+    paper_rank: 143
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCNII
+    model_key: gcnii
+    model_plain: GCNII
+    value: 0.6959
+    std: 0.061
+    paper_value: 0.6959
+    paper_std: 0.061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 16 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.8046
+    at_pub_std: 0.0591
+    at_pub_source_arxiv: '2202.03580'
+    at_pub_source_title: Convolutional Neural Networks on Graphs with Chebyshev Approximation,
+      Revisited
+    at_pub_source_date_iso: '2022-02-04'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-03-10'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.10870000000000002
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8246
+    true_std: 0.0458
+    value_gap_source_arxiv: '2603.09195'
+    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.12870000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8246
+    sort_std: 0.0458
+    global_rank: 221
+    paper_rank: 424
+    rank_delta: 203
+    rank_delta_abs: 203
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.6541
+    std: null
+    paper_value: 0.6541
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 32 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.8
+    at_pub_std: 0.0311
+    at_pub_source_arxiv: '2310.11762'
+    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    at_pub_source_date_iso: '2023-10-18'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2025-06-17'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.14590000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8162
+    true_std: 0.0645
+    value_gap_source_arxiv: '2506.14291'
+    value_gap_source_title: 'Equivariance Everywhere All At Once: A Recipe for Graph
+      Foundation Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.16210000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8162
+    sort_std: 0.0645
+    global_rank: 245
+    paper_rank: 471
+    rank_delta: 226
+    rank_delta_abs: 226
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    comparison_source_arxiv: '2310.11762'
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.6203
+    std: 0.0059
+    paper_value: 0.6203
+    paper_std: 0.0059
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 16 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.744
+    at_pub_std: 0.06
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.12370000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8131
+    true_std: 0.033
+    value_gap_source_arxiv: '2505.23014'
+    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
+      the Perspective of A System of Hyperbolic Partial Differential Equations'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.19280000000000008
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8131
+    sort_std: 0.033
+    global_rank: 256
+    paper_rank: 513
+    rank_delta: 257
+    rank_delta_abs: 257
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6216
+    std: null
+    paper_value: 0.6216
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 32 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.7869
+    at_pub_std: 0.0647
+    at_pub_source_arxiv: '2310.11762'
+    at_pub_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    at_pub_source_date_iso: '2023-10-18'
+    at_pub_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2025-04-22'
+    value_gap_source_date_label: WWW 2025
+    gap_vs_at_pub: 0.1653
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7933
+    true_std: 0.0447
+    value_gap_source_arxiv: '2505.20034'
+    value_gap_source_title: Graph Wave Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.17169999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7933
+    sort_std: 0.0447
+    global_rank: 299
+    paper_rank: 508
+    rank_delta: 209
+    rank_delta_abs: 209
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    comparison_source_arxiv: '2310.11762'
+    is_best: false
+    is_std_outlier: false
+  - model: JKNet
+    model_key: jknet
+    model_plain: JKNet
+    value: 0.6649
+    std: null
+    paper_value: 0.6649
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 64 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.7751
+    at_pub_std: 0.0172
+    at_pub_source_arxiv: '2210.03930'
+    at_pub_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    at_pub_source_date_iso: '2022-10-08'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-10-08'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: 0.11019999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7751
+    true_std: 0.0172
+    value_gap_source_arxiv: '2210.03930'
+    value_gap_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11019999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7751
+    sort_std: 0.0172
+    global_rank: 320
+    paper_rank: 456
+    rank_delta: 136
+    rank_delta_abs: 136
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    comparison_source_arxiv: '2210.03930'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.6217
+    std: null
+    paper_value: 0.6217
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 32 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.746
+    at_pub_std: 0.008
+    at_pub_source_arxiv: '2309.02769'
+    at_pub_source_title: 'Unifying over-smoothing and over-squashing in graph neural
+      networks: A physics informed approach and beyond'
+    at_pub_source_date_iso: '2023-09-06'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-01-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.12429999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.746
+    true_std: 0.008
+    value_gap_source_arxiv: '2401.14580'
+    value_gap_source_title: 'Design your own universe: a physics-informed agnostic
+      method for enhancing graph neural networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.12429999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.746
+    sort_std: 0.008
+    global_rank: 361
+    paper_rank: 508
+    rank_delta: 147
+    rank_delta_abs: 147
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Unifying over-smoothing and over-squashing in graph
+      neural networks: A physics informed approach and beyond'
+    comparison_source_arxiv: '2309.02769'
+    is_best: false
+    is_std_outlier: false
+  - model: DAGNN
+    model_key: dagnn
+    model_plain: DAGNN
+    value: 0.6108
+    std: 0.0199
+    paper_value: 0.6108
+    paper_std: 0.0199
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 16 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.7027
+    at_pub_std: 0.0493
+    at_pub_source_arxiv: '2211.11761'
+    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    at_pub_source_date_iso: '2022-11-21'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-11-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.09189999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7027
+    true_std: 0.0493
+    value_gap_source_arxiv: '2211.11761'
+    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09189999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7027
+    sort_std: 0.0493
+    global_rank: 415
+    paper_rank: 523
+    rank_delta: 108
+    rank_delta_abs: 108
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    comparison_source_arxiv: '2211.11761'
+    is_best: false
+    is_std_outlier: false
+  - model: PairNorm
+    model_key: pairnorm
+    model_plain: PairNorm
+    value: 0.4108
+    std: null
+    paper_value: 0.4108
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on Texas using 32 layers split
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.603
+    at_pub_std: 0.043
+    at_pub_source_arxiv: '2202.02296'
+    at_pub_source_title: Graph-Coupled Oscillator Networks
+    at_pub_source_date_iso: '2022-02-04'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2022-02-04'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: 0.19219999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.603
+    true_std: 0.043
+    value_gap_source_arxiv: '2202.02296'
+    value_gap_source_title: Graph-Coupled Oscillator Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.19219999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.603
+    sort_std: 0.043
+    global_rank: 530
+    paper_rank: 637
+    rank_delta: 107
+    rank_delta_abs: 107
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph-Coupled Oscillator Networks
+    comparison_source_arxiv: '2202.02296'
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id005
+  dataset: Wisconsin
+  rows:
+  - model: R-SoftGraphAIN
+    model_key: acm-gcn
+    model_plain: R-SoftGraphAIN
+    value: 0.958
+    std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.19785'
+    title: Heterophily-informed Message Passing
+    date: Apr 28, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-28'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/AaltoML/heterophily-imp
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.958
+    sort_std: 0.02
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.7135
+    std: 0.0556
+    paper_value: 0.7135
+    paper_std: 0.0556
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 32 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.855
+    at_pub_std: 0.05
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2025-04-28'
+    value_gap_source_date_label: TMLR 2025
+    gap_vs_at_pub: 0.14149999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.938
+    true_std: 0.024
+    value_gap_source_arxiv: '2504.19785'
+    value_gap_source_title: Heterophily-informed Message Passing
+    value_gap_source_is_current_paper: false
+    value_gap: 0.22449999999999992
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.938
+    sort_std: 0.024
+    global_rank: 2
+    paper_rank: 134
+    rank_delta: 132
+    rank_delta_abs: 132
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: dmd++
+    model_plain: R-SoftGraphAIN
+    value: 0.919
+    std: 0.026
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.919
+    sort_std: 0.026
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.599
+    std: 0.03
+    paper_value: 0.599
+    paper_std: 0.03
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 64 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.843
+    at_pub_std: 0.042
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2024-10-08'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.244
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.901
+    true_std: 0.035
+    value_gap_source_arxiv: '2410.05593'
+    value_gap_source_title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    value_gap_source_is_current_paper: false
+    value_gap: 0.30200000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.901
+    sort_std: 0.035
+    global_rank: 6
+    paper_rank: 186
+    rank_delta: 180
+    rank_delta_abs: 180
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: BernNet
+    model_key: bernnet
+    model_plain: BernNet
+    value: 0.6353
+    std: 0.0474
+    paper_value: 0.6353
+    paper_std: 0.0474
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 32 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.849
+    at_pub_std: 0.045
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.2137
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.849
+    true_std: 0.045
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2137
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.849
+    sort_std: 0.045
+    global_rank: 53
+    paper_rank: 165
+    rank_delta: 112
+    rank_delta_abs: 112
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
+    model_key: r-softgraphain
+    model_plain: R-SoftGraphAIN
+    value: 0.8471
+    std: 0.0088
+    paper_value: 0.8471
+    paper_std: 0.0088
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 64 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-12-13'
+    value_gap_source_date_label: AAAI 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8471
+    true_std: 0.0088
+    value_gap_source_arxiv: '2312.08221'
+    value_gap_source_title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization
+      for Over-smoothness in Deep GNNs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8471
+    sort_std: 0.0088
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.5373
+    std: 0.0107
+    paper_value: 0.5373
+    paper_std: 0.0107
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 32 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.843
+    at_pub_std: 0.037
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.30569999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.843
+    true_std: 0.037
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.30569999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.843
+    sort_std: 0.037
+    global_rank: 62
+    paper_rank: 209
+    rank_delta: 147
+    rank_delta_abs: 147
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.5784
+    std: 0.049
+    paper_value: 0.5784
+    paper_std: 0.049
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 32 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.831
+    at_pub_std: 0.032
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.25259999999999994
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.831
+    true_std: 0.032
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.25259999999999994
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.831
+    sort_std: 0.032
+    global_rank: 74
+    paper_rank: 190
+    rank_delta: 116
+    rank_delta_abs: 116
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: GCNII
+    model_key: gcnii
+    model_plain: GCNII
+    value: 0.7031
+    std: 0.0475
+    paper_value: 0.7031
+    paper_std: 0.0475
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 32 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.8157
+    at_pub_std: 0.0498
+    at_pub_source_arxiv: '2105.07634'
+    at_pub_source_title: Improving Graph Neural Networks with Simple Architecture
+      Design
+    at_pub_source_date_iso: '2021-05-17'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-02-23'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: 0.11260000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8157
+    true_std: null
+    value_gap_source_arxiv: '2302.12357'
+    value_gap_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
+      Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11260000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8157
+    sort_std: null
+    global_rank: 80
+    paper_rank: 139
+    rank_delta: 59
+    rank_delta_abs: 59
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Improving Graph Neural Networks with Simple Architecture
+      Design
+    comparison_source_arxiv: '2105.07634'
+    is_best: false
+    is_std_outlier: false
+  - model: ChebNet
+    model_key: chebnet
+    model_plain: ChebNet
+    value: 0.5294
+    std: 0.0
+    paper_value: 0.5294
+    paper_std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 32 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.7098
+    at_pub_std: 0.0322
+    at_pub_source_arxiv: '2310.07430'
+    at_pub_source_title: Non-backtracking Graph Neural Networks
+    at_pub_source_date_iso: '2023-10-11'
+    at_pub_source_date_label: TMLR 2023
+    value_gap_source_date_iso: '2026-05-20'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.1804
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7902
+    true_std: 0.0318
+    value_gap_source_arxiv: '2605.21247'
+    value_gap_source_title: Graph Navier–Stokes Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.26080000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7902
+    sort_std: 0.0318
+    global_rank: 99
+    paper_rank: 213
+    rank_delta: 114
+    rank_delta_abs: 114
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Non-backtracking Graph Neural Networks
+    comparison_source_arxiv: '2310.07430'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.5098
+    std: 0.0438
+    paper_value: 0.5098
+    paper_std: 0.0438
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 64 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-16'
+    value_gap_source_date_label: IJCAI 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.79
+    true_std: 0.006
+    value_gap_source_arxiv: '2505.11346'
+    value_gap_source_title: What Can We Learn From MIMO Graph Convolutions?
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2802
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.79
+    sort_std: 0.006
+    global_rank: 100
+    paper_rank: 224
+    rank_delta: 124
+    rank_delta_abs: 124
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.5216
+    std: 0.0708
+    paper_value: 0.5216
+    paper_std: 0.0708
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 64 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.778
+    at_pub_std: 0.047
+    at_pub_source_arxiv: '2206.02386'
+    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
+      Clustering
+    at_pub_source_date_iso: '2022-06-06'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-06-06'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.2564000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.778
+    true_std: 0.047
+    value_gap_source_arxiv: '2206.02386'
+    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2564000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.778
+    sort_std: 0.047
+    global_rank: 105
+    paper_rank: 219
+    rank_delta: 114
+    rank_delta_abs: 114
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
+      Spectral Clustering
+    comparison_source_arxiv: '2206.02386'
+    is_best: false
+    is_std_outlier: false
+  - model: DAGNN
+    model_key: dagnn
+    model_plain: DAGNN
+    value: 0.5176
+    std: 0.0478
+    paper_value: 0.5176
+    paper_std: 0.0478
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 64 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.7176
+    at_pub_std: 0.0525
+    at_pub_source_arxiv: '2211.11761'
+    at_pub_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    at_pub_source_date_iso: '2022-11-21'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-11-21'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.20000000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7176
+    true_std: 0.0525
+    value_gap_source_arxiv: '2211.11761'
+    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.20000000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7176
+    sort_std: 0.0525
+    global_rank: 133
+    paper_rank: 222
+    rank_delta: 89
+    rank_delta_abs: 89
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
+    comparison_source_arxiv: '2211.11761'
+    is_best: false
+    is_std_outlier: false
+  - model: JKNet
+    model_key: jknet
+    model_plain: JKNet
+    value: 0.5608
+    std: 0.0404
+    paper_value: 0.5608
+    paper_std: 0.0404
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 64 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.6098
+    at_pub_std: 0.0297
+    at_pub_source_arxiv: '2206.14418'
+    at_pub_source_title: Optimization-Induced Graph Implicit Nonlinear Diffusion
+    at_pub_source_date_iso: '2022-06-29'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2022-06-29'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: 0.049000000000000044
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.6098
+    true_std: 0.0297
+    value_gap_source_arxiv: '2206.14418'
+    value_gap_source_title: Optimization-Induced Graph Implicit Nonlinear Diffusion
+    value_gap_source_is_current_paper: false
+    value_gap: 0.049000000000000044
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6098
+    sort_std: 0.0297
+    global_rank: 180
+    paper_rank: 199
+    rank_delta: 19
+    rank_delta_abs: 19
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PairNorm
+    model_key: pairnorm
+    model_plain: PairNorm
+    value: 0.5294
+    std: 0.1135
+    paper_value: 0.5294
+    paper_std: 0.1135
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Accuracy on 64 layers, standard split (Geom-GCN 10 fixed splits)
+    date: Dec 13, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-13'
+    published_venue: AAAI 2023
+    published_conference: AAAI 2023
+    at_pub_value: 0.4843
+    at_pub_std: 0.0614
+    at_pub_source_arxiv: '2210.09789'
+    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
+      Networks'
+    at_pub_source_date_iso: '2022-10-18'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-06-01'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.04509999999999997
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6027
+    true_std: null
+    value_gap_source_arxiv: '2406.10863'
+    value_gap_source_title: Global-Local Graph Neural Networks for Node-Classification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07330000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6027
+    sort_std: null
+    global_rank: 184
+    paper_rank: 213
+    rank_delta: 29
+    rank_delta_abs: 29
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+results_grouped:
+- benchmark: Classic
+  datasets:
+  - *id001
+- benchmark: Heterophilic Graphs
+  datasets:
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+datasets_by_scope:
+- scope: node-level
+  label: Node-level
+  benchmarks:
+  - benchmark: Classic
+    benchmark_slug: classic
+    datasets:
+    - dataset: PubMed
+      dataset_slug: pubmed
+  - benchmark: Heterophilic Graphs
+    benchmark_slug: heterophilic-graphs
+    datasets:
+    - dataset: Texas
+      dataset_slug: texas
+    - dataset: Cornell
+      dataset_slug: cornell
+    - dataset: Actor
+      dataset_slug: actor
+    - dataset: Wisconsin
+      dataset_slug: wisconsin
+single_proposed_model: R-SoftGraphAIN
+main_figure: /figures/2312.08221/main_figure.jpegoptim.jpg
+---
+

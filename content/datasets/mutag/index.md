@@ -13,7 +13,7 @@ stats:
   avg_nodes: 17.93
   avg_edges: 19.79
   num_classes: 2
-result_count: 1025
+result_count: 1016
 best_model:
   model: MSH-GNN
   value: 0.991
@@ -30,6 +30,14 @@ papers:
     Case Study on Graph Kernel Networks'
   date_iso: '2026-05-14'
   venue: TMLR 2026
+- arxiv_id: '2605.13383'
+  title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+  date_iso: '2026-05-13'
+  venue: ''
+- arxiv_id: '2601.07419'
+  title: 'Position: Don''t be Afraid of Over-Smoothing And Over-Squashing'
+  date_iso: '2026-01-12'
+  venue: ''
 - arxiv_id: '2512.13235'
   title: 'CORE: Contrastive Masked Feature Reconstruction on Graphs'
   date_iso: '2025-12-15'
@@ -142,10 +150,6 @@ papers:
   title: Graph Structure Refinement with Energy-based Contrastive Learning
   date_iso: '2024-12-20'
   venue: AAAI 2024
-- arxiv_id: '2411.06427'
-  title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-  date_iso: '2024-11-10'
-  venue: NeurIPS 2024
 - arxiv_id: '2410.12657'
   title: Explanation-Preserving Augmentation for Semi-Supervised Graph Representation
     Learning
@@ -238,6 +242,10 @@ papers:
   venue: NeurIPS 2024
 - arxiv_id: '2406.10863'
   title: Global-Local Graph Neural Networks for Node-Classification
+  date_iso: '2024-06-01'
+  venue: ''
+- arxiv_id: '2406.00403'
+  title: Dual-perspective Cross Contrastive Learning in Graph Transformers
   date_iso: '2024-06-01'
   venue: ''
 - arxiv_id: '2405.14742'
@@ -419,6 +427,10 @@ papers:
   title: Union Subgraph Neural Networks
   date_iso: '2023-05-25'
   venue: AAAI 2023
+- arxiv_id: '2305.13987'
+  title: On Structural Expressive Power of Graph Transformers
+  date_iso: '2023-05-23'
+  venue: KDD 2023
 - arxiv_id: '2305.12895'
   title: 'DEGREE: Decomposition Based Explanation for Graph Neural Networks'
   date_iso: '2023-05-22'
@@ -458,10 +470,6 @@ papers:
   title: Total Variation Graph Neural Networks
   date_iso: '2022-11-11'
   venue: ICML 2022
-- arxiv_id: '2210.11790'
-  title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing in GNNs'
-  date_iso: '2022-10-21'
-  venue: ICLR 2022
 - arxiv_id: '2210.02636'
   title: Geodesic Graph Neural Network for Efficient Graph Representation Learning
   date_iso: '2022-10-06'
@@ -492,10 +500,6 @@ papers:
   title: Higher-order Clustering and Pooling for Graph Neural Networks
   date_iso: '2022-09-02'
   venue: ''
-- arxiv_id: '2208.06956'
-  title: 'ArieL: Adversarial Graph Contrastive Learning'
-  date_iso: '2022-08-15'
-  venue: ''
 - arxiv_id: '2206.14418'
   title: Optimization-Induced Graph Implicit Nonlinear Diffusion
   date_iso: '2022-06-29'
@@ -512,10 +516,6 @@ papers:
   title: Understanding and Extending Subgraph GNNs by Rethinking Their Symmetries
   date_iso: '2022-06-22'
   venue: NeurIPS 2022
-- arxiv_id: '2206.09345'
-  title: Finding Diverse and Predictable Subgraphs for Graph Domain Generalization
-  date_iso: '2022-06-19'
-  venue: ''
 - arxiv_id: '2206.07869'
   title: Let Invariant Rationale Discovery Inspire Graph Contrastive Learning
   date_iso: '2022-06-16'
@@ -630,11 +630,23 @@ papers:
   title: 'ifMixup: Interpolating Graph Pair to Regularize Graph Classification'
   date_iso: '2021-10-18'
   venue: AAAI 2021
+- arxiv_id: '2110.03753'
+  title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness'
+  date_iso: '2021-10-07'
+  venue: ICLR 2021
+- arxiv_id: '2112.14936'
+  title: Heterogeneous Graph Benchmarks
+  date_iso: '2021-08-14'
+  venue: KDD 2021
 - arxiv_id: '2107.01495'
   title: On Positional and Structural Node Features for Graph Neural Networks on Non-attributed
     Graphs
   date_iso: '2021-07-03'
   venue: ''
+- arxiv_id: '2106.12575'
+  title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+  date_iso: '2021-06-23'
+  venue: NeurIPS 2021
 - arxiv_id: '2106.09645'
   title: Prototypical Graph Contrastive Learning
   date_iso: '2021-06-17'
@@ -681,6 +693,11 @@ papers:
   title: 'AutoGL: A Library for Automated Graph Learning'
   date_iso: '2021-04-11'
   venue: ICLR 2021
+- arxiv_id: '2103.13125'
+  title: Learning Graph Representation by Aggregating Subgraphs via Mutual Information
+    Maximization
+  date_iso: '2021-03-24'
+  venue: ''
 - arxiv_id: '2103.11155'
   title: Recognizing Predictive Substructures with Subgraph Information Bottleneck
   date_iso: '2021-03-20'
@@ -792,9 +809,18 @@ papers:
   title: Graph Convolutional Networks with EigenPooling
   date_iso: '2019-04-30'
   venue: KDD 2019
+- arxiv_id: '1903.02428'
+  title: Fast Graph Representation Learning with PyTorch Geometric
+  date_iso: '2019-03-06'
+  venue: ICLR 2019
 - arxiv_id: '1901.01343'
   title: Graph Neural Networks With Convolutional ARMA Filters
   date_iso: '2019-01-05'
+  venue: ''
+- arxiv_id: '1901.08296'
+  title: 'Deep Learning on Attributed Graphs: A Journey from Graphs to Their Embeddings
+    and Back'
+  date_iso: '2018-12-14'
   venue: ''
 - arxiv_id: '1810.00826'
   title: How Powerful are Graph Neural Networks?
@@ -847,6 +873,7 @@ variants:
     num_classes: 2
   metrics:
   - Accuracy
+  - AP
   - AUC
   - AUROC
   - CF-ACC
@@ -859,6 +886,7 @@ variants:
   - Unfaithfulness
   metric_display_names:
   - Accuracy
+  - AP
   - AUC
   - AUROC
   - CF-ACC
@@ -907,8 +935,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.003
+    - null
     - null
     - null
     - null
@@ -953,8 +983,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.036
+    - null
     - null
     - null
     - null
@@ -999,8 +1031,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.025
+    - null
     - null
     - null
     - null
@@ -1046,8 +1080,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0136
+    - null
     - null
     - null
     - null
@@ -1093,8 +1129,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.017
+    - null
     - null
     - null
     - null
@@ -1140,8 +1178,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0455
+    - null
     - null
     - null
     - null
@@ -1187,8 +1227,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0215
+    - null
     - null
     - null
     - null
@@ -1234,8 +1276,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.026
+    - null
     - null
     - null
     - null
@@ -1280,8 +1324,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.036
+    - null
     - null
     - null
     - null
@@ -1326,8 +1372,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.025
+    - null
     - null
     - null
     - null
@@ -1372,8 +1420,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.046
+    - null
     - null
     - null
     - null
@@ -1419,55 +1469,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0201
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: DIR
-    model_plain: DIR
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_iso: '2025-05-07'
-    date_display: May 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9601
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0224
     - null
     - null
     - null
@@ -1512,8 +1517,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.024
+    - null
     - null
     - null
     - null
@@ -1559,8 +1566,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.02
+    - null
     - null
     - null
     - null
@@ -1606,8 +1615,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0123
+    - null
     - null
     - null
     - null
@@ -1653,8 +1664,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.044
+    - null
     - null
     - null
     - null
@@ -1700,8 +1713,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.006
+    - null
     - null
     - null
     - null
@@ -1746,8 +1761,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.03
+    - null
     - null
     - null
     - null
@@ -1792,8 +1809,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.03
+    - null
     - null
     - null
     - null
@@ -1839,8 +1858,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0447
+    - null
     - null
     - null
     - null
@@ -1885,8 +1906,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0226
+    - null
     - null
     - null
     - null
@@ -1931,7 +1954,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1977,8 +2002,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.019
+    - null
     - null
     - null
     - null
@@ -2023,8 +2050,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.033
+    - null
     - null
     - null
     - null
@@ -2070,8 +2099,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0644
+    - null
     - null
     - null
     - null
@@ -2116,8 +2147,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.027
+    - null
     - null
     - null
     - null
@@ -2162,8 +2195,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.048
+    - null
     - null
     - null
     - null
@@ -2208,8 +2243,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0628
+    - null
     - null
     - null
     - null
@@ -2254,7 +2291,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2300,8 +2339,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.04
+    - null
     - null
     - null
     - null
@@ -2346,8 +2387,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.04
+    - null
     - null
     - null
     - null
@@ -2393,8 +2436,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0524
+    - null
     - null
     - null
     - null
@@ -2440,8 +2485,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.066
+    - null
     - null
     - null
     - null
@@ -2486,8 +2533,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.014
+    - null
     - null
     - null
     - null
@@ -2533,8 +2582,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.058
+    - null
     - null
     - null
     - null
@@ -2579,8 +2630,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.086
+    - null
     - null
     - null
     - null
@@ -2625,8 +2678,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.034
+    - null
     - null
     - null
     - null
@@ -2671,8 +2726,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0068
+    - null
     - null
     - null
     - null
@@ -2717,8 +2774,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.041
+    - null
     - null
     - null
     - null
@@ -2763,8 +2822,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.061
+    - null
     - null
     - null
     - null
@@ -2809,8 +2870,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0533
+    - null
     - null
     - null
     - null
@@ -2855,8 +2918,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.063
+    - null
     - null
     - null
     - null
@@ -2901,8 +2966,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0533
+    - null
     - null
     - null
     - null
@@ -2948,8 +3015,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.03
+    - null
     - null
     - null
     - null
@@ -2995,8 +3064,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.053
+    - null
     - null
     - null
     - null
@@ -3041,8 +3112,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.016
+    - null
     - null
     - null
     - null
@@ -3088,54 +3161,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0074
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: CIN
-    model_plain: CIN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2206.11140'
-    title: Understanding and Extending Subgraph GNNs by Rethinking Their Symmetries
-    date: Jun 22, 2022
-    date_iso: '2022-06-22'
-    date_display: Jun 2022
-    codebase_url: https://github.com/beabevi/SUN
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.927
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.061
     - null
     - null
     - null
@@ -3180,6 +3209,7 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.058
     - null
@@ -3192,20 +3222,118 @@ variants:
     - null
     - null
     - null
-  row_count: 1025
+    - null
+  - model: CIN
+    model_plain: CIN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.12575'
+    title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+    date: Jun 23, 2021
+    date_iso: '2021-06-23'
+    date_display: Jun 2021
+    codebase_url: https://github.com/twitter-research/cwn
+    published_conference: NeurIPS 2021
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2021
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.927
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.061
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SAN
+    model_plain: SAN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2512.04530'
+    title: Explainable Graph Representation Learning via Graph Pattern Analysis
+    date: Sep 1, 2025
+    date_iso: '2025-09-01'
+    date_display: Sep 2025
+    codebase_url: ''
+    published_conference: IJCAI 2025
+    published_conference_short: IJCAI
+    published_conference_slug: ijcai
+    published_venue: IJCAI 2025
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9265
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0153
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 1016
   rows_json: /data/datasets/mutag/10-fold-cv-rows.json
   chart_json: /data/datasets/mutag/10-fold-cv-chart.json
   arch_counts:
-    gnn: 594
+    gnn: 591
     hybrid: 191
-    graph_transformer: 34
+    graph_transformer: 35
     llm: 2
-    walk: 12
-    traditional: 137
+    walk: 13
+    traditional: 136
   metric_counts:
-  - 947
+  - 948
+  - 8
   - 21
-  - 31
+  - 13
   - 10
   - 4
   - 6
@@ -3254,10 +3382,17 @@ variants:
     date: '2025-05-21'
   milestones_by_metric:
     Accuracy: *id001
+    AP:
+    - value: 0.7925
+      std: 0.0619
+      model: Schrödinger PMO
+      arxiv_id: '2605.13383'
+      title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+      date: '2026-05-13'
     AUC:
-    - value: 0.95
+    - value: 0.969
       std: null
-      model: MoCL-DK
+      model: MoCL-DK-G(CL)
       arxiv_id: '2106.04509'
       title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive
         Learning from Molecular Graph'
@@ -3269,12 +3404,12 @@ variants:
       title: How Interpretable Are Interpretable Graph Neural Networks?
       date: '2024-06-12'
     AUROC:
-    - value: 0.995
-      std: null
-      model: BWGNN
-      arxiv_id: '2411.06427'
-      title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-      date: '2024-11-10'
+    - value: 0.9163
+      std: 0.0031
+      model: LGKDE
+      arxiv_id: '2505.21285'
+      title: Learnable Kernel Density Estimation for Graphs
+      date: '2025-05-27'
     CF-ACC:
     - value: 0.797
       std: null

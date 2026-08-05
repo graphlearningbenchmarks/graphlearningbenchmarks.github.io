@@ -72,9 +72,9 @@ results:
 - &id002
   dataset: ogbl-citation2
   rows:
-  - model: SIGN
+  - model: Classification
     model_key: mplp
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.9072
     std: 0.0012
     metric: MRR
@@ -105,9 +105,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SIGN
+  - model: Classification
     model_key: cfg
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.8997
     std: 0.0015
     metric: MRR
@@ -138,9 +138,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SIGN
+  - model: Classification
     model_key: sieg
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.8987
     std: 0.0018
     metric: MRR
@@ -366,8 +366,8 @@ results:
     value_note: ''
     sort_value: 0.8455
     sort_std: 0.0355
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -434,8 +434,8 @@ results:
     value_note: ''
     sort_value: 0.8367
     sort_std: 0.0007
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -502,8 +502,8 @@ results:
     value_note: ''
     sort_value: 0.8336
     sort_std: 0.0014
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -570,8 +570,8 @@ results:
     value_note: ''
     sort_value: 0.7604
     sort_std: 0.0
-    global_rank: 47
-    paper_rank: 57
+    global_rank: 52
+    paper_rank: 62
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -639,8 +639,8 @@ results:
     value_note: ''
     sort_value: 0.7596
     sort_std: 0.0
-    global_rank: 48
-    paper_rank: 57
+    global_rank: 53
+    paper_rank: 62
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -708,8 +708,8 @@ results:
     value_note: ''
     sort_value: 0.743
     sort_std: 0.0
-    global_rank: 50
-    paper_rank: 58
+    global_rank: 55
+    paper_rank: 63
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -776,8 +776,8 @@ results:
     value_note: ''
     sort_value: 0.2764
     sort_std: 0.0021
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -866,6 +866,40 @@ results:
     is_best: false
     is_std_outlier: false
   - model: SIGN
+    model_key: gidn
+    model_plain: SIGN
+    value: 0.7096
+    std: 0.0055
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.01301'
+    title: 'GIDN: A Lightweight Graph Inception Diffusion Network for High-efficient
+      Link Prediction'
+    date: Oct 4, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-04'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7096
+    sort_std: 0.0055
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SIGN
     model_key: sign
     model_plain: SIGN
     value: 0.6664
@@ -922,8 +956,8 @@ results:
     value_note: ''
     sort_value: 0.6664
     sort_std: 0.0064
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -990,8 +1024,8 @@ results:
     value_note: ''
     sort_value: 0.6621
     sort_std: 0.0033
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1058,8 +1092,8 @@ results:
     value_note: ''
     sort_value: 0.6606
     sort_std: 0.0022
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1127,8 +1161,8 @@ results:
     value_note: ''
     sort_value: 0.6435
     sort_std: 0.0
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1196,8 +1230,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: 0.0
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1265,8 +1299,8 @@ results:
     value_note: ''
     sort_value: 0.6137
     sort_std: 0.0
-    global_rank: 18
-    paper_rank: 22
+    global_rank: 22
+    paper_rank: 26
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -1333,10 +1367,10 @@ results:
     value_note: ''
     sort_value: 0.5944
     sort_std: 0.0137
-    global_rank: 19
-    paper_rank: 53
-    rank_delta: 34
-    rank_delta_abs: 34
+    global_rank: 23
+    paper_rank: 63
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1401,8 +1435,8 @@ results:
     value_note: ''
     sort_value: 0.3952
     sort_std: 0.0128
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1469,8 +1503,8 @@ results:
     value_note: ''
     sort_value: 0.0607
     sort_std: 0.0018
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1505,5 +1539,6 @@ datasets_by_scope:
       dataset_slug: ogbl-collab
     - dataset: ogbl-citation2
       dataset_slug: ogbl-citation2
+main_figure: /figures/2409.17475/main_figure.jpegoptim.jpg
 ---
 

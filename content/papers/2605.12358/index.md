@@ -47,8 +47,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - LGSM
-mrr: 0.0382
-adjusted_mrr: 0.0255
+mrr: 0.0172
+adjusted_mrr: 0.0115
 mrr_dataset_count: 2
 benchmark_categories:
 - LRGB
@@ -554,9 +554,9 @@ results:
 - &id002
   dataset: Peptides-func
   rows:
-  - model: SAN+RWSE
+  - model: Tango_GPS
     model_key: s^2gcn
-    model_plain: SAN+RWSE
+    model_plain: Tango_GPS
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -582,6 +582,73 @@ results:
     global_rank: 1
     sort_value: 0.7311
     sort_std: 0.0066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: s^2 gcn + pe
+    model_plain: Tango_GPS
+    value: 0.7311
+    std: 0.0066
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.19121'
+    title: Spatio-Spectral Graph Neural Networks
+    date: May 29, 2024
+    date_display: May 2024
+    date_iso: '2024-05-29'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: PE is described as stable positional encodings almost
+      free of cost for S2GNNs.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.7311
+    sort_std: 0.0066
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Tango_GPS
+    model_key: s4g
+    model_plain: Tango_GPS
+    value: 0.7293
+    std: 0.0004
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-13'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7293
+    sort_std: 0.0004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -644,8 +711,8 @@ results:
     value_note: ''
     sort_value: 0.7261
     sort_std: 0.0011
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -656,38 +723,72 @@ results:
     comparison_source_arxiv: '2604.24293'
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: mpnns
-    model_plain: SAN+RWSE
-    value: 0.725
-    std: 0.0023
+  - model: DRew-GCN
+    model_key: drew-gcn
+    model_plain: DRew-GCN
+    value: 0.6996
+    std: 0.0076
+    paper_value: 0.6996
+    paper_std: 0.0076
     metric: AP
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2510.08450'
-    title: 'gLSTM: Mitigating Over-Squashing by Increasing Storage Capacity'
-    date: Oct 9, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-09'
-    venue: arXiv.org
-    codebase_url: https://github.com/HughBlayney/gLSTM
-    uses_external_data: false
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.725
-    sort_std: 0.0023
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    table_ref: Table 1
+    source_ref: dwivedi_long_2022
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Standard split for Peptides-func
+    date: May 12, 2026
+    date_display: May 2026
+    date_iso: '2026-05-12'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.715
+    at_pub_std: 0.0044
+    at_pub_source_arxiv: '2405.19121'
+    at_pub_source_title: Spatio-Spectral Graph Neural Networks
+    at_pub_source_date_iso: '2024-05-29'
+    at_pub_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2024-05-29'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.01539999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.715
+    true_std: 0.0044
+    value_gap_source_arxiv: '2405.19121'
+    value_gap_source_title: Spatio-Spectral Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.01539999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.715
+    sort_std: 0.0044
+    global_rank: 13
+    paper_rank: 40
+    rank_delta: 27
+    rank_delta_abs: 27
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Spatio-Spectral Graph Neural Networks
+    comparison_source_arxiv: '2405.19121'
+    is_best: false
     is_std_outlier: false
   - model: DRew-GCN+LapPE
     model_key: drew-gcn+lappe
@@ -745,8 +846,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.0044
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -812,8 +913,8 @@ results:
     value_note: ''
     sort_value: 0.7126
     sort_std: 0.0045
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -853,12 +954,12 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7096
+    at_pub_std: 0.0078
+    at_pub_source_arxiv: '2510.12111'
+    at_pub_source_title: 'Chimera: State Space Models Beyond Sequences'
+    at_pub_source_date_iso: '2025-10-14'
+    at_pub_source_date_label: TMLR 2025
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -879,8 +980,8 @@ results:
     value_note: ''
     sort_value: 0.7096
     sort_std: 0.0078
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -920,12 +1021,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.7071
+    at_pub_std: 0.0083
+    at_pub_source_arxiv: '2402.08678'
+    at_pub_source_title: 'Graph Mamba: Towards Learning on Graphs with State Space
+      Models'
+    at_pub_source_date_iso: '2024-02-13'
+    at_pub_source_date_label: KDD 2024
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -946,8 +1048,8 @@ results:
     value_note: ''
     sort_value: 0.7071
     sort_std: 0.0083
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -987,16 +1089,15 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.593
-    at_pub_std: 0.0023
-    at_pub_source_arxiv: '2403.13749'
-    at_pub_source_title: 'Weisfeiler and Leman Go Loopy: A New Hierarchy for Graph
-      Representational Learning'
-    at_pub_source_date_iso: '2024-03-20'
-    at_pub_source_date_label: NeurIPS 2024
+    at_pub_value: 0.607
+    at_pub_std: 0.01
+    at_pub_source_arxiv: '2601.07419'
+    at_pub_source_title: 'Position: Don''t be Afraid of Over-Smoothing And Over-Squashing'
+    at_pub_source_date_iso: '2026-01-12'
+    at_pub_source_date_label: '2026'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.1129
+    gap_vs_at_pub: 0.09889999999999999
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -1014,16 +1115,15 @@ results:
     value_note: ''
     sort_value: 0.7059
     sort_std: 0.0089
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'Weisfeiler and Leman Go Loopy: A New Hierarchy for Graph
-      Representational Learning'
-    comparison_source_arxiv: '2403.13749'
+    comparison_source_title: 'Position: Don''t be Afraid of Over-Smoothing And Over-Squashing'
+    comparison_source_arxiv: '2601.07419'
     is_best: false
     is_std_outlier: false
   - model: GRAMA_GatedGCN
@@ -1082,8 +1182,8 @@ results:
     value_note: ''
     sort_value: 0.7049
     sort_std: 0.0051
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1125,10 +1225,10 @@ results:
     published_conference: ''
     at_pub_value: 0.6765
     at_pub_std: 0.0047
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.02410000000000001
@@ -1149,83 +1249,16 @@ results:
     value_note: ''
     sort_value: 0.7006
     sort_std: 0.0033
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
-      Nodes'
-    comparison_source_arxiv: '2405.11951'
-    is_best: false
-    is_std_outlier: false
-  - model: DRew-GCN
-    model_key: drew-gcn
-    model_plain: DRew-GCN
-    value: 0.6996
-    std: 0.0076
-    paper_value: 0.6996
-    paper_std: 0.0076
-    metric: AP
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: dwivedi_long_2022
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Standard split for Peptides-func
-    date: May 12, 2026
-    date_display: May 2026
-    date_iso: '2026-05-12'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6804
-    at_pub_std: 0.0144
-    at_pub_source_arxiv: '2510.08450'
-    at_pub_source_title: 'gLSTM: Mitigating Over-Squashing by Increasing Storage Capacity'
-    at_pub_source_date_iso: '2025-10-09'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2026-05-12'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.019199999999999995
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6996
-    true_std: 0.0076
-    value_gap_source_arxiv: '2605.12358'
-    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6996
-    sort_std: 0.0076
-    global_rank: 23
-    paper_rank: 23
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
     is_best: false
     is_std_outlier: false
   - model: DRew-GatedGCN+LapPE
@@ -1284,8 +1317,8 @@ results:
     value_note: ''
     sort_value: 0.6977
     sort_std: 0.0026
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1351,8 +1384,8 @@ results:
     value_note: ''
     sort_value: 0.694
     sort_std: 0.0074
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1418,8 +1451,8 @@ results:
     value_note: ''
     sort_value: 0.6843
     sort_std: 0.0049
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1485,8 +1518,8 @@ results:
     value_note: ''
     sort_value: 0.683
     sort_std: 0.0026
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1526,12 +1559,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.6751
+    at_pub_std: 0.0039
+    at_pub_source_arxiv: '2508.05070'
+    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
+    at_pub_source_date_iso: '2025-08-07'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1552,8 +1586,8 @@ results:
     value_note: ''
     sort_value: 0.6751
     sort_std: 0.0039
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1619,8 +1653,8 @@ results:
     value_note: ''
     sort_value: 0.6739
     sort_std: 0.0087
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1686,8 +1720,8 @@ results:
     value_note: ''
     sort_value: 0.6733
     sort_std: 0.0094
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1753,8 +1787,8 @@ results:
     value_note: ''
     sort_value: 0.6685
     sort_std: 0.0136
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1822,10 +1856,10 @@ results:
     value_note: ''
     sort_value: 0.663
     sort_std: 0.016
-    global_rank: 58
-    paper_rank: 128
-    rank_delta: 70
-    rank_delta_abs: 70
+    global_rank: 89
+    paper_rank: 171
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1866,10 +1900,10 @@ results:
     published_conference: ''
     at_pub_value: 0.6621
     at_pub_std: 0.0067
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -1890,8 +1924,8 @@ results:
     value_note: ''
     sort_value: 0.6621
     sort_std: 0.0067
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1957,8 +1991,8 @@ results:
     value_note: ''
     sort_value: 0.6592
     sort_std: 0.0036
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2024,8 +2058,8 @@ results:
     value_note: ''
     sort_value: 0.6535
     sort_std: 0.0041
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2091,8 +2125,8 @@ results:
     value_note: ''
     sort_value: 0.6469
     sort_std: 0.0019
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2158,8 +2192,8 @@ results:
     value_note: ''
     sort_value: 0.6384
     sort_std: 0.0121
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2225,8 +2259,8 @@ results:
     value_note: ''
     sort_value: 0.6326
     sort_std: 0.0126
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2266,12 +2300,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.6022
+    at_pub_std: 0.0068
+    at_pub_source_arxiv: '2508.05070'
+    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
+    at_pub_source_date_iso: '2025-08-07'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2292,8 +2327,8 @@ results:
     value_note: ''
     sort_value: 0.6022
     sort_std: 0.0068
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2333,12 +2368,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.5975
+    at_pub_std: 0.0044
+    at_pub_source_arxiv: '2508.05070'
+    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
+    at_pub_source_date_iso: '2025-08-07'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2359,8 +2395,8 @@ results:
     value_note: ''
     sort_value: 0.5975
     sort_std: 0.0044
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2450,9 +2486,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
+  - model: GMN
+    model_key: tango_gps
+    model_plain: GMN
+    value: 0.2422
+    std: 0.0014
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Tango does not use additional encodings.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
     model_key: nba-gin+lappe
-    model_plain: SAN+RWSE
+    model_plain: GMN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -2475,7 +2544,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.2424
     sort_std: 0.001
     comparison_type: global_top
@@ -2540,8 +2609,8 @@ results:
     value_note: ''
     sort_value: 0.2429
     sort_std: 0.0019
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2608,8 +2677,8 @@ results:
     value_note: ''
     sort_value: 0.2431
     sort_std: 0.002
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2675,8 +2744,8 @@ results:
     value_note: ''
     sort_value: 0.2459
     sort_std: 0.002
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2716,19 +2785,19 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.2468
+    at_pub_std: 0.0005
+    at_pub_source_arxiv: '2510.12111'
+    at_pub_source_title: 'Chimera: State Space Models Beyond Sequences'
+    at_pub_source_date_iso: '2025-10-14'
+    at_pub_source_date_label: TMLR 2025
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.0005000000000000004
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: false
+    insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -2742,12 +2811,12 @@ results:
     value_note: ''
     sort_value: 0.2463
     sort_std: 0.0005
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2809,8 +2878,8 @@ results:
     value_note: ''
     sort_value: 0.247
     sort_std: 0.0019
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2852,10 +2921,10 @@ results:
     published_conference: ''
     at_pub_value: 0.2473
     at_pub_std: 0.0017
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2024-11-19'
     value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
@@ -2876,8 +2945,8 @@ results:
     value_note: ''
     sort_value: 0.2473
     sort_std: 0.0017
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2917,12 +2986,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.2473
+    at_pub_std: 0.0025
+    at_pub_source_arxiv: '2402.08678'
+    at_pub_source_title: 'Graph Mamba: Towards Learning on Graphs with State Space
+      Models'
+    at_pub_source_date_iso: '2024-02-13'
+    at_pub_source_date_label: KDD 2024
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2943,8 +3013,8 @@ results:
     value_note: ''
     sort_value: 0.2473
     sort_std: 0.0025
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3010,8 +3080,8 @@ results:
     value_note: ''
     sort_value: 0.2478
     sort_std: 0.0016
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3051,12 +3121,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.2485
+    at_pub_std: 0.0009
+    at_pub_source_arxiv: '2508.05070'
+    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
+    at_pub_source_date_iso: '2025-08-07'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3077,8 +3148,8 @@ results:
     value_note: ''
     sort_value: 0.2485
     sort_std: 0.0009
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3144,8 +3215,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0005
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3211,8 +3282,8 @@ results:
     value_note: ''
     sort_value: 0.2517
     sort_std: 0.0011
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3278,8 +3349,8 @@ results:
     value_note: ''
     sort_value: 0.2529
     sort_std: 0.0016
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3287,6 +3358,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DRew-GCN
+    model_key: drew-gcn
+    model_plain: DRew-GCN
+    value: 0.2781
+    std: 0.0028
+    paper_value: 0.2781
+    paper_std: 0.0028
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: dwivedi_long_2022
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Standard split for Peptides-struct regression task
+    date: May 12, 2026
+    date_display: May 2026
+    date_iso: '2026-05-12'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.2536
+    at_pub_std: 0.0015
+    at_pub_source_arxiv: '2405.19121'
+    at_pub_source_title: Spatio-Spectral Graph Neural Networks
+    at_pub_source_date_iso: '2024-05-29'
+    at_pub_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2024-05-29'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.024500000000000022
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.2536
+    true_std: 0.0015
+    value_gap_source_arxiv: '2405.19121'
+    value_gap_source_title: Spatio-Spectral Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.024500000000000022
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2536
+    sort_std: 0.0015
+    global_rank: 110
+    paper_rank: 152
+    rank_delta: 42
+    rank_delta_abs: 42
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Spatio-Spectral Graph Neural Networks
+    comparison_source_arxiv: '2405.19121'
     is_best: false
     is_std_outlier: false
   - model: DRew-GatedGCN+LapPE
@@ -3345,8 +3483,8 @@ results:
     value_note: ''
     sort_value: 0.2539
     sort_std: 0.0007
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3412,8 +3550,8 @@ results:
     value_note: ''
     sort_value: 0.2606
     sort_std: 0.0014
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3479,8 +3617,8 @@ results:
     value_note: ''
     sort_value: 0.2614
     sort_std: 0.0023
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3546,8 +3684,8 @@ results:
     value_note: ''
     sort_value: 0.2616
     sort_std: 0.0018
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 140
+    paper_rank: 140
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3594,8 +3732,8 @@ results:
       Networks
     at_pub_source_date_iso: '2025-02-03'
     at_pub_source_date_label: ICLR 2025
-    value_gap_source_date_iso: '2026-05-12'
-    value_gap_source_date_label: '2026'
+    value_gap_source_date_iso: '2025-02-03'
+    value_gap_source_date_label: ICLR 2025
     gap_vs_at_pub: 0.00029999999999996696
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3604,18 +3742,19 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.2683
-    true_std: 0.0043
-    value_gap_source_arxiv: '2605.12358'
-    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    true_value: 0.268
+    true_std: 0.004
+    value_gap_source_arxiv: '2502.01122'
+    value_gap_source_title: Learning Efficient Positional Encodings with Graph Neural
+      Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00029999999999996696
     has_value_note: false
     value_note: ''
-    sort_value: 0.2683
-    sort_std: 0.0043
-    global_rank: 95
-    paper_rank: 95
+    sort_value: 0.268
+    sort_std: 0.004
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3655,12 +3794,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.2699
+    at_pub_std: 0.0018
+    at_pub_source_arxiv: '2508.05070'
+    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
+    at_pub_source_date_iso: '2025-08-07'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3681,8 +3821,8 @@ results:
     value_note: ''
     sort_value: 0.2699
     sort_std: 0.0018
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3690,74 +3830,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DRew-GCN
-    model_key: drew-gcn
-    model_plain: DRew-GCN
-    value: 0.2781
-    std: 0.0028
-    paper_value: 0.2781
-    paper_std: 0.0028
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: dwivedi_long_2022
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Standard split for Peptides-struct regression task
-    date: May 12, 2026
-    date_display: May 2026
-    date_iso: '2026-05-12'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.2536
-    at_pub_std: null
-    at_pub_source_arxiv: '2410.23686'
-    at_pub_source_title: Towards Dynamic Message Passing on Graphs
-    at_pub_source_date_iso: '2024-10-31'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2025-10-09'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.024500000000000022
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.2766
-    true_std: 0.0019
-    value_gap_source_arxiv: '2510.08450'
-    value_gap_source_title: 'gLSTM: Mitigating Over-Squashing by Increasing Storage
-      Capacity'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0015000000000000013
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.2766
-    sort_std: 0.0019
-    global_rank: 100
-    paper_rank: 101
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Towards Dynamic Message Passing on Graphs
-    comparison_source_arxiv: '2410.23686'
     is_best: false
     is_std_outlier: false
   - model: GraphCON
@@ -3790,12 +3862,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.2778
+    at_pub_std: 0.0018
+    at_pub_source_arxiv: '2508.05070'
+    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
+    at_pub_source_date_iso: '2025-08-07'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3816,8 +3889,8 @@ results:
     value_note: ''
     sort_value: 0.2778
     sort_std: 0.0018
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 152
+    paper_rank: 152
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3857,12 +3930,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.2799
+    at_pub_std: 0.0016
+    at_pub_source_arxiv: '2508.05070'
+    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
+    at_pub_source_date_iso: '2025-08-07'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3883,8 +3957,8 @@ results:
     value_note: ''
     sort_value: 0.2799
     sort_std: 0.0016
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3924,12 +3998,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.2874
+    at_pub_std: 0.0021
+    at_pub_source_arxiv: '2508.05070'
+    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
+    at_pub_source_date_iso: '2025-08-07'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -3950,8 +4025,8 @@ results:
     value_note: ''
     sort_value: 0.2874
     sort_std: 0.0021
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4017,8 +4092,8 @@ results:
     value_note: ''
     sort_value: 0.2921
     sort_std: 0.0023
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 156
+    paper_rank: 156
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4084,8 +4159,8 @@ results:
     value_note: ''
     sort_value: 0.3173
     sort_std: 0.0007
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 159
+    paper_rank: 159
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4125,12 +4200,13 @@ results:
     date_iso: '2026-05-12'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.3418
+    at_pub_std: 0.0015
+    at_pub_source_arxiv: '2508.05070'
+    at_pub_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
+    at_pub_source_date_iso: '2025-08-07'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -4151,8 +4227,8 @@ results:
     value_note: ''
     sort_value: 0.3418
     sort_std: 0.0015
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 168
+    paper_rank: 168
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4199,5 +4275,6 @@ datasets_by_scope:
     - dataset: Peptides-func
       dataset_slug: peptides-func
 single_proposed_model: LGSM
+main_figure: /figures/2605.12358/main_figure.jpegoptim.jpg
 ---
 

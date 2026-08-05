@@ -79,6 +79,141 @@ results:
   dataset: ACM
   is_multi_metric: true
   rows:
+  - model: AM-GCN
+    model_key: am-gcn
+    model_plain: AM-GCN
+    metric_values:
+    - 0.9142
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2007.02265'
+    title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    published_venue: ''
+    date: Jul 5, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-05'
+    codebase_url: https://github.com/thunlp/OpenNE
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 1
+    is_best: true
+    sort_value: 0.9142
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: AM-GCN
+    model_key: gcn
+    model_plain: AM-GCN
+    metric_values:
+    - 0.9054
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2007.02265'
+    title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    published_venue: ''
+    date: Jul 5, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-05'
+    codebase_url: https://github.com/thunlp/OpenNE
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 2
+    is_best: false
+    sort_value: 0.9054
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: AM-GCN
+    model_key: gat
+    model_plain: AM-GCN
+    metric_values:
+    - 0.904
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2007.02265'
+    title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    published_venue: ''
+    date: Jul 5, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-05'
+    codebase_url: https://github.com/thunlp/OpenNE
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 3
+    is_best: false
+    sort_value: 0.904
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: IDCRN
     model_key: idcrn
     model_plain: IDCRN
@@ -142,9 +277,9 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 8
   - model: DCRN
     model_key: dcrn
     model_plain: DCRN
@@ -210,7 +345,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 2
+    global_rank: 9
   - model: DFCN
     model_key: dfcn
     model_plain: DFCN
@@ -276,7 +411,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 3
+    global_rank: 10
   - model: MVGRL
     model_key: mvgrl
     model_plain: MVGRL
@@ -342,7 +477,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 4
+    global_rank: 11
   - model: SDCN
     model_key: sdcn
     model_plain: SDCN
@@ -408,7 +543,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 5
+    global_rank: 13
   - model: MCGC
     model_key: mcgc
     model_plain: MCGC
@@ -474,7 +609,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 6
+    global_rank: 14
   - model: DAEGC
     model_key: daegc
     model_plain: DAEGC
@@ -540,7 +675,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 7
+    global_rank: 15
   - model: SDCN_Q
     model_key: sdcn_q
     model_plain: SDCN_Q
@@ -606,7 +741,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 8
+    global_rank: 16
   - model: GAE
     model_key: gae
     model_plain: GAE
@@ -672,7 +807,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 17
   - model: ARGA
     model_key: arga
     model_plain: ARGA
@@ -738,7 +873,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 10
+    global_rank: 18
   - model: VGAE
     model_key: vgae
     model_plain: VGAE
@@ -804,7 +939,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 11
+    global_rank: 19
   - model: IDEC
     model_key: idec
     model_plain: IDEC
@@ -870,7 +1005,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 12
+    global_rank: 20
   - model: ARVGA
     model_key: arvga
     model_plain: ARVGA
@@ -936,7 +1071,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 13
+    global_rank: 21
   - model: AE
     model_key: ae
     model_plain: AE
@@ -1002,7 +1137,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 14
+    global_rank: 22
   - model: DEC
     model_key: dec
     model_plain: DEC
@@ -1068,7 +1203,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 15
+    global_rank: 23
   - model: K-means
     model_key: k-means
     model_plain: K-means
@@ -1134,7 +1269,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 16
+    global_rank: 25
   metrics:
   - Micro-F1
   - ACC
@@ -2410,5 +2545,6 @@ datasets_by_scope:
     - dataset: AMAP
       dataset_slug: amap
 single_proposed_model: IDCRN
+main_figure: /figures/2202.12533/main_figure.jpegoptim.jpg
 ---
 

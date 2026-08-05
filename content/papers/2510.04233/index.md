@@ -49,9 +49,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - PAINET
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.1667
+adjusted_mrr: 0.0556
+mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
 benchmark_coverage:
@@ -66,14 +66,17 @@ experiment_scopes:
 results:
 - &id001
   dataset: MD17
+  is_multi_metric: true
   rows:
   - model: SliDe
     model_key: qhnet
     model_plain: SliDe
-    value: 1.036e-05
-    std: null
-    metric: MAE
-    higher_is_better: false
+    metric_values:
+    - 1.036e-05
+    - null
+    metric_stds:
+    - null
+    - null
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -84,30 +87,36 @@ results:
     arxiv_id: '2506.09398'
     title: Efficient Prediction of SO(3)-Equivariant Hamiltonian Matrices via SO(2)
       Local Frames
+    published_venue: ''
     date: Jun 11, 2025
     date_display: Jun 2025
     date_iso: '2025-06-11'
-    venue: arXiv.org
     codebase_url: https://github.com/divelab/AIRS
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
+    is_best: true
     sort_value: 1.036e-05
     sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
     is_std_outlier: false
   - model: SliDe
     model_key: qhnetv2
     model_plain: SliDe
-    value: 1.038e-05
-    std: null
-    metric: MAE
-    higher_is_better: false
+    metric_values:
+    - 1.038e-05
+    - null
+    metric_stds:
+    - null
+    - null
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -118,30 +127,36 @@ results:
     arxiv_id: '2506.09398'
     title: Efficient Prediction of SO(3)-Equivariant Hamiltonian Matrices via SO(2)
       Local Frames
+    published_venue: ''
     date: Jun 11, 2025
     date_display: Jun 2025
     date_iso: '2025-06-11'
-    venue: arXiv.org
     codebase_url: https://github.com/divelab/AIRS
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
+    is_best: false
     sort_value: 1.038e-05
     sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: SliDe
     model_key: phisnet
     model_plain: SliDe
-    value: 1.759e-05
-    std: null
-    metric: MAE
-    higher_is_better: false
+    metric_values:
+    - 1.759e-05
+    - null
+    metric_stds:
+    - null
+    - null
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -152,32 +167,36 @@ results:
     arxiv_id: '2506.09398'
     title: Efficient Prediction of SO(3)-Equivariant Hamiltonian Matrices via SO(2)
       Local Frames
+    published_venue: ''
     date: Jun 11, 2025
     date_display: Jun 2025
     date_iso: '2025-06-11'
-    venue: arXiv.org
     codebase_url: https://github.com/divelab/AIRS
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
+    is_best: false
     sort_value: 1.759e-05
     sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: PAINET
     model_key: painet
     model_plain: PAINET
-    value: 0.00324
-    std: 0.119
-    paper_value: 0.00324
-    paper_std: 0.119
-    metric: MAE
-    higher_is_better: false
+    metric_values:
+    - 0.00324
+    - 0.00183
+    metric_stds:
+    - 0.000119
+    - 8.0e-06
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -185,571 +204,62 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 5, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-05'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
     sort_value: 0.00324
-    sort_std: 0.119
-    global_rank: 5
+    sort_std: 0.000119
+    true_value: 0.00324
+    true_std: 0.000119
+    paper_value: 0.00324
+    paper_std: 0.000119
     has_value_gap: false
     has_value_note: false
     value_gap: null
+    value_gap_source_arxiv: '2510.04233'
+    value_gap_source_title: 'PAINET: A Principled Efficient Transformer for 3D Dynamics
+      Modeling'
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
-  - model: EGNO
-    model_key: egno
-    model_plain: EGNO
-    value: 0.00395
-    std: 0.055
-    paper_value: 0.00395
-    paper_std: 0.055
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: xu2024equivariant
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 5, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-05'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: 0.0037
-    at_pub_std: 0.0001
-    at_pub_source_arxiv: '2410.17878'
-    at_pub_source_title: Relaxed Equivariance via Multitask Learning
-    at_pub_source_date_iso: '2024-10-23'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-10-23'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.0002500000000000002
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-05'
+    value_gap_source_date_label: ICLR 2025
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.0037
-    true_std: 0.0001
-    value_gap_source_arxiv: '2410.17878'
-    value_gap_source_title: Relaxed Equivariance via Multitask Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0002500000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0037
-    sort_std: 0.0001
-    global_rank: 5
-    paper_rank: 6
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
+    arxiv_id: ''
+    title: ''
+    published_venue: ICLR 2025
+    date: Oct 5, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-05'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: HEGNN
-    model_key: hegnn
-    model_plain: HEGNN
-    value: 0.00427
-    std: 0.001
-    paper_value: 0.00427
-    paper_std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: cen2024high
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 5, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-05'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: 0.0037
-    at_pub_std: 0.0002
-    at_pub_source_arxiv: '2410.17878'
-    at_pub_source_title: Relaxed Equivariance via Multitask Learning
-    at_pub_source_date_iso: '2024-10-23'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-10-23'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.0005700000000000002
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.0037
-    true_std: 0.0002
-    value_gap_source_arxiv: '2410.17878'
-    value_gap_source_title: Relaxed Equivariance via Multitask Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0005700000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0037
-    sort_std: 0.0002
     global_rank: 6
-    paper_rank: 7
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GF-NODE
-    model_key: gf-node
-    model_plain: GF-NODE
-    value: 0.00458
-    std: 0.065
-    paper_value: 0.00458
-    paper_std: 0.065
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: sun2025graphfourierneuralodes
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 5, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-05'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.00458
-    sort_std: 0.065
-    global_rank: 8
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
-  - model: EGNN
-    model_key: egnn
-    model_plain: EGNN
-    value: 0.0465
-    std: 0.005
-    paper_value: 0.0465
-    paper_std: 0.005
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: satorras2021egnn
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 5, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-05'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: 0.0047
-    at_pub_std: 0.0002
-    at_pub_source_arxiv: '2410.11443'
-    at_pub_source_title: Are High-Degree Representations Really Unnecessary in Equivariant
-      Graph Neural Networks?
-    at_pub_source_date_iso: '2024-10-15'
-    at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-10-23'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.0418
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.0047
-    true_std: 0.0002
-    value_gap_source_arxiv: '2410.17878'
-    value_gap_source_title: Relaxed Equivariance via Multitask Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0418
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0047
-    sort_std: 0.0002
-    global_rank: 8
-    paper_rank: 22
-    rank_delta: 14
-    rank_delta_abs: 14
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Are High-Degree Representations Really Unnecessary in
-      Equivariant Graph Neural Networks?
-    comparison_source_arxiv: '2410.11443'
-    is_best: false
-    is_std_outlier: false
-  - model: ClofNet
-    model_key: clofnet
-    model_plain: ClofNet
-    value: 0.0462
-    std: 0.006
-    paper_value: 0.0462
-    paper_std: 0.006
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: du2022se
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 5, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-05'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.0462
-    sort_std: 0.006
-    global_rank: 23
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: rf
-    model_key: rf
-    model_plain: rf
-    value: 0.0464
-    std: 0.001
-    paper_value: 0.0464
-    paper_std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: random_forest
-    architecture_label: RF
-    architecture_title: Random forest
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kohler2019equivariant
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 5, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-05'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.0464
-    sort_std: 0.001
-    global_rank: 23
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MPNN
-    model_key: mpnn
-    model_plain: MPNN
-    value: 0.0492
-    std: 0.084
-    paper_value: 0.0492
-    paper_std: 0.084
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: gilmer2017neural
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 5, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-05'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.0492
-    sort_std: 0.084
-    global_rank: 24
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: true
-  - model: Linear
-    model_key: linear
-    model_plain: Linear
-    value: 0.0562
-    std: null
-    paper_value: 0.0562
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: satorras2021egnn
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 5, 2025
-    date_display: Oct 2025
-    date_iso: '2025-10-05'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.0562
-    sort_std: null
-    global_rank: 33
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
+  metrics:
+  - MAE
+  - RMSD
+  primary_metric: MAE
   rank_metric: MAE
   higher_is_better: false
   experiment_scope: graph-level
   dataset_primary_metric: MAE
   paper_metrics:
   - MAE
+  - RMSD
   metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
@@ -767,5 +277,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: PAINET
+main_figure: /figures/2510.04233/main_figure.jpegoptim.jpg
 ---
 

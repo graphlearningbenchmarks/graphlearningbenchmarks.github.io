@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 27
-result_count: 292
+result_count: 302
 best_model:
   model: KA-GAT
   value: 0.847
@@ -25,6 +25,10 @@ papers:
   title: A Systematic Survey and Benchmark of Deep Learning for Molecular Property
     Prediction in the Foundation Model Era
   date_iso: '2026-04-17'
+  venue: ''
+- arxiv_id: '2602.05567'
+  title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+  date_iso: '2026-02-05'
   venue: ''
 - arxiv_id: '2510.07289'
   title: 'MolGA: Molecular Graph Adaptation with Pre-trained 2D Graph Encoder'
@@ -58,6 +62,10 @@ papers:
   title: 'SpeGCL: Self-supervised Graph Spectrum Contrastive Learning without Positive
     Samples'
   date_iso: '2024-10-14'
+  venue: ''
+- arxiv_id: '2406.00403'
+  title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+  date_iso: '2024-06-01'
   venue: ''
 - arxiv_id: '2405.10343'
   title: 'UniCorn: A Unified Contrastive Learning Approach for Multi-view Molecular
@@ -108,10 +116,6 @@ papers:
   title: Fine-tuning Graph Neural Networks by Preserving Graph Generative Patterns
   date_iso: '2023-12-21'
   venue: AAAI 2023
-- arxiv_id: '2311.04837'
-  title: Identifying Semantic Component for Robust Molecular Property Prediction
-  date_iso: '2023-11-08'
-  venue: ''
 - arxiv_id: '2310.14753'
   title: Rethinking Tokenizer and Decoder in Masked Graph Modeling for Molecules
   date_iso: '2023-10-23'
@@ -119,6 +123,10 @@ papers:
 - arxiv_id: '2310.14216'
   title: 'UniMAP: Universal SMILES-Graph Representation Learning'
   date_iso: '2023-10-22'
+  venue: ''
+- arxiv_id: '2310.07351'
+  title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+  date_iso: '2023-10-11'
   venue: ''
 - arxiv_id: '2309.10131'
   title: Deep Prompt Tuning for Graph Transformers
@@ -227,6 +235,14 @@ papers:
     Learning from Molecular Graph'
   date_iso: '2021-06-05'
   venue: KDD 2021
+- arxiv_id: '1905.12265'
+  title: Strategies for Pre-training Graph Neural Networks
+  date_iso: '2019-05-29'
+  venue: ICLR 2019
+- arxiv_id: '1801.03226'
+  title: Adaptive Graph Convolutional Neural Networks
+  date_iso: '2018-01-10'
+  venue: AAAI 2018
 variants:
 - slug: scaffold-split
   name: Scaffold split
@@ -1669,33 +1685,32 @@ variants:
     metric_stds:
     - 0.009
     - null
-  row_count: 292
+  row_count: 302
   rows_json: /data/datasets/sider/scaffold-split-rows.json
   chart_json: /data/datasets/sider/scaffold-split-chart.json
   arch_counts:
-    gnn: 188
-    hybrid: 72
-    graph_transformer: 6
-    llm: 4
+    gnn: 190
+    hybrid: 74
+    graph_transformer: 10
+    llm: 5
     walk: 1
-    traditional: 14
+    traditional: 15
   metric_counts:
-  - 279
+  - 289
   - 13
   milestones: &id001
-  - value: 0.628
+  - value: 0.5921
     std: null
-    model: MoCL-DK-G(CL)
-    arxiv_id: '2106.04509'
-    title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive
-      Learning from Molecular Graph'
-    date: '2021-06-05'
-  - value: 0.6328
-    std: 0.0079
-    model: AD-GCL-FIX
-    arxiv_id: '2106.05819'
-    title: Adversarial Graph Augmentation to Improve Graph Contrastive Learning
-    date: '2021-06-10'
+    model: AGCN
+    arxiv_id: '1801.03226'
+    title: Adaptive Graph Convolutional Neural Networks
+    date: '2018-01-10'
+  - value: 0.639
+    std: 0.009
+    model: GIN (Graph-level Supervised AttrMasking)
+    arxiv_id: '1905.12265'
+    title: Strategies for Pre-training Graph Neural Networks
+    date: '2019-05-29'
   - value: 0.672
     std: 0.004
     model: ChemRL-GEM

@@ -57,8 +57,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FD-MVGCL
-mrr: 0.0053
-adjusted_mrr: 0.0018
+mrr: 0.0048
+adjusted_mrr: 0.0016
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -71,7 +71,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 1
-  total: 13
+  total: 6
 task_categories:
 - graph_classification
 - node_classification
@@ -82,9 +82,9 @@ results:
 - &id002
   dataset: Cornell
   rows:
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -115,9 +115,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: acm-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.948
     std: 0.038
     metric: Accuracy
@@ -148,9 +148,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: rf-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -238,10 +238,10 @@ results:
     value_note: ''
     sort_value: 0.8703
     sort_std: 0.0495
-    global_rank: 63
-    paper_rank: 321
-    rank_delta: 258
-    rank_delta_abs: 258
+    global_rank: 66
+    paper_rank: 337
+    rank_delta: 271
+    rank_delta_abs: 271
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -308,10 +308,10 @@ results:
     value_note: ''
     sort_value: 0.843
     sort_std: 0.048
-    global_rank: 120
-    paper_rank: 315
-    rank_delta: 195
-    rank_delta_abs: 195
+    global_rank: 124
+    paper_rank: 331
+    rank_delta: 207
+    rank_delta_abs: 207
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -377,10 +377,10 @@ results:
     value_note: ''
     sort_value: 0.8246
     sort_std: 0.0709
-    global_rank: 149
-    paper_rank: 268
-    rank_delta: 119
-    rank_delta_abs: 119
+    global_rank: 155
+    paper_rank: 277
+    rank_delta: 122
+    rank_delta_abs: 122
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -446,8 +446,8 @@ results:
     value_note: ''
     sort_value: 0.727
     sort_std: 0.0057
-    global_rank: 269
-    paper_rank: 269
+    global_rank: 278
+    paper_rank: 278
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -514,8 +514,8 @@ results:
     value_note: ''
     sort_value: 0.6054
     sort_std: 0.0392
-    global_rank: 366
-    paper_rank: 366
+    global_rank: 390
+    paper_rank: 390
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -537,9 +537,9 @@ results:
 - &id001
   dataset: PROTEINS
   rows:
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: gmn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8225
     std: null
     metric: Accuracy
@@ -570,9 +570,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: ci-gnn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -604,9 +604,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: diffpool+gpl
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -695,8 +695,8 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.001
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -763,8 +763,8 @@ results:
     value_note: ''
     sort_value: 0.7542
     sort_std: 0.0029
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 210
+    paper_rank: 210
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -831,8 +831,8 @@ results:
     value_note: ''
     sort_value: 0.7535
     sort_std: 0.0009
-    global_rank: 198
-    paper_rank: 198
+    global_rank: 220
+    paper_rank: 220
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -900,8 +900,8 @@ results:
     value_note: ''
     sort_value: 0.7535
     sort_std: 0.0009
-    global_rank: 197
-    paper_rank: 197
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -943,10 +943,10 @@ results:
     published_conference: ''
     at_pub_value: 0.752
     at_pub_std: 0.006
-    at_pub_source_arxiv: '2505.11356'
-    at_pub_source_title: Fractal Graph Contrastive Learning
-    at_pub_source_date_iso: '2025-05-16'
-    at_pub_source_date_label: '2025'
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
@@ -967,8 +967,8 @@ results:
     value_note: ''
     sort_value: 0.752
     sort_std: 0.006
-    global_rank: 215
-    paper_rank: 215
+    global_rank: 238
+    paper_rank: 238
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1036,10 +1036,10 @@ results:
     value_note: ''
     sort_value: 0.75
     sort_std: 0.029
-    global_rank: 239
-    paper_rank: 294
-    rank_delta: 55
-    rank_delta_abs: 55
+    global_rank: 262
+    paper_rank: 322
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1103,10 +1103,10 @@ results:
     value_note: ''
     sort_value: 0.7489
     sort_std: 0.0065
-    global_rank: 250
-    paper_rank: 282
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 275
+    paper_rank: 309
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1172,8 +1172,8 @@ results:
     value_note: ''
     sort_value: 0.746
     sort_std: 0.004
-    global_rank: 265
-    paper_rank: 271
+    global_rank: 291
+    paper_rank: 297
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -1240,8 +1240,8 @@ results:
     value_note: ''
     sort_value: 0.7444
     sort_std: 0.0031
-    global_rank: 279
-    paper_rank: 279
+    global_rank: 306
+    paper_rank: 306
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1308,8 +1308,8 @@ results:
     value_note: ''
     sort_value: 0.735
     sort_std: 0.007
-    global_rank: 323
-    paper_rank: 323
+    global_rank: 353
+    paper_rank: 353
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1376,8 +1376,8 @@ results:
     value_note: ''
     sort_value: 0.7316
     sort_std: 0.0016
-    global_rank: 338
-    paper_rank: 338
+    global_rank: 368
+    paper_rank: 368
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1421,5 +1421,6 @@ datasets_by_scope:
     - dataset: PROTEINS
       dataset_slug: proteins
 single_proposed_model: FD-MVGCL
+main_figure: /figures/2511.06216/main_figure.jpegoptim.jpg
 ---
 

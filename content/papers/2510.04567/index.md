@@ -54,7 +54,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - GILT
-mrr: 0.0013
+mrr: 0.0011
 adjusted_mrr: 0.0004
 mrr_dataset_count: 1
 benchmark_categories:
@@ -72,9 +72,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -106,9 +106,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -140,9 +140,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -230,10 +230,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 27
-    paper_rank: 803
-    rank_delta: 776
-    rank_delta_abs: 776
+    global_rank: 33
+    paper_rank: 945
+    rank_delta: 912
+    rank_delta_abs: 912
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -271,15 +271,16 @@ results:
     date_iso: '2025-10-06'
     published_venue: ICML 2025
     published_conference: ICML 2025
-    at_pub_value: 0.889
-    at_pub_std: 0.0
-    at_pub_source_arxiv: '2009.09232'
-    at_pub_source_title: Learned Low Precision Graph Neural Networks
-    at_pub_source_date_iso: '2020-09-19'
-    at_pub_source_date_label: '2020'
+    at_pub_value: 0.8897
+    at_pub_std: 0.0014
+    at_pub_source_arxiv: '2505.15845'
+    at_pub_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in
+      Tokenized Graph Learning Models'
+    at_pub_source_date_iso: '2025-05-19'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.19000000000000006
+    gap_vs_at_pub: 0.1907000000000001
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -298,15 +299,16 @@ results:
     value_note: ''
     sort_value: 0.8897
     sort_std: null
-    global_rank: 57
-    paper_rank: 795
-    rank_delta: 738
-    rank_delta_abs: 738
+    global_rank: 72
+    paper_rank: 935
+    rank_delta: 863
+    rank_delta_abs: 863
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Learned Low Precision Graph Neural Networks
-    comparison_source_arxiv: '2009.09232'
+    comparison_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
+    comparison_source_arxiv: '2505.15845'
     is_best: false
     is_std_outlier: false
   - model: GraphCL
@@ -366,10 +368,10 @@ results:
     value_note: ''
     sort_value: 0.8653
     sort_std: null
-    global_rank: 201
-    paper_rank: 837
-    rank_delta: 636
-    rank_delta_abs: 636
+    global_rank: 231
+    paper_rank: 981
+    rank_delta: 750
+    rank_delta_abs: 750
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -434,10 +436,10 @@ results:
     value_note: ''
     sort_value: 0.863
     sort_std: 0.002
-    global_rank: 217
-    paper_rank: 840
-    rank_delta: 623
-    rank_delta_abs: 623
+    global_rank: 245
+    paper_rank: 985
+    rank_delta: 740
+    rank_delta_abs: 740
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -503,10 +505,10 @@ results:
     value_note: ''
     sort_value: 0.7941
     sort_std: null
-    global_rank: 686
-    paper_rank: 890
-    rank_delta: 204
-    rank_delta_abs: 204
+    global_rank: 795
+    paper_rank: 1048
+    rank_delta: 253
+    rank_delta_abs: 253
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -573,10 +575,10 @@ results:
     value_note: ''
     sort_value: 0.7938
     sort_std: 0.0016
-    global_rank: 690
-    paper_rank: 768
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 800
+    paper_rank: 906
+    rank_delta: 106
+    rank_delta_abs: 106
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -641,10 +643,10 @@ results:
     value_note: ''
     sort_value: 0.7768
     sort_std: null
-    global_rank: 720
-    paper_rank: 889
-    rank_delta: 169
-    rank_delta_abs: 169
+    global_rank: 840
+    paper_rank: 1047
+    rank_delta: 207
+    rank_delta_abs: 207
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -709,8 +711,8 @@ results:
     value_note: ''
     sort_value: 0.7322
     sort_std: 0.038
-    global_rank: 765
-    paper_rank: 765
+    global_rank: 903
+    paper_rank: 903
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -777,8 +779,8 @@ results:
     value_note: ''
     sort_value: 0.6706
     sort_std: 0.0141
-    global_rank: 819
-    paper_rank: 819
+    global_rank: 962
+    paper_rank: 962
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -845,8 +847,8 @@ results:
     value_note: ''
     sort_value: 0.6094
     sort_std: 0.0296
-    global_rank: 841
-    paper_rank: 841
+    global_rank: 987
+    paper_rank: 987
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -913,8 +915,8 @@ results:
     value_note: ''
     sort_value: 0.4682
     sort_std: 0.1573
-    global_rank: 878
-    paper_rank: 878
+    global_rank: 1035
+    paper_rank: 1035
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -947,5 +949,6 @@ datasets_by_scope:
     - dataset: Cora
       dataset_slug: cora
 single_proposed_model: GILT
+main_figure: /figures/2510.04567/main_figure.jpegoptim.jpg
 ---
 

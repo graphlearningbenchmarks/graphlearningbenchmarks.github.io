@@ -1,7 +1,7 @@
 ---
 title: Amazon-ratings
 slug: amazon-ratings
-benchmark: Heterophilic Graphs
+benchmark: Heterophily Benchmark
 task_type: node_classification
 description: Amazon product co-purchase node classification (5 rating classes) from
   the heterophilic benchmark.
@@ -9,7 +9,7 @@ primary_metric: Accuracy
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.HeterophilousGraphDataset.html
 stats: null
-result_count: 263
+result_count: 292
 best_model:
   model: H2GCN + UniGAP
   value: 0.6375
@@ -18,6 +18,11 @@ best_model:
   paper_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
     Over-Smoothing in Node Classification Tasks'
 papers:
+- arxiv_id: '2606.05046'
+  title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+    Graph Machine Learning'
+  date_iso: '2026-06-03'
+  venue: ''
 - arxiv_id: '2605.20248'
   title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
     Classification'
@@ -67,6 +72,10 @@ papers:
   title: 'Aligning the Spectrum: Hybrid Graph Pre-training and Prompt Tuning across
     Homophily and Heterophily'
   date_iso: '2025-08-15'
+  venue: ''
+- arxiv_id: '2508.05070'
+  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+  date_iso: '2025-08-07'
   venue: ''
 - arxiv_id: '2507.14484'
   title: 'ReDiSC: A Reparameterized Masked Diffusion Model for Scalable Node Classification
@@ -133,6 +142,10 @@ papers:
   title: Differentiable Cluster Graph Neural Network
   date_iso: '2024-05-25'
   venue: ''
+- arxiv_id: '2405.15540'
+  title: Bundle Neural Networks for message diffusion on graphs
+  date_iso: '2024-05-24'
+  venue: ''
 - arxiv_id: '2404.17099'
   title: Unleashing the Potential of Fractional Calculus in Graph Neural Networks
     with FROND
@@ -150,6 +163,10 @@ papers:
   title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
   date_iso: '2024-03-02'
   venue: ICLR 2024
+- arxiv_id: '2402.08678'
+  title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+  date_iso: '2024-02-13'
+  venue: KDD 2024
 - arxiv_id: '2401.09125'
   title: Understanding Heterophily for Graph Neural Networks
   date_iso: '2024-01-17'
@@ -186,9 +203,13 @@ variants:
   metrics:
   - Accuracy
   - ACC
+  - AUROC
+  - macro-F1
   metric_display_names:
   - Accuracy
   - ACC
+  - AUROC
+  - macro-F1
   show_all_metrics_desktop: false
   chart_default_log_scale: false
   chart_hidden_models: []
@@ -219,8 +240,12 @@ variants:
     metric_values:
     - 0.6375
     - null
+    - null
+    - null
     metric_stds:
     - 0.011
+    - null
+    - null
     - null
   - model: GraphSAGE + UniGAP
     model_plain: GraphSAGE + UniGAP
@@ -248,8 +273,12 @@ variants:
     metric_values:
     - 0.6283
     - null
+    - null
+    - null
     metric_stds:
     - 0.009
+    - null
+    - null
     - null
   - model: GCN + UniGAP
     model_plain: GCN + UniGAP
@@ -277,8 +306,12 @@ variants:
     metric_values:
     - 0.5976
     - null
+    - null
+    - null
     metric_stds:
     - 0.008
+    - null
+    - null
     - null
   - model: H2GCN + HalfHop
     model_plain: H2GCN + HalfHop
@@ -306,8 +339,12 @@ variants:
     metric_values:
     - 0.5961
     - null
+    - null
+    - null
     metric_stds:
     - 0.01
+    - null
+    - null
     - null
   - model: GraphSAGE + HalfHop
     model_plain: GraphSAGE + HalfHop
@@ -335,8 +372,12 @@ variants:
     metric_values:
     - 0.5897
     - null
+    - null
+    - null
     metric_stds:
     - 0.015
+    - null
+    - null
     - null
   - model: GraphSAGE + AdaEdge
     model_plain: GraphSAGE + AdaEdge
@@ -364,8 +405,12 @@ variants:
     metric_values:
     - 0.5884
     - null
+    - null
+    - null
     metric_stds:
     - 0.013
+    - null
+    - null
     - null
   - model: H2GCN + AdaEdge
     model_plain: H2GCN + AdaEdge
@@ -393,8 +438,12 @@ variants:
     metric_values:
     - 0.5877
     - null
+    - null
+    - null
     metric_stds:
     - 0.012
+    - null
+    - null
     - null
   - model: GCN +AdaEdge
     model_plain: GCN +AdaEdge
@@ -422,8 +471,12 @@ variants:
     metric_values:
     - 0.5692
     - null
+    - null
+    - null
     metric_stds:
     - 0.011
+    - null
+    - null
     - null
   - model: H2GCN
     model_plain: H2GCN
@@ -451,8 +504,12 @@ variants:
     metric_values:
     - 0.5681
     - null
+    - null
+    - null
     metric_stds:
     - 0.009
+    - null
+    - null
     - null
   - model: SAGE+T
     model_plain: SAGE+T
@@ -480,8 +537,12 @@ variants:
     metric_values:
     - 0.5672
     - null
+    - null
+    - null
     metric_stds:
     - 0.0035
+    - null
+    - null
     - null
   - model: GraphTARIF
     model_plain: GraphTARIF
@@ -509,8 +570,12 @@ variants:
     metric_values:
     - 0.5586
     - null
+    - null
+    - null
     metric_stds:
     - 0.0042
+    - null
+    - null
     - null
   - model: RWNN-Llama3-8b, fine-tuned
     model_plain: RWNN-Llama3-8b, fine-tuned
@@ -537,7 +602,11 @@ variants:
     metric_values:
     - 0.5576
     - null
+    - null
+    - null
     metric_stds:
+    - null
+    - null
     - null
     - null
   - model: GAT+T
@@ -566,8 +635,12 @@ variants:
     metric_values:
     - 0.5573
     - null
+    - null
+    - null
     metric_stds:
     - 0.0031
+    - null
+    - null
     - null
   - model: SAGE
     model_plain: SAGE
@@ -595,8 +668,45 @@ variants:
     metric_values:
     - 0.5569
     - null
+    - null
+    - null
     metric_stds:
     - 0.0023
+    - null
+    - null
+    - null
+  - model: ACMGCN
+    model_plain: ACMGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2606.05046'
+    title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+      Graph Machine Learning'
+    date: Jun 3, 2026
+    date_iso: '2026-06-03'
+    date_display: Jun 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5565
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0176
+    - null
+    - null
     - null
   - model: GAT
     model_plain: GAT
@@ -624,8 +734,12 @@ variants:
     metric_values:
     - 0.5559
     - null
+    - null
+    - null
     metric_stds:
     - 0.0027
+    - null
+    - null
     - null
   - model: GraphSAGE
     model_plain: GraphSAGE
@@ -653,8 +767,12 @@ variants:
     metric_values:
     - 0.554
     - null
+    - null
+    - null
     metric_stds:
     - 0.002
+    - null
+    - null
     - null
   - model: GCN + HalfHop
     model_plain: GCN + HalfHop
@@ -682,8 +800,12 @@ variants:
     metric_values:
     - 0.5519
     - null
+    - null
+    - null
     metric_stds:
     - 0.016
+    - null
+    - null
     - null
   - model: Polynormer + Wideformer
     model_plain: Polynormer + Wideformer
@@ -710,8 +832,12 @@ variants:
     metric_values:
     - 0.5505
     - null
+    - null
+    - null
     metric_stds:
     - 0.0008
+    - null
+    - null
     - null
   - model: Polynormer-r
     model_plain: Polynormer-r
@@ -738,8 +864,12 @@ variants:
     metric_values:
     - 0.5481
     - null
+    - null
+    - null
     metric_stds:
     - 0.0049
+    - null
+    - null
     - null
   - model: DPM-SNC
     model_plain: DPM-SNC
@@ -767,8 +897,12 @@ variants:
     metric_values:
     - 0.5466
     - null
+    - null
+    - null
     metric_stds:
     - 0.0039
+    - null
+    - null
     - null
   - model: Polynormer
     model_plain: Polynormer
@@ -795,8 +929,12 @@ variants:
     metric_values:
     - 0.5446
     - null
+    - null
+    - null
     metric_stds:
     - 0.004
+    - null
+    - null
     - null
   - model: NT
     model_plain: NT
@@ -824,8 +962,44 @@ variants:
     metric_values:
     - 0.5425
     - null
+    - null
+    - null
     metric_stds:
     - 0.005
+    - null
+    - null
+    - null
+  - model: Co-GNN(μ,μ)
+    model_plain: Co-GNN(μ,μ)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5417
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0037
+    - null
+    - null
     - null
   - model: SGFormer
     model_plain: SGFormer
@@ -853,8 +1027,44 @@ variants:
     metric_values:
     - 0.5414
     - null
+    - null
+    - null
     metric_stds:
     - 0.0062
+    - null
+    - null
+    - null
+  - model: GMN
+    model_plain: GMN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5407
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0031
+    - null
+    - null
     - null
   - model: GCN+TS
     model_plain: GCN+TS
@@ -882,8 +1092,12 @@ variants:
     metric_values:
     - 0.5406
     - null
+    - null
+    - null
     metric_stds:
     - 0.0058
+    - null
+    - null
     - null
   - model: ReDiSC
     model_plain: ReDiSC
@@ -911,8 +1125,44 @@ variants:
     metric_values:
     - 0.5392
     - null
+    - null
+    - null
     metric_stds:
     - 0.0061
+    - null
+    - null
+    - null
+  - model: Tango_GPS
+    model_plain: Tango_GPS
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5383
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0032
+    - null
+    - null
     - null
   - model: GCN
     model_plain: GCN
@@ -940,25 +1190,28 @@ variants:
     metric_values:
     - 0.538
     - null
+    - null
+    - null
     metric_stds:
     - 0.006
     - null
+    - null
+    - null
   - model: BuNN
     model_plain: BuNN
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2605.20248'
-    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
-      Classification'
-    date: May 18, 2026
-    date_iso: '2026-05-18'
-    date_display: May 2026
-    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    arxiv_id: '2405.15540'
+    title: Bundle Neural Networks for message diffusion on graphs
+    date: May 24, 2024
+    date_iso: '2024-05-24'
+    date_display: May 2024
+    codebase_url: https://github.com/jacobbamberger/BuNN
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
@@ -969,8 +1222,12 @@ variants:
     metric_values:
     - 0.5374
     - null
+    - null
+    - null
     metric_stds:
     - 0.0051
+    - null
+    - null
     - null
   - model: ECG-GAT-sep
     model_plain: ECG-GAT-sep
@@ -997,8 +1254,12 @@ variants:
     metric_values:
     - 0.5365
     - null
+    - null
+    - null
     metric_stds:
     - 0.0039
+    - null
+    - null
     - null
   - model: MLP->GNN-ECG-GAT-sep
     model_plain: MLP->GNN-ECG-GAT-sep
@@ -1025,8 +1286,12 @@ variants:
     metric_values:
     - 0.5365
     - null
+    - null
+    - null
     metric_stds:
     - 0.0039
+    - null
+    - null
     - null
   - model: SAGE
     model_plain: SAGE
@@ -1053,36 +1318,45 @@ variants:
     metric_values:
     - 0.5363
     - null
+    - null
+    - null
     metric_stds:
     - 0.0039
     - null
-  - model: Exphormer
-    model_plain: Exphormer
+    - null
+    - null
+  - model: GCN-MAS
+    model_plain: GCN-MAS
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2403.01232'
-    title: 'Polynormer: Polynomial-Expressive Graph Transformer in Linear Time'
-    date: Mar 2, 2024
-    date_iso: '2024-03-02'
-    date_display: Mar 2024
-    codebase_url: https://github.com/cornell-zhang/Polynormer
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2606.05046'
+    title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+      Graph Machine Learning'
+    date: Jun 3, 2026
+    date_iso: '2026-06-03'
+    date_display: Jun 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.5351
+    - 0.5354
     - null
+    - 0.771
+    - 0.418
     metric_stds:
-    - 0.0046
+    - 0.0159
+    - null
+    - null
     - null
   - model: Exphormer+GAT
     model_plain: Exphormer+GAT
@@ -1109,8 +1383,44 @@ variants:
     metric_values:
     - 0.5351
     - null
+    - null
+    - null
     metric_stds:
     - 0.0046
+    - null
+    - null
+    - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5351
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0046
+    - null
+    - null
     - null
   - model: GraphSAGE+mix.
     model_plain: GraphSAGE+mix.
@@ -1137,8 +1447,12 @@ variants:
     metric_values:
     - 0.535
     - null
+    - null
+    - null
     metric_stds:
     - 0.007
+    - null
+    - null
     - null
   - model: SGFormer + Wideformer
     model_plain: SGFormer + Wideformer
@@ -1165,8 +1479,12 @@ variants:
     metric_values:
     - 0.5347
     - null
+    - null
+    - null
     metric_stds:
     - 0.0014
+    - null
+    - null
     - null
   - model: ECG-SAGE
     model_plain: ECG-SAGE
@@ -1193,8 +1511,12 @@ variants:
     metric_values:
     - 0.5345
     - null
+    - null
+    - null
     metric_stds:
     - 0.0027
+    - null
+    - null
     - null
   - model: MLP->GNN-ECG-SAGE
     model_plain: MLP->GNN-ECG-SAGE
@@ -1221,8 +1543,12 @@ variants:
     metric_values:
     - 0.5345
     - null
+    - null
+    - null
     metric_stds:
     - 0.0027
+    - null
+    - null
     - null
   - model: MLP-ECG-SAGE
     model_plain: MLP-ECG-SAGE
@@ -1249,8 +1575,12 @@ variants:
     metric_values:
     - 0.5332
     - null
+    - null
+    - null
     metric_stds:
     - 0.0039
+    - null
+    - null
     - null
   - model: ECG-GT-sep
     model_plain: ECG-GT-sep
@@ -1277,8 +1607,12 @@ variants:
     metric_values:
     - 0.5325
     - null
+    - null
+    - null
     metric_stds:
     - 0.0039
+    - null
+    - null
     - null
   - model: MLP->GNN-ECG-GT-sep
     model_plain: MLP->GNN-ECG-GT-sep
@@ -1305,8 +1639,12 @@ variants:
     metric_values:
     - 0.5325
     - null
+    - null
+    - null
     metric_stds:
     - 0.0039
+    - null
+    - null
     - null
   - model: AGS-GNN
     model_plain: AGS-GNN
@@ -1333,8 +1671,12 @@ variants:
     metric_values:
     - 0.5321
     - null
+    - null
+    - null
     metric_stds:
     - 0.0046
+    - null
+    - null
     - null
   - model: ATLAS
     model_plain: ATLAS
@@ -1362,8 +1704,12 @@ variants:
     metric_values:
     - 0.5317
     - null
+    - null
+    - null
     metric_stds:
     - 0.0081
+    - null
+    - null
     - null
   - model: BGRL-ECG-SAGE
     model_plain: BGRL-ECG-SAGE
@@ -1390,8 +1736,12 @@ variants:
     metric_values:
     - 0.5312
     - null
+    - null
+    - null
     metric_stds:
     - 0.0032
+    - null
+    - null
     - null
   - model: GraphGPS
     model_plain: GraphGPS
@@ -1418,8 +1768,44 @@ variants:
     metric_values:
     - 0.531
     - null
+    - null
+    - null
     metric_stds:
     - 0.0042
+    - null
+    - null
+    - null
+  - model: GPS
+    model_plain: GPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.531
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0042
+    - null
+    - null
     - null
   - model: MLP-ECG-GAT-sep
     model_plain: MLP-ECG-GAT-sep
@@ -1446,193 +1832,28 @@ variants:
     metric_values:
     - 0.5298
     - null
+    - null
+    - null
     metric_stds:
     - 0.003
     - null
-  - model: ACM-GCN
-    model_plain: ACM-GCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.07082'
-    title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    date: Feb 14, 2022
-    date_iso: '2022-02-14'
-    date_display: Feb 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5294
     - null
-    metric_stds:
-    - 0.0023
     - null
-  - model: ATLAS-LPF
-    model_plain: ATLAS-LPF
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_iso: '2025-12-16'
-    date_display: Dec 2025
-    codebase_url: https://github.com/atlaspaper16/ATLAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5281
-    - null
-    metric_stds:
-    - 0.0037
-    - null
-  - model: GEGCN
-    model_plain: GEGCN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2603.26178'
-    title: 'Geometric Evolution Graph Convolutional Networks: Enhancing Graph Representation
-      Learning via Ricci Flow'
-    date: Mar 27, 2026
-    date_iso: '2026-03-27'
-    date_display: Mar 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5277
-    - null
-    metric_stds:
-    - 0.0073
-    - null
-  - model: GraphSAGE
-    model_plain: GraphSAGE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2305.16780'
-    title: Graph Neural Convection-Diffusion with Heterophily
-    date: May 26, 2023
-    date_iso: '2023-05-26'
-    date_display: May 2023
-    codebase_url: https://github.com/zknus/Graph-Diffusion-CDE
-    published_conference: IJCAI 2023
-    published_conference_short: IJCAI
-    published_conference_slug: ijcai
-    published_venue: IJCAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5277
-    - null
-    metric_stds:
-    - 0.0054
-    - null
-  - model: GCN+ReP
-    model_plain: GCN+ReP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2605.20248'
-    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
-      Classification'
-    date: May 18, 2026
-    date_iso: '2026-05-18'
-    date_display: May 2026
-    codebase_url: https://github.com/transductive-sharpening/tunedGNN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5275
-    - null
-    metric_stds:
-    - 0.0062
-    - null
-  - model: FSGNN
-    model_plain: FSGNN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2306.12943'
-    title: Evolving Computation Graphs
-    date: Jun 22, 2023
-    date_iso: '2023-06-22'
-    date_display: Jun 2023
-    codebase_url: ''
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.5274
-    - null
-    metric_stds:
-    - 0.0083
-    - null
-  row_count: 263
+  row_count: 292
   rows_json: /data/datasets/amazon-ratings/standard-split-rows.json
   chart_json: /data/datasets/amazon-ratings/standard-split-chart.json
   arch_counts:
-    gnn: 154
-    hybrid: 36
-    graph_transformer: 21
+    gnn: 161
+    hybrid: 46
+    graph_transformer: 33
     llm: 10
     walk: 2
     traditional: 16
   metric_counts:
-  - 255
+  - 284
   - 8
+  - 13
+  - 13
   milestones: &id001
   - value: 0.5363
     std: 0.0039
@@ -1646,6 +1867,12 @@ variants:
     arxiv_id: '2306.12943'
     title: Evolving Computation Graphs
     date: '2023-06-22'
+  - value: 0.5407
+    std: 0.0031
+    model: GMN
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: '2024-02-13'
   - value: 0.5481
     std: 0.0049
     model: Polynormer-r
@@ -1674,5 +1901,21 @@ variants:
       arxiv_id: '2006.12739'
       title: Graph Prototypical Networks for Few-shot Learning on Attributed Networks
       date: '2020-06-23'
+    AUROC:
+    - value: 0.771
+      std: null
+      model: GCN-MAS
+      arxiv_id: '2606.05046'
+      title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+        Graph Machine Learning'
+      date: '2026-06-03'
+    macro-F1:
+    - value: 0.418
+      std: null
+      model: GCN-MAS
+      arxiv_id: '2606.05046'
+      title: 'Graph Cascades: Contagion-Based Mesoscopic Rewiring for Structure-Aware
+        Graph Machine Learning'
+      date: '2026-06-03'
 ---
 

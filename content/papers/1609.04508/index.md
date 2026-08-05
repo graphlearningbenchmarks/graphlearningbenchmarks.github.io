@@ -51,19 +51,19 @@ mrr: 0.0
 adjusted_mrr: 0.0
 mrr_dataset_count: 0
 benchmark_categories:
-- Heterophilic Graphs
+- Other Graph Benchmarks
 benchmark_coverage:
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Other Graph Benchmarks
+  benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 13
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
 - node-level
 results:
 - &id001
-  dataset: Film
+  dataset: MovieLens Film
   rows:
   - model: CLN-HWN-mini
     model_key: cln-hwn-mini
@@ -537,25 +537,26 @@ results:
   rank_metric: Micro-F1
   higher_is_better: true
   experiment_scope: node-level
-  dataset_primary_metric: Accuracy
+  dataset_primary_metric: Micro-F1
   paper_metrics:
   - Micro-F1
   metric: Micro-F1
-  uses_non_primary_metric: true
-  paper_has_primary_metric: false
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
 results_grouped:
-- benchmark: Heterophilic Graphs
+- benchmark: Other Graph Benchmarks
   datasets:
   - *id001
 datasets_by_scope:
 - scope: node-level
   label: Node-level
   benchmarks:
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Other Graph Benchmarks
+    benchmark_slug: other-graph-benchmarks
     datasets:
-    - dataset: Film
-      dataset_slug: film
+    - dataset: MovieLens Film
+      dataset_slug: movielens-film
 single_proposed_model: CLN-HWN-full
+main_figure: /figures/1609.04508/main_figure.jpegoptim.jpg
 ---
 

@@ -14,18 +14,23 @@ stats:
   avg_nodes: 25.5
   avg_edges: 27.5
   num_classes: 2
-result_count: 377
+result_count: 380
 best_model:
-  model: CLEAR
-  value: 0.997
+  model: Multi-RF Fusion with Multi-GNN Blending
+  value: 0.8476
   metric: ROC-AUC
-  arxiv_id: '2210.08443'
-  paper_title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
+  arxiv_id: '2603.20724'
+  paper_title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
 papers:
 - arxiv_id: '2606.00757'
   title: 'RADE: Random Add-Drop Edge as a Regularizer'
   date_iso: '2026-05-30'
   venue: ICML 2026
+- arxiv_id: '2604.17324'
+  title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers via Sigmoid-Gated
+    Attention'
+  date_iso: '2026-04-19'
+  venue: ''
 - arxiv_id: '2603.20724'
   title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
   date_iso: '2026-03-21'
@@ -163,6 +168,10 @@ papers:
   title: 'Weisfeiler and Lehman Go Paths: Learning Topological Features via Path Complexes'
   date_iso: '2023-08-13'
   venue: AAAI 2023
+- arxiv_id: '2306.15963'
+  title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+  date_iso: '2023-06-28'
+  venue: NeurIPS 2023
 - arxiv_id: '2306.06788'
   title: Graph Mixup with Soft Alignments
   date_iso: '2023-06-11'
@@ -199,6 +208,15 @@ papers:
     Tests
   date_iso: '2023-02-14'
   venue: ICML 2023
+- arxiv_id: '2301.11956'
+  title: On the Connection Between MPNN and Graph Transformer
+  date_iso: '2023-01-27'
+  venue: ICML 2023
+- arxiv_id: '2211.15335'
+  title: 'You Can Have Better Graph Neural Networks by Not Training Weights at All:
+    Finding Untrained GNNs Tickets'
+  date_iso: '2022-11-28'
+  venue: LoG 2022
 - arxiv_id: '2211.14568'
   title: 'BeGin: Extensive Benchmark Scenarios and An Easy-to-use Framework for Graph
     Continual Learning'
@@ -213,10 +231,6 @@ papers:
   title: Boosting the Cycle Counting Power of Graph Neural Networks with I$^2$-GNNs
   date_iso: '2022-10-22'
   venue: ICLR 2022
-- arxiv_id: '2210.08443'
-  title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-  date_iso: '2022-10-16'
-  venue: NeurIPS 2022
 - arxiv_id: '2210.02636'
   title: Geodesic Graph Neural Network for Efficient Graph Representation Learning
   date_iso: '2022-10-06'
@@ -358,286 +372,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: CLEAR
-    model_plain: CLEAR
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_iso: '2022-10-16'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.997
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.002
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Random
-    model_plain: Random
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_iso: '2022-10-16'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.897
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.004
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: EG-IST
-    model_plain: EG-IST
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_iso: '2022-10-16'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.897
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.004
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: EG-RM
-    model_plain: EG-RM
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_iso: '2022-10-16'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.897
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.004
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GNNExplainer
-    model_plain: GNNExplainer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_iso: '2022-10-16'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.897
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.004
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: CF-GNNExplainer
-    model_plain: CF-GNNExplainer
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_iso: '2022-10-16'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.897
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.004
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: MEG
-    model_plain: MEG
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: Oct 16, 2022
-    date_iso: '2022-10-16'
-    date_display: Oct 2022
-    codebase_url: ''
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.897
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.004
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: Multi-RF Fusion with Multi-GNN Blending
     model_plain: Multi-RF Fusion with Multi-GNN Blending
     is_baseline: false
@@ -658,7 +392,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8476
@@ -698,7 +432,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.8475
@@ -791,6 +525,47 @@ variants:
     - null
     metric_stds:
     - 0.0021
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SigGate-GT
+    model_plain: SigGate-GT
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2604.17324'
+    title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers via Sigmoid-Gated
+      Attention'
+    date: Apr 19, 2026
+    date_iso: '2026-04-19'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8247
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0063
     - null
     - null
     - null
@@ -992,6 +767,47 @@ variants:
     - null
     metric_stds:
     - 0.016
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2604.17324'
+    title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers via Sigmoid-Gated
+      Attention'
+    date: Apr 19, 2026
+    date_iso: '2026-04-19'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8075
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0094
     - null
     - null
     - null
@@ -2371,18 +2187,220 @@ variants:
     - null
     - null
     - null
-  row_count: 377
+  - model: AT Mask-1
+    model_plain: AT Mask-1
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.08455'
+    title: 'Transformer for Graphs: An Overview from Architecture Perspective'
+    date: Feb 17, 2022
+    date_iso: '2022-02-17'
+    date_display: Feb 2022
+    codebase_url: https://github.com/qwerfdsaplking/Graph-Trans
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.796
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GNN-SSWL+
+    model_plain: GNN-SSWL+
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.07090'
+    title: A Complete Expressiveness Hierarchy for Subgraph GNNs via Subgraph Weisfeiler-Lehman
+      Tests
+    date: Feb 14, 2023
+    date_iso: '2023-02-14'
+    date_display: Feb 2023
+    codebase_url: https://github.com/subgraph23/SWL
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7958
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0035
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SSWL+
+    model_plain: SSWL+
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.19142'
+    title: 'MAG-GNN: Reinforcement Learning Boosted Graph Neural Network'
+    date: Oct 29, 2023
+    date_iso: '2023-10-29'
+    date_display: Oct 2023
+    codebase_url: https://github.com/LechengKong/MAG-GNN
+    published_conference: NeurIPS 2023
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7958
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0035
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GraphAKD
+    model_plain: GraphAKD
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2205.11678'
+    title: Compressing Deep Graph Neural Networks via Adversarial Knowledge Distillation
+    date: May 24, 2022
+    date_iso: '2022-05-24'
+    date_display: May 2022
+    codebase_url: https://github.com/TencentYoutuResearch/HIG-GraphClassification
+    published_conference: KDD 2022
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7946
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0097
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: PIN
+    model_plain: PIN
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2308.06838'
+    title: 'Weisfeiler and Lehman Go Paths: Learning Topological Features via Path
+      Complexes'
+    date: Aug 13, 2023
+    date_iso: '2023-08-13'
+    date_display: Aug 2023
+    codebase_url: ''
+    published_conference: AAAI 2023
+    published_conference_short: AAAI
+    published_conference_slug: aaai
+    published_venue: AAAI 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7944
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.014
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  row_count: 380
   rows_json: /data/datasets/ogbg-molhiv/standard-split-rows.json
   chart_json: /data/datasets/ogbg-molhiv/standard-split-chart.json
   arch_counts:
-    gnn: 216
-    hybrid: 82
-    graph_transformer: 30
+    gnn: 217
+    hybrid: 83
+    graph_transformer: 33
     llm: 7
     walk: 0
-    traditional: 27
+    traditional: 23
   metric_counts:
-  - 341
+  - 344
   - 9
   - 8
   - 10
@@ -2421,12 +2439,12 @@ variants:
     arxiv_id: '2205.11678'
     title: Compressing Deep Graph Neural Networks via Adversarial Knowledge Distillation
     date: '2022-05-24'
-  - value: 0.997
-    std: 0.002
-    model: CLEAR
-    arxiv_id: '2210.08443'
-    title: 'CLEAR: Generative Counterfactual Explanations on Graphs'
-    date: '2022-10-16'
+  - value: 0.8476
+    std: 0.0002
+    model: Multi-RF Fusion with Multi-GNN Blending
+    arxiv_id: '2603.20724'
+    title: Multi-RF Fusion with Multi-GNN Blending for Molecular Property Prediction
+    date: '2026-03-21'
   milestones_by_metric:
     ROC-AUC: *id001
     AUC:

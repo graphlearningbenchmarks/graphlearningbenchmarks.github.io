@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 5
-result_count: 987
+result_count: 1003
 best_model:
   model: P^2GNN
   value: 0.9672
@@ -71,6 +71,10 @@ papers:
   title: 'When Prompting Meets Spiking: Graph Sparse Prompting via Spiking Graph Prompt
     Learning'
   date_iso: '2026-01-06'
+  venue: ''
+- arxiv_id: '2601.02451'
+  title: 'mHC-GNN: Manifold-Constrained Hyper-Connections for Graph Neural Networks'
+  date_iso: '2026-01-05'
   venue: ''
 - arxiv_id: '2512.15027'
   title: 'Trustworthy Neighborhoods Mining: Homophily-Aware Neutral Contrastive Learning
@@ -178,6 +182,11 @@ papers:
     Graphs
   date_iso: '2025-05-23'
   venue: NeurIPS 2025
+- arxiv_id: '2505.15845'
+  title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+    Learning Models'
+  date_iso: '2025-05-19'
+  venue: ''
 - arxiv_id: '2505.11346'
   title: What Can We Learn From MIMO Graph Convolutions?
   date_iso: '2025-05-16'
@@ -240,6 +249,10 @@ papers:
   title: Distributed-Order Fractional Graph Operating Network
   date_iso: '2024-11-08'
   venue: NeurIPS 2024
+- arxiv_id: '2410.05593'
+  title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+  date_iso: '2024-10-08'
+  venue: ICLR 2024
 - arxiv_id: '2410.02158'
   title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation Learning'
   date_iso: '2024-10-03'
@@ -308,10 +321,6 @@ papers:
   title: 'ProG: A Graph Prompt Learning Benchmark'
   date_iso: '2024-06-08'
   venue: NeurIPS 2024
-- arxiv_id: '2406.02059'
-  title: Graph Adversarial Diffusion Convolution
-  date_iso: '2024-06-04'
-  venue: ICML 2024
 - arxiv_id: '2406.01899'
   title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
   date_iso: '2024-06-04'
@@ -365,10 +374,20 @@ papers:
   title: Smoothed Graph Contrastive Learning via Seamless Proximity Integration
   date_iso: '2024-02-23'
   venue: ''
+- arxiv_id: '2401.14580'
+  title: 'Design your own universe: a physics-informed agnostic method for enhancing
+    graph neural networks'
+  date_iso: '2024-01-26'
+  venue: ''
 - arxiv_id: '2312.08672'
   title: 'CAT: A Causal Graph Attention Network for Trimming Heterophilic Graphs'
   date_iso: '2023-12-14'
   venue: ''
+- arxiv_id: '2312.08221'
+  title: Curriculum-Enhanced Residual Soft An-Isotropic Normalization for Over-smoothness
+    in Deep GNNs
+  date_iso: '2023-12-13'
+  venue: AAAI 2023
 - arxiv_id: '2311.14864'
   title: Effective Structural Encodings via Local Curvature Profiles
   date_iso: '2023-11-24'
@@ -501,6 +520,11 @@ papers:
   title: 'TIDE: Time Derivative Diffusion for Deep Learning on Graphs'
   date_iso: '2022-12-05'
   venue: ICML 2022
+- arxiv_id: '2211.15081'
+  title: Mitigating Overfitting in Graph Neural Networks via Feature and Hyperplane
+    Perturbation
+  date_iso: '2022-11-28'
+  venue: ''
 - arxiv_id: '2211.15335'
   title: 'You Can Have Better Graph Neural Networks by Not Training Weights at All:
     Finding Untrained GNNs Tickets'
@@ -598,14 +622,15 @@ papers:
   title: Unsupervised Network Embedding Beyond Homophily
   date_iso: '2022-03-21'
   venue: TMLR 2022
+- arxiv_id: '2202.10793'
+  title: 'PyTorch Geometric Signed Directed: A Software Package on Graph Neural Networks
+    for Signed and Directed Graphs'
+  date_iso: '2022-02-22'
+  venue: LoG 2022
 - arxiv_id: '2202.09025'
   title: Graph Auto-Encoder Via Neighborhood Wasserstein Reconstruction
   date_iso: '2022-02-18'
   venue: ICLR 2022
-- arxiv_id: '2202.04936'
-  title: Robust Graph Representation Learning for Local Corruption Recovery
-  date_iso: '2022-02-10'
-  venue: WWW 2022
 - arxiv_id: '2202.02466'
   title: 'Handling Distribution Shifts on Graphs: An Invariance Perspective'
   date_iso: '2022-02-05'
@@ -686,14 +711,14 @@ papers:
     for Graph Convolutional Networks'
   date_iso: '2020-08-20'
   venue: NeurIPS 2020
-- arxiv_id: '2007.02133'
-  title: Simple and Deep Graph Convolutional Networks
-  date_iso: '2020-07-04'
-  venue: ICML 2020
 - arxiv_id: '2005.14612'
   title: Non-Local Graph Neural Networks
   date_iso: '2020-05-29'
   venue: ''
+- arxiv_id: '2002.05287'
+  title: Heterophilic Graphs
+  date_iso: '2020-02-13'
+  venue: ICLR 2020
 variants:
 - slug: standard-split
   name: Standard split
@@ -747,9 +772,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -1766,6 +1791,32 @@ variants:
     - 0.9262
     metric_stds:
     - 0.0137
+  - model: DMD++
+    model_plain: DMD++
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_iso: '2024-10-08'
+    date_display: Oct 2024
+    codebase_url: ''
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.926
+    metric_stds:
+    - 0.034
   - model: GPT-4o
     model_plain: GPT-4o
     is_baseline: true
@@ -2003,46 +2054,25 @@ variants:
     - 0.9214
     metric_stds:
     - 0.0546
-  - model: Hyperbolic-Jacobi
-    model_plain: Hyperbolic-Jacobi
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.23014'
-    title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in the Perspective
-      of A System of Hyperbolic Partial Differential Equations'
-    date: May 29, 2025
-    date_iso: '2025-05-29'
-    date_display: May 2025
-    codebase_url: https://github.com/YueAWu/Hyperbolic-GNN
-    published_conference: ICML 2025
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2025
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9197
-    metric_stds:
-    - 0.0419
-  row_count: 987
+  row_count: 1003
   rows_json: /data/datasets/texas/standard-split-rows.json
   chart_json: /data/datasets/texas/standard-split-chart.json
   arch_counts:
-    gnn: 652
-    hybrid: 168
-    graph_transformer: 37
+    gnn: 666
+    hybrid: 169
+    graph_transformer: 40
     llm: 12
     walk: 6
-    traditional: 67
+    traditional: 71
   metric_counts:
-  - 928
+  - 933
   milestones: &id001
+  - value: 0.6757
+    std: null
+    model: Geom-GCN-P
+    arxiv_id: '2002.05287'
+    title: Heterophilic Graphs
+    date: '2020-02-13'
   - value: 0.854
     std: 0.038
     model: NLMLP

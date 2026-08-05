@@ -71,8 +71,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - AuGLM (T5-large)
-mrr: 0.0145
-adjusted_mrr: 0.0048
+mrr: 0.0141
+adjusted_mrr: 0.0047
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -89,9 +89,9 @@ results:
 - &id001
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -123,9 +123,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -156,9 +156,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -248,10 +248,10 @@ results:
     value_note: ''
     sort_value: 0.8691
     sort_std: 0.0005
-    global_rank: 11
-    paper_rank: 234
-    rank_delta: 223
-    rank_delta_abs: 223
+    global_rank: 12
+    paper_rank: 251
+    rank_delta: 239
+    rank_delta_abs: 239
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -316,8 +316,8 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.001
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -359,11 +359,11 @@ results:
     published_conference: ''
     at_pub_value: 0.8061
     at_pub_std: 0.0016
-    at_pub_source_arxiv: '2306.10466'
-    at_pub_source_title: 'Graph Ladling: Shockingly Simple Parallel GNN Training without
-      Intermediate Communication'
-    at_pub_source_date_iso: '2023-06-18'
-    at_pub_source_date_label: ICML 2023
+    at_pub_source_arxiv: '2210.07494'
+    at_pub_source_title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking
+      and Rethinking'
+    at_pub_source_date_iso: '2022-10-14'
+    at_pub_source_date_label: NeurIPS 2022
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
     gap_vs_at_pub: 0.045700000000000074
@@ -385,16 +385,16 @@ results:
     value_note: ''
     sort_value: 0.8287
     sort_std: null
-    global_rank: 72
-    paper_rank: 226
-    rank_delta: 154
-    rank_delta_abs: 154
+    global_rank: 74
+    paper_rank: 244
+    rank_delta: 170
+    rank_delta_abs: 170
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Graph Ladling: Shockingly Simple Parallel GNN Training
-      without Intermediate Communication'
-    comparison_source_arxiv: '2306.10466'
+    comparison_source_title: 'A Comprehensive Study on Large-Scale Graph Training:
+      Benchmarking and Rethinking'
+    comparison_source_arxiv: '2210.07494'
     is_best: false
     is_std_outlier: false
   - model: TAPE + RevGAT
@@ -453,8 +453,8 @@ results:
     value_note: ''
     sort_value: 0.8234
     sort_std: 0.0036
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -520,8 +520,8 @@ results:
     value_note: ''
     sort_value: 0.8148
     sort_std: null
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -587,8 +587,8 @@ results:
     value_note: ''
     sort_value: 0.7954
     sort_std: null
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 159
+    paper_rank: 159
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -654,8 +654,8 @@ results:
     value_note: ''
     sort_value: 0.7189
     sort_std: 0.003
-    global_rank: 301
-    paper_rank: 301
+    global_rank: 319
+    paper_rank: 319
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -721,8 +721,8 @@ results:
     value_note: ''
     sort_value: 0.6977
     sort_std: 0.0042
-    global_rank: 317
-    paper_rank: 317
+    global_rank: 337
+    paper_rank: 337
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -755,5 +755,6 @@ datasets_by_scope:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
 single_proposed_model: AuGLM (T5-large)
+main_figure: /figures/2410.02296/main_figure.jpegoptim.jpg
 ---
 

@@ -331,5 +331,6 @@ datasets_by_scope:
     datasets:
     - dataset: FB15k-237
       dataset_slug: fb15k-237
+main_figure: /figures/2605.09099/main_figure.jpegoptim.jpg
 ---
 

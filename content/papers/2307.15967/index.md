@@ -83,9 +83,43 @@ results:
 - &id001
   dataset: PubMed
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
+    model_key: lgtl
+    model_plain: R-SoftGraphAIN
+    value: 0.9518
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9518
+    sort_std: 0.0011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: sagn
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -109,7 +143,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.9517
     sort_std: null
     comparison_type: global_top
@@ -117,9 +151,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
     model_key: mixhop (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -143,43 +177,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9513
     sort_std: 0.0038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
-    model_key: graphsage (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
-    value: 0.9511
-    std: 0.0036
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.13902'
-    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
-      Framework'
-    date: May 22, 2024
-    date_display: May 2024
-    date_iso: '2024-05-22'
-    venue: Web Search and Data Mining
-    codebase_url: https://github.com/QiaoYRan/LOGIN
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9511
-    sort_std: 0.0036
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -241,8 +241,8 @@ results:
     value_note: ''
     sort_value: 0.7903
     sort_std: 0.0009
-    global_rank: 511
-    paper_rank: 511
+    global_rank: 611
+    paper_rank: 611
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -264,9 +264,9 @@ results:
 - &id002
   dataset: Reddit
   rows:
-  - model: GCNII
+  - model: TinyGraph
     model_key: ne-asgcn
-    model_plain: GCNII
+    model_plain: TinyGraph
     value: 0.9758
     std: 0.0027
     metric: Accuracy
@@ -298,9 +298,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCNII
+  - model: TinyGraph
+    model_key: hsgt
+    model_plain: TinyGraph
+    value: 0.973
+    std: 0.0024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.02866'
+    title: Hierarchical Transformer for Scalable Graph Learning
+    date: May 4, 2023
+    date_display: May 2023
+    date_iso: '2023-05-04'
+    venue: International Joint Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.973
+    sort_std: 0.0024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: TinyGraph
     model_key: gcmae
-    model_plain: GCNII
+    model_plain: TinyGraph
     value: 0.9713
     std: 0.0017
     metric: Accuracy
@@ -324,42 +357,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9713
     sort_std: 0.0017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gat+norm.adj.
-    model_plain: GCNII
-    value: 0.9706
-    std: 0.0005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2103.13355'
-    title: Bag of Tricks for Node Classification with Graph Neural Networks
-    date: Mar 24, 2021
-    date_display: Mar 2021
-    date_iso: '2021-03-24'
-    venue: null
-    codebase_url: https://github.com/espylapiza/Bag-of-Tricks-for-Node-Classification-with-Graph-Neural-Networks
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9706
-    sort_std: 0.0005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -396,16 +396,15 @@ results:
     date_iso: '2023-07-29'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.9647
-    at_pub_std: null
-    at_pub_source_arxiv: '1907.10903'
-    at_pub_source_title: 'DropEdge: Towards Deep Graph Convolutional Networks on Node
-      Classification'
-    at_pub_source_date_iso: '2019-07-25'
-    at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-07-25'
-    value_gap_source_date_label: ICLR 2019
-    gap_vs_at_pub: 0.07579999999999998
+    at_pub_value: 0.9653
+    at_pub_std: 0.0011
+    at_pub_source_arxiv: '2305.02866'
+    at_pub_source_title: Hierarchical Transformer for Scalable Graph Learning
+    at_pub_source_date_iso: '2023-05-04'
+    at_pub_source_date_label: IJCAI 2023
+    value_gap_source_date_iso: '2023-05-04'
+    value_gap_source_date_label: IJCAI 2023
+    gap_vs_at_pub: 0.07640000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -413,27 +412,25 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9647
-    true_std: null
-    value_gap_source_arxiv: '1907.10903'
-    value_gap_source_title: 'DropEdge: Towards Deep Graph Convolutional Networks on
-      Node Classification'
+    true_value: 0.9653
+    true_std: 0.0011
+    value_gap_source_arxiv: '2305.02866'
+    value_gap_source_title: Hierarchical Transformer for Scalable Graph Learning
     value_gap_source_is_current_paper: false
-    value_gap: 0.07579999999999998
+    value_gap: 0.07640000000000002
     has_value_note: false
     value_note: ''
-    sort_value: 0.9647
-    sort_std: null
-    global_rank: 23
-    paper_rank: 109
-    rank_delta: 86
-    rank_delta_abs: 86
+    sort_value: 0.9653
+    sort_std: 0.0011
+    global_rank: 19
+    paper_rank: 120
+    rank_delta: 101
+    rank_delta_abs: 101
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'DropEdge: Towards Deep Graph Convolutional Networks
-      on Node Classification'
-    comparison_source_arxiv: '1907.10903'
+    comparison_source_title: Hierarchical Transformer for Scalable Graph Learning
+    comparison_source_arxiv: '2305.02866'
     is_best: false
     is_std_outlier: false
   - model: APPNP
@@ -495,10 +492,10 @@ results:
     value_note: ''
     sort_value: 0.95
     sort_std: null
-    global_rank: 58
-    paper_rank: 112
-    rank_delta: 54
-    rank_delta_abs: 54
+    global_rank: 64
+    paper_rank: 128
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -563,8 +560,8 @@ results:
     value_note: ''
     sort_value: 0.94
     sort_std: 0.0002
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -630,8 +627,8 @@ results:
     value_note: ''
     sort_value: 0.9153
     sort_std: 0.0012
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -699,10 +696,10 @@ results:
     value_note: ''
     sort_value: 0.914
     sort_std: null
-    global_rank: 91
-    paper_rank: 133
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 101
+    paper_rank: 150
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -769,10 +766,10 @@ results:
     value_note: ''
     sort_value: 0.911
     sort_std: null
-    global_rank: 95
-    paper_rank: 133
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 106
+    paper_rank: 150
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -818,37 +815,38 @@ results:
       to Condensed Graph-free Data'
     at_pub_source_date_iso: '2023-06-05'
     at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2024-07-03'
+    value_gap_source_date_iso: '2024-07-10'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.01629999999999998
     worse_than_at_pub: false
-    surpassed_since_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.904
-    true_std: 0.0041
-    value_gap_source_arxiv: '2407.11025'
-    value_gap_source_title: Backdoor Graph Condensation
+    today_delta_significant: false
+    true_value: 0.903
+    true_std: 0.031
+    value_gap_source_arxiv: '2407.08064'
+    value_gap_source_title: 'TinyGraph: Joint Feature and Node Condensation for Graph
+      Neural Networks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.00770000000000004
+    value_gap: 0.006700000000000039
     has_value_note: false
     value_note: ''
-    sort_value: 0.904
-    sort_std: 0.0041
-    global_rank: 99
-    paper_rank: 105
-    rank_delta: 6
-    rank_delta_abs: 6
+    sort_value: 0.903
+    sort_std: 0.031
+    global_rank: 111
+    paper_rank: 115
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: MCond_SO
     model_key: mcond_so
     model_plain: MCond_SO
@@ -905,8 +903,8 @@ results:
     value_note: ''
     sort_value: 0.9006
     sort_std: 0.0023
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -972,8 +970,8 @@ results:
     value_note: ''
     sort_value: 0.8877
     sort_std: 0.0044
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1039,8 +1037,8 @@ results:
     value_note: ''
     sort_value: 0.7942
     sort_std: 0.0113
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1107,8 +1105,8 @@ results:
     value_note: ''
     sort_value: 0.753
     sort_std: 0.0002
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1175,10 +1173,10 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: 0.016
-    global_rank: 125
-    paper_rank: 133
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 141
+    paper_rank: 150
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1243,8 +1241,8 @@ results:
     value_note: ''
     sort_value: 0.574
     sort_std: 0.018
-    global_rank: 131
-    paper_rank: 133
+    global_rank: 148
+    paper_rank: 150
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -1280,5 +1278,6 @@ datasets_by_scope:
       dataset_slug: pubmed
     - dataset: Reddit
       dataset_slug: reddit
+main_figure: /figures/2307.15967/main_figure.jpegoptim.jpg
 ---
 

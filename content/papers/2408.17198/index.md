@@ -151,68 +151,71 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HG-SCM
-    model_key: shgn
-    model_plain: HG-SCM
-    value: 0.6736
-    std: 0.0057
+  - model: TAGs (70b)
+    model_key: tags (70b)
+    model_plain: TAGs (70b)
+    value: 0.7157
+    std: 0.0042
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2410.10241'
-    title: Revisiting Graph Autoencoders as Implicit Contrastive Learners
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    venue: KDD 2026 research track. Code available at https://github.com/EdisonLeeeee/lrGAE
-    codebase_url: https://github.com/EdisonLeeeee/lrGAE
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
+    input_feature_source: mixed
+    feature_source_evidence: TAGs... leverages the capability of Large Language Models
+      (LLMs) to decompose the graph structure by analyzing raw text attributes
     is_global_top: true
     global_rank: 2
-    sort_value: 0.6736
-    sort_std: 0.0057
+    sort_value: 0.7157
+    sort_std: 0.0042
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: HG-SCM
-    model_key: simplehgn
-    model_plain: HG-SCM
-    value: 0.6736
-    std: 0.0057
+  - model: TAGs (70b)
+    model_key: unimp
+    model_plain: TAGs (70b)
+    value: 0.6998
+    std: 0.0058
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2312.05757'
-    title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
-      Graph'
-    date: Dec 10, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-10'
-    venue: Information Processing & Management
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
+    input_feature_source: raw_features
+    feature_source_evidence: nodes are characterized by a feature matrix X... text
+      attributes are encoded using a PLM
     is_global_top: true
     global_rank: 3
-    sort_value: 0.6736
-    sort_std: 0.0057
+    sort_value: 0.6998
+    sort_std: 0.0058
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -240,5 +243,6 @@ datasets_by_scope:
     datasets:
     - dataset: IMDB
       dataset_slug: imdb
+main_figure: /figures/2408.17198/main_figure.jpegoptim.jpg
 ---
 

@@ -344,5 +344,6 @@ datasets_by_scope:
     - dataset: IMDB-MULTI
       dataset_slug: imdb-multi
 single_proposed_model: MLP
+main_figure: /figures/2010.15116/main_figure.jpegoptim.jpg
 ---
 

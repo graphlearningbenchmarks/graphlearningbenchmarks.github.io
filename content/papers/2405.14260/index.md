@@ -75,9 +75,9 @@ results:
 - &id001
   dataset: ogbn-proteins
   rows:
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8942
     std: 0.0007
     metric: ROC-AUC
@@ -109,9 +109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: x_wo/ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8915
     std: 0.0012
     metric: ROC-AUC
@@ -233,5 +233,6 @@ datasets_by_scope:
     - dataset: ogbn-proteins
       dataset_slug: ogbn-proteins
 single_proposed_model: MoG
+main_figure: /figures/2405.14260/main_figure.jpegoptim.jpg
 ---
 

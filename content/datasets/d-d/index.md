@@ -13,7 +13,7 @@ stats:
   avg_nodes: 284.3
   avg_edges: 715.7
   num_classes: 2
-result_count: 245
+result_count: 226
 best_model:
   model: GC-GNN (GraphSAGE)
   value: 0.921
@@ -47,6 +47,10 @@ papers:
   title: Cluster-wise Graph Transformer with Dual-granularity Kernelized Attention
   date_iso: '2024-10-09'
   venue: NeurIPS 2024
+- arxiv_id: '2406.00403'
+  title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+  date_iso: '2024-06-01'
+  venue: ''
 - arxiv_id: '2404.17947'
   title: Bounding the Expected Robustness of Graph Neural Networks Subject to Node
     Feature Attacks
@@ -65,10 +69,6 @@ papers:
     with Stability
   date_iso: '2023-09-01'
   venue: ''
-- arxiv_id: '2308.08344'
-  title: Graph Out-of-Distribution Generalization with Controllable Data Augmentation
-  date_iso: '2023-08-16'
-  venue: ''
 - arxiv_id: '2306.12726'
   title: On Exploring Node-feature and Graph-structure Diversities for Node Drop Graph
     Pooling
@@ -86,10 +86,6 @@ papers:
   title: Structural Entropy Guided Graph Hierarchical Pooling
   date_iso: '2022-06-26'
   venue: ICML 2022
-- arxiv_id: '2206.09345'
-  title: Finding Diverse and Predictable Subgraphs for Graph Domain Generalization
-  date_iso: '2022-06-19'
-  venue: ''
 - arxiv_id: '2205.13328'
   title: How Powerful are $K$-hop Message Passing Graph Neural Networks
   date_iso: '2022-05-26'
@@ -140,6 +136,10 @@ papers:
     and Learning'
   date_iso: '2020-07-22'
   venue: ''
+- arxiv_id: '2006.03814'
+  title: The Impact of Global Structural Information in Graph Neural Networks Applications
+  date_iso: '2020-06-06'
+  venue: ''
 - arxiv_id: '1911.07979'
   title: 'ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical Graph Representations'
   date_iso: '2019-11-18'
@@ -148,6 +148,10 @@ papers:
   title: Wasserstein Weisfeiler-Lehman Graph Kernels
   date_iso: '2019-06-04'
   venue: NeurIPS 2019
+- arxiv_id: '1905.05178'
+  title: Graph U-Nets
+  date_iso: '2019-05-11'
+  venue: ''
 - arxiv_id: '1904.13107'
   title: Graph Convolutional Networks with EigenPooling
   date_iso: '2019-04-30'
@@ -159,6 +163,11 @@ papers:
 - arxiv_id: '1901.01343'
   title: Graph Neural Networks With Convolutional ARMA Filters
   date_iso: '2019-01-05'
+  venue: ''
+- arxiv_id: '1901.08296'
+  title: 'Deep Learning on Attributed Graphs: A Journey from Graphs to Their Embeddings
+    and Back'
+  date_iso: '2018-12-14'
   venue: ''
 - arxiv_id: '1805.08090'
   title: Graph Capsule Convolutional Neural Networks
@@ -203,9 +212,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2309.00738'
     title: Rethinking the Power of Graph Canonization in Graph Representation Learning
       with Stability
@@ -356,33 +365,6 @@ variants:
     - 0.825
     metric_stds:
     - 0.0359
-  - model: g-U-Nets
-    model_plain: g-U-Nets
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2007.11202'
-    title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for Graph Representation
-      and Learning'
-    date: Jul 22, 2020
-    date_iso: '2020-07-22'
-    date_display: Jul 2020
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8243
-    metric_stds:
-    - null
   - model: gPool
     model_plain: gPool
     is_baseline: true
@@ -403,6 +385,32 @@ variants:
     published_conference_short: WWW
     published_conference_slug: www
     published_venue: WWW 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8243
+    metric_stds:
+    - null
+  - model: g-U-Nets
+    model_plain: g-U-Nets
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '1905.05178'
+    title: Graph U-Nets
+    date: May 11, 2019
+    date_iso: '2019-05-11'
+    date_display: May 2019
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -758,12 +766,11 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2007.11202'
-    title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for Graph Representation
-      and Learning'
-    date: Jul 22, 2020
-    date_iso: '2020-07-22'
-    date_display: Jul 2020
+    arxiv_id: '1905.05178'
+    title: Graph U-Nets
+    date: May 11, 2019
+    date_iso: '2019-05-11'
+    date_display: May 2019
     codebase_url: ''
     published_conference: ''
     published_conference_short: ''
@@ -907,6 +914,32 @@ variants:
     - 0.801
     metric_stds:
     - 0.0177
+  - model: DiffPool-NoLP
+    model_plain: DiffPool-NoLP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '1905.05178'
+    title: Graph U-Nets
+    date: May 11, 2019
+    date_iso: '2019-05-11'
+    date_display: May 2019
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7998
+    metric_stds:
+    - null
   - model: UFGPool-Spectrum
     model_plain: UFGPool-Spectrum
     is_baseline: true
@@ -1195,6 +1228,32 @@ variants:
     - 0.795
     metric_stds:
     - 0.022
+  - model: DC-GCL
+    model_plain: DC-GCL
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2406.00403'
+    title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    date: Jun 1, 2024
+    date_iso: '2024-06-01'
+    date_display: Jun 2024
+    codebase_url: https://github.com/Celin-Yao/DC-GCL
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7943
+    metric_stds:
+    - 0.0063
   - model: GraphMAE
     model_plain: GraphMAE
     is_baseline: true
@@ -1221,32 +1280,6 @@ variants:
     - 0.7942
     metric_stds:
     - 0.0042
-  - model: OOD-Mixup
-    model_plain: OOD-Mixup
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2308.08344'
-    title: Graph Out-of-Distribution Generalization with Controllable Data Augmentation
-    date: Aug 16, 2023
-    date_iso: '2023-08-16'
-    date_display: Aug 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7941
-    metric_stds:
-    - 0.0057
   - model: WL
     model_plain: WL
     is_baseline: true
@@ -1482,44 +1515,18 @@ variants:
     - 0.79
     metric_stds:
     - 0.006
-  - model: PAS
-    model_plain: PAS
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2108.10587'
-    title: Pooling Architecture Search for Graph Classification
-    date: Aug 24, 2021
-    date_iso: '2021-08-24'
-    date_display: Aug 2021
-    codebase_url: https://github.com/GraphNAS/GraphNAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.7896
-    metric_stds:
-    - 0.0368
-  row_count: 245
+  row_count: 226
   rows_json: /data/datasets/d-d/10-fold-cv-rows.json
   chart_json: /data/datasets/d-d/10-fold-cv-chart.json
   arch_counts:
-    gnn: 147
-    hybrid: 46
-    graph_transformer: 6
+    gnn: 132
+    hybrid: 50
+    graph_transformer: 4
     llm: 1
     walk: 2
-    traditional: 32
+    traditional: 27
   metric_counts:
-  - 245
+  - 226
   milestones: &id001
   - value: 0.7845
     std: 0.0026
@@ -1539,6 +1546,12 @@ variants:
     arxiv_id: '1704.02901'
     title: Dynamic Edge-Conditioned Filters in Convolutional Neural Networks on Graphs
     date: '2017-04-10'
+  - value: 0.8243
+    std: null
+    model: g-U-Nets
+    arxiv_id: '1905.05178'
+    title: Graph U-Nets
+    date: '2019-05-11'
   - value: 0.825
     std: 0.0359
     model: MathNet

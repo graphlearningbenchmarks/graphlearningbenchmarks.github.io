@@ -8,7 +8,7 @@ primary_metric: RMSE
 higher_is_better: false
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
 stats: null
-result_count: 191
+result_count: 198
 best_model:
   model: 10% ZINC + 10% PubChem
   value: 0.2775
@@ -63,6 +63,10 @@ papers:
   title: Graph Neural Networks with a Distribution of Parametrized Graphs
   date_iso: '2023-10-25'
   venue: ICML 2023
+- arxiv_id: '2310.07351'
+  title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+  date_iso: '2023-10-11'
+  venue: ''
 - arxiv_id: '2309.10131'
   title: Deep Prompt Tuning for Graph Transformers
   date_iso: '2023-09-18'
@@ -348,7 +352,7 @@ variants:
     date: May 23, 2023
     date_iso: '2023-05-23'
     date_display: May 2023
-    codebase_url: ''
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     published_conference: KDD 2023
     published_conference_short: KDD
     published_conference_slug: kdd
@@ -376,7 +380,7 @@ variants:
     date: May 23, 2023
     date_iso: '2023-05-23'
     date_display: May 2023
-    codebase_url: ''
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     published_conference: KDD 2023
     published_conference_short: KDD
     published_conference_slug: kdd
@@ -460,7 +464,7 @@ variants:
     date: May 23, 2023
     date_iso: '2023-05-23'
     date_display: May 2023
-    codebase_url: ''
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     published_conference: KDD 2023
     published_conference_short: KDD
     published_conference_slug: kdd
@@ -516,7 +520,7 @@ variants:
     date: May 23, 2023
     date_iso: '2023-05-23'
     date_display: May 2023
-    codebase_url: ''
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     published_conference: KDD 2023
     published_conference_short: KDD
     published_conference_slug: kdd
@@ -657,7 +661,7 @@ variants:
     date: May 23, 2023
     date_iso: '2023-05-23'
     date_display: May 2023
-    codebase_url: ''
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     published_conference: KDD 2023
     published_conference_short: KDD
     published_conference_slug: kdd
@@ -825,7 +829,7 @@ variants:
     date: May 23, 2023
     date_iso: '2023-05-23'
     date_display: May 2023
-    codebase_url: ''
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     published_conference: KDD 2023
     published_conference_short: KDD
     published_conference_slug: kdd
@@ -937,7 +941,7 @@ variants:
     date: May 23, 2023
     date_iso: '2023-05-23'
     date_display: May 2023
-    codebase_url: ''
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     published_conference: KDD 2023
     published_conference_short: KDD
     published_conference_slug: kdd
@@ -1107,7 +1111,7 @@ variants:
     date: May 23, 2023
     date_iso: '2023-05-23'
     date_display: May 2023
-    codebase_url: ''
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
     published_conference: KDD 2023
     published_conference_short: KDD
     published_conference_slug: kdd
@@ -1573,18 +1577,18 @@ variants:
     metric_stds:
     - 0.02
     - null
-  row_count: 191
+  row_count: 198
   rows_json: /data/datasets/esol/scaffold-split-rows.json
   chart_json: /data/datasets/esol/scaffold-split-chart.json
   arch_counts:
-    gnn: 112
+    gnn: 114
     hybrid: 37
-    graph_transformer: 17
+    graph_transformer: 21
     llm: 6
     walk: 1
-    traditional: 15
+    traditional: 16
   metric_counts:
-  - 187
+  - 194
   - 4
   milestones: &id001
   - value: 0.278

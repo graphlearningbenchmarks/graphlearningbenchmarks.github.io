@@ -60,7 +60,7 @@ benchmark_coverage:
 - benchmark: GraphBench
   benchmark_slug: graphbench
   evaluated: 1
-  total: 5
+  total: 8
 task_categories:
 - graph_classification
 - graph_regression
@@ -562,9 +562,9 @@ results:
     comparison_source_arxiv: '2411.12732'
     is_best: false
     is_std_outlier: false
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: exphormer + lappe
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -595,9 +595,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CoCN exp.
+  - model: differential encoding
     model_key: graphgps + rwse
-    model_plain: CoCN exp.
+    model_plain: differential encoding
     value: 0.4685
     std: 0.0009
     metric: MRR
@@ -685,9 +685,9 @@ results:
     sort_value: 0.4526
     sort_std: 0.0006
     global_rank: 24
-    paper_rank: 45
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 46
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -754,9 +754,9 @@ results:
     sort_value: 0.3543
     sort_std: 0.0004
     global_rank: 33
-    paper_rank: 37
-    rank_delta: 4
-    rank_delta_abs: 4
+    paper_rank: 38
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -813,7 +813,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3395
     sort_std: null
-    global_rank: 38
+    global_rank: 39
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -839,6 +839,39 @@ results:
 - &id001
   dataset: ZINC
   rows:
+  - model: GPS
+    model_key: tigt
+    model_plain: GPS
+    value: 0.014
+    std: 0.001
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.02005'
+    title: Topology-Informed Graph Transformer
+    date: Feb 3, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-03'
+    venue: GRaM
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.014
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: FloydNet
     model_key: floydnet
     model_plain: FloydNet
@@ -887,7 +920,7 @@ results:
     today_delta_significant: false
     sort_value: 0.016
     sort_std: null
-    global_rank: 1
+    global_rank: 2
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -899,11 +932,11 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: ppgn++
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.001
     metric: MAE
@@ -926,7 +959,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.02
     sort_std: 0.001
     comparison_type: global_top
@@ -934,9 +967,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Subgraphormer
+  - model: GPS
     model_key: subgraphormer
-    model_plain: Subgraphormer
+    model_plain: GPS
     value: 0.02
     std: 0.002
     metric: MAE
@@ -960,43 +993,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.02
     sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Subgraphormer
-    model_key: cin
-    model_plain: Subgraphormer
-    value: 0.021
-    std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2306.03561'
-    title: 'CIN++: Enhancing Topological Message Passing'
-    date: Jun 6, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-06'
-    venue: arXiv.org
-    codebase_url: https://github.com/twitter-research/cwn
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Without any use of feature augmentation such as positional
-      encoding, our model exhibits particularly strong performance
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.021
-    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1050,7 +1049,7 @@ results:
     today_delta_significant: false
     sort_value: 0.024
     sort_std: null
-    global_rank: 9
+    global_rank: 12
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1112,7 +1111,7 @@ results:
     today_delta_significant: false
     sort_value: 0.024
     sort_std: null
-    global_rank: 9
+    global_rank: 12
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1121,6 +1120,73 @@ results:
     rank_delta: null
     rank_delta_abs: null
     rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Graphormer
+    model_key: graphormer
+    model_plain: Graphormer
+    value: 0.025
+    std: null
+    paper_value: 0.025
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: zhang2023rethinking
+    variant_inference_reason: 'zinc: mae fallback <= 0.06'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.025
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2501.18739'
+    at_pub_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    at_pub_source_date_iso: '2025-01-30'
+    at_pub_source_date_label: ICML 2025
+    value_gap_source_date_iso: '2025-01-30'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.025
+    true_std: 0.004
+    value_gap_source_arxiv: '2501.18739'
+    value_gap_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.025
+    sort_std: 0.004
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1174,7 +1240,7 @@ results:
     today_delta_significant: false
     sort_value: 0.028
     sort_std: null
-    global_rank: 11
+    global_rank: 17
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1236,7 +1302,7 @@ results:
     today_delta_significant: false
     sort_value: 0.03
     sort_std: null
-    global_rank: 14
+    global_rank: 20
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1245,73 +1311,6 @@ results:
     rank_delta: null
     rank_delta_abs: null
     rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Graphormer
-    model_key: graphormer
-    model_plain: Graphormer
-    value: 0.025
-    std: null
-    paper_value: 0.025
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: zhang2023rethinking
-    variant_inference_reason: 'zinc: mae fallback <= 0.06'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2026
-    date_display: Jan 2026
-    date_iso: '2026-01-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.025
-    at_pub_std: 0.004
-    at_pub_source_arxiv: '2501.18739'
-    at_pub_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
-    at_pub_source_date_iso: '2025-01-30'
-    at_pub_source_date_label: ICML 2025
-    value_gap_source_date_iso: '2023-05-25'
-    value_gap_source_date_label: AAAI 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.0309
-    true_std: 0.0031
-    value_gap_source_arxiv: '2305.15747'
-    value_gap_source_title: Union Subgraph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.005899999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.0309
-    sort_std: 0.0031
-    global_rank: 14
-    paper_rank: 9
-    rank_delta: -5
-    rank_delta_abs: 5
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

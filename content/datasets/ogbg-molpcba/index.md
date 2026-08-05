@@ -12,7 +12,7 @@ stats:
   avg_nodes: 26.0
   avg_edges: 28.1
   num_classes: 128
-result_count: 189
+result_count: 184
 best_model:
   model: HIG with Graphormer
   value: 0.3167
@@ -24,6 +24,11 @@ papers:
   title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
     via Continuous Phase Transitions'
   date_iso: '2026-04-27'
+  venue: ''
+- arxiv_id: '2604.17324'
+  title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers via Sigmoid-Gated
+    Attention'
+  date_iso: '2026-04-19'
   venue: ''
 - arxiv_id: '2510.05583'
   title: 'When does global attention help: a unified empirical study on atomistic
@@ -60,10 +65,6 @@ papers:
     Matching'
   date_iso: '2024-02-07'
   venue: ''
-- arxiv_id: '2311.04837'
-  title: Identifying Semantic Component for Robust Molecular Property Prediction
-  date_iso: '2023-11-08'
-  venue: ''
 - arxiv_id: '2309.10131'
   title: Deep Prompt Tuning for Graph Transformers
   date_iso: '2023-09-18'
@@ -73,6 +74,10 @@ papers:
     with Stability
   date_iso: '2023-09-01'
   venue: ''
+- arxiv_id: '2306.15963'
+  title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+  date_iso: '2023-06-28'
+  venue: NeurIPS 2023
 - arxiv_id: '2305.15747'
   title: Union Subgraph Neural Networks
   date_iso: '2023-05-25'
@@ -87,6 +92,15 @@ papers:
     Modeling'
   date_iso: '2023-04-06'
   venue: NeurIPS 2023
+- arxiv_id: '2301.11956'
+  title: On the Connection Between MPNN and Graph Transformer
+  date_iso: '2023-01-27'
+  venue: ICML 2023
+- arxiv_id: '2211.15335'
+  title: 'You Can Have Better Graph Neural Networks by Not Training Weights at All:
+    Finding Untrained GNNs Tickets'
+  date_iso: '2022-11-28'
+  venue: LoG 2022
 - arxiv_id: '2210.02997'
   title: Expander Graph Propagation
   date_iso: '2022-10-06'
@@ -127,6 +141,10 @@ papers:
   title: 'GRPE: Relative Positional Encoding for Graph Transformer'
   date_iso: '2022-01-30'
   venue: ''
+- arxiv_id: '2110.07875'
+  title: Graph Neural Networks with Learnable Structural and Positional Representations
+  date_iso: '2021-10-15'
+  venue: ICLR 2021
 - arxiv_id: '2110.00577'
   title: Reconstruction for Powerful Graph Representations
   date_iso: '2021-10-01'
@@ -459,6 +477,37 @@ variants:
     - null
     metric_stds:
     - 0.0025
+    - null
+    - null
+  - model: SigGate-GT
+    model_plain: SigGate-GT
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2604.17324'
+    title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers via Sigmoid-Gated
+      Attention'
+    date: Apr 19, 2026
+    date_iso: '2026-04-19'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2984
+    - null
+    - null
+    metric_stds:
+    - 0.0031
     - null
     - null
   - model: GINE-AP
@@ -915,6 +964,37 @@ variants:
     - 0.0023
     - null
     - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2604.17324'
+    title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers via Sigmoid-Gated
+      Attention'
+    date: Apr 19, 2026
+    date_iso: '2026-04-19'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.292
+    - null
+    - null
+    metric_stds:
+    - 0.003
+    - null
+    - null
   - model: PHC-1
     model_plain: PHC-1
     is_baseline: true
@@ -975,6 +1055,36 @@ variants:
     - 0.0024
     - null
     - null
+  - model: GPS
+    model_plain: GPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2907
+    - null
+    - null
+    metric_stds:
+    - 0.0028
+    - null
+    - null
   - model: GraphGPS
     model_plain: GraphGPS
     is_baseline: true
@@ -984,48 +1094,17 @@ variants:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2604.24293'
-    title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
-      via Continuous Phase Transitions'
-    date: Apr 27, 2026
-    date_iso: '2026-04-27'
+    arxiv_id: '2604.17324'
+    title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers via Sigmoid-Gated
+      Attention'
+    date: Apr 19, 2026
+    date_iso: '2026-04-19'
     date_display: Apr 2026
     codebase_url: ''
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
     published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.291
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-  - model: GPS
-    model_plain: GPS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.424
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_iso: '2023-05-10'
-    date_display: May 2023
-    codebase_url: https://github.com/qslim/PDF
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1219,6 +1298,36 @@ variants:
     - 0.0043
     - null
     - null
+  - model: PNA-LSPE
+    model_plain: PNA-LSPE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2110.07875'
+    title: Graph Neural Networks with Learnable Structural and Positional Representations
+    date: Oct 15, 2021
+    date_iso: '2021-10-15'
+    date_display: Oct 2021
+    codebase_url: https://github.com/vijaydwivedi75/gnn-lspe
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.284
+    - null
+    - null
+    metric_stds:
+    - 0.0021
+    - null
+    - null
   - model: PNA
     model_plain: PNA
     is_baseline: true
@@ -1307,6 +1416,36 @@ variants:
     - null
     metric_stds:
     - 0.0013
+    - null
+    - null
+  - model: MPNN + VN + NoPE
+    model_plain: MPNN + VN + NoPE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.11956'
+    title: On the Connection Between MPNN and Graph Transformer
+    date: Jan 27, 2023
+    date_iso: '2023-01-27'
+    date_display: Jan 2023
+    codebase_url: https://github.com/Chen-Cai-OSU/MPNN-GT-Connection
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2823
+    - null
+    - null
+    metric_stds:
+    - 0.0026
     - null
     - null
   - model: MPNN
@@ -1492,6 +1631,36 @@ variants:
     - 0.0038
     - null
     - null
+  - model: DeeperGCN-VN
+    model_plain: DeeperGCN-VN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.07875'
+    title: Graph Neural Networks with Learnable Structural and Positional Representations
+    date: Oct 15, 2021
+    date_iso: '2021-10-15'
+    date_display: Oct 2021
+    codebase_url: https://github.com/vijaydwivedi75/gnn-lspe
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2781
+    - null
+    - null
+    metric_stds:
+    - 0.0038
+    - null
+    - null
   - model: HGODE
     model_plain: HGODE
     is_baseline: false
@@ -1523,172 +1692,20 @@ variants:
     - 0.003
     - null
     - null
-  - model: SAN
-    model_plain: SAN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.509
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.06102'
-    title: Towards Better Graph Representation Learning with Parameterized Decomposition
-      & Filtering
-    date: May 10, 2023
-    date_iso: '2023-05-10'
-    date_display: May 2023
-    codebase_url: https://github.com/qslim/PDF
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2765
-    - null
-    - null
-    metric_stds:
-    - 0.0042
-    - null
-    - null
-  - model: GraphTrans
-    model_plain: GraphTrans
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2509.24886'
-    title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
-      Networks
-    date: Sep 29, 2025
-    date_iso: '2025-09-29'
-    date_display: Sep 2025
-    codebase_url: https://github.com/ywelld/_ac
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2761
-    - null
-    - null
-    metric_stds:
-    - 0.0029
-    - null
-    - null
-  - model: GraphTrans (GCN-Virtual)
-    model_plain: GraphTrans (GCN-Virtual)
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2761
-    - null
-    - null
-    metric_stds:
-    - 0.0029
-    - null
-    - null
-  - model: MPNN + Random Features
-    model_plain: MPNN + Random Features
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2206.11941'
-    title: Affinity-Aware Graph Networks
-    date: Jun 23, 2022
-    date_iso: '2022-06-23'
-    date_display: Jun 2022
-    codebase_url: ''
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2706
-    - null
-    - null
-    metric_stds:
-    - 0.0021
-    - null
-    - null
-  - model: GIN+virtual node
-    model_plain: GIN+virtual node
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2206.11010'
-    title: Agent-based Graph Neural Networks
-    date: Jun 22, 2022
-    date_iso: '2022-06-22'
-    date_display: Jun 2022
-    codebase_url: https://github.com/KarolisMart/AgentNet
-    published_conference: ICLR 2022
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2703
-    - null
-    - null
-    metric_stds:
-    - 0.0023
-    - null
-    - null
-  row_count: 189
+  row_count: 184
   rows_json: /data/datasets/ogbg-molpcba/standard-split-rows.json
   chart_json: /data/datasets/ogbg-molpcba/standard-split-chart.json
   arch_counts:
-    gnn: 107
+    gnn: 95
     hybrid: 32
-    graph_transformer: 21
+    graph_transformer: 24
     llm: 0
     walk: 0
-    traditional: 15
+    traditional: 16
   metric_counts:
-  - 115
+  - 122
   - 10
-  - 64
+  - 52
   milestones: &id001
   - value: 0.2947
     std: 0.0026
@@ -1731,19 +1748,13 @@ variants:
       arxiv_id: '2206.07746'
       title: Condensing Graphs via One-Step Gradient Matching
       date: '2022-06-15'
-    - value: 0.7028
-      std: 0.0136
-      model: GMoE-GCN
-      arxiv_id: '2304.02806'
-      title: 'Graph Mixture of Experts: Learning on Large-Scale Graphs with Explicit
-        Diversity Modeling'
-      date: '2023-04-06'
-    - value: 0.73
-      std: 0.0293
-      model: SCI
-      arxiv_id: '2311.04837'
-      title: Identifying Semantic Component for Robust Molecular Property Prediction
-      date: '2023-11-08'
+    - value: 0.784
+      std: null
+      model: UGTs
+      arxiv_id: '2211.15335'
+      title: 'You Can Have Better Graph Neural Networks by Not Training Weights at
+        All: Finding Untrained GNNs Tickets'
+      date: '2022-11-28'
     - value: 0.7919
       std: 0.0137
       model: EGTAS

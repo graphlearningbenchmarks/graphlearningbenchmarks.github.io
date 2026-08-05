@@ -46,26 +46,26 @@ has_results: true
 paper_type: method
 proposed_models:
 - ICG-NN
-mrr: 0.0344
-adjusted_mrr: 0.0229
+mrr: 0.029
+adjusted_mrr: 0.0194
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
-- Heterophilic Graphs
+- Heterophily Benchmark
 - LINKX Benchmarks
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 1
   total: 12
-- benchmark: Heterophilic Graphs
-  benchmark_slug: heterophilic-graphs
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
   evaluated: 1
-  total: 13
+  total: 5
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
   evaluated: 1
-  total: 5
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: GraphAny
+  - model: Cluster-GCN (2019)
     model_key: node sampled soup
-    model_plain: GraphAny
+    model_plain: Cluster-GCN (2019)
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -108,44 +108,45 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: gamlp(jk)
-    model_plain: GraphAny
-    value: 0.9704
-    std: 0.01
+  - model: Cluster-GCN (2019)
+    model_key: engcn
+    model_plain: Cluster-GCN (2019)
+    value: 0.9714
+    std: 0.0003
     metric: F1
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2206.04355'
-    title: Graph Attention Multi-Layer Perceptron
-    date: Jun 9, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-09'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/PKU-DAIR/GAMLP
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9704
-    sort_std: 0.01
+    sort_value: 0.9714
+    sort_std: 0.0003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: GraphAny
-    model_key: graphsaint
-    model_plain: GraphAny
-    value: 0.97
-    std: null
+  - model: Cluster-GCN (2019)
+    model_key: sagn+sle
+    model_plain: Cluster-GCN (2019)
+    value: 0.971
+    std: 0.0
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -155,20 +156,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.97
-    sort_std: null
+    sort_value: 0.971
+    sort_std: 0.0
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -222,7 +224,7 @@ results:
     today_delta_significant: false
     sort_value: 0.936
     sort_std: 0.012
-    global_rank: 100
+    global_rank: 116
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -293,8 +295,8 @@ results:
     value_note: ''
     sort_value: 0.9106
     sort_std: 0.0093
-    global_rank: 122
-    paper_rank: 125
+    global_rank: 142
+    paper_rank: 145
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -352,7 +354,7 @@ results:
     today_delta_significant: false
     sort_value: 0.905
     sort_std: 0.012
-    global_rank: 125
+    global_rank: 145
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -414,7 +416,7 @@ results:
     today_delta_significant: false
     sort_value: 0.899
     sort_std: 0.004
-    global_rank: 126
+    global_rank: 146
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -476,7 +478,7 @@ results:
     today_delta_significant: false
     sort_value: 0.896
     sort_std: 0.012
-    global_rank: 126
+    global_rank: 146
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -547,8 +549,8 @@ results:
     value_note: ''
     sort_value: 0.7868
     sort_std: 0.0094
-    global_rank: 130
-    paper_rank: 136
+    global_rank: 151
+    paper_rank: 157
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -616,8 +618,8 @@ results:
     value_note: ''
     sort_value: 0.6992
     sort_std: 0.0232
-    global_rank: 137
-    paper_rank: 140
+    global_rank: 158
+    paper_rank: 161
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -684,8 +686,8 @@ results:
     value_note: ''
     sort_value: 0.6014
     sort_std: 0.0184
-    global_rank: 151
-    paper_rank: 153
+    global_rank: 172
+    paper_rank: 174
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -743,7 +745,7 @@ results:
     today_delta_significant: false
     sort_value: 0.474
     sort_std: 0.009
-    global_rank: 168
+    global_rank: 188
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -770,9 +772,9 @@ results:
   dataset: Tolokers
   is_multi_metric: true
   rows:
-  - model: topk
+  - model: Schrödinger
     model_key: polynormer-r
-    model_plain: topk
+    model_plain: Schrödinger
     metric_values:
     - 0.8591
     - null
@@ -809,9 +811,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: topk
+  - model: Schrödinger
     model_key: dc-gnn
-    model_plain: topk
+    model_plain: Schrödinger
     metric_values:
     - 0.8588
     - null
@@ -848,9 +850,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: topk
+  - model: Schrödinger
     model_key: polynormer + wideformer
-    model_plain: topk
+    model_plain: Schrödinger
     metric_values:
     - 0.8533
     - null
@@ -947,7 +949,7 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-    global_rank: 10
+    global_rank: 17
   - model: ICG-NN
     model_key: icg-nn
     model_plain: ICG-NN
@@ -1008,7 +1010,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 26
+    global_rank: 33
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -1068,7 +1070,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 28
+    global_rank: 37
   - model: ICG_u-NN
     model_key: icg_u-nn
     model_plain: ICG_u-NN
@@ -1128,7 +1130,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 30
+    global_rank: 39
   - model: GT
     model_key: gt
     model_plain: GT
@@ -1159,9 +1161,9 @@ results:
     value_note: ''
     at_pub_value: 0.8323
     at_pub_std: 0.0064
-    at_pub_source_arxiv: '2405.16185'
-    at_pub_source_title: Differentiable Cluster Graph Neural Network
-    at_pub_source_date_iso: '2024-05-25'
+    at_pub_source_arxiv: '2405.15540'
+    at_pub_source_title: Bundle Neural Networks for message diffusion on graphs
+    at_pub_source_date_iso: '2024-05-24'
     at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2024-05-25'
     value_gap_source_date_label: '2024'
@@ -1188,7 +1190,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 38
+    global_rank: 47
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -1248,7 +1250,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 102
+    global_rank: 110
   - model: GloGNN
     model_key: glognn
     model_plain: GloGNN
@@ -1309,7 +1311,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 103
+    global_rank: 111
   - model: H2GCN
     model_key: h2gcn
     model_plain: H2GCN
@@ -1370,7 +1372,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 105
+    global_rank: 113
   - model: GPR-GNN
     model_key: gpr-gnn
     model_plain: GPR-GNN
@@ -1431,7 +1433,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 108
+    global_rank: 116
   metrics:
   - ROC-AUC
   - Accuracy
@@ -2096,7 +2098,7 @@ results_grouped:
 - benchmark: Classic
   datasets:
   - *id001
-- benchmark: Heterophilic Graphs
+- benchmark: Heterophily Benchmark
   datasets:
   - *id002
 - benchmark: LINKX Benchmarks
@@ -2111,8 +2113,8 @@ datasets_by_scope:
     datasets:
     - dataset: Reddit
       dataset_slug: reddit
-  - benchmark: Heterophilic Graphs
-    benchmark_slug: heterophilic-graphs
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
     datasets:
     - dataset: Tolokers
       dataset_slug: tolokers
@@ -2122,5 +2124,6 @@ datasets_by_scope:
     - dataset: twitch-gamers
       dataset_slug: twitch-gamers
 single_proposed_model: ICG-NN
+main_figure: /figures/2405.20724/main_figure.jpegoptim.jpg
 ---
 

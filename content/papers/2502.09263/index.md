@@ -95,10 +95,10 @@ results:
     published_conference: ICML 2025
     at_pub_value: 0.246
     at_pub_std: 0.0007
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.003899999999999987
@@ -126,14 +126,47 @@ results:
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
-      Nodes'
-    comparison_source_arxiv: '2405.11951'
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
     is_best: true
     is_std_outlier: false
-  - model: SAN+RWSE
+  - model: GMN
+    model_key: tango_gps
+    model_plain: GMN
+    value: 0.2422
+    std: 0.0014
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Tango does not use additional encodings.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2422
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GMN
     model_key: nba-gin+lappe
-    model_plain: SAN+RWSE
+    model_plain: GMN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -156,7 +189,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.2424
     sort_std: 0.001
     comparison_type: global_top
@@ -221,8 +254,8 @@ results:
     value_note: ''
     sort_value: 0.2429
     sort_std: 0.0019
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -265,10 +298,10 @@ results:
     published_conference: ICML 2025
     at_pub_value: 0.2477
     at_pub_std: 0.0009
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2309.00367'
+    at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
+    at_pub_source_date_iso: '2023-09-01'
+    at_pub_source_date_label: TMLR 2023
     value_gap_source_date_iso: '2026-05-12'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.004599999999999993
@@ -289,16 +322,16 @@ results:
     value_note: ''
     sort_value: 0.2431
     sort_std: 0.002
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
-      Nodes'
-    comparison_source_arxiv: '2405.11951'
+    comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
+      Benchmark
+    comparison_source_arxiv: '2309.00367'
     is_best: true
     is_std_outlier: false
   - model: Graph ViT/MLP-Mixer
@@ -349,7 +382,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2449
     sort_std: 0.0016
-    global_rank: 8
+    global_rank: 20
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -411,7 +444,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2453
     sort_std: 0.0025
-    global_rank: 9
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -473,7 +506,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2454
     sort_std: 0.0003
-    global_rank: 10
+    global_rank: 26
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -517,14 +550,15 @@ results:
     date_iso: '2025-02-13'
     published_venue: ICML 2025
     published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.2455
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2501.17901'
+    at_pub_source_title: Molecular fingerprints are strong models for peptide function
+      prediction
+    at_pub_source_date_iso: '2025-01-29'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-01-29'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -533,17 +567,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2455
+    true_std: 0.0013
+    value_gap_source_arxiv: '2501.17901'
+    value_gap_source_title: Molecular fingerprints are strong models for peptide function
+      prediction
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2455
     sort_std: 0.0013
-    global_rank: 11
+    global_rank: 26
+    paper_rank: 26
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -597,7 +637,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2459
     sort_std: 0.002
-    global_rank: 12
+    global_rank: 31
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -643,10 +683,10 @@ results:
     published_conference: ICML 2025
     at_pub_value: 0.246
     at_pub_std: 0.0012
-    at_pub_source_arxiv: '2405.13526'
-    at_pub_source_title: 'Understanding Virtual Nodes: Oversquashing and Node Heterogeneity'
-    at_pub_source_date_iso: '2024-05-22'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_source_arxiv: '2312.01538'
+    at_pub_source_title: Recurrent Distance Filtering for Graph Representation Learning
+    at_pub_source_date_iso: '2023-12-03'
+    at_pub_source_date_label: ICML 2023
     value_gap_source_date_iso: '2024-08-14'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
@@ -667,8 +707,8 @@ results:
     value_note: ''
     sort_value: 0.246
     sort_std: 0.0012
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -734,8 +774,8 @@ results:
     value_note: ''
     sort_value: 0.2464
     sort_std: 0.0009
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -793,7 +833,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2475
     sort_std: 0.0007
-    global_rank: 27
+    global_rank: 58
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -863,8 +903,8 @@ results:
     value_note: ''
     sort_value: 0.2478
     sort_std: 0.0016
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -930,10 +970,10 @@ results:
     value_note: ''
     sort_value: 0.2481
     sort_std: 0.0007
-    global_rank: 30
-    paper_rank: 50
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 64
+    paper_rank: 95
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -971,14 +1011,14 @@ results:
     date_iso: '2025-02-13'
     published_venue: ICML 2025
     published_conference: ICML 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.2485
+    at_pub_std: 0.0015
+    at_pub_source_arxiv: '2402.02005'
+    at_pub_source_title: Topology-Informed Graph Transformer
+    at_pub_source_date_iso: '2024-02-03'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-02-03'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -987,17 +1027,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2485
+    true_std: 0.0015
+    value_gap_source_arxiv: '2402.02005'
+    value_gap_source_title: Topology-Informed Graph Transformer
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2485
     sort_std: 0.0015
-    global_rank: 34
+    global_rank: 68
+    paper_rank: 68
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1059,8 +1104,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0012
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1126,8 +1171,8 @@ results:
     value_note: ''
     sort_value: 0.2529
     sort_std: 0.0016
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1193,8 +1238,8 @@ results:
     value_note: ''
     sort_value: 0.2536
     sort_std: 0.0015
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1260,8 +1305,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0012
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1319,7 +1364,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2547
     sort_std: 0.0009
-    global_rank: 72
+    global_rank: 121
     has_value_gap: false
     has_value_note: false
     value_gap: null

@@ -133,7 +133,7 @@ variants:
     published_conference_short: JMLR
     published_conference_slug: jmlr
     published_venue: JMLR 2023
-    uses_external_data: false
+    uses_external_data: true
     is_best: false
     is_std_outlier: false
     metric_values:

@@ -61,9 +61,9 @@ results:
 - &id001
   dataset: ogbl-citation2
   rows:
-  - model: SIGN
+  - model: Classification
     model_key: mplp
-    model_plain: SIGN
+    model_plain: Classification
     value: 0.9072
     std: 0.0012
     metric: MRR
@@ -629,8 +629,8 @@ results:
     value_note: ''
     sort_value: 0.8492
     sort_std: 0.0029
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -663,5 +663,6 @@ datasets_by_scope:
     - dataset: ogbl-citation2
       dataset_slug: ogbl-citation2
 single_proposed_model: CFG
+main_figure: /figures/2309.06574/main_figure.jpegoptim.jpg
 ---
 

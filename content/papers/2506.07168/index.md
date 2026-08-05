@@ -65,8 +65,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GAGA
-mrr: 0.0478
-adjusted_mrr: 0.0478
+mrr: 0.0372
+adjusted_mrr: 0.0372
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -88,9 +88,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -156,9 +156,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -248,8 +248,8 @@ results:
     value_note: ''
     sort_value: 0.9148
     sort_std: 0.001
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -289,16 +289,15 @@ results:
     date_iso: '2025-06-08'
     published_venue: TMLR 2025
     published_conference: TMLR 2025
-    at_pub_value: 0.8852
-    at_pub_std: 0.0112
-    at_pub_source_arxiv: '2401.15569'
-    at_pub_source_title: Efficient Tuning and Inference for Large Language Models
-      on Textual Graphs
-    at_pub_source_date_iso: '2024-01-28'
-    at_pub_source_date_label: IJCAI 2024
+    at_pub_value: 0.893
+    at_pub_std: null
+    at_pub_source_arxiv: '2310.16421'
+    at_pub_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    at_pub_source_date_iso: '2023-10-25'
+    at_pub_source_date_label: '2023'
     value_gap_source_date_iso: '2025-06-08'
     value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: 0.026700000000000057
+    gap_vs_at_pub: 0.018900000000000028
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -317,16 +316,82 @@ results:
     value_note: ''
     sort_value: 0.9119
     sort_std: 0.0012
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Efficient Tuning and Inference for Large Language Models
-      on Textual Graphs
-    comparison_source_arxiv: '2401.15569'
+    comparison_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    comparison_source_arxiv: '2310.16421'
+    is_best: false
+    is_std_outlier: false
+  - model: InstructGLM
+    model_key: instructglm
+    model_plain: InstructGLM
+    value: 0.8708
+    std: 0.0012
+    paper_value: 0.8708
+    paper_std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    published_venue: TMLR 2025
+    published_conference: TMLR 2025
+    at_pub_value: 0.9077
+    at_pub_std: null
+    at_pub_source_arxiv: '2310.16421'
+    at_pub_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    at_pub_source_date_iso: '2023-10-25'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-10-25'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.03689999999999993
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9077
+    true_std: null
+    value_gap_source_arxiv: '2310.16421'
+    value_gap_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03689999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9077
+    sort_std: null
+    global_rank: 26
+    paper_rank: 194
+    rank_delta: 168
+    rank_delta_abs: 168
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    comparison_source_arxiv: '2310.16421'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -385,10 +450,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 27
-    paper_rank: 100
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 33
+    paper_rank: 122
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -453,8 +518,8 @@ results:
     value_note: ''
     sort_value: 0.8967
     sort_std: 0.0012
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -522,8 +587,8 @@ results:
     value_note: ''
     sort_value: 0.8911
     sort_std: 0.0012
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -590,8 +655,8 @@ results:
     value_note: ''
     sort_value: 0.8911
     sort_std: 0.0
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -659,76 +724,8 @@ results:
     value_note: ''
     sort_value: 0.8804
     sort_std: 0.0012
-    global_rank: 107
-    paper_rank: 107
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: InstructGLM
-    model_key: instructglm
-    model_plain: InstructGLM
-    value: 0.8708
-    std: 0.0012
-    paper_value: 0.8708
-    paper_std: 0.0012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jun 8, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-08'
-    published_venue: TMLR 2025
-    published_conference: TMLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-06-08'
-    value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8708
-    true_std: 0.0012
-    value_gap_source_arxiv: '2506.07168'
-    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8708
-    sort_std: 0.0012
-    global_rank: 166
-    paper_rank: 166
+    global_rank: 130
+    paper_rank: 130
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -796,10 +793,10 @@ results:
     value_note: ''
     sort_value: 0.856
     sort_std: 0.0009
-    global_rank: 259
-    paper_rank: 754
-    rank_delta: 495
-    rank_delta_abs: 495
+    global_rank: 284
+    paper_rank: 888
+    rank_delta: 604
+    rank_delta_abs: 604
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -866,8 +863,8 @@ results:
     value_note: ''
     sort_value: 0.8552
     sort_std: 0.0018
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 287
+    paper_rank: 287
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -933,8 +930,8 @@ results:
     value_note: ''
     sort_value: 0.8041
     sort_std: 0.003
-    global_rank: 652
-    paper_rank: 652
+    global_rank: 759
+    paper_rank: 759
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1000,10 +997,10 @@ results:
     value_note: ''
     sort_value: 0.7768
     sort_std: null
-    global_rank: 720
-    paper_rank: 837
-    rank_delta: 117
-    rank_delta_abs: 117
+    global_rank: 840
+    paper_rank: 981
+    rank_delta: 141
+    rank_delta_abs: 141
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1023,9 +1020,43 @@ results:
 - &id002
   dataset: PubMed
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
+    model_key: lgtl
+    model_plain: R-SoftGraphAIN
+    value: 0.9518
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9518
+    sort_std: 0.0011
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: sagn
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -1049,7 +1080,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.9517
     sort_std: null
     comparison_type: global_top
@@ -1057,9 +1088,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: R-SoftGraphAIN
     model_key: mixhop (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: R-SoftGraphAIN
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -1083,43 +1114,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9513
     sort_std: 0.0038
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
-    model_key: graphsage (lo)
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
-    value: 0.9511
-    std: 0.0036
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.13902'
-    title: 'LOGIN: A Large Language Model Consulted Graph Neural Network Training
-      Framework'
-    date: May 22, 2024
-    date_display: May 2024
-    date_iso: '2024-05-22'
-    venue: Web Search and Data Mining
-    codebase_url: https://github.com/QiaoYRan/LOGIN
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9511
-    sort_std: 0.0036
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1182,8 +1179,8 @@ results:
     value_note: ''
     sort_value: 0.9462
     sort_std: 0.002
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1250,8 +1247,8 @@ results:
     value_note: ''
     sort_value: 0.9431
     sort_std: 0.0015
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1318,8 +1315,8 @@ results:
     value_note: ''
     sort_value: 0.9384
     sort_std: 0.0015
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1359,15 +1356,16 @@ results:
     date_iso: '2025-06-08'
     published_venue: TMLR 2025
     published_conference: TMLR 2025
-    at_pub_value: 0.889
-    at_pub_std: 0.0032
-    at_pub_source_arxiv: '2308.07134'
-    at_pub_source_title: Language is All a Graph Needs
-    at_pub_source_date_iso: '2023-08-14'
-    at_pub_source_date_label: '2023'
+    at_pub_value: 0.9296
+    at_pub_std: 0.0015
+    at_pub_source_arxiv: '2505.15845'
+    at_pub_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in
+      Tokenized Graph Learning Models'
+    at_pub_source_date_iso: '2025-05-19'
+    at_pub_source_date_label: '2025'
     value_gap_source_date_iso: '2026-05-24'
     value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.08589999999999998
+    gap_vs_at_pub: 0.12649999999999995
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1386,15 +1384,16 @@ results:
     value_note: ''
     sort_value: 0.9296
     sort_std: null
-    global_rank: 17
-    paper_rank: 370
-    rank_delta: 353
-    rank_delta_abs: 353
+    global_rank: 21
+    paper_rank: 441
+    rank_delta: 420
+    rank_delta_abs: 420
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Language is All a Graph Needs
-    comparison_source_arxiv: '2308.07134'
+    comparison_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
+      in Tokenized Graph Learning Models'
+    comparison_source_arxiv: '2505.15845'
     is_best: false
     is_std_outlier: false
   - model: GLEM
@@ -1454,8 +1453,8 @@ results:
     value_note: ''
     sort_value: 0.9257
     sort_std: 0.002
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1495,16 +1494,15 @@ results:
     date_iso: '2025-06-08'
     published_venue: TMLR 2025
     published_conference: TMLR 2025
-    at_pub_value: 0.7736
+    at_pub_value: 0.7844
     at_pub_std: null
-    at_pub_source_arxiv: '2103.02885'
-    at_pub_source_title: 'Extract the Knowledge of Graph Neural Networks and Go Beyond
-      it: An Effective Knowledge Distillation Framework'
-    at_pub_source_date_iso: '2021-03-04'
-    at_pub_source_date_label: WWW 2021
+    at_pub_source_arxiv: '2310.14527'
+    at_pub_source_title: 'Marginal Nodes Matter: Towards Structure Fairness in Graphs'
+    at_pub_source_date_iso: '2023-10-23'
+    at_pub_source_date_label: KDD 2023
     value_gap_source_date_iso: '2025-06-08'
     value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: 0.11450000000000005
+    gap_vs_at_pub: 0.10370000000000001
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -1523,16 +1521,16 @@ results:
     value_note: ''
     sort_value: 0.8881
     sort_std: 0.0015
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'Extract the Knowledge of Graph Neural Networks and Go
-      Beyond it: An Effective Knowledge Distillation Framework'
-    comparison_source_arxiv: '2103.02885'
+    comparison_source_title: 'Marginal Nodes Matter: Towards Structure Fairness in
+      Graphs'
+    comparison_source_arxiv: '2310.14527'
     is_best: false
     is_std_outlier: false
   - model: RevGAT
@@ -1591,8 +1589,8 @@ results:
     value_note: ''
     sort_value: 0.885
     sort_std: 0.0005
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1658,8 +1656,8 @@ results:
     value_note: ''
     sort_value: 0.8824
     sort_std: 0.015
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1725,15 +1723,85 @@ results:
     value_note: ''
     sort_value: 0.869
     sort_std: 0.0074
-    global_rank: 192
-    paper_rank: 203
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 233
+    paper_rank: 247
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIANT
+    model_key: giant
+    model_plain: GIANT
+    value: 0.769
+    std: 0.002
+    paper_value: 0.769
+    paper_std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split (Yang et al. 2016 fixed split) for node classification.
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    published_venue: TMLR 2025
+    published_conference: TMLR 2025
+    at_pub_value: 0.8275
+    at_pub_std: 0.0028
+    at_pub_source_arxiv: '2406.11945'
+    at_pub_source_title: 'GAugLLM: Improving Graph Contrastive Learning for Text-Attributed
+      Graphs with Large Language Models'
+    at_pub_source_date_iso: '2024-06-17'
+    at_pub_source_date_label: KDD 2024
+    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: 0.058499999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8275
+    true_std: 0.0028
+    value_gap_source_arxiv: '2406.11945'
+    value_gap_source_title: 'GAugLLM: Improving Graph Contrastive Learning for Text-Attributed
+      Graphs with Large Language Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.058499999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8275
+    sort_std: 0.0028
+    global_rank: 324
+    paper_rank: 773
+    rank_delta: 449
+    rank_delta_abs: 449
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GAugLLM: Improving Graph Contrastive Learning for Text-Attributed
+      Graphs with Large Language Models'
+    comparison_source_arxiv: '2406.11945'
     is_best: false
     is_std_outlier: false
   - model: SimTEG
@@ -1793,76 +1861,8 @@ results:
     value_note: ''
     sort_value: 0.812
     sort_std: 0.0001
-    global_rank: 313
-    paper_rank: 313
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIANT
-    model_key: giant
-    model_plain: GIANT
-    value: 0.769
-    std: 0.002
-    paper_value: 0.769
-    paper_std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split) for node classification.
-    date: Jun 8, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-08'
-    published_venue: TMLR 2025
-    published_conference: TMLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-06-08'
-    value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.769
-    true_std: 0.002
-    value_gap_source_arxiv: '2506.07168'
-    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.769
-    sort_std: 0.002
-    global_rank: 649
-    paper_rank: 649
+    global_rank: 380
+    paper_rank: 380
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1929,8 +1929,8 @@ results:
     value_note: ''
     sort_value: 0.7472
     sort_std: 0.0015
-    global_rank: 699
-    paper_rank: 699
+    global_rank: 832
+    paper_rank: 832
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1952,9 +1952,9 @@ results:
 - &id003
   dataset: ogbn-products
   rows:
-  - model: LD
+  - model: LargeGT-full
     model_key: advsyngnn
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8931
     std: 0.0013
     metric: Accuracy
@@ -1986,9 +1986,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: gofa-f
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.8834
     std: null
     metric: Accuracy
@@ -2019,9 +2019,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LD
+  - model: LargeGT-full
     model_key: llms
-    model_plain: LD
+    model_plain: LargeGT-full
     value: 0.882
     std: 0.0005
     metric: Accuracy
@@ -2111,10 +2111,10 @@ results:
     value_note: ''
     sort_value: 0.8736
     sort_std: 0.0007
-    global_rank: 5
-    paper_rank: 282
-    rank_delta: 277
-    rank_delta_abs: 277
+    global_rank: 6
+    paper_rank: 302
+    rank_delta: 296
+    rank_delta_abs: 296
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2181,10 +2181,10 @@ results:
     value_note: ''
     sort_value: 0.8691
     sort_std: 0.0005
-    global_rank: 11
-    paper_rank: 314
-    rank_delta: 303
-    rank_delta_abs: 303
+    global_rank: 12
+    paper_rank: 332
+    rank_delta: 320
+    rank_delta_abs: 320
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2251,10 +2251,10 @@ results:
     value_note: ''
     sort_value: 0.854
     sort_std: 0.0028
-    global_rank: 25
-    paper_rank: 263
-    rank_delta: 238
-    rank_delta_abs: 238
+    global_rank: 27
+    paper_rank: 283
+    rank_delta: 256
+    rank_delta_abs: 256
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2320,10 +2320,10 @@ results:
     value_note: ''
     sort_value: 0.8418
     sort_std: 0.0015
-    global_rank: 42
-    paper_rank: 325
-    rank_delta: 283
-    rank_delta_abs: 283
+    global_rank: 44
+    paper_rank: 344
+    rank_delta: 300
+    rank_delta_abs: 300
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2389,10 +2389,10 @@ results:
     value_note: ''
     sort_value: 0.8233
     sort_std: 0.0037
-    global_rank: 83
-    paper_rank: 322
-    rank_delta: 239
-    rank_delta_abs: 239
+    global_rank: 84
+    paper_rank: 342
+    rank_delta: 258
+    rank_delta_abs: 258
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2459,10 +2459,10 @@ results:
     value_note: ''
     sort_value: 0.8049
     sort_std: 0.0028
-    global_rank: 127
-    paper_rank: 271
-    rank_delta: 144
-    rank_delta_abs: 144
+    global_rank: 132
+    paper_rank: 290
+    rank_delta: 158
+    rank_delta_abs: 158
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2529,8 +2529,8 @@ results:
     value_note: ''
     sort_value: 0.8005
     sort_std: 0.0015
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 143
+    paper_rank: 143
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2598,8 +2598,8 @@ results:
     value_note: ''
     sort_value: 0.7996
     sort_std: 0.002
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2667,8 +2667,8 @@ results:
     value_note: ''
     sort_value: 0.7887
     sort_std: 0.0018
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 200
+    paper_rank: 200
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2736,8 +2736,8 @@ results:
     value_note: ''
     sort_value: 0.6964
     sort_std: 0.0015
-    global_rank: 320
-    paper_rank: 320
+    global_rank: 340
+    paper_rank: 340
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2804,8 +2804,8 @@ results:
     value_note: ''
     sort_value: 0.6605
     sort_std: 0.002
-    global_rank: 333
-    paper_rank: 360
+    global_rank: 353
+    paper_rank: 380
     rank_delta: 27
     rank_delta_abs: 27
     rank_delta_direction: worse
@@ -2873,8 +2873,8 @@ results:
     value_note: ''
     sort_value: 0.6532
     sort_std: 0.0002
-    global_rank: 337
-    paper_rank: 337
+    global_rank: 357
+    paper_rank: 357
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2918,5 +2918,6 @@ datasets_by_scope:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
 single_proposed_model: GAGA
+main_figure: /figures/2506.07168/main_figure.jpegoptim.jpg
 ---
 

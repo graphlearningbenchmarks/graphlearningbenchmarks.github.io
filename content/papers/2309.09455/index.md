@@ -894,5 +894,6 @@ datasets_by_scope:
     - dataset: ogbn-products
       dataset_slug: ogbn-products
 single_proposed_model: CaT
+main_figure: /figures/2309.09455/main_figure.jpegoptim.jpg
 ---
 

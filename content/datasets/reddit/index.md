@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 41
-result_count: 602
+result_count: 657
 best_model:
   model: Node Sampled Soup
   value: 0.9728
@@ -80,10 +80,6 @@ papers:
   title: 'THeGCN: Temporal Heterophilic Graph Convolutional Network'
   date_iso: '2024-12-21'
   venue: ''
-- arxiv_id: '2411.06427'
-  title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-  date_iso: '2024-11-10'
-  venue: NeurIPS 2024
 - arxiv_id: '2410.08524'
   title: 'IGNN-Solver: A Graph Neural Solver for Implicit Graph Neural Networks'
   date_iso: '2024-10-11'
@@ -97,9 +93,9 @@ papers:
   title: 'GLBench: A Comprehensive Benchmark for Graph with Large Language Models'
   date_iso: '2024-07-10'
   venue: NeurIPS 2024
-- arxiv_id: '2407.11025'
-  title: Backdoor Graph Condensation
-  date_iso: '2024-07-03'
+- arxiv_id: '2407.08064'
+  title: 'TinyGraph: Joint Feature and Node Condensation for Graph Neural Networks'
+  date_iso: '2024-07-10'
   venue: ''
 - arxiv_id: '2406.19249'
   title: 'NTFormer: A Composite Node Tokenized Graph Transformer for Node Classification'
@@ -126,6 +122,10 @@ papers:
     with Class Partition'
   date_iso: '2024-05-22'
   venue: WWW 2024
+- arxiv_id: '2403.14951'
+  title: Simple Graph Condensation
+  date_iso: '2024-03-22'
+  venue: ''
 - arxiv_id: '2402.07225'
   title: Rethinking Graph Masked Autoencoders through Alignment and Uniformity
   date_iso: '2024-02-11'
@@ -143,6 +143,10 @@ papers:
     Learning
   date_iso: '2023-10-24'
   venue: ''
+- arxiv_id: '2310.09202'
+  title: Graph Distillation with Eigenbasis Matching
+  date_iso: '2023-10-13'
+  venue: ICML 2023
 - arxiv_id: '2401.11755'
   title: 'FedGTA: Topology-aware Averaging for Federated Graph Learning'
   date_iso: '2023-09-01'
@@ -150,6 +154,10 @@ papers:
 - arxiv_id: '2307.15967'
   title: Graph Condensation for Inductive Node Representation Learning
   date_iso: '2023-07-29'
+  venue: ''
+- arxiv_id: '2307.11981'
+  title: Collaborative Graph Neural Networks for Attributed Network Embedding
+  date_iso: '2023-07-22'
   venue: ''
 - arxiv_id: '2307.02813'
   title: 'CPDG: A Contrastive Pre-Training Method for Dynamic Graph Neural Networks'
@@ -178,6 +186,10 @@ papers:
   title: 'Less Can Be More: Unsupervised Graph Pruning for Large-scale Dynamic Graphs'
   date_iso: '2023-05-18'
   venue: ''
+- arxiv_id: '2305.02866'
+  title: Hierarchical Transformer for Scalable Graph Learning
+  date_iso: '2023-05-04'
+  venue: IJCAI 2023
 - arxiv_id: '2305.14000'
   title: Node-wise Diffusion for Scalable Graph Learning
   date_iso: '2023-04-30'
@@ -200,6 +212,10 @@ papers:
   title: 'RSC: Accelerate Graph Neural Networks Training via Randomized Sparse Computations'
   date_iso: '2022-10-19'
   venue: ICML 2022
+- arxiv_id: '2210.07494'
+  title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and Rethinking'
+  date_iso: '2022-10-14'
+  venue: NeurIPS 2022
 - arxiv_id: '2209.15454'
   title: 'GPNet: Simplifying Graph Neural Networks via Multi-channel Geometric Polynomials'
   date_iso: '2022-09-30'
@@ -291,6 +307,11 @@ papers:
   title: Accelerating Large Scale Real-Time GNN Inference using Channel Pruning
   date_iso: '2021-05-10'
   venue: ''
+- arxiv_id: '2104.10569'
+  title: 'GraphTheta: A Distributed Graph Neural Network Learning System With Flexible
+    Training Strategy'
+  date_iso: '2021-04-21'
+  venue: ''
 - arxiv_id: '2104.09376'
   title: Scalable and Adaptive Graph Neural Networks with Self-Label-Enhanced Training
   date_iso: '2021-04-19'
@@ -302,6 +323,11 @@ papers:
 - arxiv_id: '2103.13355'
   title: Bag of Tricks for Node Classification with Graph Neural Networks
   date_iso: '2021-03-24'
+  venue: ''
+- arxiv_id: '2103.05872'
+  title: 'Sampling methods for efficient training of graph convolutional networks:
+    A survey'
+  date_iso: '2021-03-10'
   venue: ''
 - arxiv_id: '2102.10739'
   title: Dissecting the Diffusion Process in Linear Graph Convolutional Networks
@@ -344,6 +370,11 @@ papers:
   title: Graph Representation Learning via Graphical Mutual Information Maximization
   date_iso: '2020-02-04'
   venue: WWW 2020
+- arxiv_id: '1911.07323'
+  title: Layer-Dependent Importance Sampling for Training Deep and Large Graph Convolutional
+    Networks
+  date_iso: '2019-11-17'
+  venue: NeurIPS 2019
 - arxiv_id: '1910.03053'
   title: Graph Few-shot Learning via Knowledge Transfer
   date_iso: '2019-10-07'
@@ -374,6 +405,10 @@ papers:
     Networks'
   date_iso: '2019-05-20'
   venue: KDD 2019
+- arxiv_id: '1901.00596'
+  title: A Comprehensive Survey on Graph Neural Networks
+  date_iso: '2019-01-01'
+  venue: ''
 - arxiv_id: '1812.04202'
   title: 'Deep Learning on Graphs: A Survey'
   date_iso: '2018-12-11'
@@ -411,7 +446,6 @@ variants:
     num_classes: 41
   metrics:
   - F1
-  - ASR
   - AUC
   - AUC-ROC
   - AUPRC
@@ -419,12 +453,13 @@ variants:
   - Accuracy
   - Accuracy degradation
   - F1-Micro
+  - F1-macro
+  - F1-micro
   - MRR
   - Macro-F1
   - Micro-F1
   metric_display_names:
   - F1
-  - ASR
   - AUC
   - AUC-ROC
   - AUPRC
@@ -432,6 +467,8 @@ variants:
   - Accuracy
   - Accuracy degradation
   - F1-Micro
+  - F1-macro
+  - F1-micro
   - MRR
   - Macro-F1
   - Micro-F1
@@ -475,8 +512,112 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0008
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: EnGCN
+    model_plain: EnGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_iso: '2022-10-14'
+    date_display: Oct 2022
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9714
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0003
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: SAGN+SLE
+    model_plain: SAGN+SLE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_iso: '2022-10-14'
+    date_display: Oct 2022
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.971
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0
+    - null
     - null
     - null
     - null
@@ -523,8 +664,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.01
+    - null
     - null
     - null
     - null
@@ -571,7 +714,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -620,8 +765,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0004
+    - null
     - null
     - null
     - null
@@ -668,8 +815,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0
+    - null
     - null
     - null
     - null
@@ -716,8 +865,60 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.03
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GAAN (2018)
+    model_plain: GAAN (2018)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1901.00596'
+    title: A Comprehensive Survey on Graph Neural Networks
+    date: Jan 1, 2019
+    date_iso: '2019-01-01'
+    date_display: Jan 2019
+    codebase_url: https://github.com/Hanjun-Dai/steady_state_embedding
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9683
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -764,8 +965,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0
+    - null
     - null
     - null
     - null
@@ -812,7 +1015,60 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GAMLP
+    model_plain: GAMLP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_iso: '2022-10-14'
+    date_display: Oct 2022
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9673
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0003
     - null
     - null
     - null
@@ -861,8 +1117,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0
+    - null
     - null
     - null
     - null
@@ -910,8 +1168,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0
+    - null
     - null
     - null
     - null
@@ -958,8 +1218,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1007,8 +1269,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0004
+    - null
     - null
     - null
     - null
@@ -1055,8 +1319,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.01
+    - null
     - null
     - null
     - null
@@ -1104,8 +1370,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0003
+    - null
     - null
     - null
     - null
@@ -1153,7 +1421,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1201,8 +1471,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1249,8 +1521,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1298,7 +1572,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1346,8 +1622,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1394,7 +1672,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1442,7 +1722,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1490,6 +1772,7 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - null
     - null
@@ -1503,8 +1786,9 @@ variants:
     - null
     - null
     - null
-  - model: GraphSAGE
-    model_plain: GraphSAGE
+    - null
+  - model: Cluster-GCN (2019)
+    model_plain: Cluster-GCN (2019)
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -1512,22 +1796,22 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2306.10466'
-    title: 'Graph Ladling: Shockingly Simple Parallel GNN Training without Intermediate
-      Communication'
-    date: Jun 18, 2023
-    date_iso: '2023-06-18'
-    date_display: Jun 2023
-    codebase_url: https://github.com/VITA-Group/graph_ladling
-    published_conference: ICML 2023
-    published_conference_short: ICML
-    published_conference_slug: icml
-    published_venue: ICML 2023
+    arxiv_id: '1901.00596'
+    title: A Comprehensive Survey on Graph Neural Networks
+    date: Jan 1, 2019
+    date_iso: '2019-01-01'
+    date_display: Jan 2019
+    codebase_url: https://github.com/Hanjun-Dai/steady_state_embedding
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.965
+    - 0.966
+    - null
     - null
     - null
     - null
@@ -1540,7 +1824,8 @@ variants:
     - null
     - null
     metric_stds:
-    - 0.0003
+    - null
+    - null
     - null
     - null
     - null
@@ -1587,7 +1872,60 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: GraphSAGE
+    model_plain: GraphSAGE
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_iso: '2022-10-14'
+    date_display: Oct 2022
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.965
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - 0.0003
     - null
     - null
     - null
@@ -1609,17 +1947,17 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_iso: '2025-12-16'
-    date_display: Dec 2025
-    codebase_url: https://github.com/atlaspaper16/ATLAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_iso: '2022-10-14'
+    date_display: Oct 2022
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
+    published_conference: NeurIPS 2022
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2022
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1636,8 +1974,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0003
+    - null
     - null
     - null
     - null
@@ -1685,8 +2025,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0008
+    - null
     - null
     - null
     - null
@@ -1733,8 +2075,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1781,8 +2125,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0
+    - null
     - null
     - null
     - null
@@ -1829,8 +2175,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1878,8 +2226,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -1926,7 +2276,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -1974,7 +2326,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2022,7 +2376,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2071,8 +2427,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0003
+    - null
     - null
     - null
     - null
@@ -2119,8 +2477,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0
+    - null
     - null
     - null
     - null
@@ -2167,8 +2527,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.003
+    - null
     - null
     - null
     - null
@@ -2216,7 +2578,9 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
+    - null
     - null
     - null
     - null
@@ -2264,8 +2628,110 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: StoGCN (2018)
+    model_plain: StoGCN (2018)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1901.00596'
+    title: A Comprehensive Survey on Graph Neural Networks
+    date: Jan 1, 2019
+    date_iso: '2019-01-01'
+    date_display: Jan 2019
+    codebase_url: https://github.com/Hanjun-Dai/steady_state_embedding
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.963
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Huang et al. (2018)
+    model_plain: Huang et al. (2018)
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1901.00596'
+    title: A Comprehensive Survey on Graph Neural Networks
+    date: Jan 1, 2019
+    date_iso: '2019-01-01'
+    date_display: Jan 2019
+    codebase_url: https://github.com/Hanjun-Dai/steady_state_embedding
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.9627
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
     - null
     - null
     - null
@@ -2313,8 +2779,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0005
+    - null
     - null
     - null
     - null
@@ -2361,8 +2829,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -2410,8 +2880,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.0007
+    - null
     - null
     - null
     - null
@@ -2458,8 +2930,10 @@ variants:
     - null
     - null
     - null
+    - null
     metric_stds:
     - 0.001
+    - null
     - null
     - null
     - null
@@ -2507,101 +2981,6 @@ variants:
     - null
     - null
     - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GraphMAE
-    model_plain: GraphMAE
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2205.10803'
-    title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
-    date: May 22, 2022
-    date_iso: '2022-05-22'
-    date_display: May 2022
-    codebase_url: https://github.com/THUDM/GraphMAE
-    published_conference: KDD 2022
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9601
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0008
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GAT
-    model_plain: GAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2205.10803'
-    title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
-    date: May 22, 2022
-    date_iso: '2022-05-22'
-    date_display: May 2022
-    codebase_url: https://github.com/THUDM/GraphMAE
-    published_conference: KDD 2022
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.96
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
     - null
     metric_stds:
     - 0.001
@@ -2616,269 +2995,28 @@ variants:
     - null
     - null
     - null
-  - model: VRGCN
-    model_plain: VRGCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2003.13606'
-    title: 'L$^2$-GCN: Layer-Wise and Learned Efficient Training of Graph Convolutional
-      Networks'
-    date: Mar 30, 2020
-    date_iso: '2020-03-30'
-    date_display: Mar 2020
-    codebase_url: https://github.com/VITA-Group/L2-GCN
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.96
     - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: SIGN
-    model_plain: SIGN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2512.14908'
-    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
-      Graphs'
-    date: Dec 16, 2025
-    date_iso: '2025-12-16'
-    date_display: Dec 2025
-    codebase_url: https://github.com/atlaspaper16/ATLAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9595
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0002
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: GraphSAINT
-    model_plain: GraphSAINT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2010.07565'
-    title: 'Bi-GCN: Binary Graph Convolutional Network'
-    date: Oct 15, 2020
-    date_iso: '2020-10-15'
-    date_display: Oct 2020
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.959
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: LASSO 8x
-    model_plain: LASSO 8x
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2105.04528'
-    title: Accelerating Large Scale Real-Time GNN Inference using Channel Pruning
-    date: May 10, 2021
-    date_iso: '2021-05-10'
-    date_display: May 2021
-    codebase_url: https://github.com/tedzhouhk/GCNP
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.959
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: Pairwise+sigmoid
-    model_plain: Pairwise+sigmoid
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1803.07294'
-    title: 'GaAN: Gated Attention Networks for Learning on Large and Spatiotemporal
-      Graphs'
-    date: Mar 20, 2018
-    date_iso: '2018-03-20'
-    date_display: Mar 2018
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9586
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - 0.0008
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  row_count: 602
+  row_count: 657
   rows_json: /data/datasets/reddit/standard-split-rows.json
   chart_json: /data/datasets/reddit/standard-split-chart.json
   arch_counts:
-    gnn: 405
+    gnn: 443
     hybrid: 58
-    graph_transformer: 24
+    graph_transformer: 27
     llm: 22
-    walk: 7
-    traditional: 68
+    walk: 8
+    traditional: 78
   metric_counts:
-  - 252
-  - 9
+  - 272
   - 26
   - 14
   - 37
-  - 24
-  - 231
+  - 12
+  - 267
   - 3
   - 6
+  - 9
+  - 11
   - 13
   - 1
   - 8
@@ -2902,19 +3040,12 @@ variants:
     arxiv_id: '1812.04202'
     title: 'Deep Learning on Graphs: A Survey'
     date: '2018-12-11'
-  - value: 0.966
+  - value: 0.9683
     std: null
-    model: Cluster-GCN
-    arxiv_id: '1905.07953'
-    title: 'Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph
-      Convolutional Networks'
-    date: '2019-05-20'
-  - value: 0.968
-    std: 0.0
-    model: SIGN
-    arxiv_id: '2004.11198'
-    title: 'SIGN: Scalable Inception Graph Neural Networks'
-    date: '2020-04-23'
+    model: GAAN (2018)
+    arxiv_id: '1901.00596'
+    title: A Comprehensive Survey on Graph Neural Networks
+    date: '2019-01-01'
   - value: 0.969
     std: 0.0
     model: SAGN
@@ -2927,6 +3058,13 @@ variants:
     arxiv_id: '2206.04355'
     title: Graph Attention Multi-Layer Perceptron
     date: '2022-06-09'
+  - value: 0.9714
+    std: 0.0003
+    model: EnGCN
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: '2022-10-14'
   - value: 0.9728
     std: 0.0008
     model: Node Sampled Soup
@@ -2936,13 +3074,6 @@ variants:
     date: '2023-06-18'
   milestones_by_metric:
     F1: *id001
-    ASR:
-    - value: 1.0
-      std: 0.0
-      model: MLP
-      arxiv_id: '2407.11025'
-      title: Backdoor Graph Condensation
-      date: '2024-07-03'
     AUC:
     - value: 0.6731
       std: 0.002
@@ -2979,12 +3110,12 @@ variants:
       title: 'GADBench: Revisiting and Benchmarking Supervised Graph Anomaly Detection'
       date: '2023-06-21'
     AUROC:
-    - value: 0.7165
+    - value: 0.6354
       std: null
-      model: UniGAD - GCN
-      arxiv_id: '2411.06427'
-      title: 'UniGAD: Unifying Multi-level Graph Anomaly Detection'
-      date: '2024-11-10'
+      model: GGAD
+      arxiv_id: '2506.15448'
+      title: Semi-supervised Graph Anomaly Detection via Robust Homophily Learning
+      date: '2025-06-18'
     Accuracy:
     - value: 0.9627
       std: 0.0032
@@ -3020,6 +3151,20 @@ variants:
       title: 'TGL: A General Framework for Temporal GNN Training on Billion-Scale
         Graphs'
       date: '2022-03-28'
+    F1-macro:
+    - value: 0.879
+      std: null
+      model: CONN
+      arxiv_id: '2307.11981'
+      title: Collaborative Graph Neural Networks for Attributed Network Embedding
+      date: '2023-07-22'
+    F1-micro:
+    - value: 0.913
+      std: null
+      model: CONN
+      arxiv_id: '2307.11981'
+      title: Collaborative Graph Neural Networks for Attributed Network Embedding
+      date: '2023-07-22'
     MRR: []
     Macro-F1:
     - value: 0.457

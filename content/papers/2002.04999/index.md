@@ -63,7 +63,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -72,6 +72,39 @@ results:
 - &id001
   dataset: ShapeNet-Part
   rows:
+  - model: DGCNN
+    model_key: pointcnn
+    model_plain: DGCNN
+    value: 0.861
+    std: null
+    metric: mIoU
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1801.07829'
+    title: Dynamic Graph CNN for Learning on Point Clouds
+    date: Jan 24, 2018
+    date_display: Jan 2018
+    date_iso: '2018-01-24'
+    venue: ACM Transactions on Graphics
+    codebase_url: https://github.com/WangYueFt/dgcnn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.861
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: dDGM
     model_key: ddgm
     model_plain: dDGM
@@ -120,7 +153,7 @@ results:
     today_delta_significant: false
     sort_value: 0.856
     sort_std: null
-    global_rank: 1
+    global_rank: 2
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -132,7 +165,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: DGCNN
     model_key: dgcnn
@@ -164,14 +197,14 @@ results:
     date_iso: '2020-02-11'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.852
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_source_arxiv: '1801.07829'
+    at_pub_source_title: Dynamic Graph CNN for Learning on Point Clouds
+    at_pub_source_date_iso: '2018-01-24'
+    at_pub_source_date_label: '2018'
+    value_gap_source_date_iso: '2018-01-24'
+    value_gap_source_date_label: '2018'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -180,18 +213,56 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.852
+    true_std: null
+    value_gap_source_arxiv: '1801.07829'
+    value_gap_source_title: Dynamic Graph CNN for Learning on Point Clouds
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.852
     sort_std: null
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DGCNN
+    model_key: pointnet++
+    model_plain: DGCNN
+    value: 0.851
+    std: null
+    metric: mIoU
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1801.07829'
+    title: Dynamic Graph CNN for Learning on Point Clouds
+    date: Jan 24, 2018
+    date_display: Jan 2018
+    date_iso: '2018-01-24'
+    venue: ACM Transactions on Graphics
+    codebase_url: https://github.com/WangYueFt/dgcnn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.851
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -218,5 +289,6 @@ datasets_by_scope:
     datasets:
     - dataset: ShapeNet-Part
       dataset_slug: shapenet-part
+main_figure: /figures/2002.04999/main_figure.jpegoptim.jpg
 ---
 

@@ -927,7 +927,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 30
+    global_rank: 31
   - model: TFN
     model_key: tfn
     model_plain: TFN
@@ -1001,7 +1001,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 35
+    global_rank: 36
   metrics:
   - gap
   - alpha
@@ -1041,5 +1041,6 @@ datasets_by_scope:
     datasets:
     - dataset: QM9
       dataset_slug: qm9
+main_figure: /figures/2505.23086/main_figure.jpegoptim.jpg
 ---
 

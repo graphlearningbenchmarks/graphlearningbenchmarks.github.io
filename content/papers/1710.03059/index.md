@@ -33,8 +33,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - EP-B
-mrr: 0.006
-adjusted_mrr: 0.002
+mrr: 0.0058
+adjusted_mrr: 0.0019
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -51,9 +51,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: gamlp(jk)
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.9982
     std: 0.01
     metric: F1
@@ -84,9 +84,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: graphcon-gcn
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.996
     std: null
     metric: F1
@@ -117,34 +117,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
-    model_key: graphsaint
-    model_plain: Whole Dataset
-    value: 0.995
-    std: null
+  - model: Cluster-GCN
+    model_key: gcnii
+    model_plain: Cluster-GCN
+    value: 0.9956
+    std: 0.02
     metric: F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2007.02133'
+    title: Simple and Deep Graph Convolutional Networks
+    date: Jul 4, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/DropEdge/DropEdge
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.995
-    sort_std: null
+    sort_value: 0.9956
+    sort_std: 0.02
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -207,8 +207,8 @@ results:
     value_note: ''
     sort_value: 0.529
     sort_std: null
-    global_rank: 151
-    paper_rank: 166
+    global_rank: 155
+    paper_rank: 170
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
@@ -274,8 +274,8 @@ results:
     value_note: ''
     sort_value: 0.2528
     sort_std: 0.0168
-    global_rank: 166
-    paper_rank: 166
+    global_rank: 170
+    paper_rank: 170
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -341,8 +341,8 @@ results:
     value_note: ''
     sort_value: 0.2475
     sort_std: 0.0202
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -408,8 +408,8 @@ results:
     value_note: ''
     sort_value: 0.2474
     sort_std: 0.013
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 172
+    paper_rank: 172
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -475,8 +475,8 @@ results:
     value_note: ''
     sort_value: 0.2149
     sort_std: 0.0119
-    global_rank: 169
-    paper_rank: 169
+    global_rank: 173
+    paper_rank: 173
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -509,5 +509,6 @@ datasets_by_scope:
     - dataset: PPI
       dataset_slug: ppi
 single_proposed_model: EP-B
+main_figure: /figures/1710.03059/main_figure.jpegoptim.jpg
 ---
 

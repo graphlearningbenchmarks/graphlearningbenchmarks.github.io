@@ -556,5 +556,6 @@ datasets_by_scope:
     - dataset: Reddit
       dataset_slug: reddit
 single_proposed_model: PINT
+main_figure: /figures/2209.15059/main_figure.jpegoptim.jpg
 ---
 

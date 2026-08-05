@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - EM
-mrr: 0.005
-adjusted_mrr: 0.0033
+mrr: 0.0053
+adjusted_mrr: 0.0036
 mrr_dataset_count: 2
 benchmark_categories:
 - MoleculeNet
@@ -66,9 +66,9 @@ results:
 - &id001
   dataset: BACE
   rows:
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: protomol
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -100,9 +100,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: mmsg
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -134,9 +134,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: MAGPrompt+
     model_key: memgnn
-    model_plain: UnifiedMolPretrain
+    model_plain: MAGPrompt+
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -224,8 +224,8 @@ results:
     value_note: ''
     sort_value: 0.729
     sort_std: 0.007
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 253
+    paper_rank: 253
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -292,8 +292,8 @@ results:
     value_note: ''
     sort_value: 0.722
     sort_std: 0.004
-    global_rank: 265
-    paper_rank: 265
+    global_rank: 257
+    paper_rank: 257
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -360,8 +360,8 @@ results:
     value_note: ''
     sort_value: 0.719
     sort_std: 0.008
-    global_rank: 266
-    paper_rank: 266
+    global_rank: 258
+    paper_rank: 258
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -428,8 +428,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.005
-    global_rank: 272
-    paper_rank: 272
+    global_rank: 264
+    paper_rank: 264
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -496,8 +496,8 @@ results:
     value_note: ''
     sort_value: 0.713
     sort_std: 0.007
-    global_rank: 274
-    paper_rank: 274
+    global_rank: 266
+    paper_rank: 266
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -564,8 +564,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.003
-    global_rank: 275
-    paper_rank: 275
+    global_rank: 267
+    paper_rank: 267
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -632,8 +632,8 @@ results:
     value_note: ''
     sort_value: 0.701
     sort_std: 0.006
-    global_rank: 283
-    paper_rank: 283
+    global_rank: 275
+    paper_rank: 275
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -655,9 +655,9 @@ results:
 - &id002
   dataset: ClinTox
   rows:
-  - model: UnifiedMolPretrain
+  - model: EdgePrompt+
     model_key: se(3)-i mpph
-    model_plain: UnifiedMolPretrain
+    model_plain: EdgePrompt+
     value: 0.993
     std: 0.004
     metric: ROC-AUC
@@ -690,9 +690,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: EdgePrompt+
     model_key: ka-gcn
-    model_plain: UnifiedMolPretrain
+    model_plain: EdgePrompt+
     value: 0.992
     std: 0.005
     metric: ROC-AUC
@@ -724,9 +724,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UnifiedMolPretrain
+  - model: EdgePrompt+
     model_key: ka-gat
-    model_plain: UnifiedMolPretrain
+    model_plain: EdgePrompt+
     value: 0.991
     std: 0.005
     metric: ROC-AUC
@@ -815,8 +815,8 @@ results:
     value_note: ''
     sort_value: 0.729
     sort_std: 0.007
-    global_rank: 161
-    paper_rank: 161
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -883,8 +883,8 @@ results:
     value_note: ''
     sort_value: 0.722
     sort_std: 0.004
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -951,8 +951,8 @@ results:
     value_note: ''
     sort_value: 0.719
     sort_std: 0.008
-    global_rank: 170
-    paper_rank: 170
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1019,8 +1019,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.005
-    global_rank: 176
-    paper_rank: 176
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1087,8 +1087,8 @@ results:
     value_note: ''
     sort_value: 0.713
     sort_std: 0.007
-    global_rank: 177
-    paper_rank: 177
+    global_rank: 166
+    paper_rank: 166
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1155,8 +1155,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.003
-    global_rank: 179
-    paper_rank: 179
+    global_rank: 168
+    paper_rank: 168
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1223,8 +1223,8 @@ results:
     value_note: ''
     sort_value: 0.701
     sort_std: 0.006
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1260,5 +1260,6 @@ datasets_by_scope:
     - dataset: ClinTox
       dataset_slug: clintox
 single_proposed_model: EM
+main_figure: /figures/2106.04113/main_figure.jpegoptim.jpg
 ---
 

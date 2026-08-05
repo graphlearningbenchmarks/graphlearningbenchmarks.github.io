@@ -9,7 +9,7 @@ primary_metric: ROC-AUC
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.MoleculeNet.html
 stats: null
-result_count: 427
+result_count: 413
 best_model:
   model: ProtoMol
   value: 0.914
@@ -26,6 +26,10 @@ papers:
   title: A Systematic Survey and Benchmark of Deep Learning for Molecular Property
     Prediction in the Foundation Model Era
   date_iso: '2026-04-17'
+  venue: ''
+- arxiv_id: '2602.05567'
+  title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+  date_iso: '2026-02-05'
   venue: ''
 - arxiv_id: '2602.01771'
   title: '<SO$ _k$>: One LLM Token for Explicit Graph Structural Understanding'
@@ -103,6 +107,10 @@ papers:
   title: 'Text-space Graph Foundation Models: Comprehensive Benchmarks and New Insights'
   date_iso: '2024-06-15'
   venue: NeurIPS 2024
+- arxiv_id: '2406.00403'
+  title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+  date_iso: '2024-06-01'
+  venue: ''
 - arxiv_id: '2405.10343'
   title: 'UniCorn: A Unified Contrastive Learning Approach for Multi-view Molecular
     Representation Learning'
@@ -152,10 +160,6 @@ papers:
     Property Prediction
   date_iso: '2023-12-12'
   venue: NeurIPS 2023
-- arxiv_id: '2311.04837'
-  title: Identifying Semantic Component for Robust Molecular Property Prediction
-  date_iso: '2023-11-08'
-  venue: ''
 - arxiv_id: '2310.14753'
   title: Rethinking Tokenizer and Decoder in Masked Graph Modeling for Molecules
   date_iso: '2023-10-23'
@@ -163,6 +167,10 @@ papers:
 - arxiv_id: '2310.14216'
   title: 'UniMAP: Universal SMILES-Graph Representation Learning'
   date_iso: '2023-10-22'
+  venue: ''
+- arxiv_id: '2310.07351'
+  title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+  date_iso: '2023-10-11'
   venue: ''
 - arxiv_id: '2309.10131'
   title: Deep Prompt Tuning for Graph Transformers
@@ -280,11 +288,6 @@ papers:
     Structure
   date_iso: '2021-06-08'
   venue: ICML 2021
-- arxiv_id: '2106.04509'
-  title: 'MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive
-    Learning from Molecular Graph'
-  date_iso: '2021-06-05'
-  venue: KDD 2021
 - arxiv_id: '2006.04804'
   title: Optimal Transport Graph Neural Networks
   date_iso: '2020-06-08'
@@ -293,6 +296,10 @@ papers:
   title: Memory-Based Graph Networks
   date_iso: '2020-02-21'
   venue: ICLR 2020
+- arxiv_id: '1905.12265'
+  title: Strategies for Pre-training Graph Neural Networks
+  date_iso: '2019-05-29'
+  venue: ICLR 2019
 variants:
 - slug: scaffold-split
   name: Scaffold split
@@ -496,6 +503,36 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.897
+    - null
+    - null
+    metric_stds:
+    - 0.012
+    - null
+    - null
+  - model: AMCT
+    model_plain: AMCT
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2310.07351'
+    title: Atom-Motif Contrastive Transformer for Molecular Property Prediction
+    date: Oct 11, 2023
+    date_iso: '2023-10-11'
+    date_display: Oct 2023
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.895
     - null
     - null
     metric_stds:
@@ -1260,6 +1297,36 @@ variants:
     - 0.0204
     - null
     - null
+  - model: MAGPrompt+
+    model_plain: MAGPrompt+
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2602.05567'
+    title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+    date: Feb 5, 2026
+    date_iso: '2026-02-05'
+    date_display: Feb 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.8682
+    - null
+    - null
+    metric_stds:
+    - 0.0521
+    - null
+    - null
   - model: KPGT
     model_plain: KPGT
     is_baseline: false
@@ -1775,82 +1842,27 @@ variants:
     - 0.033
     - null
     - null
-  - model: Hu et al.
-    model_plain: Hu et al.
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2202.09346'
-    title: Improving Molecular Contrastive Learning via Faulty Negative Mitigation
-      and Decomposed Fragment Contrast
-    date: Feb 18, 2022
-    date_iso: '2022-02-18'
-    date_display: Feb 2022
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.859
-    - null
-    - null
-    metric_stds:
-    - 0.008
-    - null
-    - null
-  - model: GPF-plus
-    model_plain: GPF-plus
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2209.15240'
-    title: Universal Prompt Tuning for Graph Neural Networks
-    date: Sep 30, 2022
-    date_iso: '2022-09-30'
-    date_display: Sep 2022
-    codebase_url: https://github.com/zjunet/GPF
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8581
-    - null
-    - null
-    metric_stds:
-    - 0.0043
-    - null
-    - null
-  row_count: 427
+  row_count: 413
   rows_json: /data/datasets/bace/scaffold-split-rows.json
   chart_json: /data/datasets/bace/scaffold-split-chart.json
   arch_counts:
-    gnn: 239
-    hybrid: 88
-    graph_transformer: 13
+    gnn: 226
+    hybrid: 85
+    graph_transformer: 15
     llm: 16
     walk: 1
     traditional: 46
   metric_counts:
-  - 398
+  - 384
   - 9
   - 20
   milestones: &id001
+  - value: 0.845
+    std: 0.007
+    model: GIN (Supervised ContextPred)
+    arxiv_id: '1905.12265'
+    title: Strategies for Pre-training Graph Neural Networks
+    date: '2019-05-29'
   - value: 0.907
     std: 0.0
     model: MemGNN

@@ -12,19 +12,22 @@ stats:
   avg_nodes: 29.87
   avg_edges: 32.3
   num_classes: 2
-result_count: 816
+result_count: 826
 best_model:
-  model: MSA-AUD
-  value: 0.969
+  model: WL-MLP
+  value: 0.9954
   metric: Accuracy
-  arxiv_id: '2312.10943'
-  paper_title: Model Stealing Attack against Graph Classification with Authenticity,
-    Uncertainty and Diversity
+  arxiv_id: '2202.10156'
+  paper_title: 1-WL Expressiveness Is (Almost) All You Need
 papers:
 - arxiv_id: '2602.08431'
   title: 'USBD: Universal Structural Basis Distillation for Source-Free Graph Domain
     Adaptation'
   date_iso: '2026-02-09'
+  venue: ''
+- arxiv_id: '2602.05567'
+  title: 'MAGPrompt: Message-Adaptive Graph Prompt Tuning for Graph Neural Networks'
+  date_iso: '2026-02-05'
   venue: ''
 - arxiv_id: '2602.04244'
   title: 'GraphVec: Cross-Domain Graph Vectorization for Graph-Level Representation
@@ -69,10 +72,6 @@ papers:
     Study on Oversquashing in Simplicial Message-Passing'
   date_iso: '2025-06-06'
   venue: ICLR 2025
-- arxiv_id: '2506.03674'
-  title: Out-of-Distribution Graph Models Merging
-  date_iso: '2025-06-04'
-  venue: ''
 - arxiv_id: '2505.21285'
   title: Learnable Kernel Density Estimation for Graphs
   date_iso: '2025-05-27'
@@ -161,6 +160,10 @@ papers:
   title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
   date_iso: '2024-06-03'
   venue: NeurIPS 2024
+- arxiv_id: '2406.00403'
+  title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+  date_iso: '2024-06-01'
+  venue: ''
 - arxiv_id: '2405.01350'
   title: Community-Invariant Graph Contrastive Learning
   date_iso: '2024-05-02'
@@ -186,6 +189,10 @@ papers:
   title: Graph Learning with Distributional Edge Layouts
   date_iso: '2024-02-26'
   venue: ''
+- arxiv_id: '2402.16346'
+  title: Boosting Graph Pooling with Persistent Homology
+  date_iso: '2024-02-26'
+  venue: NeurIPS 2024
 - arxiv_id: '2402.14393'
   title: Graph Parsing Networks
   date_iso: '2024-02-22'
@@ -217,11 +224,6 @@ papers:
   title: Unifying Graph Contrastive Learning via Graph Message Augmentation
   date_iso: '2024-01-08'
   venue: ''
-- arxiv_id: '2312.10943'
-  title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-    and Diversity
-  date_iso: '2023-12-18'
-  venue: ''
 - arxiv_id: '2310.15523'
   title: Generative and Contrastive Paradigms Are Complementary for Graph Self-Supervised
     Learning
@@ -244,6 +246,10 @@ papers:
   title: 'ENGAGE: Explanation Guided Data Augmentation for Graph Representation Learning'
   date_iso: '2023-07-03'
   venue: ''
+- arxiv_id: '2306.15963'
+  title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+  date_iso: '2023-06-28'
+  venue: NeurIPS 2023
 - arxiv_id: '2306.12726'
   title: On Exploring Node-feature and Graph-structure Diversities for Node Drop Graph
     Pooling
@@ -324,10 +330,6 @@ papers:
   title: Higher-order Clustering and Pooling for Graph Neural Networks
   date_iso: '2022-09-02'
   venue: ''
-- arxiv_id: '2208.06956'
-  title: 'ArieL: Adversarial Graph Contrastive Learning'
-  date_iso: '2022-08-15'
-  venue: ''
 - arxiv_id: '2206.14418'
   title: Optimization-Induced Graph Implicit Nonlinear Diffusion
   date_iso: '2022-06-29'
@@ -386,6 +388,10 @@ papers:
   title: Automated Data Augmentations for Graph Classification
   date_iso: '2022-02-26'
   venue: ICLR 2022
+- arxiv_id: '2202.10156'
+  title: 1-WL Expressiveness Is (Almost) All You Need
+  date_iso: '2022-02-21'
+  venue: ''
 - arxiv_id: '2202.08391'
   title: Graph Masked Autoencoders with Transformers
   date_iso: '2022-02-17'
@@ -441,9 +447,21 @@ papers:
   title: 'ifMixup: Interpolating Graph Pair to Regularize Graph Classification'
   date_iso: '2021-10-18'
   venue: AAAI 2021
+- arxiv_id: '2110.03753'
+  title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness'
+  date_iso: '2021-10-07'
+  venue: ICLR 2021
 - arxiv_id: '2107.04086'
   title: Robust Counterfactual Explanations on Graph Neural Networks
   date_iso: '2021-07-08'
+  venue: NeurIPS 2021
+- arxiv_id: '2106.13423'
+  title: Federated Graph Classification over Non-IID Graphs
+  date_iso: '2021-06-25'
+  venue: NeurIPS 2021
+- arxiv_id: '2106.12575'
+  title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
+  date_iso: '2021-06-23'
   venue: NeurIPS 2021
 - arxiv_id: '2106.09645'
   title: Prototypical Graph Contrastive Learning
@@ -550,6 +568,11 @@ papers:
   title: Graph Convolutional Networks with EigenPooling
   date_iso: '2019-04-30'
   venue: KDD 2019
+- arxiv_id: '1901.08296'
+  title: 'Deep Learning on Attributed Graphs: A Journey from Graphs to Their Embeddings
+    and Back'
+  date_iso: '2018-12-14'
+  venue: ''
 - arxiv_id: '1810.00826'
   title: How Powerful are Graph Neural Networks?
   date_iso: '2018-10-01'
@@ -573,6 +596,10 @@ papers:
 - arxiv_id: '1605.05273'
   title: Learning Convolutional Neural Networks for Graphs
   date_iso: '2016-05-17'
+  venue: ICML 2016
+- arxiv_id: '1603.05629'
+  title: Discriminative Embeddings of Latent Variable Models for Structured Data
+  date_iso: '2016-03-17'
   venue: ICML 2016
 - arxiv_id: '1603.06186'
   title: The Multiscale Laplacian Graph Kernel
@@ -607,21 +634,20 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: MSA-AUD
-    model_plain: MSA-AUD
-    is_baseline: true
+  - model: WL-MLP
+    model_plain: WL-MLP
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_iso: '2022-02-21'
+    date_display: Feb 2022
     codebase_url: ''
     published_conference: ''
     published_conference_short: ''
@@ -631,28 +657,27 @@ variants:
     is_best: true
     is_std_outlier: false
     metric_values:
-    - 0.969
+    - 0.9954
     - null
     - null
     metric_stds:
     - null
     - null
     - null
-  - model: MSA-AU
-    model_plain: MSA-AU
+  - model: GIN
+    model_plain: GIN
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_iso: '2022-02-21'
+    date_display: Feb 2022
     codebase_url: ''
     published_conference: ''
     published_conference_short: ''
@@ -662,28 +687,27 @@ variants:
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.966
+    - 0.9934
     - null
     - null
     metric_stds:
     - null
     - null
     - null
-  - model: MSA-AD
-    model_plain: MSA-AD
+  - model: GCN
+    model_plain: GCN
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_iso: '2022-02-21'
+    date_display: Feb 2022
     codebase_url: ''
     published_conference: ''
     published_conference_short: ''
@@ -693,28 +717,27 @@ variants:
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.963
+    - 0.9727
     - null
     - null
     metric_stds:
     - null
     - null
     - null
-  - model: JbDA
-    model_plain: JbDA
+  - model: GAT
+    model_plain: GAT
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_iso: '2022-02-21'
+    date_display: Feb 2022
     codebase_url: ''
     published_conference: ''
     published_conference_short: ''
@@ -724,69 +747,7 @@ variants:
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.944
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: T-RND
-    model_plain: T-RND
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.944
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-  - model: Random
-    model_plain: Random
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.935
+    - 0.9623
     - null
     - null
     metric_stds:
@@ -821,37 +782,6 @@ variants:
     - null
     metric_stds:
     - 0.026
-    - null
-    - null
-  - model: MSA-Real
-    model_plain: MSA-Real
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_iso: '2023-12-18'
-    date_display: Dec 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.911
-    - null
-    - null
-    metric_stds:
-    - null
     - null
     - null
   - model: MSH-GNN
@@ -1347,16 +1277,16 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2404.13344'
-    title: 'GRANOLA: Adaptive Normalization for Graph Neural Networks'
-    date: Apr 20, 2024
-    date_iso: '2024-04-20'
-    date_display: Apr 2024
-    codebase_url: https://github.com/MosheEliasof/GRANOLA
-    published_conference: NeurIPS 2024
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2024
+    arxiv_id: '2110.03753'
+    title: 'From Stars to Subgraphs: Uplifting Any GNN with Local Structure Awareness'
+    date: Oct 7, 2021
+    date_iso: '2021-10-07'
+    date_display: Oct 2021
+    codebase_url: https://github.com/LingxiaoShawn/GNNAsKernel
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1549,6 +1479,36 @@ variants:
     - 0.0025
     - null
     - null
+  - model: WL sp
+    model_plain: WL sp
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1603.05629'
+    title: Discriminative Embeddings of Latent Variable Models for Structured Data
+    date: Mar 17, 2016
+    date_iso: '2016-03-17'
+    date_display: Mar 2016
+    codebase_url: https://github.com/Hanjun-Dai/graphnn
+    published_conference: ICML 2016
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2016
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8455
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
   - model: CAN
     model_plain: CAN
     is_baseline: false
@@ -1731,6 +1691,36 @@ variants:
     - 0.0163
     - null
     - null
+  - model: WL edge
+    model_plain: WL edge
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1603.05629'
+    title: Discriminative Embeddings of Latent Variable Models for Structured Data
+    date: Mar 17, 2016
+    date_iso: '2016-03-17'
+    date_display: Mar 2016
+    codebase_url: https://github.com/Hanjun-Dai/graphnn
+    published_conference: ICML 2016
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2016
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8437
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
   - model: GPS(DEL-F)
     model_plain: GPS(DEL-F)
     is_baseline: true
@@ -1759,6 +1749,36 @@ variants:
     - null
     metric_stds:
     - 0.0015
+    - null
+    - null
+  - model: GraphGPS
+    model_plain: GraphGPS
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2406.00403'
+    title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    date: Jun 1, 2024
+    date_iso: '2024-06-01'
+    date_display: Jun 2024
+    codebase_url: https://github.com/Celin-Yao/DC-GCL
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8421
+    - null
+    - null
+    metric_stds:
+    - 0.0225
     - null
     - null
   - model: SUN (GIN) (NM)
@@ -2061,6 +2081,36 @@ variants:
     - 0.024
     - null
     - null
+  - model: DiffPool-TIP
+    model_plain: DiffPool-TIP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.16346'
+    title: Boosting Graph Pooling with Persistent Homology
+    date: Feb 26, 2024
+    date_iso: '2024-02-26'
+    date_display: Feb 2024
+    codebase_url: https://github.com/LOGO-CUHKSZ/TIP
+    published_conference: NeurIPS 2024
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8375
+    - null
+    - null
+    metric_stds:
+    - 0.0131
+    - null
+    - null
   - model: structure2vec
     model_plain: structure2vec
     is_baseline: true
@@ -2091,49 +2141,18 @@ variants:
     - null
     - null
     - null
-  - model: S2S-N2N-PP
-    model_plain: S2S-N2N-PP
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2101.08170'
-    title: 'SUGAR: Subgraph Neural Network with Reinforcement Pooling and Self-Supervised
-      Mutual Information Mechanism'
-    date: Jan 20, 2021
-    date_iso: '2021-01-20'
-    date_display: Jan 2021
-    codebase_url: https://github.com/RingBDStack/SUGAR
-    published_conference: WWW 2021
-    published_conference_short: WWW
-    published_conference_slug: www
-    published_venue: WWW 2021
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8372
-    - null
-    - null
-    metric_stds:
-    - 0.004
-    - null
-    - null
-  row_count: 816
+  row_count: 826
   rows_json: /data/datasets/nci1/10-fold-cv-rows.json
   chart_json: /data/datasets/nci1/10-fold-cv-chart.json
   arch_counts:
-    gnn: 512
-    hybrid: 129
-    graph_transformer: 29
+    gnn: 521
+    hybrid: 130
+    graph_transformer: 31
     llm: 0
-    walk: 7
-    traditional: 96
+    walk: 10
+    traditional: 100
   metric_counts:
-  - 770
+  - 780
   - 31
   - 15
   milestones: &id001
@@ -2149,13 +2168,12 @@ variants:
     arxiv_id: '1606.01141'
     title: On Valid Optimal Assignment Kernels and Applications to Graph Classification
     date: '2016-06-03'
-  - value: 0.969
+  - value: 0.9954
     std: null
-    model: MSA-AUD
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: '2023-12-18'
+    model: WL-MLP
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: '2022-02-21'
   milestones_by_metric:
     Accuracy: *id001
     AUROC:

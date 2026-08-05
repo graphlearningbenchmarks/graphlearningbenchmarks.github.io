@@ -43,7 +43,7 @@ paper_type: method
 proposed_models:
 - DiSe-GAE
 - DiSe-FCAE
-mrr: 0.013
+mrr: 0.0128
 adjusted_mrr: 0.0043
 mrr_dataset_count: 1
 benchmark_categories:
@@ -62,9 +62,9 @@ results:
   dataset: PPI
   is_multi_metric: true
   rows:
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: gamlp(jk)
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     metric_values:
     - 0.9982
     - null
@@ -103,9 +103,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: graphcon-gcn
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     metric_values:
     - 0.996
     - null
@@ -144,37 +144,37 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Whole Dataset
-    model_key: graphsaint
-    model_plain: Whole Dataset
+  - model: Cluster-GCN
+    model_key: gcnii
+    model_plain: Cluster-GCN
     metric_values:
-    - 0.995
+    - 0.9956
     - null
     - null
     metric_stds:
+    - 0.02
     - null
     - null
-    - null
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
+    arxiv_id: '2007.02133'
+    title: Simple and Deep Graph Convolutional Networks
     published_venue: ''
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    date: Jul 4, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-04'
+    codebase_url: https://github.com/DropEdge/DropEdge
     uses_external_data: false
     is_global_top: true
     global_rank: 3
     is_best: true
-    sort_value: 0.995
-    sort_std: null
+    sort_value: 0.9956
+    sort_std: 0.02
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -249,7 +249,7 @@ results:
     comparison_source_arxiv: '2201.13410'
     is_best: false
     is_std_outlier: false
-    global_rank: 69
+    global_rank: 70
   - model: DiSe-GAE
     model_key: dise-gae
     model_plain: DiSe-GAE
@@ -312,7 +312,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 77
+    global_rank: 78
   - model: DiSe-FCAE
     model_key: dise-fcae
     model_plain: DiSe-FCAE
@@ -375,7 +375,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 78
+    global_rank: 79
   - model: DW+Dine
     model_key: dw+dine
     model_plain: DW+Dine
@@ -438,7 +438,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 87
+    global_rank: 88
   - model: GAE+Dine
     model_key: gae+dine
     model_plain: GAE+Dine
@@ -501,7 +501,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 132
+    global_rank: 135
   - model: DeepWalk
     model_key: deepwalk
     model_plain: DeepWalk
@@ -566,7 +566,7 @@ results:
     comparison_source_arxiv: '2009.10273'
     is_best: false
     is_std_outlier: false
-    global_rank: 151
+    global_rank: 155
   - model: GraphAE
     model_key: graphae
     model_plain: GraphAE
@@ -629,7 +629,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 160
+    global_rank: 164
   - model: InfWalk
     model_key: infwalk
     model_plain: InfWalk
@@ -692,7 +692,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 170
+    global_rank: 174
   - model: DGLFRM
     model_key: dglfrm
     model_plain: DGLFRM
@@ -755,7 +755,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 171
+    global_rank: 175
   metrics:
   - F1
   - Topological Alignment
@@ -785,5 +785,6 @@ datasets_by_scope:
     datasets:
     - dataset: PPI
       dataset_slug: ppi
+main_figure: /figures/2410.21043/main_figure.jpegoptim.jpg
 ---
 

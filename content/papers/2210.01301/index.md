@@ -57,9 +57,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - GIDN
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.3333
+adjusted_mrr: 0.1111
+mrr_dataset_count: 1
 benchmark_categories:
 - OGB
 benchmark_coverage:
@@ -158,14 +158,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task.
     date: Oct 4, 2022
     date_display: Oct 2022
     date_iso: '2022-10-04'
@@ -177,8 +177,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-10-04'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -187,17 +187,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7096
+    true_std: 0.0055
+    value_gap_source_arxiv: '2210.01301'
+    value_gap_source_title: 'GIDN: A Lightweight Graph Inception Diffusion Network
+      for High-efficient Link Prediction'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7096
     sort_std: 0.0055
     global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -220,27 +226,27 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Wang 2021
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task.
     date: Oct 4, 2022
     date_display: Oct 2022
     date_iso: '2022-10-04'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7059
+    at_pub_std: 0.0029
+    at_pub_source_arxiv: '2112.02936'
+    at_pub_source_title: Pairwise Learning for Neural Link Prediction
+    at_pub_source_date_iso: '2021-12-06'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-10-04'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -249,52 +255,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7059
+    true_std: 0.0029
+    value_gap_source_arxiv: '2210.01301'
+    value_gap_source_title: 'GIDN: A Lightweight Graph Inception Diffusion Network
+      for High-efficient Link Prediction'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7059
     sort_std: 0.0029
-    global_rank: 3
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SIGN
-    model_key: sign
-    model_plain: SIGN
-    value: 0.6664
-    std: 0.0064
-    metric: Hits@50
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2409.17475'
-    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
-      Networks
-    date: Sep 26, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-26'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/tensor-gales/HeteLinkPred
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.6664
-    sort_std: 0.0064
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -316,14 +294,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: Sun 2020
     variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Hits@50 on the standard ogbl-collab link prediction task.
     date: Oct 4, 2022
     date_display: Oct 2022
     date_iso: '2022-10-04'
@@ -335,8 +313,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-10-04'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -345,17 +323,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.448
+    true_std: 0.0542
+    value_gap_source_arxiv: '2210.01301'
+    value_gap_source_title: 'GIDN: A Lightweight Graph Inception Diffusion Network
+      for High-efficient Link Prediction'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.448
     sort_std: 0.0542
-    global_rank: 61
+    global_rank: 74
+    paper_rank: 74
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -384,5 +368,6 @@ datasets_by_scope:
     - dataset: ogbl-collab
       dataset_slug: ogbl-collab
 single_proposed_model: GIDN
+main_figure: /figures/2210.01301/main_figure.jpegoptim.jpg
 ---
 

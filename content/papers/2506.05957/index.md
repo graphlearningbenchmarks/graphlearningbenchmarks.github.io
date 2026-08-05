@@ -145,9 +145,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CTRL
+  - model: UGTs
     model_key: egtas
-    model_plain: CTRL
+    model_plain: UGTs
     value: 0.7919
     std: 0.0137
     metric: ROC-AUC
@@ -178,35 +178,171 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CTRL
-    model_key: autogt
-    model_plain: CTRL
-    value: 0.767
-    std: 0.0142
+  - model: UGTs
+    model_key: ugts
+    model_plain: UGTs
+    value: 0.784
+    std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2211.15335'
+    title: 'You Can Have Better Graph Neural Networks by Not Training Weights at All:
+      Finding Untrained GNNs Tickets'
+    date: Nov 28, 2022
+    date_display: Nov 2022
+    date_iso: '2022-11-28'
+    venue: Learning on Graphs Conference
+    codebase_url: https://github.com/TianjinYellow/UGTs-LoG
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.784
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DropEdge
+    model_key: dropedge
+    model_plain: DropEdge
+    value: 0.6649
+    std: 0.0155
+    paper_value: 0.6649
+    paper_std: 0.0155
     metric: ROC-AUC
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2405.19779'
-    title: Automatic Graph Topology-Aware Transformer
-    date: May 30, 2024
-    date_display: May 2024
-    date_iso: '2024-05-30'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/xiaofangxd/EGTAS
-    uses_external_data: false
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.767
-    sort_std: 0.0142
-    comparison_type: global_top
+    table_ref: Table 1
+    source_ref: sui2023unleashing
+    variant_inference_reason: 'dataset: fuzzy match to ogbg-molpcba (score=75)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB split for OGBG-Molbbbp
+    date: Jun 6, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7531
+    at_pub_std: 0.0457
+    at_pub_source_arxiv: '2306.15963'
+    at_pub_source_title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+    at_pub_source_date_iso: '2023-06-28'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-28'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.08819999999999995
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7531
+    true_std: 0.0457
+    value_gap_source_arxiv: '2306.15963'
+    value_gap_source_title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08819999999999995
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7531
+    sort_std: 0.0457
+    global_rank: 9
+    paper_rank: 29
+    rank_delta: 20
+    rank_delta_abs: 20
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Fused Gromov-Wasserstein Graph Mixup for Graph-level
+      Classifications
+    comparison_source_arxiv: '2306.15963'
+    is_best: true
+    is_std_outlier: false
+  - model: G-Mixup
+    model_key: g-mixup
+    model_plain: G-Mixup
+    value: 0.6744
+    std: 0.0162
+    paper_value: 0.6744
+    paper_std: 0.0162
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: sui2023unleashing
+    variant_inference_reason: 'dataset: fuzzy match to ogbg-molpcba (score=75)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB split for OGBG-Molbbbp
+    date: Jun 6, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-06'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7374
+    at_pub_std: 0.0707
+    at_pub_source_arxiv: '2306.15963'
+    at_pub_source_title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+    at_pub_source_date_iso: '2023-06-28'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-28'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.06300000000000006
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7374
+    true_std: 0.0707
+    value_gap_source_arxiv: '2306.15963'
+    value_gap_source_title: Fused Gromov-Wasserstein Graph Mixup for Graph-level Classifications
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06300000000000006
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7374
+    sort_std: 0.0707
+    global_rank: 10
+    paper_rank: 23
+    rank_delta: 13
+    rank_delta_abs: 13
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
@@ -268,8 +404,8 @@ results:
     value_note: ''
     sort_value: 0.7079
     sort_std: 0.0153
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -309,20 +445,19 @@ results:
     date_iso: '2025-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.697
-    at_pub_std: 0.0128
-    at_pub_source_arxiv: '2311.04837'
-    at_pub_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    at_pub_source_date_iso: '2023-11-08'
-    at_pub_source_date_label: '2023'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-06-06'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.000200000000000089
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -337,12 +472,12 @@ results:
     value_note: ''
     sort_value: 0.6972
     sort_std: 0.0166
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -405,8 +540,8 @@ results:
     value_note: ''
     sort_value: 0.6874
     sort_std: 0.0103
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -473,8 +608,8 @@ results:
     value_note: ''
     sort_value: 0.6811
     sort_std: 0.0052
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -541,8 +676,8 @@ results:
     value_note: ''
     sort_value: 0.681
     sort_std: 0.0168
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -609,8 +744,8 @@ results:
     value_note: ''
     sort_value: 0.6806
     sort_std: 0.026
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -677,76 +812,8 @@ results:
     value_note: ''
     sort_value: 0.6769
     sort_std: 0.0236
-    global_rank: 27
-    paper_rank: 27
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: G-Mixup
-    model_key: g-mixup
-    model_plain: G-Mixup
-    value: 0.6744
-    std: 0.0162
-    paper_value: 0.6744
-    paper_std: 0.0162
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: sui2023unleashing
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molpcba (score=75)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: OGB split for OGBG-Molbbbp
-    date: Jun 6, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-06-06'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6744
-    true_std: 0.0162
-    value_gap_source_arxiv: '2506.05957'
-    value_gap_source_title: Pruning Spurious Subgraphs for Graph Out-of-Distribution
-      Generalization
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6744
-    sort_std: 0.0162
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -813,8 +880,8 @@ results:
     value_note: ''
     sort_value: 0.6722
     sort_std: 0.0115
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -881,8 +948,8 @@ results:
     value_note: ''
     sort_value: 0.6712
     sort_std: 0.0211
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -922,20 +989,19 @@ results:
     date_iso: '2025-06-06'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6467
-    at_pub_std: 0.0174
-    at_pub_source_arxiv: '2311.04837'
-    at_pub_source_title: Identifying Semantic Component for Robust Molecular Property
-      Prediction
-    at_pub_source_date_iso: '2023-11-08'
-    at_pub_source_date_label: '2023'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2025-06-06'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.02189999999999992
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: true
+    insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
@@ -950,12 +1016,12 @@ results:
     value_note: ''
     sort_value: 0.6686
     sort_std: 0.0225
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1018,76 +1084,8 @@ results:
     value_note: ''
     sort_value: 0.6678
     sort_std: 0.0145
-    global_rank: 33
-    paper_rank: 33
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DropEdge
-    model_key: dropedge
-    model_plain: DropEdge
-    value: 0.6649
-    std: 0.0155
-    paper_value: 0.6649
-    paper_std: 0.0155
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: sui2023unleashing
-    variant_inference_reason: 'dataset: fuzzy match to ogbg-molpcba (score=75)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: OGB split for OGBG-Molbbbp
-    date: Jun 6, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-06'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-06-06'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6649
-    true_std: 0.0155
-    value_gap_source_arxiv: '2506.05957'
-    value_gap_source_title: Pruning Spurious Subgraphs for Graph Out-of-Distribution
-      Generalization
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6649
-    sort_std: 0.0155
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1154,8 +1152,8 @@ results:
     value_note: ''
     sort_value: 0.6647
     sort_std: 0.0239
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1222,8 +1220,8 @@ results:
     value_note: ''
     sort_value: 0.6492
     sort_std: 0.0209
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1256,5 +1254,6 @@ datasets_by_scope:
     - dataset: ogbg-molpcba
       dataset_slug: ogbg-molpcba
 single_proposed_model: PrunE
+main_figure: /figures/2506.05957/main_figure.jpegoptim.jpg
 ---
 

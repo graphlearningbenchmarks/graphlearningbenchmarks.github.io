@@ -73,9 +73,9 @@ results:
 - &id002
   dataset: ACM
   rows:
-  - model: SAGE
+  - model: GCN+P+D
     model_key: signgt
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -107,9 +107,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
+  - model: GCN+P+D
     model_key: nodeformer
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -199,46 +199,12 @@ results:
     sort_value: 0.9487
     sort_std: 0.0059
     global_rank: 3
-    paper_rank: 32
-    rank_delta: 29
-    rank_delta_abs: 29
+    paper_rank: 49
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAGE
-    model_key: specformer
-    model_plain: SAGE
-    value: 0.9454
-    std: 0.0043
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2310.11025'
-    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
-      Learning'
-    date: Oct 17, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-17'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 4
-    sort_value: 0.9454
-    sort_std: 0.0043
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
@@ -300,16 +266,86 @@ results:
     value_note: ''
     sort_value: 0.9424
     sort_std: 0.0043
-    global_rank: 6
-    paper_rank: 33
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 7
+    paper_rank: 50
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Model Stealing Attacks Against Inductive Graph Neural
       Networks
     comparison_source_arxiv: '2112.08331'
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.9175
+    std: 0.0048
+    paper_value: 0.9175
+    paper_std: 0.0048
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Mar 14, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-14'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7514
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2104.12840'
+    at_pub_source_title: 'AdaGNN: Graph Neural Networks with Adaptive Frequency Response
+      Filter'
+    at_pub_source_date_iso: '2021-04-26'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2024-06-27'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: 0.16610000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9324
+    true_std: 0.0049
+    value_gap_source_arxiv: '2406.19258'
+    value_gap_source_title: Leveraging Contrastive Learning for Enhanced Node Representations
+      in Tokenized Graph Transformers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.014900000000000024
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9324
+    sort_std: 0.0049
+    global_rank: 29
+    paper_rank: 44
+    rank_delta: 15
+    rank_delta_abs: 15
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'AdaGNN: Graph Neural Networks with Adaptive Frequency
+      Response Filter'
+    comparison_source_arxiv: '2104.12840'
     is_best: false
     is_std_outlier: false
   - model: GANN
@@ -360,7 +396,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9323
     sort_std: 0.0034
-    global_rank: 20
+    global_rank: 33
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -374,13 +410,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SGC
-    model_key: sgc
-    model_plain: SGC
-    value: 0.9175
-    std: 0.0048
-    paper_value: 0.9175
-    paper_std: 0.0048
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.9154
+    std: 0.0034
+    paper_value: 0.9154
+    paper_std: 0.0034
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -404,44 +440,42 @@ results:
     date_iso: '2023-03-14'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7514
-    at_pub_std: 0.001
-    at_pub_source_arxiv: '2104.12840'
-    at_pub_source_title: 'AdaGNN: Graph Neural Networks with Adaptive Frequency Response
-      Filter'
-    at_pub_source_date_iso: '2021-04-26'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-10-17'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.16610000000000003
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-06-27'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
+    improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9315
-    true_std: 0.0022
-    value_gap_source_arxiv: '2310.11025'
-    value_gap_source_title: 'SignGT: Signed Attention-based Graph Transformer for
-      Graph Representation Learning'
+    true_value: 0.93
+    true_std: 0.0055
+    value_gap_source_arxiv: '2406.19258'
+    value_gap_source_title: Leveraging Contrastive Learning for Enhanced Node Representations
+      in Tokenized Graph Transformers
     value_gap_source_is_current_paper: false
-    value_gap: 0.014000000000000012
+    value_gap: 0.014600000000000057
     has_value_note: false
     value_note: ''
-    sort_value: 0.9315
-    sort_std: 0.0022
-    global_rank: 20
-    paper_rank: 27
-    rank_delta: 7
-    rank_delta_abs: 7
+    sort_value: 0.93
+    sort_std: 0.0055
+    global_rank: 37
+    paper_rank: 45
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'AdaGNN: Graph Neural Networks with Adaptive Frequency
-      Response Filter'
-    comparison_source_arxiv: '2104.12840'
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -502,8 +536,8 @@ results:
     value_note: ''
     sort_value: 0.9233
     sort_std: 0.0038
-    global_rank: 24
-    paper_rank: 27
+    global_rank: 41
+    paper_rank: 44
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -562,7 +596,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9164
     sort_std: 0.0044
-    global_rank: 29
+    global_rank: 46
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -624,7 +658,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9106
     sort_std: 0.0044
-    global_rank: 31
+    global_rank: 48
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -686,7 +720,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9101
     sort_std: 0.0056
-    global_rank: 31
+    global_rank: 48
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -748,7 +782,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9056
     sort_std: 0.0056
-    global_rank: 33
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -810,7 +844,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8933
     sort_std: 0.0059
-    global_rank: 37
+    global_rank: 54
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -819,74 +853,6 @@ results:
     rank_delta: null
     rank_delta_abs: null
     rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: APPNP
-    model_key: appnp
-    model_plain: APPNP
-    value: 0.9154
-    std: 0.0034
-    paper_value: 0.9154
-    paper_std: 0.0034
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Mar 14, 2023
-    date_display: Mar 2023
-    date_iso: '2023-03-14'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-11'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.8416
-    true_std: 0.0425
-    value_gap_source_arxiv: '2410.08524'
-    value_gap_source_title: 'IGNN-Solver: A Graph Neural Solver for Implicit Graph
-      Neural Networks'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07379999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8416
-    sort_std: 0.0425
-    global_rank: 50
-    paper_rank: 29
-    rank_delta: -21
-    rank_delta_abs: 21
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1821,9 +1787,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: STPGC
+  - model: ACGCL
     model_key: hg-scm
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -1855,9 +1821,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: advsyngnn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9486
     std: 0.0012
     metric: Accuracy
@@ -1889,9 +1855,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: STPGC
+  - model: ACGCL
     model_key: simplehgn
-    model_plain: STPGC
+    model_plain: ACGCL
     value: 0.9446
     std: 0.0022
     metric: Accuracy
@@ -2052,9 +2018,9 @@ results:
     sort_value: 0.8758
     sort_std: 0.002
     global_rank: 28
-    paper_rank: 80
-    rank_delta: 52
-    rank_delta_abs: 52
+    paper_rank: 79
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2111,7 +2077,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8204
     sort_std: 0.0022
-    global_rank: 67
+    global_rank: 66
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2181,10 +2147,10 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: null
-    global_rank: 68
-    paper_rank: 79
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 66
+    paper_rank: 78
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2674,7 +2640,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7927
     sort_std: 0.0054
-    global_rank: 80
+    global_rank: 79
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2736,7 +2702,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7832
     sort_std: 0.0078
-    global_rank: 81
+    global_rank: 80
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2798,7 +2764,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7429
     sort_std: 0.0071
-    global_rank: 106
+    global_rank: 105
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2846,5 +2812,6 @@ datasets_by_scope:
     - dataset: AMAP
       dataset_slug: amap
 single_proposed_model: GANN
+main_figure: /figures/2303.07778/main_figure.jpegoptim.jpg
 ---
 

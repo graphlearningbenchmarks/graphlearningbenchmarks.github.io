@@ -12,7 +12,7 @@ stats:
   avg_nodes: 2745480.0
   avg_edges: 12800500.0
   num_classes: 5
-result_count: 34
+result_count: 43
 best_model:
   model: GloGNN
   value: 0.8432
@@ -28,6 +28,10 @@ papers:
   title: Understanding Heterophily for Graph Neural Networks
   date_iso: '2024-01-17'
   venue: ICML 2024
+- arxiv_id: '2312.11109'
+  title: Graph Transformers for Large Graphs
+  date_iso: '2023-12-18'
+  venue: ''
 - arxiv_id: '2310.02232'
   title: 'HoloNets: Spectral Convolutions do extend to Directed Graphs'
   date_iso: '2023-10-03'
@@ -255,6 +259,32 @@ variants:
     - 0.7026
     metric_stds:
     - 0.0014
+  - model: LargeGT-full
+    model_plain: LargeGT-full
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2312.11109'
+    title: Graph Transformers for Large Graphs
+    date: Dec 18, 2023
+    date_iso: '2023-12-18'
+    date_display: Dec 2023
+    codebase_url: https://github.com/snap-research/LargeGT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.7021
+    metric_stds:
+    - 0.0012
   - model: G^2-GraphSAGE
     model_plain: G^2-GraphSAGE
     is_baseline: true
@@ -307,6 +337,32 @@ variants:
     - 0.695
     metric_stds:
     - 0.0039
+  - model: LargeGT-local
+    model_plain: LargeGT-local
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2312.11109'
+    title: Graph Transformers for Large Graphs
+    date: Dec 18, 2023
+    date_iso: '2023-12-18'
+    date_display: Dec 2023
+    codebase_url: https://github.com/snap-research/LargeGT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: true
+    metric_values:
+    - 0.6819
+    metric_stds:
+    - 0.0311
   - model: FSGNN
     model_plain: FSGNN
     is_baseline: true
@@ -411,6 +467,32 @@ variants:
     - 0.6039
     metric_stds:
     - 0.0007
+  - model: NAGphormer-δ
+    model_plain: NAGphormer-δ
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2312.11109'
+    title: Graph Transformers for Large Graphs
+    date: Dec 18, 2023
+    date_iso: '2023-12-18'
+    date_display: Dec 2023
+    codebase_url: https://github.com/snap-research/LargeGT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.6011
+    metric_stds:
+    - 0.0005
   - model: H_A
     model_plain: H_A
     is_baseline: true
@@ -541,6 +623,58 @@ variants:
     - 0.508
     metric_stds:
     - 0.004
+  - model: GOAT-full-δ
+    model_plain: GOAT-full-δ
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.11109'
+    title: Graph Transformers for Large Graphs
+    date: Dec 18, 2023
+    date_iso: '2023-12-18'
+    date_display: Dec 2023
+    codebase_url: https://github.com/snap-research/LargeGT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.5028
+    metric_stds:
+    - 0.0014
+  - model: GraphSAGE-δ
+    model_plain: GraphSAGE-δ
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.11109'
+    title: Graph Transformers for Large Graphs
+    date: Dec 18, 2023
+    date_iso: '2023-12-18'
+    date_display: Dec 2023
+    codebase_url: https://github.com/snap-research/LargeGT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4843
+    metric_stds:
+    - 0.0021
   - model: NLGAT
     model_plain: NLGAT
     is_baseline: true
@@ -567,6 +701,58 @@ variants:
     - 0.483
     metric_stds:
     - 0.002
+  - model: GT-sparse-δ
+    model_plain: GT-sparse-δ
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2312.11109'
+    title: Graph Transformers for Large Graphs
+    date: Dec 18, 2023
+    date_iso: '2023-12-18'
+    date_display: Dec 2023
+    codebase_url: https://github.com/snap-research/LargeGT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4781
+    metric_stds:
+    - 0.0
+  - model: GAT-δ
+    model_plain: GAT-δ
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.11109'
+    title: Graph Transformers for Large Graphs
+    date: Dec 18, 2023
+    date_iso: '2023-12-18'
+    date_display: Dec 2023
+    codebase_url: https://github.com/snap-research/LargeGT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4592
+    metric_stds:
+    - 0.0022
   - model: GCN
     model_plain: GCN
     is_baseline: true
@@ -645,6 +831,58 @@ variants:
     - 0.454
     metric_stds:
     - 0.004
+  - model: GOAT-global-δ
+    model_plain: GOAT-global-δ
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.11109'
+    title: Graph Transformers for Large Graphs
+    date: Dec 18, 2023
+    date_iso: '2023-12-18'
+    date_display: Dec 2023
+    codebase_url: https://github.com/snap-research/LargeGT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4265
+    metric_stds:
+    - 0.0007
+  - model: GOAT-local-δ
+    model_plain: GOAT-local-δ
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2312.11109'
+    title: Graph Transformers for Large Graphs
+    date: Dec 18, 2023
+    date_iso: '2023-12-18'
+    date_display: Dec 2023
+    codebase_url: https://github.com/snap-research/LargeGT
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.4095
+    metric_stds:
+    - 0.0016
   - model: TIDE-s
     model_plain: TIDE-s
     is_baseline: false
@@ -957,18 +1195,18 @@ variants:
     - 0.3069
     metric_stds:
     - 0.00014
-  row_count: 34
+  row_count: 43
   rows_json: ''
   chart_json: /data/datasets/snap-patents/standard-split-chart.json
   arch_counts:
-    gnn: 23
-    hybrid: 9
-    graph_transformer: 0
+    gnn: 25
+    hybrid: 12
+    graph_transformer: 2
     llm: 0
     walk: 0
     traditional: 2
   metric_counts:
-  - 34
+  - 43
   milestones: &id001
   - value: 0.508
     std: 0.004

@@ -44,13 +44,13 @@ abstract: The application of machine learning methods in quantum chemistry has e
   at the same time giving a substantial speedup (6--14x for training and 2--11x for
   inference) compared to other models.
 codebase_url: https://github.com/thorben-frank/mlff
-extraction_model: google/gemma-4-31B-it
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
 has_results: true
 paper_type: method
 proposed_models:
 - So3krates
-mrr: 0.0217
-adjusted_mrr: 0.0072
+mrr: 0.0154
+adjusted_mrr: 0.0051
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -217,7 +217,7 @@ results:
     today_delta_significant: false
     sort_value: 0.051
     sort_std: null
-    global_rank: 25
+    global_rank: 30
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -289,8 +289,8 @@ results:
     value_note: ''
     sort_value: 0.052
     sort_std: 0.001
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -298,6 +298,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NequIP
+    model_key: nequip
+    model_plain: NequIP
+    value: 0.04
+    std: null
+    paper_value: 0.04
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 3.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: batzner2021se
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 28, 2022
+    date_display: May 2022
+    date_iso: '2022-05-28'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: 0.348
+    at_pub_std: null
+    at_pub_source_arxiv: '2202.02541'
+    at_pub_source_title: 'TorchMD-NET: Equivariant Transformers for Neural Network
+      based Molecular Potentials'
+    at_pub_source_date_iso: '2022-01-01'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.308
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.053
+    true_std: null
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.012999999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.053
+    sort_std: null
+    global_rank: 34
+    paper_rank: 22
+    rank_delta: -12
+    rank_delta_abs: 12
+    rank_delta_direction: better
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'TorchMD-NET: Equivariant Transformers for Neural Network
+      based Molecular Potentials'
+    comparison_source_arxiv: '2202.02541'
     is_best: false
     is_std_outlier: false
   - model: NewtonNet
@@ -358,8 +428,8 @@ results:
     value_note: ''
     sort_value: 0.061
     sort_std: 0.009
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -405,8 +475,8 @@ results:
     at_pub_source_title: Directional Message Passing for Molecular Graphs
     at_pub_source_date_iso: '2020-03-06'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-03-06'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -417,16 +487,16 @@ results:
     today_delta_significant: false
     true_value: 0.064
     true_std: null
-    value_gap_source_arxiv: '2003.03123'
-    value_gap_source_title: Directional Message Passing for Molecular Graphs
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -494,8 +564,8 @@ results:
     value_note: ''
     sort_value: 0.077
     sort_std: null
-    global_rank: 39
-    paper_rank: 36
+    global_rank: 45
+    paper_rank: 42
     rank_delta: -3
     rank_delta_abs: 3
     rank_delta_direction: better
@@ -504,76 +574,6 @@ results:
     comparison_source_title: 'SpookyNet: Learning force fields with electronic degrees
       of freedom and nonlocal effects'
     comparison_source_arxiv: '2105.00304'
-    is_best: false
-    is_std_outlier: false
-  - model: NequIP
-    model_key: nequip
-    model_plain: NequIP
-    value: 0.04
-    std: null
-    paper_value: 0.04
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 3.0
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: batzner2021se
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 28, 2022
-    date_display: May 2022
-    date_iso: '2022-05-28'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: 0.348
-    at_pub_std: null
-    at_pub_source_arxiv: '2202.02541'
-    at_pub_source_title: 'TorchMD-NET: Equivariant Transformers for Neural Network
-      based Molecular Potentials'
-    at_pub_source_date_iso: '2022-01-01'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.308
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.131
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.091
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.131
-    sort_std: null
-    global_rank: 45
-    paper_rank: 20
-    rank_delta: -25
-    rank_delta_abs: 25
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'TorchMD-NET: Equivariant Transformers for Neural Network
-      based Molecular Potentials'
-    comparison_source_arxiv: '2202.02541'
     is_best: false
     is_std_outlier: false
   - model: So3krates
@@ -633,10 +633,10 @@ results:
     value_note: ''
     sort_value: 0.139
     sort_std: null
-    global_rank: 46
-    paper_rank: 28
-    rank_delta: -18
-    rank_delta_abs: 18
+    global_rank: 65
+    paper_rank: 33
+    rank_delta: -32
+    rank_delta_abs: 32
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
@@ -667,5 +667,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: So3krates
+main_figure: /figures/2205.14276/main_figure.jpegoptim.jpg
 ---
 

@@ -66,12 +66,17 @@ adjusted_mrr: 0.3333
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterophilic Graphs
+- Heterophily Benchmark
 - Knowledge Graphs
 benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
-  evaluated: 2
-  total: 13
+  evaluated: 1
+  total: 6
+- benchmark: Heterophily Benchmark
+  benchmark_slug: heterophily-benchmark
+  evaluated: 1
+  total: 5
 - benchmark: Knowledge Graphs
   benchmark_slug: knowledge-graphs
   evaluated: 1
@@ -982,9 +987,9 @@ results:
 - &id002
   dataset: Roman-empire
   rows:
-  - model: topk
+  - model: GPS + Mamba
     model_key: dir-nt
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9477
     std: 0.0031
     metric: Accuracy
@@ -1016,9 +1021,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: GPS + Mamba
     model_key: dir-poly
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9451
     std: 0.0022
     metric: Accuracy
@@ -1050,9 +1055,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: topk
+  - model: GPS + Mamba
     model_key: largescalenet
-    model_plain: topk
+    model_plain: GPS + Mamba
     value: 0.9358
     std: 0.0024
     metric: Accuracy
@@ -1141,8 +1146,8 @@ results:
     value_note: ''
     sort_value: 0.1715
     sort_std: 0.0166
-    global_rank: 175
-    paper_rank: 175
+    global_rank: 212
+    paper_rank: 212
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1164,9 +1169,9 @@ results:
 - &id001
   dataset: Texas
   rows:
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -1197,9 +1202,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: dog
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -1208,9 +1213,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -1231,9 +1236,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: gpf-plus
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -1322,8 +1327,8 @@ results:
     value_note: ''
     sort_value: 0.4833
     sort_std: 0.0636
-    global_rank: 609
-    paper_rank: 609
+    global_rank: 626
+    paper_rank: 626
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1346,6 +1351,8 @@ results_grouped:
 - benchmark: Heterophilic Graphs
   datasets:
   - *id001
+- benchmark: Heterophily Benchmark
+  datasets:
   - *id002
 - benchmark: Knowledge Graphs
   datasets:
@@ -1359,6 +1366,9 @@ datasets_by_scope:
     datasets:
     - dataset: Texas
       dataset_slug: texas
+  - benchmark: Heterophily Benchmark
+    benchmark_slug: heterophily-benchmark
+    datasets:
     - dataset: Roman-empire
       dataset_slug: roman-empire
 - scope: edge-level
@@ -1370,5 +1380,6 @@ datasets_by_scope:
     - dataset: FB15k-237
       dataset_slug: fb15k-237
 single_proposed_model: LLMs
+main_figure: /figures/2603.00618/main_figure.jpegoptim.jpg
 ---
 

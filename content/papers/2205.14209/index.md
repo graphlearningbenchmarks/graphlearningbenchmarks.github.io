@@ -1801,5 +1801,6 @@ datasets_by_scope:
     - dataset: FB15k-237
       dataset_slug: fb15k-237
 single_proposed_model: StarGraph + TripleRE'
+main_figure: /figures/2205.14209/main_figure.jpegoptim.jpg
 ---
 

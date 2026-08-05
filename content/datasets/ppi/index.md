@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 121
-result_count: 290
+result_count: 295
 best_model:
   model: GAMLP(JK)
   value: 0.9982
@@ -146,6 +146,11 @@ papers:
   title: Search to aggregate neighborhood for graph neural network
   date_iso: '2021-04-01'
   venue: ''
+- arxiv_id: '2103.05872'
+  title: 'Sampling methods for efficient training of graph convolutional networks:
+    A survey'
+  date_iso: '2021-03-10'
+  venue: ''
 - arxiv_id: '2103.00959'
   title: 'CogDL: A Comprehensive Library for Graph Deep Learning'
   date_iso: '2021-03-01'
@@ -221,6 +226,10 @@ papers:
     Networks'
   date_iso: '2019-05-20'
   venue: KDD 2019
+- arxiv_id: '1901.00596'
+  title: A Comprehensive Survey on Graph Neural Networks
+  date_iso: '2019-01-01'
+  venue: ''
 - arxiv_id: '1812.04202'
   title: 'Deep Learning on Graphs: A Survey'
   date_iso: '2018-12-11'
@@ -342,7 +351,7 @@ variants:
     - null
     - null
   - model: GCNII
-    model_plain: GCNII*
+    model_plain: GCNII
     is_baseline: false
     is_overridden: false
     override_reason: ''
@@ -666,43 +675,6 @@ variants:
     - null
     - null
     - null
-  - model: Cluster-GCN
-    model_plain: Cluster-GCN
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1905.07953'
-    title: 'Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph
-      Convolutional Networks'
-    date: May 20, 2019
-    date_iso: '2019-05-20'
-    date_display: May 2019
-    codebase_url: https://github.com/google-research/google-research
-    published_conference: KDD 2019
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2019
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.9936
-    - null
-    - 0.9936
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
   - model: GCNII (GAS)
     model_plain: GCNII (GAS)
     is_baseline: true
@@ -734,6 +706,42 @@ variants:
     - null
     metric_stds:
     - 0.02
+    - null
+    - null
+    - null
+    - null
+    - null
+  - model: Cluster-GCN
+    model_plain: Cluster-GCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1901.00596'
+    title: A Comprehensive Survey on Graph Neural Networks
+    date: Jan 1, 2019
+    date_iso: '2019-01-01'
+    date_display: Jan 2019
+    codebase_url: https://github.com/Hanjun-Dai/steady_state_embedding
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9936
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
     - null
     - null
     - null
@@ -903,43 +911,6 @@ variants:
     published_conference_short: KDD
     published_conference_slug: kdd
     published_venue: KDD 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9879
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  - model: FreeKD (GAT/GAT)
-    model_plain: FreeKD (GAT/GAT)
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2307.00534'
-    title: Shared Growth of Graph Neural Networks via Prompted Free-direction Knowledge
-      Distillation
-    date: Jul 2, 2023
-    date_iso: '2023-07-02'
-    date_display: Jul 2023
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1900,6 +1871,42 @@ variants:
     - null
     - null
     - null
+  - model: GeniePath
+    model_plain: GeniePath
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1901.00596'
+    title: A Comprehensive Survey on Graph Neural Networks
+    date: Jan 1, 2019
+    date_iso: '2019-01-01'
+    date_display: Jan 2019
+    codebase_url: https://github.com/Hanjun-Dai/steady_state_embedding
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.979
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: LSP
     model_plain: LSP
     is_baseline: true
@@ -2009,6 +2016,42 @@ variants:
     - null
     - null
     - null
+  - model: StoGCN
+    model_plain: StoGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1901.00596'
+    title: A Comprehensive Survey on Graph Neural Networks
+    date: Jan 1, 2019
+    date_iso: '2019-01-01'
+    date_display: Jan 2019
+    codebase_url: https://github.com/Hanjun-Dai/steady_state_embedding
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.978
+    - null
+    - null
+    - null
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
   - model: FitNet
     model_plain: FitNet
     is_baseline: true
@@ -2045,56 +2088,20 @@ variants:
     - null
     - null
     - null
-  - model: GNN-SD
-    model_plain: GNN-SD
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2206.06561'
-    title: 'FreeKD: Free-direction Knowledge Distillation for Graph Neural Networks'
-    date: Jun 14, 2022
-    date_iso: '2022-06-14'
-    date_display: Jun 2022
-    codebase_url: ''
-    published_conference: KDD 2022
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.9773
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-  row_count: 290
+  row_count: 295
   rows_json: /data/datasets/ppi/standard-split-rows.json
   chart_json: /data/datasets/ppi/standard-split-chart.json
   arch_counts:
-    gnn: 197
-    hybrid: 57
+    gnn: 203
+    hybrid: 56
     graph_transformer: 1
     llm: 1
     walk: 6
     traditional: 13
   metric_counts:
-  - 233
+  - 238
   - 15
-  - 20
+  - 19
   - 2
   - 25
   - 9
@@ -2115,16 +2122,21 @@ variants:
   - value: 0.9936
     std: null
     model: Cluster-GCN
-    arxiv_id: '1905.07953'
-    title: 'Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph
-      Convolutional Networks'
-    date: '2019-05-20'
+    arxiv_id: '1901.00596'
+    title: A Comprehensive Survey on Graph Neural Networks
+    date: '2019-01-01'
   - value: 0.9943
     std: null
     model: DenseMRGCN-14
     arxiv_id: '1910.06849'
     title: 'DeepGCNs: Making GCNs Go as Deep as CNNs'
     date: '2019-10-15'
+  - value: 0.9956
+    std: 0.02
+    model: GCNII
+    arxiv_id: '2007.02133'
+    title: Simple and Deep Graph Convolutional Networks
+    date: '2020-07-04'
   - value: 0.996
     std: null
     model: GraphCON-GCN

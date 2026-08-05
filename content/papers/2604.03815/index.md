@@ -60,7 +60,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 - benchmark: City-Networks
   benchmark_slug: city-networks
   evaluated: 3
@@ -2318,5 +2318,6 @@ datasets_by_scope:
     - dataset: London
       dataset_slug: london
 single_proposed_model: GPS + k-MIP
+main_figure: /figures/2604.03815/main_figure.jpegoptim.jpg
 ---
 

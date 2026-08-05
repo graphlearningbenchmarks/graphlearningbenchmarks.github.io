@@ -479,7 +479,7 @@ type: dev
 | 2308.06827 | yes | 32 | done | Reinforcement Graph Clustering with Unknown Cluster Number |
 | 2311.14994 | yes | 32 | done | Exploring Causal Learning Through Graph Neural Networks: An In‐Depth Review |
 | 2402.05952 | yes | 32 | done | Advancing Graph Representation Learning with Large Language Models: A Comprehensive Survey of Techniques |
-| 2410.10365 | yes | 32 | processing | SpeGCL: Self-supervised Graph Spectrum Contrastive Learning without Positive Samples |
+| 2410.10365 | yes | 32 | done | SpeGCL: Self-supervised Graph Spectrum Contrastive Learning without Positive Samples |
 | 2504.12474 | yes | 32 | done | Integrating Structural and Semantic Signals in Text-Attributed Graphs with BiGTex |
 | 2603.21601 | yes | 32 | rejected | Riemannian Geometry Speaks Louder Than Words: From Graph Foundation Model to Next-Generation Graph Intelligence |
 | 1404.4679 | yes | 31 | done | Graph based anomaly detection and description: a survey |

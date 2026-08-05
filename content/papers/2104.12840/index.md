@@ -75,9 +75,9 @@ results:
 - &id001
   dataset: ACM
   rows:
-  - model: SAGE
+  - model: GCN+P+D
     model_key: signgt
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -109,9 +109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
+  - model: GCN+P+D
     model_key: nodeformer
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SAGE
+  - model: GCN+P+D
     model_key: fagcn
-    model_plain: SAGE
+    model_plain: GCN+P+D
     value: 0.9487
     std: 0.0059
     metric: Accuracy
@@ -172,40 +172,6 @@ results:
     global_rank: 3
     sort_value: 0.9487
     sort_std: 0.0059
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAGE
-    model_key: specformer
-    model_plain: SAGE
-    value: 0.9454
-    std: 0.0043
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2310.11025'
-    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
-      Learning'
-    date: Oct 17, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-17'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 4
-    sort_value: 0.9454
-    sort_std: 0.0043
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -247,8 +213,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-17'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-06-27'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -257,21 +223,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9315
-    true_std: 0.0022
-    value_gap_source_arxiv: '2310.11025'
-    value_gap_source_title: 'SignGT: Signed Attention-based Graph Transformer for
-      Graph Representation Learning'
+    true_value: 0.9324
+    true_std: 0.0049
+    value_gap_source_arxiv: '2406.19258'
+    value_gap_source_title: Leveraging Contrastive Learning for Enhanced Node Representations
+      in Tokenized Graph Transformers
     value_gap_source_is_current_paper: false
-    value_gap: 0.18010000000000004
+    value_gap: 0.18100000000000005
     has_value_note: false
     value_note: ''
-    sort_value: 0.9315
-    sort_std: 0.0022
-    global_rank: 20
-    paper_rank: 55
-    rank_delta: 35
-    rank_delta_abs: 35
+    sort_value: 0.9324
+    sort_std: 0.0049
+    global_rank: 29
+    paper_rank: 70
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -336,10 +302,10 @@ results:
     value_note: ''
     sort_value: 0.9233
     sort_std: 0.0038
-    global_rank: 24
-    paper_rank: 52
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 41
+    paper_rank: 67
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -404,8 +370,8 @@ results:
     value_note: ''
     sort_value: 0.7583
     sort_std: 0.004
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -472,8 +438,8 @@ results:
     value_note: ''
     sort_value: 0.7544
     sort_std: 0.001
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -540,8 +506,8 @@ results:
     value_note: ''
     sort_value: 0.7529
     sort_std: 0.002
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -608,8 +574,8 @@ results:
     value_note: ''
     sort_value: 0.7527
     sort_std: 0.001
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -676,8 +642,8 @@ results:
     value_note: ''
     sort_value: 0.7487
     sort_std: 0.003
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -744,8 +710,8 @@ results:
     value_note: ''
     sort_value: 0.7305
     sort_std: 0.006
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -777,5 +743,6 @@ datasets_by_scope:
     datasets:
     - dataset: ACM
       dataset_slug: acm
+main_figure: /figures/2104.12840/main_figure.jpegoptim.jpg
 ---
 

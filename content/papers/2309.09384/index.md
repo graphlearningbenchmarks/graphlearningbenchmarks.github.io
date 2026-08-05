@@ -56,7 +56,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 2
-  total: 13
+  total: 6
 - benchmark: LRGB
   benchmark_slug: lrgb
   evaluated: 2
@@ -71,10 +71,76 @@ results:
 - &id006
   dataset: COCO-SP
   rows:
-  - model: SAN+RWSE
-    model_key: graphgps + rwse
-    model_plain: SAN+RWSE
-    value: 0.3891
+  - model: CR-TAS
+    model_key: crawl
+    model_plain: CR-TAS
+    value: 0.4588
+    std: 0.0079
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.4588
+    sort_std: 0.0079
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: CR-TAS
+    model_key: gps
+    model_plain: CR-TAS
+    value: 0.444
+    std: 0.0065
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.444
+    sort_std: 0.0065
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CR-TAS
+    model_key: neuralwalker
+    model_plain: CR-TAS
+    value: 0.4398
     std: 0.0033
     metric: F1
     higher_is_better: true
@@ -82,93 +148,27 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.3891
-    sort_std: 0.0033
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: gps
-    model_plain: SAN+RWSE
-    value: 0.3884
-    std: 0.0055
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_display: May 2024
-    date_iso: '2024-05-20'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    arxiv_id: '2510.12111'
+    title: 'Chimera: State Space Models Beyond Sequences'
+    date: Oct 14, 2025
+    date_display: Oct 2025
+    date_iso: '2025-10-14'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/goombalab/chimera
     uses_external_data: false
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.3884
-    sort_std: 0.0055
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAN+RWSE
-    model_key: graphgps + rwdiff
-    model_plain: SAN+RWSE
-    value: 0.3873
-    std: 0.0024
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
     global_rank: 3
-    sort_value: 0.3873
-    sort_std: 0.0024
+    sort_value: 0.4398
+    sort_std: 0.0033
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: AFR-3
     model_key: afr-3
@@ -218,7 +218,7 @@ results:
     today_delta_significant: false
     sort_value: 0.101
     sort_std: 0.011
-    global_rank: 37
+    global_rank: 57
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -280,7 +280,7 @@ results:
     today_delta_significant: false
     sort_value: 0.101
     sort_std: 0.012
-    global_rank: 37
+    global_rank: 57
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -342,7 +342,7 @@ results:
     today_delta_significant: false
     sort_value: 0.098
     sort_std: 0.011
-    global_rank: 37
+    global_rank: 57
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -404,7 +404,7 @@ results:
     today_delta_significant: false
     sort_value: 0.093
     sort_std: 0.014
-    global_rank: 37
+    global_rank: 57
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -466,7 +466,7 @@ results:
     today_delta_significant: false
     sort_value: 0.085
     sort_std: 0.01
-    global_rank: 37
+    global_rank: 58
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -528,7 +528,7 @@ results:
     today_delta_significant: false
     sort_value: 0.078
     sort_std: 0.004
-    global_rank: 37
+    global_rank: 60
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -554,9 +554,9 @@ results:
 - &id004
   dataset: Cornell
   rows:
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -587,9 +587,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: acm-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.948
     std: 0.038
     metric: Accuracy
@@ -620,9 +620,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Kron
+  - model: R-SoftGraphAIN
     model_key: rf-gcn
-    model_plain: Kron
+    model_plain: R-SoftGraphAIN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -701,7 +701,7 @@ results:
     today_delta_significant: false
     sort_value: 0.519
     sort_std: 0.042
-    global_rank: 463
+    global_rank: 495
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -763,7 +763,7 @@ results:
     today_delta_significant: false
     sort_value: 0.505
     sort_std: 0.043
-    global_rank: 476
+    global_rank: 509
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -825,7 +825,7 @@ results:
     today_delta_significant: false
     sort_value: 0.489
     sort_std: 0.033
-    global_rank: 487
+    global_rank: 519
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -887,7 +887,7 @@ results:
     today_delta_significant: false
     sort_value: 0.484
     sort_std: 0.025
-    global_rank: 488
+    global_rank: 521
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -949,7 +949,7 @@ results:
     today_delta_significant: false
     sort_value: 0.481
     sort_std: 0.029
-    global_rank: 490
+    global_rank: 522
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1011,7 +1011,7 @@ results:
     today_delta_significant: false
     sort_value: 0.473
     sort_std: 0.023
-    global_rank: 492
+    global_rank: 524
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1073,7 +1073,7 @@ results:
     today_delta_significant: false
     sort_value: 0.468
     sort_std: 0.03
-    global_rank: 496
+    global_rank: 528
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1135,7 +1135,7 @@ results:
     today_delta_significant: false
     sort_value: 0.439
     sort_std: 0.011
-    global_rank: 514
+    global_rank: 548
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1197,7 +1197,7 @@ results:
     today_delta_significant: false
     sort_value: 0.431
     sort_std: 0.012
-    global_rank: 516
+    global_rank: 550
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1223,107 +1223,104 @@ results:
 - &id002
   dataset: ENZYMES
   rows:
-  - model: 3WLGNN
-    model_key: msa-aud
-    model_plain: 3WLGNN
-    value: 0.892
-    std: null
+  - model: WL
+    model_key: bgnn(m)-cs
+    model_plain: WL
+    value: 0.8068
+    std: 0.0149
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.892
-    sort_std: null
+    sort_value: 0.8068
+    sort_std: 0.0149
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-ad
-    model_plain: 3WLGNN
-    value: 0.89
-    std: null
+  - model: WL
+    model_key: bgnn
+    model_plain: WL
+    value: 0.7936
+    std: 0.0281
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.89
-    sort_std: null
+    sort_value: 0.7936
+    sort_std: 0.0281
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
-    model_key: msa-au
-    model_plain: 3WLGNN
-    value: 0.854
-    std: null
+  - model: WL
+    model_key: bgnn(m)-sc
+    model_plain: WL
+    value: 0.7889
+    std: 0.0079
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.10943'
-    title: Model Stealing Attack against Graph Classification with Authenticity, Uncertainty
-      and Diversity
-    date: Dec 18, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-18'
-    venue: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.05920'
+    title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
+    date: Oct 12, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-12'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.854
-    sort_std: null
+    sort_value: 0.7889
+    sort_std: 0.0079
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: FoSR
     model_key: fosr
@@ -1383,10 +1380,10 @@ results:
     value_note: ''
     sort_value: 0.4555
     sort_std: 0.01258
-    global_rank: 188
-    paper_rank: 263
-    rank_delta: 75
-    rank_delta_abs: 75
+    global_rank: 200
+    paper_rank: 288
+    rank_delta: 88
+    rank_delta_abs: 88
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1453,10 +1450,10 @@ results:
     value_note: ''
     sort_value: 0.39583
     sort_std: 0.01333
-    global_rank: 208
-    paper_rank: 264
-    rank_delta: 56
-    rank_delta_abs: 56
+    global_rank: 226
+    paper_rank: 289
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1523,10 +1520,10 @@ results:
     value_note: ''
     sort_value: 0.39017
     sort_std: 0.01166
-    global_rank: 209
-    paper_rank: 262
-    rank_delta: 53
-    rank_delta_abs: 53
+    global_rank: 227
+    paper_rank: 287
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1583,7 +1580,7 @@ results:
     today_delta_significant: false
     sort_value: 0.376
     sort_std: 0.012
-    global_rank: 218
+    global_rank: 239
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1595,6 +1592,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.319
+    std: 0.012
+    paper_value: 0.319
+    paper_std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 17, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.355
+    at_pub_std: 0.012
+    at_pub_source_arxiv: '2211.15779'
+    at_pub_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2022-11-28'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: 0.035999999999999976
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.355
+    true_std: 0.012
+    value_gap_source_arxiv: '2211.15779'
+    value_gap_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.035999999999999976
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.355
+    sort_std: 0.012
+    global_rank: 243
+    paper_rank: 256
+    rank_delta: 13
+    rank_delta_abs: 13
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    comparison_source_arxiv: '2211.15779'
     is_best: false
     is_std_outlier: false
   - model: AFR-4
@@ -1645,7 +1712,7 @@ results:
     today_delta_significant: false
     sort_value: 0.321
     sort_std: 0.014
-    global_rank: 231
+    global_rank: 256
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1654,74 +1721,6 @@ results:
     rank_delta: null
     rank_delta_abs: null
     rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: BORF
-    model_key: borf
-    model_plain: BORF
-    value: 0.319
-    std: 0.012
-    paper_value: 0.319
-    paper_std: 0.012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 17, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-06-19'
-    value_gap_source_date_label: ICML 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.314
-    true_std: 0.015
-    value_gap_source_arxiv: '2506.16110'
-    value_gap_source_title: Mitigating Over-Squashing in Graph Neural Networks by
-      Spectrum-Preserving Sparsification
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0050000000000000044
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.314
-    sort_std: 0.015
-    global_rank: 232
-    paper_rank: 232
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1739,9 +1738,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1772,9 +1771,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1805,9 +1804,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -1837,216 +1836,6 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: FoSR
-    model_key: fosr
-    model_plain: FoSR
-    value: 0.7
-    std: 0.022
-    paper_value: 0.7
-    paper_std: 0.022
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 17, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8615
-    at_pub_std: 0.01492
-    at_pub_source_arxiv: '2210.11790'
-    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
-      in GNNs'
-    at_pub_source_date_iso: '2022-10-21'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-21'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: 0.1615000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8615
-    true_std: 0.01492
-    value_gap_source_arxiv: '2210.11790'
-    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
-      in GNNs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.1615000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8615
-    sort_std: 0.01492
-    global_rank: 375
-    paper_rank: 720
-    rank_delta: 345
-    rank_delta_abs: 345
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
-      in GNNs'
-    comparison_source_arxiv: '2210.11790'
-    is_best: false
-    is_std_outlier: false
-  - model: None
-    model_key: none
-    model_plain: None
-    value: 0.627
-    std: 0.021
-    paper_value: 0.627
-    paper_std: 0.021
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 17, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8305
-    at_pub_std: 0.01439
-    at_pub_source_arxiv: '2210.11790'
-    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
-      in GNNs'
-    at_pub_source_date_iso: '2022-10-21'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-21'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: 0.20350000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8305
-    true_std: 0.01439
-    value_gap_source_arxiv: '2210.11790'
-    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
-      in GNNs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.20350000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8305
-    sort_std: 0.01439
-    global_rank: 493
-    paper_rank: 742
-    rank_delta: 249
-    rank_delta_abs: 249
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
-      in GNNs'
-    comparison_source_arxiv: '2210.11790'
-    is_best: false
-    is_std_outlier: false
-  - model: SDRF
-    model_key: sdrf
-    model_plain: SDRF
-    value: 0.651
-    std: 0.022
-    paper_value: 0.651
-    paper_std: 0.022
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 17, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.827
-    at_pub_std: 0.01782
-    at_pub_source_arxiv: '2210.11790'
-    at_pub_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
-      in GNNs'
-    at_pub_source_date_iso: '2022-10-21'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-21'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: 0.17599999999999993
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.827
-    true_std: 0.01782
-    value_gap_source_arxiv: '2210.11790'
-    value_gap_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
-      in GNNs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.17599999999999993
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.827
-    sort_std: 0.01782
-    global_rank: 509
-    paper_rank: 740
-    rank_delta: 231
-    rank_delta_abs: 231
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'FoSR: First-order Spectral Rewiring for addressing Oversquashing
-      in GNNs'
-    comparison_source_arxiv: '2210.11790'
     is_best: false
     is_std_outlier: false
   - model: BORF
@@ -2079,21 +1868,22 @@ results:
     date_iso: '2023-09-17'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.808
+    at_pub_std: 0.025
+    at_pub_source_arxiv: '2211.15779'
+    at_pub_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: ICML 2022
     value_gap_source_date_iso: '2023-10-02'
     value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    gap_vs_at_pub: 0.05400000000000005
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.81684
     true_std: 0.07964
@@ -2105,15 +1895,226 @@ results:
     value_note: ''
     sort_value: 0.81684
     sort_std: 0.07964
-    global_rank: 551
-    paper_rank: 667
-    rank_delta: 116
-    rank_delta_abs: 116
+    global_rank: 583
+    paper_rank: 711
+    rank_delta: 128
+    rank_delta_abs: 128
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    comparison_source_arxiv: '2211.15779'
+    is_best: false
+    is_std_outlier: false
+  - model: FoSR
+    model_key: fosr
+    model_plain: FoSR
+    value: 0.7
+    std: 0.022
+    paper_value: 0.7
+    paper_std: 0.022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 17, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.756
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '2211.15779'
+    at_pub_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2025-08-28'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.05600000000000005
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.804
+    true_std: 0.0243
+    value_gap_source_arxiv: '2508.20597'
+    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
+      Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10400000000000009
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.804
+    sort_std: 0.0243
+    global_rank: 613
+    paper_rank: 765
+    rank_delta: 152
+    rank_delta_abs: 152
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    comparison_source_arxiv: '2211.15779'
+    is_best: false
+    is_std_outlier: false
+  - model: SDRF
+    model_key: sdrf
+    model_plain: SDRF
+    value: 0.651
+    std: 0.022
+    paper_value: 0.651
+    paper_std: 0.022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 17, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.773
+    at_pub_std: 0.023
+    at_pub_source_arxiv: '2211.15779'
+    at_pub_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2025-06-19'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.122
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.795
+    true_std: 0.026
+    value_gap_source_arxiv: '2506.16110'
+    value_gap_source_title: Mitigating Over-Squashing in Graph Neural Networks by
+      Spectrum-Preserving Sparsification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.14400000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.795
+    sort_std: 0.026
+    global_rank: 642
+    paper_rank: 786
+    rank_delta: 144
+    rank_delta_abs: 144
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    comparison_source_arxiv: '2211.15779'
+    is_best: false
+    is_std_outlier: false
+  - model: None
+    model_key: none
+    model_plain: None
+    value: 0.627
+    std: 0.021
+    paper_value: 0.627
+    paper_std: 0.021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 17, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.755
+    at_pub_std: 0.029
+    at_pub_source_arxiv: '2211.15779'
+    at_pub_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2025-06-19'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.128
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.761
+    true_std: 0.031
+    value_gap_source_arxiv: '2506.16110'
+    value_gap_source_title: Mitigating Over-Squashing in Graph Neural Networks by
+      Spectrum-Preserving Sparsification
+    value_gap_source_is_current_paper: false
+    value_gap: 0.134
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.761
+    sort_std: 0.031
+    global_rank: 700
+    paper_rank: 788
+    rank_delta: 88
+    rank_delta_abs: 88
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    comparison_source_arxiv: '2211.15779'
     is_best: false
     is_std_outlier: false
   - model: AFR-4
@@ -2164,7 +2165,7 @@ results:
     today_delta_significant: false
     sort_value: 0.734
     sort_std: 0.024
-    global_rank: 698
+    global_rank: 744
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2226,7 +2227,7 @@ results:
     today_delta_significant: false
     sort_value: 0.714
     sort_std: 0.022
-    global_rank: 716
+    global_rank: 761
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2549,9 +2550,9 @@ results:
 - &id003
   dataset: Texas
   rows:
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: p^2gnn
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -2582,9 +2583,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: dog
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -2593,9 +2594,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2503.12563'
     title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     date: Mar 16, 2025
@@ -2616,9 +2617,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DoG
+  - model: R-SoftGraphAIN
     model_key: gpf-plus
-    model_plain: DoG
+    model_plain: R-SoftGraphAIN
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -2697,7 +2698,7 @@ results:
     today_delta_significant: false
     sort_value: 0.687
     sort_std: 0.031
-    global_rank: 412
+    global_rank: 434
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2759,7 +2760,7 @@ results:
     today_delta_significant: false
     sort_value: 0.638
     sort_std: 0.038
-    global_rank: 467
+    global_rank: 493
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2768,6 +2769,75 @@ results:
     rank_delta: null
     rank_delta_abs: null
     rank_delta_direction: null
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BORF
+    model_key: borf
+    model_plain: BORF
+    value: 0.623
+    std: 0.02
+    paper_value: 0.623
+    paper_std: 0.02
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 17, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.631
+    at_pub_std: 0.017
+    at_pub_source_arxiv: '2211.15779'
+    at_pub_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    at_pub_source_date_iso: '2022-11-28'
+    at_pub_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2022-11-28'
+    value_gap_source_date_label: ICML 2022
+    gap_vs_at_pub: 0.008000000000000007
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.631
+    true_std: 0.017
+    value_gap_source_arxiv: '2211.15779'
+    value_gap_source_title: Revisiting Over-smoothing and Over-squashing using Ollivier's
+      Ricci Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.008000000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.631
+    sort_std: 0.017
+    global_rank: 498
+    paper_rank: 506
+    rank_delta: 8
+    rank_delta_abs: 8
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2821,7 +2891,7 @@ results:
     today_delta_significant: false
     sort_value: 0.514
     sort_std: 0.005
-    global_rank: 595
+    global_rank: 612
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2830,74 +2900,6 @@ results:
     rank_delta: null
     rank_delta_abs: null
     rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: BORF
-    model_key: borf
-    model_plain: BORF
-    value: 0.623
-    std: 0.02
-    paper_value: 0.623
-    paper_std: 0.02
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 17, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-08-28'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.4995
-    true_std: 0.0143
-    value_gap_source_arxiv: '2508.20597'
-    value_gap_source_title: Local Virtual Nodes for Alleviating Over-Squashing in
-      Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.1235
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4995
-    sort_std: 0.0143
-    global_rank: 599
-    paper_rank: 479
-    rank_delta: -120
-    rank_delta_abs: 120
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2951,7 +2953,7 @@ results:
     today_delta_significant: false
     sort_value: 0.497
     sort_std: 0.005
-    global_rank: 602
+    global_rank: 619
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3013,7 +3015,7 @@ results:
     today_delta_significant: false
     sort_value: 0.489
     sort_std: 0.005
-    global_rank: 604
+    global_rank: 621
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3075,7 +3077,7 @@ results:
     today_delta_significant: false
     sort_value: 0.469
     sort_std: 0.012
-    global_rank: 612
+    global_rank: 629
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3137,7 +3139,7 @@ results:
     today_delta_significant: false
     sort_value: 0.441
     sort_std: 0.005
-    global_rank: 617
+    global_rank: 634
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -3199,7 +3201,7 @@ results:
     today_delta_significant: false
     sort_value: 0.436
     sort_std: 0.012
-    global_rank: 617
+    global_rank: 634
     has_value_gap: false
     has_value_note: false
     value_gap: null

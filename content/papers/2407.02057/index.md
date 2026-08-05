@@ -789,5 +789,6 @@ datasets_by_scope:
     - dataset: ENZYMES
       dataset_slug: enzymes
 single_proposed_model: HC-GLAD
+main_figure: /figures/2407.02057/main_figure.jpegoptim.jpg
 ---
 

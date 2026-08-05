@@ -77,9 +77,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: 501.0
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
     uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
@@ -456,9 +456,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: 501.0
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
     uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
@@ -737,5 +737,6 @@ datasets_by_scope:
       dataset_slug: ogbl-wikikg2
     - dataset: ogbl-biokg
       dataset_slug: ogbl-biokg
+main_figure: /figures/2204.13957/main_figure.jpegoptim.jpg
 ---
 

@@ -13,7 +13,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 2
-result_count: 146
+result_count: 165
 best_model:
   model: DeepGraph (48)
   value: 0.90657
@@ -34,6 +34,14 @@ papers:
   title: 'DARTS-GT: Differentiable Architecture Search for Graph Transformers with
     Quantifiable Instance-Specific Interpretability Analysis'
   date_iso: '2025-10-16'
+  venue: ''
+- arxiv_id: '2508.05070'
+  title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+  date_iso: '2025-08-07'
+  venue: ''
+- arxiv_id: '2504.12588'
+  title: Plain Transformers Can be Powerful Graph Learners
+  date_iso: '2025-04-17'
   venue: ''
 - arxiv_id: '2411.12732'
   title: Benchmarking Positional Encodings for GNNs and Graph Transformers
@@ -56,6 +64,14 @@ papers:
   title: Contextualized Messages Boost Graph Representations
   date_iso: '2024-03-19'
   venue: TMLR 2024
+- arxiv_id: '2402.08678'
+  title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+  date_iso: '2024-02-13'
+  venue: KDD 2024
+- arxiv_id: '2312.01538'
+  title: Recurrent Distance Filtering for Graph Representation Learning
+  date_iso: '2023-12-03'
+  venue: ICML 2023
 - arxiv_id: '2310.20519'
   title: Enhancing Graph Neural Networks with Quantum Computed Encodings
   date_iso: '2023-10-31'
@@ -80,6 +96,10 @@ papers:
   title: Recipe for a General, Powerful, Scalable Graph Transformer
   date_iso: '2022-05-25'
   venue: NeurIPS 2022
+- arxiv_id: '2202.03036'
+  title: Structure-Aware Transformer for Graph Representation Learning
+  date_iso: '2022-02-07'
+  venue: ICML 2022
 - arxiv_id: '2201.12674'
   title: Rewiring with Positional Encodings for Graph Neural Networks
   date_iso: '2022-01-29'
@@ -223,8 +243,38 @@ variants:
     - 0.00446
     - null
     - null
-  - model: GRIT
-    model_plain: GRIT
+  - model: PPGT
+    model_plain: PPGT
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_iso: '2025-04-17'
+    date_display: Apr 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.89752
+    - null
+    - null
+    metric_stds:
+    - 0.0003
+    - null
+    - null
+  - model: CKGCN
+    model_plain: CKGCN
     is_baseline: true
     is_overridden: false
     override_reason: ''
@@ -232,25 +282,25 @@ variants:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
+    arxiv_id: '2504.12588'
+    title: Plain Transformers Can be Powerful Graph Learners
+    date: Apr 17, 2025
+    date_iso: '2025-04-17'
+    date_display: Apr 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
     uses_external_data: false
     is_best: false
     is_std_outlier: false
     metric_values:
-    - 0.8722
+    - 0.88661
     - null
     - null
     metric_stds:
-    - 0.0003
+    - 0.00143
     - null
     - null
   - model: GRIT 1-CQRW
@@ -283,6 +333,66 @@ variants:
     - 0.0004
     - null
     - null
+  - model: GRIT
+    model_plain: GRIT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.01538'
+    title: Recurrent Distance Filtering for Graph Representation Learning
+    date: Dec 3, 2023
+    date_iso: '2023-12-03'
+    date_display: Dec 2023
+    codebase_url: https://github.com/skeletondyh/GRED
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.87196
+    - null
+    - null
+    metric_stds:
+    - 0.00076
+    - null
+    - null
+  - model: Tango_GPS
+    model_plain: Tango_GPS
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    date: Aug 7, 2025
+    date_iso: '2025-08-07'
+    date_display: Aug 2025
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.87182
+    - null
+    - null
+    metric_stds:
+    - 0.00063
+    - null
+    - null
   - model: SparseGRIT
     model_plain: SparseGRIT
     is_baseline: true
@@ -311,6 +421,36 @@ variants:
     - null
     metric_stds:
     - 0.0004
+    - null
+    - null
+  - model: GMN
+    model_plain: GMN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8714
+    - null
+    - null
+    metric_stds:
+    - 0.0012
     - null
     - null
   - model: SparseGRIT + RWSE
@@ -434,6 +574,36 @@ variants:
     - 0.0001
     - null
     - null
+  - model: S4G
+    model_plain: S4G
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8687
+    - null
+    - null
+    metric_stds:
+    - 0.0002
+    - null
+    - null
   - model: GraphGPS + RWSE
     model_plain: GraphGPS + RWSE
     is_baseline: true
@@ -483,6 +653,36 @@ variants:
     published_conference_short: ICLR
     published_conference_slug: iclr
     published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.86865
+    - null
+    - null
+    metric_stds:
+    - 0.00043
+    - null
+    - null
+  - model: K-Subtree SAT
+    model_plain: K-Subtree SAT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -594,46 +794,16 @@ variants:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2205.12454'
-    title: Recipe for a General, Powerful, Scalable Graph Transformer
-    date: May 25, 2022
-    date_iso: '2022-05-25'
-    date_display: May 2022
-    codebase_url: https://github.com/rampasek/GraphGPS
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.86848
-    - null
-    - null
-    metric_stds:
-    - 0.00037
-    - null
-    - null
-  - model: K-Subtree SAT
-    model_plain: K-Subtree SAT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2405.19779'
-    title: Automatic Graph Topology-Aware Transformer
-    date: May 30, 2024
-    date_iso: '2024-05-30'
-    date_display: May 2024
-    codebase_url: https://github.com/xiaofangxd/EGTAS
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: Feb 7, 2022
+    date_iso: '2022-02-07'
+    date_display: Feb 2022
+    codebase_url: https://github.com/BorgwardtLab/SAT
+    published_conference: ICML 2022
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2022
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -975,6 +1145,36 @@ variants:
     - null
     metric_stds:
     - 0.00043
+    - null
+    - null
+  - model: GRED
+    model_plain: GRED
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.01538'
+    title: Recurrent Distance Filtering for Graph Representation Learning
+    date: Dec 3, 2023
+    date_iso: '2023-12-03'
+    date_display: Dec 2023
+    codebase_url: https://github.com/skeletondyh/GRED
+    published_conference: ICML 2023
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.86759
+    - null
+    - null
+    metric_stds:
+    - 0.0002
     - null
     - null
   - model: GatedGCN + GCKN
@@ -1398,6 +1598,36 @@ variants:
     - 0.00055
     - null
     - null
+  - model: Exphormer
+    model_plain: Exphormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_iso: '2024-02-13'
+    date_display: Feb 2024
+    codebase_url: ''
+    published_conference: KDD 2024
+    published_conference_short: KDD
+    published_conference_slug: kdd
+    published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.867
+    - null
+    - null
+    metric_stds:
+    - 0.0003
+    - null
+    - null
   - model: GPS-PCL
     model_plain: GPS-PCL
     is_baseline: true
@@ -1429,228 +1659,18 @@ variants:
     - 0.00073
     - null
     - null
-  - model: GINE+RWSE
-    model_plain: GINE+RWSE
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.86688
-    - null
-    - null
-    metric_stds:
-    - 0.00084
-    - null
-    - null
-  - model: GPS
-    model_plain: GPS
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.424
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2305.11424'
-    title: IJCAI--23 Formatting Instructions
-    date: May 19, 2023
-    date_iso: '2023-05-19'
-    date_display: May 2023
-    codebase_url: https://github.com/czczup/GPTrans
-    published_conference: IJCAI 2023
-    published_conference_short: IJCAI
-    published_conference_slug: ijcai
-    published_venue: IJCAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.86685
-    - null
-    - null
-    metric_stds:
-    - 0.00059
-    - null
-    - null
-  - model: GTs
-    model_plain: GTs
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2205.12454'
-    title: Recipe for a General, Powerful, Scalable Graph Transformer
-    date: May 25, 2022
-    date_iso: '2022-05-25'
-    date_display: May 2022
-    codebase_url: https://github.com/rampasek/GraphGPS
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.86685
-    - null
-    - null
-    metric_stds:
-    - 0.00059
-    - null
-    - null
-  - model: DGN
-    model_plain: DGN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2205.12454'
-    title: Recipe for a General, Powerful, Scalable Graph Transformer
-    date: May 25, 2022
-    date_iso: '2022-05-25'
-    date_display: May 2022
-    codebase_url: https://github.com/rampasek/GraphGPS
-    published_conference: NeurIPS 2022
-    published_conference_short: NeurIPS
-    published_conference_slug: neurips
-    published_venue: NeurIPS 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8668
-    - null
-    - null
-    metric_stds:
-    - 0.00034
-    - null
-    - null
-  - model: TIGT
-    model_plain: TIGT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_iso: '2024-11-19'
-    date_display: Nov 2024
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8668
-    - null
-    - null
-    metric_stds:
-    - 0.0006
-    - null
-    - null
-  - model: Graphormer-Slim
-    model_plain: Graphormer-Slim
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.489
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2305.11424'
-    title: IJCAI--23 Formatting Instructions
-    date: May 19, 2023
-    date_iso: '2023-05-19'
-    date_display: May 2023
-    codebase_url: https://github.com/czczup/GPTrans
-    published_conference: IJCAI 2023
-    published_conference_short: IJCAI
-    published_conference_slug: ijcai
-    published_venue: IJCAI 2023
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8665
-    - null
-    - null
-    metric_stds:
-    - 0.00033
-    - null
-    - null
-  - model: GCN-3-TOGL-1
-    model_plain: GCN-3-TOGL-1
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2102.07835'
-    title: Topological Graph Neural Networks
-    date: Feb 15, 2021
-    date_iso: '2021-02-15'
-    date_display: Feb 2021
-    codebase_url: https://github.com/BorgwardtLab/TOGL
-    published_conference: ICLR 2021
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2021
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.866
-    - null
-    - null
-    metric_stds:
-    - 0.001
-    - null
-    - null
-  row_count: 146
+  row_count: 165
   rows_json: /data/datasets/pattern/standard-split-rows.json
   chart_json: /data/datasets/pattern/standard-split-chart.json
   arch_counts:
-    gnn: 60
-    hybrid: 35
-    graph_transformer: 37
+    gnn: 67
+    hybrid: 40
+    graph_transformer: 42
     llm: 0
     walk: 0
     traditional: 11
   metric_counts:
-  - 125
+  - 144
   - 10
   - 11
   milestones: &id001
@@ -1678,6 +1698,12 @@ variants:
     arxiv_id: '2201.12674'
     title: Rewiring with Positional Encodings for Graph Neural Networks
     date: '2022-01-29'
+  - value: 0.86865
+    std: 0.00043
+    model: K-Subtree SAT
+    arxiv_id: '2202.03036'
+    title: Structure-Aware Transformer for Graph Representation Learning
+    date: '2022-02-07'
   - value: 0.90657
     std: 0.00062
     model: DeepGraph (48)

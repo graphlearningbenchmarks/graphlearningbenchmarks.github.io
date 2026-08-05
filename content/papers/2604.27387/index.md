@@ -55,7 +55,7 @@ benchmark_coverage:
 - benchmark: LINKX Benchmarks
   benchmark_slug: linkx-benchmarks
   evaluated: 1
-  total: 5
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -64,9 +64,9 @@ results:
 - &id002
   dataset: Pokec
   rows:
-  - model: VecFormer
+  - model: FMP
     model_key: polynormer-r
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.861
     std: 0.0005
     metric: Accuracy
@@ -97,9 +97,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: VecFormer
+  - model: FMP
     model_key: polynormer
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.8595
     std: 0.0007
     metric: Accuracy
@@ -130,9 +130,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: VecFormer
+  - model: FMP
     model_key: moe-h2gcn
-    model_plain: VecFormer
+    model_plain: FMP
     value: 0.8302
     std: 0.003
     metric: Accuracy
@@ -222,9 +222,9 @@ results:
     sort_value: 0.8204
     sort_std: 0.0007
     global_rank: 7
-    paper_rank: 47
-    rank_delta: 40
-    rank_delta_abs: 40
+    paper_rank: 49
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -292,9 +292,9 @@ results:
     sort_value: 0.7659
     sort_std: 0.0025
     global_rank: 22
-    paper_rank: 47
-    rank_delta: 25
-    rank_delta_abs: 25
+    paper_rank: 49
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -360,9 +360,9 @@ results:
     sort_value: 0.7601
     sort_std: 0.0049
     global_rank: 25
-    paper_rank: 47
-    rank_delta: 22
-    rank_delta_abs: 22
+    paper_rank: 49
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -427,9 +427,9 @@ results:
     sort_value: 0.7576
     sort_std: 0.0004
     global_rank: 26
-    paper_rank: 47
-    rank_delta: 21
-    rank_delta_abs: 21
+    paper_rank: 49
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -496,15 +496,85 @@ results:
     sort_value: 0.7223
     sort_std: 0.0018
     global_rank: 31
-    paper_rank: 47
-    rank_delta: 16
-    rank_delta_abs: 16
+    paper_rank: 49
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer
       in Linear Time'
     comparison_source_arxiv: '2403.01232'
+    is_best: false
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.2727
+    std: 0.0147
+    paper_value: 0.2727
+    paper_std: 0.0147
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to pokec (score=83)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6691
+    at_pub_std: 0.0146
+    at_pub_source_arxiv: '2202.04187'
+    at_pub_source_title: 'FMP: Toward Fair Graph Message Passing against Topology
+      Bias'
+    at_pub_source_date_iso: '2022-02-08'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-02-08'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.39640000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6691
+    true_std: 0.0146
+    value_gap_source_arxiv: '2202.04187'
+    value_gap_source_title: 'FMP: Toward Fair Graph Message Passing against Topology
+      Bias'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.39640000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6691
+    sort_std: 0.0146
+    global_rank: 37
+    paper_rank: 49
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FMP: Toward Fair Graph Message Passing against Topology
+      Bias'
+    comparison_source_arxiv: '2202.04187'
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -563,10 +633,10 @@ results:
     value_note: ''
     sort_value: 0.5337
     sort_std: 0.0215
-    global_rank: 45
-    paper_rank: 47
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 48
+    paper_rank: 49
+    rank_delta: 1
+    rank_delta_abs: 1
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -622,7 +692,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3305
     sort_std: 0.0057
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -684,7 +754,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3166
     sort_std: 0.0086
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -746,7 +816,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3144
     sort_std: 0.0096
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -808,7 +878,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3114
     sort_std: 0.0059
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -870,7 +940,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3101
     sort_std: 0.0026
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -932,7 +1002,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3089
     sort_std: 0.008
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -994,7 +1064,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3013
     sort_std: 0.0086
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1056,7 +1126,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2985
     sort_std: 0.0047
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1118,7 +1188,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2909
     sort_std: 0.0033
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1180,69 +1250,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2867
     sort_std: 0.0019
-    global_rank: 48
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: APPNP
-    model_key: appnp
-    model_plain: APPNP
-    value: 0.2727
-    std: 0.0147
-    paper_value: 0.2727
-    paper_std: 0.0147
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to pokec (score=83)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.2727
-    sort_std: 0.0147
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1304,7 +1312,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2315
     sort_std: 0.0043
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1366,7 +1374,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2209
     sort_std: 0.0094
-    global_rank: 48
+    global_rank: 50
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1796,10 +1804,10 @@ results:
     value_note: ''
     sort_value: 0.4927
     sort_std: 0.0061
-    global_rank: 33
+    global_rank: 34
     paper_rank: 31
-    rank_delta: -2
-    rank_delta_abs: 2
+    rank_delta: -3
+    rank_delta_abs: 3
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
@@ -1855,7 +1863,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4921
     sort_std: 0.0038
-    global_rank: 34
+    global_rank: 35
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1917,7 +1925,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4699
     sort_std: 0.0041
-    global_rank: 38
+    global_rank: 40
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1989,8 +1997,8 @@ results:
     value_note: ''
     sort_value: 0.4678
     sort_std: 0.0067
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2049,7 +2057,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4607
     sort_std: 0.004
-    global_rank: 39
+    global_rank: 41
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2111,7 +2119,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4339
     sort_std: 0.0028
-    global_rank: 39
+    global_rank: 41
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2173,7 +2181,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4247
     sort_std: 0.0074
-    global_rank: 39
+    global_rank: 41
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2235,7 +2243,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4151
     sort_std: 0.0047
-    global_rank: 39
+    global_rank: 41
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2297,7 +2305,7 @@ results:
     today_delta_significant: false
     sort_value: 0.4083
     sort_std: 0.0018
-    global_rank: 39
+    global_rank: 41
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2367,8 +2375,8 @@ results:
     value_note: ''
     sort_value: 0.3977
     sort_std: 0.0046
-    global_rank: 39
-    paper_rank: 38
+    global_rank: 41
+    paper_rank: 40
     rank_delta: -1
     rank_delta_abs: 1
     rank_delta_direction: better
@@ -2426,7 +2434,7 @@ results:
     today_delta_significant: false
     sort_value: 0.39
     sort_std: 0.0022
-    global_rank: 40
+    global_rank: 42
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2498,10 +2506,10 @@ results:
     value_note: ''
     sort_value: 0.3767
     sort_std: null
-    global_rank: 40
-    paper_rank: 34
-    rank_delta: -6
-    rank_delta_abs: 6
+    global_rank: 42
+    paper_rank: 35
+    rank_delta: -7
+    rank_delta_abs: 7
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -2558,7 +2566,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3764
     sort_std: 0.0031
-    global_rank: 41
+    global_rank: 43
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2620,7 +2628,7 @@ results:
     today_delta_significant: false
     sort_value: 0.3732
     sort_std: 0.0033
-    global_rank: 41
+    global_rank: 43
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -2692,10 +2700,10 @@ results:
     value_note: ''
     sort_value: 0.3487
     sort_std: null
-    global_rank: 45
-    paper_rank: 39
-    rank_delta: -6
-    rank_delta_abs: 6
+    global_rank: 46
+    paper_rank: 41
+    rank_delta: -5
+    rank_delta_abs: 5
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
@@ -2735,5 +2743,6 @@ datasets_by_scope:
     - dataset: Pokec
       dataset_slug: pokec
 single_proposed_model: HGUL
+main_figure: /figures/2604.27387/main_figure.jpegoptim.jpg
 ---
 

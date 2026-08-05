@@ -12,7 +12,7 @@ stats:
   avg_nodes: 41554.0
   avg_edges: 1362229.0
   num_classes: 2
-result_count: 114
+result_count: 106
 best_model:
   model: ChebNet2D
   value: 0.8762
@@ -28,11 +28,6 @@ papers:
   title: Learning Laplacian Positional Encodings for Heterophilous Graphs
   date_iso: '2025-04-29'
   venue: ''
-- arxiv_id: '2502.02017'
-  title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology
-    Alignment'
-  date_iso: '2025-02-04'
-  venue: ICML 2025
 - arxiv_id: '2411.17296'
   title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
   date_iso: '2024-11-26'
@@ -142,7 +137,7 @@ variants:
     date: Apr 6, 2024
     date_iso: '2024-04-06'
     date_display: Apr 2024
-    codebase_url: ''
+    codebase_url: https://github.com/jianhao2016/GPRGNN
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
@@ -259,32 +254,6 @@ variants:
     - 0.8519
     metric_stds:
     - 0.003
-  - model: JacobiConv
-    model_plain: JacobiConv
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2404.04559'
-    title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    date: Apr 6, 2024
-    date_iso: '2024-04-06'
-    date_display: Apr 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8518
-    metric_stds:
-    - 0.005
   - model: AdaptKry
     model_plain: AdaptKry
     is_baseline: false
@@ -430,7 +399,7 @@ variants:
     date: Apr 6, 2024
     date_iso: '2024-04-06'
     date_display: Apr 2024
-    codebase_url: ''
+    codebase_url: https://github.com/jianhao2016/GPRGNN
     published_conference: ''
     published_conference_short: ''
     published_conference_slug: ''
@@ -625,32 +594,6 @@ variants:
     - 0.8446
     metric_stds:
     - 0.0033
-  - model: Spec-GN
-    model_plain: Spec-GN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2404.04559'
-    title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
-    date: Apr 6, 2024
-    date_iso: '2024-04-06'
-    date_display: Apr 2024
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.8443
-    metric_stds:
-    - 0.004
   - model: Specformer
     model_plain: Specformer
     is_baseline: true
@@ -702,6 +645,32 @@ variants:
     is_std_outlier: false
     metric_values:
     - 0.8418
+    metric_stds:
+    - 0.003
+  - model: NodeFormer
+    model_plain: NodeFormer
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2404.04559'
+    title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
+    date: Apr 6, 2024
+    date_iso: '2024-04-06'
+    date_display: Apr 2024
+    codebase_url: https://github.com/jianhao2016/GPRGNN
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8371
     metric_stds:
     - 0.003
   - model: Ord. GNN
@@ -1436,18 +1405,44 @@ variants:
     - 0.8138
     metric_stds:
     - 0.0016
-  row_count: 114
+  - model: GPR-GNN
+    model_plain: GPR-GNN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.05185'
+    title: Mixture of Weak & Strong Experts on Graphs
+    date: Nov 9, 2023
+    date_iso: '2023-11-09'
+    date_display: Nov 2023
+    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
+    published_conference: ICLR 2023
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2023
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8138
+    metric_stds:
+    - 0.0016
+  row_count: 106
   rows_json: /data/datasets/penn94/standard-split-rows.json
   chart_json: /data/datasets/penn94/standard-split-chart.json
   arch_counts:
-    gnn: 86
-    hybrid: 15
-    graph_transformer: 7
-    llm: 1
+    gnn: 79
+    hybrid: 14
+    graph_transformer: 8
+    llm: 0
     walk: 3
     traditional: 2
   metric_counts:
-  - 114
+  - 106
   milestones: &id001
   - value: 0.8486
     std: 0.0033
@@ -1467,12 +1462,12 @@ variants:
     arxiv_id: '2312.14438'
     title: 'PC-Conv: Unifying Homophily and Heterophily with Two-fold Filtering'
     date: '2023-12-22'
-  - value: 0.8669
-    std: 0.0022
-    model: DC-GNN
-    arxiv_id: '2405.16185'
-    title: Differentiable Cluster Graph Neural Network
-    date: '2024-05-25'
+  - value: 0.8762
+    std: 0.002
+    model: ChebNet2D
+    arxiv_id: '2404.04559'
+    title: Spectral GNN via Two-dimensional (2-D) Graph Convolution
+    date: '2024-04-06'
   milestones_by_metric:
     Accuracy: *id001
 ---

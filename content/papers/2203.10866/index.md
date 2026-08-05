@@ -56,7 +56,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 2
-  total: 13
+  total: 6
 - benchmark: Heterogeneous Graph Benchmarks
   benchmark_slug: heterogeneous-graph-benchmarks
   evaluated: 1
@@ -70,9 +70,51 @@ results:
   dataset: Actor
   is_multi_metric: true
   rows:
-  - model: CoCN
+  - model: R-SoftGraphAIN
+    model_key: nodeformer
+    model_plain: R-SoftGraphAIN
+    metric_values:
+    - 0.7623
+    - null
+    - null
+    metric_stds:
+    - 0.0042
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2505.15845'
+    title: 'Adaptive Tokenization: On the Hop-Overpriority Problem in Tokenized Graph
+      Learning Models'
+    published_venue: ''
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 1
+    is_best: true
+    sort_value: 0.7623
+    sort_std: 0.0042
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: R-SoftGraphAIN
     model_key: diggr
-    model_plain: CoCN
+    model_plain: R-SoftGraphAIN
     metric_values:
     - 0.4535
     - null
@@ -97,8 +139,8 @@ results:
     codebase_url: ''
     uses_external_data: false
     is_global_top: true
-    global_rank: 1
-    is_best: true
+    global_rank: 2
+    is_best: false
     sort_value: 0.4535
     sort_std: 0.0353
     has_value_gap: false
@@ -111,56 +153,15 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: CoCN
-    model_key: uniaug - polygcl
-    model_plain: CoCN
+  - model: R-SoftGraphAIN
+    model_key: dog
+    model_plain: R-SoftGraphAIN
     metric_values:
-    - 0.4301
+    - 0.432
     - null
     - null
     metric_stds:
-    - 0.0127
-    - null
-    - null
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.01899'
-    title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion Models'
-    published_venue: ''
-    date: Jun 4, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-04'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 2
-    is_best: true
-    sort_value: 0.4301
-    sort_std: 0.0127
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
-  - model: CoCN
-    model_key: adaptkry
-    model_plain: CoCN
-    metric_values:
-    - 0.427
-    - null
-    - null
-    metric_stds:
-    - 0.0114
+    - 0.012
     - null
     - null
     is_baseline: false
@@ -170,20 +171,19 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2403.07954'
-    title: 'Optimizing Polynomial Graph Filters: A Novel Adaptive Krylov Subspace
-      Approach'
+    arxiv_id: '2503.12563'
+    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
     published_venue: ''
-    date: Mar 12, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-12'
-    codebase_url: https://github.com/kkhuang81/AdaptKry
-    uses_external_data: false
+    date: Mar 16, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-16'
+    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
+    uses_external_data: true
     is_global_top: true
     global_rank: 3
-    is_best: true
-    sort_value: 0.427
-    sort_std: 0.0114
+    is_best: false
+    sort_value: 0.432
+    sort_std: 0.012
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -257,7 +257,7 @@ results:
     comparison_source_arxiv: '2111.06748'
     is_best: false
     is_std_outlier: false
-    global_rank: 44
+    global_rank: 54
   - model: FAGCN
     model_key: fagcn
     model_plain: FAGCN
@@ -320,7 +320,7 @@ results:
     comparison_source_arxiv: '2101.00797'
     is_best: false
     is_std_outlier: false
-    global_rank: 56
+    global_rank: 68
   - model: H2GCN
     model_key: h2gcn
     model_plain: H2GCN
@@ -384,7 +384,7 @@ results:
     comparison_source_arxiv: '2103.06064'
     is_best: false
     is_std_outlier: false
-    global_rank: 60
+    global_rank: 73
   - model: SAGE
     model_key: sage
     model_plain: SAGE
@@ -447,7 +447,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 226
+    global_rank: 283
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -510,7 +510,7 @@ results:
     comparison_source_arxiv: '2201.12843'
     is_best: false
     is_std_outlier: false
-    global_rank: 261
+    global_rank: 319
   - model: GMI
     model_key: gmi
     model_plain: GMI
@@ -573,7 +573,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 306
+    global_rank: 364
   - model: NE
     model_key: ne
     model_plain: NE
@@ -635,7 +635,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 327
+    global_rank: 388
   - model: GAE
     model_key: gae
     model_plain: GAE
@@ -698,7 +698,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 335
+    global_rank: 397
   - model: N2V
     model_key: n2v
     model_plain: N2V
@@ -760,7 +760,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 387
+    global_rank: 448
   - model: GBT
     model_key: gbt
     model_plain: GBT
@@ -822,7 +822,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 390
+    global_rank: 451
   - model: AE
     model_key: ae
     model_plain: AE
@@ -884,7 +884,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 392
+    global_rank: 453
   - model: SDCN
     model_key: sdcn
     model_plain: SDCN
@@ -946,7 +946,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 402
+    global_rank: 462
   - model: S2V
     model_key: s2v
     model_plain: S2V
@@ -1008,7 +1008,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 415
+    global_rank: 475
   metrics:
   - Accuracy
   - F1
@@ -2953,5 +2953,6 @@ datasets_by_scope:
     - dataset: DBLP
       dataset_slug: dblp
 single_proposed_model: NE
+main_figure: /figures/2203.10866/main_figure.jpegoptim.jpg
 ---
 

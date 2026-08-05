@@ -59,8 +59,8 @@ paper_type: method
 proposed_models:
 - EPA-GRL
 - EPA
-mrr: 0.0026
-adjusted_mrr: 0.0009
+mrr: 0.0025
+adjusted_mrr: 0.0008
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -77,9 +77,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: R-GCN
+  - model: ECC
     model_key: msh-gnn
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -110,9 +110,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: supcosine
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-GCN
+  - model: ECC
     model_key: cauemo
-    model_plain: R-GCN
+    model_plain: ECC
     value: 0.9692
     std: 0.0136
     metric: Accuracy
@@ -233,10 +233,10 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: null
-    global_rank: 187
-    paper_rank: 402
-    rank_delta: 215
-    rank_delta_abs: 215
+    global_rank: 196
+    paper_rank: 426
+    rank_delta: 230
+    rank_delta_abs: 230
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -300,10 +300,10 @@ results:
     value_note: ''
     sort_value: 0.8967
     sort_std: 0.009
-    global_rank: 195
-    paper_rank: 419
-    rank_delta: 224
-    rank_delta_abs: 224
+    global_rank: 204
+    paper_rank: 444
+    rank_delta: 240
+    rank_delta_abs: 240
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -341,17 +341,17 @@ results:
     date_iso: '2024-10-16'
     published_venue: AAAI 2024
     published_conference: AAAI 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.895
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2406.00403'
+    at_pub_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+    at_pub_source_date_iso: '2024-06-01'
+    at_pub_source_date_label: '2024'
     value_gap_source_date_iso: '2025-05-16'
     value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
+    gap_vs_at_pub: 0.05400000000000005
+    worse_than_at_pub: true
+    surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
@@ -367,15 +367,16 @@ results:
     value_note: ''
     sort_value: 0.895
     sort_std: 0.006
-    global_rank: 201
-    paper_rank: 454
-    rank_delta: 253
-    rank_delta_abs: 253
+    global_rank: 210
+    paper_rank: 482
+    rank_delta: 272
+    rank_delta_abs: 272
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_type: behind
+    comparison_source_title: Dual-perspective Cross Contrastive Learning in Graph
+      Transformers
+    comparison_source_arxiv: '2406.00403'
     is_best: false
     is_std_outlier: false
   - model: SimGRACE
@@ -436,10 +437,10 @@ results:
     value_note: ''
     sort_value: 0.891
     sort_std: 0.014
-    global_rank: 240
-    paper_rank: 485
-    rank_delta: 245
-    rank_delta_abs: 245
+    global_rank: 251
+    paper_rank: 512
+    rank_delta: 261
+    rank_delta_abs: 261
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -504,10 +505,10 @@ results:
     value_note: ''
     sort_value: 0.8864
     sort_std: 0.0108
-    global_rank: 269
-    paper_rank: 563
-    rank_delta: 294
-    rank_delta_abs: 294
+    global_rank: 281
+    paper_rank: 592
+    rank_delta: 311
+    rank_delta_abs: 311
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -573,10 +574,10 @@ results:
     value_note: ''
     sort_value: 0.8829
     sort_std: 0.0131
-    global_rank: 288
-    paper_rank: 425
-    rank_delta: 137
-    rank_delta_abs: 137
+    global_rank: 301
+    paper_rank: 451
+    rank_delta: 150
+    rank_delta_abs: 150
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -640,10 +641,10 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: null
-    global_rank: 312
-    paper_rank: 533
-    rank_delta: 221
-    rank_delta_abs: 221
+    global_rank: 327
+    paper_rank: 564
+    rank_delta: 237
+    rank_delta_abs: 237
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -708,8 +709,8 @@ results:
     value_note: ''
     sort_value: 0.861
     sort_std: 0.032
-    global_rank: 381
-    paper_rank: 381
+    global_rank: 401
+    paper_rank: 401
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -776,8 +777,8 @@ results:
     value_note: ''
     sort_value: 0.859
     sort_std: 0.034
-    global_rank: 386
-    paper_rank: 386
+    global_rank: 407
+    paper_rank: 407
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -844,8 +845,8 @@ results:
     value_note: ''
     sort_value: 0.858
     sort_std: 0.027
-    global_rank: 389
-    paper_rank: 389
+    global_rank: 410
+    paper_rank: 410
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -912,8 +913,8 @@ results:
     value_note: ''
     sort_value: 0.857
     sort_std: 0.036
-    global_rank: 394
-    paper_rank: 394
+    global_rank: 415
+    paper_rank: 415
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -980,8 +981,8 @@ results:
     value_note: ''
     sort_value: 0.856
     sort_std: 0.024
-    global_rank: 400
-    paper_rank: 400
+    global_rank: 422
+    paper_rank: 422
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1048,8 +1049,8 @@ results:
     value_note: ''
     sort_value: 0.853
     sort_std: 0.034
-    global_rank: 407
-    paper_rank: 407
+    global_rank: 431
+    paper_rank: 431
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1116,8 +1117,8 @@ results:
     value_note: ''
     sort_value: 0.85
     sort_std: 0.024
-    global_rank: 415
-    paper_rank: 415
+    global_rank: 440
+    paper_rank: 440
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1184,8 +1185,8 @@ results:
     value_note: ''
     sort_value: 0.849
     sort_std: 0.038
-    global_rank: 419
-    paper_rank: 419
+    global_rank: 444
+    paper_rank: 444
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1252,8 +1253,8 @@ results:
     value_note: ''
     sort_value: 0.846
     sort_std: 0.031
-    global_rank: 430
-    paper_rank: 430
+    global_rank: 456
+    paper_rank: 456
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1320,8 +1321,8 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.041
-    global_rank: 438
-    paper_rank: 438
+    global_rank: 464
+    paper_rank: 464
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1388,8 +1389,8 @@ results:
     value_note: ''
     sort_value: 0.843
     sort_std: 0.033
-    global_rank: 448
-    paper_rank: 448
+    global_rank: 475
+    paper_rank: 475
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1456,8 +1457,8 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.038
-    global_rank: 451
-    paper_rank: 451
+    global_rank: 479
+    paper_rank: 479
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1524,8 +1525,8 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.048
-    global_rank: 462
-    paper_rank: 462
+    global_rank: 490
+    paper_rank: 490
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1592,8 +1593,8 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.044
-    global_rank: 464
-    paper_rank: 464
+    global_rank: 492
+    paper_rank: 492
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1660,8 +1661,8 @@ results:
     value_note: ''
     sort_value: 0.834
     sort_std: 0.041
-    global_rank: 487
-    paper_rank: 487
+    global_rank: 514
+    paper_rank: 514
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1728,8 +1729,8 @@ results:
     value_note: ''
     sort_value: 0.824
     sort_std: 0.038
-    global_rank: 530
-    paper_rank: 530
+    global_rank: 558
+    paper_rank: 558
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1751,9 +1752,9 @@ results:
 - &id002
   dataset: PROTEINS
   rows:
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: gmn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8225
     std: null
     metric: Accuracy
@@ -1784,9 +1785,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: ci-gnn
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -1818,9 +1819,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN
+  - model: Graphormer-SPIS
     model_key: diffpool+gpl
-    model_plain: 3WLGNN
+    model_plain: Graphormer-SPIS
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -1909,8 +1910,8 @@ results:
     value_note: ''
     sort_value: 0.757
     sort_std: 0.055
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1977,8 +1978,8 @@ results:
     value_note: ''
     sort_value: 0.731
     sort_std: 0.053
-    global_rank: 345
-    paper_rank: 345
+    global_rank: 375
+    paper_rank: 375
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2013,5 +2014,6 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: PROTEINS
       dataset_slug: proteins
+main_figure: /figures/2410.12657/main_figure.jpegoptim.jpg
 ---
 

@@ -56,9 +56,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - NIGCN
-mrr: 0.0046
-adjusted_mrr: 0.0046
-mrr_dataset_count: 3
+mrr: 0.005
+adjusted_mrr: 0.0033
+mrr_dataset_count: 2
 benchmark_categories:
 - Classic
 - OGB
@@ -75,7 +75,7 @@ benchmark_coverage:
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
-  total: 4
+  total: 5
 task_categories:
 - node_classification
 experiment_scopes:
@@ -633,9 +633,9 @@ results:
 - &id001
   dataset: CiteSeer
   rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: cna
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -666,9 +666,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: is-gib
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -700,9 +700,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
+  - model: SGC+TSC
     model_key: eerm
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
+    model_plain: SGC+TSC
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -734,13 +734,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: APPNP
-    model_key: appnp
-    model_plain: APPNP
-    value: 0.6983
-    std: 0.0127
-    paper_value: 0.6983
-    paper_std: 0.0127
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.6741
+    std: 0.0177
+    paper_value: 0.6741
+    paper_std: 0.0177
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -765,15 +765,15 @@ results:
     date_iso: '2023-04-30'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.7933
-    at_pub_std: 0.0035
+    at_pub_value: 0.7923
+    at_pub_std: 0.0053
     at_pub_source_arxiv: '2110.13094'
     at_pub_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
     at_pub_source_date_iso: '2021-10-25'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-10-18'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.09499999999999997
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.11819999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -781,88 +781,20 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8128
-    true_std: 0.0071
-    value_gap_source_arxiv: '2310.11762'
-    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    true_value: 0.8774
+    true_std: 0.0041
+    value_gap_source_arxiv: '2305.06142'
+    value_gap_source_title: Feature Expansion for Graph Neural Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.11449999999999994
+    value_gap: 0.20329999999999993
     has_value_note: false
     value_note: ''
-    sort_value: 0.8128
-    sort_std: 0.0071
-    global_rank: 25
-    paper_rank: 610
-    rank_delta: 585
-    rank_delta_abs: 585
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
-    comparison_source_arxiv: '2110.13094'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.6935
-    std: 0.0093
-    paper_value: 0.6935
-    paper_std: 0.0093
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive learning on Planetoid split (randomly sampled 20 nodes
-      per class for training, 500 for val, 1000 for test).
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    published_venue: WWW 2023
-    published_conference: WWW 2023
-    at_pub_value: 0.8013
-    at_pub_std: 0.0062
-    at_pub_source_arxiv: '2110.13094'
-    at_pub_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
-    at_pub_source_date_iso: '2021-10-25'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-10-18'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.1078
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8075
-    true_std: 0.0078
-    value_gap_source_arxiv: '2310.11762'
-    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.11399999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8075
-    sort_std: 0.0078
-    global_rank: 32
-    paper_rank: 625
-    rank_delta: 593
-    rank_delta_abs: 593
+    sort_value: 0.8774
+    sort_std: 0.0041
+    global_rank: 20
+    paper_rank: 765
+    rank_delta: 745
+    rank_delta_abs: 745
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -907,8 +839,8 @@ results:
     at_pub_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
     at_pub_source_date_iso: '2021-10-25'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-06-27'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: 0.10319999999999996
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -917,21 +849,20 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8033
-    true_std: 0.0088
-    value_gap_source_arxiv: '2406.19249'
-    value_gap_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer
-      for Node Classification'
+    true_value: 0.8769
+    true_std: 0.004
+    value_gap_source_arxiv: '2305.06142'
+    value_gap_source_title: Feature Expansion for Graph Neural Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.11219999999999997
+    value_gap: 0.18579999999999997
     has_value_note: false
     value_note: ''
-    sort_value: 0.8033
-    sort_std: 0.0088
-    global_rank: 37
-    paper_rank: 630
-    rank_delta: 593
-    rank_delta_abs: 593
+    sort_value: 0.8769
+    sort_std: 0.004
+    global_rank: 21
+    paper_rank: 710
+    rank_delta: 689
+    rank_delta_abs: 689
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -939,13 +870,13 @@ results:
     comparison_source_arxiv: '2110.13094'
     is_best: false
     is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.6741
-    std: 0.0177
-    paper_value: 0.6741
-    paper_std: 0.0177
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.6983
+    std: 0.0127
+    paper_value: 0.6983
+    paper_std: 0.0127
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -970,15 +901,15 @@ results:
     date_iso: '2023-04-30'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.7923
-    at_pub_std: 0.0053
-    at_pub_source_arxiv: '2110.13094'
-    at_pub_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
-    at_pub_source_date_iso: '2021-10-25'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-10-18'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.11819999999999997
+    at_pub_value: 0.805
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.09864'
+    at_pub_source_title: Tackling Over-Smoothing for General Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-08-22'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.10670000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -986,20 +917,89 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7981
-    true_std: 0.008
-    value_gap_source_arxiv: '2310.11762'
-    value_gap_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    true_value: 0.8142
+    true_std: 0.0026
+    value_gap_source_arxiv: '2305.06142'
+    value_gap_source_title: Feature Expansion for Graph Neural Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.124
+    value_gap: 0.1159
     has_value_note: false
     value_note: ''
-    sort_value: 0.7981
-    sort_std: 0.008
-    global_rank: 43
-    paper_rank: 678
-    rank_delta: 635
-    rank_delta_abs: 635
+    sort_value: 0.8142
+    sort_std: 0.0026
+    global_rank: 29
+    paper_rank: 691
+    rank_delta: 662
+    rank_delta_abs: 662
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Tackling Over-Smoothing for General Graph Convolutional
+      Networks
+    comparison_source_arxiv: '2008.09864'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.6935
+    std: 0.0093
+    paper_value: 0.6935
+    paper_std: 0.0093
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive learning on Planetoid split (randomly sampled 20 nodes
+      per class for training, 500 for val, 1000 for test).
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    published_venue: WWW 2023
+    published_conference: WWW 2023
+    at_pub_value: 0.8013
+    at_pub_std: 0.0062
+    at_pub_source_arxiv: '2110.13094'
+    at_pub_source_title: 'Gophormer: Ego-Graph Transformer for Node Classification'
+    at_pub_source_date_iso: '2021-10-25'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-05-10'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.1078
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.808
+    true_std: 0.0026
+    value_gap_source_arxiv: '2305.06142'
+    value_gap_source_title: Feature Expansion for Graph Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11450000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.808
+    sort_std: 0.0026
+    global_rank: 46
+    paper_rank: 704
+    rank_delta: 658
+    rank_delta_abs: 658
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1038,16 +1038,16 @@ results:
     date_iso: '2023-04-30'
     published_venue: WWW 2023
     published_conference: WWW 2023
-    at_pub_value: 0.7386
-    at_pub_std: 0.0173
-    at_pub_source_arxiv: '2302.12357'
-    at_pub_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
-      Graphs'
-    at_pub_source_date_iso: '2023-02-23'
-    at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2024-06-27'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.03370000000000006
+    at_pub_value: 0.7765
+    at_pub_std: 0.0012
+    at_pub_source_arxiv: '2203.12265'
+    at_pub_source_title: Node Representation Learning in Graph via Node-to-Neighbourhood
+      Mutual Information Maximization
+    at_pub_source_date_iso: '2022-03-23'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-11-30'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.0716
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -1055,27 +1055,95 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7422
-    true_std: 0.0019
-    value_gap_source_arxiv: '2406.19249'
-    value_gap_source_title: 'NTFormer: A Composite Node Tokenized Graph Transformer
-      for Node Classification'
+    true_value: 0.7965
+    true_std: 0.0102
+    value_gap_source_arxiv: '2311.18177'
+    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
+      Neural Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.0373
+    value_gap: 0.09160000000000001
     has_value_note: false
     value_note: ''
-    sort_value: 0.7422
-    sort_std: 0.0019
-    global_rank: 206
-    paper_rank: 576
-    rank_delta: 370
-    rank_delta_abs: 370
+    sort_value: 0.7965
+    sort_std: 0.0102
+    global_rank: 68
+    paper_rank: 653
+    rank_delta: 585
+    rank_delta_abs: 585
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Auto-HeG: Automated Graph Neural Network on Heterophilic
-      Graphs'
-    comparison_source_arxiv: '2302.12357'
+    comparison_source_title: Node Representation Learning in Graph via Node-to-Neighbourhood
+      Mutual Information Maximization
+    comparison_source_arxiv: '2203.12265'
+    is_best: false
+    is_std_outlier: false
+  - model: NDLS
+    model_key: ndls
+    model_plain: NDLS
+    value: 0.6963
+    std: 0.0169
+    paper_value: 0.6963
+    paper_std: 0.0169
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive learning on Planetoid split (randomly sampled 20 nodes
+      per class for training, 500 for val, 1000 for test).
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    published_venue: WWW 2023
+    published_conference: WWW 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-08-06'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.736
+    true_std: null
+    value_gap_source_arxiv: '2408.03152'
+    value_gap_source_title: 'TSC: A Simple Two-Sided Constraint against Over-Smoothing'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03969999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.736
+    sort_std: null
+    global_rank: 307
+    paper_rank: 694
+    rank_delta: 387
+    rank_delta_abs: 387
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GDC
@@ -1135,10 +1203,10 @@ results:
     value_note: ''
     sort_value: 0.734
     sort_std: 0.003
-    global_rank: 266
-    paper_rank: 614
-    rank_delta: 348
-    rank_delta_abs: 348
+    global_rank: 324
+    paper_rank: 694
+    rank_delta: 370
+    rank_delta_abs: 370
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1203,84 +1271,15 @@ results:
     value_note: ''
     sort_value: 0.729
     sort_std: 0.005
-    global_rank: 330
-    paper_rank: 593
-    rank_delta: 263
-    rank_delta_abs: 263
+    global_rank: 393
+    paper_rank: 675
+    rank_delta: 282
+    rank_delta_abs: 282
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Scalable Graph Neural Networks via Bidirectional Propagation
     comparison_source_arxiv: '2010.15421'
-    is_best: false
-    is_std_outlier: false
-  - model: NIGCN
-    model_key: nigcn
-    model_plain: NIGCN
-    value: 0.7135
-    std: 0.0082
-    paper_value: 0.7135
-    paper_std: 0.0082
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive learning on Planetoid split (randomly sampled 20 nodes
-      per class for training, 500 for val, 1000 for test).
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    published_venue: WWW 2023
-    published_conference: WWW 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-08-01'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.716
-    true_std: 0.003
-    value_gap_source_arxiv: '2408.00295'
-    value_gap_source_title: Contrastive Graph Representation Learning with Adversarial
-      Cross-view Reconstruction and Information Bottleneck
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0024999999999999467
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.716
-    sort_std: 0.003
-    global_rank: 494
-    paper_rank: 517
-    rank_delta: 23
-    rank_delta_abs: 23
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GRAND(+)
@@ -1340,8 +1339,76 @@ results:
     value_note: ''
     sort_value: 0.7142
     sort_std: 0.0189
-    global_rank: 510
-    paper_rank: 510
+    global_rank: 577
+    paper_rank: 577
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NIGCN
+    model_key: nigcn
+    model_plain: NIGCN
+    value: 0.7135
+    std: 0.0082
+    paper_value: 0.7135
+    paper_std: 0.0082
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive learning on Planetoid split (randomly sampled 20 nodes
+      per class for training, 500 for val, 1000 for test).
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    published_venue: WWW 2023
+    published_conference: WWW 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-04-30'
+    value_gap_source_date_label: WWW 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7135
+    true_std: 0.0082
+    value_gap_source_arxiv: '2305.14000'
+    value_gap_source_title: Node-wise Diffusion for Scalable Graph Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7135
+    sort_std: 0.0082
+    global_rank: 586
+    paper_rank: 586
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1408,10 +1475,10 @@ results:
     value_note: ''
     sort_value: 0.713
     sort_std: 0.003
-    global_rank: 520
-    paper_rank: 636
-    rank_delta: 116
-    rank_delta_abs: 116
+    global_rank: 589
+    paper_rank: 718
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1476,80 +1543,12 @@ results:
     value_note: ''
     sort_value: 0.705
     sort_std: 0.004
-    global_rank: 574
-    paper_rank: 676
-    rank_delta: 102
-    rank_delta_abs: 102
+    global_rank: 651
+    paper_rank: 763
+    rank_delta: 112
+    rank_delta_abs: 112
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NDLS
-    model_key: ndls
-    model_plain: NDLS
-    value: 0.6963
-    std: 0.0169
-    paper_value: 0.6963
-    paper_std: 0.0169
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive learning on Planetoid split (randomly sampled 20 nodes
-      per class for training, 500 for val, 1000 for test).
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    published_venue: WWW 2023
-    published_conference: WWW 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-30'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6963
-    true_std: 0.0169
-    value_gap_source_arxiv: '2305.14000'
-    value_gap_source_title: Node-wise Diffusion for Scalable Graph Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6963
-    sort_std: 0.0169
-    global_rank: 615
-    paper_rank: 615
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1612,8 +1611,8 @@ results:
     value_note: ''
     sort_value: 0.6715
     sort_std: 0.0204
-    global_rank: 687
-    paper_rank: 687
+    global_rank: 777
+    paper_rank: 777
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1680,8 +1679,8 @@ results:
     value_note: ''
     sort_value: 0.6354
     sort_std: 0.0111
-    global_rank: 759
-    paper_rank: 759
+    global_rank: 853
+    paper_rank: 853
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1703,6 +1702,311 @@ results:
 - &id002
   dataset: PubMed
   rows:
+  - model: SGCONV
+    model_key: mixhop
+    model_plain: SGCONV
+    value: 0.891
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.891
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.8021
+    std: 0.0179
+    paper_value: 0.8021
+    paper_std: 0.0179
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive learning on Planetoid split (Yang et al. 2016) using
+      20 training, 500 validation, and 1000 testing nodes per class.
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    published_venue: WWW 2023
+    published_conference: WWW 2023
+    at_pub_value: 0.884
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.08189999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.884
+    true_std: 0.001
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08189999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.884
+    sort_std: 0.001
+    global_rank: 2
+    paper_rank: 20
+    rank_delta: 18
+    rank_delta_abs: 18
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7805
+    std: 0.0164
+    paper_value: 0.7805
+    paper_std: 0.0164
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive learning on Planetoid split (Yang et al. 2016) using
+      20 training, 500 validation, and 1000 testing nodes per class.
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    published_venue: WWW 2023
+    published_conference: WWW 2023
+    at_pub_value: 0.875
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.09450000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.875
+    true_std: 0.001
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09450000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.875
+    sort_std: 0.001
+    global_rank: 3
+    paper_rank: 30
+    rank_delta: 27
+    rank_delta_abs: 27
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.7882
+    std: 0.019
+    paper_value: 0.7882
+    paper_std: 0.019
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive learning on Planetoid split (Yang et al. 2016) using
+      20 training, 500 validation, and 1000 testing nodes per class.
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    published_venue: WWW 2023
+    published_conference: WWW 2023
+    at_pub_value: 0.869
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.08079999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.869
+    true_std: 0.001
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
+    value_gap_source_is_current_paper: false
+    value_gap: 0.08079999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.869
+    sort_std: 0.001
+    global_rank: 4
+    paper_rank: 26
+    rank_delta: 22
+    rank_delta_abs: 22
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7692
+    std: 0.0284
+    paper_value: 0.7692
+    paper_std: 0.0284
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive learning on Planetoid split (Yang et al. 2016) using
+      20 training, 500 validation, and 1000 testing nodes per class.
+    date: Apr 30, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-30'
+    published_venue: WWW 2023
+    published_conference: WWW 2023
+    at_pub_value: 0.864
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.0948
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.864
+    true_std: 0.001
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0948
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.864
+    sort_std: 0.001
+    global_rank: 6
+    paper_rank: 35
+    rank_delta: 29
+    rank_delta_abs: 29
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
+    is_best: false
+    is_std_outlier: false
   - model: NIGCN
     model_key: nigcn
     model_plain: NIGCN
@@ -1760,8 +2064,8 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: 0.0202
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1769,7 +2073,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: NDLS
     model_key: ndls
@@ -1828,8 +2132,8 @@ results:
     value_note: ''
     sort_value: 0.8038
     sort_std: 0.0141
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1837,75 +2141,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: APPNP
-    model_key: appnp
-    model_plain: APPNP
-    value: 0.8021
-    std: 0.0179
-    paper_value: 0.8021
-    paper_std: 0.0179
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive learning on Planetoid split (Yang et al. 2016) using
-      20 training, 500 validation, and 1000 testing nodes per class.
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    published_venue: WWW 2023
-    published_conference: WWW 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-30'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8021
-    true_std: 0.0179
-    value_gap_source_arxiv: '2305.14000'
-    value_gap_source_title: Node-wise Diffusion for Scalable Graph Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8021
-    sort_std: 0.0179
-    global_rank: 3
-    paper_rank: 3
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GBP
     model_key: gbp
@@ -1964,8 +2200,8 @@ results:
     value_note: ''
     sort_value: 0.8009
     sort_std: 0.0151
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1973,7 +2209,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GRAND(+)
     model_key: grand(+)
@@ -2032,8 +2268,8 @@ results:
     value_note: ''
     sort_value: 0.7918
     sort_std: 0.0193
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2041,7 +2277,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: AGP
     model_key: agp
@@ -2100,8 +2336,8 @@ results:
     value_note: ''
     sort_value: 0.7897
     sort_std: 0.0133
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2109,75 +2345,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7882
-    std: 0.019
-    paper_value: 0.7882
-    paper_std: 0.019
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive learning on Planetoid split (Yang et al. 2016) using
-      20 training, 500 validation, and 1000 testing nodes per class.
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    published_venue: WWW 2023
-    published_conference: WWW 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-30'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7882
-    true_std: 0.019
-    value_gap_source_arxiv: '2305.14000'
-    value_gap_source_title: Node-wise Diffusion for Scalable Graph Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7882
-    sort_std: 0.019
-    global_rank: 8
-    paper_rank: 8
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GraphSAINT
     model_key: graphsaint
@@ -2236,81 +2404,12 @@ results:
     value_note: ''
     sort_value: 0.7865
     sort_std: 0.0417
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7805
-    std: 0.0164
-    paper_value: 0.7805
-    paper_std: 0.0164
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive learning on Planetoid split (Yang et al. 2016) using
-      20 training, 500 validation, and 1000 testing nodes per class.
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    published_venue: WWW 2023
-    published_conference: WWW 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-09-08'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.7837
-    true_std: 0.0026
-    value_gap_source_arxiv: '2309.04082'
-    value_gap_source_title: 'Curve Your Attention: Mixed-Curvature Transformers for
-      Graph Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0031999999999999806
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7837
-    sort_std: 0.0026
-    global_rank: 11
-    paper_rank: 12
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2373,8 +2472,8 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.0196
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2382,7 +2481,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GDC
     model_key: gdc
@@ -2441,8 +2540,8 @@ results:
     value_note: ''
     sort_value: 0.7767
     sort_std: 0.0165
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2450,75 +2549,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.7692
-    std: 0.0284
-    paper_value: 0.7692
-    paper_std: 0.0284
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive learning on Planetoid split (Yang et al. 2016) using
-      20 training, 500 validation, and 1000 testing nodes per class.
-    date: Apr 30, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-30'
-    published_venue: WWW 2023
-    published_conference: WWW 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-04-30'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7692
-    true_std: 0.0284
-    value_gap_source_arxiv: '2305.14000'
-    value_gap_source_title: Node-wise Diffusion for Scalable Graph Learning
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7692
-    sort_std: 0.0284
-    global_rank: 17
-    paper_rank: 17
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: SGC
     model_key: sgc
@@ -2578,8 +2609,8 @@ results:
     value_note: ''
     sort_value: 0.7511
     sort_std: 0.0127
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2646,8 +2677,8 @@ results:
     value_note: ''
     sort_value: 0.7179
     sort_std: 0.0292
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2669,9 +2700,9 @@ results:
 - &id003
   dataset: Reddit
   rows:
-  - model: GraphAny
+  - model: Cluster-GCN (2019)
     model_key: node sampled soup
-    model_plain: GraphAny
+    model_plain: Cluster-GCN (2019)
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -2703,44 +2734,45 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphAny
-    model_key: gamlp(jk)
-    model_plain: GraphAny
-    value: 0.9704
-    std: 0.01
+  - model: Cluster-GCN (2019)
+    model_key: engcn
+    model_plain: Cluster-GCN (2019)
+    value: 0.9714
+    std: 0.0003
     metric: F1
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2206.04355'
-    title: Graph Attention Multi-Layer Perceptron
-    date: Jun 9, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-09'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/PKU-DAIR/GAMLP
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.9704
-    sort_std: 0.01
+    sort_value: 0.9714
+    sort_std: 0.0003
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: GraphAny
-    model_key: graphsaint
-    model_plain: GraphAny
-    value: 0.97
-    std: null
+  - model: Cluster-GCN (2019)
+    model_key: sagn+sle
+    model_plain: Cluster-GCN (2019)
+    value: 0.971
+    std: 0.0
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -2750,20 +2782,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2210.07494'
+    title: 'A Comprehensive Study on Large-Scale Graph Training: Benchmarking and
+      Rethinking'
+    date: Oct 14, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-14'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/VITA-Group/Large_Scale_GCN_Benchmarking
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.97
-    sort_std: null
+    sort_value: 0.971
+    sort_std: 0.0
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2828,10 +2861,10 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 16
-    paper_rank: 125
-    rank_delta: 109
-    rank_delta_abs: 109
+    global_rank: 19
+    paper_rank: 146
+    rank_delta: 127
+    rank_delta_abs: 127
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2897,10 +2930,10 @@ results:
     value_note: ''
     sort_value: 0.949
     sort_std: 0.0
-    global_rank: 72
-    paper_rank: 114
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 85
+    paper_rank: 132
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2967,10 +3000,10 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 98
-    paper_rank: 115
-    rank_delta: 17
-    rank_delta_abs: 17
+    global_rank: 113
+    paper_rank: 133
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3038,10 +3071,10 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 99
-    paper_rank: 130
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 114
+    paper_rank: 151
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3107,8 +3140,8 @@ results:
     value_note: ''
     sort_value: 0.9342
     sort_std: 0.0048
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3175,8 +3208,8 @@ results:
     value_note: ''
     sort_value: 0.9218
     sort_std: 0.0088
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3243,8 +3276,8 @@ results:
     value_note: ''
     sort_value: 0.8525
     sort_std: 0.0124
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3312,8 +3345,8 @@ results:
     value_note: ''
     sort_value: 0.7609
     sort_std: 0.0175
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 152
+    paper_rank: 152
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3651,5 +3684,6 @@ datasets_by_scope:
     - dataset: Amazon2M
       dataset_slug: amazon2m
 single_proposed_model: NIGCN
+main_figure: /figures/2305.14000/main_figure.jpegoptim.jpg
 ---
 

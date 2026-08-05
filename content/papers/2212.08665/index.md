@@ -2116,5 +2116,6 @@ datasets_by_scope:
     - dataset: EAT
       dataset_slug: eat
 single_proposed_model: HSAN
+main_figure: /figures/2212.08665/main_figure.jpegoptim.jpg
 ---
 

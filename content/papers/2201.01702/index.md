@@ -805,5 +805,6 @@ datasets_by_scope:
     - dataset: PPI
       dataset_slug: ppi
 single_proposed_model: LP
+main_figure: /figures/2201.01702/main_figure.jpegoptim.jpg
 ---
 

@@ -676,5 +676,6 @@ datasets_by_scope:
     datasets:
     - dataset: REDDIT-MULTI-5K
       dataset_slug: reddit-multi-5k
+main_figure: /figures/2204.11028/main_figure.jpegoptim.jpg
 ---
 

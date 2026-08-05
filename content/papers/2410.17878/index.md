@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - REMUL-GNN
-mrr: 0.1
-adjusted_mrr: 0.0333
+mrr: 0.0833
+adjusted_mrr: 0.0278
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -224,8 +224,8 @@ results:
     value_note: ''
     sort_value: 0.0037
     sort_std: 0.0001
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -291,8 +291,8 @@ results:
     value_note: ''
     sort_value: 0.0037
     sort_std: 0.0002
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -359,8 +359,8 @@ results:
     value_note: ''
     sort_value: 0.004
     sort_std: 0.0001
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -427,8 +427,8 @@ results:
     value_note: ''
     sort_value: 0.0047
     sort_std: 0.0002
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -494,8 +494,8 @@ results:
     value_note: ''
     sort_value: 0.0054
     sort_std: 1.0e-05
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -561,8 +561,8 @@ results:
     value_note: ''
     sort_value: 0.0054
     sort_std: 1.0e-05
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -628,8 +628,8 @@ results:
     value_note: ''
     sort_value: 0.0069
     sort_std: 1.0e-05
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -662,5 +662,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: REMUL-GNN
+main_figure: /figures/2410.17878/main_figure.jpegoptim.jpg
 ---
 

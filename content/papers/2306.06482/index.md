@@ -33,7 +33,7 @@ abstract: The development of efficient machine learning models for molecular sys
   energies and forces is possible. In summary, TensorNet's framework opens up a new
   space for the design of state-of-the-art equivariant models.
 codebase_url: https://github.com/torchmd/torchmd-net
-extraction_model: google/gemma-4-31B-it
+extraction_model: cyankiwi/gemma-4-26B-A4B-it-AWQ-4bit
 has_results: true
 paper_type: method
 proposed_models:
@@ -208,7 +208,7 @@ results:
     today_delta_significant: false
     sort_value: 0.02
     sort_std: null
-    global_rank: 12
+    global_rank: 14
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -270,7 +270,7 @@ results:
     today_delta_significant: false
     sort_value: 0.03
     sort_std: null
-    global_rank: 13
+    global_rank: 15
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -321,8 +321,8 @@ results:
       with vector-scalar interactive message passing for molecules'
     at_pub_source_date_iso: '2022-10-29'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: 0.3493
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -333,25 +333,94 @@ results:
     today_delta_significant: true
     true_value: 0.0507
     true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
     value_gap_source_is_current_paper: false
     value_gap: 0.3493
     has_value_note: false
     value_note: ''
     sort_value: 0.0507
     sort_std: null
-    global_rank: 24
-    paper_rank: 60
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 29
+    paper_rank: 80
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
       network with vector-scalar interactive message passing for molecules'
     comparison_source_arxiv: '2210.16518'
+    is_best: false
+    is_std_outlier: false
+  - model: NequIP
+    model_key: nequip
+    model_plain: NequIP
+    value: 0.04
+    std: null
+    paper_value: 0.04
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: null
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: nequip
+    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jun 10, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-10'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.04
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.14276'
+    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
+      length-scales in molecular systems'
+    at_pub_source_date_iso: '2022-05-28'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.053
+    true_std: null
+    value_gap_source_arxiv: '2402.04836'
+    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
+      Models
+    value_gap_source_is_current_paper: false
+    value_gap: 0.012999999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.053
+    sort_std: null
+    global_rank: 34
+    paper_rank: 22
+    rank_delta: -12
+    rank_delta_abs: 12
+    rank_delta_direction: better
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Allegro
@@ -412,10 +481,10 @@ results:
     value_note: ''
     sort_value: 0.053
     sort_std: null
-    global_rank: 29
-    paper_rank: 50
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 35
+    paper_rank: 70
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -482,79 +551,10 @@ results:
     value_note: ''
     sort_value: 0.053
     sort_std: null
-    global_rank: 30
-    paper_rank: 13
-    rank_delta: -17
-    rank_delta_abs: 17
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NequIP
-    model_key: nequip
-    model_plain: NequIP
-    value: 0.04
-    std: null
-    paper_value: 0.04
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: null
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: nequip
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 10, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-10'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.04
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.14276'
-    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
-      length-scales in molecular systems'
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.131
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.091
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.131
-    sort_std: null
-    global_rank: 45
-    paper_rank: 20
-    rank_delta: -25
-    rank_delta_abs: 25
+    global_rank: 36
+    paper_rank: 15
+    rank_delta: -21
+    rank_delta_abs: 21
     rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
@@ -584,5 +584,6 @@ datasets_by_scope:
     datasets:
     - dataset: MD17
       dataset_slug: md17
+main_figure: /figures/2306.06482/main_figure.jpegoptim.jpg
 ---
 

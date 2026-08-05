@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: ogbn-proteins
   rows:
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8942
     std: 0.0007
     metric: ROC-AUC
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: x_wo/ld
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8915
     std: 0.0012
     metric: ROC-AUC
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: X_WO/LD
+  - model: RevGNN
     model_key: mog
-    model_plain: X_WO/LD
+    model_plain: RevGNN
     value: 0.8904
     std: 0.0072
     metric: ROC-AUC
@@ -174,6 +174,73 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.841
+    std: null
+    paper_value: 0.841
+    paper_std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on ogbn-proteins
+    date: Sep 9, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-09'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8682
+    at_pub_std: 0.0021
+    at_pub_source_arxiv: '2106.07476'
+    at_pub_source_title: Training Graph Neural Networks with 1000 Layers
+    at_pub_source_date_iso: '2021-06-14'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2021-06-14'
+    value_gap_source_date_label: ICML 2021
+    gap_vs_at_pub: 0.027200000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8682
+    true_std: 0.0021
+    value_gap_source_arxiv: '2106.07476'
+    value_gap_source_title: Training Graph Neural Networks with 1000 Layers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.027200000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8682
+    sort_std: 0.0021
+    global_rank: 10
+    paper_rank: 17
+    rank_delta: 7
+    rank_delta_abs: 7
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Training Graph Neural Networks with 1000 Layers
+    comparison_source_arxiv: '2106.07476'
+    is_best: false
     is_std_outlier: false
   - model: STR-Sparse
     model_key: str-sparse
@@ -232,8 +299,8 @@ results:
     value_note: ''
     sort_value: 0.855
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -300,8 +367,8 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: null
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -341,15 +408,15 @@ results:
     date_iso: '2024-09-09'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.7753
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2110.07141'
-    at_pub_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
-    at_pub_source_date_iso: '2021-10-14'
-    at_pub_source_date_label: '2021'
+    at_pub_value: 0.7768
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2106.07476'
+    at_pub_source_title: Training Graph Neural Networks with 1000 Layers
+    at_pub_source_date_iso: '2021-06-14'
+    at_pub_source_date_label: ICML 2021
     value_gap_source_date_iso: '2024-09-09'
     value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.06769999999999998
+    gap_vs_at_pub: 0.06619999999999993
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -368,83 +435,15 @@ results:
     value_note: ''
     sort_value: 0.843
     sort_std: null
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'SoGCN: Second-Order Graph Convolutional Networks'
-    comparison_source_arxiv: '2110.07141'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.841
-    std: null
-    paper_value: 0.841
-    paper_std: null
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on ogbn-proteins
-    date: Sep 9, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-09'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-09-09'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.841
-    true_std: null
-    value_gap_source_arxiv: '2409.05573'
-    value_gap_source_title: Learning to Model Graph Structural Information on MLPs
-      via Graph Structure Self-Contrasting
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.841
-    sort_std: null
-    global_rank: 14
-    paper_rank: 14
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    comparison_source_title: Training Graph Neural Networks with 1000 Layers
+    comparison_source_arxiv: '2106.07476'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -505,8 +504,8 @@ results:
     value_note: ''
     sort_value: 0.832
     sort_std: null
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -574,8 +573,8 @@ results:
     value_note: ''
     sort_value: 0.812
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,8 +641,8 @@ results:
     value_note: ''
     sort_value: 0.7995
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -710,8 +709,8 @@ results:
     value_note: ''
     sort_value: 0.785
     sort_std: null
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -778,8 +777,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: null
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -811,5 +810,6 @@ datasets_by_scope:
     datasets:
     - dataset: ogbn-proteins
       dataset_slug: ogbn-proteins
+main_figure: /figures/2409.05573/main_figure.jpegoptim.jpg
 ---
 

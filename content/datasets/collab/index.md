@@ -12,13 +12,13 @@ stats:
   avg_nodes: 74.5
   avg_edges: 2457.8
   num_classes: 2
-result_count: 557
+result_count: 561
 best_model:
-  model: MSH-GNN
-  value: 0.964
+  model: WL-MLP
+  value: 0.9792
   metric: Accuracy
-  arxiv_id: '2505.15015'
-  paper_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
+  arxiv_id: '2202.10156'
+  paper_title: 1-WL Expressiveness Is (Almost) All You Need
 papers:
 - arxiv_id: '2602.04244'
   title: 'GraphVec: Cross-Domain Graph Vectorization for Graph-Level Representation
@@ -70,6 +70,10 @@ papers:
   title: Graph Self-Supervised Learning with Learnable Structural and Positional Encodings
   date_iso: '2025-02-22'
   venue: WWW 2025
+- arxiv_id: '2501.18739'
+  title: 'Beyond Message Passing: Neural Graph Pattern Machine'
+  date_iso: '2025-01-30'
+  venue: ICML 2025
 - arxiv_id: '2412.17856'
   title: Graph Structure Refinement with Energy-based Contrastive Learning
   date_iso: '2024-12-20'
@@ -128,6 +132,10 @@ papers:
   title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
   date_iso: '2024-06-03'
   venue: NeurIPS 2024
+- arxiv_id: '2406.00403'
+  title: Dual-perspective Cross Contrastive Learning in Graph Transformers
+  date_iso: '2024-06-01'
+  venue: ''
 - arxiv_id: '2405.14742'
   title: 'HC-GAE: The Hierarchical Cluster-based Graph Auto-Encoder for Graph Representation
     Learning'
@@ -178,10 +186,6 @@ papers:
 - arxiv_id: '2309.02304'
   title: Graph Self-Contrast Representation Learning
   date_iso: '2023-09-05'
-  venue: ''
-- arxiv_id: '2308.08344'
-  title: Graph Out-of-Distribution Generalization with Controllable Data Augmentation
-  date_iso: '2023-08-16'
   venue: ''
 - arxiv_id: '2307.01053'
   title: 'ENGAGE: Explanation Guided Data Augmentation for Graph Representation Learning'
@@ -273,6 +277,10 @@ papers:
   title: Automated Data Augmentations for Graph Classification
   date_iso: '2022-02-26'
   venue: ICLR 2022
+- arxiv_id: '2202.10156'
+  title: 1-WL Expressiveness Is (Almost) All You Need
+  date_iso: '2022-02-21'
+  venue: ''
 - arxiv_id: '2202.08333'
   title: Self-Supervised Representation Learning via Latent Graph Prediction
   date_iso: '2022-02-16'
@@ -382,6 +390,14 @@ papers:
   title: Edge Contraction Pooling for Graph Neural Networks
   date_iso: '2019-05-27'
   venue: ''
+- arxiv_id: '1905.05178'
+  title: Graph U-Nets
+  date_iso: '2019-05-11'
+  venue: ''
+- arxiv_id: '1903.02428'
+  title: Fast Graph Representation Learning with PyTorch Geometric
+  date_iso: '2019-03-06'
+  venue: ICLR 2019
 - arxiv_id: '1810.00826'
   title: How Powerful are Graph Neural Networks?
   date_iso: '2018-10-01'
@@ -423,6 +439,36 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
+  - model: WL-MLP
+    model_plain: WL-MLP
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: Feb 21, 2022
+    date_iso: '2022-02-21'
+    date_display: Feb 2022
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.9792
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
   - model: MSH-GNN
     model_plain: MSH-GNN
     is_baseline: false
@@ -443,7 +489,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.964
@@ -820,9 +866,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -880,9 +926,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1030,9 +1076,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1090,9 +1136,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1150,9 +1196,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1210,9 +1256,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1566,6 +1612,36 @@ variants:
     - 0.0043
     - null
     - null
+  - model: DiffPool-Det
+    model_plain: DiffPool-Det
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '1905.05178'
+    title: Graph U-Nets
+    date: May 11, 2019
+    date_iso: '2019-05-11'
+    date_display: May 2019
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.8213
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
   - model: MaskGAE
     model_plain: MaskGAE
     is_baseline: true
@@ -1692,9 +1768,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2210.05920'
     title: Boosting Graph Neural Networks via Adaptive Knowledge Distillation
     date: Oct 12, 2022
@@ -1867,78 +1943,18 @@ variants:
     - 0.0026
     - null
     - null
-  - model: GraphMAE2
-    model_plain: GraphMAE2
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2410.10241'
-    title: Revisiting Graph Autoencoders as Implicit Contrastive Learners
-    date: Oct 14, 2024
-    date_iso: '2024-10-14'
-    date_display: Oct 2024
-    codebase_url: https://github.com/EdisonLeeeee/lrGAE
-    published_conference: KDD 2024
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.817
-    - null
-    - null
-    metric_stds:
-    - 0.008
-    - null
-    - null
-  - model: GCKM
-    model_plain: GCKM
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2504.13426'
-    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
-    date: Apr 18, 2025
-    date_iso: '2025-04-18'
-    date_display: Apr 2025
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.817
-    - null
-    - null
-    metric_stds:
-    - 0.015
-    - null
-    - null
-  row_count: 557
+  row_count: 561
   rows_json: /data/datasets/collab/10-fold-cv-rows.json
   chart_json: /data/datasets/collab/10-fold-cv-chart.json
   arch_counts:
-    gnn: 353
-    hybrid: 84
-    graph_transformer: 10
+    gnn: 358
+    hybrid: 90
+    graph_transformer: 13
     llm: 3
     walk: 14
-    traditional: 77
+    traditional: 76
   metric_counts:
-  - 524
+  - 528
   - 31
   - 2
   milestones: &id001
@@ -1948,6 +1964,12 @@ variants:
     arxiv_id: '1606.01141'
     title: On Valid Optimal Assignment Kernels and Applications to Graph Classification
     date: '2016-06-03'
+  - value: 0.8213
+    std: null
+    model: DiffPool-Det
+    arxiv_id: '1905.05178'
+    title: Graph U-Nets
+    date: '2019-05-11'
   - value: 0.836
     std: 0.01
     model: GNTK
@@ -1960,18 +1982,12 @@ variants:
     arxiv_id: '2103.00959'
     title: 'CogDL: A Comprehensive Library for Graph Deep Learning'
     date: '2021-03-01'
-  - value: 0.8722
-    std: 0.0013
-    model: CoCN
-    arxiv_id: '2407.18480'
-    title: Scalable Graph Compressed Convolutions
-    date: '2024-07-26'
-  - value: 0.964
-    std: 0.007
-    model: MSH-GNN
-    arxiv_id: '2505.15015'
-    title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message Passing
-    date: '2025-05-21'
+  - value: 0.9792
+    std: null
+    model: WL-MLP
+    arxiv_id: '2202.10156'
+    title: 1-WL Expressiveness Is (Almost) All You Need
+    date: '2022-02-21'
   milestones_by_metric:
     Accuracy: *id001
     AUROC:

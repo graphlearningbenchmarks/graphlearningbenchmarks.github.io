@@ -126,9 +126,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RF-GCN
+  - model: AM-GCN
     model_key: sync ssl
-    model_plain: RF-GCN
+    model_plain: AM-GCN
     value: 0.9274
     std: 0.0004
     metric: F1
@@ -160,9 +160,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: RF-GCN
+  - model: AM-GCN
     model_key: idcrn
-    model_plain: RF-GCN
+    model_plain: AM-GCN
     value: 0.926
     std: 0.0008
     metric: F1
@@ -194,9 +194,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: RF-GCN
+  - model: AM-GCN
     model_key: agc-drr
-    model_plain: RF-GCN
+    model_plain: AM-GCN
     value: 0.9255
     std: 0.0009
     metric: F1
@@ -290,6 +290,73 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8782
+    std: null
+    paper_value: 0.8782
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semi
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 2, 2022
+    date_display: Sep 2022
+    date_iso: '2022-09-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9049
+    at_pub_std: null
+    at_pub_source_arxiv: '2007.02265'
+    at_pub_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-07-05'
+    at_pub_source_date_label: KDD 2020
+    value_gap_source_date_iso: '2020-07-05'
+    value_gap_source_date_label: KDD 2020
+    gap_vs_at_pub: 0.026700000000000057
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9049
+    true_std: null
+    value_gap_source_arxiv: '2007.02265'
+    value_gap_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.026700000000000057
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9049
+    sort_std: null
+    global_rank: 11
+    paper_rank: 17
+    rank_delta: 6
+    rank_delta_abs: 6
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    comparison_source_arxiv: '2007.02265'
+    is_best: false
+    is_std_outlier: false
   - model: AMGCN
     model_key: amgcn
     model_plain: AMGCN
@@ -338,7 +405,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9043
     sort_std: null
-    global_rank: 10
+    global_rank: 12
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -400,7 +467,7 @@ results:
     today_delta_significant: false
     sort_value: 0.904
     sort_std: null
-    global_rank: 11
+    global_rank: 13
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -412,6 +479,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.8744
+    std: null
+    paper_value: 0.8744
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: velickovic2018graph
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 2, 2022
+    date_display: Sep 2022
+    date_iso: '2022-09-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9039
+    at_pub_std: null
+    at_pub_source_arxiv: '2007.02265'
+    at_pub_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-07-05'
+    at_pub_source_date_label: KDD 2020
+    value_gap_source_date_iso: '2020-07-05'
+    value_gap_source_date_label: KDD 2020
+    gap_vs_at_pub: 0.02950000000000008
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9039
+    true_std: null
+    value_gap_source_arxiv: '2007.02265'
+    value_gap_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.02950000000000008
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9039
+    sort_std: null
+    global_rank: 13
+    paper_rank: 17
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    comparison_source_arxiv: '2007.02265'
     is_best: false
     is_std_outlier: false
   - model: GMI
@@ -462,7 +596,7 @@ results:
     today_delta_significant: false
     sort_value: 0.9
     sort_std: null
-    global_rank: 11
+    global_rank: 14
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -524,7 +658,7 @@ results:
     today_delta_significant: false
     sort_value: 0.89
     sort_std: null
-    global_rank: 13
+    global_rank: 16
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -586,131 +720,7 @@ results:
     today_delta_significant: false
     sort_value: 0.8879
     sort_std: null
-    global_rank: 14
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.8782
-    std: null
-    paper_value: 0.8782
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kipf2017semi
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 2, 2022
-    date_display: Sep 2022
-    date_iso: '2022-09-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.8782
-    sort_std: null
-    global_rank: 15
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.8744
-    std: null
-    paper_value: 0.8744
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: velickovic2018graph
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 2, 2022
-    date_display: Sep 2022
-    date_iso: '2022-09-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.8744
-    sort_std: null
-    global_rank: 15
+    global_rank: 17
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -754,36 +764,41 @@ results:
     date_iso: '2022-09-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.8483
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_source_arxiv: '2007.02265'
+    at_pub_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-07-05'
+    at_pub_source_date_label: KDD 2020
+    value_gap_source_date_iso: '2020-07-05'
+    value_gap_source_date_label: KDD 2020
+    gap_vs_at_pub: 0.006700000000000039
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.8416
-    sort_std: null
-    global_rank: 16
-    has_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8483
+    true_std: null
+    value_gap_source_arxiv: '2007.02265'
+    value_gap_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006700000000000039
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.8483
+    sort_std: null
+    global_rank: 19
+    paper_rank: 20
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    comparison_source_arxiv: '2007.02265'
     is_best: false
     is_std_outlier: false
   - model: MixHop
@@ -816,36 +831,41 @@ results:
     date_iso: '2022-09-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.8224
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_source_arxiv: '2007.02265'
+    at_pub_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-07-05'
+    at_pub_source_date_label: KDD 2020
+    value_gap_source_date_iso: '2020-07-05'
+    value_gap_source_date_label: KDD 2020
+    gap_vs_at_pub: 0.008400000000000074
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.814
-    sort_std: null
-    global_rank: 17
-    has_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8224
+    true_std: null
+    value_gap_source_arxiv: '2007.02265'
+    value_gap_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.008400000000000074
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.8224
+    sort_std: null
+    global_rank: 22
+    paper_rank: 23
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    comparison_source_arxiv: '2007.02265'
     is_best: false
     is_std_outlier: false
   - model: kNN-GCN
@@ -878,36 +898,41 @@ results:
     date_iso: '2022-09-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.8195
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_source_arxiv: '2007.02265'
+    at_pub_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-07-05'
+    at_pub_source_date_label: KDD 2020
+    value_gap_source_date_iso: '2020-07-05'
+    value_gap_source_date_label: KDD 2020
+    gap_vs_at_pub: 0.03810000000000002
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.7814
-    sort_std: null
-    global_rank: 17
-    has_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8195
+    true_std: null
+    value_gap_source_arxiv: '2007.02265'
+    value_gap_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03810000000000002
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.8195
+    sort_std: null
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    comparison_source_arxiv: '2007.02265'
     is_best: false
     is_std_outlier: false
   - model: ChebNet
@@ -958,7 +983,7 @@ results:
     today_delta_significant: false
     sort_value: 0.7486
     sort_std: null
-    global_rank: 17
+    global_rank: 24
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1002,36 +1027,41 @@ results:
     date_iso: '2022-09-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.6699
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_source_arxiv: '2007.02265'
+    at_pub_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-07-05'
+    at_pub_source_date_label: KDD 2020
+    value_gap_source_date_iso: '2020-07-05'
+    value_gap_source_date_label: KDD 2020
+    gap_vs_at_pub: 0.048800000000000066
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.6211
-    sort_std: null
-    global_rank: 17
-    has_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6699
+    true_std: null
+    value_gap_source_arxiv: '2007.02265'
+    value_gap_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.048800000000000066
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.6699
+    sort_std: null
+    global_rank: 24
+    paper_rank: 24
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    comparison_source_arxiv: '2007.02265'
     is_best: false
     is_std_outlier: false
   - model: SLAPS
@@ -1082,7 +1112,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6
     sort_std: null
-    global_rank: 17
+    global_rank: 25
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1126,36 +1156,41 @@ results:
     date_iso: '2022-09-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.4992
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_source_arxiv: '2007.02265'
+    at_pub_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    at_pub_source_date_iso: '2020-07-05'
+    at_pub_source_date_label: KDD 2020
+    value_gap_source_date_iso: '2020-07-05'
+    value_gap_source_date_label: KDD 2020
+    gap_vs_at_pub: 0.09799999999999998
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.4012
-    sort_std: null
-    global_rank: 17
-    has_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4992
+    true_std: null
+    value_gap_source_arxiv: '2007.02265'
+    value_gap_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09799999999999998
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.4992
+    sort_std: null
+    global_rank: 25
+    paper_rank: 25
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    comparison_source_arxiv: '2007.02265'
     is_best: false
     is_std_outlier: false
   rank_metric: F1
@@ -1181,5 +1216,6 @@ datasets_by_scope:
     - dataset: ACM
       dataset_slug: acm
 single_proposed_model: SPGRL
+main_figure: /figures/2209.00793/main_figure.jpegoptim.jpg
 ---
 

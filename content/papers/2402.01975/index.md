@@ -88,9 +88,9 @@ results:
 - &id001
   dataset: ESOL
   rows:
-  - model: KCL
+  - model: AMCT
     model_key: mat
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.278
     std: 0.02
     metric: RMSE
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: KCL
+  - model: AMCT
     model_key: smiles
-    model_plain: KCL
+    model_plain: AMCT
     value: 0.356
     std: 0.017
     metric: RMSE
@@ -151,6 +151,39 @@ results:
     global_rank: 2
     sort_value: 0.356
     sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AMCT
+    model_key: graphormer-spis
+    model_plain: AMCT
+    value: 0.484
+    std: 0.005
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2305.13987'
+    title: On Structural Expressive Power of Graph Transformers
+    date: May 23, 2023
+    date_display: May 2023
+    date_iso: '2023-05-23'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.484
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -213,8 +246,8 @@ results:
     value_note: ''
     sort_value: 0.514
     sort_std: 0.019
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -282,10 +315,10 @@ results:
     value_note: ''
     sort_value: 0.578
     sort_std: null
-    global_rank: 8
-    paper_rank: 47
-    rank_delta: 39
-    rank_delta_abs: 39
+    global_rank: 12
+    paper_rank: 57
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -351,8 +384,8 @@ results:
     value_note: ''
     sort_value: 0.591
     sort_std: 0.025
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -418,10 +451,10 @@ results:
     value_note: ''
     sort_value: 0.635
     sort_std: 0.027
-    global_rank: 20
-    paper_rank: 70
-    rank_delta: 50
-    rank_delta_abs: 50
+    global_rank: 28
+    paper_rank: 80
+    rank_delta: 52
+    rank_delta_abs: 52
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -486,8 +519,8 @@ results:
     value_note: ''
     sort_value: 0.635
     sort_std: 0.057
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -554,8 +587,8 @@ results:
     value_note: ''
     sort_value: 0.672
     sort_std: 0.027
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -622,8 +655,8 @@ results:
     value_note: ''
     sort_value: 0.681
     sort_std: 0.023
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -690,8 +723,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.029
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -759,8 +792,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.029
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -800,39 +833,40 @@ results:
     date_iso: '2024-02-03'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-02-03'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: null
+    at_pub_value: 0.848
+    at_pub_std: 0.013
+    at_pub_source_arxiv: '2310.07351'
+    at_pub_source_title: Atom-Motif Contrastive Transformer for Molecular Property
+      Prediction
+    at_pub_source_date_iso: '2023-10-11'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-10-11'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.03200000000000003
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.88
-    true_std: 0.028
-    value_gap_source_arxiv: '2402.01975'
-    value_gap_source_title: Structure-Aware E(3)-Invariant Molecular Conformer Aggregation
-      Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.848
+    true_std: 0.013
+    value_gap_source_arxiv: '2310.07351'
+    value_gap_source_title: Atom-Motif Contrastive Transformer for Molecular Property
+      Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03200000000000003
     has_value_note: false
     value_note: ''
-    sort_value: 0.88
-    sort_std: 0.028
-    global_rank: 48
-    paper_rank: 48
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.848
+    sort_std: 0.013
+    global_rank: 56
+    paper_rank: 57
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -895,8 +929,8 @@ results:
     value_note: ''
     sort_value: 0.889
     sort_std: 0.0
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -964,8 +998,8 @@ results:
     value_note: ''
     sort_value: 0.895
     sort_std: 0.017
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1033,8 +1067,8 @@ results:
     value_note: ''
     sort_value: 1.1
     sort_std: 0.006
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1101,8 +1135,8 @@ results:
     value_note: ''
     sort_value: 2.288
     sort_std: 0.017
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 134
+    paper_rank: 134
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1286,9 +1320,9 @@ results:
     sort_value: 1.01
     sort_std: 0.064
     global_rank: 8
-    paper_rank: 45
-    rank_delta: 37
-    rank_delta_abs: 37
+    paper_rank: 42
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1356,9 +1390,9 @@ results:
     sort_value: 1.034
     sort_std: null
     global_rank: 9
-    paper_rank: 45
-    rank_delta: 36
-    rank_delta_abs: 36
+    paper_rank: 42
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1765,8 +1799,8 @@ results:
     value_note: ''
     sort_value: 1.877
     sort_std: 0.094
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1833,8 +1867,8 @@ results:
     value_note: ''
     sort_value: 2.014
     sort_std: 0.182
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1902,8 +1936,8 @@ results:
     value_note: ''
     sort_value: 2.272
     sort_std: 0.051
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1970,8 +2004,8 @@ results:
     value_note: ''
     sort_value: 2.342
     sort_std: 0.052
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2039,8 +2073,8 @@ results:
     value_note: ''
     sort_value: 2.764
     sort_std: 0.002
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2107,8 +2141,8 @@ results:
     value_note: ''
     sort_value: 8.564
     sort_std: 1.345
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2143,5 +2177,6 @@ datasets_by_scope:
       dataset_slug: esol
     - dataset: FreeSolv
       dataset_slug: freesolv
+main_figure: /figures/2402.01975/main_figure.jpegoptim.jpg
 ---
 

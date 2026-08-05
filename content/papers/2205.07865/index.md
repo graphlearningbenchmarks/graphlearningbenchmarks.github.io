@@ -3603,5 +3603,6 @@ datasets_by_scope:
     - dataset: EAT
       dataset_slug: eat
 single_proposed_model: SCGC
+main_figure: /figures/2205.07865/main_figure.jpegoptim.jpg
 ---
 

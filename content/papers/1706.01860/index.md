@@ -712,5 +712,6 @@ datasets_by_scope:
     datasets:
     - dataset: DBLP
       dataset_slug: dblp
+main_figure: /figures/1706.01860/main_figure.jpegoptim.jpg
 ---
 

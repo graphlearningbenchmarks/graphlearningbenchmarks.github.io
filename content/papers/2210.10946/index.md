@@ -496,5 +496,6 @@ datasets_by_scope:
     datasets:
     - dataset: Cora
       dataset_slug: cora
+main_figure: /figures/2210.10946/main_figure.jpegoptim.jpg
 ---
 

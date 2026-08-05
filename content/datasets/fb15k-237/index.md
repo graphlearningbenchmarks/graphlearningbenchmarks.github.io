@@ -150,9 +150,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -193,9 +193,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -236,9 +236,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -321,9 +321,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -364,9 +364,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -407,9 +407,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -450,9 +450,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -493,9 +493,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -536,9 +536,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -706,9 +706,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -749,9 +749,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -960,9 +960,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -1003,9 +1003,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -1088,9 +1088,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -1131,9 +1131,9 @@ variants:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2302.02209'
     title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
       Graphs
@@ -2271,7 +2271,7 @@ variants:
   rows_json: /data/datasets/fb15k-237/standard-split-rows.json
   chart_json: /data/datasets/fb15k-237/standard-split-chart.json
   arch_counts:
-    gnn: 57
+    gnn: 72
     hybrid: 22
     graph_transformer: 2
     llm: 8

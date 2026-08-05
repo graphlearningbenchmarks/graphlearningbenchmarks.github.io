@@ -234,5 +234,6 @@ datasets_by_scope:
     datasets:
     - dataset: MD17
       dataset_slug: md17
+main_figure: /figures/2306.09549/main_figure.jpegoptim.jpg
 ---
 

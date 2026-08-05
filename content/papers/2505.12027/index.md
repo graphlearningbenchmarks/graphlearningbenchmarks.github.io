@@ -1158,5 +1158,6 @@ datasets_by_scope:
     datasets:
     - dataset: WN18RR
       dataset_slug: wn18rr
+main_figure: /figures/2505.12027/main_figure.jpegoptim.jpg
 ---
 

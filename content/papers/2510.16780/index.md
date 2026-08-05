@@ -62,8 +62,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - 3D-GSRD
-mrr: 0.0833
-adjusted_mrr: 0.0278
+mrr: 0.0714
+adjusted_mrr: 0.0238
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -239,8 +239,8 @@ results:
     value_note: ''
     sort_value: 0.0266
     sort_std: null
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -307,8 +307,8 @@ results:
     value_note: ''
     sort_value: 0.0352
     sort_std: null
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -376,8 +376,8 @@ results:
     value_note: ''
     sort_value: 0.039
     sort_std: null
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -445,8 +445,8 @@ results:
     value_note: ''
     sort_value: 0.0417
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -514,8 +514,8 @@ results:
     value_note: ''
     sort_value: 0.0431
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -549,5 +549,6 @@ datasets_by_scope:
     - dataset: MD17
       dataset_slug: md17
 single_proposed_model: 3D-GSRD
+main_figure: /figures/2510.16780/main_figure.jpegoptim.jpg
 ---
 

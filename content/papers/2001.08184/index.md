@@ -279,5 +279,6 @@ datasets_by_scope:
     - dataset: ENZYMES
       dataset_slug: enzymes
 single_proposed_model: GraphGen
+main_figure: /figures/2001.08184/main_figure.jpegoptim.jpg
 ---
 

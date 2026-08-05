@@ -70,9 +70,9 @@ results:
   dataset: Amazon-Photo
   is_multi_metric: true
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     metric_values:
     - 0.9766
     - null
@@ -109,9 +109,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     metric_values:
     - 0.9705
     - null
@@ -149,9 +149,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: graphtarif
-    model_plain: SGT
+    model_plain: C (orthogonal)
     metric_values:
     - 0.9703
     - null
@@ -251,7 +251,7 @@ results:
     comparison_source_arxiv: '2406.12052'
     is_best: false
     is_std_outlier: false
-    global_rank: 508
+    global_rank: 514
   metrics:
   - Accuracy
   - Recall
@@ -279,5 +279,6 @@ datasets_by_scope:
     datasets:
     - dataset: Amazon-Photo
       dataset_slug: amazon-photo
+main_figure: /figures/2412.19211/main_figure.jpegoptim.jpg
 ---
 

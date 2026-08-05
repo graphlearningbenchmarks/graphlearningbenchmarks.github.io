@@ -61,18 +61,14 @@ has_results: true
 paper_type: method
 proposed_models:
 - GAT
-- FreeKD (SAGE-SAGE)
-- FreeKD-Prompt (SAGE-SAGE)
-- FreeKD (GAT/GAT)
 - FreeKD-Prompt (GAT/GAT)
-- FreeKD (GAT-GAT)
-- FreeKD-Prompt (GCN-GCN)
-- FreeKD (SAGE/SAGE)
-- FreeKD-Prompt (SAGE/SAGE)
-- FreeKD-Prompt (GCN-SAGE)
-mrr: 0.0938
-adjusted_mrr: 0.0938
-mrr_dataset_count: 4
+- FreeKD
+- FreeKD-Prompt
+- FreeKD-Prompt (GCN/SAGE)
+- FreeKD-Prompt (SAGE-SAGE)
+mrr: 0.0196
+adjusted_mrr: 0.0065
+mrr_dataset_count: 1
 benchmark_categories:
 - Classic
 - Heterophilic Graphs
@@ -84,7 +80,7 @@ benchmark_coverage:
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 2
-  total: 13
+  total: 6
 task_categories:
 - node_classification
 experiment_scopes:
@@ -93,12 +89,14 @@ results:
 - &id005
   dataset: Chameleon
   rows:
-  - model: Random
-    model_key: hetero-s (gat 8-layer)
-    model_plain: Random
-    value: 0.8693
+  - model: FreeKD-Prompt
+    model_key: freekd-prompt
+    model_plain: FreeKD-Prompt
+    value: 0.505
     std: null
-    metric: Accuracy
+    paper_value: 0.505
+    paper_std: null
+    metric: F1 Score
     higher_is_better: true
     is_baseline: false
     is_overridden: false
@@ -107,221 +105,15 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.12539'
-    title: 'The Heterophilic Snowflake Hypothesis: Training and Empowering GNNs for
-      Heterophilic Graphs'
-    date: Jun 18, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-18'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/bingreeky/HeteroSnoH
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.8693
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Random
-    model_key: trans.conv+cna
-    model_plain: Random
-    value: 0.8586
-    std: 0.018
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2412.04064'
-    title: Graph Neural Networks Need Cluster-Normalize-Activate Modules
-    date: Dec 5, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-05'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/ml-research/cna_modules
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8586
-    sort_std: 0.018
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.4029
-    std: null
-    paper_value: 0.4029
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: mixed
+    feature_source_evidence: uses prompt-based graph augmentations
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.665
-    at_pub_std: 0.026
-    at_pub_source_arxiv: '2206.02386'
-    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
-      Clustering
-    at_pub_source_date_iso: '2022-06-06'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2024-06-18'
-    value_gap_source_date_label: KDD 2024
-    gap_vs_at_pub: 0.26210000000000006
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.856
-    true_std: null
-    value_gap_source_arxiv: '2406.12539'
-    value_gap_source_title: 'The Heterophilic Snowflake Hypothesis: Training and Empowering
-      GNNs for Heterophilic Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.4531
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.856
-    sort_std: null
-    global_rank: 3
-    paper_rank: 278
-    rank_delta: 275
-    rank_delta_abs: 275
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
-      Spectral Clustering
-    comparison_source_arxiv: '2206.02386'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.3309
-    std: null
-    paper_value: 0.3309
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6796
-    at_pub_std: 0.0182
-    at_pub_source_arxiv: '2106.06134'
-    at_pub_source_title: Is Homophily a Necessity for Graph Neural Networks?
-    at_pub_source_date_iso: '2021-06-11'
-    at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2024-01-17'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.34869999999999995
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7033
-    true_std: null
-    value_gap_source_arxiv: '2401.09125'
-    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.3724
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7033
-    sort_std: null
-    global_rank: 60
-    paper_rank: 292
-    rank_delta: 232
-    rank_delta_abs: 232
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Is Homophily a Necessity for Graph Neural Networks?
-    comparison_source_arxiv: '2106.06134'
-    is_best: false
-    is_std_outlier: false
-  - model: FreeKD-Prompt (SAGE/SAGE)
-    model_key: freekd-prompt (sage/sage)
-    model_plain: FreeKD-Prompt (SAGE/SAGE)
-    value: 0.5007
-    std: null
-    paper_value: 0.5007
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
+    protocol_note: 'Transductive node classification, F1 Score, $       si$ column.'
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -343,7 +135,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.5007
+    true_value: 0.505
     true_std: null
     value_gap_source_arxiv: '2307.00534'
     value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
@@ -352,10 +144,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.5007
+    sort_value: 0.505
     sort_std: null
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -363,16 +155,16 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: FreeKD (SAGE/SAGE)
-    model_key: freekd (sage/sage)
-    model_plain: FreeKD (SAGE/SAGE)
-    value: 0.4989
+  - model: FreeKD
+    model_key: freekd
+    model_plain: FreeKD
+    value: 0.4993
     std: null
-    paper_value: 0.4989
+    paper_value: 0.4993
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: false
     is_overridden: false
@@ -382,14 +174,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
+    protocol_note: 'Transductive node classification, F1 Score, $       si$ column.'
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -411,7 +203,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.4989
+    true_value: 0.4993
     true_std: null
     value_gap_source_arxiv: '2307.00534'
     value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
@@ -420,10 +212,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.4989
+    sort_value: 0.4993
     sort_std: null
-    global_rank: 213
-    paper_rank: 213
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -440,7 +232,7 @@ results:
     std: null
     paper_value: 0.4877
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -450,14 +242,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
+    protocol_note: 'Transductive node classification, F1 Score, $       hi$ column.'
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -490,76 +282,8 @@ results:
     value_note: ''
     sort_value: 0.4877
     sort_std: null
-    global_rank: 220
-    paper_rank: 220
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Teacher (GCNII)
-    model_key: teacher (gcnii)
-    model_plain: Teacher (GCNII)
-    value: 0.4684
-    std: null
-    paper_value: 0.4684
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4684
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4684
-    sort_std: null
-    global_rank: 234
-    paper_rank: 234
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -576,7 +300,7 @@ results:
     std: null
     paper_value: 0.4404
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -585,15 +309,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: distills from GCNII teacher
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
+    protocol_note: Transductive node classification, F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -626,8 +350,8 @@ results:
     value_note: ''
     sort_value: 0.4404
     sort_std: null
-    global_rank: 249
-    paper_rank: 249
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -644,7 +368,7 @@ results:
     std: null
     paper_value: 0.4377
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -653,15 +377,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: distills from GCNII teacher
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
+    protocol_note: Transductive node classification, F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -694,8 +418,8 @@ results:
     value_note: ''
     sort_value: 0.4377
     sort_std: null
-    global_rank: 253
-    paper_rank: 253
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -712,7 +436,7 @@ results:
     std: null
     paper_value: 0.4364
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -721,15 +445,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: distills from GCNII teacher
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
+    protocol_note: Transductive node classification, F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -762,8 +486,8 @@ results:
     value_note: ''
     sort_value: 0.4364
     sort_std: null
-    global_rank: 254
-    paper_rank: 254
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -780,7 +504,7 @@ results:
     std: null
     paper_value: 0.4219
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -789,15 +513,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: distills from GCNII teacher
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
+    protocol_note: Transductive node classification, F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -830,8 +554,8 @@ results:
     value_note: ''
     sort_value: 0.4219
     sort_std: null
-    global_rank: 266
-    paper_rank: 266
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -848,7 +572,7 @@ results:
     std: null
     paper_value: 0.4173
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -857,15 +581,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: ensemble learning teacher
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
+    protocol_note: Transductive node classification, F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -898,8 +622,8 @@ results:
     value_note: ''
     sort_value: 0.4173
     sort_std: null
-    global_rank: 271
-    paper_rank: 271
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -916,7 +640,7 @@ results:
     std: null
     paper_value: 0.4092
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -926,14 +650,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Chameleon
+    protocol_note: Transductive node classification, F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -966,8 +690,8 @@ results:
     value_note: ''
     sort_value: 0.4092
     sort_std: null
-    global_rank: 278
-    paper_rank: 278
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -977,26 +701,162 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  rank_metric: Accuracy
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.4029
+    std: null
+    paper_value: 0.4029
+    paper_std: null
+    metric: F1 Score
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 'Transductive node classification, F1 Score, $       hi$ column.'
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4029
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4029
+    sort_std: null
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.3309
+    std: null
+    paper_value: 0.3309
+    paper_std: null
+    metric: F1 Score
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 'Transductive node classification, F1 Score, $       hi$ column.'
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3309
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3309
+    sort_std: null
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1 Score
   higher_is_better: true
   experiment_scope: node-level
   dataset_primary_metric: Accuracy
   paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
+  - F1 Score
+  metric: F1 Score
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
 - &id002
   dataset: CiteSeer
   rows:
-  - model: FreeKD-Prompt (GCN-SAGE)
-    model_key: freekd-prompt (gcn-sage)
-    model_plain: FreeKD-Prompt (GCN-SAGE)
+  - model: FreeKD-Prompt (GCN/SAGE)
+    model_key: freekd-prompt (gcn/sage)
+    model_plain: FreeKD-Prompt (GCN/SAGE)
     value: 0.7868
     std: null
     paper_value: 0.7868
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: false
     is_overridden: false
@@ -1006,14 +866,15 @@ results:
     architecture_label: null
     architecture_title: ''
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -1057,31 +918,32 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Teacher (GCNII)
-    model_key: teacher (gcnii)
-    model_plain: Teacher (GCNII)
+  - model: Teacher GCNII
+    model_key: teacher gcnii
+    model_plain: Teacher GCNII
     value: 0.786
     std: null
     paper_value: 0.786
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -1132,7 +994,7 @@ results:
     std: null
     paper_value: 0.778
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -1142,14 +1004,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -1193,14 +1056,14 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: FreeKD (SAGE-SAGE)
-    model_key: freekd (sage-sage)
-    model_plain: FreeKD (SAGE-SAGE)
+  - model: FreeKD
+    model_key: freekd
+    model_plain: FreeKD
     value: 0.7778
     std: null
     paper_value: 0.7778
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: false
     is_overridden: false
@@ -1210,14 +1073,15 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -1268,7 +1132,7 @@ results:
     std: null
     paper_value: 0.7762
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -1278,14 +1142,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -1336,7 +1201,7 @@ results:
     std: null
     paper_value: 0.7721
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -1346,14 +1211,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -1404,7 +1270,7 @@ results:
     std: null
     paper_value: 0.7703
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -1414,14 +1280,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -1472,7 +1339,7 @@ results:
     std: null
     paper_value: 0.7656
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -1482,31 +1349,32 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.716
-    at_pub_std: 0.007
-    at_pub_source_arxiv: '2103.14991'
-    at_pub_source_title: Graph Unlearning
-    at_pub_source_date_iso: '2021-03-27'
-    at_pub_source_date_label: '2021'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.04959999999999998
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1527,10 +1395,10 @@ results:
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Graph Unlearning
-    comparison_source_arxiv: '2103.14991'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: RDD
@@ -1540,7 +1408,7 @@ results:
     std: null
     paper_value: 0.7602
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -1550,14 +1418,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -1608,7 +1477,7 @@ results:
     std: null
     paper_value: 0.7596
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -1618,14 +1487,15 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -1676,9 +1546,9 @@ results:
     std: null
     paper_value: 0.7566
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1686,31 +1556,32 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.746
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2103.14991'
-    at_pub_source_title: Graph Unlearning
-    at_pub_source_date_iso: '2021-03-27'
-    at_pub_source_date_label: '2021'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.010600000000000054
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1731,10 +1602,10 @@ results:
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Graph Unlearning
-    comparison_source_arxiv: '2103.14991'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -1744,7 +1615,7 @@ results:
     std: null
     paper_value: 0.7542
     paper_std: null
-    metric: F1
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -1754,31 +1625,32 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed split)
+    protocol_note: Transductive node classification on CiteSeer using Planetoid split
+      (Yang et al. 2016).
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.493
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2103.14991'
-    at_pub_source_title: Graph Unlearning
-    at_pub_source_date_iso: '2021-03-27'
-    at_pub_source_date_label: '2021'
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.2612
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
@@ -1799,6 +1671,387 @@ results:
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1 Score
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - F1 Score
+  metric: F1 Score
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
+- &id001
+  dataset: Cora
+  rows:
+  - model: SGCONV
+    model_key: acm-gcn
+    model_plain: SGCONV
+    value: 0.8894
+    std: 0.0054
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.05894'
+    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
+    date: Feb 8, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-08'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8894
+    sort_std: 0.0054
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SGCONV
+    model_key: appnp
+    model_plain: SGCONV
+    value: 0.888
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: APPNP is a standard GNN.
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.888
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SGCONV
+    model_key: graphsage
+    model_plain: SGCONV
+    value: 0.881
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: GraphSAGE is a standard GNN that pools node attributes.
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.881
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8512
+    std: null
+    paper_value: 0.8512
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split, F1 Score
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.879
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.027800000000000047
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.879
+    true_std: 0.001
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
+    value_gap_source_is_current_paper: false
+    value_gap: 0.027800000000000047
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.879
+    sort_std: 0.001
+    global_rank: 6
+    paper_rank: 15
+    rank_delta: 9
+    rank_delta_abs: 9
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
+    is_best: false
+    is_std_outlier: false
+  - model: FreeKD-Prompt (GAT/GAT)
+    model_key: freekd-prompt (gat/gat)
+    model_plain: FreeKD-Prompt (GAT/GAT)
+    value: 0.8744
+    std: null
+    paper_value: 0.8744
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split, F1 Score
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8744
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8744
+    sort_std: null
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.8545
+    std: null
+    paper_value: 0.8545
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split, F1 Score
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.867
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '1909.13021'
+    at_pub_source_title: Multi-Scale Attributed Node Embedding
+    at_pub_source_date_iso: '2019-09-25'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-09-25'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.012499999999999956
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.867
+    true_std: 0.002
+    value_gap_source_arxiv: '1909.13021'
+    value_gap_source_title: Multi-Scale Attributed Node Embedding
+    value_gap_source_is_current_paper: false
+    value_gap: 0.012499999999999956
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.867
+    sort_std: 0.002
+    global_rank: 11
+    paper_rank: 13
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Multi-Scale Attributed Node Embedding
+    comparison_source_arxiv: '1909.13021'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8536
+    std: null
+    paper_value: 0.8536
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Planetoid split, F1 Score
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.824
+    at_pub_std: 0.004
+    at_pub_source_arxiv: '2103.14991'
+    at_pub_source_title: Graph Unlearning
+    at_pub_source_date_iso: '2021-03-27'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.02960000000000007
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8536
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8536
+    sort_std: null
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Graph Unlearning
@@ -1814,877 +2067,12 @@ results:
   metric: F1
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id001
-  dataset: Cora
-  rows:
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
-    model_key: exphormer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
-    value: 0.9635
-    std: 0.0019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9635
-    sort_std: 0.0019
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
-    model_key: sgformer
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
-    value: 0.9629
-    std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.9629
-    sort_std: 0.0015
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Diffusion-GCN (PPR) + LayerNorm + FF
-    model_key: coral
-    model_plain: Diffusion-GCN (PPR) + LayerNorm + FF
-    value: 0.9574
-    std: 0.0039
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2602.19622'
-    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
-      Graph Token Attention'
-    date: Feb 23, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-23'
-    venue: The Web Conference
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9574
-    sort_std: 0.0039
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.8512
-    std: null
-    paper_value: 0.8512
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8733
-    at_pub_std: 0.0038
-    at_pub_source_arxiv: '2210.03930'
-    at_pub_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    at_pub_source_date_iso: '2022-10-08'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-01-17'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.02210000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9004
-    true_std: null
-    value_gap_source_arxiv: '2401.09125'
-    value_gap_source_title: Understanding Heterophily for Graph Neural Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.04920000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9004
-    sort_std: null
-    global_rank: 27
-    paper_rank: 282
-    rank_delta: 255
-    rank_delta_abs: 255
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    comparison_source_arxiv: '2210.03930'
-    is_best: false
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.8536
-    std: null
-    paper_value: 0.8536
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8178
-    at_pub_std: null
-    at_pub_source_arxiv: '2103.02885'
-    at_pub_source_title: 'Extract the Knowledge of Graph Neural Networks and Go Beyond
-      it: An Effective Knowledge Distillation Framework'
-    at_pub_source_date_iso: '2021-03-04'
-    at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2025-06-08'
-    value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: 0.035800000000000054
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8911
-    true_std: 0.0012
-    value_gap_source_arxiv: '2506.07168'
-    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03749999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8911
-    sort_std: 0.0012
-    global_rank: 52
-    paper_rank: 267
-    rank_delta: 215
-    rank_delta_abs: 215
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'Extract the Knowledge of Graph Neural Networks and Go
-      Beyond it: An Effective Knowledge Distillation Framework'
-    comparison_source_arxiv: '2103.02885'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.8545
-    std: null
-    paper_value: 0.8545
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Planetoid split (Yang et al. 2016 fixed 20-per-class train split)
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.889
-    at_pub_std: 0.0
-    at_pub_source_arxiv: '2009.09232'
-    at_pub_source_title: Learned Low Precision Graph Neural Networks
-    at_pub_source_date_iso: '2020-09-19'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2026-05-24'
-    value_gap_source_date_label: ICML 2026
-    gap_vs_at_pub: 0.034499999999999975
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8897
-    true_std: null
-    value_gap_source_arxiv: '2605.24867'
-    value_gap_source_title: 'Clustering as Reasoning: A $k$-Means Interpretation of
-      Chain-of-Thought Graph Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03520000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8897
-    sort_std: null
-    global_rank: 57
-    paper_rank: 263
-    rank_delta: 206
-    rank_delta_abs: 206
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Learned Low Precision Graph Neural Networks
-    comparison_source_arxiv: '2009.09232'
-    is_best: false
-    is_std_outlier: false
-  - model: FreeKD-Prompt (GCN-GCN)
-    model_key: freekd-prompt (gcn-gcn)
-    model_plain: FreeKD-Prompt (GCN-GCN)
-    value: 0.8746
-    std: null
-    paper_value: 0.8746
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 'Planetoid split (Yang et al. 2016 fixed 20-per-class train split).
-      Using best value for $       si$ (GCN) in mutual distillation.'
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8746
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8746
-    sort_std: null
-    global_rank: 142
-    paper_rank: 142
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: FreeKD (GAT-GAT)
-    model_key: freekd (gat-gat)
-    model_plain: FreeKD (GAT-GAT)
-    value: 0.8668
-    std: null
-    paper_value: 0.8668
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 'Planetoid split (Yang et al. 2016 fixed 20-per-class train split).
-      Using best value for $       si$ (GAT) in mutual distillation.'
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8668
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8668
-    sort_std: null
-    global_rank: 197
-    paper_rank: 197
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: G-CRD
-    model_key: g-crd
-    model_plain: G-CRD
-    value: 0.8643
-    std: null
-    paper_value: 0.8643
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from GCNII teacher into GAT student.
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8643
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8643
-    sort_std: null
-    global_rank: 208
-    paper_rank: 208
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: CPF
-    model_key: cpf
-    model_plain: CPF
-    value: 0.8641
-    std: null
-    paper_value: 0.8641
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from GCNII teacher into GAT student.
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8641
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8641
-    sort_std: null
-    global_rank: 212
-    paper_rank: 212
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LSP
-    model_key: lsp
-    model_plain: LSP
-    value: 0.8625
-    std: null
-    paper_value: 0.8625
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from GCNII teacher into GAT student.
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8625
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8625
-    sort_std: null
-    global_rank: 221
-    paper_rank: 221
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: KD
-    model_key: kd
-    model_plain: KD
-    value: 0.8613
-    std: null
-    paper_value: 0.8613
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from GCNII teacher into GAT student.
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8613
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8613
-    sort_std: null
-    global_rank: 231
-    paper_rank: 231
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: RDD
-    model_key: rdd
-    model_plain: RDD
-    value: 0.8584
-    std: null
-    paper_value: 0.8584
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Ensemble learning teacher.
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8584
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8584
-    sort_std: null
-    global_rank: 245
-    paper_rank: 245
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GNN-SD
-    model_key: gnn-sd
-    model_plain: GNN-SD
-    value: 0.8575
-    std: null
-    paper_value: 0.8575
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from shallow to deep layers in one GNN.
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8575
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8575
-    sort_std: null
-    global_rank: 251
-    paper_rank: 251
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
 - &id003
   dataset: PPI
   rows:
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: gamlp(jk)
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.9982
     std: 0.01
     metric: F1
@@ -2715,9 +2103,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
+  - model: Cluster-GCN
     model_key: graphcon-gcn
-    model_plain: Whole Dataset
+    model_plain: Cluster-GCN
     value: 0.996
     std: null
     metric: F1
@@ -2748,34 +2136,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Whole Dataset
-    model_key: graphsaint
-    model_plain: Whole Dataset
-    value: 0.995
-    std: null
+  - model: Cluster-GCN
+    model_key: gcnii
+    model_plain: Cluster-GCN
+    value: 0.9956
+    std: 0.02
     metric: F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2302.00924'
-    title: 'LMC: Fast Training of GNNs via subgraph-wise sampling with Provable Convergence'
-    date: Feb 2, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-02'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/MIRALab-USTC/GNN-LMC
+    arxiv_id: '2007.02133'
+    title: Simple and Deep Graph Convolutional Networks
+    date: Jul 4, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/DropEdge/DropEdge
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.995
-    sort_std: null
+    sort_value: 0.9956
+    sort_std: 0.02
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2798,14 +2186,14 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table inductive
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Inductive setting on PPI
+    protocol_note: Inductive setting, test split, F1 score
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -2849,9 +2237,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FreeKD (GAT/GAT)
-    model_key: freekd (gat/gat)
-    model_plain: FreeKD (GAT/GAT)
+  - model: FreeKD
+    model_key: freekd
+    model_plain: FreeKD
     value: 0.9879
     std: null
     paper_value: 0.9879
@@ -2866,25 +2254,26 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table inductive
+    table_ref: Table 4
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Inductive setting on PPI
+    protocol_note: Inductive setting, test split, F1 score
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.9879
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2206.06561'
+    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    at_pub_source_date_iso: '2022-06-14'
+    at_pub_source_date_label: KDD 2022
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -2917,351 +2306,6 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: G-CRD
-    model_key: g-crd
-    model_plain: G-CRD
-    value: 0.9837
-    std: null
-    paper_value: 0.9837
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from GCNII teacher
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9842
-    at_pub_std: 0.0014
-    at_pub_source_arxiv: '2111.04964'
-    at_pub_source_title: On Representation Knowledge Distillation for Graph Neural
-      Networks
-    at_pub_source_date_iso: '2021-11-09'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-11-09'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.0004999999999999449
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.9842
-    true_std: 0.0014
-    value_gap_source_arxiv: '2111.04964'
-    value_gap_source_title: On Representation Knowledge Distillation for Graph Neural
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0004999999999999449
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9842
-    sort_std: 0.0014
-    global_rank: 22
-    paper_rank: 25
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LSP
-    model_key: lsp
-    model_plain: LSP
-    value: 0.9825
-    std: null
-    paper_value: 0.9825
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from GCNII teacher
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9825
-    at_pub_std: null
-    at_pub_source_arxiv: '2206.06561'
-    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
-      Neural Networks'
-    at_pub_source_date_iso: '2022-06-14'
-    at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9825
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9825
-    sort_std: null
-    global_rank: 27
-    paper_rank: 27
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: KD
-    model_key: kd
-    model_plain: KD
-    value: 0.9781
-    std: null
-    paper_value: 0.9781
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from GCNII teacher
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9793
-    at_pub_std: 0.0026
-    at_pub_source_arxiv: '2111.04964'
-    at_pub_source_title: On Representation Knowledge Distillation for Graph Neural
-      Networks
-    at_pub_source_date_iso: '2021-11-09'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-11-09'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.0011999999999999789
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.9793
-    true_std: 0.0026
-    value_gap_source_arxiv: '2111.04964'
-    value_gap_source_title: On Representation Knowledge Distillation for Graph Neural
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0011999999999999789
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9793
-    sort_std: 0.0026
-    global_rank: 32
-    paper_rank: 36
-    rank_delta: 4
-    rank_delta_abs: 4
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GNN-SD
-    model_key: gnn-sd
-    model_plain: GNN-SD
-    value: 0.9773
-    std: null
-    paper_value: 0.9773
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from GCNII teacher
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9773
-    at_pub_std: null
-    at_pub_source_arxiv: '2206.06561'
-    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
-      Neural Networks'
-    at_pub_source_date_iso: '2022-06-14'
-    at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9773
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9773
-    sort_std: null
-    global_rank: 40
-    paper_rank: 40
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: RDD
-    model_key: rdd
-    model_plain: RDD
-    value: 0.9766
-    std: null
-    paper_value: 0.9766
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Distilling from GCNII teacher
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9766
-    at_pub_std: null
-    at_pub_source_arxiv: '2206.06561'
-    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
-      Neural Networks'
-    at_pub_source_date_iso: '2022-06-14'
-    at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.9766
-    true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9766
-    sort_std: null
-    global_rank: 43
-    paper_rank: 43
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
   - model: GAT
     model_key: gat
     model_plain: GAT
@@ -3279,14 +2323,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Inductive setting on PPI
+    protocol_note: Inductive setting, test split, F1 score
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -3320,8 +2364,8 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3348,14 +2392,14 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Inductive setting on PPI
+    protocol_note: Inductive setting, test split, F1 score
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -3388,8 +2432,8 @@ results:
     value_note: ''
     sort_value: 0.6928
     sort_std: null
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3411,243 +2455,6 @@ results:
 - &id004
   dataset: Texas
   rows:
-  - model: DoG
-    model_key: p^2gnn
-    model_plain: DoG
-    value: 0.9672
-    std: 0.0147
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2603.09195'
-    title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
-    date: Mar 10, 2026
-    date_display: Mar 2026
-    date_iso: '2026-03-10'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9672
-    sort_std: 0.0147
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DoG
-    model_key: dog
-    model_plain: DoG
-    value: 0.966
-    std: 0.021
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2503.12563'
-    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
-    date: Mar 16, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-16'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
-    uses_external_data: true
-    input_feature_source: raw_features
-    feature_source_evidence: DoG generates synthetic graph structures to boost the
-      performance of GNNs.
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.966
-    sort_std: 0.021
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DoG
-    model_key: gpf-plus
-    model_plain: DoG
-    value: 0.9583
-    std: 0.0419
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2406.05346'
-    title: 'ProG: A Graph Prompt Learning Benchmark'
-    date: Jun 8, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-08'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/sheldonresearch/ProG
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9583
-    sort_std: 0.0419
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.7622
-    std: null
-    paper_value: 0.7622
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.843
-    at_pub_std: 0.055
-    at_pub_source_arxiv: '2102.11391'
-    at_pub_source_title: 'MagNet: A Neural Network for Directed Graphs'
-    at_pub_source_date_iso: '2021-02-22'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-02-22'
-    value_gap_source_date_label: NeurIPS 2021
-    gap_vs_at_pub: 0.08079999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.843
-    true_std: 0.055
-    value_gap_source_arxiv: '2102.11391'
-    value_gap_source_title: 'MagNet: A Neural Network for Directed Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08079999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.843
-    sort_std: 0.055
-    global_rank: 183
-    paper_rank: 322
-    rank_delta: 139
-    rank_delta_abs: 139
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'MagNet: A Neural Network for Directed Graphs'
-    comparison_source_arxiv: '2102.11391'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.5784
-    std: null
-    paper_value: 0.5784
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.798
-    at_pub_std: 0.043
-    at_pub_source_arxiv: '2206.02386'
-    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
-      Clustering
-    at_pub_source_date_iso: '2022-06-06'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2025-06-17'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.21960000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8162
-    true_std: 0.0645
-    value_gap_source_arxiv: '2506.14291'
-    value_gap_source_title: 'Equivariance Everywhere All At Once: A Recipe for Graph
-      Foundation Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.2378
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8162
-    sort_std: 0.0645
-    global_rank: 236
-    paper_rank: 559
-    rank_delta: 323
-    rank_delta_abs: 323
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
-      Spectral Clustering
-    comparison_source_arxiv: '2206.02386'
-    is_best: false
-    is_std_outlier: false
   - model: FreeKD-Prompt (SAGE-SAGE)
     model_key: freekd-prompt (sage-sage)
     model_plain: FreeKD-Prompt (SAGE-SAGE)
@@ -3655,7 +2462,7 @@ results:
     std: null
     paper_value: 0.8108
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: false
     is_overridden: false
@@ -3665,14 +2472,14 @@ results:
     architecture_label: null
     architecture_title: ''
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -3705,8 +2512,8 @@ results:
     value_note: ''
     sort_value: 0.8108
     sort_std: null
-    global_rank: 254
-    paper_rank: 254
+    global_rank: 1
+    paper_rank: 1
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3714,85 +2521,16 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.5757
-    std: null
-    paper_value: 0.5757
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
-    date: Jul 2, 2023
-    date_display: Jul 2023
-    date_iso: '2023-07-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.784
-    at_pub_std: 0.054
-    at_pub_source_arxiv: '2206.02386'
-    at_pub_source_title: Restructuring Graphs for Higher Homophily via Adaptive Spectral
-      Clustering
-    at_pub_source_date_iso: '2022-06-06'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2025-04-22'
-    value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: 0.20830000000000004
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7933
-    true_std: 0.0447
-    value_gap_source_arxiv: '2505.20034'
-    value_gap_source_title: Graph Wave Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.21760000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7933
-    sort_std: 0.0447
-    global_rank: 287
-    paper_rank: 563
-    rank_delta: 276
-    rank_delta_abs: 276
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Restructuring Graphs for Higher Homophily via Adaptive
-      Spectral Clustering
-    comparison_source_arxiv: '2206.02386'
-    is_best: false
-    is_std_outlier: false
-  - model: FreeKD (SAGE-SAGE)
-    model_key: freekd (sage-sage)
-    model_plain: FreeKD (SAGE-SAGE)
+  - model: FreeKD
+    model_key: freekd
+    model_plain: FreeKD
     value: 0.7784
     std: null
     paper_value: 0.7784
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: false
     is_overridden: false
@@ -3802,29 +2540,30 @@ results:
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.7876
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2206.06561'
+    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    at_pub_source_date_iso: '2022-06-14'
+    at_pub_source_date_label: KDD 2022
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    gap_vs_at_pub: 0.009199999999999986
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
@@ -3842,42 +2581,43 @@ results:
     value_note: ''
     sort_value: 0.7784
     sort_std: null
-    global_rank: 306
-    paper_rank: 306
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    comparison_source_arxiv: '2206.06561'
     is_best: false
     is_std_outlier: false
-  - model: Teacher (GCNII)
-    model_key: teacher (gcnii)
-    model_plain: Teacher (GCNII)
-    value: 0.6514
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7622
     std: null
-    paper_value: 0.6514
+    paper_value: 0.7622
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 2
+    table_ref: Table 1
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -3899,7 +2639,7 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.6514
+    true_value: 0.7622
     true_std: null
     value_gap_source_arxiv: '2307.00534'
     value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
@@ -3908,10 +2648,10 @@ results:
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6514
+    sort_value: 0.7622
     sort_std: null
-    global_rank: 450
-    paper_rank: 450
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3928,7 +2668,7 @@ results:
     std: null
     paper_value: 0.6081
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -3937,26 +2677,27 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: distilling knowledge from the stronger teacher GCNII
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.6081
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2206.06561'
+    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    at_pub_source_date_iso: '2022-06-14'
+    at_pub_source_date_label: KDD 2022
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -3978,8 +2719,8 @@ results:
     value_note: ''
     sort_value: 0.6081
     sort_std: null
-    global_rank: 499
-    paper_rank: 499
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3996,7 +2737,7 @@ results:
     std: null
     paper_value: 0.6054
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -4005,15 +2746,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: distilling knowledge from the stronger teacher GCNII
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
@@ -4046,8 +2787,8 @@ results:
     value_note: ''
     sort_value: 0.6054
     sort_std: null
-    global_rank: 505
-    paper_rank: 505
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4064,7 +2805,7 @@ results:
     std: null
     paper_value: 0.5973
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -4073,26 +2814,27 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: distilling knowledge from the stronger teacher GCNII
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.5973
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2206.06561'
+    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    at_pub_source_date_iso: '2022-06-14'
+    at_pub_source_date_label: KDD 2022
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -4114,8 +2856,8 @@ results:
     value_note: ''
     sort_value: 0.5973
     sort_std: null
-    global_rank: 514
-    paper_rank: 514
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4132,7 +2874,7 @@ results:
     std: null
     paper_value: 0.5946
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -4141,26 +2883,27 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: distilling knowledge from the stronger teacher GCNII
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.5946
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2206.06561'
+    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    at_pub_source_date_iso: '2022-06-14'
+    at_pub_source_date_label: KDD 2022
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -4182,8 +2925,8 @@ results:
     value_note: ''
     sort_value: 0.5946
     sort_std: null
-    global_rank: 522
-    paper_rank: 522
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4200,7 +2943,7 @@ results:
     std: null
     paper_value: 0.5892
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -4209,26 +2952,27 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
+    uses_external_data: 1
+    input_feature_source: raw_features
+    feature_source_evidence: complex teacher network is generated by ensemble learning
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.5892
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2206.06561'
+    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    at_pub_source_date_iso: '2022-06-14'
+    at_pub_source_date_label: KDD 2022
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -4250,8 +2994,8 @@ results:
     value_note: ''
     sort_value: 0.5892
     sort_std: null
-    global_rank: 540
-    paper_rank: 540
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4268,7 +3012,7 @@ results:
     std: null
     paper_value: 0.5865
     paper_std: null
-    metric: Accuracy
+    metric: F1 Score
     higher_is_better: true
     is_baseline: true
     is_overridden: false
@@ -4278,25 +3022,26 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     uses_external_data: 0
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     table_ref: Table 2
     source_ref: this paper
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
-    protocol_note: Transductive node classification on Texas split
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
     date: Jul 2, 2023
     date_display: Jul 2023
     date_iso: '2023-07-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
+    at_pub_value: 0.5865
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_source_arxiv: '2206.06561'
+    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    at_pub_source_date_iso: '2022-06-14'
+    at_pub_source_date_label: KDD 2022
     value_gap_source_date_iso: '2023-07-02'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
@@ -4318,8 +3063,8 @@ results:
     value_note: ''
     sort_value: 0.5865
     sort_std: null
-    global_rank: 543
-    paper_rank: 543
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4329,15 +3074,153 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  rank_metric: Accuracy
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.5784
+    std: null
+    paper_value: 0.5784
+    paper_std: null
+    metric: F1 Score
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5784
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.06561'
+    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    at_pub_source_date_iso: '2022-06-14'
+    at_pub_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5784
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5784
+    sort_std: null
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.5757
+    std: null
+    paper_value: 0.5757
+    paper_std: null
+    metric: F1 Score
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Transductive node classification on Texas split; metric is F1 Score.
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5757
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.06561'
+    at_pub_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    at_pub_source_date_iso: '2022-06-14'
+    at_pub_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2023-07-02'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5757
+    true_std: null
+    value_gap_source_arxiv: '2307.00534'
+    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
+      Knowledge Distillation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5757
+    sort_std: null
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: F1 Score
   higher_is_better: true
   experiment_scope: node-level
   dataset_primary_metric: Accuracy
   paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
+  - F1 Score
+  metric: F1 Score
+  uses_non_primary_metric: true
+  paper_has_primary_metric: false
 results_grouped:
 - benchmark: Classic
   datasets:
@@ -4368,5 +3251,6 @@ datasets_by_scope:
       dataset_slug: texas
     - dataset: Chameleon
       dataset_slug: chameleon
+main_figure: /figures/2307.00534/main_figure.jpegoptim.jpg
 ---
 

@@ -47,7 +47,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphTARIF
-mrr: 0.1707
+mrr: 0.1706
 adjusted_mrr: 0.1138
 mrr_dataset_count: 2
 benchmark_categories:
@@ -65,9 +65,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: SGT
+  - model: C (orthogonal)
     model_key: msh-gnn
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -98,9 +98,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGT
+  - model: C (orthogonal)
     model_key: geomancer
-    model_plain: SGT
+    model_plain: C (orthogonal)
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -223,5 +223,6 @@ datasets_by_scope:
     - dataset: Amazon-Photo
       dataset_slug: amazon-photo
 single_proposed_model: GraphTARIF
+main_figure: /figures/2510.10631/main_figure.jpegoptim.jpg
 ---
 

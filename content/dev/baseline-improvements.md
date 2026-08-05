@@ -10,10 +10,10 @@ dev_table_json: /data/development/baseline-improvements.json
 
 Papers that reported a result better than the best known for that model and dataset when they were published (baseline and proposed rows).
 
-**Total rows:** 2679
-**Significant:** 1537
-**Within uncertainty (not highlighted on paper pages):** 1142
-**Later surpassed by another paper:** 286
+**Total rows:** 2801
+**Significant:** 1604
+**Within uncertainty (not highlighted on paper pages):** 1197
+**Later surpassed by another paper:** 308
 
 
 Detailed table: 500 rows (loaded below).

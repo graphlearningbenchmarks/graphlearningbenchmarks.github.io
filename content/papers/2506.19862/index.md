@@ -70,7 +70,7 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id003
+- &id004
   dataset: COVID
   is_multi_metric: true
   rows:
@@ -1885,7 +1885,7 @@ results:
   metric: RMSE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: TorsionAngle
   rows:
   - model: DualEquiNet
@@ -2451,10 +2451,10 @@ datasets_by_scope:
       dataset_slug: ribonanza
     - dataset: Tc-Ribo
       dataset_slug: tc-ribo
-    - dataset: COVID
-      dataset_slug: covid
     - dataset: TorsionAngle
       dataset_slug: torsionangle
+    - dataset: COVID
+      dataset_slug: covid
 single_proposed_model: DualEquiNet
 main_figure: /figures/2506.19862/main_figure.jpegoptim.jpg
 ---

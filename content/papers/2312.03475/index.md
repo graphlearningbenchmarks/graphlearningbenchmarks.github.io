@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MoleculeJAE
-mrr: 0.0169
-adjusted_mrr: 0.0056
+mrr: 0.0127
+adjusted_mrr: 0.0042
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -168,6 +168,146 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GraphMVP
+    model_key: graphmvp
+    model_plain: GraphMVP
+    value: 0.377
+    std: null
+    paper_value: 0.377
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 6, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-06'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.1166
+    at_pub_std: null
+    at_pub_source_arxiv: '2207.08824'
+    at_pub_source_title: Energy-Motivated Equivariant Pretraining for 3D Molecular
+      Graphs
+    at_pub_source_date_iso: '2022-07-18'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-07-18'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.2604
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.1166
+    true_std: null
+    value_gap_source_arxiv: '2207.08824'
+    value_gap_source_title: Energy-Motivated Equivariant Pretraining for 3D Molecular
+      Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2604
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1166
+    sort_std: null
+    global_rank: 60
+    paper_rank: 79
+    rank_delta: 19
+    rank_delta_abs: 19
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Energy-Motivated Equivariant Pretraining for 3D Molecular
+      Graphs
+    comparison_source_arxiv: '2207.08824'
+    is_best: false
+    is_std_outlier: false
+  - model: 3D Infomax
+    model_key: 3d infomax
+    model_plain: 3D Infomax
+    value: 0.388
+    std: null
+    paper_value: 0.388
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 6, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-06'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.1296
+    at_pub_std: null
+    at_pub_source_arxiv: '2207.08824'
+    at_pub_source_title: Energy-Motivated Equivariant Pretraining for 3D Molecular
+      Graphs
+    at_pub_source_date_iso: '2022-07-18'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-07-18'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.2584
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.1296
+    true_std: null
+    value_gap_source_arxiv: '2207.08824'
+    value_gap_source_title: Energy-Motivated Equivariant Pretraining for 3D Molecular
+      Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2584
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1296
+    sort_std: null
+    global_rank: 64
+    paper_rank: 80
+    rank_delta: 16
+    rank_delta_abs: 16
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Energy-Motivated Equivariant Pretraining for 3D Molecular
+      Graphs
+    comparison_source_arxiv: '2207.08824'
+    is_best: false
+    is_std_outlier: false
   - model: MoleculeJAE
     model_key: moleculejae
     model_plain: MoleculeJAE
@@ -225,8 +365,8 @@ results:
     value_note: ''
     sort_value: 0.345
     sort_std: null
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -284,7 +424,7 @@ results:
     today_delta_significant: false
     sort_value: 0.357
     sort_std: null
-    global_rank: 60
+    global_rank: 80
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -346,69 +486,7 @@ results:
     today_delta_significant: false
     sort_value: 0.373
     sort_std: null
-    global_rank: 60
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphMVP
-    model_key: graphmvp
-    model_plain: GraphMVP
-    value: 0.377
-    std: null
-    paper_value: 0.377
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 6, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-06'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.377
-    sort_std: null
-    global_rank: 60
+    global_rank: 80
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -480,74 +558,12 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: null
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: 3D Infomax
-    model_key: 3d infomax
-    model_plain: 3D Infomax
-    value: 0.388
-    std: null
-    paper_value: 0.388
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 6, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-06'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.388
-    sort_std: null
-    global_rank: 61
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -601,7 +617,7 @@ results:
     today_delta_significant: false
     sort_value: 0.391
     sort_std: null
-    global_rank: 61
+    global_rank: 81
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -663,7 +679,7 @@ results:
     today_delta_significant: false
     sort_value: 0.393
     sort_std: null
-    global_rank: 61
+    global_rank: 81
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -725,7 +741,7 @@ results:
     today_delta_significant: false
     sort_value: 0.395
     sort_std: null
-    global_rank: 61
+    global_rank: 81
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -787,7 +803,7 @@ results:
     today_delta_significant: false
     sort_value: 0.396
     sort_std: null
-    global_rank: 61
+    global_rank: 81
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -849,7 +865,7 @@ results:
     today_delta_significant: false
     sort_value: 0.402
     sort_std: null
-    global_rank: 61
+    global_rank: 81
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -911,7 +927,7 @@ results:
     today_delta_significant: false
     sort_value: 0.415
     sort_std: null
-    global_rank: 61
+    global_rank: 81
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -973,7 +989,7 @@ results:
     today_delta_significant: false
     sort_value: 0.447
     sort_std: null
-    global_rank: 61
+    global_rank: 81
     has_value_gap: false
     has_value_note: false
     value_gap: null

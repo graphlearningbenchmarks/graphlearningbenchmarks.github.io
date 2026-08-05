@@ -55,7 +55,7 @@ benchmark_coverage:
 - benchmark: GraphBench
   benchmark_slug: graphbench
   evaluated: 3
-  total: 5
+  total: 8
 task_categories:
 - graph_classification
 experiment_scopes:
