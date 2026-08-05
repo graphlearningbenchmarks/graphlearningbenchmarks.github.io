@@ -2350,9 +2350,9 @@ results:
 - &id002
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -2383,9 +2383,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -2416,34 +2416,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
-    model_key: graphormer
-    model_plain: SigGate-GT
-    value: 0.314
-    std: null
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.08806'
-    title: Unified 2D and 3D Pre-Training of Molecular Representations
-    date: Jul 14, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-14'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.314
-    sort_std: null
+    sort_value: 0.3141
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2505,8 +2506,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0004
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2572,8 +2573,8 @@ results:
     value_note: ''
     sort_value: 0.236
     sort_std: 0.0002
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2639,8 +2640,8 @@ results:
     value_note: ''
     sort_value: 0.2333
     sort_std: 0.0009
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2706,8 +2707,8 @@ results:
     value_note: ''
     sort_value: 0.2325
     sort_std: 0.0
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2773,8 +2774,8 @@ results:
     value_note: ''
     sort_value: 0.2311
     sort_std: 0.0005
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2840,8 +2841,8 @@ results:
     value_note: ''
     sort_value: 0.221
     sort_std: 0.0003
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2907,8 +2908,8 @@ results:
     value_note: ''
     sort_value: 0.2125
     sort_std: 0.0025
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2974,8 +2975,8 @@ results:
     value_note: ''
     sort_value: 0.2116
     sort_std: 0.0028
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3041,8 +3042,8 @@ results:
     value_note: ''
     sort_value: 0.202
     sort_std: 0.0024
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3108,8 +3109,8 @@ results:
     value_note: ''
     sort_value: 0.201
     sort_std: 0.0008
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3175,8 +3176,8 @@ results:
     value_note: ''
     sort_value: 0.2005
     sort_std: 0.0015
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3242,8 +3243,8 @@ results:
     value_note: ''
     sort_value: 0.1904
     sort_std: 0.0003
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3309,8 +3310,8 @@ results:
     value_note: ''
     sort_value: 0.135
     sort_std: 0.0032
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3376,8 +3377,8 @@ results:
     value_note: ''
     sort_value: 0.1233
     sort_std: 0.012
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3443,8 +3444,8 @@ results:
     value_note: ''
     sort_value: 0.1169
     sort_std: 0.0141
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3453,7 +3454,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: true
+    is_std_outlier: false
   rank_metric: AP
   higher_is_better: true
   experiment_scope: graph-level

@@ -60,9 +60,9 @@ results:
 - &id001
   dataset: Peptides-struct
   rows:
-  - model: GMN
+  - model: GINE / GIN
     model_key: gcn
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2421
     std: 0.0016
     metric: MAE
@@ -93,9 +93,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -126,9 +126,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -207,7 +207,7 @@ results:
     today_delta_significant: false
     sort_value: 0.251
     sort_std: 0.003
-    global_rank: 96
+    global_rank: 97
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -269,7 +269,7 @@ results:
     today_delta_significant: false
     sort_value: 0.252
     sort_std: 0.004
-    global_rank: 102
+    global_rank: 103
     has_value_gap: false
     has_value_note: false
     value_gap: null

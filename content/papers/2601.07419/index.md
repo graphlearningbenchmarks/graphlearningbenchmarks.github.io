@@ -49,8 +49,8 @@ adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 - LRGB
 - Heterophily Benchmark
 benchmark_coverage:
@@ -58,14 +58,14 @@ benchmark_coverage:
   benchmark_slug: classic
   evaluated: 3
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 2
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 2
+  total: 11
 - benchmark: LRGB
   benchmark_slug: lrgb
   evaluated: 1
@@ -1252,7 +1252,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id006
   dataset: ENZYMES
   rows:
   - model: WL
@@ -1971,7 +1971,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id005
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2757,9 +2757,9 @@ results:
 - &id007
   dataset: Peptides-func
   rows:
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2gcn
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -2790,9 +2790,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2 gcn + pe
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -2824,9 +2824,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s4g
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -2915,9 +2915,9 @@ results:
     sort_value: 0.7059
     sort_std: 0.0089
     global_rank: 30
-    paper_rank: 148
-    rank_delta: 118
-    rank_delta_abs: 118
+    paper_rank: 149
+    rank_delta: 119
+    rank_delta_abs: 119
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -2982,8 +2982,8 @@ results:
     value_note: ''
     sort_value: 0.597
     sort_std: 0.006
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3049,8 +3049,8 @@ results:
     value_note: ''
     sort_value: 0.552
     sort_std: 0.008
-    global_rank: 176
-    paper_rank: 176
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3116,8 +3116,8 @@ results:
     value_note: ''
     sort_value: 0.429
     sort_std: 0.006
-    global_rank: 195
-    paper_rank: 195
+    global_rank: 196
+    paper_rank: 196
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4314,7 +4314,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id004
   dataset: ogbn-arxiv
   rows:
   - model: EGP (GCN)
@@ -4571,12 +4571,12 @@ results_grouped:
   - *id001
   - *id002
   - *id003
-- benchmark: TU Dortmund
-  datasets:
-  - *id004
-  - *id005
 - benchmark: OGB
   datasets:
+  - *id004
+- benchmark: TU Dortmund
+  datasets:
+  - *id005
   - *id006
 - benchmark: LRGB
   datasets:

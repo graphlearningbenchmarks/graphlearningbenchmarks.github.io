@@ -21,12 +21,12 @@ Each row also compares against the **best known at publication** (best result fo
 | Statistic | Count |
 |---|---:|
 | Flagged papers | 964 |
-| Flagged rows | 12519 |
-| Baseline rows | 12273 |
-| Best at pub | 8259 |
-| Best today only (not best at pub) | 3142 |
-| At-pub best ≠ today's best (different source papers) | 7669 |
-| At-pub best = today's best (same source paper) | 4850 |
+| Flagged rows | 12523 |
+| Baseline rows | 12277 |
+| Best at pub | 8261 |
+| Best today only (not best at pub) | 3144 |
+| At-pub best ≠ today's best (different source papers) | 7663 |
+| At-pub best = today's best (same source paper) | 4860 |
 
 ### Today's best source timing
 
@@ -34,8 +34,8 @@ When the **best reported** holder published relative to the viewing paper:
 
 | Timing | Rows |
 |---|---:|
-| Already known at publication | 5730 |
-| Published later (field moved on) | 6789 |
+| Already known at publication | 5740 |
+| Published later (field moved on) | 6783 |
 | Same paper | 0 |
 | Unknown date | 0 |
 
@@ -73,14 +73,14 @@ When the **best reported** holder published relative to the viewing paper:
 
 | Model | Wrong Rows | Best at pub | Best today only | Papers | Datasets | Worst Rank Δ |
 |---|---:|---:|---:|---:|---:|---:|
-| GCN | 1716 | 1305 | 356 | 546 | 78 | 1025 |
+| GCN | 1717 | 1305 | 357 | 546 | 78 | 1025 |
 | GAT | 1154 | 904 | 207 | 377 | 64 | 987 |
 | GraphSAGE | 469 | 283 | 132 | 193 | 52 | 869 |
 | GIN | 462 | 312 | 92 | 203 | 56 | 811 |
 | MLP | 391 | 250 | 129 | 128 | 36 | 683 |
 | APPNP | 296 | 225 | 60 | 103 | 22 | 756 |
 | DGI | 281 | 151 | 125 | 108 | 26 | 898 |
-| SGC | 254 | 191 | 59 | 98 | 23 | 833 |
+| SGC | 254 | 192 | 58 | 97 | 23 | 833 |
 | GraphCL | 225 | 135 | 33 | 74 | 25 | 860 |
 | GCNII | 224 | 138 | 63 | 87 | 20 | 792 |
 | GPRGNN | 218 | 143 | 60 | 68 | 26 | 820 |
@@ -89,8 +89,8 @@ When the **best reported** holder published relative to the viewing paper:
 | H2GCN | 181 | 141 | 34 | 75 | 20 | 815 |
 | InfoGraph | 131 | 82 | 16 | 52 | 12 | 229 |
 | FAGCN | 128 | 104 | 17 | 48 | 16 | 704 |
+| GatedGCN | 125 | 83 | 41 | 58 | 15 | 163 |
 | BGRL | 124 | 88 | 18 | 48 | 23 | 744 |
-| GatedGCN | 123 | 82 | 40 | 57 | 14 | 163 |
 | JOAO | 122 | 90 | 26 | 34 | 16 | 287 |
 | WL | 120 | 102 | 9 | 59 | 6 | 652 |
 | GCA | 113 | 78 | 30 | 44 | 15 | 708 |

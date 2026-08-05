@@ -66,22 +66,22 @@ adjusted_mrr: 0.0697
 mrr_dataset_count: 11
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 - Heterophilic Graphs
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 3
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 4
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 4
+  total: 11
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 3
@@ -723,7 +723,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id007
   dataset: COLLAB
   rows:
   - model: GPM
@@ -4109,7 +4109,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id008
   dataset: IMDB-MULTI
   rows:
   - model: GatedGCN-LSPE
@@ -4288,7 +4288,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id005
   dataset: MUTAG
   rows:
   - model: ECC
@@ -5693,7 +5693,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id006
   dataset: NCI1
   rows:
   - model: ECC
@@ -9797,7 +9797,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id004
   dataset: ogbn-products
   rows:
   - model: LargeGT-full
@@ -10123,14 +10123,14 @@ results_grouped:
   - *id001
   - *id002
   - *id003
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id004
+- benchmark: TU Dortmund
+  datasets:
   - *id005
   - *id006
   - *id007
-- benchmark: OGB
-  datasets:
   - *id008
 - benchmark: Heterophilic Graphs
   datasets:

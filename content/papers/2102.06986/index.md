@@ -64,22 +64,22 @@ adjusted_mrr: 0.0039
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 - Quantum Chemistry
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 3
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 3
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 2
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 3
+  total: 11
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
@@ -2074,7 +2074,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id008
   dataset: D&D
   rows:
   - model: ECC
@@ -2723,7 +2723,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id006
   dataset: NCI1
   rows:
   - model: ECC
@@ -3371,7 +3371,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id007
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -5565,7 +5565,7 @@ results:
   metric: MSE
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id007
+- &id004
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -6213,7 +6213,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id005
   dataset: ogbn-arxiv
   rows:
   - model: EGP (GCN)
@@ -7074,13 +7074,13 @@ results_grouped:
   - *id001
   - *id002
   - *id003
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id004
   - *id005
-  - *id006
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
+  - *id006
   - *id007
   - *id008
 - benchmark: Quantum Chemistry
@@ -7107,6 +7107,11 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -7116,11 +7121,6 @@ datasets_by_scope:
       dataset_slug: proteins
     - dataset: D&D
       dataset_slug: d-d
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: Quantum Chemistry
     benchmark_slug: quantum-chemistry
     datasets:

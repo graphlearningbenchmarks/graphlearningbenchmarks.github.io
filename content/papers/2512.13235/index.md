@@ -52,21 +52,21 @@ adjusted_mrr: 0.0085
 mrr_dataset_count: 6
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 5
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 3
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 3
+  total: 11
 task_categories:
 - graph_classification
 - node_classification
@@ -2162,7 +2162,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id009
   dataset: COLLAB
   rows:
   - model: GPM
@@ -6112,7 +6112,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id007
   dataset: MUTAG
   rows:
   - model: ECC
@@ -7326,7 +7326,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id008
   dataset: NCI1
   rows:
   - model: ECC
@@ -8222,7 +8222,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id009
+- &id006
   dataset: ogbn-products
   rows:
   - model: LargeGT-full
@@ -8547,13 +8547,13 @@ results_grouped:
   - *id003
   - *id004
   - *id005
-- benchmark: TU Dortmund
-  datasets:
-  - *id006
-  - *id007
-  - *id008
 - benchmark: OGB
   datasets:
+  - *id006
+- benchmark: TU Dortmund
+  datasets:
+  - *id007
+  - *id008
   - *id009
 datasets_by_scope:
 - scope: node-level

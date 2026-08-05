@@ -52,23 +52,23 @@ mrr: 0.0083
 adjusted_mrr: 0.0083
 mrr_dataset_count: 3
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 2
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 2
+  total: 11
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id001
+- &id002
   dataset: MUTAG
   rows:
   - model: ECC
@@ -1795,7 +1795,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: NCI1
   rows:
   - model: ECC
@@ -3594,7 +3594,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id001
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -4920,17 +4920,22 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
-  datasets:
-  - *id001
-  - *id002
 - benchmark: OGB
   datasets:
+  - *id001
+- benchmark: TU Dortmund
+  datasets:
+  - *id002
   - *id003
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -4938,11 +4943,6 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: NCI1
       dataset_slug: nci1
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
 main_figure: /figures/2404.13344/main_figure.jpegoptim.jpg
 ---
 

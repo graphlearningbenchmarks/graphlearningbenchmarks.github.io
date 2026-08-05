@@ -1217,9 +1217,9 @@ results:
 - &id001
   dataset: Peptides-func
   rows:
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2gcn
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -1250,9 +1250,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2 gcn + pe
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -1284,9 +1284,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s4g
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -1711,8 +1711,8 @@ results:
     value_note: ''
     sort_value: 0.6439
     sort_std: null
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1778,8 +1778,8 @@ results:
     value_note: ''
     sort_value: 0.6326
     sort_std: null
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

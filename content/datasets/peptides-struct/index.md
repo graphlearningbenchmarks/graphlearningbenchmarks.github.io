@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 11
-result_count: 252
+result_count: 253
 best_model:
   model: Energy GNN + attention
   value: 0.036000000000000004
@@ -1531,18 +1531,18 @@ variants:
     - 0.2464
     metric_stds:
     - 0.0013
-  row_count: 252
+  row_count: 253
   rows_json: /data/datasets/peptides-struct/standard-split-rows.json
   chart_json: /data/datasets/peptides-struct/standard-split-chart.json
   arch_counts:
-    gnn: 121
+    gnn: 122
     hybrid: 58
     graph_transformer: 49
     llm: 0
     walk: 1
     traditional: 14
   metric_counts:
-  - 252
+  - 253
   milestones: &id001
   - value: 0.2529
     std: 0.0016

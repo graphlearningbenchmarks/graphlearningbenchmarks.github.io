@@ -54,8 +54,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - TFGNN
-mrr: 0.0935
-adjusted_mrr: 0.0624
+mrr: 0.1102
+adjusted_mrr: 0.0735
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -72,76 +72,6 @@ results:
 - &id002
   dataset: ogbn-papers100M
   rows:
-  - model: SGC
-    model_key: sgc
-    model_plain: SGC
-    value: 0.6402
-    std: 0.002
-    paper_value: 0.6402
-    paper_std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbn-papers100m (score=80)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on Papers100M
-    date: Apr 15, 2024
-    date_display: Apr 2024
-    date_iso: '2024-04-15'
-    published_venue: WWW 2024
-    published_conference: WWW 2024
-    at_pub_value: 0.791
-    at_pub_std: null
-    at_pub_source_arxiv: '2403.13268'
-    at_pub_source_title: 'Unifews: You Need Fewer Operations for Efficient Graph Neural
-      Networks'
-    at_pub_source_date_iso: '2024-03-19'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.15080000000000005
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.791
-    true_std: null
-    value_gap_source_arxiv: '2403.13268'
-    value_gap_source_title: 'Unifews: You Need Fewer Operations for Efficient Graph
-      Neural Networks'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.15080000000000005
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.791
-    sort_std: null
-    global_rank: 1
-    paper_rank: 55
-    rank_delta: 54
-    rank_delta_abs: 54
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Unifews: You Need Fewer Operations for Efficient Graph
-      Neural Networks'
-    comparison_source_arxiv: '2403.13268'
-    is_best: true
-    is_std_outlier: false
   - model: LargeGT-full
     model_key: gamlp
     model_plain: LargeGT-full
@@ -167,13 +97,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.7036
     sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: LargeGT-full
     model_key: glem-gnn
@@ -200,9 +130,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.7036
     sort_std: 0.0002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: LargeGT-full
+    model_key: shadow+atp
+    model_plain: LargeGT-full
+    value: 0.698
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.06128'
+    title: Rethinking Node-wise Propagation for Large-scale Graph Learning
+    date: Feb 9, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-09'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.698
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -265,8 +228,8 @@ results:
     value_note: ''
     sort_value: 0.6865
     sort_std: 0.002
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -334,8 +297,8 @@ results:
     value_note: ''
     sort_value: 0.6718
     sort_std: 0.0032
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -402,8 +365,8 @@ results:
     value_note: ''
     sort_value: 0.6707
     sort_std: 0.002
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -470,8 +433,8 @@ results:
     value_note: ''
     sort_value: 0.6703
     sort_std: 0.003
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -538,8 +501,8 @@ results:
     value_note: ''
     sort_value: 0.6679
     sort_std: 0.003
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -606,8 +569,8 @@ results:
     value_note: ''
     sort_value: 0.6638
     sort_std: 0.002
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -674,8 +637,8 @@ results:
     value_note: ''
     sort_value: 0.6613
     sort_std: 0.002
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -683,6 +646,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.6402
+    std: 0.002
+    paper_value: 0.6402
+    paper_std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-papers100m (score=80)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on Papers100M
+    date: Apr 15, 2024
+    date_display: Apr 2024
+    date_iso: '2024-04-15'
+    published_venue: WWW 2024
+    published_conference: WWW 2024
+    at_pub_value: 0.661
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2111.00064'
+    at_pub_source_title: Node Feature Extraction by Self-Supervised Multi-scale Neighborhood
+      Prediction
+    at_pub_source_date_iso: '2021-10-29'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2021-10-29'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.02080000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.661
+    true_std: 0.0013
+    value_gap_source_arxiv: '2111.00064'
+    value_gap_source_title: Node Feature Extraction by Self-Supervised Multi-scale
+      Neighborhood Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: 0.02080000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.661
+    sort_std: 0.0013
+    global_rank: 33
+    paper_rank: 55
+    rank_delta: 22
+    rank_delta_abs: 22
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Node Feature Extraction by Self-Supervised Multi-scale
+      Neighborhood Prediction
+    comparison_source_arxiv: '2111.00064'
     is_best: false
     is_std_outlier: false
   - model: BernNet

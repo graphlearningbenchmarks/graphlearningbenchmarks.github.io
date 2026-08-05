@@ -42,18 +42,18 @@ mrr: 0.0825
 adjusted_mrr: 0.0825
 mrr_dataset_count: 4
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 - GNNBenchmark
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 4
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 4
+  total: 11
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 2
@@ -449,7 +449,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id004
   dataset: COLLAB
   rows:
   - model: GPM
@@ -763,7 +763,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id005
   dataset: IMDB-MULTI
   rows:
   - model: GraphSNN
@@ -1244,7 +1244,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: MUTAG
   rows:
   - model: ECC
@@ -1487,7 +1487,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: NCI1
   rows:
   - model: ECC
@@ -2080,7 +2080,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id001
   dataset: ogbg-ppa
   rows:
   - model: differential encoding
@@ -2464,14 +2464,14 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
+- benchmark: TU Dortmund
+  datasets:
   - *id002
   - *id003
   - *id004
-- benchmark: OGB
-  datasets:
   - *id005
 - benchmark: GNNBenchmark
   datasets:
@@ -2491,6 +2491,11 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-ppa
+      dataset_slug: ogbg-ppa
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -2502,11 +2507,6 @@ datasets_by_scope:
       dataset_slug: collab
     - dataset: IMDB-MULTI
       dataset_slug: imdb-multi
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-ppa
-      dataset_slug: ogbg-ppa
 single_proposed_model: Empowering GNNs
 main_figure: /figures/2206.02059/main_figure.jpegoptim.jpg
 ---

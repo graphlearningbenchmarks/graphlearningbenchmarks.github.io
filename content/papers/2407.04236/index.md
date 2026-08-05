@@ -40,22 +40,22 @@ adjusted_mrr: 0.0211
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 - LRGB
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 2
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 4
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 2
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 4
+  total: 11
 - benchmark: LRGB
   benchmark_slug: lrgb
   evaluated: 1
@@ -67,7 +67,7 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id004
+- &id006
   dataset: COLLAB
   rows:
   - model: GPM
@@ -1754,7 +1754,7 @@ results:
   metric: NMI
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id005
+- &id007
   dataset: IMDB-BINARY
   rows:
   - model: DMoNPool-TIP
@@ -2268,7 +2268,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -2863,7 +2863,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id006
+- &id008
   dataset: REDDIT-BINARY
   rows:
   - model: DMoN
@@ -3281,7 +3281,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id003
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -3728,7 +3728,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id004
   dataset: ogbn-arxiv
   rows:
   - model: EGP (GCN)
@@ -4182,14 +4182,14 @@ results_grouped:
   datasets:
   - *id001
   - *id002
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id003
   - *id004
+- benchmark: TU Dortmund
+  datasets:
   - *id005
   - *id006
-- benchmark: OGB
-  datasets:
   - *id007
   - *id008
 - benchmark: LRGB
@@ -4214,6 +4214,11 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -4225,11 +4230,6 @@ datasets_by_scope:
       dataset_slug: imdb-binary
     - dataset: REDDIT-BINARY
       dataset_slug: reddit-binary
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: LRGB
     benchmark_slug: lrgb
     datasets:

@@ -61,8 +61,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - UnifiedMolPretrain
-mrr: 0.0649
-adjusted_mrr: 0.0649
+mrr: 0.061
+adjusted_mrr: 0.061
 mrr_dataset_count: 6
 benchmark_categories:
 - OGB
@@ -2698,9 +2698,9 @@ results:
 - &id001
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -2731,9 +2731,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -2759,6 +2759,40 @@ results:
     global_rank: 2
     sort_value: 0.315
     sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.3141
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2820,8 +2854,8 @@ results:
     value_note: ''
     sort_value: 0.314
     sort_std: null
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2888,8 +2922,8 @@ results:
     value_note: ''
     sort_value: 0.3125
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2955,8 +2989,8 @@ results:
     value_note: ''
     sort_value: 0.2703
     sort_std: 0.0023
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3022,8 +3056,8 @@ results:
     value_note: ''
     sort_value: 0.265
     sort_std: null
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

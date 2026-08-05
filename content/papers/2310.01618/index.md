@@ -1123,9 +1123,9 @@ results:
 - &id003
   dataset: PascalVOC-SP
   rows:
-  - model: CR-TAS
+  - model: Exphormer
     model_key: gcn
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.78
     std: 0.31
     metric: F1
@@ -1156,9 +1156,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: true
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4912
     std: 0.0042
     metric: F1
@@ -1189,9 +1189,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: ppgt
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4641
     std: 0.0033
     metric: F1
@@ -1348,8 +1348,8 @@ results:
     value_note: ''
     sort_value: 0.1831
     sort_std: 0.0038
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1416,8 +1416,8 @@ results:
     value_note: ''
     sort_value: 0.1706
     sort_std: 0.0046
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

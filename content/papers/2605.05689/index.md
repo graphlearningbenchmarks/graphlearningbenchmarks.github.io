@@ -1903,9 +1903,9 @@ results:
 - &id002
   dataset: COCO-SP
   rows:
-  - model: CR-TAS
+  - model: Exphormer
     model_key: crawl
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4588
     std: 0.0079
     metric: F1
@@ -2005,9 +2005,9 @@ results:
     comparison_source_arxiv: '2309.00367'
     is_best: false
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4398
     std: 0.0033
     metric: F1
@@ -2273,12 +2273,12 @@ results:
     date_iso: '2026-05-07'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
+    at_pub_value: 0.2592
+    at_pub_std: 0.0158
+    at_pub_source_arxiv: '2405.11951'
+    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    at_pub_source_date_iso: '2024-05-20'
+    at_pub_source_date_label: ICLR 2024
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
@@ -2368,8 +2368,8 @@ results:
     value_note: ''
     sort_value: 0.2078
     sort_std: 0.0031
-    global_rank: 45
-    paper_rank: 57
+    global_rank: 46
+    paper_rank: 58
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -4304,9 +4304,9 @@ results:
     sort_value: 0.78
     sort_std: 0.31
     global_rank: 1
-    paper_rank: 111
-    rank_delta: 110
-    rank_delta_abs: 110
+    paper_rank: 112
+    rank_delta: 111
+    rank_delta_abs: 111
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4315,9 +4315,9 @@ results:
     comparison_source_arxiv: '2411.12732'
     is_best: true
     is_std_outlier: true
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4912
     std: 0.0042
     metric: F1
@@ -4348,9 +4348,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: ppgt
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4641
     std: 0.0033
     metric: F1
@@ -4758,10 +4758,10 @@ results:
     published_conference: ''
     at_pub_value: 0.323
     at_pub_std: 0.0039
-    at_pub_source_arxiv: '2405.15540'
-    at_pub_source_title: Bundle Neural Networks for message diffusion on graphs
-    at_pub_source_date_iso: '2024-05-24'
-    at_pub_source_date_label: '2024'
+    at_pub_source_arxiv: '2405.11951'
+    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    at_pub_source_date_iso: '2024-05-20'
+    at_pub_source_date_label: ICLR 2024
     value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null

@@ -36,8 +36,8 @@ paper_type: method
 proposed_models:
 - higher-order expander graph propagation
 - GIN + 3-Regular Bipartite Expander + Summation
-mrr: 0.0303
-adjusted_mrr: 0.0101
+mrr: 0.0278
+adjusted_mrr: 0.0093
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -54,9 +54,9 @@ results:
 - &id001
   dataset: Code
   rows:
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: gmn
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.206
     std: 0.002
     metric: F1
@@ -87,9 +87,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: dirgraphssm
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.205
     std: 0.0023
     metric: F1
@@ -120,9 +120,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: graph-mamba
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.203
     std: 0.0023
     metric: F1
@@ -210,8 +210,8 @@ results:
     value_note: ''
     sort_value: 0.1519
     sort_std: 0.002
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -277,8 +277,8 @@ results:
     value_note: ''
     sort_value: 0.1497
     sort_std: 0.0015
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -344,8 +344,8 @@ results:
     value_note: ''
     sort_value: 0.1495
     sort_std: 0.0023
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -411,8 +411,8 @@ results:
     value_note: ''
     sort_value: 0.1254
     sort_std: 0.0029
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

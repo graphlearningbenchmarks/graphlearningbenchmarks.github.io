@@ -44,21 +44,21 @@ adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 2
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 1
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 2
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 1
+  total: 11
 task_categories:
 - graph_classification
 - node_classification
@@ -652,7 +652,7 @@ results:
   metric: Unfaithfulness
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id003
+- &id005
   dataset: MUTAG
   is_multi_metric: true
   rows:
@@ -1635,7 +1635,7 @@ results:
   metric: Unfaithfulness
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id004
+- &id003
   dataset: ogbn-arxiv
   is_multi_metric: true
   rows:
@@ -2221,7 +2221,7 @@ results:
   metric: Unfaithfulness
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id005
+- &id004
   dataset: ogbn-mag
   is_multi_metric: true
   rows:
@@ -2812,12 +2812,12 @@ results_grouped:
   datasets:
   - *id001
   - *id002
-- benchmark: TU Dortmund
-  datasets:
-  - *id003
 - benchmark: OGB
   datasets:
+  - *id003
   - *id004
+- benchmark: TU Dortmund
+  datasets:
   - *id005
 datasets_by_scope:
 - scope: node-level

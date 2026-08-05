@@ -501,9 +501,9 @@ results:
 - &id002
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -534,9 +534,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -567,34 +567,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
-    model_key: graphormer
-    model_plain: SigGate-GT
-    value: 0.314
-    std: null
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.08806'
-    title: Unified 2D and 3D Pre-Training of Molecular Representations
-    date: Jul 14, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-14'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.314
-    sort_std: null
+    sort_value: 0.3141
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -656,8 +657,8 @@ results:
     value_note: ''
     sort_value: 0.2902
     sort_std: 0.0017
-    global_rank: 32
-    paper_rank: 95
+    global_rank: 35
+    paper_rank: 98
     rank_delta: 63
     rank_delta_abs: 63
     rank_delta_direction: worse
@@ -723,8 +724,8 @@ results:
     value_note: ''
     sort_value: 0.2595
     sort_std: 0.0049
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -790,8 +791,8 @@ results:
     value_note: ''
     sort_value: 0.2527
     sort_std: 0.0064
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -857,8 +858,8 @@ results:
     value_note: ''
     sort_value: 0.2329
     sort_std: 0.0019
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

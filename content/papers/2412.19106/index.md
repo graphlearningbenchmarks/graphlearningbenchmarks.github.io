@@ -1240,39 +1240,6 @@ results:
   dataset: ogbn-papers100M
   rows:
   - model: LargeGT-full
-    model_key: sgc
-    model_plain: LargeGT-full
-    value: 0.791
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2403.13268'
-    title: 'Unifews: You Need Fewer Operations for Efficient Graph Neural Networks'
-    date: Mar 19, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-19'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/gdmnl/Unifews
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.791
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: LargeGT-full
     model_key: gamlp
     model_plain: LargeGT-full
     value: 0.7036
@@ -1297,13 +1264,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.7036
     sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: LargeGT-full
     model_key: glem-gnn
@@ -1330,9 +1297,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.7036
     sort_std: 0.0002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: LargeGT-full
+    model_key: shadow+atp
+    model_plain: LargeGT-full
+    value: 0.698
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.06128'
+    title: Rethinking Node-wise Propagation for Large-scale Graph Learning
+    date: Feb 9, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-09'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.698
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1386,7 +1386,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6908
     sort_std: 0.0047
-    global_rank: 6
+    global_rank: 5
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1458,8 +1458,8 @@ results:
     value_note: ''
     sort_value: 0.6718
     sort_std: 0.0032
-    global_rank: 14
-    paper_rank: 13
+    global_rank: 13
+    paper_rank: 12
     rank_delta: -1
     rank_delta_abs: 1
     rank_delta_direction: better
@@ -1527,8 +1527,8 @@ results:
     value_note: ''
     sort_value: 0.6703
     sort_std: 0.003
-    global_rank: 17
-    paper_rank: 18
+    global_rank: 16
+    paper_rank: 17
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1586,7 +1586,7 @@ results:
     today_delta_significant: false
     sort_value: 0.6673
     sort_std: 0.0041
-    global_rank: 22
+    global_rank: 21
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -1658,10 +1658,10 @@ results:
     value_note: ''
     sort_value: 0.6613
     sort_std: 0.002
-    global_rank: 33
+    global_rank: 32
     paper_rank: 41
-    rank_delta: 8
-    rank_delta_abs: 8
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

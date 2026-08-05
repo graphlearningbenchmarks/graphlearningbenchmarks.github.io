@@ -16,9 +16,9 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 283,
+    "paper_count": 284,
     "recent_results_per_dataset": 13.7,
-    "total_result_count": 2484,
+    "total_result_count": 2491,
     "datasets": [
       {
         "name": "ogbn-products",
@@ -53,7 +53,7 @@
         "slug": "ogbn-papers100m",
         "task_type": "node_classification",
         "paper_count": 34,
-        "result_count": 137,
+        "result_count": 136,
         "recent_result_count": 4,
         "variants": [
           {
@@ -66,8 +66,8 @@
         "name": "ogbg-molpcba",
         "slug": "ogbg-molpcba",
         "task_type": "graph_classification",
-        "paper_count": 31,
-        "result_count": 184,
+        "paper_count": 32,
+        "result_count": 188,
         "recent_result_count": 25,
         "variants": [
           {
@@ -224,8 +224,8 @@
         "name": "Code",
         "slug": "code",
         "task_type": "graph_classification",
-        "paper_count": 7,
-        "result_count": 47,
+        "paper_count": 8,
+        "result_count": 51,
         "recent_result_count": 19,
         "variants": [
           {
@@ -568,15 +568,15 @@
     "no_single_introduction_paper": false,
     "is_legacy": false,
     "paper_count": 75,
-    "recent_results_per_dataset": 33.8,
-    "total_result_count": 862,
+    "recent_results_per_dataset": 33.6,
+    "total_result_count": 866,
     "datasets": [
       {
         "name": "Peptides-struct",
         "slug": "peptides-struct",
         "task_type": "graph_regression",
         "paper_count": 44,
-        "result_count": 252,
+        "result_count": 253,
         "recent_result_count": 30,
         "variants": [
           {
@@ -590,7 +590,7 @@
         "slug": "peptides-func",
         "task_type": "graph_classification",
         "paper_count": 41,
-        "result_count": 254,
+        "result_count": 255,
         "recent_result_count": 62,
         "variants": [
           {
@@ -604,7 +604,7 @@
         "slug": "pascalvoc-sp",
         "task_type": "node_classification",
         "paper_count": 22,
-        "result_count": 142,
+        "result_count": 143,
         "recent_result_count": 29,
         "variants": [
           {
@@ -632,8 +632,8 @@
         "slug": "coco-sp",
         "task_type": "node_classification",
         "paper_count": 14,
-        "result_count": 104,
-        "recent_result_count": 45,
+        "result_count": 105,
+        "recent_result_count": 44,
         "variants": [
           {
             "name": "Standard split",

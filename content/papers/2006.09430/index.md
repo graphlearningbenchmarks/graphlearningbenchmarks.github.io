@@ -48,23 +48,23 @@ mrr: 0.0128
 adjusted_mrr: 0.0128
 mrr_dataset_count: 4
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 5
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 5
+  total: 11
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id004
+- &id005
   dataset: COLLAB
   rows:
   - model: GPM
@@ -1059,7 +1059,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id006
   dataset: ENZYMES
   rows:
   - model: WL
@@ -1845,7 +1845,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2293,7 +2293,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: NCI1
   rows:
   - model: ECC
@@ -3209,7 +3209,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id004
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -4199,7 +4199,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id001
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -4850,20 +4850,25 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
+- benchmark: TU Dortmund
+  datasets:
   - *id002
   - *id003
   - *id004
   - *id005
-- benchmark: OGB
-  datasets:
   - *id006
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -4877,11 +4882,6 @@ datasets_by_scope:
       dataset_slug: collab
     - dataset: ENZYMES
       dataset_slug: enzymes
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
 single_proposed_model: WL
 main_figure: /figures/2006.09430/main_figure.jpegoptim.jpg
 ---

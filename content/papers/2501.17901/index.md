@@ -1297,9 +1297,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -1330,9 +1330,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -1420,9 +1420,9 @@ results:
     sort_value: 0.2431
     sort_std: 0.002
     global_rank: 7
-    paper_rank: 57
-    rank_delta: 50
-    rank_delta_abs: 50
+    paper_rank: 58
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2095,8 +2095,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0012
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2163,8 +2163,8 @@ results:
     value_note: ''
     sort_value: 0.2506
     sort_std: 0.0022
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2231,8 +2231,8 @@ results:
     value_note: ''
     sort_value: 0.2529
     sort_std: 0.0016
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2298,8 +2298,8 @@ results:
     value_note: ''
     sort_value: 0.2536
     sort_std: 0.0015
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2365,8 +2365,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0012
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

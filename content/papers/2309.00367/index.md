@@ -51,9 +51,9 @@ results:
 - &id004
   dataset: COCO-SP
   rows:
-  - model: CR-TAS
+  - model: Exphormer
     model_key: crawl
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4588
     std: 0.0079
     metric: F1
@@ -154,9 +154,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4398
     std: 0.0033
     metric: F1
@@ -454,8 +454,8 @@ results:
     value_note: ''
     sort_value: 0.2078
     sort_std: 0.0031
-    global_rank: 45
-    paper_rank: 53
+    global_rank: 46
+    paper_rank: 54
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -535,9 +535,9 @@ results:
     sort_value: 0.78
     sort_std: 0.31
     global_rank: 1
-    paper_rank: 98
-    rank_delta: 97
-    rank_delta_abs: 97
+    paper_rank: 99
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -545,9 +545,9 @@ results:
     comparison_source_arxiv: '2301.11956'
     is_best: true
     is_std_outlier: true
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4912
     std: 0.0042
     metric: F1
@@ -578,9 +578,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: ppgt
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4641
     std: 0.0033
     metric: F1
@@ -899,9 +899,9 @@ results:
 - &id002
   dataset: Peptides-func
   rows:
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2gcn
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -932,9 +932,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2 gcn + pe
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -966,9 +966,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s4g
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -1257,8 +1257,8 @@ results:
     value_note: ''
     sort_value: 0.6575
     sort_std: 0.0049
-    global_rank: 98
-    paper_rank: 108
+    global_rank: 99
+    paper_rank: 109
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -1347,9 +1347,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -1380,9 +1380,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -1470,9 +1470,9 @@ results:
     sort_value: 0.2431
     sort_std: 0.002
     global_rank: 7
-    paper_rank: 57
-    rank_delta: 50
-    rank_delta_abs: 50
+    paper_rank: 58
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1603,8 +1603,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0012
-    global_rank: 81
-    paper_rank: 92
+    global_rank: 82
+    paper_rank: 93
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse

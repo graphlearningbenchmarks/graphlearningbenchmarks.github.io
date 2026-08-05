@@ -51,12 +51,12 @@ Papers that have been downloaded but not yet processed for extraction.
 | 2512.08274 | arXiv:2512.08274 | — |
 | 2604.00199 | arXiv:2604.00199 | — |
 
-### Extracted (1635)
+### Extracted (1636)
 
 Papers with successfully extracted results. These papers contribute to the leaderboards.
 
 
-Detailed table: 1635 rows (loaded below).
+Detailed table: 1636 rows (loaded below).
 
 
 ### Pending (6)
@@ -72,10 +72,10 @@ Papers that have been identified but not yet downloaded from arXiv.
 | 2505.10392 | arXiv:2505.10392 | — |
 | 2510.12085 | arXiv:2510.12085 | — |
 
-### Quarantined_extraction_quality (771)
+### Quarantined_extraction_quality (770)
 
 
-Detailed table: 771 rows (loaded below).
+Detailed table: 770 rows (loaded below).
 
 
 ### Quarantined_method_name (284)

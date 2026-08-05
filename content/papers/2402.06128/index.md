@@ -80,76 +80,6 @@ results:
 - &id002
   dataset: ogbn-papers100M
   rows:
-  - model: SGC
-    model_key: sgc
-    model_plain: SGC
-    value: 0.6438
-    std: 0.0015
-    paper_value: 0.6438
-    paper_std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on ogbn-papers100M.
-    date: Feb 9, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-09'
-    published_venue: WWW 2024
-    published_conference: WWW 2024
-    at_pub_value: 0.661
-    at_pub_std: 0.0013
-    at_pub_source_arxiv: '2111.00064'
-    at_pub_source_title: Node Feature Extraction by Self-Supervised Multi-scale Neighborhood
-      Prediction
-    at_pub_source_date_iso: '2021-10-29'
-    at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.017199999999999993
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.791
-    true_std: null
-    value_gap_source_arxiv: '2403.13268'
-    value_gap_source_title: 'Unifews: You Need Fewer Operations for Efficient Graph
-      Neural Networks'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.1472
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.791
-    sort_std: null
-    global_rank: 1
-    paper_rank: 53
-    rank_delta: 52
-    rank_delta_abs: 52
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Node Feature Extraction by Self-Supervised Multi-scale
-      Neighborhood Prediction
-    comparison_source_arxiv: '2111.00064'
-    is_best: true
-    is_std_outlier: false
   - model: LargeGT-full
     model_key: gamlp
     model_plain: LargeGT-full
@@ -175,13 +105,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.7036
     sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: LargeGT-full
     model_key: glem-gnn
@@ -208,13 +138,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.7036
     sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: ShaDow+ATP
     model_key: shadow+atp
@@ -273,8 +203,8 @@ results:
     value_note: ''
     sort_value: 0.698
     sort_std: 0.001
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -341,8 +271,8 @@ results:
     value_note: ''
     sort_value: 0.672
     sort_std: 0.002
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -409,8 +339,8 @@ results:
     value_note: ''
     sort_value: 0.671
     sort_std: 0.002
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -477,8 +407,8 @@ results:
     value_note: ''
     sort_value: 0.664
     sort_std: 0.002
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -486,6 +416,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.6438
+    std: 0.0015
+    paper_value: 0.6438
+    paper_std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on ogbn-papers100M.
+    date: Feb 9, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-09'
+    published_venue: WWW 2024
+    published_conference: WWW 2024
+    at_pub_value: 0.661
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2111.00064'
+    at_pub_source_title: Node Feature Extraction by Self-Supervised Multi-scale Neighborhood
+      Prediction
+    at_pub_source_date_iso: '2021-10-29'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2021-10-29'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.017199999999999993
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.661
+    true_std: 0.0013
+    value_gap_source_arxiv: '2111.00064'
+    value_gap_source_title: Node Feature Extraction by Self-Supervised Multi-scale
+      Neighborhood Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: 0.017199999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.661
+    sort_std: 0.0013
+    global_rank: 33
+    paper_rank: 53
+    rank_delta: 20
+    rank_delta_abs: 20
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Node Feature Extraction by Self-Supervised Multi-scale
+      Neighborhood Prediction
+    comparison_source_arxiv: '2111.00064'
     is_best: false
     is_std_outlier: false
   - model: '*GraphSAGE'

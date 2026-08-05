@@ -36,8 +36,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - HGODE
-mrr: 0.0298
-adjusted_mrr: 0.0298
+mrr: 0.0296
+adjusted_mrr: 0.0296
 mrr_dataset_count: 5
 benchmark_categories:
 - Classic
@@ -2582,9 +2582,9 @@ results:
 - &id005
   dataset: Peptides-func
   rows:
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2gcn
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -2615,9 +2615,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2 gcn + pe
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -2649,9 +2649,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s4g
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -3555,8 +3555,8 @@ results:
     value_note: ''
     sort_value: 0.662
     sort_std: 0.0073
-    global_rank: 93
-    paper_rank: 103
+    global_rank: 94
+    paper_rank: 104
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -3623,8 +3623,8 @@ results:
     value_note: ''
     sort_value: 0.661
     sort_std: 0.005
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3691,8 +3691,8 @@ results:
     value_note: ''
     sort_value: 0.651
     sort_std: 0.037
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3759,8 +3759,8 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.014
-    global_rank: 136
-    paper_rank: 136
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3782,9 +3782,9 @@ results:
 - &id002
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -3815,9 +3815,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -3848,34 +3848,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
-    model_key: graphormer
-    model_plain: SigGate-GT
-    value: 0.314
-    std: null
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.08806'
-    title: Unified 2D and 3D Pre-Training of Molecular Representations
-    date: Jul 14, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-14'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.314
-    sort_std: null
+    sort_value: 0.3141
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3938,8 +3939,8 @@ results:
     value_note: ''
     sort_value: 0.293
     sort_std: 0.004
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4007,8 +4008,8 @@ results:
     value_note: ''
     sort_value: 0.291
     sort_std: 0.001
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4075,8 +4076,8 @@ results:
     value_note: ''
     sort_value: 0.278
     sort_std: 0.003
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4116,16 +4117,15 @@ results:
     date_iso: '2026-04-27'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2424
-    at_pub_std: 0.0034
-    at_pub_source_arxiv: '2103.16584'
-    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
-      Classification
-    at_pub_source_date_iso: '2021-03-30'
-    at_pub_source_date_label: '2021'
+    at_pub_value: 0.2483
+    at_pub_std: 0.0037
+    at_pub_source_arxiv: '2405.11951'
+    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    at_pub_source_date_iso: '2024-05-20'
+    at_pub_source_date_label: ICLR 2024
     value_gap_source_date_iso: '2026-04-27'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.026600000000000013
+    gap_vs_at_pub: 0.020700000000000024
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
@@ -4144,16 +4144,16 @@ results:
     value_note: ''
     sort_value: 0.269
     sort_std: 0.002
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: Parameterized Hypercomplex Graph Neural Networks for
-      Graph Classification
-    comparison_source_arxiv: '2103.16584'
+    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
+      Nodes'
+    comparison_source_arxiv: '2405.11951'
     is_best: false
     is_std_outlier: false
   - model: FLODE
@@ -4213,8 +4213,8 @@ results:
     value_note: ''
     sort_value: 0.267
     sort_std: 0.004
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4281,8 +4281,8 @@ results:
     value_note: ''
     sort_value: 0.266
     sort_std: 0.002
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4349,8 +4349,8 @@ results:
     value_note: ''
     sort_value: 0.265
     sort_std: 0.003
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4417,8 +4417,8 @@ results:
     value_note: ''
     sort_value: 0.263
     sort_std: 0.002
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4485,8 +4485,8 @@ results:
     value_note: ''
     sort_value: 0.262
     sort_std: 0.001
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4553,8 +4553,8 @@ results:
     value_note: ''
     sort_value: 0.26
     sort_std: 0.003
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4621,8 +4621,8 @@ results:
     value_note: ''
     sort_value: 0.26
     sort_std: 0.005
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4689,8 +4689,8 @@ results:
     value_note: ''
     sort_value: 0.257
     sort_std: 0.004
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4757,8 +4757,8 @@ results:
     value_note: ''
     sort_value: 0.252
     sort_std: 0.003
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4825,8 +4825,8 @@ results:
     value_note: ''
     sort_value: 0.247
     sort_std: 0.002
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4893,8 +4893,8 @@ results:
     value_note: ''
     sort_value: 0.245
     sort_std: 0.004
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4961,8 +4961,8 @@ results:
     value_note: ''
     sort_value: 0.226
     sort_std: 0.005
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

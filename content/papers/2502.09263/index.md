@@ -131,9 +131,9 @@ results:
     comparison_source_arxiv: '2309.00367'
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -164,9 +164,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -833,7 +833,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2475
     sort_std: 0.0007
-    global_rank: 58
+    global_rank: 59
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -903,8 +903,8 @@ results:
     value_note: ''
     sort_value: 0.2478
     sort_std: 0.0016
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -970,8 +970,8 @@ results:
     value_note: ''
     sort_value: 0.2481
     sort_std: 0.0007
-    global_rank: 64
-    paper_rank: 95
+    global_rank: 65
+    paper_rank: 96
     rank_delta: 31
     rank_delta_abs: 31
     rank_delta_direction: worse
@@ -1037,8 +1037,8 @@ results:
     value_note: ''
     sort_value: 0.2485
     sort_std: 0.0015
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1104,8 +1104,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0012
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1171,8 +1171,8 @@ results:
     value_note: ''
     sort_value: 0.2529
     sort_std: 0.0016
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1238,8 +1238,8 @@ results:
     value_note: ''
     sort_value: 0.2536
     sort_std: 0.0015
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1305,8 +1305,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0012
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1364,7 +1364,7 @@ results:
     today_delta_significant: false
     sort_value: 0.2547
     sort_std: 0.0009
-    global_rank: 121
+    global_rank: 122
     has_value_gap: false
     has_value_note: false
     value_gap: null

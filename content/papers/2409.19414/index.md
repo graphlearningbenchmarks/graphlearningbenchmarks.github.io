@@ -116,9 +116,9 @@ results:
     sort_value: 0.2421
     sort_std: 0.0016
     global_rank: 1
-    paper_rank: 153
-    rank_delta: 152
-    rank_delta_abs: 152
+    paper_rank: 154
+    rank_delta: 153
+    rank_delta_abs: 153
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -127,9 +127,9 @@ results:
     comparison_source_arxiv: '2309.00367'
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -160,9 +160,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -250,9 +250,9 @@ results:
     sort_value: 0.2429
     sort_std: 0.0019
     global_rank: 5
-    paper_rank: 149
-    rank_delta: 144
-    rank_delta_abs: 144
+    paper_rank: 150
+    rank_delta: 145
+    rank_delta_abs: 145
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -317,8 +317,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0012
-    global_rank: 85
-    paper_rank: 153
+    global_rank: 86
+    paper_rank: 154
     rank_delta: 68
     rank_delta_abs: 68
     rank_delta_direction: worse
@@ -376,7 +376,7 @@ results:
     today_delta_significant: false
     sort_value: 0.26
     sort_std: 0.02
-    global_rank: 137
+    global_rank: 138
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -438,7 +438,7 @@ results:
     today_delta_significant: false
     sort_value: 0.26
     sort_std: 0.01
-    global_rank: 137
+    global_rank: 138
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -500,7 +500,7 @@ results:
     today_delta_significant: false
     sort_value: 0.26
     sort_std: 0.01
-    global_rank: 137
+    global_rank: 138
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -562,7 +562,7 @@ results:
     today_delta_significant: false
     sort_value: 0.26
     sort_std: 0.02
-    global_rank: 137
+    global_rank: 138
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -624,7 +624,7 @@ results:
     today_delta_significant: false
     sort_value: 0.27
     sort_std: 0.01
-    global_rank: 150
+    global_rank: 151
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -686,7 +686,7 @@ results:
     today_delta_significant: false
     sort_value: 0.27
     sort_std: 0.01
-    global_rank: 150
+    global_rank: 151
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -748,7 +748,7 @@ results:
     today_delta_significant: false
     sort_value: 0.27
     sort_std: 0.03
-    global_rank: 150
+    global_rank: 151
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -810,7 +810,7 @@ results:
     today_delta_significant: false
     sort_value: 0.28
     sort_std: 0.01
-    global_rank: 154
+    global_rank: 155
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -880,8 +880,8 @@ results:
     value_note: ''
     sort_value: 0.3504
     sort_std: 0.0028
-    global_rank: 171
-    paper_rank: 150
+    global_rank: 172
+    paper_rank: 151
     rank_delta: -21
     rank_delta_abs: 21
     rank_delta_direction: better

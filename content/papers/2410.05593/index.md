@@ -89,9 +89,9 @@ results:
 - &id008
   dataset: COCO-SP
   rows:
-  - model: CR-TAS
+  - model: Exphormer
     model_key: crawl
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4588
     std: 0.0079
     metric: F1
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: gps
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.444
     std: 0.0065
     metric: F1
@@ -155,9 +155,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4398
     std: 0.0033
     metric: F1
@@ -245,8 +245,8 @@ results:
     value_note: ''
     sort_value: 0.2078
     sort_std: 0.0031
-    global_rank: 45
-    paper_rank: 59
+    global_rank: 46
+    paper_rank: 60
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -313,8 +313,8 @@ results:
     value_note: ''
     sort_value: 0.091
     sort_std: 0.009
-    global_rank: 57
-    paper_rank: 57
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -380,8 +380,8 @@ results:
     value_note: ''
     sort_value: 0.083
     sort_std: 0.012
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -447,8 +447,8 @@ results:
     value_note: ''
     sort_value: 0.081
     sort_std: 0.015
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -514,8 +514,8 @@ results:
     value_note: ''
     sort_value: 0.056
     sort_std: 0.011
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -581,8 +581,8 @@ results:
     value_note: ''
     sort_value: 0.044
     sort_std: 0.015
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -648,8 +648,8 @@ results:
     value_note: ''
     sort_value: 0.031
     sort_std: 0.016
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3730,9 +3730,9 @@ results:
     sort_value: 0.78
     sort_std: 0.31
     global_rank: 1
-    paper_rank: 94
-    rank_delta: 93
-    rank_delta_abs: 93
+    paper_rank: 95
+    rank_delta: 94
+    rank_delta_abs: 94
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -3741,9 +3741,9 @@ results:
     comparison_source_arxiv: '2309.00367'
     is_best: true
     is_std_outlier: true
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4912
     std: 0.0042
     metric: F1
@@ -3774,9 +3774,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: ppgt
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4641
     std: 0.0033
     metric: F1
@@ -3864,8 +3864,8 @@ results:
     value_note: ''
     sort_value: 0.243
     sort_std: 0.014
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3931,8 +3931,8 @@ results:
     value_note: ''
     sort_value: 0.241
     sort_std: 0.017
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3998,8 +3998,8 @@ results:
     value_note: ''
     sort_value: 0.217
     sort_std: 0.036
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4065,8 +4065,8 @@ results:
     value_note: ''
     sort_value: 0.216
     sort_std: 0.039
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4132,8 +4132,8 @@ results:
     value_note: ''
     sort_value: 0.152
     sort_std: 0.024
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4199,8 +4199,8 @@ results:
     value_note: ''
     sort_value: 0.114
     sort_std: 0.023
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

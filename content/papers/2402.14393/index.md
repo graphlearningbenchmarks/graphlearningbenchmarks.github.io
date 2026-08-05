@@ -56,18 +56,18 @@ mrr: 0.0083
 adjusted_mrr: 0.0055
 mrr_dataset_count: 2
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 - Heterophilic Graphs
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 1
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 1
+  total: 11
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 1
@@ -1073,7 +1073,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: NCI1
   rows:
   - model: ECC
@@ -2318,7 +2318,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: ogbg-molpcba
   rows:
   - model: StructPosGSSL-FA
@@ -2835,10 +2835,10 @@ results:
   uses_non_primary_metric: true
   paper_has_primary_metric: false
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id002
 - benchmark: Heterophilic Graphs
@@ -2856,16 +2856,16 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: TU Dortmund
-    benchmark_slug: tu-dortmund
-    datasets:
-    - dataset: NCI1
-      dataset_slug: nci1
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
     - dataset: ogbg-molpcba
       dataset_slug: ogbg-molpcba
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: NCI1
+      dataset_slug: nci1
 single_proposed_model: GPN
 main_figure: /figures/2402.14393/main_figure.jpegoptim.jpg
 ---

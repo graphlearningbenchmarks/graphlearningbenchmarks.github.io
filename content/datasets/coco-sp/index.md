@@ -8,7 +8,7 @@ primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LRGBDataset.html
 stats: null
-result_count: 104
+result_count: 105
 best_model:
   model: CRaWl
   value: 0.4588
@@ -838,16 +838,16 @@ variants:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2406.12059'
-    title: A Scalable and Effective Alternative to Graph Transformers
-    date: Jun 17, 2024
-    date_iso: '2024-06-17'
-    date_display: Jun 2024
-    codebase_url: ''
-    published_conference: AAAI 2024
-    published_conference_short: AAAI
-    published_conference_slug: aaai
-    published_venue: AAAI 2024
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_iso: '2024-05-20'
+    date_display: May 2024
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1362,35 +1362,6 @@ variants:
     metric_stds:
     - 0.0008
     - null
-  - model: SAN
-    model_plain: SAN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2605.05689'
-    title: 'GCCM: Enhancing Generative Graph Prediction via Contrastive Consistency
-      Model'
-    date: May 7, 2026
-    date_iso: '2026-05-07'
-    date_display: May 2026
-    codebase_url: ''
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.2592
-    - null
-    metric_stds:
-    - 0.0158
-    - null
   - model: SAN+LapPE
     model_plain: SAN+LapPE
     is_baseline: true
@@ -1410,6 +1381,34 @@ variants:
     published_conference_short: KDD
     published_conference_slug: kdd
     published_venue: KDD 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2592
+    - null
+    metric_stds:
+    - 0.0158
+    - null
+  - model: SAN
+    model_plain: SAN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_iso: '2024-05-20'
+    date_display: May 2024
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
     uses_external_data: false
     is_best: false
     is_std_outlier: false
@@ -1503,18 +1502,18 @@ variants:
     metric_stds:
     - 0.0008
     - null
-  row_count: 104
+  row_count: 105
   rows_json: /data/datasets/coco-sp/standard-split-rows.json
   chart_json: /data/datasets/coco-sp/standard-split-chart.json
   arch_counts:
-    gnn: 28
+    gnn: 29
     hybrid: 22
     graph_transformer: 34
     llm: 0
     walk: 1
     traditional: 16
   metric_counts:
-  - 93
+  - 94
   - 11
   milestones: &id001
   - value: 0.323

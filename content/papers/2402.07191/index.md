@@ -62,18 +62,18 @@ mrr: 0.0166
 adjusted_mrr: 0.0166
 mrr_dataset_count: 3
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 - MoleculeNet
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 1
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 1
+  total: 11
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
   evaluated: 3
@@ -405,7 +405,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: NCI1
   rows:
   - model: Oracle (IID)
@@ -2089,7 +2089,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -2744,10 +2744,10 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id002
 - benchmark: MoleculeNet
@@ -2759,16 +2759,16 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: TU Dortmund
-    benchmark_slug: tu-dortmund
-    datasets:
-    - dataset: NCI1
-      dataset_slug: nci1
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
     - dataset: ogbg-molhiv
       dataset_slug: ogbg-molhiv
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: NCI1
+      dataset_slug: nci1
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:

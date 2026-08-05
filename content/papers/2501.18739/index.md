@@ -59,8 +59,8 @@ adjusted_mrr: 0.0553
 mrr_dataset_count: 5
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 - GNNBenchmark
 - LINKX Benchmarks
 benchmark_coverage:
@@ -68,14 +68,14 @@ benchmark_coverage:
   benchmark_slug: classic
   evaluated: 2
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 1
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 1
+  total: 11
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 1
@@ -94,7 +94,7 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id003
+- &id004
   dataset: COLLAB
   rows:
   - model: GPM
@@ -4712,7 +4712,7 @@ results:
   metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: ogbl-collab
   rows:
   - model: SIGN
@@ -5241,10 +5241,10 @@ results_grouped:
   datasets:
   - *id001
   - *id002
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id003
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id004
 - benchmark: GNNBenchmark

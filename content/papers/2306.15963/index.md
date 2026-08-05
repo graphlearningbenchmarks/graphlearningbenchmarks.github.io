@@ -63,23 +63,23 @@ mrr: 0.0071
 adjusted_mrr: 0.0071
 mrr_dataset_count: 3
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 2
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 2
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 2
+  total: 11
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id001
+- &id003
   dataset: NCI1
   rows:
   - model: ECC
@@ -1004,7 +1004,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id004
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -1589,7 +1589,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id001
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -1977,7 +1977,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id002
   dataset: ogbg-molpcba
   rows:
   - model: UGTs
@@ -2358,11 +2358,11 @@ results:
   uses_non_primary_metric: true
   paper_has_primary_metric: false
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
   - *id002
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id003
   - *id004
@@ -2370,13 +2370,6 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: TU Dortmund
-    benchmark_slug: tu-dortmund
-    datasets:
-    - dataset: NCI1
-      dataset_slug: nci1
-    - dataset: PROTEINS
-      dataset_slug: proteins
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
@@ -2384,6 +2377,13 @@ datasets_by_scope:
       dataset_slug: ogbg-molhiv
     - dataset: ogbg-molpcba
       dataset_slug: ogbg-molpcba
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: NCI1
+      dataset_slug: nci1
+    - dataset: PROTEINS
+      dataset_slug: proteins
 main_figure: /figures/2306.15963/main_figure.jpegoptim.jpg
 ---
 

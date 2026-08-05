@@ -51,8 +51,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MPNN + VN + NoPE
-mrr: 0.102
-adjusted_mrr: 0.102
+mrr: 0.1007
+adjusted_mrr: 0.1007
 mrr_dataset_count: 4
 benchmark_categories:
 - OGB
@@ -77,9 +77,9 @@ results:
 - &id004
   dataset: Code
   rows:
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: gmn
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.206
     std: 0.002
     metric: F1
@@ -110,9 +110,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: dirgraphssm
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.205
     std: 0.0023
     metric: F1
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: graph-mamba
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.203
     std: 0.0023
     metric: F1
@@ -232,8 +232,8 @@ results:
     value_note: ''
     sort_value: 0.1937
     sort_std: 0.0028
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -299,8 +299,8 @@ results:
     value_note: ''
     sort_value: 0.1894
     sort_std: 0.0024
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -366,8 +366,8 @@ results:
     value_note: ''
     sort_value: 0.183
     sort_std: 0.0024
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -433,8 +433,8 @@ results:
     value_note: ''
     sort_value: 0.1727
     sort_std: 0.0017
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -500,8 +500,8 @@ results:
     value_note: ''
     sort_value: 0.1595
     sort_std: 0.0018
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -567,8 +567,8 @@ results:
     value_note: ''
     sort_value: 0.1581
     sort_std: 0.0026
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -635,8 +635,8 @@ results:
     value_note: ''
     sort_value: 0.151
     sort_std: 0.002
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -704,8 +704,8 @@ results:
     value_note: ''
     sort_value: 0.1495
     sort_std: 0.0023
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -784,9 +784,9 @@ results:
     sort_value: 0.78
     sort_std: 0.31
     global_rank: 1
-    paper_rank: 99
-    rank_delta: 98
-    rank_delta_abs: 98
+    paper_rank: 100
+    rank_delta: 99
+    rank_delta_abs: 99
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -794,9 +794,9 @@ results:
     comparison_source_arxiv: '2206.08164'
     is_best: true
     is_std_outlier: true
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4912
     std: 0.0042
     metric: F1
@@ -827,9 +827,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: ppgt
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4641
     std: 0.0033
     metric: F1
@@ -1054,9 +1054,9 @@ results:
     sort_value: 0.2718
     sort_std: 0.0054
     global_rank: 85
-    paper_rank: 112
-    rank_delta: 27
-    rank_delta_abs: 27
+    paper_rank: 113
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1076,9 +1076,9 @@ results:
 - &id006
   dataset: Peptides-func
   rows:
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2gcn
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -1109,9 +1109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2 gcn + pe
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -1143,9 +1143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s4g
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -1438,9 +1438,9 @@ results:
     sort_value: 0.6621
     sort_std: 0.0067
     global_rank: 92
-    paper_rank: 132
-    rank_delta: 40
-    rank_delta_abs: 40
+    paper_rank: 133
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1517,9 +1517,9 @@ results:
     sort_value: 0.2421
     sort_std: 0.0016
     global_rank: 1
-    paper_rank: 71
-    rank_delta: 70
-    rank_delta_abs: 70
+    paper_rank: 72
+    rank_delta: 71
+    rank_delta_abs: 71
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1527,9 +1527,9 @@ results:
     comparison_source_arxiv: '2206.08164'
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -1560,9 +1560,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -1650,9 +1650,9 @@ results:
     sort_value: 0.2431
     sort_std: 0.002
     global_rank: 7
-    paper_rank: 102
-    rank_delta: 95
-    rank_delta_abs: 95
+    paper_rank: 103
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1717,9 +1717,9 @@ results:
     sort_value: 0.2473
     sort_std: 0.0017
     global_rank: 48
-    paper_rank: 131
-    rank_delta: 83
-    rank_delta_abs: 83
+    paper_rank: 132
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1783,8 +1783,8 @@ results:
     value_note: ''
     sort_value: 0.2485
     sort_std: 0.0022
-    global_rank: 67
-    paper_rank: 104
+    global_rank: 68
+    paper_rank: 105
     rank_delta: 37
     rank_delta_abs: 37
     rank_delta_direction: worse
@@ -1850,8 +1850,8 @@ results:
     value_note: ''
     sort_value: 0.2529
     sort_std: 0.0016
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1917,8 +1917,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0012
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1985,8 +1985,8 @@ results:
     value_note: ''
     sort_value: 0.268
     sort_std: 0.004
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2593,9 +2593,9 @@ results:
 - &id002
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -2626,9 +2626,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -2659,34 +2659,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
-    model_key: graphormer
-    model_plain: SigGate-GT
-    value: 0.314
-    std: null
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.08806'
-    title: Unified 2D and 3D Pre-Training of Molecular Representations
-    date: Jul 14, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-14'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.314
-    sort_std: null
+    sort_value: 0.3141
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2749,8 +2750,8 @@ results:
     value_note: ''
     sort_value: 0.2907
     sort_std: 0.0028
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2816,8 +2817,8 @@ results:
     value_note: ''
     sort_value: 0.2902
     sort_std: 0.0017
-    global_rank: 32
-    paper_rank: 95
+    global_rank: 35
+    paper_rank: 98
     rank_delta: 63
     rank_delta_abs: 63
     rank_delta_direction: worse
@@ -2883,8 +2884,8 @@ results:
     value_note: ''
     sort_value: 0.2823
     sort_std: 0.0026
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2951,8 +2952,8 @@ results:
     value_note: ''
     sort_value: 0.2765
     sort_std: 0.0042
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3018,8 +3019,8 @@ results:
     value_note: ''
     sort_value: 0.2761
     sort_std: 0.0029
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3085,8 +3086,8 @@ results:
     value_note: ''
     sort_value: 0.2703
     sort_std: 0.0023
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3154,10 +3155,10 @@ results:
     value_note: ''
     sort_value: 0.269
     sort_std: 0.002
-    global_rank: 59
-    paper_rank: 103
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 63
+    paper_rank: 106
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3222,8 +3223,8 @@ results:
     value_note: ''
     sort_value: 0.2424
     sort_std: 0.0034
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

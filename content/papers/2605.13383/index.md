@@ -217,9 +217,9 @@ results:
     comparison_source_arxiv: '2309.00367'
     is_best: false
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4398
     std: 0.0033
     metric: F1
@@ -418,10 +418,10 @@ results:
     published_conference: ''
     at_pub_value: 0.3455
     at_pub_std: 0.0009
-    at_pub_source_arxiv: '2406.12059'
-    at_pub_source_title: A Scalable and Effective Alternative to Graph Transformers
-    at_pub_source_date_iso: '2024-06-17'
-    at_pub_source_date_label: AAAI 2024
+    at_pub_source_arxiv: '2405.11951'
+    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    at_pub_source_date_iso: '2024-05-20'
+    at_pub_source_date_label: ICLR 2024
     value_gap_source_date_iso: '2026-05-13'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.050500000000000045
@@ -450,8 +450,9 @@ results:
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: A Scalable and Effective Alternative to Graph Transformers
-    comparison_source_arxiv: '2406.12059'
+    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
+      Nodes'
+    comparison_source_arxiv: '2405.11951'
     is_best: false
     is_std_outlier: false
   - model: GatedGCN
@@ -785,8 +786,8 @@ results:
     value_note: ''
     sort_value: 0.2078
     sort_std: 0.0031
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2506,9 +2507,9 @@ results:
     sort_value: 0.78
     sort_std: 0.31
     global_rank: 1
-    paper_rank: 109
-    rank_delta: 108
-    rank_delta_abs: 108
+    paper_rank: 110
+    rank_delta: 109
+    rank_delta_abs: 109
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2517,9 +2518,9 @@ results:
     comparison_source_arxiv: '2411.12732'
     is_best: true
     is_std_outlier: true
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4912
     std: 0.0042
     metric: F1
@@ -2550,9 +2551,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: ppgt
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4641
     std: 0.0033
     metric: F1
@@ -3052,9 +3053,9 @@ results:
     sort_value: 0.2718
     sort_std: 0.0054
     global_rank: 85
-    paper_rank: 98
-    rank_delta: 13
-    rank_delta_abs: 13
+    paper_rank: 99
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3075,9 +3076,9 @@ results:
 - &id003
   dataset: Peptides-func
   rows:
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2gcn
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -3108,9 +3109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2 gcn + pe
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -3142,9 +3143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s4g
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -3971,8 +3972,8 @@ results:
     value_note: ''
     sort_value: 0.6575
     sort_std: 0.0049
-    global_rank: 98
-    paper_rank: 108
+    global_rank: 99
+    paper_rank: 109
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -4038,8 +4039,8 @@ results:
     value_note: ''
     sort_value: 0.6527
     sort_std: 0.0043
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4130,9 +4131,9 @@ results:
     comparison_source_arxiv: '2502.09263'
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -4163,9 +4164,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -4321,9 +4322,9 @@ results:
     sort_value: 0.2431
     sort_std: 0.002
     global_rank: 7
-    paper_rank: 57
-    rank_delta: 50
-    rank_delta_abs: 50
+    paper_rank: 58
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4724,8 +4725,8 @@ results:
     value_note: ''
     sort_value: 0.2481
     sort_std: 0.0007
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4791,8 +4792,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0012
-    global_rank: 81
-    paper_rank: 92
+    global_rank: 82
+    paper_rank: 93
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -4859,8 +4860,8 @@ results:
     value_note: ''
     sort_value: 0.2506
     sort_std: 0.0022
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4926,8 +4927,8 @@ results:
     value_note: ''
     sort_value: 0.2536
     sort_std: 0.0015
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4993,8 +4994,8 @@ results:
     value_note: ''
     sort_value: 0.2564
     sort_std: 0.0023
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -43,18 +43,18 @@ mrr: null
 adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 - MoleculeNet
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 3
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 3
+  total: 11
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
   evaluated: 1
@@ -64,7 +64,7 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id003
+- &id004
   dataset: COLLAB
   rows:
   - model: GPM
@@ -917,7 +917,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: MUTAG
   rows:
   - model: ECC
@@ -1905,7 +1905,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id003
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -3553,7 +3553,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id001
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -4004,13 +4004,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
-  datasets:
-  - *id001
-  - *id002
-  - *id003
 - benchmark: OGB
   datasets:
+  - *id001
+- benchmark: TU Dortmund
+  datasets:
+  - *id002
+  - *id003
   - *id004
 - benchmark: MoleculeNet
   datasets:
@@ -4019,6 +4019,11 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -4028,11 +4033,6 @@ datasets_by_scope:
       dataset_slug: proteins
     - dataset: COLLAB
       dataset_slug: collab
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:

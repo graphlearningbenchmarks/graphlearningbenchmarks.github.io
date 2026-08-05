@@ -45,22 +45,22 @@ paper_type: method
 proposed_models:
 - AgentNet
 - 1-AgentNet
-mrr: 0.0695
-adjusted_mrr: 0.0695
+mrr: 0.0694
+adjusted_mrr: 0.0694
 mrr_dataset_count: 5
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 - Quantum Chemistry
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 2
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 3
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 2
+  total: 11
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
@@ -71,7 +71,7 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id001
+- &id004
   dataset: MUTAG
   rows:
   - model: ECC
@@ -1487,7 +1487,7 @@ results:
   metric: mu
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id002
+- &id005
   dataset: RDT-B
   rows:
   - model: CIN
@@ -2002,7 +2002,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id001
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -2449,12 +2449,12 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id002
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -2485,9 +2485,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -2518,34 +2518,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
-    model_key: graphormer
-    model_plain: SigGate-GT
-    value: 0.314
-    std: null
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.08806'
-    title: Unified 2D and 3D Pre-Training of Molecular Representations
-    date: Jul 14, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-14'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.314
-    sort_std: null
+    sort_value: 0.3141
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2607,8 +2608,8 @@ results:
     value_note: ''
     sort_value: 0.2986
     sort_std: 0.0025
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2674,8 +2675,8 @@ results:
     value_note: ''
     sort_value: 0.2902
     sort_std: 0.0017
-    global_rank: 32
-    paper_rank: 95
+    global_rank: 35
+    paper_rank: 98
     rank_delta: 63
     rank_delta_abs: 63
     rank_delta_direction: worse
@@ -2741,8 +2742,8 @@ results:
     value_note: ''
     sort_value: 0.2703
     sort_std: 0.0023
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2808,8 +2809,8 @@ results:
     value_note: ''
     sort_value: 0.2664
     sort_std: 0.0027
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2875,8 +2876,8 @@ results:
     value_note: ''
     sort_value: 0.2549
     sort_std: 0.0027
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2895,7 +2896,7 @@ results:
   metric: AP
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id003
   dataset: ogbg-ppa
   rows:
   - model: differential encoding
@@ -3278,13 +3279,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
   - *id002
-- benchmark: OGB
-  datasets:
   - *id003
+- benchmark: TU Dortmund
+  datasets:
   - *id004
   - *id005
 - benchmark: Quantum Chemistry
@@ -3294,13 +3295,6 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: TU Dortmund
-    benchmark_slug: tu-dortmund
-    datasets:
-    - dataset: MUTAG
-      dataset_slug: mutag
-    - dataset: RDT-B
-      dataset_slug: rdt-b
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
@@ -3310,6 +3304,13 @@ datasets_by_scope:
       dataset_slug: ogbg-molpcba
     - dataset: ogbg-ppa
       dataset_slug: ogbg-ppa
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: MUTAG
+      dataset_slug: mutag
+    - dataset: RDT-B
+      dataset_slug: rdt-b
   - benchmark: Quantum Chemistry
     benchmark_slug: quantum-chemistry
     datasets:

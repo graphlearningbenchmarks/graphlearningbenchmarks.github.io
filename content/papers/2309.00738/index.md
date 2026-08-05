@@ -73,22 +73,22 @@ proposed_models:
 - GIN (backbone)
 - GC-GNN (GraphSAGE)
 - GC-GNN (GCN)
-mrr: 0.0083
-adjusted_mrr: 0.0083
+mrr: 0.0082
+adjusted_mrr: 0.0082
 mrr_dataset_count: 6
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 - GNNBenchmark
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 3
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 2
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 3
+  total: 11
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 1
@@ -413,7 +413,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: D&D
   rows:
   - model: GC-GNN (GraphSAGE)
@@ -1512,7 +1512,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id004
   dataset: ENZYMES
   rows:
   - model: WL
@@ -2642,7 +2642,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id003
   dataset: MUTAG
   rows:
   - model: ECC
@@ -3775,7 +3775,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id001
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -4227,12 +4227,12 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id002
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -4263,9 +4263,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -4296,34 +4296,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
-    model_key: graphormer
-    model_plain: SigGate-GT
-    value: 0.314
-    std: null
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.08806'
-    title: Unified 2D and 3D Pre-Training of Molecular Representations
-    date: Jul 14, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-14'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.314
-    sort_std: null
+    sort_value: 0.3141
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4386,8 +4387,8 @@ results:
     value_note: ''
     sort_value: 0.2782
     sort_std: 0.0036
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4454,8 +4455,8 @@ results:
     value_note: ''
     sort_value: 0.2781
     sort_std: 0.0043
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4522,8 +4523,8 @@ results:
     value_note: ''
     sort_value: 0.2703
     sort_std: 0.0023
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4590,8 +4591,8 @@ results:
     value_note: ''
     sort_value: 0.251
     sort_std: 0.0047
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4658,8 +4659,8 @@ results:
     value_note: ''
     sort_value: 0.2422
     sort_std: 0.0034
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4679,13 +4680,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
   - *id002
-  - *id003
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
+  - *id003
   - *id004
   - *id005
 - benchmark: GNNBenchmark
@@ -4695,6 +4696,13 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+    - dataset: ogbg-molpcba
+      dataset_slug: ogbg-molpcba
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -4704,13 +4712,6 @@ datasets_by_scope:
       dataset_slug: enzymes
     - dataset: D&D
       dataset_slug: d-d
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
-    - dataset: ogbg-molpcba
-      dataset_slug: ogbg-molpcba
   - benchmark: GNNBenchmark
     benchmark_slug: gnnbenchmark
     datasets:

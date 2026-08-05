@@ -64,22 +64,22 @@ adjusted_mrr: 0.0054
 mrr_dataset_count: 5
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 - Heterogeneous Graph Benchmarks
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 1
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 3
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 3
+  total: 11
 - benchmark: Heterogeneous Graph Benchmarks
   benchmark_slug: heterogeneous-graph-benchmarks
   evaluated: 1
@@ -1099,7 +1099,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id002
+- &id003
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2021,7 +2021,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id004
   dataset: NCI1
   rows:
   - model: ECC
@@ -2876,7 +2876,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id005
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -4808,7 +4808,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id005
+- &id002
   dataset: ogbn-products
   rows:
   - model: LargeGT-full
@@ -5818,13 +5818,13 @@ results_grouped:
 - benchmark: Classic
   datasets:
   - *id001
-- benchmark: TU Dortmund
-  datasets:
-  - *id002
-  - *id003
-  - *id004
 - benchmark: OGB
   datasets:
+  - *id002
+- benchmark: TU Dortmund
+  datasets:
+  - *id003
+  - *id004
   - *id005
 - benchmark: Heterogeneous Graph Benchmarks
   datasets:

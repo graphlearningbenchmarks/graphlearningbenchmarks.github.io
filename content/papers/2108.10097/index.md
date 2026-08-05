@@ -63,8 +63,8 @@ proposed_models:
 - GAMLP+RLU
 - NARS-GAMLP
 - NARS-GAMLP+RLU
-mrr: 0.2593
-adjusted_mrr: 0.1728
+mrr: 0.5093
+adjusted_mrr: 0.3395
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -935,74 +935,6 @@ results:
 - &id002
   dataset: ogbn-papers100M
   rows:
-  - model: SGC
-    model_key: sgc
-    model_plain: SGC
-    value: 0.6329
-    std: 0.0019
-    paper_value: 0.6329
-    paper_std: 0.0019
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: wu2019simplifying
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Test accuracy on ogbn-papers100M standard split
-    date: Aug 23, 2021
-    date_display: Aug 2021
-    date_iso: '2021-08-23'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.632
-    at_pub_std: 0.002
-    at_pub_source_arxiv: '2108.00955'
-    at_pub_source_title: Evaluating Deep Graph Neural Networks
-    at_pub_source_date_iso: '2021-08-02'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.0009000000000000119
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.791
-    true_std: null
-    value_gap_source_arxiv: '2403.13268'
-    value_gap_source_title: 'Unifews: You Need Fewer Operations for Efficient Graph
-      Neural Networks'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.15810000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.791
-    sort_std: null
-    global_rank: 1
-    paper_rank: 61
-    rank_delta: 60
-    rank_delta_abs: 60
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
   - model: GAMLP
     model_key: gamlp
     model_plain: GAMLP
@@ -1060,8 +992,8 @@ results:
     value_note: ''
     sort_value: 0.7036
     sort_std: 0.0002
-    global_rank: 2
-    paper_rank: 10
+    global_rank: 1
+    paper_rank: 9
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -1069,7 +1001,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: LargeGT-full
     model_key: glem-gnn
@@ -1096,9 +1028,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.7036
     sort_std: 0.0002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: LargeGT-full
+    model_key: shadow+atp
+    model_plain: LargeGT-full
+    value: 0.698
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.06128'
+    title: Rethinking Node-wise Propagation for Large-scale Graph Learning
+    date: Feb 9, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-09'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.698
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1161,8 +1126,8 @@ results:
     value_note: ''
     sort_value: 0.6967
     sort_std: 0.0004
-    global_rank: 5
-    paper_rank: 6
+    global_rank: 4
+    paper_rank: 5
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1230,8 +1195,8 @@ results:
     value_note: ''
     sort_value: 0.68
     sort_std: 0.0015
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1299,10 +1264,78 @@ results:
     value_note: ''
     sort_value: 0.6636
     sort_std: 0.0005
-    global_rank: 27
+    global_rank: 26
     paper_rank: 41
-    rank_delta: 14
-    rank_delta_abs: 14
+    rank_delta: 15
+    rank_delta_abs: 15
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.6329
+    std: 0.0019
+    paper_value: 0.6329
+    paper_std: 0.0019
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: wu2019simplifying
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Test accuracy on ogbn-papers100M standard split
+    date: Aug 23, 2021
+    date_display: Aug 2021
+    date_iso: '2021-08-23'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.632
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2108.00955'
+    at_pub_source_title: Evaluating Deep Graph Neural Networks
+    at_pub_source_date_iso: '2021-08-02'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2021-10-29'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.0009000000000000119
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.661
+    true_std: 0.0013
+    value_gap_source_arxiv: '2111.00064'
+    value_gap_source_title: Node Feature Extraction by Self-Supervised Multi-scale
+      Neighborhood Prediction
+    value_gap_source_is_current_paper: false
+    value_gap: 0.028100000000000014
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.661
+    sort_std: 0.0013
+    global_rank: 33
+    paper_rank: 61
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

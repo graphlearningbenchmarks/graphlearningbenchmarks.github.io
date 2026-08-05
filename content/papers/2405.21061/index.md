@@ -60,9 +60,9 @@ results:
 - &id003
   dataset: COCO-SP
   rows:
-  - model: CR-TAS
+  - model: Exphormer
     model_key: crawl
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4588
     std: 0.0079
     metric: F1
@@ -93,9 +93,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: gps
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.444
     std: 0.0065
     metric: F1
@@ -126,9 +126,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4398
     std: 0.0033
     metric: F1
@@ -815,9 +815,9 @@ results:
 - &id001
   dataset: PascalVOC-SP
   rows:
-  - model: CR-TAS
+  - model: Exphormer
     model_key: gcn
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.78
     std: 0.31
     metric: F1
@@ -848,9 +848,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: true
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4912
     std: 0.0042
     metric: F1
@@ -881,9 +881,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: ppgt
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4641
     std: 0.0033
     metric: F1

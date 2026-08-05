@@ -46,8 +46,8 @@ proposed_models:
 - Graphormer DeepGPT
 - GraphGPS DeepGPT
 - LiGhT DeepGPT
-mrr: 0.0357
-adjusted_mrr: 0.0357
+mrr: 0.0354
+adjusted_mrr: 0.0354
 mrr_dataset_count: 9
 benchmark_categories:
 - OGB
@@ -5771,9 +5771,9 @@ results:
 - &id002
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -5804,9 +5804,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -5837,34 +5837,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
-    model_key: graphormer
-    model_plain: SigGate-GT
-    value: 0.314
-    std: null
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.08806'
-    title: Unified 2D and 3D Pre-Training of Molecular Representations
-    date: Jul 14, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-14'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.314
-    sort_std: null
+    sort_value: 0.3141
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5926,8 +5927,8 @@ results:
     value_note: ''
     sort_value: 0.313
     sort_std: 0.003
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5936,6 +5937,74 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.264
+    std: 0.021
+    paper_value: 0.264
+    paper_std: 0.021
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-20'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.3066
+    true_std: 0.0013
+    value_gap_source_arxiv: '2405.11951'
+    value_gap_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
+      Nodes'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.04259999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3066
+    sort_std: 0.0013
+    global_rank: 9
+    paper_rank: 69
+    rank_delta: 60
+    rank_delta_abs: 60
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GraphGPS FT
     model_key: graphgps ft
@@ -5993,8 +6062,8 @@ results:
     value_note: ''
     sort_value: 0.301
     sort_std: 0.013
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6060,8 +6129,8 @@ results:
     value_note: ''
     sort_value: 0.297
     sort_std: 0.02
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6127,8 +6196,8 @@ results:
     value_note: ''
     sort_value: 0.295
     sort_std: 0.006
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6194,8 +6263,8 @@ results:
     value_note: ''
     sort_value: 0.289
     sort_std: 0.009
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6263,8 +6332,8 @@ results:
     value_note: ''
     sort_value: 0.2838
     sort_std: 0.0035
-    global_rank: 39
-    paper_rank: 74
+    global_rank: 42
+    paper_rank: 77
     rank_delta: 35
     rank_delta_abs: 35
     rank_delta_direction: worse
@@ -6331,80 +6400,12 @@ results:
     value_note: ''
     sort_value: 0.27
     sort_std: 0.007
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GatedGCN
-    model_key: gatedgcn
-    model_plain: GatedGCN
-    value: 0.264
-    std: 0.021
-    paper_value: 0.264
-    paper_std: 0.021
-    metric: AP
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 2.8
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
-    date: Sep 18, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-18'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-09-29'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.267
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.24886'
-    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
-      Anisotropic Geometric Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0030000000000000027
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.267
-    sort_std: 0.002
-    global_rank: 60
-    paper_rank: 66
-    rank_delta: 6
-    rank_delta_abs: 6
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

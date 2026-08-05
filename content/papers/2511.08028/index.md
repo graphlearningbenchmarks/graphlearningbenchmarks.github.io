@@ -425,9 +425,9 @@ results:
 - &id001
   dataset: Code
   rows:
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: gmn
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.206
     std: 0.002
     metric: F1
@@ -458,9 +458,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: dirgraphssm
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.205
     std: 0.0023
     metric: F1
@@ -491,9 +491,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: graph-mamba
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.203
     std: 0.0023
     metric: F1
@@ -649,8 +649,8 @@ results:
     value_note: ''
     sort_value: 0.1942
     sort_std: 0.001
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -717,8 +717,8 @@ results:
     value_note: ''
     sort_value: 0.1939
     sort_std: 0.0047
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -785,8 +785,8 @@ results:
     value_note: ''
     sort_value: 0.1935
     sort_std: 0.0021
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -853,8 +853,8 @@ results:
     value_note: ''
     sort_value: 0.1927
     sort_std: 0.002
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

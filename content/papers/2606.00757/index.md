@@ -44,22 +44,22 @@ adjusted_mrr: 0.005
 mrr_dataset_count: 8
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 - LRGB
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 3
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 2
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 2
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 2
+  total: 11
 - benchmark: LRGB
   benchmark_slug: lrgb
   evaluated: 1
@@ -1515,7 +1515,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id006
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2234,7 +2234,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id007
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -2959,9 +2959,9 @@ results:
 - &id008
   dataset: Peptides-func
   rows:
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2gcn
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -2992,9 +2992,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2 gcn + pe
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -3026,9 +3026,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s4g
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -3116,9 +3116,9 @@ results:
     sort_value: 0.7261
     sort_std: 0.0011
     global_rank: 5
-    paper_rank: 176
-    rank_delta: 171
-    rank_delta_abs: 171
+    paper_rank: 177
+    rank_delta: 172
+    rank_delta_abs: 172
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3183,9 +3183,9 @@ results:
     sort_value: 0.7059
     sort_std: 0.0089
     global_rank: 30
-    paper_rank: 174
-    rank_delta: 144
-    rank_delta_abs: 144
+    paper_rank: 175
+    rank_delta: 145
+    rank_delta_abs: 145
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3249,8 +3249,8 @@ results:
     value_note: ''
     sort_value: 0.5912
     sort_std: 0.0091
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3316,8 +3316,8 @@ results:
     value_note: ''
     sort_value: 0.5882
     sort_std: 0.0065
-    global_rank: 160
-    paper_rank: 160
+    global_rank: 161
+    paper_rank: 161
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3383,8 +3383,8 @@ results:
     value_note: ''
     sort_value: 0.5848
     sort_std: 0.0084
-    global_rank: 166
-    paper_rank: 166
+    global_rank: 167
+    paper_rank: 167
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3450,8 +3450,8 @@ results:
     value_note: ''
     sort_value: 0.5842
     sort_std: 0.0046
-    global_rank: 167
-    paper_rank: 183
+    global_rank: 168
+    paper_rank: 184
     rank_delta: 16
     rank_delta_abs: 16
     rank_delta_direction: worse
@@ -3517,8 +3517,8 @@ results:
     value_note: ''
     sort_value: 0.5818
     sort_std: 0.0068
-    global_rank: 170
-    paper_rank: 170
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3584,8 +3584,8 @@ results:
     value_note: ''
     sort_value: 0.5484
     sort_std: 0.0045
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3651,8 +3651,8 @@ results:
     value_note: ''
     sort_value: 0.5421
     sort_std: 0.0076
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 182
+    paper_rank: 182
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4405,7 +4405,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id004
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -5122,7 +5122,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id005
   dataset: ogbn-arxiv
   rows:
   - model: EGP (GCN)
@@ -5851,11 +5851,11 @@ results_grouped:
   - *id001
   - *id002
   - *id003
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id004
   - *id005
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id006
   - *id007
@@ -5883,6 +5883,11 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -5890,11 +5895,6 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: PROTEINS
       dataset_slug: proteins
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: LRGB
     benchmark_slug: lrgb
     datasets:

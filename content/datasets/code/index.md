@@ -12,7 +12,7 @@ stats:
   avg_nodes: 125.2
   avg_edges: 124.2
   num_classes: 1
-result_count: 47
+result_count: 51
 best_model:
   model: GMN
   value: 0.206
@@ -32,6 +32,10 @@ papers:
   title: A Scalable and Effective Alternative to Graph Transformers
   date_iso: '2024-06-17'
   venue: AAAI 2024
+- arxiv_id: '2405.11951'
+  title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+  date_iso: '2024-05-20'
+  venue: ICLR 2024
 - arxiv_id: '2311.07966'
   title: Higher-Order Expander Graph Propagation
   date_iso: '2023-11-14'
@@ -238,6 +242,34 @@ variants:
     - null
     metric_stds:
     - 0.0021
+    - null
+  - model: LGI-GT
+    model_plain: LGI-GT
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_iso: '2024-05-20'
+    date_display: May 2024
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: null
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1948
+    - null
+    metric_stds:
+    - 0.0024
     - null
   - model: RRWP
     model_plain: RRWP
@@ -519,6 +551,34 @@ variants:
     metric_stds:
     - 0.002
     - null
+  - model: GatedGCN-VN
+    model_plain: GatedGCN-VN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_iso: '2024-05-20'
+    date_display: May 2024
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1855
+    - null
+    metric_stds:
+    - 0.0018
+    - null
   - model: GraphTrans (GCN-Virtual)
     model_plain: GraphTrans (GCN-Virtual)
     is_baseline: true
@@ -798,6 +858,34 @@ variants:
     - null
     metric_stds:
     - 0.002
+    - null
+  - model: GatedGCN
+    model_plain: GatedGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_iso: '2024-05-20'
+    date_display: May 2024
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1606
+    - null
+    metric_stds:
+    - 0.0015
     - null
   - model: GCN-virtual
     model_plain: GCN-virtual
@@ -1107,6 +1195,34 @@ variants:
     metric_stds:
     - 0.0023
     - null
+  - model: GINE / GIN
+    model_plain: GINE / GIN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_iso: '2024-05-20'
+    date_display: May 2024
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    published_conference: ICLR 2024
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2024
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.1495
+    - null
+    metric_stds:
+    - 0.0023
+    - null
   - model: GIN + 3-Regular Bipartite Expander + Summation
     model_plain: GIN + 3-Regular Bipartite Expander + Summation
     is_baseline: false
@@ -1359,46 +1475,18 @@ variants:
     metric_stds:
     - null
     - 0.0529
-  - model: two augmentation methods based on environment subgraphs
-    model_plain: two augmentation methods based on environment subgraphs
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2206.02886'
-    title: Graph Rationalization with Environment-based Augmentations
-    date: Jun 6, 2022
-    date_iso: '2022-06-06'
-    date_display: Jun 2022
-    codebase_url: https://github.com/liugangcode/GREA
-    published_conference: KDD 2022
-    published_conference_short: KDD
-    published_conference_slug: kdd
-    published_venue: KDD 2022
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - null
-    - 0.8191
-    metric_stds:
-    - null
-    - 0.024
-  row_count: 47
-  rows_json: ''
+  row_count: 51
+  rows_json: /data/datasets/code/standard-split-rows.json
   chart_json: /data/datasets/code/standard-split-chart.json
   arch_counts:
-    gnn: 22
+    gnn: 25
     hybrid: 11
-    graph_transformer: 13
+    graph_transformer: 14
     llm: 0
     walk: 0
     traditional: 0
   metric_counts:
-  - 38
+  - 42
   - 9
   milestones: &id001
   - value: 0.183
@@ -1413,6 +1501,12 @@ variants:
     arxiv_id: '2301.11956'
     title: On the Connection Between MPNN and Graph Transformer
     date: '2023-01-27'
+  - value: 0.1948
+    std: 0.0024
+    model: LGI-GT
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: '2024-05-20'
   - value: 0.206
     std: 0.002
     model: GMN

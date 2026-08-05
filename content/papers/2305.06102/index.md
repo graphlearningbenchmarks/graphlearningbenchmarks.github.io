@@ -44,27 +44,27 @@ has_results: true
 paper_type: method
 proposed_models:
 - GSO
-mrr: 0.0863
-adjusted_mrr: 0.0863
+mrr: 0.0814
+adjusted_mrr: 0.0814
 mrr_dataset_count: 7
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 5
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 2
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 5
+  total: 11
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id004
+- &id006
   dataset: ENZYMES
   rows:
   - model: WL
@@ -1195,7 +1195,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id003
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2467,7 +2467,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id004
   dataset: NCI1
   rows:
   - model: ECC
@@ -3710,7 +3710,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -4842,7 +4842,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id007
   dataset: RDT-B
   rows:
   - model: CIN
@@ -5430,12 +5430,12 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id001
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -5466,9 +5466,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -5499,34 +5499,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
-    model_key: graphormer
-    model_plain: SigGate-GT
-    value: 0.314
-    std: null
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.08806'
-    title: Unified 2D and 3D Pre-Training of Molecular Representations
-    date: Jul 14, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-14'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: ''
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
     is_global_top: true
     global_rank: 3
-    sort_value: 0.314
-    sort_std: null
+    sort_value: 0.3141
+    sort_std: 0.0019
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5589,8 +5590,8 @@ results:
     value_note: ''
     sort_value: 0.3031
     sort_std: 0.0026
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5657,8 +5658,8 @@ results:
     value_note: ''
     sort_value: 0.2979
     sort_std: 0.003
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5725,8 +5726,8 @@ results:
     value_note: ''
     sort_value: 0.2947
     sort_std: 0.0026
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5793,8 +5794,8 @@ results:
     value_note: ''
     sort_value: 0.2907
     sort_std: 0.0028
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5860,8 +5861,8 @@ results:
     value_note: ''
     sort_value: 0.2902
     sort_std: 0.0017
-    global_rank: 32
-    paper_rank: 54
+    global_rank: 35
+    paper_rank: 57
     rank_delta: 22
     rank_delta_abs: 22
     rank_delta_direction: worse
@@ -5929,8 +5930,8 @@ results:
     value_note: ''
     sort_value: 0.2885
     sort_std: 0.003
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5997,8 +5998,8 @@ results:
     value_note: ''
     sort_value: 0.2842
     sort_std: 0.0043
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6066,8 +6067,8 @@ results:
     value_note: ''
     sort_value: 0.2838
     sort_std: 0.0035
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6134,8 +6135,8 @@ results:
     value_note: ''
     sort_value: 0.2765
     sort_std: 0.0042
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6203,10 +6204,10 @@ results:
     value_note: ''
     sort_value: 0.269
     sort_std: 0.002
-    global_rank: 59
-    paper_rank: 85
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 63
+    paper_rank: 88
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6271,8 +6272,8 @@ results:
     value_note: ''
     sort_value: 0.2342
     sort_std: 0.0029
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6291,7 +6292,7 @@ results:
   metric: AP
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id002
   dataset: ogbg-ppa
   rows:
   - model: differential encoding
@@ -6882,21 +6883,28 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
   - *id002
+- benchmark: TU Dortmund
+  datasets:
   - *id003
   - *id004
   - *id005
-- benchmark: OGB
-  datasets:
   - *id006
   - *id007
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molpcba
+      dataset_slug: ogbg-molpcba
+    - dataset: ogbg-ppa
+      dataset_slug: ogbg-ppa
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -6910,13 +6918,6 @@ datasets_by_scope:
       dataset_slug: enzymes
     - dataset: RDT-B
       dataset_slug: rdt-b
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molpcba
-      dataset_slug: ogbg-molpcba
-    - dataset: ogbg-ppa
-      dataset_slug: ogbg-ppa
 single_proposed_model: GSO
 main_figure: /figures/2305.06102/main_figure.jpegoptim.jpg
 ---

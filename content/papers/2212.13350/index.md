@@ -65,8 +65,8 @@ proposed_models:
 - Graph ViT
 - Graph ViT/MLP-Mixer
 - Graphtransformer
-mrr: 0.0099
-adjusted_mrr: 0.0099
+mrr: 0.0098
+adjusted_mrr: 0.0098
 mrr_dataset_count: 4
 benchmark_categories:
 - MoleculeNet
@@ -2382,9 +2382,9 @@ results:
 - &id003
   dataset: Peptides-func
   rows:
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2gcn
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -2415,9 +2415,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s^2 gcn + pe
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -2449,9 +2449,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: GINE / GIN
     model_key: s4g
-    model_plain: Tango_GPS
+    model_plain: GINE / GIN
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -2740,8 +2740,8 @@ results:
     value_note: ''
     sort_value: 0.6575
     sort_std: 0.0049
-    global_rank: 98
-    paper_rank: 101
+    global_rank: 99
+    paper_rank: 102
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -2808,8 +2808,8 @@ results:
     value_note: ''
     sort_value: 0.6562
     sort_std: 0.0075
-    global_rank: 102
-    paper_rank: 125
+    global_rank: 103
+    paper_rank: 126
     rank_delta: 23
     rank_delta_abs: 23
     rank_delta_direction: worse
@@ -2875,8 +2875,8 @@ results:
     value_note: ''
     sort_value: 0.648
     sort_std: 0.0089
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2942,8 +2942,8 @@ results:
     value_note: ''
     sort_value: 0.6384
     sort_std: 0.0121
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2965,9 +2965,9 @@ results:
 - &id002
   dataset: Peptides-struct
   rows:
-  - model: GMN
+  - model: GINE / GIN
     model_key: gcn
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2421
     std: 0.0016
     metric: MAE
@@ -2998,9 +2998,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -3031,9 +3031,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -3120,8 +3120,8 @@ results:
     value_note: ''
     sort_value: 0.248
     sort_std: 0.0013
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3187,8 +3187,8 @@ results:
     value_note: ''
     sort_value: 0.2486
     sort_std: 0.0041
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3254,8 +3254,8 @@ results:
     value_note: ''
     sort_value: 0.2494
     sort_std: 0.0007
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3321,8 +3321,8 @@ results:
     value_note: ''
     sort_value: 0.2508
     sort_std: 0.0007
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -52,18 +52,18 @@ mrr: 0.0384
 adjusted_mrr: 0.0256
 mrr_dataset_count: 2
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 - GNNBenchmark
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 2
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 3
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 2
+  total: 11
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 1
@@ -594,7 +594,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id005
   dataset: D&D
   rows:
   - model: ECC
@@ -1113,7 +1113,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id004
   dataset: MUTAG
   rows:
   - model: ECC
@@ -1631,7 +1631,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id001
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -2150,7 +2150,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id002
   dataset: ogbl-collab
   rows:
   - model: SIGN
@@ -2671,7 +2671,7 @@ results:
   metric: Hits@50
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id003
   dataset: ogbl-ppa
   rows:
   - model: Classification
@@ -3257,13 +3257,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
   - *id002
-- benchmark: OGB
-  datasets:
   - *id003
+- benchmark: TU Dortmund
+  datasets:
   - *id004
   - *id005
 - benchmark: GNNBenchmark
@@ -3273,6 +3273,11 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -3280,11 +3285,6 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: D&D
       dataset_slug: d-d
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: GNNBenchmark
     benchmark_slug: gnnbenchmark
     datasets:

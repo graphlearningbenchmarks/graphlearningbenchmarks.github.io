@@ -302,9 +302,9 @@ results:
     sort_value: 0.2421
     sort_std: 0.0016
     global_rank: 1
-    paper_rank: 177
-    rank_delta: 176
-    rank_delta_abs: 176
+    paper_rank: 178
+    rank_delta: 177
+    rank_delta_abs: 177
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -313,9 +313,9 @@ results:
     comparison_source_arxiv: '2309.00367'
     is_best: false
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -346,9 +346,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -435,8 +435,8 @@ results:
     value_note: ''
     sort_value: 0.3504
     sort_std: 0.0028
-    global_rank: 171
-    paper_rank: 177
+    global_rank: 172
+    paper_rank: 178
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -494,7 +494,7 @@ results:
     today_delta_significant: false
     sort_value: 0.402
     sort_std: 0.055
-    global_rank: 178
+    global_rank: 179
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -556,7 +556,7 @@ results:
     today_delta_significant: false
     sort_value: 0.40299999999999997
     sort_std: 0.006
-    global_rank: 178
+    global_rank: 179
     has_value_gap: false
     has_value_note: false
     value_gap: null

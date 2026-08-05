@@ -71,9 +71,9 @@ results:
 - &id006
   dataset: COCO-SP
   rows:
-  - model: CR-TAS
+  - model: Exphormer
     model_key: crawl
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4588
     std: 0.0079
     metric: F1
@@ -104,9 +104,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: gps
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.444
     std: 0.0065
     metric: F1
@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4398
     std: 0.0033
     metric: F1
@@ -218,7 +218,7 @@ results:
     today_delta_significant: false
     sort_value: 0.101
     sort_std: 0.011
-    global_rank: 57
+    global_rank: 58
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -280,7 +280,7 @@ results:
     today_delta_significant: false
     sort_value: 0.101
     sort_std: 0.012
-    global_rank: 57
+    global_rank: 58
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -342,7 +342,7 @@ results:
     today_delta_significant: false
     sort_value: 0.098
     sort_std: 0.011
-    global_rank: 57
+    global_rank: 58
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -404,7 +404,7 @@ results:
     today_delta_significant: false
     sort_value: 0.093
     sort_std: 0.014
-    global_rank: 57
+    global_rank: 58
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -466,7 +466,7 @@ results:
     today_delta_significant: false
     sort_value: 0.085
     sort_std: 0.01
-    global_rank: 58
+    global_rank: 59
     has_value_gap: false
     has_value_note: false
     value_gap: null
@@ -528,7 +528,7 @@ results:
     today_delta_significant: false
     sort_value: 0.078
     sort_std: 0.004
-    global_rank: 60
+    global_rank: 61
     has_value_gap: false
     has_value_note: false
     value_gap: null

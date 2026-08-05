@@ -404,9 +404,9 @@ results:
 - &id001
   dataset: Peptides-struct
   rows:
-  - model: GMN
+  - model: GINE / GIN
     model_key: gcn
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2421
     std: 0.0016
     metric: MAE
@@ -437,9 +437,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: tango_gps
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2422
     std: 0.0014
     metric: MAE
@@ -470,9 +470,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: GINE / GIN
     model_key: nba-gin+lappe
-    model_plain: GMN
+    model_plain: GINE / GIN
     value: 0.2424
     std: 0.001
     metric: MAE
@@ -695,8 +695,8 @@ results:
     value_note: ''
     sort_value: 0.248
     sort_std: 0.001
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -762,8 +762,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.0012
-    global_rank: 81
-    paper_rank: 100
+    global_rank: 82
+    paper_rank: 101
     rank_delta: 19
     rank_delta_abs: 19
     rank_delta_direction: worse
@@ -831,8 +831,8 @@ results:
     value_note: ''
     sort_value: 0.25
     sort_std: 0.001
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -898,8 +898,8 @@ results:
     value_note: ''
     sort_value: 0.2545
     sort_std: 0.0012
-    global_rank: 118
-    paper_rank: 121
+    global_rank: 119
+    paper_rank: 122
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -966,8 +966,8 @@ results:
     value_note: ''
     sort_value: 0.268
     sort_std: 0.004
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1034,8 +1034,8 @@ results:
     value_note: ''
     sort_value: 0.274
     sort_std: 0.0
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 152
+    paper_rank: 152
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

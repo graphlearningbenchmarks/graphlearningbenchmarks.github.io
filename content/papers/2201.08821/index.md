@@ -54,32 +54,32 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphTrans
-mrr: 0.0328
-adjusted_mrr: 0.0219
+mrr: 0.03
+adjusted_mrr: 0.02
 mrr_dataset_count: 2
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 1
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 1
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 1
+  total: 11
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id002
+- &id001
   dataset: Code
   rows:
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: gmn
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.206
     std: 0.002
     metric: F1
@@ -110,9 +110,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: dirgraphssm
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.205
     std: 0.0023
     metric: F1
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RRWP
+  - model: GatedGCN-VN
     model_key: graph-mamba
-    model_plain: RRWP
+    model_plain: GatedGCN-VN
     value: 0.203
     std: 0.0023
     metric: F1
@@ -233,8 +233,8 @@ results:
     value_note: ''
     sort_value: 0.183
     sort_std: 0.0024
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -301,8 +301,8 @@ results:
     value_note: ''
     sort_value: 0.1751
     sort_std: 0.0049
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -369,8 +369,8 @@ results:
     value_note: ''
     sort_value: 0.167
     sort_std: 0.0015
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -437,8 +437,8 @@ results:
     value_note: ''
     sort_value: 0.1595
     sort_std: 0.0018
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -505,8 +505,8 @@ results:
     value_note: ''
     sort_value: 0.1581
     sort_std: 0.002
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -573,8 +573,8 @@ results:
     value_note: ''
     sort_value: 0.157
     sort_std: 0.0032
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -640,8 +640,8 @@ results:
     value_note: ''
     sort_value: 0.151
     sort_std: 0.002
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -708,8 +708,8 @@ results:
     value_note: ''
     sort_value: 0.1495
     sort_std: 0.0023
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -728,7 +728,7 @@ results:
   metric: F1
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: NCI1
   rows:
   - model: ECC
@@ -1385,26 +1385,26 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id002
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: TU Dortmund
-    benchmark_slug: tu-dortmund
-    datasets:
-    - dataset: NCI1
-      dataset_slug: nci1
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
     - dataset: Code
       dataset_slug: code
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: NCI1
+      dataset_slug: nci1
 single_proposed_model: GraphTrans
 main_figure: /figures/2201.08821/main_figure.jpegoptim.jpg
 ---

@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SIGN
-mrr: 0.0422
-adjusted_mrr: 0.0422
+mrr: 0.0425
+adjusted_mrr: 0.0425
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -1527,39 +1527,6 @@ results:
   dataset: ogbn-papers100M
   rows:
   - model: LargeGT-full
-    model_key: sgc
-    model_plain: LargeGT-full
-    value: 0.791
-    std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2403.13268'
-    title: 'Unifews: You Need Fewer Operations for Efficient Graph Neural Networks'
-    date: Mar 19, 2024
-    date_display: Mar 2024
-    date_iso: '2024-03-19'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/gdmnl/Unifews
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.791
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: LargeGT-full
     model_key: gamlp
     model_plain: LargeGT-full
     value: 0.7036
@@ -1584,13 +1551,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 1
     sort_value: 0.7036
     sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: LargeGT-full
     model_key: glem-gnn
@@ -1617,9 +1584,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 2
     sort_value: 0.7036
     sort_std: 0.0002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: LargeGT-full
+    model_key: shadow+atp
+    model_plain: LargeGT-full
+    value: 0.698
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.06128'
+    title: Rethinking Node-wise Propagation for Large-scale Graph Learning
+    date: Feb 9, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-09'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.698
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1682,10 +1682,10 @@ results:
     value_note: ''
     sort_value: 0.6636
     sort_std: 0.0005
-    global_rank: 27
+    global_rank: 26
     paper_rank: 46
-    rank_delta: 19
-    rank_delta_abs: 19
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

@@ -58,22 +58,22 @@ adjusted_mrr: 0.0
 mrr_dataset_count: 0
 benchmark_categories:
 - Classic
-- TU Dortmund
 - OGB
+- TU Dortmund
 - GNNBenchmark
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 1
   total: 12
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 2
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 2
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 2
+  total: 11
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 1
@@ -468,7 +468,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: D&D
   rows:
   - model: ECC
@@ -785,7 +785,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id004
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -1422,7 +1422,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id004
+- &id002
   dataset: ogbn-products
   rows:
   - model: LargeGT-full
@@ -1604,7 +1604,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id003
   dataset: ogbn-proteins
   rows:
   - model: RevGNN
@@ -1789,11 +1789,11 @@ results_grouped:
 - benchmark: Classic
   datasets:
   - *id001
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id002
   - *id003
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id004
   - *id005

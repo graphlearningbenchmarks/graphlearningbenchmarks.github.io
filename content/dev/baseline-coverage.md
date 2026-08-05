@@ -50,7 +50,7 @@ Datasets in this report are missing one of the baseline families we usually want
 | Power Flow Benchmarks | Case 2 | graph_regression | Accuracy | 4 | — |
 | Quantum Chemistry | MD17 | graph_regression | MAE | 410 | — |
 
-### No MLP Baseline (74)
+### No MLP Baseline (75)
 
 
-Detailed table: 74 rows (loaded below).
+Detailed table: 75 rows (loaded below).

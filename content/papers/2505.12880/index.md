@@ -62,9 +62,9 @@ results:
 - &id001
   dataset: PascalVOC-SP
   rows:
-  - model: CR-TAS
+  - model: Exphormer
     model_key: gcn
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.78
     std: 0.31
     metric: F1
@@ -95,9 +95,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: true
-  - model: CR-TAS
+  - model: Exphormer
     model_key: neuralwalker
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4912
     std: 0.0042
     metric: F1
@@ -128,9 +128,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CR-TAS
+  - model: Exphormer
     model_key: ppgt
-    model_plain: CR-TAS
+    model_plain: Exphormer
     value: 0.4641
     std: 0.0033
     metric: F1

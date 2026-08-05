@@ -41,22 +41,22 @@ paper_type: method
 proposed_models:
 - NLSF
 - A-NLSF
-mrr: 0.2329
-adjusted_mrr: 0.2329
+mrr: 0.2307
+adjusted_mrr: 0.2307
 mrr_dataset_count: 5
 benchmark_categories:
-- TU Dortmund
 - OGB
+- TU Dortmund
 - Other Graph Benchmarks
 benchmark_coverage:
-- benchmark: TU Dortmund
-  benchmark_slug: tu-dortmund
-  evaluated: 2
-  total: 11
 - benchmark: OGB
   benchmark_slug: ogb
   evaluated: 3
   total: 16
+- benchmark: TU Dortmund
+  benchmark_slug: tu-dortmund
+  evaluated: 2
+  total: 11
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
@@ -68,7 +68,7 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id002
+- &id005
   dataset: ENZYMES
   rows:
   - model: WL
@@ -857,7 +857,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id004
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2210,7 +2210,7 @@ results:
   metric: F1
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id001
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -2865,12 +2865,12 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id002
   dataset: ogbg-molpcba
   rows:
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: hig with graphormer
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -2901,9 +2901,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: GatedGCN-VN
     model_key: grpe-large
-    model_plain: SigGate-GT
+    model_plain: GatedGCN-VN
     value: 0.315
     std: 0.001
     metric: AP
@@ -2934,38 +2934,108 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
-    model_key: graphormer
-    model_plain: SigGate-GT
-    value: 0.314
-    std: null
+  - model: GatedGCN-VN
+    model_key: gatedgcn-vn
+    model_plain: GatedGCN-VN
+    value: 0.3141
+    std: 0.0019
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 57.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.11951'
+    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    date: May 20, 2024
+    date_display: May 2024
+    date_iso: '2024-05-20'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
+      encodings computed on the graph.
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.3141
+    sort_std: 0.0019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.267
+    std: 0.002
+    paper_value: 0.267
+    paper_std: 0.002
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2207.08806'
-    title: Unified 2D and 3D Pre-Training of Molecular Representations
-    date: Jul 14, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-14'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
-    uses_external_data: false
-    input_feature_source: raw_features
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.314
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Sep 29, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-29'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3066
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2405.11951'
+    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    at_pub_source_date_iso: '2024-05-20'
+    at_pub_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2024-05-20'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.03959999999999997
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.3066
+    true_std: 0.0013
+    value_gap_source_arxiv: '2405.11951'
+    value_gap_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
+      Nodes'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03959999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3066
+    sort_std: 0.0013
+    global_rank: 9
+    paper_rank: 63
+    rank_delta: 54
+    rank_delta_abs: 54
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
+      Nodes'
+    comparison_source_arxiv: '2405.11951'
+    is_best: false
     is_std_outlier: false
   - model: A-NLSF
     model_key: a-nlsf
@@ -3024,8 +3094,8 @@ results:
     value_note: ''
     sort_value: 0.2968
     sort_std: 0.0022
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3092,8 +3162,8 @@ results:
     value_note: ''
     sort_value: 0.2907
     sort_std: 0.0028
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3159,8 +3229,8 @@ results:
     value_note: ''
     sort_value: 0.2902
     sort_std: 0.0017
-    global_rank: 32
-    paper_rank: 54
+    global_rank: 35
+    paper_rank: 57
     rank_delta: 22
     rank_delta_abs: 22
     rank_delta_direction: worse
@@ -3228,8 +3298,8 @@ results:
     value_note: ''
     sort_value: 0.2838
     sort_std: 0.0035
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3296,8 +3366,8 @@ results:
     value_note: ''
     sort_value: 0.2783
     sort_std: 0.0024
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3364,8 +3434,8 @@ results:
     value_note: ''
     sort_value: 0.2765
     sort_std: 0.0042
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3432,8 +3502,8 @@ results:
     value_note: ''
     sort_value: 0.2761
     sort_std: 0.0029
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3473,16 +3543,15 @@ results:
     date_iso: '2025-09-29'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2424
-    at_pub_std: 0.0034
-    at_pub_source_arxiv: '2103.16584'
-    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
-      Classification
-    at_pub_source_date_iso: '2021-03-30'
-    at_pub_source_date_label: '2021'
+    at_pub_value: 0.2483
+    at_pub_std: 0.0037
+    at_pub_source_arxiv: '2405.11951'
+    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
+    at_pub_source_date_iso: '2024-05-20'
+    at_pub_source_date_label: ICLR 2024
     value_gap_source_date_iso: '2026-04-27'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: null
+    gap_vs_at_pub: 0.005899999999999989
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: false
@@ -3501,79 +3570,11 @@ results:
     value_note: ''
     sort_value: 0.269
     sort_std: 0.002
-    global_rank: 59
-    paper_rank: 85
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 63
+    paper_rank: 88
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GatedGCN
-    model_key: gatedgcn
-    model_plain: GatedGCN
-    value: 0.267
-    std: 0.002
-    paper_value: 0.267
-    paper_std: 0.002
-    metric: AP
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
-    date: Sep 29, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.264
-    at_pub_std: 0.021
-    at_pub_source_arxiv: '2309.10131'
-    at_pub_source_title: Deep Prompt Tuning for Graph Transformers
-    at_pub_source_date_iso: '2023-09-18'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-09-29'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.0030000000000000027
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.267
-    true_std: 0.002
-    value_gap_source_arxiv: '2509.24886'
-    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
-      Anisotropic Geometric Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.267
-    sort_std: 0.002
-    global_rank: 60
-    paper_rank: 60
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -3589,7 +3590,7 @@ results:
   metric: AP
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id003
   dataset: ogbg-ppa
   rows:
   - model: A-NLSF
@@ -4146,13 +4147,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id001
   - *id002
-- benchmark: OGB
-  datasets:
   - *id003
+- benchmark: TU Dortmund
+  datasets:
   - *id004
   - *id005
 - benchmark: Other Graph Benchmarks
@@ -4170,13 +4171,6 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: TU Dortmund
-    benchmark_slug: tu-dortmund
-    datasets:
-    - dataset: MUTAG
-      dataset_slug: mutag
-    - dataset: ENZYMES
-      dataset_slug: enzymes
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
@@ -4186,6 +4180,13 @@ datasets_by_scope:
       dataset_slug: ogbg-molpcba
     - dataset: ogbg-ppa
       dataset_slug: ogbg-ppa
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: MUTAG
+      dataset_slug: mutag
+    - dataset: ENZYMES
+      dataset_slug: enzymes
 main_figure: /figures/2509.24886/main_figure.jpegoptim.jpg
 ---
 
