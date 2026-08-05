@@ -54,19 +54,19 @@ mrr: 0.0105
 adjusted_mrr: 0.007
 mrr_dataset_count: 2
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 - MoleculeNet
 - GNNBenchmark
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 1
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
   evaluated: 1
@@ -329,7 +329,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: IMDB-MULTI
   rows:
   - model: GatedGCN-LSPE
@@ -1166,7 +1166,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id002
   dataset: ogbg-molpcba
   rows:
   - model: GatedGCN-VN
@@ -1758,10 +1758,10 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id001
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id002
 - benchmark: MoleculeNet
@@ -1774,16 +1774,16 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molpcba
-      dataset_slug: ogbg-molpcba
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
     - dataset: IMDB-MULTI
       dataset_slug: imdb-multi
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molpcba
+      dataset_slug: ogbg-molpcba
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:

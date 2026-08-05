@@ -45,22 +45,22 @@ adjusted_mrr: 0.0961
 mrr_dataset_count: 16
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 - MoleculeNet
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 5
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 4
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
   evaluated: 6
@@ -2981,7 +2981,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id009
+- &id008
   dataset: COLLAB
   rows:
   - model: GPM
@@ -5550,7 +5550,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id006
   dataset: MUTAG
   rows:
   - model: ECC
@@ -6475,7 +6475,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id007
   dataset: NCI1
   rows:
   - model: ECC
@@ -7265,7 +7265,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id010
+- &id009
   dataset: RDT-B
   rows:
   - model: OEPG
@@ -10866,7 +10866,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id010
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -11190,14 +11190,14 @@ results_grouped:
   - *id003
   - *id004
   - *id005
-- benchmark: OGB
-  datasets:
-  - *id006
 - benchmark: TU Dortmund
   datasets:
+  - *id006
   - *id007
   - *id008
   - *id009
+- benchmark: OGB
+  datasets:
   - *id010
 - benchmark: MoleculeNet
   datasets:
@@ -11227,11 +11227,6 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -11243,6 +11238,11 @@ datasets_by_scope:
       dataset_slug: collab
     - dataset: RDT-B
       dataset_slug: rdt-b
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:

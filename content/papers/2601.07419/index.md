@@ -49,8 +49,8 @@ adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 - LRGB
 - Heterophily Benchmark
 benchmark_coverage:
@@ -58,14 +58,14 @@ benchmark_coverage:
   benchmark_slug: classic
   evaluated: 3
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 2
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 - benchmark: LRGB
   benchmark_slug: lrgb
   evaluated: 1
@@ -1252,7 +1252,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id005
   dataset: ENZYMES
   rows:
   - model: WL
@@ -1971,7 +1971,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id004
   dataset: MUTAG
   rows:
   - model: ECC
@@ -4314,7 +4314,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id006
   dataset: ogbn-arxiv
   rows:
   - model: EGP (GCN)
@@ -4571,12 +4571,12 @@ results_grouped:
   - *id001
   - *id002
   - *id003
-- benchmark: OGB
-  datasets:
-  - *id004
 - benchmark: TU Dortmund
   datasets:
+  - *id004
   - *id005
+- benchmark: OGB
+  datasets:
   - *id006
 - benchmark: LRGB
   datasets:

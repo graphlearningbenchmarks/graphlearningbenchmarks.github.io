@@ -12,14 +12,13 @@ stats:
   avg_nodes: 30326273.0
   avg_edges: null
   num_classes: null
-result_count: 100
+result_count: 95
 best_model:
-  model: SkipNode-U
-  value: 0.826
+  model: Optimized GAE
+  value: 0.7841
   metric: Hits@100
-  arxiv_id: '2112.11628'
-  paper_title: 'SkipNode: On Alleviating Performance Degradation for Deep Graph Convolutional
-    Networks'
+  arxiv_id: '2411.03845'
+  paper_title: Reconsidering the Performance of GAE in Link Prediction
 papers:
 - arxiv_id: '2502.02479'
   title: Using Random Noise Equivariantly to Boost Graph Neural Networks Universally
@@ -105,11 +104,6 @@ papers:
   title: 'MGAE: Masked Autoencoders for Self-Supervised Learning on Graphs'
   date_iso: '2022-01-07'
   venue: ''
-- arxiv_id: '2112.11628'
-  title: 'SkipNode: On Alleviating Performance Degradation for Deep Graph Convolutional
-    Networks'
-  date_iso: '2021-12-22'
-  venue: ''
 - arxiv_id: '2112.02936'
   title: Pairwise Learning for Neural Link Prediction
   date_iso: '2021-12-06'
@@ -154,151 +148,6 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
-  - model: SkipNode-U
-    model_plain: SkipNode-U
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.11628'
-    title: 'SkipNode: On Alleviating Performance Degradation for Deep Graph Convolutional
-      Networks'
-    date: Dec 22, 2021
-    date_iso: '2021-12-22'
-    date_display: Dec 2021
-    codebase_url: https://github.com/WeigangLu/SkipNode
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.826
-    - null
-    metric_stds:
-    - 0.006
-    - null
-  - model: SkipNode-B
-    model_plain: SkipNode-B
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.11628'
-    title: 'SkipNode: On Alleviating Performance Degradation for Deep Graph Convolutional
-      Networks'
-    date: Dec 22, 2021
-    date_iso: '2021-12-22'
-    date_display: Dec 2021
-    codebase_url: https://github.com/WeigangLu/SkipNode
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.824
-    - null
-    metric_stds:
-    - 0.008
-    - null
-  - model: DropMessage
-    model_plain: DropMessage
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2112.11628'
-    title: 'SkipNode: On Alleviating Performance Degradation for Deep Graph Convolutional
-      Networks'
-    date: Dec 22, 2021
-    date_iso: '2021-12-22'
-    date_display: Dec 2021
-    codebase_url: https://github.com/WeigangLu/SkipNode
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.821
-    - null
-    metric_stds:
-    - 0.009
-    - null
-  - model: '-'
-    model_plain: '-'
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.11628'
-    title: 'SkipNode: On Alleviating Performance Degradation for Deep Graph Convolutional
-      Networks'
-    date: Dec 22, 2021
-    date_iso: '2021-12-22'
-    date_display: Dec 2021
-    codebase_url: https://github.com/WeigangLu/SkipNode
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.817
-    - null
-    metric_stds:
-    - 0.009
-    - null
-  - model: DropNode-S
-    model_plain: DropNode-S
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2112.11628'
-    title: 'SkipNode: On Alleviating Performance Degradation for Deep Graph Convolutional
-      Networks'
-    date: Dec 22, 2021
-    date_iso: '2021-12-22'
-    date_display: Dec 2021
-    codebase_url: https://github.com/WeigangLu/SkipNode
-    published_conference: ''
-    published_conference_short: ''
-    published_conference_slug: ''
-    published_venue: ''
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.811
-    - null
-    metric_stds:
-    - 0.014
-    - null
   - model: Optimized GAE
     model_plain: Optimized GAE
     is_baseline: true
@@ -319,7 +168,7 @@ variants:
     published_conference_slug: ''
     published_venue: ''
     uses_external_data: false
-    is_best: false
+    is_best: true
     is_std_outlier: false
     metric_values:
     - 0.7841
@@ -1566,18 +1415,159 @@ variants:
     metric_stds:
     - 0.016
     - null
-  row_count: 100
+  - model: AA
+    model_plain: AA
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2010.16103'
+    title: 'Labeling Trick: A Theory of Using Graph Neural Networks for Multi-Node
+      Representation Learning'
+    date: Oct 30, 2020
+    date_iso: '2020-10-30'
+    date_display: Oct 2020
+    codebase_url: https://github.com/facebookresearch/SEAL_OGB
+    published_conference: NeurIPS 2020
+    published_conference_short: NeurIPS
+    published_conference_slug: neurips
+    published_venue: NeurIPS 2020
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3245
+    - null
+    metric_stds:
+    - 0.0
+    - null
+  - model: Adamic Adar
+    model_plain: Adamic Adar
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.0
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2012.15024'
+    title: Adaptive Graph Diffusion Networks
+    date: Dec 30, 2020
+    date_iso: '2020-12-30'
+    date_display: Dec 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3245
+    - null
+    metric_stds:
+    - 0.0
+    - null
+  - model: PLNLP
+    model_plain: PLNLP
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2012.15024'
+    title: Adaptive Graph Diffusion Networks
+    date: Dec 30, 2020
+    date_iso: '2020-12-30'
+    date_display: Dec 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3238
+    - null
+    metric_stds:
+    - 0.0258
+    - null
+  - model: MF
+    model_plain: MF
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 147.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2006.07846'
+    title: Formatting Instructions for ICLR 2021 Conference Submissions
+    date: Jun 14, 2020
+    date_iso: '2020-06-14'
+    date_display: Jun 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.323
+    - null
+    metric_stds:
+    - 0.009
+    - null
+  - model: Matrix Factorization
+    model_plain: Matrix Factorization
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 147.66
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2012.15024'
+    title: Adaptive Graph Diffusion Networks
+    date: Dec 30, 2020
+    date_iso: '2020-12-30'
+    date_display: Dec 2020
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.3229
+    - null
+    metric_stds:
+    - 0.0094
+    - null
+  row_count: 95
   rows_json: /data/datasets/ogbl-ppa/standard-split-rows.json
   chart_json: /data/datasets/ogbl-ppa/standard-split-chart.json
   arch_counts:
-    gnn: 51
+    gnn: 47
     hybrid: 15
     graph_transformer: 1
     llm: 0
     walk: 5
-    traditional: 25
+    traditional: 24
   metric_counts:
-  - 94
+  - 89
   - 6
   milestones: &id001
   - value: 0.342

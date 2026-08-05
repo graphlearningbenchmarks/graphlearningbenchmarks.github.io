@@ -59,22 +59,22 @@ adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 - GNNBenchmark
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 2
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 2
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 6
@@ -3536,7 +3536,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id004
   dataset: ENZYMES
   rows:
   - model: WL
@@ -6100,7 +6100,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -8309,7 +8309,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: ogbl-collab
   rows:
   - model: SIGN
@@ -9171,12 +9171,12 @@ results_grouped:
   datasets:
   - *id001
   - *id002
-- benchmark: OGB
-  datasets:
-  - *id003
 - benchmark: TU Dortmund
   datasets:
+  - *id003
   - *id004
+- benchmark: OGB
+  datasets:
   - *id005
 - benchmark: GNNBenchmark
   datasets:

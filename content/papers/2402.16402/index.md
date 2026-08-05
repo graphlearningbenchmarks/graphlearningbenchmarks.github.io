@@ -44,23 +44,23 @@ mrr: null
 adjusted_mrr: null
 mrr_dataset_count: 0
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 6
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id005
+- &id004
   dataset: D&D
   rows:
   - model: ECC
@@ -913,7 +913,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id005
   dataset: IMDB-BINARY
   rows:
   - model: DMoNPool-TIP
@@ -1897,7 +1897,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id006
   dataset: IMDB-MULTI
   rows:
   - model: GatedGCN-LSPE
@@ -2947,7 +2947,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: MUTAG
   rows:
   - model: ECC
@@ -4068,7 +4068,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: NCI1
   rows:
   - model: ECC
@@ -5223,7 +5223,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -6418,7 +6418,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id007
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -7135,26 +7135,21 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
-  datasets:
-  - *id001
 - benchmark: TU Dortmund
   datasets:
+  - *id001
   - *id002
   - *id003
   - *id004
   - *id005
   - *id006
+- benchmark: OGB
+  datasets:
   - *id007
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -7170,6 +7165,11 @@ datasets_by_scope:
       dataset_slug: imdb-binary
     - dataset: IMDB-MULTI
       dataset_slug: imdb-multi
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
 main_figure: /figures/2402.16402/main_figure.jpegoptim.jpg
 ---
 

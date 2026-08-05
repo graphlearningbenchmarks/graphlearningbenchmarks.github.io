@@ -47,8 +47,8 @@ adjusted_mrr: 0.0089
 mrr_dataset_count: 11
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 - Heterophilic Graphs
 - LINKX Benchmarks
 benchmark_coverage:
@@ -56,14 +56,14 @@ benchmark_coverage:
   benchmark_slug: classic
   evaluated: 3
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 2
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 3
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 2
+  total: 16
 - benchmark: Heterophilic Graphs
   benchmark_slug: heterophilic-graphs
   evaluated: 3
@@ -3979,7 +3979,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id005
   dataset: ENZYMES
   rows:
   - model: WL
@@ -4770,7 +4770,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id006
   dataset: IMDB-BINARY
   rows:
   - model: DMoNPool-TIP
@@ -5699,7 +5699,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id004
   dataset: MUTAG
   rows:
   - model: ECC
@@ -7016,7 +7016,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id007
   dataset: ogbn-products
   rows:
   - model: LargeGT-full
@@ -7738,7 +7738,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id008
   dataset: ogbn-proteins
   rows:
   - model: SGCL-T
@@ -8684,13 +8684,13 @@ results_grouped:
   - *id001
   - *id002
   - *id003
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id004
   - *id005
-- benchmark: TU Dortmund
-  datasets:
   - *id006
+- benchmark: OGB
+  datasets:
   - *id007
   - *id008
 - benchmark: Heterophilic Graphs

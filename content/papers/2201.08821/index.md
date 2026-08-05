@@ -58,23 +58,23 @@ mrr: 0.03
 adjusted_mrr: 0.02
 mrr_dataset_count: 2
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 1
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id001
+- &id002
   dataset: Code
   rows:
   - model: GatedGCN-VN
@@ -728,7 +728,7 @@ results:
   metric: F1
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: NCI1
   rows:
   - model: ECC
@@ -1385,26 +1385,26 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id001
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id002
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: Code
-      dataset_slug: code
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
     - dataset: NCI1
       dataset_slug: nci1
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: Code
+      dataset_slug: code
 single_proposed_model: GraphTrans
 main_figure: /figures/2201.08821/main_figure.jpegoptim.jpg
 ---

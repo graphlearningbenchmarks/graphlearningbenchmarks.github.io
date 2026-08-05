@@ -44,22 +44,22 @@ adjusted_mrr: 0.005
 mrr_dataset_count: 8
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 - LRGB
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 3
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 2
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 2
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 2
+  total: 16
 - benchmark: LRGB
   benchmark_slug: lrgb
   evaluated: 1
@@ -1515,7 +1515,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id004
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2234,7 +2234,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id005
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -4405,7 +4405,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id006
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -5122,7 +5122,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id007
   dataset: ogbn-arxiv
   rows:
   - model: EGP (GCN)
@@ -5851,11 +5851,11 @@ results_grouped:
   - *id001
   - *id002
   - *id003
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id004
   - *id005
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id006
   - *id007
@@ -5883,11 +5883,6 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -5895,6 +5890,11 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: PROTEINS
       dataset_slug: proteins
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
   - benchmark: LRGB
     benchmark_slug: lrgb
     datasets:

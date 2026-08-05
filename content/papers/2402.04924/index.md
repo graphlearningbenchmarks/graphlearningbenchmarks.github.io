@@ -76,21 +76,21 @@ adjusted_mrr: 0.0025
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 2
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 2
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 2
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 2
+  total: 16
 task_categories:
 - graph_classification
 - node_classification
@@ -1360,7 +1360,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id003
   dataset: MUTAG
   rows:
   - model: ECC
@@ -1540,7 +1540,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id004
   dataset: NCI1
   rows:
   - model: ECC
@@ -2128,7 +2128,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -2716,7 +2716,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id006
   dataset: ogbg-molpcba
   rows:
   - model: UGTs
@@ -3311,11 +3311,11 @@ results_grouped:
   datasets:
   - *id001
   - *id002
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id003
   - *id004
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
   - *id005
   - *id006
@@ -3333,13 +3333,6 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
-    - dataset: ogbg-molpcba
-      dataset_slug: ogbg-molpcba
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -3347,6 +3340,13 @@ datasets_by_scope:
       dataset_slug: mutag
     - dataset: NCI1
       dataset_slug: nci1
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+    - dataset: ogbg-molpcba
+      dataset_slug: ogbg-molpcba
 single_proposed_model: CTRL
 main_figure: /figures/2402.04924/main_figure.jpegoptim.jpg
 ---

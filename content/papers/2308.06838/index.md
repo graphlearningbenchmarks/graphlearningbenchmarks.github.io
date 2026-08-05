@@ -40,23 +40,23 @@ mrr: 0.0277
 adjusted_mrr: 0.0184
 mrr_dataset_count: 2
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 2
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id002
+- &id001
   dataset: NCI1
   rows:
   - model: ECC
@@ -1227,7 +1227,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -2495,7 +2495,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id003
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -3155,22 +3155,17 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
-  datasets:
-  - *id001
 - benchmark: TU Dortmund
   datasets:
+  - *id001
   - *id002
+- benchmark: OGB
+  datasets:
   - *id003
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -3178,6 +3173,11 @@ datasets_by_scope:
       dataset_slug: nci1
     - dataset: PROTEINS
       dataset_slug: proteins
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
 single_proposed_model: PIN
 main_figure: /figures/2308.06838/main_figure.jpegoptim.jpg
 ---

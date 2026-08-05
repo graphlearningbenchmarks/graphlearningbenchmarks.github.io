@@ -46,21 +46,21 @@ adjusted_mrr: 0.0333
 mrr_dataset_count: 6
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 1
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 5
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 task_categories:
 - graph_classification
 - node_classification
@@ -68,7 +68,7 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id006
+- &id005
   dataset: COLLAB
   rows:
   - model: GPM
@@ -966,7 +966,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id006
   dataset: D&D
   rows:
   - model: ECC
@@ -1481,7 +1481,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: MUTAG
   rows:
   - model: ECC
@@ -1995,7 +1995,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: NCI1
   rows:
   - model: ECC
@@ -2509,7 +2509,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id004
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -3024,7 +3024,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id007
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -3542,15 +3542,15 @@ results_grouped:
 - benchmark: Classic
   datasets:
   - *id001
-- benchmark: OGB
-  datasets:
-  - *id002
 - benchmark: TU Dortmund
   datasets:
+  - *id002
   - *id003
   - *id004
   - *id005
   - *id006
+- benchmark: OGB
+  datasets:
   - *id007
 datasets_by_scope:
 - scope: node-level
@@ -3564,11 +3564,6 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -3582,6 +3577,11 @@ datasets_by_scope:
       dataset_slug: collab
     - dataset: D&D
       dataset_slug: d-d
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
 single_proposed_model: EGG
 main_figure: /figures/2205.15068/main_figure.jpegoptim.jpg
 ---

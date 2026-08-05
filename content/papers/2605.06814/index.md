@@ -2161,5 +2161,6 @@ datasets_by_scope:
     - dataset: Cornell
       dataset_slug: cornell
 single_proposed_model: M2D
+main_figure: /figures/2605.06814/main_figure.jpegoptim.jpg
 ---
 

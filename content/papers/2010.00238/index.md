@@ -53,21 +53,21 @@ adjusted_mrr: 0.028
 mrr_dataset_count: 5
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 2
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 3
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 task_categories:
 - graph_classification
 - node_classification
@@ -1075,7 +1075,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id005
   dataset: D&D
   rows:
   - model: ECC
@@ -1997,7 +1997,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id003
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2917,7 +2917,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id004
   dataset: NCI1
   rows:
   - model: ECC
@@ -4865,7 +4865,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id006
   dataset: ogbn-arxiv
   rows:
   - model: EGP (GCN)
@@ -5725,13 +5725,13 @@ results_grouped:
   datasets:
   - *id001
   - *id002
-- benchmark: OGB
-  datasets:
-  - *id003
 - benchmark: TU Dortmund
   datasets:
+  - *id003
   - *id004
   - *id005
+- benchmark: OGB
+  datasets:
   - *id006
 datasets_by_scope:
 - scope: node-level

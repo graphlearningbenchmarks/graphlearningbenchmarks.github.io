@@ -3870,5 +3870,6 @@ datasets_by_scope:
     - dataset: Squirrel
       dataset_slug: squirrel
 single_proposed_model: RC-UFG
+main_figure: /figures/2307.09768/main_figure.jpegoptim.jpg
 ---
 

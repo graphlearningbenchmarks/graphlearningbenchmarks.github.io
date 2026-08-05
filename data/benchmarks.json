@@ -16,9 +16,9 @@
     ],
     "no_single_introduction_paper": false,
     "is_legacy": false,
-    "paper_count": 284,
+    "paper_count": 283,
     "recent_results_per_dataset": 13.7,
-    "total_result_count": 2491,
+    "total_result_count": 2486,
     "datasets": [
       {
         "name": "ogbn-products",
@@ -108,8 +108,8 @@
         "name": "ogbl-ppa",
         "slug": "ogbl-ppa",
         "task_type": "link_prediction",
-        "paper_count": 26,
-        "result_count": 100,
+        "paper_count": 25,
+        "result_count": 95,
         "recent_result_count": 0,
         "variants": [
           {

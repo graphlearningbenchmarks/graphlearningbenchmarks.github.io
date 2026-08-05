@@ -49,19 +49,19 @@ mrr: 0.0174
 adjusted_mrr: 0.0174
 mrr_dataset_count: 6
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 - MoleculeNet
 - GNNBenchmark
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 3
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 4
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 3
+  total: 16
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
   evaluated: 1
@@ -75,7 +75,7 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id007
+- &id004
   dataset: COLLAB
   rows:
   - model: GPM
@@ -1455,7 +1455,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id001
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2658,7 +2658,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id002
   dataset: NCI1
   rows:
   - model: ECC
@@ -3829,7 +3829,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id003
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -5516,7 +5516,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id001
+- &id005
   dataset: ogbg-molhiv
   rows:
   - model: non-convex counterparts
@@ -6138,7 +6138,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id002
+- &id006
   dataset: ogbg-molpcba
   rows:
   - model: StructPosGSSL-FA
@@ -6422,7 +6422,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id003
+- &id007
   dataset: ogbg-ppa
   rows:
   - model: differential encoding
@@ -6808,14 +6808,14 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id001
   - *id002
   - *id003
-- benchmark: TU Dortmund
-  datasets:
   - *id004
+- benchmark: OGB
+  datasets:
   - *id005
   - *id006
   - *id007
@@ -6829,15 +6829,6 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
-    - dataset: ogbg-molpcba
-      dataset_slug: ogbg-molpcba
-    - dataset: ogbg-ppa
-      dataset_slug: ogbg-ppa
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -6849,6 +6840,15 @@ datasets_by_scope:
       dataset_slug: proteins
     - dataset: COLLAB
       dataset_slug: collab
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+    - dataset: ogbg-molpcba
+      dataset_slug: ogbg-molpcba
+    - dataset: ogbg-ppa
+      dataset_slug: ogbg-ppa
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:

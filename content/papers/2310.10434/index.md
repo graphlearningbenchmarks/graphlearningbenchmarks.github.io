@@ -3009,5 +3009,6 @@ datasets_by_scope:
       dataset_slug: proteins
     - dataset: ENZYMES
       dataset_slug: enzymes
+main_figure: /figures/2310.10434/main_figure.jpegoptim.jpg
 ---
 

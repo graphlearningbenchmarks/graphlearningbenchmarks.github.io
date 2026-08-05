@@ -77,18 +77,18 @@ mrr: 0.0082
 adjusted_mrr: 0.0082
 mrr_dataset_count: 6
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 - GNNBenchmark
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 2
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 3
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 2
+  total: 16
 - benchmark: GNNBenchmark
   benchmark_slug: gnnbenchmark
   evaluated: 1
@@ -413,7 +413,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id003
   dataset: D&D
   rows:
   - model: GC-GNN (GraphSAGE)
@@ -1512,7 +1512,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id002
   dataset: ENZYMES
   rows:
   - model: WL
@@ -2642,7 +2642,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id001
   dataset: MUTAG
   rows:
   - model: ECC
@@ -3775,7 +3775,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id004
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -4227,7 +4227,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id005
   dataset: ogbg-molpcba
   rows:
   - model: GatedGCN-VN
@@ -4680,13 +4680,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id001
   - *id002
-- benchmark: TU Dortmund
-  datasets:
   - *id003
+- benchmark: OGB
+  datasets:
   - *id004
   - *id005
 - benchmark: GNNBenchmark
@@ -4696,13 +4696,6 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
-    - dataset: ogbg-molpcba
-      dataset_slug: ogbg-molpcba
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -4712,6 +4705,13 @@ datasets_by_scope:
       dataset_slug: enzymes
     - dataset: D&D
       dataset_slug: d-d
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+    - dataset: ogbg-molpcba
+      dataset_slug: ogbg-molpcba
   - benchmark: GNNBenchmark
     benchmark_slug: gnnbenchmark
     datasets:

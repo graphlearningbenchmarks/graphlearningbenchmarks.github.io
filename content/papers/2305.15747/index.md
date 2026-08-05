@@ -58,22 +58,22 @@ adjusted_mrr: 0.0078
 mrr_dataset_count: 7
 benchmark_categories:
 - Classic
-- OGB
 - TU Dortmund
+- OGB
 - MoleculeNet
 benchmark_coverage:
 - benchmark: Classic
   benchmark_slug: classic
   evaluated: 3
   total: 12
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 2
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 4
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 2
+  total: 16
 - benchmark: MoleculeNet
   benchmark_slug: moleculenet
   evaluated: 1
@@ -1754,7 +1754,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id009
+- &id007
   dataset: ENZYMES
   rows:
   - model: WL
@@ -3075,7 +3075,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id006
+- &id004
   dataset: MUTAG
   rows:
   - model: ECC
@@ -4395,7 +4395,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id007
+- &id005
   dataset: NCI1
   rows:
   - model: ECC
@@ -5650,7 +5650,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id008
+- &id006
   dataset: PROTEINS
   rows:
   - model: Graphormer-SPIS
@@ -8979,7 +8979,7 @@ results:
   metric: MAE
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id008
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -9564,7 +9564,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id009
   dataset: ogbg-molpcba
   rows:
   - model: UGTs
@@ -10155,14 +10155,14 @@ results_grouped:
   - *id001
   - *id002
   - *id003
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id004
   - *id005
-- benchmark: TU Dortmund
-  datasets:
   - *id006
   - *id007
+- benchmark: OGB
+  datasets:
   - *id008
   - *id009
 - benchmark: MoleculeNet
@@ -10187,13 +10187,6 @@ datasets_by_scope:
     datasets:
     - dataset: ZINC
       dataset_slug: zinc
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
-    - dataset: ogbg-molpcba
-      dataset_slug: ogbg-molpcba
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -10205,6 +10198,13 @@ datasets_by_scope:
       dataset_slug: proteins
     - dataset: ENZYMES
       dataset_slug: enzymes
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
+    - dataset: ogbg-molpcba
+      dataset_slug: ogbg-molpcba
   - benchmark: MoleculeNet
     benchmark_slug: moleculenet
     datasets:

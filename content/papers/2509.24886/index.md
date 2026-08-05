@@ -45,18 +45,18 @@ mrr: 0.2307
 adjusted_mrr: 0.2307
 mrr_dataset_count: 5
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 - Other Graph Benchmarks
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 3
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 2
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 3
+  total: 16
 - benchmark: Other Graph Benchmarks
   benchmark_slug: other-graph-benchmarks
   evaluated: 1
@@ -68,7 +68,7 @@ experiment_scopes:
 - graph-level
 - node-level
 results:
-- &id005
+- &id002
   dataset: ENZYMES
   rows:
   - model: WL
@@ -857,7 +857,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id004
+- &id001
   dataset: MUTAG
   rows:
   - model: ECC
@@ -2210,7 +2210,7 @@ results:
   metric: F1
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id003
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -2865,7 +2865,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id004
   dataset: ogbg-molpcba
   rows:
   - model: GatedGCN-VN
@@ -3590,7 +3590,7 @@ results:
   metric: AP
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: ogbg-ppa
   rows:
   - model: A-NLSF
@@ -4147,13 +4147,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id001
   - *id002
-  - *id003
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
+  - *id003
   - *id004
   - *id005
 - benchmark: Other Graph Benchmarks
@@ -4171,6 +4171,13 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: MUTAG
+      dataset_slug: mutag
+    - dataset: ENZYMES
+      dataset_slug: enzymes
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
@@ -4180,13 +4187,6 @@ datasets_by_scope:
       dataset_slug: ogbg-molpcba
     - dataset: ogbg-ppa
       dataset_slug: ogbg-ppa
-  - benchmark: TU Dortmund
-    benchmark_slug: tu-dortmund
-    datasets:
-    - dataset: MUTAG
-      dataset_slug: mutag
-    - dataset: ENZYMES
-      dataset_slug: enzymes
 main_figure: /figures/2509.24886/main_figure.jpegoptim.jpg
 ---
 

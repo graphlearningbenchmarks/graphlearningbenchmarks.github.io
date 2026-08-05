@@ -54,23 +54,23 @@ mrr: 0.0105
 adjusted_mrr: 0.0105
 mrr_dataset_count: 5
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 1
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 4
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 1
+  total: 16
 task_categories:
 - graph_classification
 experiment_scopes:
 - graph-level
 results:
-- &id004
+- &id003
   dataset: COLLAB
   rows:
   - model: GPM
@@ -659,7 +659,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id001
   dataset: MUTAG
   rows:
   - model: ECC
@@ -1176,7 +1176,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id002
   dataset: NCI1
   rows:
   - model: ECC
@@ -1767,7 +1767,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id005
+- &id004
   dataset: RDT-B
   rows:
   - model: CIN
@@ -2352,7 +2352,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id005
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -2669,24 +2669,19 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
-  datasets:
-  - *id001
 - benchmark: TU Dortmund
   datasets:
+  - *id001
   - *id002
   - *id003
   - *id004
+- benchmark: OGB
+  datasets:
   - *id005
 datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
-  - benchmark: OGB
-    benchmark_slug: ogb
-    datasets:
-    - dataset: ogbg-molhiv
-      dataset_slug: ogbg-molhiv
   - benchmark: TU Dortmund
     benchmark_slug: tu-dortmund
     datasets:
@@ -2698,6 +2693,11 @@ datasets_by_scope:
       dataset_slug: collab
     - dataset: RDT-B
       dataset_slug: rdt-b
+  - benchmark: OGB
+    benchmark_slug: ogb
+    datasets:
+    - dataset: ogbg-molhiv
+      dataset_slug: ogbg-molhiv
 single_proposed_model: GPA
 main_figure: /figures/2209.06560/main_figure.jpegoptim.jpg
 ---

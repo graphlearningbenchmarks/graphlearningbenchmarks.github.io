@@ -170,8 +170,9 @@ results:
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
-    is_overridden: false
-    override_reason: ''
+    is_overridden: true
+    override_reason: Correct SGC Acc cell from Table 1; the grouped dataset columns
+      were shifted during extraction.
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
@@ -623,15 +624,16 @@ results:
   - model: SGC
     model_key: sgc
     model_plain: SGC
-    value: 0.7909999999999999
+    value: 0.791
     std: null
-    paper_value: 0.7909999999999999
+    paper_value: 0.791
     paper_std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
-    is_overridden: false
-    override_reason: ''
+    is_overridden: true
+    override_reason: Correct SGC Acc cell from Table 1; the grouped dataset columns
+      were shifted during extraction.
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
@@ -660,7 +662,7 @@ results:
     at_pub_source_date_label: WWW 2022
     value_gap_source_date_iso: '2022-03-01'
     value_gap_source_date_label: WWW 2022
-    gap_vs_at_pub: 0.031000000000000028
+    gap_vs_at_pub: 0.030999999999999917
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -674,15 +676,15 @@ results:
     value_gap_source_title: 'PaSca: a Graph Neural Architecture Search System under
       the Scalable Paradigm'
     value_gap_source_is_current_paper: false
-    value_gap: 0.031000000000000028
+    value_gap: 0.030999999999999917
     has_value_note: false
     value_note: ''
     sort_value: 0.822
     sort_std: 0.009
     global_rank: 87
-    paper_rank: 185
-    rank_delta: 98
-    rank_delta_abs: 98
+    paper_rank: 183
+    rank_delta: 96
+    rank_delta_abs: 96
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind

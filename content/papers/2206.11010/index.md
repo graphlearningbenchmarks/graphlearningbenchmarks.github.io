@@ -49,18 +49,18 @@ mrr: 0.0694
 adjusted_mrr: 0.0694
 mrr_dataset_count: 5
 benchmark_categories:
-- OGB
 - TU Dortmund
+- OGB
 - Quantum Chemistry
 benchmark_coverage:
-- benchmark: OGB
-  benchmark_slug: ogb
-  evaluated: 3
-  total: 16
 - benchmark: TU Dortmund
   benchmark_slug: tu-dortmund
   evaluated: 2
   total: 11
+- benchmark: OGB
+  benchmark_slug: ogb
+  evaluated: 3
+  total: 16
 - benchmark: Quantum Chemistry
   benchmark_slug: quantum-chemistry
   evaluated: 1
@@ -71,7 +71,7 @@ task_categories:
 experiment_scopes:
 - graph-level
 results:
-- &id004
+- &id001
   dataset: MUTAG
   rows:
   - model: ECC
@@ -1487,7 +1487,7 @@ results:
   metric: mu
   uses_non_primary_metric: true
   paper_has_primary_metric: false
-- &id005
+- &id002
   dataset: RDT-B
   rows:
   - model: CIN
@@ -2002,7 +2002,7 @@ results:
   metric: Accuracy
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id001
+- &id003
   dataset: ogbg-molhiv
   rows:
   - model: SigGate-GT
@@ -2449,7 +2449,7 @@ results:
   metric: ROC-AUC
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id002
+- &id004
   dataset: ogbg-molpcba
   rows:
   - model: GatedGCN-VN
@@ -2896,7 +2896,7 @@ results:
   metric: AP
   uses_non_primary_metric: false
   paper_has_primary_metric: true
-- &id003
+- &id005
   dataset: ogbg-ppa
   rows:
   - model: differential encoding
@@ -3279,13 +3279,13 @@ results:
   uses_non_primary_metric: false
   paper_has_primary_metric: true
 results_grouped:
-- benchmark: OGB
+- benchmark: TU Dortmund
   datasets:
   - *id001
   - *id002
-  - *id003
-- benchmark: TU Dortmund
+- benchmark: OGB
   datasets:
+  - *id003
   - *id004
   - *id005
 - benchmark: Quantum Chemistry
@@ -3295,6 +3295,13 @@ datasets_by_scope:
 - scope: graph-level
   label: Graph-level
   benchmarks:
+  - benchmark: TU Dortmund
+    benchmark_slug: tu-dortmund
+    datasets:
+    - dataset: MUTAG
+      dataset_slug: mutag
+    - dataset: RDT-B
+      dataset_slug: rdt-b
   - benchmark: OGB
     benchmark_slug: ogb
     datasets:
@@ -3304,13 +3311,6 @@ datasets_by_scope:
       dataset_slug: ogbg-molpcba
     - dataset: ogbg-ppa
       dataset_slug: ogbg-ppa
-  - benchmark: TU Dortmund
-    benchmark_slug: tu-dortmund
-    datasets:
-    - dataset: MUTAG
-      dataset_slug: mutag
-    - dataset: RDT-B
-      dataset_slug: rdt-b
   - benchmark: Quantum Chemistry
     benchmark_slug: quantum-chemistry
     datasets:
