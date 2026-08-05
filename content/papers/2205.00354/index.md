@@ -58,9 +58,9 @@ results:
   dataset: QM9
   is_multi_metric: true
   rows:
-  - model: DimeNet++
+  - model: PF-GNN
     model_key: pf-gnn
-    model_plain: DimeNet++
+    model_plain: PF-GNN
     metric_values:
     - 0.017
     - null
@@ -158,9 +158,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: DimeNet++
+  - model: Molformer
     model_key: molformer
-    model_plain: DimeNet++
+    model_plain: Molformer
     metric_values:
     - 0.025
     - null

@@ -70,9 +70,9 @@ results:
 - &id002
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -103,9 +103,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -136,9 +136,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -225,16 +225,49 @@ results:
     value_note: ''
     sort_value: 0.994
     sort_std: null
-    global_rank: 8
-    paper_rank: 86
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 10
+    paper_rank: 94
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: A Comprehensive Survey on Graph Neural Networks
     comparison_source_arxiv: '1901.00596'
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.985
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.985
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GraphSAINT-EDGE
     model_key: graphsaint-edge
@@ -293,8 +326,8 @@ results:
     value_note: ''
     sort_value: 0.981
     sort_std: 0.007
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -361,8 +394,8 @@ results:
     value_note: ''
     sort_value: 0.981
     sort_std: 0.004
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -429,8 +462,8 @@ results:
     value_note: ''
     sort_value: 0.696
     sort_std: 0.004
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -476,8 +509,8 @@ results:
     at_pub_source_title: 'GraphSAINT: mpling Based ductive Learning Me hod'
     at_pub_source_date_iso: '2019-07-10'
     at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2020-04-23'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2021-04-19'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: 0.08800000000000008
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -488,18 +521,19 @@ results:
     today_delta_significant: true
     true_value: 0.687
     true_std: 0.012
-    value_gap_source_arxiv: '2004.11198'
-    value_gap_source_title: 'SIGN: Scalable Inception Graph Neural Networks'
+    value_gap_source_arxiv: '2104.09376'
+    value_gap_source_title: Scalable and Adaptive Graph Neural Networks with Self-Label-Enhanced
+      Training
     value_gap_source_is_current_paper: false
     value_gap: 0.08800000000000008
     has_value_note: false
     value_note: ''
     sort_value: 0.687
     sort_std: 0.012
-    global_rank: 124
-    paper_rank: 149
-    rank_delta: 25
-    rank_delta_abs: 25
+    global_rank: 134
+    paper_rank: 160
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -565,8 +599,8 @@ results:
     value_note: ''
     sort_value: 0.637
     sort_std: 0.006
-    global_rank: 138
-    paper_rank: 158
+    global_rank: 149
+    paper_rank: 169
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -634,8 +668,8 @@ results:
     value_note: ''
     sort_value: 0.574
     sort_std: 0.003
-    global_rank: 153
-    paper_rank: 153
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -657,9 +691,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: Cluster-GCN (2019)
+  - model: Node Sampled Soup
     model_key: node sampled soup
-    model_plain: Cluster-GCN (2019)
+    model_plain: Node Sampled Soup
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -691,9 +725,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: EnGCN
     model_key: engcn
-    model_plain: Cluster-GCN (2019)
+    model_plain: EnGCN
     value: 0.9714
     std: 0.0003
     metric: F1
@@ -725,9 +759,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: SAGN+SLE
     model_key: sagn+sle
-    model_plain: Cluster-GCN (2019)
+    model_plain: SAGN+SLE
     value: 0.971
     std: 0.0
     metric: F1
@@ -817,10 +851,10 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 20
-    paper_rank: 61
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 22
+    paper_rank: 64
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -886,8 +920,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: 0.001
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -954,13 +988,46 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: 0.001
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.966
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.04528'
+    title: Accelerating Large Scale Real-Time GNN Inference using Channel Pruning
+    date: May 10, 2021
+    date_display: May 2021
+    date_iso: '2021-05-10'
+    venue: Proceedings of the VLDB Endowment
+    codebase_url: https://github.com/tedzhouhk/GCNP
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.966
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1022,10 +1089,10 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: 0.001
-    global_rank: 31
-    paper_rank: 146
-    rank_delta: 115
-    rank_delta_abs: 115
+    global_rank: 29
+    paper_rank: 158
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1090,8 +1157,8 @@ results:
     value_note: ''
     sort_value: 0.96
     sort_std: 0.002
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1159,10 +1226,10 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 113
-    paper_rank: 149
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 118
+    paper_rank: 161
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1228,13 +1295,47 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.001
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7435
+    std: 0.0016
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2512.14908'
+    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
+      Graphs'
+    date: Dec 16, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/atlaspaper16/ATLAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 165
+    sort_value: 0.7435
+    sort_std: 0.0016
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

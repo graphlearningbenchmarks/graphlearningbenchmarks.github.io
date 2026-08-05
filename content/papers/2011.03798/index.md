@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - PairRE
-mrr: 0.0451
-adjusted_mrr: 0.0301
+mrr: 0.0283
+adjusted_mrr: 0.0189
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -67,44 +67,45 @@ results:
 - &id003
   dataset: FB15k-237
   rows:
-  - model: CompGCN
-    model_key: llms
-    model_plain: CompGCN
-    value: 0.815
-    std: 0.023
+  - model: sum, Msg_r^3, f(t)=0
+    model_key: sum, msg_r^3, f(t)=0
+    model_plain: sum, Msg_r^3, f(t)=0
+    value: 0.85
+    std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.815
-    sort_std: 0.023
+    sort_value: 0.85
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CompGCN
-    model_key: gcope
-    model_plain: CompGCN
-    value: 0.793
-    std: 0.022
+  - model: sum, Msg_r^3, f(t)=t
+    model_key: sum, msg_r^3, f(t)=t
+    model_plain: sum, Msg_r^3, f(t)=t
+    value: 0.844
+    std: null
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -114,30 +115,65 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.793
-    sort_std: 0.022
+    sort_value: 0.844
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: CompGCN
-    model_key: gft
-    model_plain: CompGCN
-    value: 0.791
-    std: 0.016
+  - model: relation-specific
+    model_key: relation-specific
+    model_plain: relation-specific
+    value: 0.835
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.835
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.637
+    std: 0.017
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -158,13 +194,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.791
-    sort_std: 0.016
+    global_rank: 28
+    sort_value: 0.637
+    sort_std: 0.017
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: OTE
     model_key: ote
@@ -222,10 +258,10 @@ results:
     value_note: ''
     sort_value: 0.361
     sort_std: null
-    global_rank: 25
-    paper_rank: 34
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 53
+    paper_rank: 65
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -290,12 +326,80 @@ results:
     value_note: ''
     sort_value: 0.361
     sort_std: null
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DistMult
+    model_key: distmult
+    model_plain: DistMult
+    value: 0.241
+    std: null
+    paper_value: 0.241
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Kadlec 2017
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Nov 7, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-07'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.241
+    at_pub_std: null
+    at_pub_source_arxiv: '1707.01476'
+    at_pub_source_title: Knowledge Graphs
+    at_pub_source_date_iso: '2017-07-05'
+    at_pub_source_date_label: AAAI 2017
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.358
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11699999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.358
+    sort_std: null
+    global_rank: 58
+    paper_rank: 116
+    rank_delta: 58
+    rank_delta_abs: 58
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -358,8 +462,8 @@ results:
     value_note: ''
     sort_value: 0.351
     sort_std: null
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -426,10 +530,10 @@ results:
     value_note: ''
     sort_value: 0.346
     sort_std: null
-    global_rank: 42
-    paper_rank: 74
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 73
+    paper_rank: 115
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -474,8 +578,8 @@ results:
       in Complex Space'
     at_pub_source_date_iso: '2018-09-27'
     at_pub_source_date_label: ICLR 2018
-    value_gap_source_date_iso: '2022-12-12'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-02-25'
+    value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -486,21 +590,88 @@ results:
     today_delta_significant: false
     true_value: 0.338
     true_std: null
-    value_gap_source_arxiv: '2212.05767'
-    value_gap_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
-      Static, Dynamic, and Multi-Modal'
+    value_gap_source_arxiv: '2302.13083'
+    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.338
     sort_std: null
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: TransE
+    model_key: transe
+    model_plain: TransE
+    value: 0.294
+    std: null
+    paper_value: 0.294
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Bordes 2013
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Nov 7, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-07'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.294
+    at_pub_std: null
+    at_pub_source_arxiv: '1911.03082'
+    at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
+    at_pub_source_date_iso: '2019-11-08'
+    at_pub_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.33
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03600000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.33
+    sort_std: null
+    global_rank: 91
+    paper_rank: 103
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -563,144 +734,8 @@ results:
     value_note: ''
     sort_value: 0.325
     sort_std: null
-    global_rank: 59
-    paper_rank: 59
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TransE
-    model_key: transe
-    model_plain: TransE
-    value: 0.294
-    std: null
-    paper_value: 0.294
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Bordes 2013
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Nov 7, 2020
-    date_display: Nov 2020
-    date_iso: '2020-11-07'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.294
-    at_pub_std: null
-    at_pub_source_arxiv: '1911.03082'
-    at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
-    at_pub_source_date_iso: '2019-11-08'
-    at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.294
-    true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.294
-    sort_std: null
-    global_rank: 66
-    paper_rank: 66
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DistMult
-    model_key: distmult
-    model_plain: DistMult
-    value: 0.241
-    std: null
-    paper_value: 0.241
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Kadlec 2017
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Nov 7, 2020
-    date_display: Nov 2020
-    date_iso: '2020-11-07'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.241
-    at_pub_std: null
-    at_pub_source_arxiv: '1707.01476'
-    at_pub_source_title: Knowledge Graphs
-    at_pub_source_date_iso: '2017-07-05'
-    at_pub_source_date_label: AAAI 2017
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.241
-    true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.241
-    sort_std: null
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -722,9 +757,77 @@ results:
 - &id002
   dataset: ogbl-biokg
   rows:
-  - model: TripleREv2
+  - model: PairRE+LRE
+    model_key: pairre+lre
+    model_plain: PairRE+LRE
+    value: 0.836
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 501.0
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2204.13957'
+    title: 'PIE: a Parameter and Inference Efficient Solution for Large Scale Knowledge
+      Graph Embedding Reasoning'
+    date: Apr 29, 2022
+    date_display: Apr 2022
+    date_iso: '2022-04-29'
+    venue: null
+    codebase_url: https://github.com/migalkin/NodePiece
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.836
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: NBFnet
+    model_key: nbfnet
+    model_plain: NBFnet
+    value: 0.8317
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 3.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.06935'
+    title: 'Neural Bellman-Ford Networks: A General Graph Neural Network Framework
+      for Link Prediction'
+    date: Jun 13, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-13'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/DeepGraphLearning/NBFNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8317
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AutoSF
     model_key: autosf
-    model_plain: TripleREv2
+    model_plain: AutoSF
     value: 0.8309
     std: 0.0008
     metric: MRR
@@ -747,75 +850,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.8309
     sort_std: 0.0008
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: TripleREv2
-    model_key: triplerev2
-    model_plain: TripleREv2
-    value: 0.8272
-    std: 0.0007
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: 500.0
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2209.08271'
-    title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation Vectors'
-    date: Sep 17, 2022
-    date_display: Sep 2022
-    date_iso: '2022-09-17'
-    venue: null
-    codebase_url: https://github.com/DeepGraphLearning/KnowledgeGraph-
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8272
-    sort_std: 0.0007
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TripleREv2
-    model_key: triplere
-    model_plain: TripleREv2
-    value: 0.8191
-    std: 0.0014
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2209.08271'
-    title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation Vectors'
-    date: Sep 17, 2022
-    date_display: Sep 2022
-    date_iso: '2022-09-17'
-    venue: null
-    codebase_url: https://github.com/DeepGraphLearning/KnowledgeGraph-
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8191
-    sort_std: 0.0014
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -878,8 +915,8 @@ results:
     value_note: ''
     sort_value: 0.8164
     sort_std: 0.0005
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -946,8 +983,8 @@ results:
     value_note: ''
     sort_value: 0.8095
     sort_std: 0.0007
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1014,8 +1051,8 @@ results:
     value_note: ''
     sort_value: 0.8043
     sort_std: 0.0003
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1082,8 +1119,8 @@ results:
     value_note: ''
     sort_value: 0.7989
     sort_std: 0.0004
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1150,8 +1187,8 @@ results:
     value_note: ''
     sort_value: 0.7452
     sort_std: 0.0004
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1173,9 +1210,43 @@ results:
 - &id001
   dataset: ogbl-wikikg2
   rows:
-  - model: Information-Flow (IF) framework
+  - model: InterHT + DigPiece
+    model_key: interht + digpiece
+    model_plain: InterHT + DigPiece
+    value: 0.7293
+    std: 0.0018
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04897'
+    title: 'InterHT: Knowledge Graph Embeddings by Interaction between Head and Tail
+      Entities'
+    date: Feb 10, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-10'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7293
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: StarGraph + TripleRE'
     model_key: stargraph + triplere'
-    model_plain: Information-Flow (IF) framework
+    model_plain: StarGraph + TripleRE'
     value: 0.729
     std: null
     metric: MRR
@@ -1199,7 +1270,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.729
     sort_std: null
     comparison_type: global_top
@@ -1207,69 +1278,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Information-Flow (IF) framework
-    model_key: trans(large) + nodepiece
-    model_plain: Information-Flow (IF) framework
-    value: 0.6939
+  - model: TripleRE + StarGraph
+    model_key: triplere + stargraph
+    model_plain: TripleRE + StarGraph
+    value: 0.7201
     std: 0.0011
     metric: MRR
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 38.430804
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2205.14209'
-    title: 'StarGraph: Knowledge Representation Learning based on Incomplete Two-hop
-      Subgraph'
-    date: May 27, 2022
-    date_display: May 2022
-    date_iso: '2022-05-27'
-    venue: Under review in ICLR 2023 (https://openreview.net/forum?id=mTOB_VK_BWk)
-    codebase_url: https://github.com/hzli-ucas/StarGraph
+    params_millions: 86.7
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04897'
+    title: 'InterHT: Knowledge Graph Embeddings by Interaction between Head and Tail
+      Entities'
+    date: Feb 10, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-10'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6939
-    sort_std: 0.0011
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Information-Flow (IF) framework
-    model_key: trans + nodepiece
-    model_plain: Information-Flow (IF) framework
-    value: 0.6882
-    std: 0.0019
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 19.215402
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2205.14209'
-    title: 'StarGraph: Knowledge Representation Learning based on Incomplete Two-hop
-      Subgraph'
-    date: May 27, 2022
-    date_display: May 2022
-    date_iso: '2022-05-27'
-    venue: Under review in ICLR 2023 (https://openreview.net/forum?id=mTOB_VK_BWk)
-    codebase_url: https://github.com/hzli-ucas/StarGraph
-    uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.6882
-    sort_std: 0.0019
+    sort_value: 0.7201
+    sort_std: 0.0011
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1311,32 +1348,32 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-09-17'
+    value_gap_source_date_iso: '2022-04-29'
     value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.5208
-    true_std: 0.0027
-    value_gap_source_arxiv: '2209.08271'
-    value_gap_source_title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation
-      Vectors'
+    true_value: 0.5805
+    true_std: null
+    value_gap_source_arxiv: '2204.13957'
+    value_gap_source_title: 'PIE: a Parameter and Inference Efficient Solution for
+      Large Scale Knowledge Graph Embedding Reasoning'
     value_gap_source_is_current_paper: false
-    value_gap: 0.008099999999999996
+    value_gap: 0.05159999999999998
     has_value_note: false
     value_note: ''
-    sort_value: 0.5208
-    sort_std: 0.0027
-    global_rank: 16
-    paper_rank: 16
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.5805
+    sort_std: null
+    global_rank: 24
+    paper_rank: 29
+    rank_delta: 5
+    rank_delta_abs: 5
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1400,12 +1437,80 @@ results:
     value_note: ''
     sort_value: 0.5027
     sort_std: 0.0027
-    global_rank: 17
-    paper_rank: 19
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 31
+    paper_rank: 40
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: TransE
+    model_key: transe
+    model_plain: TransE
+    value: 0.4536
+    std: 0.003
+    paper_value: 0.4536
+    paper_std: 0.003
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: hu2020open
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Nov 7, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-07'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-11-07'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4536
+    true_std: 0.003
+    value_gap_source_arxiv: '2011.03798'
+    value_gap_source_title: 'PairRE: Knowledge Graph Embeddings via Paired Relation
+      Vectors'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4536
+    sort_std: 0.003
+    global_rank: 34
+    paper_rank: 34
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1468,80 +1573,12 @@ results:
     value_note: ''
     sort_value: 0.4332
     sort_std: 0.0025
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TransE
-    model_key: transe
-    model_plain: TransE
-    value: 0.4536
-    std: 0.003
-    paper_value: 0.4536
-    paper_std: 0.003
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: hu2020open
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Nov 7, 2020
-    date_display: Nov 2020
-    date_iso: '2020-11-07'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-09-17'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.4256
-    true_std: 0.003
-    value_gap_source_arxiv: '2209.08271'
-    value_gap_source_title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation
-      Vectors'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.028000000000000025
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4256
-    sort_std: 0.003
-    global_rank: 19
-    paper_rank: 18
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1604,8 +1641,8 @@ results:
     value_note: ''
     sort_value: 0.3729
     sort_std: 0.0045
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

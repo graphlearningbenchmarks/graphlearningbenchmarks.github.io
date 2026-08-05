@@ -53,8 +53,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GFT
-mrr: 0.5007
-adjusted_mrr: 0.3338
+mrr: 0.0301
+adjusted_mrr: 0.0201
 mrr_dataset_count: 2
 benchmark_categories:
 - Knowledge Graphs
@@ -71,6 +71,108 @@ results:
 - &id001
   dataset: WN18RR
   rows:
+  - model: PNA, Msg_r^2, f(t)=t
+    model_key: pna, msg_r^2, f(t)=t
+    model_plain: PNA, Msg_r^2, f(t)=t
+    value: 0.947
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.947
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PNA, Msg_r^3, f(t)=0
+    model_key: pna, msg_r^3, f(t)=0
+    model_plain: PNA, Msg_r^3, f(t)=0
+    value: 0.947
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.947
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PNA, Msg_r^2, f(t)=0
+    model_key: pna, msg_r^2, f(t)=0
+    model_plain: PNA, Msg_r^2, f(t)=0
+    value: 0.946
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.946
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GFT
     model_key: gft
     model_plain: GFT
@@ -127,46 +229,13 @@ results:
     value_note: ''
     sort_value: 0.9191
     sort_std: null
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: CompGCN
-    model_key: unigraph2
-    model_plain: CompGCN
-    value: 0.8786
-    std: 0.0006
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2502.00806'
-    title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-    date: Feb 2, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-02'
-    venue: The Web Conference
-    codebase_url: https://github.com/yf-he/UniGraph2
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8786
-    sort_std: 0.0006
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -228,10 +297,10 @@ results:
     value_note: ''
     sort_value: 0.8552
     sort_std: 0.0012
-    global_rank: 3
-    paper_rank: 13
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 19
+    paper_rank: 31
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -295,8 +364,8 @@ results:
     value_note: ''
     sort_value: 0.8436
     sort_std: null
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -363,13 +432,47 @@ results:
     value_note: ''
     sort_value: 0.8433
     sort_std: 0.002
-    global_rank: 5
-    paper_rank: 15
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 21
+    paper_rank: 33
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8298
+    std: 0.0022
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.12684'
+    title: Towards Effective Federated Graph Foundation Model via Mitigating Knowledge
+      Entanglement
+    date: May 19, 2025
+    date_display: May 2025
+    date_iso: '2025-05-19'
+    venue: Accepted by NeurIPS 2025
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.8298
+    sort_std: 0.0022
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -431,10 +534,10 @@ results:
     value_note: ''
     sort_value: 0.8227
     sort_std: 0.0018
-    global_rank: 12
-    paper_rank: 21
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 29
+    paper_rank: 41
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -499,10 +602,10 @@ results:
     value_note: ''
     sort_value: 0.8124
     sort_std: 0.0055
-    global_rank: 13
-    paper_rank: 20
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 30
+    paper_rank: 40
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -566,8 +669,8 @@ results:
     value_note: ''
     sort_value: 0.7899
     sort_std: null
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -633,8 +736,8 @@ results:
     value_note: ''
     sort_value: 0.7575
     sort_std: null
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -700,8 +803,8 @@ results:
     value_note: ''
     sort_value: 0.7544
     sort_std: null
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

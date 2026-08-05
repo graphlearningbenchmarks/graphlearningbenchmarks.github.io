@@ -8,7 +8,7 @@ primary_metric: F1
 higher_is_better: true
 pyg_url: https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.datasets.LRGBDataset.html
 stats: null
-result_count: 143
+result_count: 142
 best_model:
   model: GCN
   value: 0.78
@@ -1537,18 +1537,18 @@ variants:
     metric_stds:
     - 0.0005
     - null
-  row_count: 143
+  row_count: 142
   rows_json: /data/datasets/pascalvoc-sp/standard-split-rows.json
   chart_json: /data/datasets/pascalvoc-sp/standard-split-chart.json
   arch_counts:
-    gnn: 56
+    gnn: 55
     hybrid: 29
     graph_transformer: 42
     llm: 0
     walk: 1
     traditional: 8
   metric_counts:
-  - 142
+  - 141
   - 1
   milestones: &id001
   - value: 0.323

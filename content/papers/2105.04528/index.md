@@ -56,8 +56,8 @@ proposed_models:
 - LASSO 4x
 - LASSO 8x
 - LASSO
-mrr: 0.0455
-adjusted_mrr: 0.0152
+mrr: 0.0417
+adjusted_mrr: 0.0139
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: Cluster-GCN (2019)
+  - model: Node Sampled Soup
     model_key: node sampled soup
-    model_plain: Cluster-GCN (2019)
+    model_plain: Node Sampled Soup
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: EnGCN
     model_key: engcn
-    model_plain: Cluster-GCN (2019)
+    model_plain: EnGCN
     value: 0.9714
     std: 0.0003
     metric: F1
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: SAGN+SLE
     model_key: sagn+sle
-    model_plain: Cluster-GCN (2019)
+    model_plain: SAGN+SLE
     value: 0.971
     std: 0.0
     metric: F1
@@ -233,8 +233,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -301,8 +301,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -439,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: null
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -507,8 +507,8 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: null
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -575,8 +575,8 @@ results:
     value_note: ''
     sort_value: 0.959
     sort_std: null
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -643,13 +643,46 @@ results:
     value_note: ''
     sort_value: 0.957
     sort_std: null
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.953
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.10803'
+    title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    date: May 22, 2022
+    date_display: May 2022
+    date_iso: '2022-05-22'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/THUDM/GraphMAE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 71
+    sort_value: 0.953
+    sort_std: 0.001
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -690,8 +723,8 @@ results:
     at_pub_source_title: 'Deep Learning on Graphs: A Survey'
     at_pub_source_date_iso: '2018-12-11'
     at_pub_source_date_label: '2018'
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2022-11-21'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -702,16 +735,17 @@ results:
     today_delta_significant: false
     true_value: 0.949
     true_std: 0.0
-    value_gap_source_arxiv: '2206.04355'
-    value_gap_source_title: Graph Attention Multi-Layer Perceptron
+    value_gap_source_arxiv: '2211.11761'
+    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.949
     sort_std: 0.0
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -778,13 +812,47 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7435
+    std: 0.0016
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2512.14908'
+    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
+      Graphs'
+    date: Dec 16, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/atlaspaper16/ATLAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 165
+    sort_value: 0.7435
+    sort_std: 0.0016
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

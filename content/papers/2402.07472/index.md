@@ -29,8 +29,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CACE
-mrr: 0.0116
-adjusted_mrr: 0.0039
+mrr: 0.0083
+adjusted_mrr: 0.0028
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -47,9 +47,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -81,9 +81,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -115,9 +115,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -186,7 +186,7 @@ results:
       length-scales in molecular systems'
     at_pub_source_date_iso: '2022-05-28'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_iso: '2024-07-02'
     value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: 2.16
     worse_than_at_pub: true
@@ -196,27 +196,307 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.053
+    true_value: 0.0009
     true_std: null
-    value_gap_source_arxiv: '2402.04836'
-    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
     value_gap_source_is_current_paper: false
-    value_gap: 2.1470000000000002
+    value_gap: 2.1991
     has_value_note: false
     value_note: ''
-    sort_value: 0.053
+    sort_value: 0.0009
     sort_std: null
-    global_rank: 34
-    paper_rank: 85
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 7
+    paper_rank: 120
+    rank_delta: 113
+    rank_delta_abs: 113
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'So3krates: Equivariant attention for interactions on
       arbitrary length-scales in molecular systems'
     comparison_source_arxiv: '2205.14276'
+    is_best: false
+    is_std_outlier: false
+  - model: GemNet-T
+    model_key: gemnet-t
+    model_plain: GemNet-T
+    value: 3.7
+    std: null
+    paper_value: 3.7
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2021gemnet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Force (F) error for ethanol in MD-17 trained on 1000 configurations
+    date: Feb 12, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-12'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.007
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.09375'
+    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    at_pub_source_date_iso: '2023-06-15'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 3.693
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.007
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 3.693
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.007
+    sort_std: null
+    global_rank: 21
+    paper_rank: 121
+    rank_delta: 100
+    rank_delta_abs: 100
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    comparison_source_arxiv: '2306.09375'
+    is_best: false
+    is_std_outlier: false
+  - model: PaiNN
+    model_key: painn
+    model_plain: PaiNN
+    value: 2.7
+    std: null
+    paper_value: 2.7
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: schutt2021equivariant
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Energy (E) error for ethanol in MD-17 trained on 1000 configurations
+    date: Feb 12, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-12'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.01
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.09375'
+    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    at_pub_source_date_iso: '2023-06-15'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 2.6900000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.01
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 2.6900000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.01
+    sort_std: null
+    global_rank: 22
+    paper_rank: 121
+    rank_delta: 99
+    rank_delta_abs: 99
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    comparison_source_arxiv: '2306.09375'
+    is_best: false
+    is_std_outlier: false
+  - model: SchNet
+    model_key: schnet
+    model_plain: SchNet
+    value: 3.5
+    std: null
+    paper_value: 3.5
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: schutt2017schnet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Energy (E) error for ethanol in MD-17 trained on 1000 configurations
+    date: Feb 12, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-12'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.05
+    at_pub_std: null
+    at_pub_source_arxiv: '1902.08408'
+    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    at_pub_source_date_iso: '2019-02-22'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 3.45
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.05
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: false
+    value_gap: 3.45
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.05
+    sort_std: null
+    global_rank: 46
+    paper_rank: 121
+    rank_delta: 75
+    rank_delta_abs: 75
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    comparison_source_arxiv: '1902.08408'
+    is_best: false
+    is_std_outlier: false
+  - model: SphereNet
+    model_key: spherenet
+    model_plain: SphereNet
+    value: 9.0
+    std: null
+    paper_value: 9.0
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: liu2022spherical
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Force (F) error for ethanol in MD-17 trained on 1000 configurations
+    date: Feb 12, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-12'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.052
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.09375'
+    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    at_pub_source_date_iso: '2023-06-15'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 8.948
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.052
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 8.948
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.052
+    sort_std: null
+    global_rank: 52
+    paper_rank: 123
+    rank_delta: 71
+    rank_delta_abs: 71
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    comparison_source_arxiv: '2306.09375'
     is_best: false
     is_std_outlier: false
   - model: sGDML
@@ -275,10 +555,10 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 40
-    paper_rank: 86
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 62
+    paper_rank: 121
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -323,8 +603,8 @@ results:
       learning of interatomic potentials and forces'
     at_pub_source_date_iso: '2021-08-06'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-08-06'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-05-28'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: 2.539
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -334,20 +614,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.061
-    true_std: 0.009
-    value_gap_source_arxiv: '2108.02913'
-    value_gap_source_title: 'NewtonNet: A Newtonian message passing network for deep
-      learning of interatomic potentials and forces'
+    true_std: null
+    value_gap_source_arxiv: '2205.14276'
+    value_gap_source_title: 'So3krates: Equivariant attention for interactions on
+      arbitrary length-scales in molecular systems'
     value_gap_source_is_current_paper: false
     value_gap: 2.539
     has_value_note: false
     value_note: ''
     sort_value: 0.061
-    sort_std: 0.009
-    global_rank: 41
-    paper_rank: 86
-    rank_delta: 45
-    rank_delta_abs: 45
+    sort_std: null
+    global_rank: 64
+    paper_rank: 121
+    rank_delta: 57
+    rank_delta_abs: 57
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -412,293 +692,15 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 42
-    paper_rank: 86
-    rank_delta: 44
-    rank_delta_abs: 44
+    global_rank: 65
+    paper_rank: 121
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Directional Message Passing for Molecular Graphs
     comparison_source_arxiv: '2003.03123'
-    is_best: false
-    is_std_outlier: false
-  - model: PaiNN
-    model_key: painn
-    model_plain: PaiNN
-    value: 2.7
-    std: null
-    paper_value: 2.7
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schutt2021equivariant
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy (E) error for ethanol in MD-17 trained on 1000 configurations
-    date: Feb 12, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-12'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.01
-    at_pub_std: null
-    at_pub_source_arxiv: '2306.09375'
-    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    at_pub_source_date_iso: '2023-06-15'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-11-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 2.6900000000000004
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.077
-    true_std: null
-    value_gap_source_arxiv: '2311.02124'
-    value_gap_source_title: 'Sliced Denoising: A Physics-Informed Molecular Pre-Training
-      Method'
-    value_gap_source_is_current_paper: false
-    value_gap: 2.623
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.077
-    sort_std: null
-    global_rank: 45
-    paper_rank: 86
-    rank_delta: 41
-    rank_delta_abs: 41
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    comparison_source_arxiv: '2306.09375'
-    is_best: false
-    is_std_outlier: false
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    value: 3.5
-    std: null
-    paper_value: 3.5
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schutt2017schnet
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy (E) error for ethanol in MD-17 trained on 1000 configurations
-    date: Feb 12, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-12'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.05
-    at_pub_std: null
-    at_pub_source_arxiv: '1902.08408'
-    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    at_pub_source_date_iso: '2019-02-22'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 3.45
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.08
-    true_std: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 3.42
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.08
-    sort_std: null
-    global_rank: 46
-    paper_rank: 86
-    rank_delta: 40
-    rank_delta_abs: 40
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    comparison_source_arxiv: '1902.08408'
-    is_best: false
-    is_std_outlier: false
-  - model: GemNet-T
-    model_key: gemnet-t
-    model_plain: GemNet-T
-    value: 3.7
-    std: null
-    paper_value: 3.7
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: gasteiger2021gemnet
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Force (F) error for ethanol in MD-17 trained on 1000 configurations
-    date: Feb 12, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-12'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.007
-    at_pub_std: null
-    at_pub_source_arxiv: '2306.09375'
-    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    at_pub_source_date_iso: '2023-06-15'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-09-27'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 3.693
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.101
-    true_std: null
-    value_gap_source_arxiv: '2309.15718'
-    value_gap_source_title: Geometry-enhanced pretraining on interatomic potentials
-    value_gap_source_is_current_paper: false
-    value_gap: 3.599
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.101
-    sort_std: null
-    global_rank: 54
-    paper_rank: 86
-    rank_delta: 32
-    rank_delta_abs: 32
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    comparison_source_arxiv: '2306.09375'
-    is_best: false
-    is_std_outlier: false
-  - model: SphereNet
-    model_key: spherenet
-    model_plain: SphereNet
-    value: 9.0
-    std: null
-    paper_value: 9.0
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: liu2022spherical
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Force (F) error for ethanol in MD-17 trained on 1000 configurations
-    date: Feb 12, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-12'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.052
-    at_pub_std: null
-    at_pub_source_arxiv: '2306.09375'
-    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    at_pub_source_date_iso: '2023-06-15'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 8.948
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.147
-    true_std: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_gap_source_is_current_paper: false
-    value_gap: 8.853
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.147
-    sort_std: null
-    global_rank: 68
-    paper_rank: 88
-    rank_delta: 20
-    rank_delta_abs: 20
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    comparison_source_arxiv: '2306.09375'
     is_best: false
     is_std_outlier: false
   - model: CACE
@@ -758,8 +760,8 @@ results:
     value_note: ''
     sort_value: 2.37
     sort_std: null
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

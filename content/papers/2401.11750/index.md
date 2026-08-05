@@ -60,7 +60,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - AdaFGL
-mrr: 0.0025
+mrr: 0.0023
 adjusted_mrr: 0.0008
 mrr_dataset_count: 1
 benchmark_categories:
@@ -78,9 +78,9 @@ results:
 - &id001
   dataset: Amazon-Computers
   rows:
-  - model: C (orthogonal)
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: C (orthogonal)
+    model_plain: GraphTARIF
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -170,9 +170,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 463
-    rank_delta: 461
-    rank_delta_abs: 461
+    paper_rank: 511
+    rank_delta: 509
+    rank_delta_abs: 509
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -180,9 +180,9 @@ results:
     comparison_source_arxiv: '2306.02285'
     is_best: false
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GAT
     model_key: gat
-    model_plain: C (orthogonal)
+    model_plain: GAT
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -209,6 +209,40 @@ results:
     global_rank: 3
     sort_value: 0.9398
     sort_std: 0.0022
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9351
+    std: 0.0006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 8
+    sort_value: 0.9351
+    sort_std: 0.0006
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -271,10 +305,10 @@ results:
     value_note: ''
     sort_value: 0.9181
     sort_std: 0.002
-    global_rank: 34
-    paper_rank: 460
-    rank_delta: 426
-    rank_delta_abs: 426
+    global_rank: 37
+    paper_rank: 505
+    rank_delta: 468
+    rank_delta_abs: 468
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -340,10 +374,10 @@ results:
     value_note: ''
     sort_value: 0.9104
     sort_std: 0.0041
-    global_rank: 73
-    paper_rank: 460
-    rank_delta: 387
-    rank_delta_abs: 387
+    global_rank: 77
+    paper_rank: 505
+    rank_delta: 428
+    rank_delta_abs: 428
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -410,10 +444,10 @@ results:
     value_note: ''
     sort_value: 0.905
     sort_std: 0.0091
-    global_rank: 99
-    paper_rank: 461
-    rank_delta: 362
-    rank_delta_abs: 362
+    global_rank: 103
+    paper_rank: 508
+    rank_delta: 405
+    rank_delta_abs: 405
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -480,16 +514,50 @@ results:
     value_note: ''
     sort_value: 0.8912
     sort_std: 0.0033
-    global_rank: 188
-    paper_rank: 460
-    rank_delta: 272
-    rank_delta_abs: 272
+    global_rank: 200
+    paper_rank: 505
+    rank_delta: 305
+    rank_delta_abs: 305
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'SignGT: Signed Attention-based Graph Transformer for
       Graph Representation Learning'
     comparison_source_arxiv: '2310.11025'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8463
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.11907'
+    title: 'GraphFM: A generalist graph transformer that learns transferable representations
+      across diverse domains'
+    date: Jul 16, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/nerdslab/GraphFM
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 394
+    sort_value: 0.8463
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAMLP
@@ -549,10 +617,10 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.005
-    global_rank: 378
-    paper_rank: 460
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 416
+    paper_rank: 505
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -617,8 +685,8 @@ results:
     value_note: ''
     sort_value: 0.836
     sort_std: 0.004
-    global_rank: 400
-    paper_rank: 400
+    global_rank: 440
+    paper_rank: 440
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -685,8 +753,8 @@ results:
     value_note: ''
     sort_value: 0.821
     sort_std: 0.012
-    global_rank: 437
-    paper_rank: 437
+    global_rank: 482
+    paper_rank: 482
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -753,8 +821,8 @@ results:
     value_note: ''
     sort_value: 0.815
     sort_std: 0.003
-    global_rank: 450
-    paper_rank: 450
+    global_rank: 495
+    paper_rank: 495
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -821,8 +889,8 @@ results:
     value_note: ''
     sort_value: 0.813
     sort_std: 0.009
-    global_rank: 453
-    paper_rank: 453
+    global_rank: 498
+    paper_rank: 498
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -889,8 +957,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.002
-    global_rank: 469
-    paper_rank: 469
+    global_rank: 518
+    paper_rank: 518
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

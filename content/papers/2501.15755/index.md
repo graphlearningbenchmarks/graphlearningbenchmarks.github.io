@@ -57,9 +57,9 @@ proposed_models:
 - GraphICL-LLaMA3-S2
 - GraphICL-LLaMA2-S1
 - GraphICL-LLaMA2-S2
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0043
+adjusted_mrr: 0.0043
+mrr_dataset_count: 3
 benchmark_categories:
 - Classic
 - OGB
@@ -80,9 +80,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: C (orthogonal)
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: C (orthogonal)
+    model_plain: GraphTARIF
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -173,9 +173,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 490
-    rank_delta: 488
-    rank_delta_abs: 488
+    paper_rank: 548
+    rank_delta: 546
+    rank_delta_abs: 546
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -184,9 +184,9 @@ results:
     comparison_source_arxiv: '2410.02622'
     is_best: false
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GAT
     model_key: gat
-    model_plain: C (orthogonal)
+    model_plain: GAT
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -276,14 +276,47 @@ results:
     sort_value: 0.9351
     sort_std: 0.0006
     global_rank: 8
-    paper_rank: 493
-    rank_delta: 485
-    rank_delta_abs: 485
+    paper_rank: 555
+    rank_delta: 547
+    rank_delta_abs: 547
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Automatic Graph Topology-Aware Transformer
     comparison_source_arxiv: '2405.19779'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.912
+    std: 0.0029
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2512.08798'
+    title: Can TabPFN Compete with GNNs for Node Classification via Graph Tabularization?
+    date: Dec 9, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-09'
+    venue: Learning on Graphs Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 66
+    sort_value: 0.912
+    sort_std: 0.0029
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GraphICL-LLaMA3-S1
@@ -322,8 +355,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -332,17 +365,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8737
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8737
     sort_std: null
-    global_rank: 295
+    global_rank: 310
+    paper_rank: 310
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -384,8 +423,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -394,17 +433,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8737
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8737
     sort_std: null
-    global_rank: 295
+    global_rank: 311
+    paper_rank: 311
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -446,8 +491,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -456,17 +501,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8706
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8706
     sort_std: null
-    global_rank: 304
+    global_rank: 325
+    paper_rank: 325
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -508,8 +559,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -518,17 +569,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8699
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8699
     sort_std: null
-    global_rank: 304
+    global_rank: 326
+    paper_rank: 326
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -570,8 +627,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -580,18 +637,58 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8511
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8511
     sort_std: null
-    global_rank: 350
+    global_rank: 382
+    paper_rank: 382
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8463
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.11907'
+    title: 'GraphFM: A generalist graph transformer that learns transferable representations
+      across diverse domains'
+    date: Jul 16, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/nerdslab/GraphFM
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 394
+    sort_value: 0.8463
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -632,8 +729,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -642,17 +739,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7878
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7878
     sort_std: null
-    global_rank: 474
+    global_rank: 525
+    paper_rank: 525
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -694,8 +797,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -704,17 +807,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7838
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7838
     sort_std: null
-    global_rank: 476
+    global_rank: 528
+    paper_rank: 528
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -756,8 +865,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -766,141 +875,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7316
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7316
     sort_std: null
-    global_rank: 495
+    global_rank: 557
+    paper_rank: 557
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LLaMA3-70b-Instruct
-    model_key: llama3-70b-instruct
-    model_plain: LLaMA3-70b-Instruct
-    value: 0.5742
-    std: null
-    paper_value: 0.5742
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2025
-    date_display: Jan 2025
-    date_iso: '2025-01-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.5742
-    sort_std: null
-    global_rank: 522
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LLaMA2-13b-Chat
-    model_key: llama2-13b-chat
-    model_plain: LLaMA2-13b-Chat
-    value: 0.4748
-    std: null
-    paper_value: 0.4748
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2025
-    date_display: Jan 2025
-    date_iso: '2025-01-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.4748
-    sort_std: null
-    global_rank: 528
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -944,8 +935,8 @@ results:
       with LLM Token Embeddings'
     at_pub_source_date_iso: '2024-08-25'
     at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-08-25'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.19739999999999996
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -953,28 +944,164 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.42
-    true_std: 0.006
-    value_gap_source_arxiv: '2408.14512'
-    value_gap_source_title: 'LLMs as Zero-shot Graph Learners: Alignment of GNN Representations
-      with LLM Token Embeddings'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.19739999999999996
+    today_delta_significant: false
+    true_value: 0.6174
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.42
-    sort_std: 0.006
-    global_rank: 532
-    paper_rank: 518
-    rank_delta: -14
-    rank_delta_abs: 14
-    rank_delta_direction: better
+    sort_value: 0.6174
+    sort_std: null
+    global_rank: 583
+    paper_rank: 583
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: 'LLMs as Zero-shot Graph Learners: Alignment of GNN Representations
       with LLM Token Embeddings'
     comparison_source_arxiv: '2408.14512'
+    is_best: false
+    is_std_outlier: false
+  - model: LLaMA3-70b-Instruct
+    model_key: llama3-70b-instruct
+    model_plain: LLaMA3-70b-Instruct
+    value: 0.5742
+    std: null
+    paper_value: 0.5742
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 27, 2025
+    date_display: Jan 2025
+    date_iso: '2025-01-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5742
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5742
+    sort_std: null
+    global_rank: 590
+    paper_rank: 590
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LLaMA2-13b-Chat
+    model_key: llama2-13b-chat
+    model_plain: LLaMA2-13b-Chat
+    value: 0.4748
+    std: null
+    paper_value: 0.4748
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 27, 2025
+    date_display: Jan 2025
+    date_iso: '2025-01-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4748
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4748
+    sort_std: null
+    global_rank: 597
+    paper_rank: 597
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GraphTranslator
@@ -1013,8 +1140,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1023,17 +1150,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3895
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3895
     sort_std: null
-    global_rank: 534
+    global_rank: 604
+    paper_rank: 604
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1051,9 +1184,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: C (orthogonal)
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: C (orthogonal)
+    model_plain: MSH-GNN
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -1084,9 +1217,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GeoMancer
     model_key: geomancer
-    model_plain: C (orthogonal)
+    model_plain: GeoMancer
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -1118,9 +1251,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: C (orthogonal)
+    model_plain: GraphTARIF
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -1151,6 +1284,73 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9643
+    std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 13
+    sort_value: 0.9643
+    sort_std: 0.0027
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.9128
+    std: 0.0063
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.02285'
+    title: Clarify Confused Nodes via Separated Learning
+    date: Jun 4, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-04'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: https://github.com/GISec-Team/NCGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 434
+    sort_value: 0.9128
+    sort_std: 0.0063
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: SAGE (GIA)
     model_key: sage (gia)
@@ -1188,8 +1388,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1198,17 +1398,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8512
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8512
     sort_std: null
-    global_rank: 486
+    global_rank: 569
+    paper_rank: 569
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1250,8 +1456,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1260,17 +1466,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8438
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8438
     sort_std: null
-    global_rank: 492
+    global_rank: 576
+    paper_rank: 576
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1312,8 +1524,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1322,17 +1534,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8427
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8427
     sort_std: null
-    global_rank: 492
+    global_rank: 577
+    paper_rank: 577
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1374,8 +1592,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1384,17 +1602,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8413
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8413
     sort_std: null
-    global_rank: 492
+    global_rank: 578
+    paper_rank: 578
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1436,8 +1660,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1446,17 +1670,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8089
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8089
     sort_std: null
-    global_rank: 502
+    global_rank: 589
+    paper_rank: 589
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1498,8 +1728,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1508,17 +1738,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7918
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7918
     sort_std: null
-    global_rank: 506
+    global_rank: 595
+    paper_rank: 595
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1536,44 +1772,78 @@ results:
 - &id003
   dataset: ogbn-products
   rows:
-  - model: LargeGT-full
-    model_key: advsyngnn
-    model_plain: LargeGT-full
-    value: 0.8931
-    std: 0.0013
+  - model: Jacobi
+    model_key: jacobi
+    model_plain: Jacobi
+    value: 0.8968
+    std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.17071'
-    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
-      and Self-Corrective Propagation'
-    date: Feb 19, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-19'
-    venue: arXiv.org
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8931
-    sort_std: 0.0013
+    sort_value: 0.8968
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: gofa-f
-    model_plain: LargeGT-full
-    value: 0.8834
+  - model: GPR
+    model_key: gpr
+    model_plain: GPR
+    value: 0.8953
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8953
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LEMP4HG
+    model_key: lemp4hg
+    model_plain: LEMP4HG
+    value: 0.8939
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -1584,57 +1854,94 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.09709'
-    title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-    date: Jul 12, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-12'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/JiaruiFeng/GOFA
-    uses_external_data: false
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.8834
+    global_rank: 3
+    sort_value: 0.8939
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: llms
-    model_plain: LargeGT-full
-    value: 0.882
-    std: 0.0005
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7344
+    std: null
+    paper_value: 0.7344
+    paper_std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2412.16441'
-    title: 'Towards Graph Foundation Models: Learning Generalities Across Graphs via
-      Task-Trees'
-    date: Dec 21, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-21'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/Zehong-Wang/GIT
-    uses_external_data: false
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.882
-    sort_std: 0.0005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 27, 2025
+    date_display: Jan 2025
+    date_iso: '2025-01-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8233
+    at_pub_std: 0.0037
+    at_pub_source_arxiv: '2210.14709'
+    at_pub_source_title: Learning on Large-scale Text-attributed Graphs via Variational
+      Inference
+    at_pub_source_date_iso: 2022-10
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.08889999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8933
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15889999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8933
+    sort_std: null
+    global_rank: 4
+    paper_rank: 347
+    rank_delta: 343
+    rank_delta_abs: 343
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Learning on Large-scale Text-attributed Graphs via Variational
+      Inference
+    comparison_source_arxiv: '2210.14709'
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -1674,8 +1981,8 @@ results:
       Graphs via Task-Trees'
     at_pub_source_date_iso: '2024-12-21'
     at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2024-12-21'
-    value_gap_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.11349999999999993
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1684,27 +1991,164 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8691
-    true_std: 0.0005
-    value_gap_source_arxiv: '2412.16441'
-    value_gap_source_title: 'Towards Graph Foundation Models: Learning Generalities
-      Across Graphs via Task-Trees'
+    true_value: 0.8868
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
     value_gap_source_is_current_paper: false
-    value_gap: 0.11349999999999993
+    value_gap: 0.13119999999999998
     has_value_note: false
     value_note: ''
-    sort_value: 0.8691
-    sort_std: 0.0005
-    global_rank: 12
-    paper_rank: 255
-    rank_delta: 243
-    rank_delta_abs: 243
+    sort_value: 0.8868
+    sort_std: null
+    global_rank: 7
+    paper_rank: 292
+    rank_delta: 285
+    rank_delta_abs: 285
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Towards Graph Foundation Models: Learning Generalities
       Across Graphs via Task-Trees'
     comparison_source_arxiv: '2412.16441'
+    is_best: false
+    is_std_outlier: false
+  - model: RevGAT
+    model_key: revgat
+    model_plain: RevGAT
+    value: 0.7362
+    std: null
+    paper_value: 0.7362
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 27, 2025
+    date_display: Jan 2025
+    date_iso: '2025-01-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8859
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.14970000000000006
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8859
+    sort_std: null
+    global_rank: 9
+    paper_rank: 344
+    rank_delta: 335
+    rank_delta_abs: 335
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP+LLM_features
+    model_key: mlp+llm_features
+    model_plain: MLP+LLM_features
+    value: 0.6756
+    std: null
+    paper_value: 0.6756
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: llm_features
+    feature_source_evidence: The paper states that MLP baselines uniformly use BERT
+      embeddings.
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 27, 2025
+    date_display: Jan 2025
+    date_iso: '2025-01-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8634
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.18779999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8634
+    sort_std: null
+    global_rank: 30
+    paper_rank: 388
+    rank_delta: 358
+    rank_delta_abs: 358
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: LLAGA-HO
@@ -1764,10 +2208,10 @@ results:
     value_note: ''
     sort_value: 0.8467
     sort_std: null
-    global_rank: 37
-    paper_rank: 304
-    rank_delta: 267
-    rank_delta_abs: 267
+    global_rank: 53
+    paper_rank: 344
+    rank_delta: 291
+    rank_delta_abs: 291
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1832,10 +2276,10 @@ results:
     value_note: ''
     sort_value: 0.846
     sort_std: null
-    global_rank: 38
-    paper_rank: 304
-    rank_delta: 266
-    rank_delta_abs: 266
+    global_rank: 54
+    paper_rank: 344
+    rank_delta: 290
+    rank_delta_abs: 290
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1843,13 +2287,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.7344
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8287
     std: null
-    paper_value: 0.7344
-    paper_std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1859,58 +2301,24 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2025
-    date_display: Jan 2025
-    date_iso: '2025-01-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8233
-    at_pub_std: 0.0037
-    at_pub_source_arxiv: '2210.14709'
-    at_pub_source_title: Learning on Large-scale Text-attributed Graphs via Variational
-      Inference
-    at_pub_source_date_iso: 2022-10
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: 2022-10
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: 0.08889999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8233
-    true_std: 0.0037
-    value_gap_source_arxiv: '2210.14709'
-    value_gap_source_title: Learning on Large-scale Text-attributed Graphs via Variational
-      Inference
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08889999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8233
-    sort_std: 0.0037
-    global_rank: 84
-    paper_rank: 307
-    rank_delta: 223
-    rank_delta_abs: 223
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Learning on Large-scale Text-attributed Graphs via Variational
-      Inference
-    comparison_source_arxiv: '2210.14709'
+    is_global_top: true
+    global_rank: 94
+    sort_value: 0.8287
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GraphICL-LLaMA3-S1
@@ -1949,8 +2357,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1959,17 +2367,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8148
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8148
     sort_std: null
-    global_rank: 106
+    global_rank: 125
+    paper_rank: 125
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2011,8 +2425,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2021,17 +2435,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8104
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8104
     sort_std: null
-    global_rank: 122
+    global_rank: 143
+    paper_rank: 143
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2093,10 +2513,10 @@ results:
     value_note: ''
     sort_value: 0.7954
     sort_std: null
-    global_rank: 159
-    paper_rank: 189
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 185
+    paper_rank: 214
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2140,8 +2560,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2150,17 +2570,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7884
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7884
     sort_std: null
-    global_rank: 201
+    global_rank: 226
+    paper_rank: 226
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2202,8 +2628,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2212,97 +2638,33 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7827
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7827
     sort_std: null
-    global_rank: 221
+    global_rank: 248
+    paper_rank: 248
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: RevGAT
-    model_key: revgat
-    model_plain: RevGAT
-    value: 0.7362
-    std: null
-    paper_value: 0.7362
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2025
-    date_display: Jan 2025
-    date_iso: '2025-01-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-06-08'
-    value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.6964
-    true_std: 0.0015
-    value_gap_source_arxiv: '2506.07168'
-    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03979999999999995
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6964
-    sort_std: 0.0015
-    global_rank: 340
-    paper_rank: 306
-    rank_delta: -34
-    rank_delta_abs: 34
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP+LLM_features
-    model_key: mlp+llm_features
-    model_plain: MLP+LLM_features
-    value: 0.6756
-    std: null
-    paper_value: 0.6756
-    paper_std: null
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6605
+    std: 0.002
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -2312,49 +2674,21 @@ results:
     architecture_type: other_traditional
     architecture_label: Trad
     architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: llm_features
-    feature_source_evidence: The paper states that MLP baselines uniformly use BERT
-      embeddings.
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbn-products (score=76)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2025
-    date_display: Jan 2025
-    date_iso: '2025-01-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.6756
-    sort_std: null
-    global_rank: 348
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
+    arxiv_id: '2211.16199'
+    title: Latent Graph Inference using Product Manifolds
+    date: Nov 26, 2022
+    date_display: Nov 2022
+    date_iso: '2022-11-26'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 394
+    sort_value: 0.6605
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2395,8 +2729,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2405,17 +2739,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5762
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5762
     sort_std: null
-    global_rank: 378
+    global_rank: 422
+    paper_rank: 422
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2457,8 +2797,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2467,17 +2807,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5734
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5734
     sort_std: null
-    global_rank: 378
+    global_rank: 423
+    paper_rank: 423
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2519,8 +2865,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2529,17 +2875,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4132
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4132
     sort_std: null
-    global_rank: 385
+    global_rank: 434
+    paper_rank: 434
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

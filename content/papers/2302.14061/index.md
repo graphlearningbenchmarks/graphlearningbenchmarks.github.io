@@ -81,9 +81,75 @@ results:
 - &id002
   dataset: ACM
   rows:
-  - model: AM-GCN
+  - model: SPGRL
+    model_key: spgrl
+    model_plain: SPGRL
+    value: 0.9398
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2209.00793'
+    title: Structure-Preserving Graph Representation Learning
+    date: Sep 2, 2022
+    date_display: Sep 2022
+    date_iso: '2022-09-02'
+    venue: Industrial Conference on Data Mining
+    codebase_url: https://github.com/uestc-lese/SPGRL
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9398
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: CDC
+    model_key: cdc
+    model_plain: CDC
+    value: 0.936
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2403.03670'
+    title: 'CDC: A Simple Framework for Complex Data Clustering'
+    date: Mar 6, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-06'
+    venue: IEEE Transactions on Neural Networks and Learning Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.936
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SynC SSL
     model_key: sync ssl
-    model_plain: AM-GCN
+    model_plain: SynC SSL
     value: 0.9274
     std: 0.0004
     metric: F1
@@ -107,77 +173,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.9274
     sort_std: 0.0004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: AM-GCN
-    model_key: idcrn
-    model_plain: AM-GCN
-    value: 0.926
-    std: 0.0008
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.926
-    sort_std: 0.0008
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: AM-GCN
-    model_key: agc-drr
-    model_plain: AM-GCN
-    value: 0.9255
-    std: 0.0009
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9049
+    std: null
     metric: F1
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
+    arxiv_id: '2007.02265'
+    title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    date: Jul 5, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-05'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/thunlp/OpenNE
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9255
-    sort_std: 0.0009
+    global_rank: 17
+    sort_value: 0.9049
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -219,8 +250,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -229,17 +260,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6384
+    true_std: 0.0078
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6384
     sort_std: 0.0078
-    global_rank: 25
+    global_rank: 42
+    paper_rank: 42
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -281,8 +318,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -291,17 +328,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6257
+    true_std: 0.0169
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6257
     sort_std: 0.0169
-    global_rank: 25
+    global_rank: 43
+    paper_rank: 43
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -343,8 +386,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -353,17 +396,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6245
+    true_std: 0.0141
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6245
     sort_std: 0.0141
-    global_rank: 25
+    global_rank: 44
+    paper_rank: 44
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -405,8 +454,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -415,17 +464,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6206
+    true_std: 0.0297
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6206
     sort_std: 0.0297
-    global_rank: 25
+    global_rank: 45
+    paper_rank: 45
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -467,8 +522,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -477,17 +532,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6192
+    true_std: 0.0189
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6192
     sort_std: 0.0189
-    global_rank: 25
+    global_rank: 46
+    paper_rank: 46
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -529,8 +590,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -539,17 +600,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6145
+    true_std: 0.0123
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6145
     sort_std: 0.0123
-    global_rank: 25
+    global_rank: 47
+    paper_rank: 47
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -591,8 +658,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -601,17 +668,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6116
+    true_std: 0.0211
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6116
     sort_std: 0.0211
-    global_rank: 25
+    global_rank: 48
+    paper_rank: 48
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -653,8 +726,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -663,17 +736,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6113
+    true_std: 0.0093
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6113
     sort_std: 0.0093
-    global_rank: 25
+    global_rank: 49
+    paper_rank: 49
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -715,8 +794,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -725,17 +804,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6102
+    true_std: 0.012
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6102
     sort_std: 0.012
-    global_rank: 25
+    global_rank: 50
+    paper_rank: 50
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -777,8 +862,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -787,17 +872,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5975
+    true_std: 0.0053
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5975
     sort_std: 0.0053
-    global_rank: 25
+    global_rank: 52
+    paper_rank: 52
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -851,8 +942,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -861,17 +952,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9454
+    true_std: 0.0123
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9454
     sort_std: 0.0123
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -913,8 +1010,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -923,17 +1020,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9375
+    true_std: 0.0115
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9375
     sort_std: 0.0115
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -975,8 +1078,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -985,17 +1088,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9368
+    true_std: 0.0108
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9368
     sort_std: 0.0108
-    global_rank: 1
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1037,8 +1146,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1047,17 +1156,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.925
+    true_std: 0.0053
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.925
     sort_std: 0.0053
-    global_rank: 1
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1099,8 +1214,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1109,17 +1224,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9162
+    true_std: 0.0019
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9162
     sort_std: 0.0019
-    global_rank: 1
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1161,8 +1282,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1171,17 +1292,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9162
+    true_std: 0.0178
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9162
     sort_std: 0.0178
-    global_rank: 1
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1223,8 +1350,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1233,17 +1360,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9154
+    true_std: 0.0038
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9154
     sort_std: 0.0038
-    global_rank: 1
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1285,8 +1418,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1295,17 +1428,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9028
+    true_std: 0.0087
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9028
     sort_std: 0.0087
-    global_rank: 1
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1347,8 +1486,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1357,17 +1496,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8995
+    true_std: 0.0082
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8995
     sort_std: 0.0082
-    global_rank: 1
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1409,8 +1554,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1419,17 +1564,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8987
+    true_std: 0.0062
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8987
     sort_std: 0.0062
-    global_rank: 1
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1471,8 +1622,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1481,17 +1632,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.897
+    true_std: 0.0084
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.897
     sort_std: 0.0084
-    global_rank: 1
+    global_rank: 16
+    paper_rank: 16
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1533,8 +1690,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1543,17 +1700,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8935
+    true_std: 0.0176
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8935
     sort_std: 0.0176
-    global_rank: 1
+    global_rank: 17
+    paper_rank: 17
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1595,8 +1758,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1605,17 +1768,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8934
+    true_std: 0.0157
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8934
     sort_std: 0.0157
-    global_rank: 1
+    global_rank: 18
+    paper_rank: 18
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1657,8 +1826,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1667,118 +1836,56 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8932
+    true_std: 0.0102
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8932
     sort_std: 0.0102
-    global_rank: 1
+    global_rank: 19
+    paper_rank: 19
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SynC KMeans
-    model_key: sync ssl
-    model_plain: SynC KMeans
-    value: 0.829
-    std: 0.0017
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.829
-    sort_std: 0.0017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SynC KMeans
-    model_key: idcrn
-    model_plain: SynC KMeans
-    value: 0.8147
-    std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2202.12533'
-    title: Improved Dual Correlation Reduction Network
-    date: Feb 25, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-25'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8147
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SynC KMeans
-    model_key: neucgc
-    model_plain: SynC KMeans
-    value: 0.8071
-    std: 0.0012
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.732
+    std: null
     metric: F1
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.10866'
+    title: Unsupervised Network Embedding Beyond Homophily
+    date: Mar 21, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-21'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/zhiqiangzhongddu/SELENE
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.8071
-    sort_std: 0.0012
+    global_rank: 39
+    sort_value: 0.732
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1796,9 +1903,9 @@ results:
 - &id003
   dataset: IMDB
   rows:
-  - model: GTN
+  - model: SGC
     model_key: sgc
-    model_plain: GTN
+    model_plain: SGC
     value: 0.6192
     std: null
     metric: F1
@@ -1829,9 +1936,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GTN
+  - model: GCN
     model_key: gcn
-    model_plain: GTN
+    model_plain: GCN
     value: 0.6154
     std: null
     metric: F1
@@ -1862,9 +1969,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GTN
+  - model: GAT
     model_key: gat
-    model_plain: GTN
+    model_plain: GAT
     value: 0.6099
     std: null
     metric: F1
@@ -1889,6 +1996,39 @@ results:
     is_global_top: true
     global_rank: 3
     sort_value: 0.6099
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.5931
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2007.08294'
+    title: Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs
+    date: Jul 16, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-16'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/mlvlab/SELAR
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 5
+    sort_value: 0.5931
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -1931,8 +2071,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1941,17 +2081,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5261
+    true_std: 0.0182
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5261
     sort_std: 0.0182
     global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1993,8 +2139,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2003,17 +2149,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5155
+    true_std: 0.0096
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5155
     sort_std: 0.0096
-    global_rank: 8
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2055,8 +2207,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2065,17 +2217,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5131
+    true_std: 0.011
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5131
     sort_std: 0.011
-    global_rank: 8
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2117,8 +2275,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2127,18 +2285,57 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4974
+    true_std: 0.0016
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4974
     sort_std: 0.0016
-    global_rank: 8
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4172
+    std: 0.0031
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2202.11245'
+    title: Exploring Edge Disentanglement for Node Classification
+    date: Feb 23, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.4172
+    sort_std: 0.0031
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2179,8 +2376,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2189,17 +2386,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3513
+    true_std: 0.0136
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3513
     sort_std: 0.0136
-    global_rank: 18
+    global_rank: 22
+    paper_rank: 22
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2241,8 +2444,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2251,17 +2454,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.338
+    true_std: 0.0271
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.338
     sort_std: 0.0271
-    global_rank: 18
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2303,8 +2512,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2313,17 +2522,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3344
+    true_std: 0.0153
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3344
     sort_std: 0.0153
-    global_rank: 18
+    global_rank: 24
+    paper_rank: 24
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2365,8 +2580,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2375,17 +2590,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3344
+    true_std: 0.0349
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3344
     sort_std: 0.0349
-    global_rank: 18
+    global_rank: 25
+    paper_rank: 25
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2427,8 +2648,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2437,17 +2658,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3277
+    true_std: 0.0149
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3277
     sort_std: 0.0149
-    global_rank: 18
+    global_rank: 26
+    paper_rank: 26
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2489,8 +2716,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2499,17 +2726,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3235
+    true_std: 0.0176
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3235
     sort_std: 0.0176
-    global_rank: 18
+    global_rank: 27
+    paper_rank: 27
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2551,8 +2784,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2561,17 +2794,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3232
+    true_std: 0.0323
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3232
     sort_std: 0.0323
-    global_rank: 18
+    global_rank: 28
+    paper_rank: 28
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2613,8 +2852,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2623,17 +2862,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2983
+    true_std: 0.0145
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2983
     sort_std: 0.0145
-    global_rank: 18
+    global_rank: 29
+    paper_rank: 29
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2675,8 +2920,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2685,17 +2930,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2832
+    true_std: 0.0089
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2832
     sort_std: 0.0089
-    global_rank: 18
+    global_rank: 30
+    paper_rank: 30
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2737,8 +2988,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-27'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2747,17 +2998,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2738
+    true_std: 0.0141
+    value_gap_source_arxiv: '2302.14061'
+    value_gap_source_title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2738
     sort_std: 0.0141
-    global_rank: 18
+    global_rank: 31
+    paper_rank: 31
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

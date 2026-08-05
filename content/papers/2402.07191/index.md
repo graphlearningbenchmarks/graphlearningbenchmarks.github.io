@@ -58,8 +58,8 @@ proposed_models:
 - GIN+GSINA
 - PNA+GSINA
 - GSINA
-mrr: 0.0166
-adjusted_mrr: 0.0166
+mrr: 0.0165
+adjusted_mrr: 0.0165
 mrr_dataset_count: 3
 benchmark_categories:
 - TU Dortmund
@@ -86,9 +86,9 @@ results:
 - &id004
   dataset: ClinTox
   rows:
-  - model: EdgePrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: EdgePrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.993
     std: 0.004
     metric: ROC-AUC
@@ -121,9 +121,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: EdgePrompt+
+    model_plain: KA-GCN
     value: 0.992
     std: 0.005
     metric: ROC-AUC
@@ -155,9 +155,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: EdgePrompt+
+    model_plain: KA-GAT
     value: 0.991
     std: 0.005
     metric: ROC-AUC
@@ -188,6 +188,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.913
+    std: 0.017
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.03806'
+    title: 'OOD-GNN: Out-of-Distribution Generalized Graph Neural Network'
+    date: Dec 7, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-07'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.913
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GSINA
     model_key: gsina
@@ -1455,9 +1488,9 @@ results:
 - &id005
   dataset: SIDER
   rows:
-  - model: DGI
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: DGI
+    model_plain: KA-GAT
     value: 0.847
     std: 0.002
     metric: ROC-AUC
@@ -1489,9 +1522,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DGI
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: DGI
+    model_plain: KA-GCN
     value: 0.842
     std: 0.001
     metric: ROC-AUC
@@ -1523,9 +1556,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: DGI
+  - model: GraphKAN
     model_key: graphkan
-    model_plain: DGI
+    model_plain: GraphKAN
     value: 0.837
     std: 0.001
     metric: ROC-AUC
@@ -1552,6 +1585,40 @@ results:
     global_rank: 3
     sort_value: 0.837
     sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.6403
+    std: 0.0104
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 66
+    sort_value: 0.6403
+    sort_std: 0.0104
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1615,10 +1682,10 @@ results:
     value_note: ''
     sort_value: 0.5919
     sort_std: 0.0103
-    global_rank: 202
-    paper_rank: 218
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 203
+    paper_rank: 220
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1684,8 +1751,8 @@ results:
     value_note: ''
     sort_value: 0.5861
     sort_std: 0.0109
-    global_rank: 207
-    paper_rank: 207
+    global_rank: 208
+    paper_rank: 208
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1752,8 +1819,8 @@ results:
     value_note: ''
     sort_value: 0.583
     sort_std: 0.012
-    global_rank: 211
-    paper_rank: 229
+    global_rank: 213
+    paper_rank: 231
     rank_delta: 18
     rank_delta_abs: 18
     rank_delta_direction: worse
@@ -1775,9 +1842,9 @@ results:
 - &id003
   dataset: Tox21
   rows:
-  - model: HOD-GNN
+  - model: HIMP
     model_key: himp
-    model_plain: HOD-GNN
+    model_plain: HIMP
     value: 0.874
     std: 0.005
     metric: ROC-AUC
@@ -1808,9 +1875,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: GINE w/ VN
     model_key: gine w/ vn
-    model_plain: HOD-GNN
+    model_plain: GINE w/ VN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -1841,9 +1908,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: NaiveGINe+ K=3 w/ VN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: HOD-GNN
+    model_plain: NaiveGINe+ K=3 w/ VN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -1873,6 +1940,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.84
+    std: 0.004
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2011.15069'
+    title: Graph convolutions that can finally model local structure
+    date: Nov 30, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-30'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.84
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: PNA
     model_key: pna
@@ -1931,10 +2031,10 @@ results:
     value_note: ''
     sort_value: 0.793
     sort_std: 0.015
-    global_rank: 86
-    paper_rank: 224
-    rank_delta: 138
-    rank_delta_abs: 138
+    global_rank: 88
+    paper_rank: 231
+    rank_delta: 143
+    rank_delta_abs: 143
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2000,8 +2100,8 @@ results:
     value_note: ''
     sort_value: 0.7547
     sort_std: 0.0055
-    global_rank: 204
-    paper_rank: 204
+    global_rank: 209
+    paper_rank: 209
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2069,8 +2169,8 @@ results:
     value_note: ''
     sort_value: 0.7496
     sort_std: 0.0066
-    global_rank: 229
-    paper_rank: 229
+    global_rank: 236
+    paper_rank: 236
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2092,9 +2192,9 @@ results:
 - &id002
   dataset: ogbg-molhiv
   rows:
-  - model: SigGate-GT
+  - model: Multi-RF Fusion with Multi-GNN Blending
     model_key: multi-rf fusion with multi-gnn blending
-    model_plain: SigGate-GT
+    model_plain: Multi-RF Fusion with Multi-GNN Blending
     value: 0.8476
     std: 0.0002
     metric: ROC-AUC
@@ -2126,9 +2226,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: HyperFusion
     model_key: hyperfusion
-    model_plain: SigGate-GT
+    model_plain: HyperFusion
     value: 0.8475
     std: 0.0003
     metric: ROC-AUC
@@ -2159,9 +2259,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: PAS+FPs
     model_key: pas+fps
-    model_plain: SigGate-GT
+    model_plain: PAS+FPs
     value: 0.842
     std: 0.0015
     metric: ROC-AUC
@@ -2187,6 +2287,39 @@ results:
     global_rank: 3
     sort_value: 0.842
     sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.809
+    std: 0.016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.809
+    sort_std: 0.016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2365,8 +2498,8 @@ results:
       Classification
     at_pub_source_date_iso: '2021-03-30'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2026-04-19'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.0013999999999999568
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2377,8 +2510,9 @@ results:
     today_delta_significant: false
     true_value: 0.7905
     true_std: 0.0132
-    value_gap_source_arxiv: '2403.12529'
-    value_gap_source_title: Contextualized Messages Boost Graph Representations
+    value_gap_source_arxiv: '2604.17324'
+    value_gap_source_title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers
+      via Sigmoid-Gated Attention'
     value_gap_source_is_current_paper: false
     value_gap: 0.0013999999999999568
     has_value_note: false
@@ -2567,8 +2701,8 @@ results:
     at_pub_source_title: Discovering Invariant Rationales for Graph Neural Networks
     at_pub_source_date_iso: '2022-01-30'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-11'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: 0.007099999999999995
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2578,15 +2712,16 @@ results:
     insignificant_value_gap: true
     today_delta_significant: false
     true_value: 0.7705
-    true_std: 0.0057
-    value_gap_source_arxiv: '2201.12872'
-    value_gap_source_title: Discovering Invariant Rationales for Graph Neural Networks
+    true_std: null
+    value_gap_source_arxiv: '2502.07968'
+    value_gap_source_title: Generative Risk Minimization for Out-of-Distribution Generalization
+      on Graphs
     value_gap_source_is_current_paper: false
     value_gap: 0.007099999999999995
     has_value_note: false
     value_note: ''
     sort_value: 0.7705
-    sort_std: 0.0057
+    sort_std: null
     global_rank: 164
     paper_rank: 200
     rank_delta: 36
@@ -2594,6 +2729,39 @@ results:
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.769
+    std: 0.0136
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.07141'
+    title: 'SoGCN: Second-Order Graph Convolutional Networks'
+    date: Oct 14, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-14'
+    venue: null
+    codebase_url: https://github.com/yuehaowang/SoGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 171
+    sort_value: 0.769
+    sort_std: 0.0136
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

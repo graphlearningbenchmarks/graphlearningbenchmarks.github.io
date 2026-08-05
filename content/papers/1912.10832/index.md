@@ -543,10 +543,10 @@ results:
     value_note: ''
     sort_value: 0.946
     sort_std: 0.0031
-    global_rank: 28
-    paper_rank: 78
-    rank_delta: 50
-    rank_delta_abs: 50
+    global_rank: 29
+    paper_rank: 83
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -611,10 +611,10 @@ results:
     value_note: ''
     sort_value: 0.9448
     sort_std: 0.0022
-    global_rank: 29
-    paper_rank: 83
-    rank_delta: 54
-    rank_delta_abs: 54
+    global_rank: 31
+    paper_rank: 91
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -679,13 +679,46 @@ results:
     value_note: ''
     sort_value: 0.9369
     sort_std: null
-    global_rank: 46
-    paper_rank: 84
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 47
+    paper_rank: 92
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9306
+    std: 0.0047
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.14481'
+    title: Efficient Heterogeneous Graph Learning via Random Projection
+    date: Oct 23, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-23'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/CrawlScript/RpHGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 56
+    sort_value: 0.9306
+    sort_std: 0.0047
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -747,8 +780,8 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: null
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -815,13 +848,47 @@ results:
     value_note: ''
     sort_value: 0.7035
     sort_std: null
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 176
+    paper_rank: 176
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6447
+    std: 0.0136
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.07365'
+    title: 'GraphControl: Adding Conditional Control to Universal Graph Pre-trained
+      Models for Graph Domain Transfer Learning'
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: The Web Conference
+    codebase_url: https://github.com/wykk00/GraphControl
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 185
+    sort_value: 0.6447
+    sort_std: 0.0136
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -838,9 +905,9 @@ results:
 - &id002
   dataset: IMDB
   rows:
-  - model: SlotGAT
+  - model: GAT BGNN(m)-SC
     model_key: gat bgnn(m)-sc
-    model_plain: SlotGAT
+    model_plain: GAT BGNN(m)-SC
     value: 0.8133
     std: 0.0179
     metric: Micro-F1
@@ -871,9 +938,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: SAGE BAN
     model_key: sage ban
-    model_plain: SlotGAT
+    model_plain: SAGE BAN
     value: 0.8073
     std: 0.002
     metric: Micro-F1
@@ -904,9 +971,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: GAT BGNN(m)-CS
     model_key: gat bgnn(m)-cs
-    model_plain: SlotGAT
+    model_plain: GAT BGNN(m)-CS
     value: 0.8033
     std: 0.0094
     metric: Micro-F1
@@ -1199,9 +1266,9 @@ results:
     sort_value: 0.6813
     sort_std: 0.0083
     global_rank: 45
-    paper_rank: 75
-    rank_delta: 30
-    rank_delta_abs: 30
+    paper_rank: 78
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1267,9 +1334,9 @@ results:
     sort_value: 0.6808
     sort_std: 0.0049
     global_rank: 46
-    paper_rank: 64
-    rank_delta: 18
-    rank_delta_abs: 18
+    paper_rank: 66
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1335,9 +1402,9 @@ results:
     sort_value: 0.6769
     sort_std: 0.0064
     global_rank: 49
-    paper_rank: 83
-    rank_delta: 34
-    rank_delta_abs: 34
+    paper_rank: 87
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1470,13 +1537,46 @@ results:
     value_note: ''
     sort_value: 0.6353
     sort_std: null
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.6276
+    std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.11122'
+    title: Heterogeneous Graph Representation Learning with Relation Awareness
+    date: May 24, 2021
+    date_display: May 2021
+    date_iso: '2021-05-24'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/yule-BUAA/R-HGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 83
+    sort_value: 0.6276
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1538,8 +1638,8 @@ results:
     value_note: ''
     sort_value: 0.6254
     sort_std: null
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1606,13 +1706,46 @@ results:
     value_note: ''
     sort_value: 0.6083
     sort_std: null
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.5514
+    std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2105.11122'
+    title: Heterogeneous Graph Representation Learning with Relation Awareness
+    date: May 24, 2021
+    date_display: May 2021
+    date_iso: '2021-05-24'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/yule-BUAA/R-HGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 117
+    sort_value: 0.5514
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

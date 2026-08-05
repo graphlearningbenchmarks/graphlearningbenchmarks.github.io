@@ -66,8 +66,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - Gophormer
-mrr: 0.0111
-adjusted_mrr: 0.0111
+mrr: 0.0107
+adjusted_mrr: 0.0107
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -89,9 +89,9 @@ results:
 - &id001
   dataset: CiteSeer
   rows:
-  - model: SGC+TSC
+  - model: CNA
     model_key: cna
-    model_plain: SGC+TSC
+    model_plain: CNA
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: IS-GIB
     model_key: is-gib
-    model_plain: SGC+TSC
+    model_plain: IS-GIB
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -156,9 +156,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: EERM
     model_key: eerm
-    model_plain: SGC+TSC
+    model_plain: EERM
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -597,6 +597,72 @@ results:
     comparison_source_arxiv: '2008.09864'
     is_best: false
     is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7639
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2010.00238'
+    title: Multi-grained Semantics-aware Graph Neural Networks
+    date: Oct 1, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-01'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 155
+    sort_value: 0.7639
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7289
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2508.17531'
+    title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    date: Aug 24, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-24'
+    venue: European Conference on Artificial Intelligence
+    codebase_url: https://github.com/Bobowner/Gumbel-Softmax-MPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 401
+    sort_value: 0.7289
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: SAN
     model_key: san
     model_plain: SAN
@@ -877,9 +943,9 @@ results:
 - &id002
   dataset: DBLP
   rows:
-  - model: SlotGAT
+  - model: HERec
     model_key: herec
-    model_plain: SlotGAT
+    model_plain: HERec
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -910,9 +976,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: HetSANN
     model_key: hetsann
-    model_plain: SlotGAT
+    model_plain: HetSANN
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -943,9 +1009,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SlotGAT
+  - model: DeepWalk
     model_key: deepwalk
-    model_plain: SlotGAT
+    model_plain: DeepWalk
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -1034,10 +1100,10 @@ results:
     value_note: ''
     sort_value: 0.946
     sort_std: 0.0031
-    global_rank: 28
-    paper_rank: 110
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 29
+    paper_rank: 120
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1103,10 +1169,10 @@ results:
     value_note: ''
     sort_value: 0.9448
     sort_std: 0.0022
-    global_rank: 29
-    paper_rank: 109
-    rank_delta: 80
-    rank_delta_abs: 80
+    global_rank: 31
+    paper_rank: 119
+    rank_delta: 88
+    rank_delta_abs: 88
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1170,10 +1236,10 @@ results:
     value_note: ''
     sort_value: 0.9306
     sort_std: 0.0047
-    global_rank: 54
-    paper_rank: 104
-    rank_delta: 50
-    rank_delta_abs: 50
+    global_rank: 56
+    paper_rank: 114
+    rank_delta: 58
+    rank_delta_abs: 58
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1237,8 +1303,8 @@ results:
     value_note: ''
     sort_value: 0.852
     sort_std: 0.002
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1304,8 +1370,8 @@ results:
     value_note: ''
     sort_value: 0.8457
     sort_std: 0.0028
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1371,8 +1437,8 @@ results:
     value_note: ''
     sort_value: 0.844
     sort_std: 0.0017
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1438,8 +1504,8 @@ results:
     value_note: ''
     sort_value: 0.8311
     sort_std: 0.0032
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1505,8 +1571,8 @@ results:
     value_note: ''
     sort_value: 0.8104
     sort_std: 0.0027
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1572,8 +1638,8 @@ results:
     value_note: ''
     sort_value: 0.8093
     sort_std: 0.0039
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1639,13 +1705,81 @@ results:
     value_note: ''
     sort_value: 0.7815
     sort_std: 0.0041
-    global_rank: 136
-    paper_rank: 136
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7462
+    std: 0.03
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.07365'
+    title: 'GraphControl: Adding Conditional Control to Universal Graph Pre-trained
+      Models for Graph Domain Transfer Learning'
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: The Web Conference
+    codebase_url: https://github.com/wykk00/GraphControl
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 163
+    sort_value: 0.7462
+    sort_std: 0.03
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6447
+    std: 0.0136
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.07365'
+    title: 'GraphControl: Adding Conditional Control to Universal Graph Pre-trained
+      Models for Graph Domain Transfer Learning'
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: The Web Conference
+    codebase_url: https://github.com/wykk00/GraphControl
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 185
+    sort_value: 0.6447
+    sort_std: 0.0136
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

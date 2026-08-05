@@ -67,8 +67,8 @@ proposed_models:
 - SGC+NDLS-L
 - NDLS
 - MLP+NDLS-L
-mrr: 0.0078
-adjusted_mrr: 0.0078
+mrr: 0.0064
+adjusted_mrr: 0.0064
 mrr_dataset_count: 4
 benchmark_categories:
 - OGB
@@ -85,11 +85,13 @@ results:
 - &id001
   dataset: ogbn-papers100M
   rows:
-  - model: LargeGT-full
-    model_key: gamlp
-    model_plain: LargeGT-full
-    value: 0.7036
-    std: 0.0002
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.632
+    std: 0.002
+    paper_value: 0.632
+    paper_std: 0.002
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -99,33 +101,66 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.14709'
-    title: Learning on Large-scale Text-attributed Graphs via Variational Inference
-    date: Oct 2022
-    date_display: Oct 2022
-    date_iso: 2022-10
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/AndyJZhao/GLEM
-    uses_external_data: false
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Official split on ogbn-papers100M
+    date: Oct 27, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-27'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.6329
+    at_pub_std: 0.0019
+    at_pub_source_arxiv: '2108.10097'
+    at_pub_source_title: Graph Attention MLP with Reliable Label Utilization
+    at_pub_source_date_iso: '2021-08-23'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2024-03-19'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.0009000000000000119
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.791
+    true_std: null
+    value_gap_source_arxiv: '2403.13268'
+    value_gap_source_title: 'Unifews: You Need Fewer Operations for Efficient Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15900000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.791
+    sort_std: null
     global_rank: 1
-    sort_value: 0.7036
-    sort_std: 0.0002
-    comparison_type: global_top
+    paper_rank: 78
+    rank_delta: 77
+    rank_delta_abs: 77
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: glem-gnn
-    model_plain: LargeGT-full
+  - model: GAMLP
+    model_key: gamlp
+    model_plain: GAMLP
     value: 0.7036
     std: 0.0002
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -149,13 +184,46 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: shadow+atp
-    model_plain: LargeGT-full
-    value: 0.698
-    std: 0.001
+  - model: GLEM-GNN
+    model_key: glem-gnn
+    model_plain: GLEM-GNN
+    value: 0.7036
+    std: 0.0002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.14709'
+    title: Learning on Large-scale Text-attributed Graphs via Variational Inference
+    date: Oct 2022
+    date_display: Oct 2022
+    date_iso: 2022-10
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/AndyJZhao/GLEM
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7036
+    sort_std: 0.0002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.6644
+    std: 0.0017
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -165,20 +233,21 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.06128'
-    title: Rethinking Node-wise Propagation for Large-scale Graph Learning
-    date: Feb 9, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-09'
-    venue: The Web Conference
-    codebase_url: ''
+    arxiv_id: '2504.13266'
+    title: 'Graph Learning at Scale: Characterizing and Optimizing Pre-Propagation
+      GNNs'
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: Conference on Machine Learning and Systems
+    codebase_url: https://github.com/cornell-zhang/preprop-gnn
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.698
-    sort_std: 0.001
+    global_rank: 38
+    sort_value: 0.6644
+    sort_std: 0.0017
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -242,8 +311,8 @@ results:
     value_note: ''
     sort_value: 0.6636
     sort_std: 0.0005
-    global_rank: 26
-    paper_rank: 54
+    global_rank: 41
+    paper_rank: 69
     rank_delta: 28
     rank_delta_abs: 28
     rank_delta_direction: worse
@@ -252,74 +321,6 @@ results:
     comparison_source_title: Scalable and Adaptive Graph Neural Networks with Self-Label-Enhanced
       Training
     comparison_source_arxiv: '2104.09376'
-    is_best: false
-    is_std_outlier: false
-  - model: SGC
-    model_key: sgc
-    model_plain: SGC
-    value: 0.632
-    std: 0.002
-    paper_value: 0.632
-    paper_std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Official split on ogbn-papers100M
-    date: Oct 27, 2021
-    date_display: Oct 2021
-    date_iso: '2021-10-27'
-    published_venue: NeurIPS 2021
-    published_conference: NeurIPS 2021
-    at_pub_value: 0.6329
-    at_pub_std: 0.0019
-    at_pub_source_arxiv: '2108.10097'
-    at_pub_source_title: Graph Attention MLP with Reliable Label Utilization
-    at_pub_source_date_iso: '2021-08-23'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-10-29'
-    value_gap_source_date_label: ICLR 2021
-    gap_vs_at_pub: 0.0009000000000000119
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.661
-    true_std: 0.0013
-    value_gap_source_arxiv: '2111.00064'
-    value_gap_source_title: Node Feature Extraction by Self-Supervised Multi-scale
-      Neighborhood Prediction
-    value_gap_source_is_current_paper: false
-    value_gap: 0.029000000000000026
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.661
-    sort_std: 0.0013
-    global_rank: 33
-    paper_rank: 62
-    rank_delta: 29
-    rank_delta_abs: 29
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: NDLS
@@ -358,8 +359,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-02-24'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -370,17 +371,17 @@ results:
     today_delta_significant: false
     true_value: 0.6561
     true_std: 0.0029
-    value_gap_source_arxiv: '2202.03580'
-    value_gap_source_title: Convolutional Neural Networks on Graphs with Chebyshev
-      Approximation, Revisited
+    value_gap_source_arxiv: '2302.12432'
+    value_gap_source_title: Graph Neural Networks with Learnable and Optimal Polynomial
+      Bases
     value_gap_source_is_current_paper: false
     value_gap: 9.999999999998899e-05
     has_value_note: false
     value_note: ''
     sort_value: 0.6561
     sort_std: 0.0029
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -446,8 +447,8 @@ results:
     value_note: ''
     sort_value: 0.653
     sort_std: 0.005
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -513,8 +514,8 @@ results:
     value_note: ''
     sort_value: 0.6524
     sort_std: 0.0013
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -580,8 +581,8 @@ results:
     value_note: ''
     sort_value: 0.649
     sort_std: 0.003
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -647,8 +648,8 @@ results:
     value_note: ''
     sort_value: 0.6473
     sort_std: 0.0021
-    global_rank: 50
-    paper_rank: 51
+    global_rank: 65
+    paper_rank: 66
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -714,8 +715,8 @@ results:
     value_note: ''
     sort_value: 0.646
     sort_std: 0.004
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -781,8 +782,8 @@ results:
     value_note: ''
     sort_value: 0.639
     sort_std: null
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -828,31 +829,32 @@ results:
     at_pub_source_title: 'SIGN: Scalable Inception Graph Neural Networks'
     at_pub_source_date_iso: '2020-04-23'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-04-23'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-06-03'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: 0.00040000000000001146
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.4724
-    true_std: 0.0031
-    value_gap_source_arxiv: '2004.11198'
-    value_gap_source_title: 'SIGN: Scalable Inception Graph Neural Networks'
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.496
+    true_std: 0.003
+    value_gap_source_arxiv: '2206.01535'
+    value_gap_source_title: 'Rethinking and Scaling Up Graph Contrastive Learning:
+      An Extremely Efficient Approach with Group Discrimination'
     value_gap_source_is_current_paper: false
-    value_gap: 0.00040000000000001146
+    value_gap: 0.02400000000000002
     has_value_note: false
     value_note: ''
-    sort_value: 0.4724
-    sort_std: 0.0031
-    global_rank: 81
-    paper_rank: 81
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.496
+    sort_std: 0.003
+    global_rank: 98
+    paper_rank: 101
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''

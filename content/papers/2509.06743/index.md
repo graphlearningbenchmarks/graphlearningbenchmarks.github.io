@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - LR-GWN
-mrr: 0.0772
-adjusted_mrr: 0.0515
+mrr: 0.0729
+adjusted_mrr: 0.0486
 mrr_dataset_count: 2
 benchmark_categories:
 - LRGB
@@ -63,9 +63,9 @@ results:
 - &id002
   dataset: Peptides-func
   rows:
-  - model: GINE / GIN
+  - model: S^2GCN
     model_key: s^2gcn
-    model_plain: GINE / GIN
+    model_plain: S^2GCN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -96,9 +96,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GINE / GIN
+  - model: S^2 GCN + PE
     model_key: s^2 gcn + pe
-    model_plain: GINE / GIN
+    model_plain: S^2 GCN + PE
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -130,9 +130,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GINE / GIN
+  - model: S4G
     model_key: s4g
-    model_plain: GINE / GIN
+    model_plain: S4G
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -158,6 +158,39 @@ results:
     global_rank: 3
     sort_value: 0.7293
     sort_std: 0.0004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7261
+    std: 0.0011
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.12358'
+    title: From Message-Passing to Linearized Graph Sequence Models
+    date: May 12, 2026
+    date_display: May 2026
+    date_iso: '2026-05-12'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 5
+    sort_value: 0.7261
+    sort_std: 0.0011
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -286,8 +319,8 @@ results:
     value_note: ''
     sort_value: 0.6973
     sort_std: 0.0043
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -420,8 +453,8 @@ results:
     value_note: ''
     sort_value: 0.6547
     sort_std: 0.0048
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -487,13 +520,47 @@ results:
     value_note: ''
     sort_value: 0.6023
     sort_std: 0.0027
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.406
+    std: 0.0021
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.03561'
+    title: 'CIN++: Enhancing Topological Message Passing'
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    venue: arXiv.org
+    codebase_url: https://github.com/twitter-research/cwn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: For both datasets, we did not employ any feature augmentation
+      such as positional encoding.
+    is_global_top: true
+    global_rank: 196
+    sort_value: 0.406
+    sort_std: 0.0021
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -510,9 +577,108 @@ results:
 - &id001
   dataset: Peptides-struct
   rows:
-  - model: GINE / GIN
+  - model: Energy GNN + attention
+    model_key: energy gnn + attention
+    model_plain: Energy GNN + attention
+    value: 0.036000000000000004
+    std: 0.038
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.036000000000000004
+    sort_std: 0.038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: true
+  - model: Energy GNN edge-wise
+    model_key: energy gnn edge-wise
+    model_plain: Energy GNN edge-wise
+    value: 0.04
+    std: 0.036000000000000004
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.04
+    sort_std: 0.036000000000000004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: true
+  - model: Energy GNN node-wise
+    model_key: energy gnn node-wise
+    model_plain: Energy GNN node-wise
+    value: 0.195
+    std: 0.017
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.195
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: true
+  - model: GCN
     model_key: gcn
-    model_plain: GINE / GIN
+    model_plain: GCN
     value: 0.2421
     std: 0.0016
     metric: MAE
@@ -535,79 +701,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 4
     sort_value: 0.2421
     sort_std: 0.0016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GINE / GIN
-    model_key: tango_gps
-    model_plain: GINE / GIN
-    value: 0.2422
-    std: 0.0014
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_display: Aug 2025
-    date_iso: '2025-08-07'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Tango does not use additional encodings.
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.2422
-    sort_std: 0.0014
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GINE / GIN
-    model_key: nba-gin+lappe
-    model_plain: GINE / GIN
-    value: 0.2424
-    std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-11'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.2424
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: LR-GWN
     model_key: lr-gwn
@@ -665,8 +765,8 @@ results:
     value_note: ''
     sort_value: 0.2462
     sort_std: 0.0006
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -732,8 +832,8 @@ results:
     value_note: ''
     sort_value: 0.2495
     sort_std: 0.0007000000000000001
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -799,8 +899,8 @@ results:
     value_note: ''
     sort_value: 0.2506
     sort_std: 0.0013
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -866,8 +966,8 @@ results:
     value_note: ''
     sort_value: 0.2539
     sort_std: 0.0021
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 140
+    paper_rank: 140
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -933,13 +1033,47 @@ results:
     value_note: ''
     sort_value: 0.2734
     sort_std: 0.0004
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 186
+    paper_rank: 186
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4351
+    std: 0.0008
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.03561'
+    title: 'CIN++: Enhancing Topological Message Passing'
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    venue: arXiv.org
+    codebase_url: https://github.com/twitter-research/cwn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: For both datasets, we did not employ any feature augmentation
+      such as positional encoding.
+    is_global_top: true
+    global_rank: 219
+    sort_value: 0.4351
+    sort_std: 0.0008
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

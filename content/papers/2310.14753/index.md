@@ -62,8 +62,8 @@ paper_type: method
 proposed_models:
 - GraphMAE
 - GraphMAE*
-mrr: 0.0085
-adjusted_mrr: 0.0085
+mrr: 0.0084
+adjusted_mrr: 0.0084
 mrr_dataset_count: 5
 benchmark_categories:
 - MoleculeNet
@@ -86,9 +86,9 @@ results:
 - &id002
   dataset: BACE
   rows:
-  - model: MAGPrompt+
+  - model: ProtoMol
     model_key: protomol
-    model_plain: MAGPrompt+
+    model_plain: ProtoMol
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -120,9 +120,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MMSG
     model_key: mmsg
-    model_plain: MAGPrompt+
+    model_plain: MMSG
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -154,9 +154,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MemGNN
     model_key: memgnn
-    model_plain: MAGPrompt+
+    model_plain: MemGNN
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -182,6 +182,40 @@ results:
     global_rank: 3
     sort_value: 0.907
     sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8646
+    std: 0.0081
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 41
+    sort_value: 0.8646
+    sort_std: 0.0081
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -224,8 +258,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-05-22'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-02-12'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.006000000000000005
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -236,8 +270,8 @@ results:
     today_delta_significant: false
     true_value: 0.835
     true_std: 0.012
-    value_gap_source_arxiv: '2205.10803'
-    value_gap_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    value_gap_source_arxiv: '2402.08023'
+    value_gap_source_title: 'UGMAE: A Unified Framework for Graph Masked Autoencoders'
     value_gap_source_is_current_paper: false
     value_gap: 0.006000000000000005
     has_value_note: false
@@ -314,9 +348,9 @@ results:
     sort_value: 0.834
     sort_std: 0.033
     global_rank: 97
-    paper_rank: 218
-    rank_delta: 121
-    rank_delta_abs: 121
+    paper_rank: 222
+    rank_delta: 125
+    rank_delta_abs: 125
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -361,8 +395,8 @@ results:
     at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     at_pub_source_date_iso: '2022-05-22'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-05-22'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -373,16 +407,17 @@ results:
     today_delta_significant: false
     true_value: 0.831
     true_std: 0.009
-    value_gap_source_arxiv: '2205.10803'
-    value_gap_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.831
     sort_std: 0.009
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -428,8 +463,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -438,17 +473,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.768
+    true_std: 0.028
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.768
     sort_std: 0.028
-    global_rank: 225
+    global_rank: 229
+    paper_rank: 229
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -491,8 +532,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-06-16'
     at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2022-06-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.0032999999999999696
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -503,20 +544,88 @@ results:
     today_delta_significant: false
     true_value: 0.7603
     true_std: 0.0077
-    value_gap_source_arxiv: '2206.07869'
-    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.0032999999999999696
     has_value_note: false
     value_note: ''
     sort_value: 0.7603
     sort_std: 0.0077
-    global_rank: 233
-    paper_rank: 236
+    global_rank: 238
+    paper_rank: 241
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BGRL
+    model_key: bgrl
+    model_plain: BGRL
+    value: 0.756
+    std: 0.022
+    paper_value: 0.756
+    paper_std: 0.022
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 23, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-23'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.7127
+    at_pub_std: 0.0548
+    at_pub_source_arxiv: '2202.02989'
+    at_pub_source_title: Graph Self-supervised Learning with Accurate Discrepancy
+      Learning
+    at_pub_source_date_iso: '2022-02-07'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.043300000000000005
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.756
+    true_std: 0.022
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.756
+    sort_std: 0.022
+    global_rank: 242
+    paper_rank: 242
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -579,81 +688,12 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: 0.022
-    global_rank: 245
-    paper_rank: 245
+    global_rank: 251
+    paper_rank: 251
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: BGRL
-    model_key: bgrl
-    model_plain: BGRL
-    value: 0.756
-    std: 0.022
-    paper_value: 0.756
-    paper_std: 0.022
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 23, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-23'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.7127
-    at_pub_std: 0.0548
-    at_pub_source_arxiv: '2202.02989'
-    at_pub_source_title: Graph Self-supervised Learning with Accurate Discrepancy
-      Learning
-    at_pub_source_date_iso: '2022-02-07'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-12-21'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.043300000000000005
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7375
-    true_std: 0.0369
-    value_gap_source_arxiv: '2412.16441'
-    value_gap_source_title: 'Towards Graph Foundation Models: Learning Generalities
-      Across Graphs via Task-Trees'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01849999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7375
-    sort_std: 0.0369
-    global_rank: 246
-    paper_rank: 237
-    rank_delta: -9
-    rank_delta_abs: 9
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -704,9 +744,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: CamS-LLaMA
     model_key: cams-llama
-    model_plain: MAGPrompt+
+    model_plain: CamS-LLaMA
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -738,9 +778,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: MAGPrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -772,6 +812,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8875
+    std: 0.0049
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 32
+    sort_value: 0.8875
+    sort_std: 0.0049
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: JOAO
     model_key: joao
@@ -832,9 +906,9 @@ results:
     sort_value: 0.879
     sort_std: 0.02
     global_rank: 37
-    paper_rank: 101
-    rank_delta: 64
-    rank_delta_abs: 64
+    paper_rank: 105
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -902,9 +976,9 @@ results:
     sort_value: 0.846
     sort_std: 0.008
     global_rank: 52
-    paper_rank: 114
-    rank_delta: 62
-    rank_delta_abs: 62
+    paper_rank: 118
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -949,8 +1023,8 @@ results:
     at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     at_pub_source_date_iso: '2022-05-22'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-05-22'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -961,16 +1035,17 @@ results:
     today_delta_significant: false
     true_value: 0.72
     true_std: 0.006
-    value_gap_source_arxiv: '2205.10803'
-    value_gap_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.72
     sort_std: 0.006
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1016,7 +1091,7 @@ results:
     at_pub_source_title: Graph Self-Contrast Representation Learning
     at_pub_source_date_iso: '2023-09-05'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-06'
+    value_gap_source_date_iso: '2023-09-05'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.0021999999999999797
     worse_than_at_pub: false
@@ -1026,18 +1101,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.714
-    true_std: 0.007
-    value_gap_source_arxiv: '2306.03506'
-    value_gap_source_title: Subgraph Networks Based Contrastive Learning
+    true_value: 0.7142
+    true_std: 0.0066
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
-    value_gap: 0.0020000000000000018
+    value_gap: 0.0021999999999999797
     has_value_note: false
     value_note: ''
-    sort_value: 0.714
-    sort_std: 0.007
-    global_rank: 110
-    paper_rank: 111
+    sort_value: 0.7142
+    sort_std: 0.0066
+    global_rank: 114
+    paper_rank: 115
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1083,8 +1158,8 @@ results:
     at_pub_source_title: Subgraph Networks Based Contrastive Learning
     at_pub_source_date_iso: '2023-06-06'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-06'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.0050000000000000044
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1093,21 +1168,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.7
-    true_std: 0.011
-    value_gap_source_arxiv: '2306.03506'
-    value_gap_source_title: Subgraph Networks Based Contrastive Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0050000000000000044
+    true_value: 0.705
+    true_std: 0.018
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7
-    sort_std: 0.011
-    global_rank: 143
-    paper_rank: 124
-    rank_delta: -19
-    rank_delta_abs: 19
-    rank_delta_direction: better
+    sort_value: 0.705
+    sort_std: 0.018
+    global_rank: 125
+    paper_rank: 125
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1150,8 +1226,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1160,17 +1236,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.678
+    true_std: 0.016
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.678
     sort_std: 0.016
-    global_rank: 198
+    global_rank: 202
+    paper_rank: 202
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1213,8 +1295,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.0027000000000000357
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1223,22 +1305,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.6673
-    true_std: 0.017
-    value_gap_source_arxiv: '2202.02989'
-    value_gap_source_title: Graph Self-supervised Learning with Accurate Discrepancy
-      Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0027000000000000357
+    true_value: 0.67
+    true_std: 0.006
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6673
-    sort_std: 0.017
+    sort_value: 0.67
+    sort_std: 0.006
     global_rank: 230
-    paper_rank: 224
-    rank_delta: -6
-    rank_delta_abs: 6
-    rank_delta_direction: better
+    paper_rank: 230
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1257,9 +1339,9 @@ results:
 - &id004
   dataset: ClinTox
   rows:
-  - model: EdgePrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: EdgePrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.993
     std: 0.004
     metric: ROC-AUC
@@ -1292,9 +1374,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: EdgePrompt+
+    model_plain: KA-GCN
     value: 0.992
     std: 0.005
     metric: ROC-AUC
@@ -1326,9 +1408,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: EdgePrompt+
+    model_plain: KA-GAT
     value: 0.991
     std: 0.005
     metric: ROC-AUC
@@ -1359,6 +1441,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.913
+    std: 0.017
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.03806'
+    title: 'OOD-GNN: Out-of-Distribution Generalized Graph Neural Network'
+    date: Dec 7, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-07'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.913
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: RGCL
     model_key: rgcl
@@ -1396,8 +1511,8 @@ results:
     at_pub_source_title: Subgraph Networks Based Contrastive Learning
     at_pub_source_date_iso: '2023-06-06'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-06'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.016000000000000014
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1405,22 +1520,23 @@ results:
     insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.834
-    true_std: 0.009
-    value_gap_source_arxiv: '2306.03506'
-    value_gap_source_title: Subgraph Networks Based Contrastive Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.016000000000000014
+    today_delta_significant: false
+    true_value: 0.85
+    true_std: 0.008
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.834
-    sort_std: 0.009
-    global_rank: 62
-    paper_rank: 57
-    rank_delta: -5
-    rank_delta_abs: 5
-    rank_delta_direction: better
+    sort_value: 0.85
+    sort_std: 0.008
+    global_rank: 56
+    paper_rank: 56
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1463,8 +1579,8 @@ results:
     at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     at_pub_source_date_iso: '2022-05-22'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-05-22'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1475,8 +1591,9 @@ results:
     today_delta_significant: false
     true_value: 0.823
     true_std: 0.012
-    value_gap_source_arxiv: '2205.10803'
-    value_gap_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -1531,8 +1648,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.017199999999999993
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1543,17 +1660,16 @@ results:
     today_delta_significant: false
     true_value: 0.8132
     true_std: 0.0249
-    value_gap_source_arxiv: '2202.02989'
-    value_gap_source_title: Graph Self-supervised Learning with Accurate Discrepancy
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.017199999999999993
     has_value_note: false
     value_note: ''
     sort_value: 0.8132
     sort_std: 0.0249
-    global_rank: 77
-    paper_rank: 91
+    global_rank: 78
+    paper_rank: 92
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -1619,8 +1735,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.035
-    global_rank: 90
-    paper_rank: 101
+    global_rank: 91
+    paper_rank: 102
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -1667,8 +1783,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-06-16'
     at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2022-06-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.018199999999999994
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1679,17 +1795,16 @@ results:
     today_delta_significant: false
     true_value: 0.7872
     true_std: 0.0258
-    value_gap_source_arxiv: '2206.07869'
-    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.018199999999999994
     has_value_note: false
     value_note: ''
     sort_value: 0.7872
     sort_std: 0.0258
-    global_rank: 100
-    paper_rank: 112
+    global_rank: 101
+    paper_rank: 113
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -1736,8 +1851,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.007600000000000051
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1746,22 +1861,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.6474
-    true_std: 0.0646
-    value_gap_source_arxiv: '2202.02989'
-    value_gap_source_title: Graph Self-supervised Learning with Accurate Discrepancy
-      Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.007600000000000051
+    true_value: 0.655
+    true_std: 0.023
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6474
-    sort_std: 0.0646
-    global_rank: 201
-    paper_rank: 199
-    rank_delta: -2
-    rank_delta_abs: 2
-    rank_delta_direction: better
+    sort_value: 0.655
+    sort_std: 0.023
+    global_rank: 200
+    paper_rank: 200
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1804,8 +1919,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1814,17 +1929,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.626
+    true_std: 0.044
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.626
     sort_std: 0.044
-    global_rank: 216
+    global_rank: 217
+    paper_rank: 217
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1842,11 +1963,11 @@ results:
 - &id007
   dataset: QM7b
   rows:
-  - model: ISGR
-    model_key: ani-1
-    model_plain: ISGR
-    value: 2.86
-    std: 0.25
+  - model: DTNN
+    model_key: dtnn
+    model_plain: DTNN
+    value: 0.074
+    std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
@@ -1856,86 +1977,86 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1907.04786'
-    title: Fast Haar Transforms for Graph Neural Networks
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    venue: Neural Networks
-    codebase_url: ''
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: Mar 2, 2017
+    date_display: Mar 2017
+    date_iso: '2017-03-02'
+    venue: Chemical Science
+    codebase_url: https://github.com/deepchem/deepchem
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 2.86
-    sort_std: 0.25
+    sort_value: 0.074
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ISGR
-    model_key: dtnn
-    model_plain: ISGR
-    value: 8.8
-    std: 3.5
+  - model: Multitask(CM)
+    model_key: multitask(cm)
+    model_plain: Multitask(CM)
+    value: 0.086
+    std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1907.04786'
-    title: Fast Haar Transforms for Graph Neural Networks
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    venue: Neural Networks
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: Mar 2, 2017
+    date_display: Mar 2017
+    date_iso: '2017-03-02'
+    venue: Chemical Science
+    codebase_url: https://github.com/deepchem/deepchem
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 8.8
-    sort_std: 3.5
+    sort_value: 0.086
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ISGR
-    model_key: hanet
-    model_plain: ISGR
-    value: 9.5
-    std: 0.71
+  - model: KRR(CM)
+    model_key: krr(cm)
+    model_plain: KRR(CM)
+    value: 0.098
+    std: null
     metric: MAE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1907.04786'
-    title: Fast Haar Transforms for Graph Neural Networks
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    venue: Neural Networks
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: Mar 2, 2017
+    date_display: Mar 2017
+    date_iso: '2017-03-02'
+    venue: Chemical Science
+    codebase_url: https://github.com/deepchem/deepchem
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 9.5
-    sort_std: 0.71
+    sort_value: 0.098
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1977,8 +2098,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1987,17 +2108,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 75.4
+    true_std: 0.7
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 75.4
     sort_std: 0.7
-    global_rank: 23
+    global_rank: 38
+    paper_rank: 38
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2039,8 +2166,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2049,17 +2176,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    sort_value: 78.4
-    sort_std: 2.3
-    global_rank: 25
-    has_value_gap: false
-    has_value_note: false
+    true_value: 78.4
+    true_std: 2.6
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: false
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 78.4
+    sort_std: 2.6
+    global_rank: 41
+    paper_rank: 41
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2101,8 +2233,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2111,17 +2243,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 79.8
+    true_std: 2.6
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 79.8
     sort_std: 2.6
-    global_rank: 25
+    global_rank: 42
+    paper_rank: 42
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2163,8 +2300,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2173,18 +2310,56 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 80.4
+    true_std: 3.3
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 80.4
     sort_std: 3.3
-    global_rank: 25
+    global_rank: 43
+    paper_rank: 43
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 122.9
+    std: 2.2
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2502.12638'
+    title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for 3D Molecule Generation'
+    date: Feb 18, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-18'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/acharkq/NExT-Mol
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 60
+    sort_value: 122.9
+    sort_std: 2.2
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2201,9 +2376,9 @@ results:
 - &id005
   dataset: SIDER
   rows:
-  - model: DGI
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: DGI
+    model_plain: KA-GAT
     value: 0.847
     std: 0.002
     metric: ROC-AUC
@@ -2235,9 +2410,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DGI
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: DGI
+    model_plain: KA-GCN
     value: 0.842
     std: 0.001
     metric: ROC-AUC
@@ -2269,9 +2444,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: DGI
+  - model: GraphKAN
     model_key: graphkan
-    model_plain: DGI
+    model_plain: GraphKAN
     value: 0.837
     std: 0.001
     metric: ROC-AUC
@@ -2298,6 +2473,40 @@ results:
     global_rank: 3
     sort_value: 0.837
     sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.6403
+    std: 0.0104
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 66
+    sort_value: 0.6403
+    sort_std: 0.0104
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2430,9 +2639,9 @@ results:
     sort_value: 0.633
     sort_std: 0.008
     global_rank: 80
-    paper_rank: 202
-    rank_delta: 122
-    rank_delta_abs: 122
+    paper_rank: 203
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2499,9 +2708,9 @@ results:
     sort_value: 0.615
     sort_std: 0.013
     global_rank: 125
-    paper_rank: 192
-    rank_delta: 67
-    rank_delta_abs: 67
+    paper_rank: 193
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2545,8 +2754,8 @@ results:
     at_pub_source_title: Subgraph Networks Based Contrastive Learning
     at_pub_source_date_iso: '2023-06-06'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-06-06'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-06-01'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.0020000000000000018
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2557,8 +2766,8 @@ results:
     today_delta_significant: false
     true_value: 0.614
     true_std: 0.006
-    value_gap_source_arxiv: '2306.03506'
-    value_gap_source_title: Subgraph Networks Based Contrastive Learning
+    value_gap_source_arxiv: '2406.00403'
+    value_gap_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: 0.0020000000000000018
     has_value_note: false
@@ -2634,8 +2843,8 @@ results:
     value_note: ''
     sort_value: 0.6041
     sort_std: 0.0143
-    global_rank: 169
-    paper_rank: 204
+    global_rank: 170
+    paper_rank: 205
     rank_delta: 35
     rank_delta_abs: 35
     rank_delta_direction: worse
@@ -2681,8 +2890,8 @@ results:
     at_pub_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
     at_pub_source_date_iso: '2023-09-08'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-05-15'
-    value_gap_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2693,17 +2902,17 @@ results:
     today_delta_significant: false
     true_value: 0.603
     true_std: 0.011
-    value_gap_source_arxiv: '2405.10343'
-    value_gap_source_title: 'UniCorn: A Unified Contrastive Learning Approach for
-      Multi-view Molecular Representation Learning'
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.603
     sort_std: 0.011
-    global_rank: 175
-    paper_rank: 175
+    global_rank: 176
+    paper_rank: 176
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2749,8 +2958,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2759,17 +2968,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.583
+    true_std: 0.015
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.583
     sort_std: 0.015
-    global_rank: 212
+    global_rank: 211
+    paper_rank: 211
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2787,9 +3002,9 @@ results:
 - &id001
   dataset: Tox21
   rows:
-  - model: HOD-GNN
+  - model: HIMP
     model_key: himp
-    model_plain: HOD-GNN
+    model_plain: HIMP
     value: 0.874
     std: 0.005
     metric: ROC-AUC
@@ -2820,9 +3035,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: GINE w/ VN
     model_key: gine w/ vn
-    model_plain: HOD-GNN
+    model_plain: GINE w/ VN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -2853,9 +3068,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: NaiveGINe+ K=3 w/ VN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: HOD-GNN
+    model_plain: NaiveGINe+ K=3 w/ VN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -2885,6 +3100,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.84
+    std: 0.004
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2011.15069'
+    title: Graph convolutions that can finally model local structure
+    date: Nov 30, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-30'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.84
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: JOAO
     model_key: joao
@@ -2944,10 +3192,10 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.022
-    global_rank: 32
-    paper_rank: 255
-    rank_delta: 223
-    rank_delta_abs: 223
+    global_rank: 33
+    paper_rank: 263
+    rank_delta: 230
+    rank_delta_abs: 230
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3014,10 +3262,10 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.025
-    global_rank: 75
-    paper_rank: 230
-    rank_delta: 155
-    rank_delta_abs: 155
+    global_rank: 76
+    paper_rank: 237
+    rank_delta: 161
+    rank_delta_abs: 161
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3062,8 +3310,8 @@ results:
     at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     at_pub_source_date_iso: '2022-05-22'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-05-22'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3074,16 +3322,17 @@ results:
     today_delta_significant: false
     true_value: 0.755
     true_std: 0.006
-    value_gap_source_arxiv: '2205.10803'
-    value_gap_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.755
     sort_std: 0.006
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 205
+    paper_rank: 205
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3123,33 +3372,39 @@ results:
     date_iso: '2023-10-23'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
+    at_pub_value: 0.752
+    at_pub_std: 0.0034
+    at_pub_source_arxiv: '2309.02304'
+    at_pub_source_title: Graph Self-Contrast Representation Learning
+    at_pub_source_date_iso: '2023-09-05'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.0010000000000000009
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
-    insignificant_improvement_at_pub: false
+    insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.753
+    true_std: 0.005
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.753
     sort_std: 0.005
-    global_rank: 214
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    global_rank: 216
+    paper_rank: 216
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3213,8 +3468,8 @@ results:
     value_note: ''
     sort_value: 0.7483
     sort_std: 0.0074
-    global_rank: 233
-    paper_rank: 241
+    global_rank: 240
+    paper_rank: 248
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -3260,8 +3515,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3270,17 +3525,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.745
+    true_std: 0.007
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.745
     sort_std: 0.007
-    global_rank: 242
+    global_rank: 249
+    paper_rank: 249
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3322,8 +3583,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3332,17 +3593,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.739
+    true_std: 0.009
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.739
     sort_std: 0.009
-    global_rank: 261
+    global_rank: 269
+    paper_rank: 269
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3360,9 +3627,9 @@ results:
 - &id006
   dataset: ToxCast
   rows:
-  - model: GIN (Supervised EdgePred)
+  - model: GeomGCL
     model_key: geomgcl
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: GeomGCL
     value: 0.763
     std: null
     metric: ROC-AUC
@@ -3394,9 +3661,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN (Supervised EdgePred)
+  - model: LiGhT DeepGPT
     model_key: light deepgpt
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: LiGhT DeepGPT
     value: 0.757
     std: 0.011
     metric: ROC-AUC
@@ -3427,9 +3694,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN (Supervised EdgePred)
+  - model: D&D-Node +vn
     model_key: d&d-node +vn
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: D&D-Node +vn
     value: 0.7556
     std: 0.0068
     metric: ROC-AUC
@@ -3456,6 +3723,39 @@ results:
     global_rank: 3
     sort_value: 0.7556
     sort_std: 0.0068
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.735
+    std: 0.002
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2011.15069'
+    title: Graph convolutions that can finally model local structure
+    date: Nov 30, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-30'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 18
+    sort_value: 0.735
+    sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3520,9 +3820,9 @@ results:
     sort_value: 0.711
     sort_std: 0.014
     global_rank: 37
-    paper_rank: 135
-    rank_delta: 98
-    rank_delta_abs: 98
+    paper_rank: 137
+    rank_delta: 100
+    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3590,9 +3890,9 @@ results:
     sort_value: 0.677
     sort_std: 0.019
     global_rank: 72
-    paper_rank: 170
-    rank_delta: 98
-    rank_delta_abs: 98
+    paper_rank: 172
+    rank_delta: 100
+    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3637,8 +3937,8 @@ results:
     at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     at_pub_source_date_iso: '2022-05-22'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-05-22'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3649,16 +3949,17 @@ results:
     today_delta_significant: false
     true_value: 0.641
     true_std: 0.003
-    value_gap_source_arxiv: '2205.10803'
-    value_gap_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.641
     sort_std: 0.003
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 134
+    paper_rank: 134
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3705,8 +4006,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-06-16'
     at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2022-06-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.0022999999999999687
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3717,17 +4018,16 @@ results:
     today_delta_significant: false
     true_value: 0.6333
     true_std: 0.0017
-    value_gap_source_arxiv: '2206.07869'
-    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.0022999999999999687
     has_value_note: false
     value_note: ''
     sort_value: 0.6333
     sort_std: 0.0017
-    global_rank: 151
-    paper_rank: 161
+    global_rank: 153
+    paper_rank: 163
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -3795,10 +4095,10 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.0076
-    global_rank: 157
-    paper_rank: 180
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 159
+    paper_rank: 184
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3863,9 +4163,9 @@ results:
     sort_value: 0.631
     sort_std: 0.007
     global_rank: 164
-    paper_rank: 165
-    rank_delta: 1
-    rank_delta_abs: 1
+    paper_rank: 167
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3909,8 +4209,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3919,17 +4219,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.624
+    true_std: 0.004
+    value_gap_source_arxiv: '2310.14753'
+    value_gap_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.624
     sort_std: 0.004
-    global_rank: 181
+    global_rank: 183
+    paper_rank: 183
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

@@ -65,8 +65,8 @@ proposed_models:
 - GCN ADEdgeDrop
 - GAT ADEdgeDrop
 - GraphSAGE ADEdgeDrop
-mrr: 0.0018
-adjusted_mrr: 0.0012
+mrr: 0.0017
+adjusted_mrr: 0.0011
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -93,9 +93,9 @@ results:
 - &id003
   dataset: ACM
   rows:
-  - model: GCN+P+D
+  - model: SignGT
     model_key: signgt
-    model_plain: GCN+P+D
+    model_plain: SignGT
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -127,9 +127,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: NodeFormer
     model_key: nodeformer
-    model_plain: GCN+P+D
+    model_plain: NodeFormer
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -161,9 +161,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: FAGCN
     model_key: fagcn
-    model_plain: GCN+P+D
+    model_plain: FAGCN
     value: 0.9487
     std: 0.0059
     metric: Accuracy
@@ -194,6 +194,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.937
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.08331'
+    title: Model Stealing Attacks Against Inductive Graph Neural Networks
+    date: Dec 15, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-15'
+    venue: IEEE Symposium on Security and Privacy
+    codebase_url: https://github.com/xinleihe/GNNStealing
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.937
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: ADEdgeDrop
     model_key: adedgedrop
@@ -252,8 +285,8 @@ results:
     value_note: ''
     sort_value: 0.8926
     sort_std: 0.0008
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -320,8 +353,8 @@ results:
     value_note: ''
     sort_value: 0.8894
     sort_std: 0.0051
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -388,8 +421,8 @@ results:
     value_note: ''
     sort_value: 0.888
     sort_std: 0.0109
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -456,8 +489,8 @@ results:
     value_note: ''
     sort_value: 0.8828
     sort_std: 0.0035
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -524,8 +557,8 @@ results:
     value_note: ''
     sort_value: 0.8784
     sort_std: 0.0019
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -592,8 +625,8 @@ results:
     value_note: ''
     sort_value: 0.8762
     sort_std: 0.0043
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -660,8 +693,8 @@ results:
     value_note: ''
     sort_value: 0.8762
     sort_std: 0.0213
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -683,9 +716,9 @@ results:
 - &id002
   dataset: Actor
   rows:
-  - model: R-SoftGraphAIN
+  - model: NodeFormer
     model_key: nodeformer
-    model_plain: R-SoftGraphAIN
+    model_plain: NodeFormer
     value: 0.7623
     std: 0.0042
     metric: Accuracy
@@ -717,9 +750,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: DiGGR
     model_key: diggr
-    model_plain: R-SoftGraphAIN
+    model_plain: DiGGR
     value: 0.4535
     std: 0.0353
     metric: Accuracy
@@ -750,35 +783,100 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: R-SoftGraphAIN
-    model_key: dog
-    model_plain: R-SoftGraphAIN
-    value: 0.432
-    std: 0.012
+  - model: TRIGON
+    model_key: trigon
+    model_plain: TRIGON
+    value: 0.4402
+    std: 0.0028
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.19071'
+    title: Dynamic Triangulation-Based Graph Rewiring for Graph Neural Networks
+    date: Aug 26, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-26'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/Hugo-Attali/TRIGON-CIKM-2025
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.4402
+    sort_std: 0.0028
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4026
+    std: 0.0108
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2302.03228'
+    title: Heterophily-Aware Graph Attention Network
+    date: Feb 7, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-07'
+    venue: Pattern Recognition
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 56
+    sort_value: 0.4026
+    sort_std: 0.0108
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.3899
+    std: 0.0085
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2503.12563'
-    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
-    date: Mar 16, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-16'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
-    uses_external_data: true
-    input_feature_source: raw_features
-    feature_source_evidence: DoG generates synthetic graph structures to boost the
-      performance of GNNs.
+    arxiv_id: '2310.11762'
+    title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    date: Oct 18, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-18'
+    venue: The Web Conference
+    codebase_url: https://github.com/SDS-Lab/QW_Loss
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.432
-    sort_std: 0.012
+    global_rank: 88
+    sort_value: 0.3899
+    sort_std: 0.0085
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -841,8 +939,8 @@ results:
     value_note: ''
     sort_value: 0.256
     sort_std: 0.0137
-    global_rank: 434
-    paper_rank: 434
+    global_rank: 482
+    paper_rank: 482
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -909,8 +1007,8 @@ results:
     value_note: ''
     sort_value: 0.2506
     sort_std: 0.0225
-    global_rank: 447
-    paper_rank: 447
+    global_rank: 495
+    paper_rank: 495
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -977,8 +1075,8 @@ results:
     value_note: ''
     sort_value: 0.2384
     sort_std: 0.0122
-    global_rank: 456
-    paper_rank: 456
+    global_rank: 507
+    paper_rank: 507
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1045,8 +1143,8 @@ results:
     value_note: ''
     sort_value: 0.2378
     sort_std: 0.0154
-    global_rank: 458
-    paper_rank: 458
+    global_rank: 509
+    paper_rank: 509
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1113,8 +1211,8 @@ results:
     value_note: ''
     sort_value: 0.2376
     sort_std: 0.0104
-    global_rank: 459
-    paper_rank: 459
+    global_rank: 510
+    paper_rank: 510
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1181,8 +1279,8 @@ results:
     value_note: ''
     sort_value: 0.2369
     sort_std: 0.0123
-    global_rank: 461
-    paper_rank: 461
+    global_rank: 512
+    paper_rank: 512
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1249,8 +1347,8 @@ results:
     value_note: ''
     sort_value: 0.2349
     sort_std: 0.0211
-    global_rank: 463
-    paper_rank: 463
+    global_rank: 515
+    paper_rank: 515
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1317,8 +1415,8 @@ results:
     value_note: ''
     sort_value: 0.2305
     sort_std: 0.0134
-    global_rank: 466
-    paper_rank: 466
+    global_rank: 518
+    paper_rank: 518
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1385,8 +1483,8 @@ results:
     value_note: ''
     sort_value: 0.2304
     sort_std: 0.0252
-    global_rank: 467
-    paper_rank: 467
+    global_rank: 519
+    paper_rank: 519
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1453,8 +1551,8 @@ results:
     value_note: ''
     sort_value: 0.2304
     sort_std: 0.0163
-    global_rank: 468
-    paper_rank: 468
+    global_rank: 520
+    paper_rank: 520
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1521,8 +1619,8 @@ results:
     value_note: ''
     sort_value: 0.2294
     sort_std: 0.0163
-    global_rank: 470
-    paper_rank: 470
+    global_rank: 522
+    paper_rank: 522
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1589,8 +1687,8 @@ results:
     value_note: ''
     sort_value: 0.229
     sort_std: 0.0044
-    global_rank: 471
-    paper_rank: 471
+    global_rank: 523
+    paper_rank: 523
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1657,8 +1755,8 @@ results:
     value_note: ''
     sort_value: 0.224
     sort_std: 0.0187
-    global_rank: 476
-    paper_rank: 476
+    global_rank: 529
+    paper_rank: 529
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1725,8 +1823,8 @@ results:
     value_note: ''
     sort_value: 0.2222
     sort_std: 0.0098
-    global_rank: 479
-    paper_rank: 479
+    global_rank: 532
+    paper_rank: 532
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1793,8 +1891,8 @@ results:
     value_note: ''
     sort_value: 0.2218
     sort_std: 0.0091
-    global_rank: 481
-    paper_rank: 481
+    global_rank: 534
+    paper_rank: 534
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1861,8 +1959,8 @@ results:
     value_note: ''
     sort_value: 0.2194
     sort_std: 0.0095
-    global_rank: 483
-    paper_rank: 483
+    global_rank: 536
+    paper_rank: 536
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1929,8 +2027,8 @@ results:
     value_note: ''
     sort_value: 0.2186
     sort_std: 0.0045
-    global_rank: 484
-    paper_rank: 484
+    global_rank: 537
+    paper_rank: 537
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1997,8 +2095,8 @@ results:
     value_note: ''
     sort_value: 0.218
     sort_std: 0.0072
-    global_rank: 485
-    paper_rank: 485
+    global_rank: 538
+    paper_rank: 538
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2065,8 +2163,8 @@ results:
     value_note: ''
     sort_value: 0.2176
     sort_std: 0.0237
-    global_rank: 486
-    paper_rank: 486
+    global_rank: 539
+    paper_rank: 539
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2133,8 +2231,8 @@ results:
     value_note: ''
     sort_value: 0.2142
     sort_std: 0.0052
-    global_rank: 489
-    paper_rank: 489
+    global_rank: 542
+    paper_rank: 542
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2201,8 +2299,8 @@ results:
     value_note: ''
     sort_value: 0.2076
     sort_std: 0.0188
-    global_rank: 495
-    paper_rank: 495
+    global_rank: 548
+    paper_rank: 548
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2224,9 +2322,9 @@ results:
 - &id001
   dataset: PubMed
   rows:
-  - model: R-SoftGraphAIN
+  - model: LGTL
     model_key: lgtl
-    model_plain: R-SoftGraphAIN
+    model_plain: LGTL
     value: 0.9518
     std: 0.0011
     metric: Accuracy
@@ -2258,9 +2356,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: SAGN
     model_key: sagn
-    model_plain: R-SoftGraphAIN
+    model_plain: SAGN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -2292,9 +2390,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: MixHop (LO)
     model_key: mixhop (lo)
-    model_plain: R-SoftGraphAIN
+    model_plain: MixHop (LO)
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -2325,6 +2423,73 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9487
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.9487
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.869
+    std: 0.0074
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.00183'
+    title: On the Equivalence of Graph Convolution and Mixup
+    date: Sep 29, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-29'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/ahxt/GraphConv_is_Mixup
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 233
+    sort_value: 0.869
+    sort_std: 0.0074
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GCN ADEdgeDrop
     model_key: gcn adedgedrop

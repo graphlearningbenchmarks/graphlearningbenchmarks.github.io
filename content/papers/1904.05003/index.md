@@ -79,9 +79,9 @@ results:
 - &id002
   dataset: D&D
   rows:
-  - model: ECC
+  - model: GC-GNN (GraphSAGE)
     model_key: gc-gnn (graphsage)
-    model_plain: ECC
+    model_plain: GC-GNN (GraphSAGE)
     value: 0.921
     std: 0.081
     metric: Accuracy
@@ -113,9 +113,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: SUGAR
     model_key: sugar
-    model_plain: ECC
+    model_plain: SUGAR
     value: 0.8403
     std: 0.0133
     metric: Accuracy
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: Ortho-g-U-Nets
     model_key: ortho-g-u-nets
-    model_plain: ECC
+    model_plain: Ortho-g-U-Nets
     value: 0.8387
     std: null
     metric: Accuracy
@@ -216,8 +216,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2019-04-10'
-    value_gap_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2022-06-11'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -228,10 +228,9 @@ results:
     today_delta_significant: false
     true_value: 0.8088
     true_std: 0.0233
-    value_gap_source_arxiv: '1904.05003'
-    value_gap_source_title: 'Semi-Supervised Graph Classification: A Hierarchical
-      Graph Perspective'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2206.05416'
+    value_gap_source_title: Semi-Supervised Hierarchical Graph Classification
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -285,8 +284,8 @@ results:
       Networks on Graphs
     at_pub_source_date_iso: '2017-04-10'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-04-10'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2024-02-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.018299999999999983
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -296,16 +295,15 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.7978
-    true_std: null
-    value_gap_source_arxiv: '1704.02901'
-    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
-      Networks on Graphs
+    true_std: 0.0036
+    value_gap_source_arxiv: '2402.16402'
+    value_gap_source_title: Graph Learning with Distributional Edge Layouts
     value_gap_source_is_current_paper: false
     value_gap: 0.018299999999999983
     has_value_note: false
     value_note: ''
     sort_value: 0.7978
-    sort_std: null
+    sort_std: 0.0036
     global_rank: 29
     paper_rank: 85
     rank_delta: 56
@@ -316,6 +314,39 @@ results:
     comparison_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
       Networks on Graphs
     comparison_source_arxiv: '1704.02901'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7912
+    std: 0.0307
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2012.08734'
+    title: Hierarchical Graph Capsule Network
+    date: Dec 16, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-16'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/uta-smile/HGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 48
+    sort_value: 0.7912
+    sort_std: 0.0307
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GK
@@ -354,8 +385,8 @@ results:
     at_pub_source_title: Learning Convolutional Neural Networks for Graphs
     at_pub_source_date_iso: '2016-05-17'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2020-12-16'
-    value_gap_source_date_label: AAAI 2020
+    value_gap_source_date_iso: '2022-06-11'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -366,8 +397,8 @@ results:
     today_delta_significant: false
     true_value: 0.7845
     true_std: 0.0026
-    value_gap_source_arxiv: '2012.08734'
-    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_arxiv: '2206.05416'
+    value_gap_source_title: Semi-Supervised Hierarchical Graph Classification
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -422,8 +453,8 @@ results:
       Networks on Graphs
     at_pub_source_date_iso: '2017-04-10'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-04-10'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2022-06-11'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -433,16 +464,15 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.7712
-    true_std: null
-    value_gap_source_arxiv: '1704.02901'
-    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
-      Networks on Graphs
+    true_std: 0.0241
+    value_gap_source_arxiv: '2206.05416'
+    value_gap_source_title: Semi-Supervised Hierarchical Graph Classification
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7712
-    sort_std: null
+    sort_std: 0.0241
     global_rank: 108
     paper_rank: 108
     rank_delta: 0
@@ -466,9 +496,9 @@ results:
 - &id001
   dataset: PROTEINS
   rows:
-  - model: Graphormer-SPIS
+  - model: GMN
     model_key: gmn
-    model_plain: Graphormer-SPIS
+    model_plain: GMN
     value: 0.8225
     std: null
     metric: Accuracy
@@ -499,9 +529,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: CI-GNN
     model_key: ci-gnn
-    model_plain: Graphormer-SPIS
+    model_plain: CI-GNN
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -533,9 +563,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: DiffPool+GPL
     model_key: diffpool+gpl
-    model_plain: Graphormer-SPIS
+    model_plain: DiffPool+GPL
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -562,6 +592,40 @@ results:
     global_rank: 3
     sort_value: 0.8196
     sort_std: 0.0286
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.788
+    std: 0.041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.08671'
+    title: 'Permutation-Invariant graph partitioning: How graph neural networks capture
+      structural interactions?'
+    date: Dec 14, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-14'
+    venue: Neural Networks
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.788
+    sort_std: 0.041
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -603,8 +667,8 @@ results:
     at_pub_source_title: Fast Graph Representation Learning with PyTorch Geometric
     at_pub_source_date_iso: '2019-03-06'
     at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-04-10'
-    value_gap_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2022-06-11'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.034599999999999964
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -615,10 +679,9 @@ results:
     today_delta_significant: false
     true_value: 0.7726
     true_std: 0.0228
-    value_gap_source_arxiv: '1904.05003'
-    value_gap_source_title: 'Semi-Supervised Graph Classification: A Hierarchical
-      Graph Perspective'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2206.05416'
+    value_gap_source_title: Semi-Supervised Hierarchical Graph Classification
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -631,6 +694,39 @@ results:
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.76
+    std: 0.032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 153
+    sort_value: 0.76
+    sort_std: 0.032
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -671,8 +767,8 @@ results:
     at_pub_source_title: Graph Capsule Convolutional Neural Networks
     at_pub_source_date_iso: '2018-05-21'
     at_pub_source_date_label: ICML 2018
-    value_gap_source_date_iso: '2019-04-10'
-    value_gap_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2022-06-11'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.008900000000000019
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -683,10 +779,9 @@ results:
     today_delta_significant: false
     true_value: 0.7589
     true_std: 0.0276
-    value_gap_source_arxiv: '1904.05003'
-    value_gap_source_title: 'Semi-Supervised Graph Classification: A Hierarchical
-      Graph Perspective'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2206.05416'
+    value_gap_source_title: Semi-Supervised Hierarchical Graph Classification
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -878,8 +973,8 @@ results:
     at_pub_source_title: Graph Capsule Convolutional Neural Networks
     at_pub_source_date_iso: '2018-05-21'
     at_pub_source_date_label: ICML 2018
-    value_gap_source_date_iso: '2019-04-10'
-    value_gap_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2022-06-11'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -890,10 +985,9 @@ results:
     today_delta_significant: false
     true_value: 0.7422
     true_std: 0.0042
-    value_gap_source_arxiv: '1904.05003'
-    value_gap_source_title: 'Semi-Supervised Graph Classification: A Hierarchical
-      Graph Perspective'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2206.05416'
+    value_gap_source_title: Semi-Supervised Hierarchical Graph Classification
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -946,7 +1040,7 @@ results:
     at_pub_source_title: 'graph2vec: Learning Distributed Representations of Graphs'
     at_pub_source_date_iso: '2017-07-17'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2025-05-16'
+    value_gap_source_date_iso: '2025-06-06'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -958,8 +1052,8 @@ results:
     today_delta_significant: false
     true_value: 0.733
     true_std: 0.0205
-    value_gap_source_arxiv: '2505.11356'
-    value_gap_source_title: Fractal Graph Contrastive Learning
+    value_gap_source_arxiv: '2506.06212'
+    value_gap_source_title: Model-Driven Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -1013,8 +1107,8 @@ results:
     at_pub_source_title: Graph Capsule Convolutional Neural Networks
     at_pub_source_date_iso: '2018-05-21'
     at_pub_source_date_label: ICML 2018
-    value_gap_source_date_iso: '2020-12-16'
-    value_gap_source_date_label: AAAI 2020
+    value_gap_source_date_iso: '2022-06-11'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1025,8 +1119,8 @@ results:
     today_delta_significant: false
     true_value: 0.7167
     true_std: 0.0055
-    value_gap_source_arxiv: '2012.08734'
-    value_gap_source_title: Hierarchical Graph Capsule Network
+    value_gap_source_arxiv: '2206.05416'
+    value_gap_source_title: Semi-Supervised Hierarchical Graph Classification
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false

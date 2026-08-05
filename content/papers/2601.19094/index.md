@@ -41,9 +41,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - FloydNet
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.8333
+adjusted_mrr: 0.8333
+mrr_dataset_count: 3
 benchmark_categories:
 - Classic
 - LRGB
@@ -108,8 +108,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -118,17 +118,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 1.0
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 1.0
     sort_std: null
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -170,8 +175,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -180,17 +185,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.995
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.995
     sort_std: null
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -232,8 +242,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -242,17 +252,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.995
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.995
     sort_std: null
-    global_rank: 1
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -294,8 +309,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -304,116 +319,54 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.993
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.993
     sort_std: null
-    global_rank: 1
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GraphWiz-DPO (LLaMA 2-7B)
-    model_key: f_4-mpnn
-    model_plain: GraphWiz-DPO (LLaMA 2-7B)
-    value: 0.9793
-    std: 0.0068
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.11298'
-    title: 'Graph Representational Learning: When Does More Expressivity Hurt Generalization?'
-    date: May 16, 2025
-    date_display: May 2025
-    date_iso: '2025-05-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/RPaolino/GenVsExp
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9793
-    sort_std: 0.0068
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphWiz-DPO (LLaMA 2-7B)
-    model_key: f_7-mpnn
-    model_plain: GraphWiz-DPO (LLaMA 2-7B)
-    value: 0.966
-    std: 0.0065
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.11298'
-    title: 'Graph Representational Learning: When Does More Expressivity Hurt Generalization?'
-    date: May 16, 2025
-    date_display: May 2025
-    date_iso: '2025-05-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/RPaolino/GenVsExp
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.966
-    sort_std: 0.0065
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphWiz-DPO (LLaMA 2-7B)
-    model_key: graphwiz (llama 2-13b)
-    model_plain: GraphWiz-DPO (LLaMA 2-7B)
-    value: 0.9475
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.88
     std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2402.16029'
-    title: 'GraphWiz: An Instruction-Following Language Model for Graph Computational
-      Problems'
-    date: Feb 25, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-25'
-    venue: null
-    codebase_url: https://github.com/nuochenpku/Graph-Reasoning-LLM
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: Oct 27, 2017
+    date_display: Oct 2017
+    date_iso: '2017-10-27'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9475
+    global_rank: 10
+    sort_value: 0.88
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -468,8 +421,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -478,17 +431,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6143
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6143
     sort_std: null
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -550,10 +508,10 @@ results:
     value_note: ''
     sort_value: 0.4737
     sort_std: 0.0024
-    global_rank: 1
-    paper_rank: 32
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 2
+    paper_rank: 36
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -562,9 +520,9 @@ results:
     comparison_source_arxiv: '2411.12732'
     is_best: false
     is_std_outlier: false
-  - model: differential encoding
+  - model: Exphormer + LapPE
     model_key: exphormer + lappe
-    model_plain: differential encoding
+    model_plain: Exphormer + LapPE
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -587,7 +545,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.4737
     sort_std: 0.0024
     comparison_type: global_top
@@ -595,11 +553,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: differential encoding
-    model_key: graphgps + rwse
-    model_plain: differential encoding
-    value: 0.4685
-    std: 0.0009
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.3437
+    std: null
+    paper_value: 0.3437
+    paper_std: null
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -609,6 +569,73 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: rampavsek2022recipe
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4703
+    at_pub_std: 0.0014
+    at_pub_source_arxiv: '2406.03386'
+    at_pub_source_title: Learning Long Range Dependencies on Graphs via Random Walks
+    at_pub_source_date_iso: '2024-06-05'
+    at_pub_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2024-06-05'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.1266
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4703
+    true_std: 0.0014
+    value_gap_source_arxiv: '2406.03386'
+    value_gap_source_title: Learning Long Range Dependencies on Graphs via Random
+      Walks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1266
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4703
+    sort_std: 0.0014
+    global_rank: 5
+    paper_rank: 50
+    rank_delta: 45
+    rank_delta_abs: 45
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Learning Long Range Dependencies on Graphs via Random
+      Walks
+    comparison_source_arxiv: '2406.03386'
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.467
+    std: 0.0004
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2411.12732'
     title: Benchmarking Positional Encodings for GNNs and Graph Transformers
     date: Nov 19, 2024
@@ -620,9 +647,42 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.4685
-    sort_std: 0.0009
+    global_rank: 8
+    sort_value: 0.467
+    sort_std: 0.0004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.4617
+    std: 0.0005
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.03386'
+    title: Learning Long Range Dependencies on Graphs via Random Walks
+    date: Jun 5, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-05'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/BorgwardtLab/NeuralWalker
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.4617
+    sort_std: 0.0005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -684,79 +744,10 @@ results:
     value_note: ''
     sort_value: 0.4526
     sort_std: 0.0006
-    global_rank: 24
-    paper_rank: 46
-    rank_delta: 22
-    rank_delta_abs: 22
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Learning Long Range Dependencies on Graphs via Random
-      Walks
-    comparison_source_arxiv: '2406.03386'
-    is_best: false
-    is_std_outlier: false
-  - model: GPS
-    model_key: gps
-    model_plain: GPS
-    value: 0.3437
-    std: null
-    paper_value: 0.3437
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: rampavsek2022recipe
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 27, 2026
-    date_display: Jan 2026
-    date_iso: '2026-01-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.4703
-    at_pub_std: 0.0014
-    at_pub_source_arxiv: '2406.03386'
-    at_pub_source_title: Learning Long Range Dependencies on Graphs via Random Walks
-    at_pub_source_date_iso: '2024-06-05'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-10-13'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.1266
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3543
-    true_std: 0.0004
-    value_gap_source_arxiv: '2410.09737'
-    value_gap_source_title: Towards Stable, Globally Expressive Graph Representations
-      with Laplacian Eigenvectors
-    value_gap_source_is_current_paper: false
-    value_gap: 0.010599999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3543
-    sort_std: 0.0004
-    global_rank: 33
-    paper_rank: 38
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 28
+    paper_rank: 76
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -795,14 +786,15 @@ results:
     date_iso: '2026-01-27'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.3395
+    at_pub_std: 0.0013
+    at_pub_source_arxiv: '2401.01233'
+    at_pub_source_title: 'GEN: A Practical Alternative to Graph Transformers for Long-Range
+      Graph Modeling'
+    at_pub_source_date_iso: '2024-01-02'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -811,17 +803,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3395
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3395
     sort_std: null
-    global_rank: 39
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -839,9 +836,9 @@ results:
 - &id001
   dataset: ZINC
   rows:
-  - model: GPS
+  - model: TIGT
     model_key: tigt
-    model_plain: GPS
+    model_plain: TIGT
     value: 0.014
     std: 0.001
     metric: MAE
@@ -908,8 +905,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -918,26 +915,31 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.016
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.016
     sort_std: null
     global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GPS
-    model_key: ppgn++
-    model_plain: GPS
-    value: 0.02
+  - model: PST
+    model_key: pst
+    model_plain: PST
+    value: 0.018
     std: 0.001
     metric: MAE
     higher_is_better: false
@@ -945,57 +947,23 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2302.11556'
-    title: Equivariant Polynomials for Graph Neural Networks
-    date: Feb 22, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-22'
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2405.02795'
+    title: Graph as Point Set
+    date: May 5, 2024
+    date_display: May 2024
+    date_iso: '2024-05-05'
     venue: International Conference on Machine Learning
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.02
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS
-    model_key: subgraphormer
-    model_plain: GPS
-    value: 0.02
-    std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2406.09291'
-    title: A Flexible, Equivariant Framework for Subgraph GNNs via Graph Products
-      and Graph Coarsening
-    date: Jun 13, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-13'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/BarSGuy/Efficient-Subgraph-GNNs
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
     global_rank: 3
-    sort_value: 0.02
-    sort_std: 0.002
+    sort_value: 0.018
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1037,8 +1005,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1047,17 +1015,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.024
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.024
     sort_std: null
-    global_rank: 12
+    global_rank: 20
+    paper_rank: 20
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1093,14 +1066,14 @@ results:
     date_iso: '2026-01-27'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.024
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2401.10119'
+    at_pub_source_title: Towards Principled Graph Transformers
+    at_pub_source_date_iso: '2024-01-18'
+    at_pub_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1109,17 +1082,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.024
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.024
     sort_std: null
-    global_rank: 12
+    global_rank: 21
+    paper_rank: 21
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1161,8 +1139,8 @@ results:
     at_pub_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
     at_pub_source_date_iso: '2025-01-30'
     at_pub_source_date_label: ICML 2025
-    value_gap_source_date_iso: '2025-01-30'
-    value_gap_source_date_label: ICML 2025
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1172,17 +1150,17 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.025
-    true_std: 0.004
-    value_gap_source_arxiv: '2501.18739'
-    value_gap_source_title: 'Beyond Message Passing: Neural Graph Pattern Machine'
-    value_gap_source_is_current_paper: false
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.025
-    sort_std: 0.004
-    global_rank: 12
-    paper_rank: 12
+    sort_std: null
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1228,8 +1206,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1238,17 +1216,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.028
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.028
     sort_std: null
-    global_rank: 17
+    global_rank: 33
+    paper_rank: 33
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1284,34 +1267,72 @@ results:
     date_iso: '2026-01-27'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
+    at_pub_value: 0.041
+    at_pub_std: 0.0002
+    at_pub_source_arxiv: '1910.12892'
+    at_pub_source_title: Hyperbolic Graph Neural Networks
+    at_pub_source_date_iso: '2019-10-28'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.011000000000000003
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.03
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.03
     sort_std: null
-    global_rank: 20
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
+    global_rank: 41
+    paper_rank: 41
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Hyperbolic Graph Neural Networks
+    comparison_source_arxiv: '1910.12892'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.088
+    std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2502.02479'
+    title: Using Random Noise Equivariantly to Boost Graph Neural Networks Universally
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 74
+    sort_value: 0.088
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

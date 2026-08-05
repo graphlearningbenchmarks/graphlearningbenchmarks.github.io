@@ -71,9 +71,9 @@ results:
 - &id001
   dataset: ACM
   rows:
-  - model: SlotGAT
+  - model: HetGNN
     model_key: hetgnn
-    model_plain: SlotGAT
+    model_plain: HetGNN
     value: 0.979
     std: null
     metric: Micro-F1
@@ -104,9 +104,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: ComCH
     model_key: comch
-    model_plain: SlotGAT
+    model_plain: ComCH
     value: 0.947
     std: null
     metric: Micro-F1
@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SlotGAT
+  - model: LMSPS
     model_key: lmsps
-    model_plain: SlotGAT
+    model_plain: LMSPS
     value: 0.9469
     std: 0.0036
     metric: Micro-F1
@@ -499,13 +499,79 @@ results:
     value_note: ''
     sort_value: 0.9135
     sort_std: null
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9063
+    std: 0.0076
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.14481'
+    title: Efficient Heterogeneous Graph Learning via Random Projection
+    date: Oct 23, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-23'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/CrawlScript/RpHGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 61
+    sort_value: 0.9063
+    sort_std: 0.0076
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7102
+    std: 0.0221
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2206.02796'
+    title: Mixed Graph Contrastive Network for Semi-Supervised Node Classification
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    venue: ACM Transactions on Knowledge Discovery from Data
+    codebase_url: https://github.com/xihongyang1999/MGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 118
+    sort_value: 0.7102
+    sort_std: 0.0221
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -858,6 +924,72 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.4338
+    std: 0.0014
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.11245'
+    title: Exploring Edge Disentanglement for Node Classification
+    date: Feb 23, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 20
+    sort_value: 0.4338
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4172
+    std: 0.0031
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2202.11245'
+    title: Exploring Edge Disentanglement for Node Classification
+    date: Feb 23, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.4172
+    sort_std: 0.0031
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

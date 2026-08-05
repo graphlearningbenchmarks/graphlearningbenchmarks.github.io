@@ -67,8 +67,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - Molformer
-mrr: 0.1473
-adjusted_mrr: 0.1473
+mrr: 0.1298
+adjusted_mrr: 0.1298
 mrr_dataset_count: 5
 benchmark_categories:
 - MoleculeNet
@@ -91,9 +91,9 @@ results:
 - &id001
   dataset: BACE
   rows:
-  - model: MAGPrompt+
+  - model: ProtoMol
     model_key: protomol
-    model_plain: MAGPrompt+
+    model_plain: ProtoMol
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -125,9 +125,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MMSG
     model_key: mmsg
-    model_plain: MAGPrompt+
+    model_plain: MMSG
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -159,9 +159,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MemGNN
     model_key: memgnn
-    model_plain: MAGPrompt+
+    model_plain: MemGNN
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -396,6 +396,40 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8646
+    std: 0.0081
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 41
+    sort_value: 0.8646
+    sort_std: 0.0081
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: AttentiveFP
     model_key: attentivefp
     model_plain: AttentiveFP
@@ -433,8 +467,8 @@ results:
       for Property Prediction'
     at_pub_source_date_iso: '2021-06-11'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2022-02-18'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.07899999999999996
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -444,16 +478,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.863
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.015
+    value_gap_source_arxiv: '2202.09346'
+    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
+      Mitigation and Decomposed Fragment Contrast
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.863
-    sort_std: null
+    sort_std: 0.015
     global_rank: 43
     paper_rank: 43
     rank_delta: 0
@@ -640,8 +674,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2023-10-11'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -651,16 +685,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.846
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.025
+    value_gap_source_arxiv: '2310.07351'
+    value_gap_source_title: Atom-Motif Contrastive Transformer for Molecular Property
+      Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.846
-    sort_std: null
+    sort_std: 0.025
     global_rank: 77
     paper_rank: 77
     rank_delta: 0
@@ -708,8 +742,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2023-10-11'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -719,18 +753,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.824
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.022
+    value_gap_source_arxiv: '2310.07351'
+    value_gap_source_title: Atom-Motif Contrastive Transformer for Molecular Property
+      Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.824
-    sort_std: null
-    global_rank: 116
-    paper_rank: 116
+    sort_std: 0.022
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -797,8 +831,8 @@ results:
     value_note: ''
     sort_value: 0.815
     sort_std: null
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -864,8 +898,8 @@ results:
     value_note: ''
     sort_value: 0.806
     sort_std: 0.002
-    global_rank: 159
-    paper_rank: 191
+    global_rank: 162
+    paper_rank: 194
     rank_delta: 32
     rank_delta_abs: 32
     rank_delta_direction: worse
@@ -932,10 +966,10 @@ results:
     value_note: ''
     sort_value: 0.766
     sort_std: 0.011
-    global_rank: 230
-    paper_rank: 240
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 235
+    paper_rank: 246
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -979,8 +1013,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2023-12-12'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -990,18 +1024,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.734
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.03
+    value_gap_source_arxiv: '2312.07633'
+    value_gap_source_title: SE(3)-Invariant Multiparameter Persistent Homology for
+      Chiral-Sensitive Molecular Property Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.734
-    sort_std: null
-    global_rank: 249
-    paper_rank: 249
+    sort_std: 0.03
+    global_rank: 254
+    paper_rank: 254
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1056,9 +1090,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: CamS-LLaMA
     model_key: cams-llama
-    model_plain: MAGPrompt+
+    model_plain: CamS-LLaMA
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -1090,9 +1124,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: MAGPrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -1504,8 +1538,8 @@ results:
       for Property Prediction'
     at_pub_source_date_iso: '2021-06-11'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2022-02-18'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.265
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1515,16 +1549,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.908
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.05
+    value_gap_source_arxiv: '2202.09346'
+    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
+      Mitigation and Decomposed Fragment Contrast
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.908
-    sort_std: null
+    sort_std: 0.05
     global_rank: 29
     paper_rank: 29
     rank_delta: 0
@@ -1535,6 +1569,40 @@ results:
     comparison_source_title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation
       Learning for Property Prediction'
     comparison_source_arxiv: '2106.06130'
+    is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8875
+    std: 0.0049
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 32
+    sort_value: 0.8875
+    sort_std: 0.0049
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: TF-Robust
@@ -1641,8 +1709,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2023-12-12'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1652,16 +1720,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.85
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.064
+    value_gap_source_arxiv: '2312.07633'
+    value_gap_source_title: SE(3)-Invariant Multiparameter Persistent Homology for
+      Chiral-Sensitive Molecular Property Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.85
-    sort_std: null
+    sort_std: 0.064
     global_rank: 50
     paper_rank: 50
     rank_delta: 0
@@ -1777,8 +1845,8 @@ results:
     at_pub_source_title: Molecule Attention Transformer
     at_pub_source_date_iso: '2020-02-19'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2023-12-12'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.135
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1788,16 +1856,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.837
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.065
+    value_gap_source_arxiv: '2312.07633'
+    value_gap_source_title: SE(3)-Invariant Multiparameter Persistent Homology for
+      Chiral-Sensitive Molecular Property Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.837
-    sort_std: null
+    sort_std: 0.065
     global_rank: 54
     paper_rank: 54
     rank_delta: 0
@@ -1934,8 +2002,8 @@ results:
     value_note: ''
     sort_value: 0.737
     sort_std: 0.009
-    global_rank: 72
-    paper_rank: 80
+    global_rank: 74
+    paper_rank: 82
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -1957,9 +2025,9 @@ results:
 - &id003
   dataset: ClinTox
   rows:
-  - model: EdgePrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: EdgePrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.993
     std: 0.004
     metric: ROC-AUC
@@ -1992,9 +2060,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: EdgePrompt+
+    model_plain: KA-GCN
     value: 0.992
     std: 0.005
     metric: ROC-AUC
@@ -2026,9 +2094,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: EdgePrompt+
+    model_plain: KA-GAT
     value: 0.991
     std: 0.005
     metric: ROC-AUC
@@ -2165,8 +2233,8 @@ results:
       Property Prediction'
     at_pub_source_date_iso: '2021-09-24'
     at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2022-02-18'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.125
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2176,16 +2244,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.933
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.02
+    value_gap_source_arxiv: '2202.09346'
+    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
+      Mitigation and Decomposed Fragment Contrast
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.933
-    sort_std: null
+    sort_std: 0.02
     global_rank: 11
     paper_rank: 11
     rank_delta: 0
@@ -2196,6 +2264,39 @@ results:
     comparison_source_title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular
       Property Prediction'
     comparison_source_arxiv: '2109.11730'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.913
+    std: 0.017
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.03806'
+    title: 'OOD-GNN: Out-of-Distribution Generalized Graph Neural Network'
+    date: Dec 7, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-07'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.913
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: DMPNN
@@ -2440,8 +2541,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2023-12-12'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2451,16 +2552,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.823
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.023
+    value_gap_source_arxiv: '2312.07633'
+    value_gap_source_title: SE(3)-Invariant Multiparameter Persistent Homology for
+      Chiral-Sensitive Molecular Property Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.823
-    sort_std: null
+    sort_std: 0.023
     global_rank: 69
     paper_rank: 69
     rank_delta: 0
@@ -2529,8 +2630,8 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: null
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2576,8 +2677,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2023-12-12'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2587,18 +2688,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.717
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.042
+    value_gap_source_arxiv: '2312.07633'
+    value_gap_source_title: SE(3)-Invariant Multiparameter Persistent Homology for
+      Chiral-Sensitive Molecular Property Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.717
-    sort_std: null
-    global_rank: 163
-    paper_rank: 163
+    sort_std: 0.042
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2644,8 +2745,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2023-12-12'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2655,18 +2756,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.634
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
-    value_gap_source_is_current_paper: true
+    true_std: 0.042
+    value_gap_source_arxiv: '2312.07633'
+    value_gap_source_title: SE(3)-Invariant Multiparameter Persistent Homology for
+      Chiral-Sensitive Molecular Property Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.634
-    sort_std: null
-    global_rank: 210
-    paper_rank: 210
+    sort_std: 0.042
+    global_rank: 212
+    paper_rank: 212
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2688,11 +2789,11 @@ results:
 - &id005
   dataset: QM7b
   rows:
-  - model: ISGR
-    model_key: ani-1
-    model_plain: ISGR
-    value: 2.86
-    std: 0.25
+  - model: DTNN
+    model_key: dtnn
+    model_plain: DTNN
+    value: 0.074
+    std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
@@ -2702,86 +2803,86 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1907.04786'
-    title: Fast Haar Transforms for Graph Neural Networks
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    venue: Neural Networks
-    codebase_url: ''
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: Mar 2, 2017
+    date_display: Mar 2017
+    date_iso: '2017-03-02'
+    venue: Chemical Science
+    codebase_url: https://github.com/deepchem/deepchem
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 2.86
-    sort_std: 0.25
+    sort_value: 0.074
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ISGR
-    model_key: dtnn
-    model_plain: ISGR
-    value: 8.8
-    std: 3.5
+  - model: Multitask(CM)
+    model_key: multitask(cm)
+    model_plain: Multitask(CM)
+    value: 0.086
+    std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1907.04786'
-    title: Fast Haar Transforms for Graph Neural Networks
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    venue: Neural Networks
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: Mar 2, 2017
+    date_display: Mar 2017
+    date_iso: '2017-03-02'
+    venue: Chemical Science
+    codebase_url: https://github.com/deepchem/deepchem
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 8.8
-    sort_std: 3.5
+    sort_value: 0.086
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ISGR
-    model_key: hanet
-    model_plain: ISGR
-    value: 9.5
-    std: 0.71
+  - model: KRR(CM)
+    model_key: krr(cm)
+    model_plain: KRR(CM)
+    value: 0.098
+    std: null
     metric: MAE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1907.04786'
-    title: Fast Haar Transforms for Graph Neural Networks
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    venue: Neural Networks
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: Mar 2, 2017
+    date_display: Mar 2017
+    date_iso: '2017-03-02'
+    venue: Chemical Science
+    codebase_url: https://github.com/deepchem/deepchem
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 9.5
-    sort_std: 0.71
+    sort_value: 0.098
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2844,10 +2945,10 @@ results:
     value_note: ''
     sort_value: 34.439
     sort_std: 4.017
-    global_rank: 7
-    paper_rank: 9
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 18
+    paper_rank: 22
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2912,8 +3013,8 @@ results:
     value_note: ''
     sort_value: 47.8
     sort_std: null
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2980,8 +3081,8 @@ results:
     value_note: ''
     sort_value: 68.6
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3027,8 +3128,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2025-02-18'
+    value_gap_source_date_label: ICLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3039,17 +3140,17 @@ results:
     today_delta_significant: false
     true_value: 74.2
     true_std: 6.0
-    value_gap_source_arxiv: '2202.09346'
-    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
+    value_gap_source_arxiv: '2502.12638'
+    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
+      3D Molecule Generation'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 74.2
     sort_std: 6.0
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3095,8 +3196,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2025-02-18'
+    value_gap_source_date_label: ICLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3107,17 +3208,17 @@ results:
     today_delta_significant: false
     true_value: 77.6
     true_std: 4.7
-    value_gap_source_arxiv: '2202.09346'
-    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
-      Mitigation and Decomposed Fragment Contrast
+    value_gap_source_arxiv: '2502.12638'
+    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
+      3D Molecule Generation'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 77.6
     sort_std: 4.7
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3184,8 +3285,8 @@ results:
     value_note: ''
     sort_value: 89.4
     sort_std: null
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3252,8 +3353,8 @@ results:
     value_note: ''
     sort_value: 94.7
     sort_std: null
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3320,8 +3421,8 @@ results:
     value_note: ''
     sort_value: 102.8
     sort_std: null
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3388,8 +3489,8 @@ results:
     value_note: ''
     sort_value: 105.8
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3456,8 +3557,8 @@ results:
     value_note: ''
     sort_value: 113.0
     sort_std: null
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3524,13 +3625,46 @@ results:
     value_note: ''
     sort_value: 120.6
     sort_std: null
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 122.9
+    std: 2.2
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2502.12638'
+    title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for 3D Molecule Generation'
+    date: Feb 18, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-18'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/acharkq/NExT-Mol
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 60
+    sort_value: 122.9
+    sort_std: 2.2
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -3592,8 +3726,8 @@ results:
     value_note: ''
     sort_value: 126.7
     sort_std: 4.0
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3616,9 +3750,9 @@ results:
   dataset: QM9
   is_multi_metric: true
   rows:
-  - model: DimeNet++
+  - model: PF-GNN
     model_key: pf-gnn
-    model_plain: DimeNet++
+    model_plain: PF-GNN
     metric_values:
     - 0.017
     - null

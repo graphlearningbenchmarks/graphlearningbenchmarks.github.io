@@ -85,9 +85,9 @@ results:
 - &id001
   dataset: WikiCS
   rows:
-  - model: GPM
+  - model: GCN
     model_key: gcn
-    model_plain: GPM
+    model_plain: GCN
     value: 0.9302
     std: 0.0011
     metric: Accuracy
@@ -118,9 +118,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: RSE + RGCN (70b)
     model_key: rse + rgcn (70b)
-    model_plain: GPM
+    model_plain: RSE + RGCN (70b)
     value: 0.8852
     std: 0.0019
     metric: Accuracy
@@ -153,36 +153,69 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GPM
-    model_key: rse + sehgnn (70b)
-    model_plain: GPM
-    value: 0.8796
-    std: 0.002
+  - model: LEMP+T
+    model_key: lemp+t
+    model_plain: LEMP+T
+    value: 0.8825
+    std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2405.18581'
-    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
-      Decomposition via Large Language Models'
-    date: May 28, 2024
-    date_display: May 2024
-    date_iso: '2024-05-28'
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
     venue: null
     codebase_url: ''
     uses_external_data: true
-    input_feature_source: mixed
-    feature_source_evidence: leverages the capability of Large Language Models (LLMs)
-      to decompose the graph structure by analyzing raw text attributes
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8796
-    sort_std: 0.002
+    sort_value: 0.8825
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8771
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.8771
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -246,10 +279,10 @@ results:
     value_note: ''
     sort_value: 0.8074
     sort_std: null
-    global_rank: 44
-    paper_rank: 280
-    rank_delta: 236
-    rank_delta_abs: 236
+    global_rank: 85
+    paper_rank: 352
+    rank_delta: 267
+    rank_delta_abs: 267
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -314,10 +347,10 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: 0.001
-    global_rank: 61
-    paper_rank: 280
-    rank_delta: 219
-    rank_delta_abs: 219
+    global_rank: 103
+    paper_rank: 352
+    rank_delta: 249
+    rank_delta_abs: 249
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -325,6 +358,76 @@ results:
     comparison_source_arxiv: '2201.09830'
     is_best: false
     is_std_outlier: false
+  - model: DGI
+    model_key: dgi
+    model_plain: DGI
+    value: 0.1886
+    std: 0.0025
+    paper_value: 0.1886
+    paper_std: 0.0025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 128.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: dgi
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot inference on public WikiCS split
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: WWW 2024
+    published_conference: WWW 2024
+    at_pub_value: 0.7825
+    at_pub_std: 0.0056
+    at_pub_source_arxiv: '2408.05087'
+    at_pub_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
+      Learning
+    at_pub_source_date_iso: '2024-08-09'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2025-07-20'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: 0.5939
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7865
+    true_std: 0.069
+    value_gap_source_arxiv: '2507.19526'
+    value_gap_source_title: Quantizing Text-attributed Graphs for Semantic-Structural
+      Integration
+    value_gap_source_is_current_paper: false
+    value_gap: 0.5979
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7865
+    sort_std: 0.069
+    global_rank: 156
+    paper_rank: 352
+    rank_delta: 196
+    rank_delta_abs: 196
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
+      Learning
+    comparison_source_arxiv: '2408.05087'
+    is_best: false
+    is_std_outlier: true
   - model: BERT
     model_key: bert
     model_plain: BERT
@@ -383,86 +486,16 @@ results:
     value_note: ''
     sort_value: 0.7833
     sort_std: 0.0043
-    global_rank: 117
-    paper_rank: 279
-    rank_delta: 162
-    rank_delta_abs: 162
+    global_rank: 172
+    paper_rank: 350
+    rank_delta: 178
+    rank_delta_abs: 178
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Efficient Tuning and Inference for Large Language Models
       on Textual Graphs
     comparison_source_arxiv: '2401.15569'
-    is_best: false
-    is_std_outlier: false
-  - model: DGI
-    model_key: dgi
-    model_plain: DGI
-    value: 0.1886
-    std: 0.0025
-    paper_value: 0.1886
-    paper_std: 0.0025
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 128.0
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: dgi
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Zero-shot inference on public WikiCS split
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: WWW 2024
-    published_conference: WWW 2024
-    at_pub_value: 0.7825
-    at_pub_std: 0.0056
-    at_pub_source_arxiv: '2408.05087'
-    at_pub_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
-      Learning
-    at_pub_source_date_iso: '2024-08-09'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-08-09'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.5939
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7825
-    true_std: 0.0056
-    value_gap_source_arxiv: '2408.05087'
-    value_gap_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
-      Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.5939
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7825
-    sort_std: 0.0056
-    global_rank: 120
-    paper_rank: 280
-    rank_delta: 160
-    rank_delta_abs: 160
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Bootstrap Latents of Nodes and Neighbors for Graph Self-Supervised
-      Learning
-    comparison_source_arxiv: '2408.05087'
     is_best: false
     is_std_outlier: false
   - model: DeBERTa
@@ -523,10 +556,10 @@ results:
     value_note: ''
     sort_value: 0.7511
     sort_std: 0.0197
-    global_rank: 179
-    paper_rank: 280
-    rank_delta: 101
-    rank_delta_abs: 101
+    global_rank: 241
+    paper_rank: 352
+    rank_delta: 111
+    rank_delta_abs: 111
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -534,7 +567,40 @@ results:
       on Textual Graphs
     comparison_source_arxiv: '2401.15569'
     is_best: false
-    is_std_outlier: true
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7469
+    std: 0.0085
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2512.11561'
+    title: 'View Space: Learning Representation across Arbitrary Graphs'
+    date: Dec 12, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-12'
+    venue: Accepted to ICML 2026
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 246
+    sort_value: 0.7469
+    sort_std: 0.0085
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: Base
     model_key: base
     model_plain: Base
@@ -592,8 +658,8 @@ results:
     value_note: ''
     sort_value: 0.7019
     sort_std: null
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 283
+    paper_rank: 283
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -660,8 +726,8 @@ results:
     value_note: ''
     sort_value: 0.7014
     sort_std: null
-    global_rank: 213
-    paper_rank: 213
+    global_rank: 284
+    paper_rank: 284
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -671,6 +737,74 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: G2P2
+    model_key: g2p2
+    model_plain: G2P2
+    value: 0.3192
+    std: 0.0015
+    paper_value: 0.3192
+    paper_std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 63.0
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 1
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: g2p2
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Zero-shot inference on public WikiCS split
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: WWW 2024
+    published_conference: WWW 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-07-20'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.699
+    true_std: 0.1052
+    value_gap_source_arxiv: '2507.19526'
+    value_gap_source_title: Quantizing Text-attributed Graphs for Semantic-Structural
+      Integration
+    value_gap_source_is_current_paper: false
+    value_gap: 0.37979999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.699
+    sort_std: 0.1052
+    global_rank: 286
+    paper_rank: 350
+    rank_delta: 64
+    rank_delta_abs: 64
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: true
   - model: Medium
     model_key: medium
     model_plain: Medium
@@ -728,8 +862,8 @@ results:
     value_note: ''
     sort_value: 0.6942
     sort_std: null
-    global_rank: 218
-    paper_rank: 218
+    global_rank: 290
+    paper_rank: 290
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -796,8 +930,8 @@ results:
     value_note: ''
     sort_value: 0.6785
     sort_std: null
-    global_rank: 228
-    paper_rank: 228
+    global_rank: 299
+    paper_rank: 299
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -864,8 +998,8 @@ results:
     value_note: ''
     sort_value: 0.6282
     sort_std: 0.0004
-    global_rank: 258
-    paper_rank: 258
+    global_rank: 330
+    paper_rank: 330
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -932,8 +1066,8 @@ results:
     value_note: ''
     sort_value: 0.6091
     sort_std: 0.0008
-    global_rank: 264
-    paper_rank: 264
+    global_rank: 336
+    paper_rank: 336
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1000,80 +1134,12 @@ results:
     value_note: ''
     sort_value: 0.3359
     sort_std: null
-    global_rank: 278
-    paper_rank: 280
+    global_rank: 350
+    paper_rank: 352
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: G2P2
-    model_key: g2p2
-    model_plain: G2P2
-    value: 0.3192
-    std: 0.0015
-    paper_value: 0.3192
-    paper_std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 63.0
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: g2p2
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Zero-shot inference on public WikiCS split
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: WWW 2024
-    published_conference: WWW 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-14'
-    value_gap_source_date_label: WWW 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3192
-    true_std: 0.0015
-    value_gap_source_arxiv: '2410.10329'
-    value_gap_source_title: 'GraphCLIP: Enhancing Transferability in Graph Foundation
-      Models for Text-Attributed Graphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3192
-    sort_std: 0.0015
-    global_rank: 279
-    paper_rank: 279
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

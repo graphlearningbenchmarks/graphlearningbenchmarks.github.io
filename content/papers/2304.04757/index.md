@@ -61,8 +61,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - LEFTNet
-mrr: 0.0615
-adjusted_mrr: 0.041
+mrr: 0.0598
+adjusted_mrr: 0.0398
 mrr_dataset_count: 2
 benchmark_categories:
 - Quantum Chemistry
@@ -79,9 +79,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -113,9 +113,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -179,6 +179,356 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BOTNet
+    model_key: botnet
+    model_plain: BOTNet
+    value: 2.3
+    std: null
+    paper_value: 2.3
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: batatiamace
+    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Energy prediction (E) for Aspirin
+    date: Apr 7, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-07'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.03
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.06643'
+    at_pub_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
+    at_pub_source_date_iso: '2022-05-13'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-07-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 2.27
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.0007
+    true_std: null
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
+    value_gap_source_is_current_paper: false
+    value_gap: 2.2992999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0007
+    sort_std: null
+    global_rank: 5
+    paper_rank: 120
+    rank_delta: 115
+    rank_delta_abs: 115
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
+    comparison_source_arxiv: '2205.06643'
+    is_best: false
+    is_std_outlier: false
+  - model: NequIP
+    model_key: nequip
+    model_plain: NequIP
+    value: 2.3
+    std: null
+    paper_value: 2.3
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: batatiamace
+    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Energy prediction (E) for Aspirin
+    date: Apr 7, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-07'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.04
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.14276'
+    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
+      length-scales in molecular systems'
+    at_pub_source_date_iso: '2022-05-28'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-07-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 2.26
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.0009
+    true_std: null
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
+    value_gap_source_is_current_paper: false
+    value_gap: 2.2990999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0009
+    sort_std: null
+    global_rank: 7
+    paper_rank: 120
+    rank_delta: 113
+    rank_delta_abs: 113
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'So3krates: Equivariant attention for interactions on
+      arbitrary length-scales in molecular systems'
+    comparison_source_arxiv: '2205.14276'
+    is_best: false
+    is_std_outlier: false
+  - model: Allegro
+    model_key: allegro
+    model_plain: Allegro
+    value: 2.3
+    std: null
+    paper_value: 2.3
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 5
+    source_ref: batatiamace
+    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Energy prediction (E) for Aspirin
+    date: Apr 7, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-07'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.053
+    at_pub_std: null
+    at_pub_source_arxiv: '2210.16518'
+    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
+      with vector-scalar interactive message passing for molecules'
+    at_pub_source_date_iso: '2022-10-29'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-07-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 2.247
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.0046
+    true_std: null
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
+    value_gap_source_is_current_paper: false
+    value_gap: 2.2954
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0046
+    sort_std: null
+    global_rank: 14
+    paper_rank: 120
+    rank_delta: 106
+    rank_delta_abs: 106
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
+      network with vector-scalar interactive message passing for molecules'
+    comparison_source_arxiv: '2210.16518'
+    is_best: false
+    is_std_outlier: false
+  - model: PaiNN
+    model_key: painn
+    model_plain: PaiNN
+    value: 6.9
+    std: null
+    paper_value: 6.9
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Energy prediction (E) for Aspirin
+    date: Apr 7, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-07'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.063
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.14276'
+    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
+      length-scales in molecular systems'
+    at_pub_source_date_iso: '2022-05-28'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 6.837000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.01
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 6.890000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.01
+    sort_std: null
+    global_rank: 22
+    paper_rank: 122
+    rank_delta: 100
+    rank_delta_abs: 100
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'So3krates: Equivariant attention for interactions on
+      arbitrary length-scales in molecular systems'
+    comparison_source_arxiv: '2205.14276'
+    is_best: false
+    is_std_outlier: false
+  - model: SchNet
+    model_key: schnet
+    model_plain: SchNet
+    value: 0.31
+    std: null
+    paper_value: 0.31
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: per-atom forces prediction (Benzene)
+    date: Apr 7, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-07'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.05
+    at_pub_std: null
+    at_pub_source_arxiv: '1902.08408'
+    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    at_pub_source_date_iso: '2019-02-22'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.26
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.05
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.26
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.05
+    sort_std: null
+    global_rank: 46
+    paper_rank: 107
+    rank_delta: 61
+    rank_delta_abs: 61
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   - model: GemNet
@@ -238,10 +588,10 @@ results:
     value_note: ''
     sort_value: 0.0502
     sort_std: null
-    global_rank: 28
-    paper_rank: 66
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 47
+    paper_rank: 93
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -307,16 +657,84 @@ results:
     value_note: ''
     sort_value: 0.0507
     sort_std: null
-    global_rank: 29
-    paper_rank: 85
-    rank_delta: 56
-    rank_delta_abs: 56
+    global_rank: 48
+    paper_rank: 120
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
       network with vector-scalar interactive message passing for molecules'
     comparison_source_arxiv: '2210.16518'
+    is_best: false
+    is_std_outlier: false
+  - model: SphereNet
+    model_key: spherenet
+    model_plain: SphereNet
+    value: 0.147
+    std: null
+    paper_value: 0.147
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: per-atom forces prediction (Benzene, WoFE=1000)
+    date: Apr 7, 2023
+    date_display: Apr 2023
+    date_iso: '2023-04-07'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.209
+    at_pub_std: null
+    at_pub_source_arxiv: '2102.05013'
+    at_pub_source_title: Spherical Message Passing for 3D Molecular Graphs
+    at_pub_source_date_iso: '2021-02-09'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.062
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.052
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 0.095
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.052
+    sort_std: null
+    global_rank: 52
+    paper_rank: 96
+    rank_delta: 44
+    rank_delta_abs: 44
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Spherical Message Passing for 3D Molecular Graphs
+    comparison_source_arxiv: '2102.05013'
     is_best: false
     is_std_outlier: false
   - model: SpookyNet
@@ -356,8 +774,8 @@ results:
       of freedom and nonlocal effects'
     at_pub_source_date_iso: '2021-05-01'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-05-01'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-05-28'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: 0.20600000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -367,236 +785,26 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.052
-    true_std: 0.001
-    value_gap_source_arxiv: '2105.00304'
-    value_gap_source_title: 'SpookyNet: Learning force fields with electronic degrees
-      of freedom and nonlocal effects'
+    true_std: null
+    value_gap_source_arxiv: '2205.14276'
+    value_gap_source_title: 'So3krates: Equivariant attention for interactions on
+      arbitrary length-scales in molecular systems'
     value_gap_source_is_current_paper: false
     value_gap: 0.20600000000000002
     has_value_note: false
     value_note: ''
     sort_value: 0.052
-    sort_std: 0.001
-    global_rank: 32
-    paper_rank: 75
-    rank_delta: 43
-    rank_delta_abs: 43
+    sort_std: null
+    global_rank: 51
+    paper_rank: 104
+    rank_delta: 53
+    rank_delta_abs: 53
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'SpookyNet: Learning force fields with electronic degrees
       of freedom and nonlocal effects'
     comparison_source_arxiv: '2105.00304'
-    is_best: false
-    is_std_outlier: false
-  - model: Allegro
-    model_key: allegro
-    model_plain: Allegro
-    value: 2.3
-    std: null
-    paper_value: 2.3
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 5
-    source_ref: batatiamace
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy prediction (E) for Aspirin
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.053
-    at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 2.247
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.053
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 2.247
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.053
-    sort_std: null
-    global_rank: 35
-    paper_rank: 85
-    rank_delta: 50
-    rank_delta_abs: 50
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    comparison_source_arxiv: '2210.16518'
-    is_best: false
-    is_std_outlier: false
-  - model: BOTNet
-    model_key: botnet
-    model_plain: BOTNet
-    value: 2.3
-    std: null
-    paper_value: 2.3
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 5
-    source_ref: batatiamace
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy prediction (E) for Aspirin
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.03
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.06643'
-    at_pub_source_title: The design space of E(3)-equivariant atom-centred interatomic
-      potentials
-    at_pub_source_date_iso: '2022-05-13'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 2.27
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.053
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 2.247
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.053
-    sort_std: null
-    global_rank: 36
-    paper_rank: 85
-    rank_delta: 49
-    rank_delta_abs: 49
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: The design space of E(3)-equivariant atom-centred interatomic
-      potentials
-    comparison_source_arxiv: '2205.06643'
-    is_best: false
-    is_std_outlier: false
-  - model: NequIP
-    model_key: nequip
-    model_plain: NequIP
-    value: 2.3
-    std: null
-    paper_value: 2.3
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 5
-    source_ref: batatiamace
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy prediction (E) for Aspirin
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.04
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.14276'
-    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
-      length-scales in molecular systems'
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-02-07'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 2.26
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.053
-    true_std: null
-    value_gap_source_arxiv: '2402.04836'
-    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
-    value_gap_source_is_current_paper: false
-    value_gap: 2.247
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.053
-    sort_std: null
-    global_rank: 34
-    paper_rank: 85
-    rank_delta: 51
-    rank_delta_abs: 51
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'So3krates: Equivariant attention for interactions on
-      arbitrary length-scales in molecular systems'
-    comparison_source_arxiv: '2205.14276'
     is_best: false
     is_std_outlier: false
   - model: sGDML
@@ -655,10 +863,10 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 40
-    paper_rank: 70
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 62
+    paper_rank: 100
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -703,8 +911,8 @@ results:
       learning of interatomic potentials and forces'
     at_pub_source_date_iso: '2021-08-06'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-08-06'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-05-28'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: 0.287
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -714,20 +922,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.061
-    true_std: 0.009
-    value_gap_source_arxiv: '2108.02913'
-    value_gap_source_title: 'NewtonNet: A Newtonian message passing network for deep
-      learning of interatomic potentials and forces'
+    true_std: null
+    value_gap_source_arxiv: '2205.14276'
+    value_gap_source_title: 'So3krates: Equivariant attention for interactions on
+      arbitrary length-scales in molecular systems'
     value_gap_source_is_current_paper: false
     value_gap: 0.287
     has_value_note: false
     value_note: ''
     sort_value: 0.061
-    sort_std: 0.009
-    global_rank: 41
-    paper_rank: 79
-    rank_delta: 38
-    rank_delta_abs: 38
+    sort_std: null
+    global_rank: 64
+    paper_rank: 108
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -792,154 +1000,15 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 42
-    paper_rank: 70
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 65
+    paper_rank: 100
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Directional Message Passing for Molecular Graphs
     comparison_source_arxiv: '2003.03123'
-    is_best: false
-    is_std_outlier: false
-  - model: PaiNN
-    model_key: painn
-    model_plain: PaiNN
-    value: 6.9
-    std: null
-    paper_value: 6.9
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy prediction (E) for Aspirin
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.063
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.14276'
-    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
-      length-scales in molecular systems'
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-11-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 6.837000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.077
-    true_std: null
-    value_gap_source_arxiv: '2311.02124'
-    value_gap_source_title: 'Sliced Denoising: A Physics-Informed Molecular Pre-Training
-      Method'
-    value_gap_source_is_current_paper: false
-    value_gap: 6.823
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.077
-    sort_std: null
-    global_rank: 45
-    paper_rank: 88
-    rank_delta: 43
-    rank_delta_abs: 43
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'So3krates: Equivariant attention for interactions on
-      arbitrary length-scales in molecular systems'
-    comparison_source_arxiv: '2205.14276'
-    is_best: false
-    is_std_outlier: false
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    value: 0.31
-    std: null
-    paper_value: 0.31
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: per-atom forces prediction (Benzene)
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.05
-    at_pub_std: null
-    at_pub_source_arxiv: '1902.08408'
-    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    at_pub_source_date_iso: '2019-02-22'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.26
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.08
-    true_std: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 0.22999999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.08
-    sort_std: null
-    global_rank: 46
-    paper_rank: 78
-    rank_delta: 32
-    rank_delta_abs: 32
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   - model: ACE
@@ -1000,10 +1069,10 @@ results:
     value_note: ''
     sort_value: 0.141
     sort_std: null
-    global_rank: 66
-    paper_rank: 87
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 93
+    paper_rank: 122
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1012,12 +1081,12 @@ results:
     comparison_source_arxiv: '2210.16518'
     is_best: false
     is_std_outlier: false
-  - model: SphereNet
-    model_key: spherenet
-    model_plain: SphereNet
-    value: 0.147
+  - model: FCHL
+    model_key: fchl
+    model_plain: FCHL
+    value: 6.2
     std: null
-    paper_value: 0.147
+    paper_value: 6.2
     paper_std: null
     metric: MAE
     higher_is_better: false
@@ -1025,59 +1094,58 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
     uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
+    table_ref: Table 5
+    source_ref: batatiamace
+    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
     evaluation_task: graph_regression
     protocol_decision: standard
-    protocol_note: per-atom forces prediction (Benzene, WoFE=1000)
+    protocol_note: Energy prediction (E) for Aspirin
     date: Apr 7, 2023
     date_display: Apr 2023
     date_iso: '2023-04-07'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: 0.209
+    at_pub_value: 0.182
     at_pub_std: null
-    at_pub_source_arxiv: '2102.05013'
-    at_pub_source_title: Spherical Message Passing for 3D Molecular Graphs
-    at_pub_source_date_iso: '2021-02-09'
-    at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2023-04-07'
+    at_pub_source_arxiv: '2302.05743'
+    at_pub_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
+    at_pub_source_date_iso: '2023-02-11'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-02-11'
     value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 0.062
-    worse_than_at_pub: false
+    gap_vs_at_pub: 6.018
+    worse_than_at_pub: true
     surpassed_since_pub: false
-    better_than_at_pub: true
+    better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.147
+    today_delta_significant: true
+    true_value: 0.182
     true_std: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    value_gap_source_arxiv: '2302.05743'
+    value_gap_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
+    value_gap_source_is_current_paper: false
+    value_gap: 6.018
     has_value_note: false
     value_note: ''
-    sort_value: 0.147
+    sort_value: 0.182
     sort_std: null
-    global_rank: 68
-    paper_rank: 68
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    global_rank: 99
+    paper_rank: 122
+    rank_delta: 23
+    rank_delta_abs: 23
+    rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Spherical Message Passing for 3D Molecular Graphs
-    comparison_source_arxiv: '2102.05013'
+    comparison_type: behind
+    comparison_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
+    comparison_source_arxiv: '2302.05743'
     is_best: false
     is_std_outlier: false
   - model: LEFTNet
@@ -1137,8 +1205,8 @@ results:
     value_note: ''
     sort_value: 2.1
     sort_std: null
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1146,74 +1214,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: FCHL
-    model_key: fchl
-    model_plain: FCHL
-    value: 6.2
-    std: null
-    paper_value: 6.2
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 5
-    source_ref: batatiamace
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Energy prediction (E) for Aspirin
-    date: Apr 7, 2023
-    date_display: Apr 2023
-    date_iso: '2023-04-07'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.182
-    at_pub_std: null
-    at_pub_source_arxiv: '2302.05743'
-    at_pub_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
-    at_pub_source_date_iso: '2023-02-11'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 6.018
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 6.2
-    true_std: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 6.2
-    sort_std: null
-    global_rank: 88
-    paper_rank: 88
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Is Distance Matrix Enough for Geometric Deep Learning?
-    comparison_source_arxiv: '2302.05743'
     is_best: false
     is_std_outlier: false
   - model: ANI
@@ -1273,8 +1273,8 @@ results:
     value_note: ''
     sort_value: 16.6
     sort_std: null
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1341,8 +1341,8 @@ results:
     value_note: ''
     sort_value: 17.7
     sort_std: null
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1365,9 +1365,9 @@ results:
   dataset: QM9
   is_multi_metric: true
   rows:
-  - model: DimeNet++
+  - model: PF-GNN
     model_key: pf-gnn
-    model_plain: DimeNet++
+    model_plain: PF-GNN
     metric_values:
     - 0.017
     - null
@@ -1508,9 +1508,9 @@ results:
     is_best: true
     is_std_outlier: false
     global_rank: 2
-  - model: DimeNet++
+  - model: Molformer
     model_key: molformer
-    model_plain: DimeNet++
+    model_plain: Molformer
     metric_values:
     - 0.025
     - null

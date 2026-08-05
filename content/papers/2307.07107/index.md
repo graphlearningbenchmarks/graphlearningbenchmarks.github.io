@@ -60,8 +60,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MPNN
-mrr: 0.0526
-adjusted_mrr: 0.0175
+mrr: 0.0357
+adjusted_mrr: 0.0119
 mrr_dataset_count: 1
 benchmark_categories:
 - MoleculeNet
@@ -78,70 +78,103 @@ results:
 - &id001
   dataset: FreeSolv
   rows:
-  - model: D&D-Node +vn
-    model_key: se(3)-i mpph
-    model_plain: D&D-Node +vn
-    value: 0.354
-    std: 0.053
+  - model: 10% ZINC + 10% PubChem
+    model_key: 10% zinc + 10% pubchem
+    model_plain: 10% ZINC + 10% PubChem
+    value: 0.205
+    std: null
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.07633'
-    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    date: Dec 12, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-12'
-    venue: NeurIPS 2023 AI for Science Workshop
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
-      homology
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.354
-    sort_std: 0.053
+    sort_value: 0.205
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: D&D-Node +vn
-    model_key: ecfp-4 + rf
-    model_plain: D&D-Node +vn
-    value: 0.56
-    std: 0.066
+  - model: MoLFormer-XL
+    model_key: molformer-xl
+    model_plain: MoLFormer-XL
+    value: 0.2308
+    std: null
     metric: RMSE
     higher_is_better: false
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: random_forest
-    architecture_label: RF
-    architecture_title: Random forest
-    arxiv_id: '2312.07633'
-    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    date: Dec 12, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-12'
-    venue: NeurIPS 2023 AI for Science Workshop
-    codebase_url: ''
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: trained on ECFP-4 fingerprints
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.56
-    sort_std: 0.066
+    sort_value: 0.2308
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MoLFormer-Base
+    model_key: molformer-base
+    model_plain: MoLFormer-Base
+    value: 0.2596
+    std: null
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2596
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -183,8 +216,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-14'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -193,17 +226,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.682
+    true_std: null
+    value_gap_source_arxiv: '2307.07107'
+    value_gap_source_title: Graph Positional and Structural Encoder
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.682
     sort_std: null
-    global_rank: 3
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -245,8 +283,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-14'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -255,51 +293,56 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.743
+    true_std: null
+    value_gap_source_arxiv: '2307.07107'
+    value_gap_source_title: Graph Positional and Structural Encoder
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.743
     sort_std: null
-    global_rank: 3
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: D&D-Node +vn
-    model_key: geomgcl
-    model_plain: D&D-Node +vn
-    value: 0.866
-    std: null
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 2.346
+    std: 0.122
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2109.11730'
-    title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property Prediction'
-    date: Sep 24, 2021
-    date_display: Sep 2021
-    date_iso: '2021-09-24'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: mixed
-    feature_source_evidence: The model uses a 2D-3D geometric contrastive scheme to
-      bridge knowledge between 2D chemical semantics and 3D spatial information.
+    arxiv_id: '2106.06130'
+    title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning for Property
+      Prediction'
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/PaddlePaddle/PaddleHelix
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.866
-    sort_std: null
+    global_rank: 73
+    sort_value: 2.346
+    sort_std: 0.122
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -317,100 +360,103 @@ results:
 - &id002
   dataset: Lipophilicity
   rows:
-  - model: SE(3)-I MPPH
-    model_key: memgnn
-    model_plain: SE(3)-I MPPH
-    value: 0.556
-    std: 0.023
+  - model: MoLFormer-XL
+    model_key: molformer-xl
+    model_plain: MoLFormer-XL
+    value: 0.5289
+    std: null
     metric: RMSE
     higher_is_better: false
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2002.09518'
-    title: Memory-Based Graph Networks
-    date: Feb 21, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-21'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/amirkhas/GraphMemoryNet
-    uses_external_data: false
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.556
-    sort_std: 0.023
+    sort_value: 0.5289
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SE(3)-I MPPH
-    model_key: protos-l2
-    model_plain: SE(3)-I MPPH
-    value: 0.58
-    std: 0.016
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.065
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2006.04804'
-    title: Optimal Transport Graph Neural Networks
-    date: Jun 8, 2020
-    date_display: Jun 2020
-    date_iso: '2020-06-08'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.58
-    sort_std: 0.016
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SE(3)-I MPPH
-    model_key: protow-l2
-    model_plain: SE(3)-I MPPH
-    value: 0.604
-    std: 0.014
+  - model: 10% ZINC + 10% PubChem
+    model_key: 10% zinc + 10% pubchem
+    model_plain: 10% ZINC + 10% PubChem
+    value: 0.5331
+    std: null
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2006.04804'
-    title: Optimal Transport Graph Neural Networks
-    date: Jun 8, 2020
-    date_display: Jun 2020
-    date_iso: '2020-06-08'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.5331
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GeomGCL
+    model_key: geomgcl
+    model_plain: GeomGCL
+    value: 0.541
+    std: null
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.604
-    sort_std: 0.014
+    sort_value: 0.541
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -452,8 +498,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-14'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -462,18 +508,56 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.643
+    true_std: null
+    value_gap_source_arxiv: '2307.07107'
+    value_gap_source_title: Graph Positional and Structural Encoder
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.643
     sort_std: null
-    global_rank: 5
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.655
+    std: 0.036
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2002.09518'
+    title: Memory-Based Graph Networks
+    date: Feb 21, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-21'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/amirkhas/GraphMemoryNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 13
+    sort_value: 0.655
+    sort_std: 0.036
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -514,8 +598,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-14'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -524,17 +608,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.662
+    true_std: null
+    value_gap_source_arxiv: '2307.07107'
+    value_gap_source_title: Graph Positional and Structural Encoder
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.662
     sort_std: null
-    global_rank: 9
+    global_rank: 17
+    paper_rank: 17
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -576,8 +665,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-07-14'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -586,17 +675,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.671
+    true_std: null
+    value_gap_source_arxiv: '2307.07107'
+    value_gap_source_title: Graph Positional and Structural Encoder
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.671
     sort_std: null
-    global_rank: 9
+    global_rank: 18
+    paper_rank: 18
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -638,8 +732,8 @@ results:
     at_pub_source_title: Memory-Based Graph Networks
     at_pub_source_date_iso: '2020-02-21'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-02-21'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2023-07-14'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: 0.0030000000000000027
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -648,21 +742,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.715
-    true_std: 0.035
-    value_gap_source_arxiv: '2002.09518'
-    value_gap_source_title: Memory-Based Graph Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0030000000000000027
+    true_value: 0.712
+    true_std: null
+    value_gap_source_arxiv: '2307.07107'
+    value_gap_source_title: Graph Positional and Structural Encoder
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.715
-    sort_std: 0.035
-    global_rank: 19
-    paper_rank: 18
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
+    sort_value: 0.712
+    sort_std: null
+    global_rank: 28
+    paper_rank: 28
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''

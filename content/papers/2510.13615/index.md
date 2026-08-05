@@ -55,8 +55,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - EB-GNN
-mrr: 0.0693
-adjusted_mrr: 0.0462
+mrr: 0.0624
+adjusted_mrr: 0.0416
 mrr_dataset_count: 2
 benchmark_categories:
 - GNNBenchmark
@@ -78,9 +78,9 @@ results:
 - &id001
   dataset: CSL
   rows:
-  - model: GPM
+  - model: PPGN
     model_key: ppgn
-    model_plain: GPM
+    model_plain: PPGN
     value: 1.0
     std: null
     metric: Accuracy
@@ -111,9 +111,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: RW-AgentNet
     model_key: rw-agentnet
-    model_plain: GPM
+    model_plain: RW-AgentNet
     value: 1.0
     std: null
     metric: Accuracy
@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: AgentNet
     model_key: agentnet
-    model_plain: GPM
+    model_plain: AgentNet
     value: 1.0
     std: null
     metric: Accuracy
@@ -172,6 +172,39 @@ results:
     global_rank: 3
     sort_value: 1.0
     sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 1.0
+    std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
+    is_global_top: true
+    global_rank: 9
+    sort_value: 1.0
+    sort_std: 0.0
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -564,9 +597,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: DirGraphSSM
     model_key: dirgraphssm
-    model_plain: GMN
+    model_plain: DirGraphSSM
     value: 0.9409
     std: 0.0023
     metric: Accuracy
@@ -597,9 +630,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GMN
+  - model: DAG+SAT-plus
     model_key: dag+sat-plus
-    model_plain: GMN
+    model_plain: DAG+SAT-plus
     value: 0.9407
     std: 0.002
     metric: Accuracy
@@ -687,8 +720,8 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.0066
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -755,13 +788,46 @@ results:
     value_note: ''
     sort_value: 0.9284
     sort_std: 0.0052
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.9264
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.12454'
+    title: Recipe for a General, Powerful, Scalable Graph Transformer
+    date: May 25, 2022
+    date_display: May 2022
+    date_iso: '2022-05-25'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/rampasek/GraphGPS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.9264
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -823,8 +889,8 @@ results:
     value_note: ''
     sort_value: 0.925
     sort_std: 0.0056
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -891,8 +957,8 @@ results:
     value_note: ''
     sort_value: 0.9214
     sort_std: 0.0024
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -959,13 +1025,46 @@ results:
     value_note: ''
     sort_value: 0.911
     sort_std: 0.0098
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8898
+    std: 0.0055
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 33
+    sort_value: 0.8898
+    sort_std: 0.0055
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

@@ -47,8 +47,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GAT
-mrr: 0.3654
-adjusted_mrr: 0.3654
+mrr: 0.3849
+adjusted_mrr: 0.3849
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -75,9 +75,9 @@ results:
 - &id003
   dataset: ACM
   rows:
-  - model: GCN+P+D
+  - model: SignGT
     model_key: signgt
-    model_plain: GCN+P+D
+    model_plain: SignGT
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -109,9 +109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: NodeFormer
     model_key: nodeformer
-    model_plain: GCN+P+D
+    model_plain: NodeFormer
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: FAGCN
     model_key: fagcn
-    model_plain: GCN+P+D
+    model_plain: FAGCN
     value: 0.9487
     std: 0.0059
     metric: Accuracy
@@ -370,13 +370,47 @@ results:
     value_note: ''
     sort_value: 0.929
     sort_std: null
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9233
+    std: 0.0038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11025'
+    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
+      Learning'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge and Information Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 42
+    sort_value: 0.9233
+    sort_std: 0.0038
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -529,9 +563,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: VecFormer
+  - model: BGRL
     model_key: bgrl
-    model_plain: VecFormer
+    model_plain: BGRL
     value: 0.932
     std: 0.003
     metric: Accuracy
@@ -557,6 +591,39 @@ results:
     global_rank: 3
     sort_value: 0.932
     sort_std: 0.003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8651
+    std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.07035'
+    title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive Learning'
+    date: Dec 14, 2022
+    date_display: Dec 2022
+    date_iso: '2022-12-14'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/GXM1141/MA-GCL
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 18
+    sort_value: 0.8651
+    sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -630,6 +697,40 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6346
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 44
+    sort_value: 0.6346
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   rank_metric: Accuracy
   higher_is_better: true
   experiment_scope: node-level
@@ -642,9 +743,9 @@ results:
 - &id001
   dataset: Coauthor-Physics
   rows:
-  - model: SelfGNN LDP
+  - model: GeoMancer
     model_key: geomancer
-    model_plain: SelfGNN LDP
+    model_plain: GeoMancer
     value: 0.9878
     std: 0.0012
     metric: Accuracy
@@ -676,9 +777,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SelfGNN LDP
+  - model: LGD
     model_key: lgd
-    model_plain: SelfGNN LDP
+    model_plain: LGD
     value: 0.9855
     std: 0.0012
     metric: Accuracy
@@ -710,9 +811,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SelfGNN LDP
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: SelfGNN LDP
+    model_plain: MSH-GNN
     value: 0.9837
     std: 0.0008
     metric: Accuracy
@@ -738,6 +839,108 @@ results:
     global_rank: 3
     sort_value: 0.9837
     sort_std: 0.0008
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.965
+    std: null
+    paper_value: 0.965
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Coauthor-Physics
+    date: Dec 15, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-15'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.962
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2103.14958'
+    at_pub_source_title: 'SelfGNN: Self-supervised Graph Neural Networks without explicit
+      negative sampling'
+    at_pub_source_date_iso: '2021-03-27'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2024-11-26'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.0030000000000000027
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9782
+    true_std: 0.0028
+    value_gap_source_arxiv: '2411.17296'
+    value_gap_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.01319999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9782
+    sort_std: 0.0028
+    global_rank: 9
+    paper_rank: 66
+    rank_delta: 57
+    rank_delta_abs: 57
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'SelfGNN: Self-supervised Graph Neural Networks without
+      explicit negative sampling'
+    comparison_source_arxiv: '2103.14958'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9774
+    std: 0.0035
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-26'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/GGA23/GrokFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 12
+    sort_value: 0.9774
+    sort_std: 0.0035
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -799,10 +1002,10 @@ results:
     value_note: ''
     sort_value: 0.9739
     sort_std: 0.0018
-    global_rank: 12
-    paper_rank: 105
-    rank_delta: 93
-    rank_delta_abs: 93
+    global_rank: 22
+    paper_rank: 133
+    rank_delta: 111
+    rank_delta_abs: 111
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -811,74 +1014,38 @@ results:
     comparison_source_arxiv: '2006.10222'
     is_best: false
     is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.965
-    std: null
-    paper_value: 0.965
-    paper_std: null
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.9597
+    std: 0.0007
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Coauthor-Physics
-    date: Dec 15, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-15'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.962
-    at_pub_std: 0.001
-    at_pub_source_arxiv: '2103.14958'
-    at_pub_source_title: 'SelfGNN: Self-supervised Graph Neural Networks without explicit
-      negative sampling'
-    at_pub_source_date_iso: '2021-03-27'
-    at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.0030000000000000027
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9732
-    true_std: 0.0006
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.008199999999999985
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9732
-    sort_std: 0.0006
-    global_rank: 19
-    paper_rank: 56
-    rank_delta: 37
-    rank_delta_abs: 37
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'SelfGNN: Self-supervised Graph Neural Networks without
-      explicit negative sampling'
-    comparison_source_arxiv: '2103.14958'
+    is_global_top: true
+    global_rank: 92
+    sort_value: 0.9597
+    sort_std: 0.0007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -938,8 +1105,8 @@ results:
     value_note: ''
     sort_value: 0.953
     sort_std: 0.001
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -961,9 +1128,9 @@ results:
 - &id002
   dataset: DBLP
   rows:
-  - model: ACGCL
+  - model: HG-SCM
     model_key: hg-scm
-    model_plain: ACGCL
+    model_plain: HG-SCM
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -995,9 +1162,43 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ACGCL
+  - model: SeHGNN
+    model_key: sehgnn
+    model_plain: SeHGNN
+    value: 0.9489
+    std: 0.0018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.05757'
+    title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
+      Graph'
+    date: Dec 10, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-10'
+    venue: Information Processing & Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9489
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AdvSynGNN
     model_key: advsyngnn
-    model_plain: ACGCL
+    model_plain: AdvSynGNN
     value: 0.9486
     std: 0.0012
     metric: Accuracy
@@ -1021,47 +1222,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9486
     sort_std: 0.0012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ACGCL
-    model_key: simplehgn
-    model_plain: ACGCL
-    value: 0.9446
-    std: 0.0022
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2312.05757'
-    title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
-      Graph'
-    date: Dec 10, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-10'
-    venue: Information Processing & Management
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9446
-    sort_std: 0.0022
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: GAT
     model_key: gat
@@ -1120,15 +1287,49 @@ results:
     value_note: ''
     sort_value: 0.8859
     sort_std: 0.001
-    global_rank: 23
-    paper_rank: 57
-    rank_delta: 34
-    rank_delta_abs: 34
+    global_rank: 31
+    paper_rank: 66
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Directed Graph Convolutional Network
     comparison_source_arxiv: '2004.13970'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8758
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-09'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/wooner49/TriCL
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 36
+    sort_value: 0.8758
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -1188,8 +1389,8 @@ results:
     value_note: ''
     sort_value: 0.872
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1256,13 +1457,47 @@ results:
     value_note: ''
     sort_value: 0.858
     sort_std: null
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8118
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-09'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/wooner49/TriCL
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 82
+    sort_value: 0.8118
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

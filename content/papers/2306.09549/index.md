@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -178,9 +178,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE

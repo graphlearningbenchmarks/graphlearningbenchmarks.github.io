@@ -53,8 +53,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - R-GCN
-mrr: 0.084
-adjusted_mrr: 0.056
+mrr: 0.0562
+adjusted_mrr: 0.0375
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
@@ -78,9 +78,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -111,9 +111,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -136,7 +169,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
@@ -144,35 +177,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.933
+    std: 0.029
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.00911'
+    title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    date: Dec 2, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-02'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
+    global_rank: 43
+    sort_value: 0.933
+    sort_std: 0.029
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -216,8 +248,8 @@ results:
       Classification
     at_pub_source_date_iso: '2016-06-03'
     at_pub_source_date_label: NeurIPS 2016
-    value_gap_source_date_iso: '2022-05-26'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-05-23'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.05120000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -228,25 +260,57 @@ results:
     today_delta_significant: true
     true_value: 0.904
     true_std: 0.057
-    value_gap_source_arxiv: '2205.13328'
-    value_gap_source_title: How Powerful are $K$-hop Message Passing Graph Neural
-      Networks
+    value_gap_source_arxiv: '2305.13987'
+    value_gap_source_title: On Structural Expressive Power of Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: 0.09520000000000006
     has_value_note: false
     value_note: ''
     sort_value: 0.904
     sort_std: 0.057
-    global_rank: 141
-    paper_rank: 599
-    rank_delta: 458
-    rank_delta_abs: 458
+    global_rank: 171
+    paper_rank: 655
+    rank_delta: 484
+    rank_delta_abs: 484
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: On Valid Optimal Assignment Kernels and Applications
       to Graph Classification
     comparison_source_arxiv: '1606.01141'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Feat
@@ -306,8 +370,8 @@ results:
     value_note: ''
     sort_value: 0.7794
     sort_std: 0.0
-    global_rank: 673
-    paper_rank: 673
+    global_rank: 734
+    paper_rank: 734
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -375,8 +439,8 @@ results:
     value_note: ''
     sort_value: 0.7323
     sort_std: 0.0048
-    global_rank: 744
-    paper_rank: 744
+    global_rank: 806
+    paper_rank: 806
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -444,8 +508,8 @@ results:
     value_note: ''
     sort_value: 0.672
     sort_std: 0.0124
-    global_rank: 774
-    paper_rank: 774
+    global_rank: 837
+    paper_rank: 837
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -467,9 +531,42 @@ results:
 - &id002
   dataset: WN18
   rows:
-  - model: TripleRE
+  - model: Inverse Model
+    model_key: inverse model
+    model_plain: Inverse Model
+    value: 0.963
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '1707.01476'
+    title: Knowledge Graphs
+    date: Jul 5, 2017
+    date_display: Jul 2017
+    date_iso: '2017-07-05'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/TimDettmers/ConvE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.963
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: RotatE
     model_key: rotate
-    model_plain: TripleRE
+    model_plain: RotatE
     value: 0.949
     std: 0.0
     metric: MRR
@@ -492,13 +589,46 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.949
     sort_std: 0.0
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: ConvE
+    model_key: conve
+    model_plain: ConvE
+    value: 0.943
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1707.01476'
+    title: Knowledge Graphs
+    date: Jul 5, 2017
+    date_display: Jul 2017
+    date_iso: '2017-07-05'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/TimDettmers/ConvE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.943
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: ComplEx
     model_key: complex
@@ -536,8 +666,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2017-03-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2017-07-05'
+    value_gap_source_date_label: AAAI 2017
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -548,16 +678,16 @@ results:
     today_delta_significant: false
     true_value: 0.941
     true_std: null
-    value_gap_source_arxiv: '1703.06103'
-    value_gap_source_title: Modeling Relational Data with Graph Convolutional Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '1707.01476'
+    value_gap_source_title: Knowledge Graphs
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.941
     sort_std: null
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -623,8 +753,8 @@ results:
     value_note: ''
     sort_value: 0.938
     sort_std: null
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -670,8 +800,8 @@ results:
     at_pub_source_title: Complex Embeddings for Simple Link Prediction
     at_pub_source_date_iso: '2016-06-19'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2016-06-19'
-    value_gap_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2017-03-17'
+    value_gap_source_date_label: '2017'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -682,16 +812,16 @@ results:
     today_delta_significant: false
     true_value: 0.938
     true_std: null
-    value_gap_source_arxiv: '1606.06357'
-    value_gap_source_title: Complex Embeddings for Simple Link Prediction
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '1703.06103'
+    value_gap_source_title: Modeling Relational Data with Graph Convolutional Networks
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.938
     sort_std: null
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -737,8 +867,8 @@ results:
     at_pub_source_title: Complex Embeddings for Simple Link Prediction
     at_pub_source_date_iso: '2016-06-19'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2016-06-19'
-    value_gap_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2017-07-05'
+    value_gap_source_date_label: AAAI 2017
     gap_vs_at_pub: 0.009000000000000008
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -749,16 +879,16 @@ results:
     today_delta_significant: true
     true_value: 0.822
     true_std: null
-    value_gap_source_arxiv: '1606.06357'
-    value_gap_source_title: Complex Embeddings for Simple Link Prediction
+    value_gap_source_arxiv: '1707.01476'
+    value_gap_source_title: Knowledge Graphs
     value_gap_source_is_current_paper: false
     value_gap: 0.009000000000000008
     has_value_note: false
     value_note: ''
     sort_value: 0.822
     sort_std: null
-    global_rank: 5
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 9
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -824,8 +954,8 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -871,8 +1001,8 @@ results:
     at_pub_source_title: Complex Embeddings for Simple Link Prediction
     at_pub_source_date_iso: '2016-06-19'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2016-06-19'
-    value_gap_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2017-03-17'
+    value_gap_source_date_label: '2017'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -883,16 +1013,16 @@ results:
     today_delta_significant: false
     true_value: 0.454
     true_std: null
-    value_gap_source_arxiv: '1606.06357'
-    value_gap_source_title: Complex Embeddings for Simple Link Prediction
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '1703.06103'
+    value_gap_source_title: Modeling Relational Data with Graph Convolutional Networks
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.454
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -958,8 +1088,8 @@ results:
     value_note: ''
     sort_value: 0.075
     sort_std: null
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

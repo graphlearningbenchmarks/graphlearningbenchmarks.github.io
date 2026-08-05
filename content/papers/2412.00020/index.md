@@ -403,8 +403,8 @@ results:
     value_note: ''
     sort_value: 0.9603
     sort_std: 0.0069
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -470,8 +470,8 @@ results:
     value_note: ''
     sort_value: 0.9586
     sort_std: 0.0014
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -537,8 +537,8 @@ results:
     value_note: ''
     sort_value: 0.95
     sort_std: 0.0081
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -604,8 +604,8 @@ results:
     value_note: ''
     sort_value: 0.9372
     sort_std: 0.0068
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -671,13 +671,147 @@ results:
     value_note: ''
     sort_value: 0.9316
     sort_std: 0.0087
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
+    comparison_source_title: Lorentzian Graph Convolutional Networks
+    comparison_source_arxiv: '2104.07477'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.8102
+    std: 0.0179
+    paper_value: 0.8102
+    paper_std: 0.0179
+    metric: AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: velickovic2018graph
+    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 40% training ratio supervised setting
+    date: Nov 16, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-16'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.913
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2104.07477'
+    at_pub_source_title: Lorentzian Graph Convolutional Networks
+    at_pub_source_date_iso: '2021-04-15'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: 0.1028
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.913
+    true_std: 0.006
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1028
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.913
+    sort_std: 0.006
+    global_rank: 14
+    paper_rank: 22
+    rank_delta: 8
+    rank_delta_abs: 8
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Lorentzian Graph Convolutional Networks
+    comparison_source_arxiv: '2104.07477'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8369
+    std: 0.0125
+    paper_value: 0.8369
+    paper_std: 0.0125
+    metric: AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: kipf2017semi
+    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 40% training ratio supervised setting
+    date: Nov 16, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-16'
+    published_venue: ICLR 2024
+    published_conference: ICLR 2024
+    at_pub_value: 0.911
+    at_pub_std: 0.006
+    at_pub_source_arxiv: '2104.07477'
+    at_pub_source_title: Lorentzian Graph Convolutional Networks
+    at_pub_source_date_iso: '2021-04-15'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: 0.07410000000000005
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.911
+    true_std: 0.006
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.07410000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.911
+    sort_std: 0.006
+    global_rank: 15
+    paper_rank: 21
+    rank_delta: 6
+    rank_delta_abs: 6
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
     comparison_source_title: Lorentzian Graph Convolutional Networks
     comparison_source_arxiv: '2104.07477'
     is_best: false
@@ -739,8 +873,8 @@ results:
     value_note: ''
     sort_value: 0.9067
     sort_std: 0.0149
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -750,13 +884,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.8369
-    std: 0.0125
-    paper_value: 0.8369
-    paper_std: 0.0125
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7535
+    std: null
     metric: AUC
     higher_is_better: true
     is_baseline: true
@@ -766,123 +898,23 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
+    arxiv_id: '2401.14155'
+    title: Alleviating Structural Distribution Shift in Graph Anomaly Detection
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/blacksingular/wsdm_GDN
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: kipf2017semi
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 40% training ratio supervised setting
-    date: Nov 16, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-16'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.911
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2104.07477'
-    at_pub_source_title: Lorentzian Graph Convolutional Networks
-    at_pub_source_date_iso: '2021-04-15'
-    at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2023-02-27'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.07410000000000005
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8667
-    true_std: null
-    value_gap_source_arxiv: '2401.14155'
-    value_gap_source_title: Alleviating Structural Distribution Shift in Graph Anomaly
-      Detection
-    value_gap_source_is_current_paper: false
-    value_gap: 0.02980000000000005
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8667
+    is_global_top: true
+    global_rank: 26
+    sort_value: 0.7535
     sort_std: null
-    global_rank: 15
-    paper_rank: 16
-    rank_delta: 1
-    rank_delta_abs: 1
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Lorentzian Graph Convolutional Networks
-    comparison_source_arxiv: '2104.07477'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.8102
-    std: 0.0179
-    paper_value: 0.8102
-    paper_std: 0.0179
-    metric: AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: velickovic2018graph
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 40% training ratio supervised setting
-    date: Nov 16, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-16'
-    published_venue: ICLR 2024
-    published_conference: ICLR 2024
-    at_pub_value: 0.913
-    at_pub_std: 0.006
-    at_pub_source_arxiv: '2104.07477'
-    at_pub_source_title: Lorentzian Graph Convolutional Networks
-    at_pub_source_date_iso: '2021-04-15'
-    at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2024-11-16'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.1028
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8102
-    true_std: 0.0179
-    value_gap_source_arxiv: '2412.00020'
-    value_gap_source_title: Partitioning Message Passing for Graph Fraud Detection
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8102
-    sort_std: 0.0179
-    global_rank: 18
-    paper_rank: 18
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Lorentzian Graph Convolutional Networks
-    comparison_source_arxiv: '2104.07477'
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: AUC

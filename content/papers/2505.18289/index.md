@@ -202,9 +202,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: non-convex counterparts
+  - model: StructPosGSSL-FA
     model_key: structposgssl-fa
-    model_plain: non-convex counterparts
+    model_plain: StructPosGSSL-FA
     value: 0.79
     std: 0.0243
     metric: Accuracy

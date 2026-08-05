@@ -70,8 +70,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - W2PGNN
-mrr: 0.0043
-adjusted_mrr: 0.0043
+mrr: 0.0042
+adjusted_mrr: 0.0042
 mrr_dataset_count: 3
 benchmark_categories:
 - MoleculeNet
@@ -88,9 +88,9 @@ results:
 - &id001
   dataset: BACE
   rows:
-  - model: MAGPrompt+
+  - model: ProtoMol
     model_key: protomol
-    model_plain: MAGPrompt+
+    model_plain: ProtoMol
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MMSG
     model_key: mmsg
-    model_plain: MAGPrompt+
+    model_plain: MMSG
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -156,9 +156,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MemGNN
     model_key: memgnn
-    model_plain: MAGPrompt+
+    model_plain: MemGNN
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -184,6 +184,40 @@ results:
     global_rank: 3
     sort_value: 0.907
     sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8646
+    std: 0.0081
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 41
+    sort_value: 0.8646
+    sort_std: 0.0081
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -246,8 +280,8 @@ results:
     value_note: ''
     sort_value: 0.7486
     sort_std: null
-    global_rank: 242
-    paper_rank: 242
+    global_rank: 248
+    paper_rank: 248
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -314,8 +348,8 @@ results:
     value_note: ''
     sort_value: 0.7354
     sort_std: null
-    global_rank: 248
-    paper_rank: 248
+    global_rank: 253
+    paper_rank: 253
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -382,8 +416,8 @@ results:
     value_note: ''
     sort_value: 0.7152
     sort_std: null
-    global_rank: 260
-    paper_rank: 260
+    global_rank: 265
+    paper_rank: 265
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -450,8 +484,8 @@ results:
     value_note: ''
     sort_value: 0.7152
     sort_std: null
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 266
+    paper_rank: 266
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -518,8 +552,8 @@ results:
     value_note: ''
     sort_value: 0.7152
     sort_std: null
-    global_rank: 262
-    paper_rank: 262
+    global_rank: 267
+    paper_rank: 267
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -586,8 +620,8 @@ results:
     value_note: ''
     sort_value: 0.7021
     sort_std: null
-    global_rank: 272
-    paper_rank: 272
+    global_rank: 277
+    paper_rank: 277
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -654,8 +688,8 @@ results:
     value_note: ''
     sort_value: 0.6848
     sort_std: null
-    global_rank: 279
-    paper_rank: 279
+    global_rank: 284
+    paper_rank: 284
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -710,9 +744,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: CamS-LLaMA
     model_key: cams-llama
-    model_plain: MAGPrompt+
+    model_plain: CamS-LLaMA
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -744,9 +778,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: MAGPrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -778,6 +812,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8875
+    std: 0.0049
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 32
+    sort_value: 0.8875
+    sort_std: 0.0049
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: Betweenness Centrality
     model_key: betweenness centrality
@@ -836,8 +904,8 @@ results:
     value_note: ''
     sort_value: 0.6741
     sort_std: null
-    global_rank: 213
-    paper_rank: 213
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -904,8 +972,8 @@ results:
     value_note: ''
     sort_value: 0.6565
     sort_std: null
-    global_rank: 250
-    paper_rank: 250
+    global_rank: 256
+    paper_rank: 256
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -973,8 +1041,8 @@ results:
     value_note: ''
     sort_value: 0.6565
     sort_std: null
-    global_rank: 251
-    paper_rank: 251
+    global_rank: 257
+    paper_rank: 257
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1041,8 +1109,8 @@ results:
     value_note: ''
     sort_value: 0.6546
     sort_std: null
-    global_rank: 256
-    paper_rank: 256
+    global_rank: 262
+    paper_rank: 262
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1109,8 +1177,8 @@ results:
     value_note: ''
     sort_value: 0.6267
     sort_std: null
-    global_rank: 284
-    paper_rank: 284
+    global_rank: 290
+    paper_rank: 290
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1177,8 +1245,8 @@ results:
     value_note: ''
     sort_value: 0.6236
     sort_std: null
-    global_rank: 287
-    paper_rank: 287
+    global_rank: 293
+    paper_rank: 293
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1245,8 +1313,8 @@ results:
     value_note: ''
     sort_value: 0.61
     sort_std: null
-    global_rank: 290
-    paper_rank: 290
+    global_rank: 296
+    paper_rank: 296
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1268,9 +1336,9 @@ results:
 - &id003
   dataset: ClinTox
   rows:
-  - model: EdgePrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: EdgePrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.993
     std: 0.004
     metric: ROC-AUC
@@ -1303,9 +1371,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: EdgePrompt+
+    model_plain: KA-GCN
     value: 0.992
     std: 0.005
     metric: ROC-AUC
@@ -1337,9 +1405,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: EdgePrompt+
+    model_plain: KA-GAT
     value: 0.991
     std: 0.005
     metric: ROC-AUC
@@ -1370,6 +1438,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.913
+    std: 0.017
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.03806'
+    title: 'OOD-GNN: Out-of-Distribution Generalized Graph Neural Network'
+    date: Dec 7, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-07'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.913
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: EGI
     model_key: egi
@@ -1429,8 +1530,8 @@ results:
     value_note: ''
     sort_value: 0.6521
     sort_std: null
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 202
+    paper_rank: 202
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1498,8 +1599,8 @@ results:
     value_note: ''
     sort_value: 0.6421
     sort_std: null
-    global_rank: 205
-    paper_rank: 205
+    global_rank: 207
+    paper_rank: 207
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1567,8 +1668,8 @@ results:
     value_note: ''
     sort_value: 0.6302
     sort_std: null
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 214
+    paper_rank: 214
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1636,8 +1737,8 @@ results:
     value_note: ''
     sort_value: 0.6299
     sort_std: null
-    global_rank: 214
-    paper_rank: 214
+    global_rank: 216
+    paper_rank: 216
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1705,8 +1806,8 @@ results:
     value_note: ''
     sort_value: 0.6058
     sort_std: null
-    global_rank: 218
-    paper_rank: 218
+    global_rank: 221
+    paper_rank: 221
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1774,8 +1875,8 @@ results:
     value_note: ''
     sort_value: 0.6035
     sort_std: null
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 222
+    paper_rank: 222
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1843,8 +1944,8 @@ results:
     value_note: ''
     sort_value: 0.6035
     sort_std: null
-    global_rank: 220
-    paper_rank: 220
+    global_rank: 223
+    paper_rank: 223
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -63,9 +63,9 @@ proposed_models:
 - ULTRA-DP (Edge + k-NN)
 - ULTRA-DP (Edge + k-NN) - init with Edge
 - ULTRA-DP (Edge + k-NN) - init with k-NN
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0067
+adjusted_mrr: 0.0022
+mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
 benchmark_coverage:
@@ -81,9 +81,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: SlotGAT
+  - model: HERec
     model_key: herec
-    model_plain: SlotGAT
+    model_plain: HERec
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -114,9 +114,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: HetSANN
     model_key: hetsann
-    model_plain: SlotGAT
+    model_plain: HetSANN
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SlotGAT
+  - model: DeepWalk
     model_key: deepwalk
-    model_plain: SlotGAT
+    model_plain: DeepWalk
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -175,6 +175,39 @@ results:
     global_rank: 3
     sort_value: 0.9941
     sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.946
+    std: 0.0031
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.16401'
+    title: Graph Neural Networks with a Distribution of Parametrized Graphs
+    date: Oct 25, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-25'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.946
+    sort_std: 0.0031
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -216,8 +249,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -226,17 +259,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.785
+    true_std: 0.007
+    value_gap_source_arxiv: '2310.14845'
+    value_gap_source_title: 'ULTRA-DP: Unifying Graph Pre-training with Multi-task
+      Graph Dual Prompt'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.785
     sort_std: 0.007
-    global_rank: 135
+    global_rank: 149
+    paper_rank: 149
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -278,8 +317,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -288,17 +327,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.779
+    true_std: 0.002
+    value_gap_source_arxiv: '2310.14845'
+    value_gap_source_title: 'ULTRA-DP: Unifying Graph Pre-training with Multi-task
+      Graph Dual Prompt'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.779
     sort_std: 0.002
-    global_rank: 138
+    global_rank: 152
+    paper_rank: 152
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -340,8 +385,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -350,17 +395,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.773
+    true_std: 0.006
+    value_gap_source_arxiv: '2310.14845'
+    value_gap_source_title: 'ULTRA-DP: Unifying Graph Pre-training with Multi-task
+      Graph Dual Prompt'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.773
     sort_std: 0.006
-    global_rank: 140
+    global_rank: 154
+    paper_rank: 154
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -402,8 +453,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -412,17 +463,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.766
+    true_std: 0.001
+    value_gap_source_arxiv: '2310.14845'
+    value_gap_source_title: 'ULTRA-DP: Unifying Graph Pre-training with Multi-task
+      Graph Dual Prompt'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.766
     sort_std: 0.001
-    global_rank: 141
+    global_rank: 157
+    paper_rank: 157
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -464,8 +521,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -474,17 +531,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.763
+    true_std: 0.007
+    value_gap_source_arxiv: '2310.14845'
+    value_gap_source_title: 'ULTRA-DP: Unifying Graph Pre-training with Multi-task
+      Graph Dual Prompt'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.763
     sort_std: 0.007
-    global_rank: 142
+    global_rank: 159
+    paper_rank: 159
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -526,8 +589,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -536,17 +599,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.754
+    true_std: 0.003
+    value_gap_source_arxiv: '2310.14845'
+    value_gap_source_title: 'ULTRA-DP: Unifying Graph Pre-training with Multi-task
+      Graph Dual Prompt'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.754
     sort_std: 0.003
-    global_rank: 143
+    global_rank: 161
+    paper_rank: 161
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -588,8 +657,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -598,18 +667,58 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.733
+    true_std: 0.007
+    value_gap_source_arxiv: '2310.14845'
+    value_gap_source_title: 'ULTRA-DP: Unifying Graph Pre-training with Multi-task
+      Graph Dual Prompt'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.733
     sort_std: 0.007
-    global_rank: 149
+    global_rank: 168
+    paper_rank: 168
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6447
+    std: 0.0136
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.07365'
+    title: 'GraphControl: Adding Conditional Control to Universal Graph Pre-trained
+      Models for Graph Domain Transfer Learning'
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: The Web Conference
+    codebase_url: https://github.com/wykk00/GraphControl
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 185
+    sort_value: 0.6447
+    sort_std: 0.0136
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

@@ -76,9 +76,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: C (orthogonal)
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: C (orthogonal)
+    model_plain: GraphTARIF
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -169,9 +169,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 160
-    rank_delta: 158
-    rank_delta_abs: 158
+    paper_rank: 169
+    rank_delta: 167
+    rank_delta_abs: 167
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -238,15 +238,49 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 89
-    rank_delta: 86
-    rank_delta_abs: 86
+    paper_rank: 93
+    rank_delta: 90
+    rank_delta_abs: 90
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Diss-l-ECT: Dissecting Graph Data with local Euler Characteristic
       Transforms'
     comparison_source_arxiv: '2410.02622'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9351
+    std: 0.0006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 8
+    sort_value: 0.9351
+    sort_std: 0.0006
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MSH-GNN
@@ -443,8 +477,8 @@ results:
     value_note: ''
     sort_value: 0.918
     sort_std: 0.0035
-    global_rank: 37
-    paper_rank: 47
+    global_rank: 41
+    paper_rank: 51
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -511,8 +545,8 @@ results:
     value_note: ''
     sort_value: 0.9122
     sort_std: 0.0014
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -559,8 +593,8 @@ results:
       for Node Classification in Large Graphs
     at_pub_source_date_iso: '2023-05-22'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-05-22'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -571,17 +605,17 @@ results:
     today_delta_significant: false
     true_value: 0.9118
     true_std: 0.0017
-    value_gap_source_arxiv: '2305.12677'
-    value_gap_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9118
     sort_std: 0.0017
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -649,8 +683,8 @@ results:
     value_note: ''
     sort_value: 0.9093
     sort_std: 0.0018
-    global_rank: 84
-    paper_rank: 117
+    global_rank: 88
+    paper_rank: 121
     rank_delta: 33
     rank_delta_abs: 33
     rank_delta_direction: worse
@@ -719,10 +753,10 @@ results:
     value_note: ''
     sort_value: 0.905
     sort_std: 0.0091
-    global_rank: 99
-    paper_rank: 180
-    rank_delta: 81
-    rank_delta_abs: 81
+    global_rank: 103
+    paper_rank: 191
+    rank_delta: 88
+    rank_delta_abs: 88
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -767,8 +801,8 @@ results:
       for Node Classification in Large Graphs
     at_pub_source_date_iso: '2023-05-22'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-05-22'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -779,22 +813,56 @@ results:
     today_delta_significant: false
     true_value: 0.8983
     true_std: 0.0016
-    value_gap_source_arxiv: '2305.12677'
-    value_gap_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8983
     sort_std: 0.0016
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8463
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.11907'
+    title: 'GraphFM: A generalist graph transformer that learns transferable representations
+      across diverse domains'
+    date: Jul 16, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/nerdslab/GraphFM
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 394
+    sort_value: 0.8463
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -879,9 +947,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GeoMancer
     model_key: geomancer
-    model_plain: C (orthogonal)
+    model_plain: GeoMancer
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -913,9 +981,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: C (orthogonal)
+    model_plain: GraphTARIF
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -1006,9 +1074,9 @@ results:
     sort_value: 0.9669
     sort_std: 0.0014
     global_rank: 5
-    paper_rank: 134
-    rank_delta: 129
-    rank_delta_abs: 129
+    paper_rank: 148
+    rank_delta: 143
+    rank_delta_abs: 143
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1076,15 +1144,49 @@ results:
     sort_value: 0.9661
     sort_std: 0.0021
     global_rank: 7
-    paper_rank: 43
-    rank_delta: 36
-    rank_delta_abs: 36
+    paper_rank: 47
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
       for Node Classification in Large Graphs
     comparison_source_arxiv: '2305.12677'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9643
+    std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 13
+    sort_value: 0.9643
+    sort_std: 0.0027
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -1146,9 +1248,9 @@ results:
     sort_value: 0.9632
     sort_std: 0.0008
     global_rank: 16
-    paper_rank: 256
-    rank_delta: 240
-    rank_delta_abs: 240
+    paper_rank: 293
+    rank_delta: 277
+    rank_delta_abs: 277
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1284,9 +1386,9 @@ results:
     sort_value: 0.9573
     sort_std: 0.0012
     global_rank: 27
-    paper_rank: 109
-    rank_delta: 82
-    rank_delta_abs: 82
+    paper_rank: 121
+    rank_delta: 94
+    rank_delta_abs: 94
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1353,9 +1455,9 @@ results:
     sort_value: 0.9569
     sort_std: 0.0039
     global_rank: 30
-    paper_rank: 55
-    rank_delta: 25
-    rank_delta_abs: 25
+    paper_rank: 60
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1421,10 +1523,10 @@ results:
     value_note: ''
     sort_value: 0.9549
     sort_std: 0.0014
-    global_rank: 44
-    paper_rank: 98
-    rank_delta: 54
-    rank_delta_abs: 54
+    global_rank: 48
+    paper_rank: 109
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1470,8 +1572,8 @@ results:
       for Node Classification in Large Graphs
     at_pub_source_date_iso: '2023-05-22'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-05-23'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-12-09'
+    value_gap_source_date_label: LoG 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1482,17 +1584,17 @@ results:
     today_delta_significant: false
     true_value: 0.9506
     true_std: 0.0013
-    value_gap_source_arxiv: '2505.17660'
-    value_gap_source_title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking
-      Graph Transformer for Node Classification'
+    value_gap_source_arxiv: '2512.08798'
+    value_gap_source_title: Can TabPFN Compete with GNNs for Node Classification via
+      Graph Tabularization?
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9506
     sort_std: 0.0013
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1539,8 +1641,8 @@ results:
       for Node Classification in Large Graphs
     at_pub_source_date_iso: '2023-05-22'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-05-22'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1551,17 +1653,17 @@ results:
     today_delta_significant: false
     true_value: 0.9486
     true_std: 0.001
-    value_gap_source_arxiv: '2305.12677'
-    value_gap_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9486
     sort_std: 0.001
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1608,8 +1710,8 @@ results:
       for Node Classification in Large Graphs
     at_pub_source_date_iso: '2023-05-22'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-05-22'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1620,17 +1722,17 @@ results:
     today_delta_significant: false
     true_value: 0.9474
     true_std: 0.0013
-    value_gap_source_arxiv: '2305.12677'
-    value_gap_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9474
     sort_std: 0.0013
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1677,8 +1779,8 @@ results:
       for Node Classification in Large Graphs
     at_pub_source_date_iso: '2023-05-22'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-05-22'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-10-06'
+    value_gap_source_date_label: NeurIPS 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1688,23 +1790,56 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.9274
-    true_std: 0.0014
-    value_gap_source_arxiv: '2305.12677'
-    value_gap_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
+    true_std: 0.0013
+    value_gap_source_arxiv: '2510.04522'
+    value_gap_source_title: 'Toward a Unified Geometry Understanding: Riemannian Diffusion
+      Framework for Graph Generation and Prediction'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9274
-    sort_std: 0.0014
-    global_rank: 254
-    paper_rank: 254
+    sort_std: 0.0013
+    global_rank: 289
+    paper_rank: 289
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.9128
+    std: 0.0063
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.02285'
+    title: Clarify Confused Nodes via Separated Learning
+    date: Jun 4, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-04'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: https://github.com/GISec-Team/NCGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 434
+    sort_value: 0.9128
+    sort_std: 0.0063
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1721,9 +1856,9 @@ results:
 - &id006
   dataset: COLLAB
   rows:
-  - model: GPM
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: GPM
+    model_plain: WL-MLP
     value: 0.9792
     std: null
     metric: Accuracy
@@ -1823,9 +1958,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GPM
+  - model: CoCN
     model_key: cocn
-    model_plain: GPM
+    model_plain: CoCN
     value: 0.8722
     std: 0.0013
     metric: Accuracy
@@ -2029,8 +2164,8 @@ results:
       with Graph Kernels'
     at_pub_source_date_iso: '2019-05-30'
     at_pub_source_date_label: NeurIPS 2019
-    value_gap_source_date_iso: '2019-05-30'
-    value_gap_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2041,10 +2176,10 @@ results:
     today_delta_significant: false
     true_value: 0.836
     true_std: 0.01
-    value_gap_source_arxiv: '1905.13192'
-    value_gap_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
-      with Graph Kernels'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -2057,6 +2192,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.826
+    std: 0.022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.11714'
+    title: Scalable Expressiveness through Preprocessed Graph Perturbations
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/Danial-sb/SE2P
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.826
+    sort_std: 0.022
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2118,9 +2286,9 @@ results:
     sort_value: 0.822
     sort_std: 0.021
     global_rank: 37
-    paper_rank: 130
-    rank_delta: 93
-    rank_delta_abs: 93
+    paper_rank: 135
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2185,8 +2353,8 @@ results:
     value_note: ''
     sort_value: 0.814
     sort_std: 0.014
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2253,8 +2421,8 @@ results:
     value_note: ''
     sort_value: 0.814
     sort_std: 0.015
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2301,8 +2469,8 @@ results:
       Theory and Practice'
     at_pub_source_date_iso: '2024-08-21'
     at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-08-21'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2313,17 +2481,17 @@ results:
     today_delta_significant: false
     true_value: 0.813
     true_std: 0.002
-    value_gap_source_arxiv: '2408.11370'
-    value_gap_source_title: 'Graph Classification via Reference Distribution Learning:
-      Theory and Practice'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.813
     sort_std: 0.002
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2369,8 +2537,8 @@ results:
     at_pub_source_title: Structural Entropy Guided Graph Hierarchical Pooling
     at_pub_source_date_iso: '2022-06-26'
     at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2022-06-26'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-10-09'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: 0.00039999999999995595
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2381,21 +2549,55 @@ results:
     today_delta_significant: false
     true_value: 0.8074
     true_std: 0.0054
-    value_gap_source_arxiv: '2206.13510'
-    value_gap_source_title: Structural Entropy Guided Graph Hierarchical Pooling
+    value_gap_source_arxiv: '2410.06746'
+    value_gap_source_title: Cluster-wise Graph Transformer with Dual-granularity Kernelized
+      Attention
     value_gap_source_is_current_paper: false
     value_gap: 0.00039999999999995595
     has_value_note: false
     value_note: ''
     sort_value: 0.8074
     sort_std: 0.0054
-    global_rank: 109
-    paper_rank: 110
+    global_rank: 113
+    paper_rank: 114
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.792
+    std: 0.024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 180
+    sort_value: 0.792
+    sort_std: 0.024
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2456,8 +2658,8 @@ results:
     value_note: ''
     sort_value: 0.784
     sort_std: 0.025
-    global_rank: 195
-    paper_rank: 197
+    global_rank: 206
+    paper_rank: 208
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -2524,10 +2726,10 @@ results:
     value_note: ''
     sort_value: 0.7759
     sort_std: 0.0224
-    global_rank: 215
-    paper_rank: 301
-    rank_delta: 86
-    rank_delta_abs: 86
+    global_rank: 228
+    paper_rank: 320
+    rank_delta: 92
+    rank_delta_abs: 92
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2571,8 +2773,8 @@ results:
     at_pub_source_title: Graph Capsule Convolutional Neural Networks
     at_pub_source_date_iso: '2018-05-21'
     at_pub_source_date_label: ICML 2018
-    value_gap_source_date_iso: '2018-05-21'
-    value_gap_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2020-07-16'
+    value_gap_source_date_label: NeurIPS 2020
     gap_vs_at_pub: 9.999999999998899e-05
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2582,17 +2784,17 @@ results:
     insignificant_value_gap: true
     today_delta_significant: false
     true_value: 0.5211
-    true_std: 0.0071
-    value_gap_source_arxiv: '1805.08090'
-    value_gap_source_title: Graph Capsule Convolutional Neural Networks
+    true_std: 0.007
+    value_gap_source_arxiv: '2007.08349'
+    value_gap_source_title: Natural Graph Networks
     value_gap_source_is_current_paper: false
     value_gap: 9.999999999998899e-05
     has_value_note: false
     value_note: ''
     sort_value: 0.5211
-    sort_std: 0.0071
-    global_rank: 384
-    paper_rank: 384
+    sort_std: 0.007
+    global_rank: 407
+    paper_rank: 407
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2614,9 +2816,9 @@ results:
 - &id003
   dataset: Coauthor-Physics
   rows:
-  - model: SelfGNN LDP
+  - model: GeoMancer
     model_key: geomancer
-    model_plain: SelfGNN LDP
+    model_plain: GeoMancer
     value: 0.9878
     std: 0.0012
     metric: Accuracy
@@ -2648,9 +2850,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SelfGNN LDP
+  - model: LGD
     model_key: lgd
-    model_plain: SelfGNN LDP
+    model_plain: LGD
     value: 0.9855
     std: 0.0012
     metric: Accuracy
@@ -2750,6 +2952,73 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.9617
+    std: 0.0008
+    paper_value: 0.9617
+    paper_std: 0.0008
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: velivckovic2017graph
+    variant_inference_reason: 'dataset: fuzzy match to coauthor-physics (score=81)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on CoauthorPhy benchmark graph
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9782
+    at_pub_std: 0.0028
+    at_pub_source_arxiv: '2411.17296'
+    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    at_pub_source_date_iso: '2024-11-26'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-11-26'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.01649999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9782
+    true_std: 0.0028
+    value_gap_source_arxiv: '2411.17296'
+    value_gap_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.01649999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9782
+    sort_std: 0.0028
+    global_rank: 9
+    paper_rank: 84
+    rank_delta: 75
+    rank_delta_abs: 75
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    comparison_source_arxiv: '2411.17296'
+    is_best: false
+    is_std_outlier: false
   - model: GPRGNN
     model_key: gprgnn
     model_plain: GPRGNN
@@ -2806,15 +3075,82 @@ results:
     value_note: ''
     sort_value: 0.9777
     sort_std: 0.0015
-    global_rank: 4
-    paper_rank: 39
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 10
+    paper_rank: 49
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Clarify Confused Nodes via Separated Learning
     comparison_source_arxiv: '2306.02285'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9618
+    std: 0.0007
+    paper_value: 0.9618
+    paper_std: 0.0007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: kipf2016semi
+    variant_inference_reason: 'dataset: fuzzy match to coauthor-physics (score=81)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on CoauthorPhy benchmark graph
+    date: May 21, 2025
+    date_display: May 2025
+    date_iso: '2025-05-21'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9774
+    at_pub_std: 0.0035
+    at_pub_source_arxiv: '2411.17296'
+    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    at_pub_source_date_iso: '2024-11-26'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-11-26'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.015600000000000058
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9774
+    true_std: 0.0035
+    value_gap_source_arxiv: '2411.17296'
+    value_gap_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.015600000000000058
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9774
+    sort_std: 0.0035
+    global_rank: 12
+    paper_rank: 82
+    rank_delta: 70
+    rank_delta_abs: 70
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    comparison_source_arxiv: '2411.17296'
     is_best: false
     is_std_outlier: false
   - model: N^2
@@ -2874,8 +3210,8 @@ results:
     value_note: ''
     sort_value: 0.9756
     sort_std: 0.0028
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2885,13 +3221,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.9618
-    std: 0.0007
-    paper_value: 0.9618
-    paper_std: 0.0007
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9739
+    std: 0.0018
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -2901,124 +3235,23 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
+    arxiv_id: '2306.02285'
+    title: Clarify Confused Nodes via Separated Learning
+    date: Jun 4, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-04'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: https://github.com/GISec-Team/NCGNN
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: kipf2016semi
-    variant_inference_reason: 'dataset: fuzzy match to coauthor-physics (score=81)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification on CoauthorPhy benchmark graph
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9774
-    at_pub_std: 0.0035
-    at_pub_source_arxiv: '2411.17296'
-    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    at_pub_source_date_iso: '2024-11-26'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.015600000000000058
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9744
-    true_std: 0.0014
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.012600000000000056
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9744
-    sort_std: 0.0014
-    global_rank: 9
-    paper_rank: 71
-    rank_delta: 62
-    rank_delta_abs: 62
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    comparison_source_arxiv: '2411.17296'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.9617
-    std: 0.0008
-    paper_value: 0.9617
-    paper_std: 0.0008
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: velivckovic2017graph
-    variant_inference_reason: 'dataset: fuzzy match to coauthor-physics (score=81)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification on CoauthorPhy benchmark graph
-    date: May 21, 2025
-    date_display: May 2025
-    date_iso: '2025-05-21'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.9782
-    at_pub_std: 0.0028
-    at_pub_source_arxiv: '2411.17296'
-    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    at_pub_source_date_iso: '2024-11-26'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2026-05-18'
-    value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.01649999999999996
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9732
-    true_std: 0.0006
-    value_gap_source_arxiv: '2605.20248'
-    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
-      in Node Classification'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.011499999999999955
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9732
-    sort_std: 0.0006
-    global_rank: 19
-    paper_rank: 73
-    rank_delta: 54
-    rank_delta_abs: 54
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    comparison_source_arxiv: '2411.17296'
+    is_global_top: true
+    global_rank: 22
+    sort_value: 0.9739
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Exphormer
@@ -3079,8 +3312,8 @@ results:
     value_note: ''
     sort_value: 0.972
     sort_std: 0.001
-    global_rank: 28
-    paper_rank: 29
+    global_rank: 38
+    paper_rank: 39
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -3127,8 +3360,8 @@ results:
       for Node Classification in Large Graphs
     at_pub_source_date_iso: '2023-05-22'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-05-22'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3139,17 +3372,17 @@ results:
     today_delta_significant: false
     true_value: 0.9705
     true_std: 0.0005
-    value_gap_source_arxiv: '2305.12677'
-    value_gap_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
-      for Node Classification in Large Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9705
     sort_std: 0.0005
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3196,8 +3429,8 @@ results:
       for Node Classification in Large Graphs
     at_pub_source_date_iso: '2023-05-22'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2025-05-23'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-04-10'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3208,22 +3441,56 @@ results:
     today_delta_significant: false
     true_value: 0.9654
     true_std: 0.0007
-    value_gap_source_arxiv: '2505.17660'
-    value_gap_source_title: 'DAM-GT: Dual Positional Encoding-Based Attention Masking
-      Graph Transformer for Node Classification'
+    value_gap_source_arxiv: '2604.08980'
+    value_gap_source_title: 'Neighbourhood Transformer: Switchable Attention for Monophily-Aware
+      Graph Learning'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9654
     sort_std: 0.0007
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.9597
+    std: 0.0007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 92
+    sort_value: 0.9597
+    sort_std: 0.0007
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -3308,9 +3575,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -3333,47 +3633,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: RTPool
     model_key: rtpool
@@ -3432,8 +3698,8 @@ results:
     value_note: ''
     sort_value: 0.947
     sort_std: 0.033
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3499,10 +3765,10 @@ results:
     value_note: ''
     sort_value: 0.944
     sort_std: 0.037
-    global_rank: 21
-    paper_rank: 40
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 28
+    paper_rank: 53
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3566,10 +3832,10 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.029
-    global_rank: 34
-    paper_rank: 217
-    rank_delta: 183
-    rank_delta_abs: 183
+    global_rank: 43
+    paper_rank: 254
+    rank_delta: 211
+    rank_delta_abs: 211
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3634,8 +3900,8 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.041
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3681,8 +3947,8 @@ results:
     at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     at_pub_source_date_iso: '2021-06-23'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-09-16'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3693,16 +3959,17 @@ results:
     today_delta_significant: false
     true_value: 0.922
     true_std: 0.075
-    value_gap_source_arxiv: '2209.08179'
-    value_gap_source_title: Cell Attention Networks
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.922
     sort_std: 0.075
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3711,6 +3978,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.922
+    std: 0.044
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 71
+    sort_value: 0.922
+    sort_std: 0.044
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: PPGNs
     model_key: ppgns
@@ -3748,8 +4048,8 @@ results:
     at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     at_pub_source_date_iso: '2021-06-23'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-09-16'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3760,16 +4060,17 @@ results:
     today_delta_significant: false
     true_value: 0.906
     true_std: 0.087
-    value_gap_source_arxiv: '2209.08179'
-    value_gap_source_title: Cell Attention Networks
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.906
     sort_std: 0.087
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3816,8 +4117,8 @@ results:
       with Graph Kernels'
     at_pub_source_date_iso: '2019-05-30'
     at_pub_source_date_label: NeurIPS 2019
-    value_gap_source_date_iso: '2019-05-30'
-    value_gap_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3828,17 +4129,17 @@ results:
     today_delta_significant: false
     true_value: 0.9
     true_std: 0.085
-    value_gap_source_arxiv: '1905.13192'
-    value_gap_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
-      with Graph Kernels'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9
     sort_std: 0.085
-    global_rank: 171
-    paper_rank: 171
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3906,10 +4207,10 @@ results:
     value_note: ''
     sort_value: 0.899
     sort_std: 0.042
-    global_rank: 183
-    paper_rank: 512
-    rank_delta: 329
-    rank_delta_abs: 329
+    global_rank: 217
+    paper_rank: 564
+    rank_delta: 347
+    rank_delta_abs: 347
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3954,8 +4255,8 @@ results:
     at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     at_pub_source_date_iso: '2021-06-23'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-06-06'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3966,16 +4267,17 @@ results:
     today_delta_significant: false
     true_value: 0.894
     true_std: 0.016
-    value_gap_source_arxiv: '2306.03561'
-    value_gap_source_title: 'CIN++: Enhancing Topological Message Passing'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.894
     sort_std: 0.016
-    global_rank: 222
-    paper_rank: 222
+    global_rank: 260
+    paper_rank: 260
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4043,13 +4345,46 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.061
-    global_rank: 223
-    paper_rank: 418
-    rank_delta: 195
-    rank_delta_abs: 195
+    global_rank: 261
+    paper_rank: 464
+    rank_delta: 203
+    rank_delta_abs: 203
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -4111,8 +4446,8 @@ results:
     value_note: ''
     sort_value: 0.863
     sort_std: 0.084
-    global_rank: 390
-    paper_rank: 390
+    global_rank: 435
+    paper_rank: 435
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4159,8 +4494,8 @@ results:
       to Their Embeddings and Back'
     at_pub_source_date_iso: '2018-12-14'
     at_pub_source_date_label: '2018'
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-12-20'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: 0.00029999999999996696
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4170,18 +4505,18 @@ results:
     insignificant_value_gap: true
     today_delta_significant: false
     true_value: 0.8583
-    true_std: 0.0166
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    true_std: 0.0116
+    value_gap_source_arxiv: '2412.17856'
+    value_gap_source_title: Graph Structure Refinement with Energy-based Contrastive
+      Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.00029999999999996696
     has_value_note: false
     value_note: ''
     sort_value: 0.8583
-    sort_std: 0.0166
-    global_rank: 408
-    paper_rank: 408
+    sort_std: 0.0116
+    global_rank: 454
+    paper_rank: 454
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4227,8 +4562,8 @@ results:
     at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     at_pub_source_date_iso: '2021-06-23'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-09-16'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4238,17 +4573,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.839
-    true_std: 0.013
-    value_gap_source_arxiv: '2209.08179'
-    value_gap_source_title: Cell Attention Networks
-    value_gap_source_is_current_paper: false
+    true_std: 0.13
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.839
-    sort_std: 0.013
-    global_rank: 493
-    paper_rank: 493
+    sort_std: 0.13
+    global_rank: 543
+    paper_rank: 543
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4270,9 +4606,9 @@ results:
 - &id008
   dataset: Minesweeper
   rows:
-  - model: ReDiSC
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: ReDiSC
+    model_plain: GraphTARIF
     value: 0.9903
     std: 0.0019
     metric: Accuracy
@@ -4304,9 +4640,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ReDiSC
+  - model: BuNN
     model_key: bunn
-    model_plain: ReDiSC
+    model_plain: BuNN
     value: 0.9899
     std: 0.0016
     metric: Accuracy
@@ -4338,9 +4674,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ReDiSC
+  - model: M3Dphormer
     model_key: m3dphormer
-    model_plain: ReDiSC
+    model_plain: M3Dphormer
     value: 0.9827
     std: 0.002
     metric: Accuracy
@@ -4506,6 +4842,40 @@ results:
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9709
+    std: 0.01
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.9709
+    sort_std: 0.01
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -4892,8 +5262,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-21'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-05-18'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4904,22 +5274,56 @@ results:
     today_delta_significant: false
     true_value: 0.8624
     true_std: 0.0061
-    value_gap_source_arxiv: '2505.15015'
-    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
-      Passing
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2605.20248'
+    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
+      in Node Classification'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8624
     sort_std: 0.0061
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8
+    std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2604.19028'
+    title: Learning Posterior Predictive Distributions for Node Classification from
+      Synthetic Graph Priors
+    date: Apr 21, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-21'
+    venue: 'Accepted to ICLR 2026. OpenReview: https://openreview.net/forum?id=FmxRzlu0rT'
+    codebase_url: https://github.com/jeongwhanchoi/NodePFN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 47
+    sort_value: 0.8
+    sort_std: 0.0
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -4936,9 +5340,9 @@ results:
 - &id005
   dataset: NCI1
   rows:
-  - model: ECC
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: ECC
+    model_plain: WL-MLP
     value: 0.9954
     std: null
     metric: Accuracy
@@ -5027,9 +5431,9 @@ results:
     sort_value: 0.9934
     sort_std: null
     global_rank: 2
-    paper_rank: 93
-    rank_delta: 91
-    rank_delta_abs: 91
+    paper_rank: 100
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5037,9 +5441,9 @@ results:
     comparison_source_arxiv: '2202.10156'
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: GCN
     model_key: gcn
-    model_plain: ECC
+    model_plain: GCN
     value: 0.9727
     std: null
     metric: Accuracy
@@ -5196,9 +5600,9 @@ results:
     sort_value: 0.853
     sort_std: 0.012
     global_rank: 20
-    paper_rank: 48
-    rank_delta: 28
-    rank_delta_abs: 28
+    paper_rank: 52
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5243,8 +5647,8 @@ results:
       via Path Complexes'
     at_pub_source_date_iso: '2023-08-13'
     at_pub_source_date_label: AAAI 2023
-    value_gap_source_date_iso: '2023-08-13'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5255,10 +5659,10 @@ results:
     today_delta_significant: false
     true_value: 0.851
     true_std: 0.015
-    value_gap_source_arxiv: '2308.06838'
-    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
-      Features via Path Complexes'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -5312,8 +5716,8 @@ results:
       with Graph Kernels'
     at_pub_source_date_iso: '2019-05-30'
     at_pub_source_date_label: NeurIPS 2019
-    value_gap_source_date_iso: '2019-05-30'
-    value_gap_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5324,17 +5728,17 @@ results:
     today_delta_significant: false
     true_value: 0.842
     true_std: 0.015
-    value_gap_source_arxiv: '1905.13192'
-    value_gap_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
-      with Graph Kernels'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.842
     sort_std: 0.015
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5381,8 +5785,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2021-03-04'
     at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2023-08-13'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5393,17 +5797,17 @@ results:
     today_delta_significant: false
     true_value: 0.835
     true_std: 0.02
-    value_gap_source_arxiv: '2308.06838'
-    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
-      Features via Path Complexes'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.835
     sort_std: 0.02
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5470,8 +5874,8 @@ results:
     value_note: ''
     sort_value: 0.835
     sort_std: 0.038
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5518,8 +5922,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2021-03-04'
     at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2023-08-13'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5530,22 +5934,56 @@ results:
     today_delta_significant: false
     true_value: 0.832
     true_std: 0.011
-    value_gap_source_arxiv: '2308.06838'
-    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
-      Features via Path Complexes'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.832
     sort_std: 0.011
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8303
+    std: 0.0137
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.01794'
+    title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based Gnn Explainers
+      through In-depth Benchmarking'
+    date: Oct 3, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-03'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/Armagaan/gnn-x-bench
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 81
+    sort_value: 0.8303
+    sort_std: 0.0137
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -5587,8 +6025,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2021-03-04'
     at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2021-03-04'
-    value_gap_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2022-05-28'
+    value_gap_source_date_label: ICML 2022
     gap_vs_at_pub: 0.0010000000000000009
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5599,19 +6037,18 @@ results:
     today_delta_significant: false
     true_value: 0.828
     true_std: 0.022
-    value_gap_source_arxiv: '2103.03212'
-    value_gap_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing
-      Simplicial Networks'
+    value_gap_source_arxiv: '2205.14368'
+    value_gap_source_title: Going Deeper into Permutation-Sensitive Graph Neural Networks
     value_gap_source_is_current_paper: false
     value_gap: 0.0010000000000000009
     has_value_note: false
     value_note: ''
     sort_value: 0.828
     sort_std: 0.022
-    global_rank: 85
-    paper_rank: 93
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 91
+    paper_rank: 100
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5656,8 +6093,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2021-03-04'
     at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2023-08-13'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5668,17 +6105,17 @@ results:
     today_delta_significant: false
     true_value: 0.824
     true_std: 0.013
-    value_gap_source_arxiv: '2308.06838'
-    value_gap_source_title: 'Weisfeiler and Lehman Go Paths: Learning Topological
-      Features via Path Complexes'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.824
     sort_std: 0.013
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5745,8 +6182,8 @@ results:
     value_note: ''
     sort_value: 0.821
     sort_std: 0.016
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5812,10 +6249,10 @@ results:
     value_note: ''
     sort_value: 0.7935
     sort_std: 0.0033
-    global_rank: 262
-    paper_rank: 311
-    rank_delta: 49
-    rank_delta_abs: 49
+    global_rank: 281
+    paper_rank: 331
+    rank_delta: 50
+    rank_delta_abs: 50
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5879,10 +6316,10 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.019
-    global_rank: 394
-    paper_rank: 445
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 414
+    paper_rank: 473
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5948,10 +6385,10 @@ results:
     value_note: ''
     sort_value: 0.7433
     sort_std: 0.0271
-    global_rank: 448
-    paper_rank: 449
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 477
+    paper_rank: 479
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5996,8 +6433,8 @@ results:
       Networks on Graphs
     at_pub_source_date_iso: '2017-04-10'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-04-10'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2018-12-14'
+    value_gap_source_date_label: '2018'
     gap_vs_at_pub: 0.06010000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -6008,19 +6445,19 @@ results:
     today_delta_significant: true
     true_value: 0.6261
     true_std: null
-    value_gap_source_arxiv: '1704.02901'
-    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
-      Networks on Graphs
+    value_gap_source_arxiv: '1901.08296'
+    value_gap_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
     value_gap_source_is_current_paper: false
     value_gap: 0.06010000000000004
     has_value_note: false
     value_note: ''
     sort_value: 0.6261
     sort_std: null
-    global_rank: 560
-    paper_rank: 583
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 603
+    paper_rank: 631
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6041,9 +6478,9 @@ results:
 - &id007
   dataset: RDT-B
   rows:
-  - model: CIN
+  - model: OEPG
     model_key: oepg
-    model_plain: CIN
+    model_plain: OEPG
     value: 0.963
     std: 0.009
     metric: Accuracy
@@ -6143,9 +6580,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CIN
+  - model: GNN-AK+
     model_key: gnn-ak+
-    model_plain: CIN
+    model_plain: GNN-AK+
     value: 0.948
     std: 0.008
     metric: Accuracy
@@ -6280,8 +6717,8 @@ results:
     at_pub_source_title: 'Graph Self-Supervised Learning: A Survey'
     at_pub_source_date_iso: '2021-02-27'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6292,10 +6729,10 @@ results:
     today_delta_significant: false
     true_value: 0.924
     true_std: 0.025
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -6369,8 +6806,8 @@ results:
     value_note: ''
     sort_value: 0.924
     sort_std: 0.021
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6417,8 +6854,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2021-03-04'
     at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2021-03-04'
-    value_gap_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6429,22 +6866,55 @@ results:
     today_delta_significant: false
     true_value: 0.922
     true_std: 0.01
-    value_gap_source_arxiv: '2103.03212'
-    value_gap_source_title: 'Weisfeiler and Lehman Go Topological: Message Passing
-      Simplicial Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.922
     sort_std: 0.01
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.706
+    std: 0.0369
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.08897'
+    title: Motif-driven Subgraph Structure Learning for Graph Classification
+    date: Jun 13, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-13'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 81
+    sort_value: 0.706
+    sort_std: 0.0369
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

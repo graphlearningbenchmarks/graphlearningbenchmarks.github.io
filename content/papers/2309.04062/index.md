@@ -82,9 +82,9 @@ results:
 - &id002
   dataset: BACE
   rows:
-  - model: MAGPrompt+
+  - model: ProtoMol
     model_key: protomol
-    model_plain: MAGPrompt+
+    model_plain: ProtoMol
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -116,9 +116,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MMSG
     model_key: mmsg
-    model_plain: MAGPrompt+
+    model_plain: MMSG
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -150,9 +150,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MemGNN
     model_key: memgnn
-    model_plain: MAGPrompt+
+    model_plain: MemGNN
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -178,6 +178,40 @@ results:
     global_rank: 3
     sort_value: 0.907
     sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8646
+    std: 0.0081
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 41
+    sort_value: 0.8646
+    sort_std: 0.0081
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -240,8 +274,8 @@ results:
     value_note: ''
     sort_value: 0.7271
     sort_std: 0.0721
-    global_rank: 254
-    paper_rank: 254
+    global_rank: 259
+    paper_rank: 259
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -308,8 +342,8 @@ results:
     value_note: ''
     sort_value: 0.7078
     sort_std: 0.0284
-    global_rank: 269
-    paper_rank: 269
+    global_rank: 274
+    paper_rank: 274
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -376,8 +410,8 @@ results:
     value_note: ''
     sort_value: 0.6906
     sort_std: 0.1339
-    global_rank: 277
-    paper_rank: 277
+    global_rank: 282
+    paper_rank: 282
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -444,8 +478,8 @@ results:
     value_note: ''
     sort_value: 0.6649
     sort_std: 0.146
-    global_rank: 285
-    paper_rank: 285
+    global_rank: 290
+    paper_rank: 290
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -512,8 +546,8 @@ results:
     value_note: ''
     sort_value: 0.636
     sort_std: 0.1055
-    global_rank: 290
-    paper_rank: 290
+    global_rank: 295
+    paper_rank: 295
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -580,8 +614,8 @@ results:
     value_note: ''
     sort_value: 0.6016
     sort_std: 0.405
-    global_rank: 299
-    paper_rank: 299
+    global_rank: 304
+    paper_rank: 304
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -648,8 +682,8 @@ results:
     value_note: ''
     sort_value: 0.5882
     sort_std: 0.2827
-    global_rank: 301
-    paper_rank: 301
+    global_rank: 306
+    paper_rank: 306
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -716,8 +750,8 @@ results:
     value_note: ''
     sort_value: 0.5701
     sort_std: 0.0924
-    global_rank: 302
-    paper_rank: 302
+    global_rank: 307
+    paper_rank: 307
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -772,9 +806,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: CamS-LLaMA
     model_key: cams-llama
-    model_plain: MAGPrompt+
+    model_plain: CamS-LLaMA
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -806,9 +840,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: MAGPrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -840,6 +874,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8875
+    std: 0.0049
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 32
+    sort_value: 0.8875
+    sort_std: 0.0049
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: D&D-Node +vn
     model_key: d&d-node +vn
@@ -898,8 +966,8 @@ results:
     value_note: ''
     sort_value: 0.6788
     sort_std: 0.0068
-    global_rank: 195
-    paper_rank: 195
+    global_rank: 200
+    paper_rank: 200
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -966,8 +1034,8 @@ results:
     value_note: ''
     sort_value: 0.6775
     sort_std: 0.0117
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 207
+    paper_rank: 207
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1034,8 +1102,8 @@ results:
     value_note: ''
     sort_value: 0.6754
     sort_std: 0.0028
-    global_rank: 209
-    paper_rank: 209
+    global_rank: 215
+    paper_rank: 215
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1102,8 +1170,8 @@ results:
     value_note: ''
     sort_value: 0.6714
     sort_std: 0.0144
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 225
+    paper_rank: 225
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1170,8 +1238,8 @@ results:
     value_note: ''
     sort_value: 0.6453
     sort_std: 0.0153
-    global_rank: 268
-    paper_rank: 268
+    global_rank: 274
+    paper_rank: 274
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1238,8 +1306,8 @@ results:
     value_note: ''
     sort_value: 0.6358
     sort_std: 0.0088
-    global_rank: 278
-    paper_rank: 278
+    global_rank: 284
+    paper_rank: 284
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1306,8 +1374,8 @@ results:
     value_note: ''
     sort_value: 0.6305
     sort_std: 0.0066
-    global_rank: 282
-    paper_rank: 282
+    global_rank: 288
+    paper_rank: 288
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1374,8 +1442,8 @@ results:
     value_note: ''
     sort_value: 0.6238
     sort_std: 0.012
-    global_rank: 286
-    paper_rank: 286
+    global_rank: 292
+    paper_rank: 292
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1397,9 +1465,9 @@ results:
 - &id004
   dataset: ClinTox
   rows:
-  - model: EdgePrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: EdgePrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.993
     std: 0.004
     metric: ROC-AUC
@@ -1432,9 +1500,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: EdgePrompt+
+    model_plain: KA-GCN
     value: 0.992
     std: 0.005
     metric: ROC-AUC
@@ -1466,9 +1534,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: EdgePrompt+
+    model_plain: KA-GAT
     value: 0.991
     std: 0.005
     metric: ROC-AUC
@@ -1499,6 +1567,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.913
+    std: 0.017
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.03806'
+    title: 'OOD-GNN: Out-of-Distribution Generalized Graph Neural Network'
+    date: Dec 7, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-07'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.913
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: 3DInfomax +mp
     model_key: 3dinfomax +mp
@@ -1557,8 +1658,8 @@ results:
     value_note: ''
     sort_value: 0.6919
     sort_std: 0.0419
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1625,8 +1726,8 @@ results:
     value_note: ''
     sort_value: 0.6834
     sort_std: 0.0468
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 184
+    paper_rank: 184
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1693,8 +1794,8 @@ results:
     value_note: ''
     sort_value: 0.6815
     sort_std: 0.0361
-    global_rank: 183
-    paper_rank: 183
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1761,8 +1862,8 @@ results:
     value_note: ''
     sort_value: 0.6761
     sort_std: 0.0211
-    global_rank: 188
-    paper_rank: 188
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1829,8 +1930,8 @@ results:
     value_note: ''
     sort_value: 0.671
     sort_std: 0.0429
-    global_rank: 193
-    paper_rank: 193
+    global_rank: 195
+    paper_rank: 195
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1897,8 +1998,8 @@ results:
     value_note: ''
     sort_value: 0.6594
     sort_std: 0.0502
-    global_rank: 195
-    paper_rank: 195
+    global_rank: 197
+    paper_rank: 197
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1965,8 +2066,8 @@ results:
     value_note: ''
     sort_value: 0.6141
     sort_std: 0.029
-    global_rank: 216
-    paper_rank: 216
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2033,8 +2134,8 @@ results:
     value_note: ''
     sort_value: 0.5825
     sort_std: 0.0257
-    global_rank: 227
-    paper_rank: 227
+    global_rank: 230
+    paper_rank: 230
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2056,9 +2157,43 @@ results:
 - &id007
   dataset: ESOL
   rows:
-  - model: AMCT
+  - model: 10% ZINC + 10% PubChem
+    model_key: 10% zinc + 10% pubchem
+    model_plain: 10% ZINC + 10% PubChem
+    value: 0.2775
+    std: null
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.2775
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MAT
     model_key: mat
-    model_plain: AMCT
+    model_plain: MAT
     value: 0.278
     std: 0.02
     metric: RMSE
@@ -2082,7 +2217,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.278
     sort_std: 0.02
     comparison_type: global_top
@@ -2090,54 +2225,54 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: AMCT
-    model_key: smiles
-    model_plain: AMCT
-    value: 0.356
-    std: 0.017
+  - model: MoLFormer-XL
+    model_key: molformer-xl
+    model_plain: MoLFormer-XL
+    value: 0.2787
+    std: null
     metric: RMSE
     higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2002.08264'
-    title: Molecule Attention Transformer
-    date: Feb 19, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-19'
-    venue: Graph Representation Learning workshop and Machine Learning and the Physical
-      Sciences workshop at NeurIPS 2019
-    codebase_url: https://github.com/gmum/MAT
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.356
-    sort_std: 0.017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AMCT
-    model_key: graphormer-spis
-    model_plain: AMCT
-    value: 0.484
-    std: 0.005
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2787
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.564
+    std: 0.015
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2305.13987'
     title: On Structural Expressive Power of Graph Transformers
     date: May 23, 2023
@@ -2149,9 +2284,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.484
-    sort_std: 0.005
+    global_rank: 13
+    sort_value: 0.564
+    sort_std: 0.015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2214,8 +2349,8 @@ results:
     value_note: ''
     sort_value: 0.9276
     sort_std: 0.0562
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2282,8 +2417,8 @@ results:
     value_note: ''
     sort_value: 0.9934
     sort_std: 0.0203
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2350,8 +2485,8 @@ results:
     value_note: ''
     sort_value: 1.0097
     sort_std: 0.0381
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2418,8 +2553,8 @@ results:
     value_note: ''
     sort_value: 1.0491
     sort_std: 0.0363
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2486,8 +2621,8 @@ results:
     value_note: ''
     sort_value: 1.0862
     sort_std: 0.0887
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2554,8 +2689,8 @@ results:
     value_note: ''
     sort_value: 1.1074
     sort_std: 0.0735
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2622,8 +2757,8 @@ results:
     value_note: ''
     sort_value: 1.5246
     sort_std: 0.1092
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 138
+    paper_rank: 138
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2690,8 +2825,8 @@ results:
     value_note: ''
     sort_value: 2.0037
     sort_std: 0.1076
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2713,79 +2848,44 @@ results:
 - &id008
   dataset: FreeSolv
   rows:
-  - model: D&D-Node +vn
-    model_key: se(3)-i mpph
-    model_plain: D&D-Node +vn
-    value: 0.354
-    std: 0.053
+  - model: 10% ZINC + 10% PubChem
+    model_key: 10% zinc + 10% pubchem
+    model_plain: 10% ZINC + 10% PubChem
+    value: 0.205
+    std: null
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.07633'
-    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    date: Dec 12, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-12'
-    venue: NeurIPS 2023 AI for Science Workshop
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
-      homology
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.354
-    sort_std: 0.053
+    sort_value: 0.205
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: D&D-Node +vn
-    model_key: ecfp-4 + rf
-    model_plain: D&D-Node +vn
-    value: 0.56
-    std: 0.066
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: random_forest
-    architecture_label: RF
-    architecture_title: Random forest
-    arxiv_id: '2312.07633'
-    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    date: Dec 12, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-12'
-    venue: NeurIPS 2023 AI for Science Workshop
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: trained on ECFP-4 fingerprints
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.56
-    sort_std: 0.066
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: D&D-Node +vn
-    model_key: geomgcl
-    model_plain: D&D-Node +vn
-    value: 0.866
+  - model: MoLFormer-XL
+    model_key: molformer-xl
+    model_plain: MoLFormer-XL
+    value: 0.2308
     std: null
     metric: RMSE
     higher_is_better: false
@@ -2793,24 +2893,92 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2308
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MoLFormer-Base
+    model_key: molformer-base
+    model_plain: MoLFormer-Base
+    value: 0.2596
+    std: null
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2596
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 2.346
+    std: 0.122
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2109.11730'
-    title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property Prediction'
-    date: Sep 24, 2021
-    date_display: Sep 2021
-    date_iso: '2021-09-24'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: mixed
-    feature_source_evidence: The model uses a 2D-3D geometric contrastive scheme to
-      bridge knowledge between 2D chemical semantics and 3D spatial information.
+    arxiv_id: '2106.06130'
+    title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning for Property
+      Prediction'
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/PaddlePaddle/PaddleHelix
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.866
-    sort_std: null
+    global_rank: 73
+    sort_value: 2.346
+    sort_std: 0.122
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2873,8 +3041,8 @@ results:
     value_note: ''
     sort_value: 2.6814
     sort_std: 0.0867
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2941,8 +3109,8 @@ results:
     value_note: ''
     sort_value: 2.7004
     sort_std: 0.0572
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3009,8 +3177,8 @@ results:
     value_note: ''
     sort_value: 3.2935
     sort_std: 0.2872
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3077,8 +3245,8 @@ results:
     value_note: ''
     sort_value: 3.4056
     sort_std: 0.2221
-    global_rank: 97
-    paper_rank: 97
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3145,8 +3313,8 @@ results:
     value_note: ''
     sort_value: 3.5325
     sort_std: 0.0453
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3213,8 +3381,8 @@ results:
     value_note: ''
     sort_value: 3.6445
     sort_std: 0.0734
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3281,8 +3449,8 @@ results:
     value_note: ''
     sort_value: 4.258
     sort_std: 0.3782
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3349,8 +3517,8 @@ results:
     value_note: ''
     sort_value: 4.6854
     sort_std: 0.4345
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3372,9 +3540,9 @@ results:
 - &id005
   dataset: SIDER
   rows:
-  - model: DGI
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: DGI
+    model_plain: KA-GAT
     value: 0.847
     std: 0.002
     metric: ROC-AUC
@@ -3406,9 +3574,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DGI
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: DGI
+    model_plain: KA-GCN
     value: 0.842
     std: 0.001
     metric: ROC-AUC
@@ -3440,9 +3608,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: DGI
+  - model: GraphKAN
     model_key: graphkan
-    model_plain: DGI
+    model_plain: GraphKAN
     value: 0.837
     std: 0.001
     metric: ROC-AUC
@@ -3469,6 +3637,40 @@ results:
     global_rank: 3
     sort_value: 0.837
     sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.6403
+    std: 0.0104
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 66
+    sort_value: 0.6403
+    sort_std: 0.0104
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3667,8 +3869,8 @@ results:
     value_note: ''
     sort_value: 0.6017
     sort_std: 0.0113
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3735,8 +3937,8 @@ results:
     value_note: ''
     sort_value: 0.6005
     sort_std: 0.0058
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 182
+    paper_rank: 182
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3803,8 +4005,8 @@ results:
     value_note: ''
     sort_value: 0.6004
     sort_std: 0.0216
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 183
+    paper_rank: 183
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3871,8 +4073,8 @@ results:
     value_note: ''
     sort_value: 0.5988
     sort_std: 0.0049
-    global_rank: 187
-    paper_rank: 187
+    global_rank: 188
+    paper_rank: 188
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3939,8 +4141,8 @@ results:
     value_note: ''
     sort_value: 0.5979
     sort_std: 0.0086
-    global_rank: 190
-    paper_rank: 190
+    global_rank: 191
+    paper_rank: 191
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4007,8 +4209,8 @@ results:
     value_note: ''
     sort_value: 0.593
     sort_std: 0.0036
-    global_rank: 198
-    paper_rank: 198
+    global_rank: 199
+    paper_rank: 199
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4030,9 +4232,9 @@ results:
 - &id001
   dataset: Tox21
   rows:
-  - model: HOD-GNN
+  - model: HIMP
     model_key: himp
-    model_plain: HOD-GNN
+    model_plain: HIMP
     value: 0.874
     std: 0.005
     metric: ROC-AUC
@@ -4063,9 +4265,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: GINE w/ VN
     model_key: gine w/ vn
-    model_plain: HOD-GNN
+    model_plain: GINE w/ VN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -4096,9 +4298,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: NaiveGINe+ K=3 w/ VN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: HOD-GNN
+    model_plain: NaiveGINe+ K=3 w/ VN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -4128,6 +4330,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.84
+    std: 0.004
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2011.15069'
+    title: Graph convolutions that can finally model local structure
+    date: Nov 30, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-30'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.84
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: D&D-Node +vn
     model_key: d&d-node +vn
@@ -4186,8 +4421,8 @@ results:
     value_note: ''
     sort_value: 0.7556
     sort_std: 0.0068
-    global_rank: 198
-    paper_rank: 198
+    global_rank: 203
+    paper_rank: 203
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4254,8 +4489,8 @@ results:
     value_note: ''
     sort_value: 0.7554
     sort_std: 0.0003
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4322,8 +4557,8 @@ results:
     value_note: ''
     sort_value: 0.7549
     sort_std: 0.0055
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 208
+    paper_rank: 208
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4390,8 +4625,8 @@ results:
     value_note: ''
     sort_value: 0.7541
     sort_std: 0.0014
-    global_rank: 207
-    paper_rank: 207
+    global_rank: 212
+    paper_rank: 212
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4458,8 +4693,8 @@ results:
     value_note: ''
     sort_value: 0.7219
     sort_std: 0.0035
-    global_rank: 283
-    paper_rank: 283
+    global_rank: 292
+    paper_rank: 292
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4526,8 +4761,8 @@ results:
     value_note: ''
     sort_value: 0.719
     sort_std: 0.0051
-    global_rank: 287
-    paper_rank: 287
+    global_rank: 296
+    paper_rank: 296
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4594,8 +4829,8 @@ results:
     value_note: ''
     sort_value: 0.6979
     sort_std: 0.0066
-    global_rank: 299
-    paper_rank: 299
+    global_rank: 308
+    paper_rank: 308
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4662,8 +4897,8 @@ results:
     value_note: ''
     sort_value: 0.6925
     sort_std: 0.0114
-    global_rank: 302
-    paper_rank: 302
+    global_rank: 311
+    paper_rank: 311
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4685,9 +4920,9 @@ results:
 - &id006
   dataset: ToxCast
   rows:
-  - model: GIN (Supervised EdgePred)
+  - model: GeomGCL
     model_key: geomgcl
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: GeomGCL
     value: 0.763
     std: null
     metric: ROC-AUC
@@ -4719,9 +4954,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN (Supervised EdgePred)
+  - model: LiGhT DeepGPT
     model_key: light deepgpt
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: LiGhT DeepGPT
     value: 0.757
     std: 0.011
     metric: ROC-AUC
@@ -5020,6 +5255,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.735
+    std: 0.002
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2011.15069'
+    title: Graph convolutions that can finally model local structure
+    date: Nov 30, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-30'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 18
+    sort_value: 0.735
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

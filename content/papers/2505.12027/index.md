@@ -81,9 +81,9 @@ results:
 - &id001
   dataset: WN18RR
   rows:
-  - model: REEF-AGU
+  - model: OFA-llama2-13b
     model_key: ofa-llama2-13b
-    model_plain: REEF-AGU
+    model_plain: OFA-llama2-13b
     value: 0.9814
     std: 0.0025
     metric: Accuracy
@@ -114,9 +114,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: REEF-AGU
+  - model: OFA-llama2-7b
     model_key: ofa-llama2-7b
-    model_plain: REEF-AGU
+    model_plain: OFA-llama2-7b
     value: 0.9808
     std: 0.0016
     metric: Accuracy
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: REEF-AGU
+  - model: OFA-e5
     model_key: ofa-e5
-    model_plain: REEF-AGU
+    model_plain: OFA-e5
     value: 0.9784
     std: 0.0035
     metric: Accuracy

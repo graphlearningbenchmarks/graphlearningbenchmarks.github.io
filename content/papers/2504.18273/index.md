@@ -75,9 +75,9 @@ results:
 - &id001
   dataset: Chameleon
   rows:
-  - model: FE-GNN
+  - model: Hetero-S (GAT 8-layer)
     model_key: hetero-s (gat 8-layer)
-    model_plain: FE-GNN
+    model_plain: Hetero-S (GAT 8-layer)
     value: 0.8693
     std: null
     metric: Accuracy
@@ -109,9 +109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FE-GNN
+  - model: Trans.Conv+CNA
     model_key: trans.conv+cna
-    model_plain: FE-GNN
+    model_plain: Trans.Conv+CNA
     value: 0.8586
     std: 0.018
     metric: Accuracy
@@ -201,9 +201,9 @@ results:
     sort_value: 0.856
     sort_std: null
     global_rank: 3
-    paper_rank: 95
-    rank_delta: 92
-    rank_delta_abs: 92
+    paper_rank: 96
+    rank_delta: 93
+    rank_delta_abs: 93
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -475,8 +475,8 @@ results:
     value_note: ''
     sort_value: 0.783
     sort_std: 0.006
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -543,8 +543,8 @@ results:
     value_note: ''
     sort_value: 0.7827
     sort_std: 0.0128
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -611,8 +611,8 @@ results:
     value_note: ''
     sort_value: 0.7133
     sort_std: 0.0242
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -678,8 +678,8 @@ results:
     value_note: ''
     sort_value: 0.7033
     sort_std: null
-    global_rank: 63
-    paper_rank: 116
+    global_rank: 64
+    paper_rank: 117
     rank_delta: 53
     rank_delta_abs: 53
     rank_delta_direction: worse
@@ -746,13 +746,46 @@ results:
     value_note: ''
     sort_value: 0.639
     sort_std: 0.0213
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.6215
+    std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2210.03930'
+    title: Hierarchical Graph Transformer with Adaptive Node Sampling
+    date: Oct 8, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-08'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/zaixizhang/ANS-GT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 138
+    sort_value: 0.6215
+    sort_std: 0.0042
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -813,8 +846,8 @@ results:
     value_note: ''
     sort_value: 0.603
     sort_std: 0.0231
-    global_rank: 155
-    paper_rank: 245
+    global_rank: 156
+    paper_rank: 246
     rank_delta: 90
     rank_delta_abs: 90
     rank_delta_direction: worse
@@ -880,8 +913,8 @@ results:
     value_note: ''
     sort_value: 0.5429
     sort_std: null
-    global_rank: 194
-    paper_rank: 245
+    global_rank: 195
+    paper_rank: 246
     rank_delta: 51
     rank_delta_abs: 51
     rank_delta_direction: worse
@@ -971,9 +1004,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FE-GNN
+  - model: Trans.Conv+CNA
     model_key: trans.conv+cna
-    model_plain: FE-GNN
+    model_plain: Trans.Conv+CNA
     value: 0.7747
     std: 0.0128
     metric: Accuracy
@@ -1004,9 +1037,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FE-GNN
+  - model: DHGNN
     model_key: dhgnn
-    model_plain: FE-GNN
+    model_plain: DHGNN
     value: 0.7684
     std: 0.0161
     metric: Accuracy
@@ -1657,6 +1690,40 @@ results:
     comparison_source_arxiv: '2206.02386'
     is_best: false
     is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.4378
+    std: 0.019
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 140
+    sort_value: 0.4378
+    sort_std: 0.019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -1737,9 +1804,9 @@ results:
 - &id003
   dataset: Tolokers
   rows:
-  - model: Schrödinger
+  - model: Polynormer-r
     model_key: polynormer-r
-    model_plain: Schrödinger
+    model_plain: Polynormer-r
     value: 0.8591
     std: 0.0074
     metric: ROC-AUC
@@ -1770,9 +1837,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Schrödinger
+  - model: DC-GNN
     model_key: dc-gnn
-    model_plain: Schrödinger
+    model_plain: DC-GNN
     value: 0.8588
     std: 0.0081
     metric: ROC-AUC
@@ -1803,9 +1870,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Schrödinger
+  - model: Polynormer + Wideformer
     model_key: polynormer + wideformer
-    model_plain: Schrödinger
+    model_plain: Polynormer + Wideformer
     value: 0.8533
     std: 0.0023
     metric: ROC-AUC
@@ -2077,8 +2144,8 @@ results:
     at_pub_source_title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
     at_pub_source_date_iso: '2022-02-14'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2089,8 +2156,9 @@ results:
     today_delta_significant: false
     true_value: 0.8364
     true_std: 0.0067
-    value_gap_source_arxiv: '2403.12529'
-    value_gap_source_title: Contextualized Messages Boost Graph Representations
+    value_gap_source_arxiv: '2605.13383'
+    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
+      in GNNs Via Observables'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -2103,6 +2171,107 @@ results:
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8243
+    std: 0.0044
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 65
+    sort_value: 0.8243
+    sort_std: 0.0044
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: H2GCN
+    model_key: h2gcn
+    model_plain: H2GCN
+    value: 0.7335
+    std: 0.0101
+    paper_value: 0.7335
+    paper_std: 0.0101
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: zhu2020beyond
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on Tolokers
+    date: Apr 25, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7335
+    at_pub_std: 0.0101
+    at_pub_source_arxiv: '2202.07082'
+    at_pub_source_title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
+    at_pub_source_date_iso: '2022-02-14'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7815
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.04799999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7815
+    sort_std: null
+    global_rank: 102
+    paper_rank: 130
+    rank_delta: 28
+    rank_delta_abs: 28
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2164,10 +2333,10 @@ results:
     value_note: ''
     sort_value: 0.7362
     sort_std: 0.002
-    global_rank: 110
-    paper_rank: 114
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 128
+    paper_rank: 131
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2232,76 +2401,8 @@ results:
     value_note: ''
     sort_value: 0.7339
     sort_std: 0.0117
-    global_rank: 111
-    paper_rank: 111
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    value: 0.7335
-    std: 0.0101
-    paper_value: 0.7335
-    paper_std: 0.0101
-    metric: ROC-AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: zhu2020beyond
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on Tolokers
-    date: Apr 25, 2025
-    date_display: Apr 2025
-    date_iso: '2025-04-25'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7335
-    at_pub_std: 0.0101
-    at_pub_source_arxiv: '2202.07082'
-    at_pub_source_title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    at_pub_source_date_iso: '2022-02-14'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2025-12-16'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7335
-    true_std: 0.0101
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7335
-    sort_std: 0.0101
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2368,8 +2469,8 @@ results:
     value_note: ''
     sort_value: 0.7294
     sort_std: 0.0097
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2391,9 +2492,9 @@ results:
 - &id004
   dataset: arxiv-year
   rows:
-  - model: DirGCN
+  - model: LargeScaleNet
     model_key: largescalenet
-    model_plain: DirGCN
+    model_plain: LargeScaleNet
     value: 0.6582
     std: 0.0036
     metric: Accuracy
@@ -2424,9 +2525,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DirGCN
+  - model: S² DirGCN
     model_key: s² dirgcn
-    model_plain: DirGCN
+    model_plain: S² DirGCN
     value: 0.6495
     std: 0.0033
     metric: Accuracy
@@ -2457,9 +2558,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: DirGCN
+  - model: FaberNet
     model_key: fabernet
-    model_plain: DirGCN
+    model_plain: FaberNet
     value: 0.6462
     std: 0.0101
     metric: Accuracy
@@ -2471,15 +2572,15 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2405.19121'
-    title: Spatio-Spectral Graph Neural Networks
-    date: May 29, 2024
-    date_display: May 2024
-    date_iso: '2024-05-29'
-    venue: Neural Information Processing Systems
-    codebase_url: ''
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
     uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
@@ -2554,6 +2655,72 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.4602
+    std: 0.0026
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 31
+    sort_value: 0.4602
+    sort_std: 0.0026
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.367
+    std: 0.0021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2411.19392'
+    title: Scale-aware Message Passing For Graph Node Classification
+    date: Nov 28, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-28'
+    venue: null
+    codebase_url: https://github.com/Qin87/ScaleNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 54
+    sort_value: 0.367
+    sort_std: 0.0021
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

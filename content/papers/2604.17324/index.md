@@ -43,8 +43,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SigGate-GT
-mrr: 0.1357
-adjusted_mrr: 0.0905
+mrr: 0.1455
+adjusted_mrr: 0.097
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -61,9 +61,9 @@ results:
 - &id001
   dataset: ogbg-molhiv
   rows:
-  - model: SigGate-GT
+  - model: Multi-RF Fusion with Multi-GNN Blending
     model_key: multi-rf fusion with multi-gnn blending
-    model_plain: SigGate-GT
+    model_plain: Multi-RF Fusion with Multi-GNN Blending
     value: 0.8476
     std: 0.0002
     metric: ROC-AUC
@@ -95,9 +95,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: HyperFusion
     model_key: hyperfusion
-    model_plain: SigGate-GT
+    model_plain: HyperFusion
     value: 0.8475
     std: 0.0003
     metric: ROC-AUC
@@ -128,9 +128,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: PAS+FPs
     model_key: pas+fps
-    model_plain: SigGate-GT
+    model_plain: PAS+FPs
     value: 0.842
     std: 0.0015
     metric: ROC-AUC
@@ -226,6 +226,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.809
+    std: 0.016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.809
+    sort_std: 0.016
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -334,8 +367,8 @@ results:
     at_pub_source_title: How Expressive are Transformers in Spectral Domain for Graphs?
     at_pub_source_date_iso: '2022-01-23'
     at_pub_source_date_label: TMLR 2022
-    value_gap_source_date_iso: '2022-01-23'
-    value_gap_source_date_label: TMLR 2022
+    value_gap_source_date_iso: '2026-04-19'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -346,10 +379,10 @@ results:
     today_delta_significant: false
     true_value: 0.8051
     true_std: 0.0053
-    value_gap_source_arxiv: '2201.09332'
-    value_gap_source_title: How Expressive are Transformers in Spectral Domain for
-      Graphs?
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2604.17324'
+    value_gap_source_title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers
+      via Sigmoid-Gated Attention'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -403,8 +436,8 @@ results:
       Classification
     at_pub_source_date_iso: '2021-03-30'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2026-04-19'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -415,9 +448,10 @@ results:
     today_delta_significant: false
     true_value: 0.7905
     true_std: 0.0132
-    value_gap_source_arxiv: '2403.12529'
-    value_gap_source_title: Contextualized Messages Boost Graph Representations
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2604.17324'
+    value_gap_source_title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers
+      via Sigmoid-Gated Attention'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -538,8 +572,8 @@ results:
     at_pub_source_title: Wasserstein Embedding for Graph Learning
     at_pub_source_date_iso: '2020-06-16'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-06-16'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2020-11-30'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: 0.00019999999999997797
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -550,8 +584,8 @@ results:
     today_delta_significant: false
     true_value: 0.786
     true_std: 0.012
-    value_gap_source_arxiv: '2006.09430'
-    value_gap_source_title: Wasserstein Embedding for Graph Learning
+    value_gap_source_arxiv: '2011.15069'
+    value_gap_source_title: Graph convolutions that can finally model local structure
     value_gap_source_is_current_paper: false
     value_gap: 0.00019999999999997797
     has_value_note: false
@@ -565,6 +599,39 @@ results:
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.778
+    std: 0.0182
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 510.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.12787'
+    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    date: Jan 30, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-30'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 120
+    sort_value: 0.778
+    sort_std: 0.0182
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -650,9 +717,9 @@ results:
 - &id002
   dataset: ogbg-molpcba
   rows:
-  - model: GatedGCN-VN
+  - model: HIG with Graphormer
     model_key: hig with graphormer
-    model_plain: GatedGCN-VN
+    model_plain: HIG with Graphormer
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -683,9 +750,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-VN
+  - model: GRPE-Large
     model_key: grpe-large
-    model_plain: GatedGCN-VN
+    model_plain: GRPE-Large
     value: 0.315
     std: 0.001
     metric: AP
@@ -716,35 +783,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-VN
-    model_key: gatedgcn-vn
-    model_plain: GatedGCN-VN
-    value: 0.3141
-    std: 0.0019
+  - model: Graphormer
+    model_key: graphormer
+    model_plain: Graphormer
+    value: 0.314
+    std: null
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 57.0
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_display: May 2024
-    date_iso: '2024-05-20'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2207.08806'
+    title: Unified 2D and 3D Pre-Training of Molecular Representations
+    date: Jul 14, 2022
+    date_display: Jul 2022
+    date_iso: '2022-07-14'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
-      encodings computed on the graph.
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.3141
-    sort_std: 0.0019
+    sort_value: 0.314
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -808,8 +874,8 @@ results:
     value_note: ''
     sort_value: 0.2984
     sort_std: 0.0031
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -876,8 +942,8 @@ results:
     value_note: ''
     sort_value: 0.292
     sort_std: 0.003
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -944,13 +1010,46 @@ results:
     value_note: ''
     sort_value: 0.291
     sort_std: 0.001
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.2902
+    std: 0.0017
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 510.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.12787'
+    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    date: Jan 30, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-30'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 32
+    sort_value: 0.2902
+    sort_std: 0.0017
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -992,8 +1091,8 @@ results:
       Classification
     at_pub_source_date_iso: '2021-03-30'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2025-09-29'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-04-19'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1004,17 +1103,17 @@ results:
     today_delta_significant: false
     true_value: 0.2838
     true_std: 0.0035
-    value_gap_source_arxiv: '2509.24886'
-    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
-      Anisotropic Geometric Networks
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2604.17324'
+    value_gap_source_title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers
+      via Sigmoid-Gated Attention'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.2838
     sort_std: 0.0035
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1061,8 +1160,8 @@ results:
       Classification
     at_pub_source_date_iso: '2021-03-30'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-03-30'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2026-04-19'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1073,17 +1172,17 @@ results:
     today_delta_significant: false
     true_value: 0.2781
     true_std: 0.0038
-    value_gap_source_arxiv: '2103.16584'
-    value_gap_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
-      Classification
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2604.17324'
+    value_gap_source_title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers
+      via Sigmoid-Gated Attention'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.2781
     sort_std: 0.0038
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1123,15 +1222,16 @@ results:
     date_iso: '2026-04-19'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2483
-    at_pub_std: 0.0037
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_value: 0.2424
+    at_pub_std: 0.0034
+    at_pub_source_arxiv: '2103.16584'
+    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
+      Classification
+    at_pub_source_date_iso: '2021-03-30'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2026-04-27'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.005899999999999989
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: false
@@ -1150,10 +1250,10 @@ results:
     value_note: ''
     sort_value: 0.269
     sort_std: 0.002
-    global_rank: 63
-    paper_rank: 88
-    rank_delta: 25
-    rank_delta_abs: 25
+    global_rank: 59
+    paper_rank: 85
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null

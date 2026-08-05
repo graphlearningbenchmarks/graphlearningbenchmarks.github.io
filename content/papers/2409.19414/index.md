@@ -59,6 +59,105 @@ results:
 - &id001
   dataset: Peptides-struct
   rows:
+  - model: Energy GNN + attention
+    model_key: energy gnn + attention
+    model_plain: Energy GNN + attention
+    value: 0.036000000000000004
+    std: 0.038
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.036000000000000004
+    sort_std: 0.038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Energy GNN edge-wise
+    model_key: energy gnn edge-wise
+    model_plain: Energy GNN edge-wise
+    value: 0.04
+    std: 0.036000000000000004
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.04
+    sort_std: 0.036000000000000004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Energy GNN node-wise
+    model_key: energy gnn node-wise
+    model_plain: Energy GNN node-wise
+    value: 0.195
+    std: 0.017
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.195
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -115,83 +214,17 @@ results:
     value_note: ''
     sort_value: 0.2421
     sort_std: 0.0016
-    global_rank: 1
-    paper_rank: 154
-    rank_delta: 153
-    rank_delta_abs: 153
+    global_rank: 4
+    paper_rank: 189
+    rank_delta: 185
+    rank_delta_abs: 185
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph
       Benchmark
     comparison_source_arxiv: '2309.00367'
-    is_best: true
-    is_std_outlier: false
-  - model: GINE / GIN
-    model_key: tango_gps
-    model_plain: GINE / GIN
-    value: 0.2422
-    std: 0.0014
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_display: Aug 2025
-    date_iso: '2025-08-07'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Tango does not use additional encodings.
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.2422
-    sort_std: 0.0014
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GINE / GIN
-    model_key: nba-gin+lappe
-    model_plain: GINE / GIN
-    value: 0.2424
-    std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-11'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.2424
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -249,17 +282,17 @@ results:
     value_note: ''
     sort_value: 0.2429
     sort_std: 0.0019
-    global_rank: 5
-    paper_rank: 150
-    rank_delta: 145
-    rank_delta_abs: 145
+    global_rank: 9
+    paper_rank: 181
+    rank_delta: 172
+    rank_delta_abs: 172
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Transformers are efficient hierarchical chemical graph
       learners
     comparison_source_arxiv: '2310.01704'
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GraphGPS
     model_key: graphgps
@@ -297,8 +330,8 @@ results:
     at_pub_source_title: 'Graph Triple Attention Network: A Decoupled Perspective'
     at_pub_source_date_iso: '2024-08-14'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-08-14'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2025-02-13'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: 0.030000000000000027
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -308,19 +341,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.25
-    true_std: 0.0012
-    value_gap_source_arxiv: '2408.07654'
-    value_gap_source_title: 'Graph Triple Attention Network: A Decoupled Perspective'
+    true_std: 0.0005
+    value_gap_source_arxiv: '2502.09263'
+    value_gap_source_title: Can Classic GNNs Be Strong Baselines for Graph-level Tasks?
+      Simple Architectures Meet Excellence
     value_gap_source_is_current_paper: false
     value_gap: 0.030000000000000027
     has_value_note: false
     value_note: ''
     sort_value: 0.25
-    sort_std: 0.0012
-    global_rank: 86
-    paper_rank: 154
-    rank_delta: 68
-    rank_delta_abs: 68
+    sort_std: 0.0005
+    global_rank: 105
+    paper_rank: 189
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -364,8 +398,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-28'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -374,21 +408,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.26
+    true_std: 0.02
+    value_gap_source_arxiv: '2409.19414'
+    value_gap_source_title: Sequential Signal Mixing Aggregation for Message Passing
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.26
     sort_std: 0.02
-    global_rank: 138
+    global_rank: 164
+    paper_rank: 164
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GAT + SSMA
     model_key: gat + ssma
@@ -426,8 +466,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-28'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -436,17 +476,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.26
+    true_std: 0.01
+    value_gap_source_arxiv: '2409.19414'
+    value_gap_source_title: Sequential Signal Mixing Aggregation for Message Passing
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.26
     sort_std: 0.01
-    global_rank: 138
+    global_rank: 165
+    paper_rank: 165
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -488,8 +534,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-28'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -498,17 +544,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.26
+    true_std: 0.01
+    value_gap_source_arxiv: '2409.19414'
+    value_gap_source_title: Sequential Signal Mixing Aggregation for Message Passing
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.26
     sort_std: 0.01
-    global_rank: 138
+    global_rank: 166
+    paper_rank: 166
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -550,8 +602,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-28'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -560,265 +612,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.26
+    true_std: 0.02
+    value_gap_source_arxiv: '2409.19414'
+    value_gap_source_title: Sequential Signal Mixing Aggregation for Message Passing
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.26
     sort_std: 0.02
-    global_rank: 138
+    global_rank: 167
+    paper_rank: 167
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GATv2
-    model_key: gatv2
-    model_plain: GATv2
-    value: 0.27
-    std: 0.01
-    paper_value: 0.27
-    paper_std: 0.01
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to peptides-struct (score=80)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 28, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-28'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.27
-    sort_std: 0.01
-    global_rank: 151
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphGPS + SSMA
-    model_key: graphgps + ssma
-    model_plain: GraphGPS + SSMA
-    value: 0.27
-    std: 0.01
-    paper_value: 0.27
-    paper_std: 0.01
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to peptides-struct (score=80)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 28, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-28'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.27
-    sort_std: 0.01
-    global_rank: 151
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PNA + SSMA
-    model_key: pna + ssma
-    model_plain: PNA + SSMA
-    value: 0.27
-    std: 0.03
-    paper_value: 0.27
-    paper_std: 0.03
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to peptides-struct (score=80)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 28, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-28'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.27
-    sort_std: 0.03
-    global_rank: 151
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: PNA
-    model_key: pna
-    model_plain: PNA
-    value: 0.28
-    std: 0.01
-    paper_value: 0.28
-    paper_std: 0.01
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to peptides-struct (score=80)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 28, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-28'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.28
-    sort_std: 0.01
-    global_rank: 155
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -860,8 +670,8 @@ results:
     at_pub_source_title: 'Graph Triple Attention Network: A Decoupled Perspective'
     at_pub_source_date_iso: '2024-08-14'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-08-14'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-09-28'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: 0.08039999999999997
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -869,26 +679,333 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3504
-    true_std: 0.0028
-    value_gap_source_arxiv: '2408.07654'
-    value_gap_source_title: 'Graph Triple Attention Network: A Decoupled Perspective'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08039999999999997
+    today_delta_significant: false
+    true_value: 0.27
+    true_std: 0.01
+    value_gap_source_arxiv: '2409.19414'
+    value_gap_source_title: Sequential Signal Mixing Aggregation for Message Passing
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.3504
-    sort_std: 0.0028
-    global_rank: 172
-    paper_rank: 151
-    rank_delta: -21
-    rank_delta_abs: 21
-    rank_delta_direction: better
+    sort_value: 0.27
+    sort_std: 0.01
+    global_rank: 182
+    paper_rank: 182
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: 'Graph Triple Attention Network: A Decoupled Perspective'
     comparison_source_arxiv: '2408.07654'
+    is_best: false
+    is_std_outlier: false
+  - model: GATv2
+    model_key: gatv2
+    model_plain: GATv2
+    value: 0.27
+    std: 0.01
+    paper_value: 0.27
+    paper_std: 0.01
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to peptides-struct (score=80)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 28, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-28'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-28'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.27
+    true_std: 0.01
+    value_gap_source_arxiv: '2409.19414'
+    value_gap_source_title: Sequential Signal Mixing Aggregation for Message Passing
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.27
+    sort_std: 0.01
+    global_rank: 183
+    paper_rank: 183
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphGPS + SSMA
+    model_key: graphgps + ssma
+    model_plain: GraphGPS + SSMA
+    value: 0.27
+    std: 0.01
+    paper_value: 0.27
+    paper_std: 0.01
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to peptides-struct (score=80)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 28, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-28'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-28'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.27
+    true_std: 0.01
+    value_gap_source_arxiv: '2409.19414'
+    value_gap_source_title: Sequential Signal Mixing Aggregation for Message Passing
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.27
+    sort_std: 0.01
+    global_rank: 184
+    paper_rank: 184
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PNA + SSMA
+    model_key: pna + ssma
+    model_plain: PNA + SSMA
+    value: 0.27
+    std: 0.03
+    paper_value: 0.27
+    paper_std: 0.03
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to peptides-struct (score=80)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 28, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-28'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-28'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.27
+    true_std: 0.03
+    value_gap_source_arxiv: '2409.19414'
+    value_gap_source_title: Sequential Signal Mixing Aggregation for Message Passing
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.27
+    sort_std: 0.03
+    global_rank: 185
+    paper_rank: 185
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PNA
+    model_key: pna
+    model_plain: PNA
+    value: 0.28
+    std: 0.01
+    paper_value: 0.28
+    paper_std: 0.01
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to peptides-struct (score=80)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 28, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-28'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-28'
+    value_gap_source_date_label: NeurIPS 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.28
+    true_std: 0.01
+    value_gap_source_arxiv: '2409.19414'
+    value_gap_source_title: Sequential Signal Mixing Aggregation for Message Passing
+      Graph Neural Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.28
+    sort_std: 0.01
+    global_rank: 190
+    paper_rank: 190
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4351
+    std: 0.0008
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.03561'
+    title: 'CIN++: Enhancing Topological Message Passing'
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    venue: arXiv.org
+    codebase_url: https://github.com/twitter-research/cwn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: For both datasets, we did not employ any feature augmentation
+      such as positional encoding.
+    is_global_top: true
+    global_rank: 219
+    sort_value: 0.4351
+    sort_std: 0.0008
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: MAE

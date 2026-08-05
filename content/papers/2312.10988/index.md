@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - IGM
-mrr: 0.0089
-adjusted_mrr: 0.006
+mrr: 0.0087
+adjusted_mrr: 0.0058
 mrr_dataset_count: 2
 benchmark_categories:
 - MoleculeNet
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: BACE
   rows:
-  - model: MAGPrompt+
+  - model: ProtoMol
     model_key: protomol
-    model_plain: MAGPrompt+
+    model_plain: ProtoMol
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MMSG
     model_key: mmsg
-    model_plain: MAGPrompt+
+    model_plain: MMSG
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MemGNN
     model_key: memgnn
-    model_plain: MAGPrompt+
+    model_plain: MemGNN
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -170,6 +170,40 @@ results:
     global_rank: 3
     sort_value: 0.907
     sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8646
+    std: 0.0081
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 41
+    sort_value: 0.8646
+    sort_std: 0.0081
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -232,8 +266,8 @@ results:
     value_note: ''
     sort_value: 0.8265
     sort_std: 0.0117
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -300,8 +334,8 @@ results:
     value_note: ''
     sort_value: 0.8098
     sort_std: 0.0125
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 152
+    paper_rank: 152
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -368,8 +402,8 @@ results:
     value_note: ''
     sort_value: 0.7993
     sort_std: 0.0203
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 170
+    paper_rank: 170
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -436,8 +470,8 @@ results:
     value_note: ''
     sort_value: 0.7963
     sort_std: 0.0187
-    global_rank: 176
-    paper_rank: 176
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -504,8 +538,8 @@ results:
     value_note: ''
     sort_value: 0.7936
     sort_std: 0.0272
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 184
+    paper_rank: 184
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -572,8 +606,8 @@ results:
     value_note: ''
     sort_value: 0.7912
     sort_std: 0.0275
-    global_rank: 191
-    paper_rank: 191
+    global_rank: 194
+    paper_rank: 194
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -640,8 +674,8 @@ results:
     value_note: ''
     sort_value: 0.7885
     sort_std: 0.0126
-    global_rank: 197
-    paper_rank: 197
+    global_rank: 200
+    paper_rank: 200
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -708,8 +742,8 @@ results:
     value_note: ''
     sort_value: 0.7783
     sort_std: 0.0349
-    global_rank: 215
-    paper_rank: 215
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -776,8 +810,8 @@ results:
     value_note: ''
     sort_value: 0.7751
     sort_std: 0.0246
-    global_rank: 218
-    paper_rank: 218
+    global_rank: 222
+    paper_rank: 222
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -844,8 +878,8 @@ results:
     value_note: ''
     sort_value: 0.7696
     sort_std: 0.0188
-    global_rank: 224
-    paper_rank: 224
+    global_rank: 228
+    paper_rank: 228
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -900,9 +934,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: CamS-LLaMA
     model_key: cams-llama
-    model_plain: MAGPrompt+
+    model_plain: CamS-LLaMA
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -934,9 +968,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: MAGPrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -968,6 +1002,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8875
+    std: 0.0049
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 32
+    sort_value: 0.8875
+    sort_std: 0.0049
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GSAT
     model_key: gsat
@@ -1026,10 +1094,10 @@ results:
     value_note: ''
     sort_value: 0.7155
     sort_std: 0.0156
-    global_rank: 107
-    paper_rank: 183
-    rank_delta: 76
-    rank_delta_abs: 76
+    global_rank: 111
+    paper_rank: 188
+    rank_delta: 77
+    rank_delta_abs: 77
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1073,8 +1141,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-12-18'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-07'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1085,17 +1153,17 @@ results:
     today_delta_significant: false
     true_value: 0.7103
     true_std: 0.0079
-    value_gap_source_arxiv: '2312.10988'
-    value_gap_source_title: Graph Invariant Learning with Subgraph Co-mixup for Out-Of-Distribution
-      Generalization
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2505.06283'
+    value_gap_source_title: 'Soft causal learning for generalized molecule property
+      prediction: An environment modeling perspective'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7103
     sort_std: 0.0079
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1141,8 +1209,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-12-18'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-07'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1153,17 +1221,17 @@ results:
     today_delta_significant: false
     true_value: 0.6973
     true_std: 0.0154
-    value_gap_source_arxiv: '2312.10988'
-    value_gap_source_title: Graph Invariant Learning with Subgraph Co-mixup for Out-Of-Distribution
-      Generalization
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2505.06283'
+    value_gap_source_title: 'Soft causal learning for generalized molecule property
+      prediction: An environment modeling perspective'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6973
     sort_std: 0.0154
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1209,8 +1277,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-12-18'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-07'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1221,17 +1289,17 @@ results:
     today_delta_significant: false
     true_value: 0.6965
     true_std: 0.0132
-    value_gap_source_arxiv: '2312.10988'
-    value_gap_source_title: Graph Invariant Learning with Subgraph Co-mixup for Out-Of-Distribution
-      Generalization
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2505.06283'
+    value_gap_source_title: 'Soft causal learning for generalized molecule property
+      prediction: An environment modeling perspective'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6965
     sort_std: 0.0132
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 161
+    paper_rank: 161
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1298,8 +1366,8 @@ results:
     value_note: ''
     sort_value: 0.6913
     sort_std: 0.0145
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1366,8 +1434,8 @@ results:
     value_note: ''
     sort_value: 0.6867
     sort_std: 0.0138
-    global_rank: 179
-    paper_rank: 179
+    global_rank: 184
+    paper_rank: 184
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1434,8 +1502,8 @@ results:
     value_note: ''
     sort_value: 0.6844
     sort_std: 0.0208
-    global_rank: 184
-    paper_rank: 184
+    global_rank: 189
+    paper_rank: 189
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1502,8 +1570,8 @@ results:
     value_note: ''
     sort_value: 0.6693
     sort_std: 0.0231
-    global_rank: 226
-    paper_rank: 226
+    global_rank: 233
+    paper_rank: 233
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1570,8 +1638,8 @@ results:
     value_note: ''
     sort_value: 0.6577
     sort_std: 0.0336
-    global_rank: 249
-    paper_rank: 249
+    global_rank: 255
+    paper_rank: 255
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1638,8 +1706,8 @@ results:
     value_note: ''
     sort_value: 0.6486
     sort_std: 0.0213
-    global_rank: 265
-    paper_rank: 265
+    global_rank: 271
+    paper_rank: 271
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -91,9 +91,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -125,9 +125,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -159,9 +159,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -191,6 +191,216 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GemNet-T
+    model_key: gemnet-t
+    model_plain: GemNet-T
+    value: 0.101
+    std: null
+    paper_value: 0.101
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gasteiger2021gemnet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Force MAE on Naphthalene (MD17 dataset)
+    date: Sep 27, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.007
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.09375'
+    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    at_pub_source_date_iso: '2023-06-15'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.094
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.007
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 0.094
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.007
+    sort_std: null
+    global_rank: 21
+    paper_rank: 76
+    rank_delta: 55
+    rank_delta_abs: 55
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    comparison_source_arxiv: '2306.09375'
+    is_best: false
+    is_std_outlier: false
+  - model: SchNet
+    model_key: schnet
+    model_plain: SchNet
+    value: 0.31
+    std: null
+    paper_value: 0.31
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: schnet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Force MAE on Benzene (MD17 dataset)
+    date: Sep 27, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.05
+    at_pub_std: null
+    at_pub_source_arxiv: '1902.08408'
+    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    at_pub_source_date_iso: '2019-02-22'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.26
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.05
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.26
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.05
+    sort_std: null
+    global_rank: 46
+    paper_rank: 107
+    rank_delta: 61
+    rank_delta_abs: 61
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    comparison_source_arxiv: '1902.08408'
+    is_best: false
+    is_std_outlier: false
+  - model: SphereNet
+    model_key: spherenet
+    model_plain: SphereNet
+    value: 0.155
+    std: null
+    paper_value: 0.155
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: spherenet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Force MAE on Tolunene (MD17 dataset)
+    date: Sep 27, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-27'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.052
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.09375'
+    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    at_pub_source_date_iso: '2023-06-15'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.10300000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.052
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10300000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.052
+    sort_std: null
+    global_rank: 52
+    paper_rank: 97
+    rank_delta: 45
+    rank_delta_abs: 45
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    comparison_source_arxiv: '2306.09375'
     is_best: false
     is_std_outlier: false
   - model: DimeNet++
@@ -249,10 +459,10 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 42
-    paper_rank: 70
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 65
+    paper_rank: 100
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -316,8 +526,8 @@ results:
     value_note: ''
     sort_value: 0.074
     sort_std: 0.012
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -325,75 +535,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    value: 0.31
-    std: null
-    paper_value: 0.31
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schnet
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Force MAE on Benzene (MD17 dataset)
-    date: Sep 27, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.05
-    at_pub_std: null
-    at_pub_source_arxiv: '1902.08408'
-    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    at_pub_source_date_iso: '2019-02-22'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.26
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.08
-    true_std: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 0.22999999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.08
-    sort_std: null
-    global_rank: 46
-    paper_rank: 78
-    rank_delta: 32
-    rank_delta_abs: 32
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   - model: DimeNet-G
@@ -452,8 +593,8 @@ results:
     value_note: ''
     sort_value: 0.09
     sort_std: 0.023
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -519,8 +660,8 @@ results:
     value_note: ''
     sort_value: 0.09
     sort_std: 0.009
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -528,145 +669,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GemNet-T
-    model_key: gemnet-t
-    model_plain: GemNet-T
-    value: 0.101
-    std: null
-    paper_value: 0.101
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: gasteiger2021gemnet
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Force MAE on Naphthalene (MD17 dataset)
-    date: Sep 27, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.007
-    at_pub_std: null
-    at_pub_source_arxiv: '2306.09375'
-    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    at_pub_source_date_iso: '2023-06-15'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-09-27'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.094
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.101
-    true_std: null
-    value_gap_source_arxiv: '2309.15718'
-    value_gap_source_title: Geometry-enhanced pretraining on interatomic potentials
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.101
-    sort_std: null
-    global_rank: 54
-    paper_rank: 54
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    comparison_source_arxiv: '2306.09375'
-    is_best: false
-    is_std_outlier: false
-  - model: SphereNet
-    model_key: spherenet
-    model_plain: SphereNet
-    value: 0.155
-    std: null
-    paper_value: 0.155
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: spherenet
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Force MAE on Tolunene (MD17 dataset)
-    date: Sep 27, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-27'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.052
-    at_pub_std: null
-    at_pub_source_arxiv: '2306.09375'
-    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    at_pub_source_date_iso: '2023-06-15'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 0.10300000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.147
-    true_std: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.008000000000000007
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.147
-    sort_std: null
-    global_rank: 68
-    paper_rank: 68
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    comparison_source_arxiv: '2306.09375'
     is_best: false
     is_std_outlier: false
   - model: SchNet-G
@@ -725,8 +727,8 @@ results:
     value_note: ''
     sort_value: 0.271
     sort_std: 0.023
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

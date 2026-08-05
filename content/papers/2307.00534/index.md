@@ -66,8 +66,8 @@ proposed_models:
 - FreeKD-Prompt
 - FreeKD-Prompt (GCN/SAGE)
 - FreeKD-Prompt (SAGE-SAGE)
-mrr: 0.0196
-adjusted_mrr: 0.0065
+mrr: 0.0182
+adjusted_mrr: 0.0061
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -1689,9 +1689,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGCONV
+  - model: ACM-GCN
     model_key: acm-gcn
-    model_plain: SGCONV
+    model_plain: ACM-GCN
     value: 0.8894
     std: 0.0054
     metric: F1
@@ -1722,9 +1722,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGCONV
+  - model: APPNP
     model_key: appnp
-    model_plain: SGCONV
+    model_plain: APPNP
     value: 0.888
     std: 0.001
     metric: F1
@@ -1755,9 +1755,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGCONV
+  - model: GraphSAGE
     model_key: graphsage
-    model_plain: SGCONV
+    model_plain: GraphSAGE
     value: 0.881
     std: 0.001
     metric: F1
@@ -1990,6 +1990,39 @@ results:
     comparison_source_arxiv: '1909.13021'
     is_best: false
     is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8537
+    std: 0.0074
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.05894'
+    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
+    date: Feb 8, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-08'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 14
+    sort_value: 0.8537
+    sort_std: 0.0074
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: SAGE
     model_key: sage
     model_plain: SAGE
@@ -2058,6 +2091,39 @@ results:
     comparison_source_arxiv: '2103.14991'
     is_best: false
     is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.657
+    std: 0.019
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2103.14991'
+    title: Graph Unlearning
+    date: Mar 27, 2021
+    date_display: Mar 2021
+    date_iso: '2021-03-27'
+    venue: Conference on Computer and Communications Security
+    codebase_url: https://github.com/MinChen00/Graph-Unlearning
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 43
+    sort_value: 0.657
+    sort_std: 0.019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   rank_metric: F1
   higher_is_better: true
   experiment_scope: node-level
@@ -2070,9 +2136,9 @@ results:
 - &id003
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -2103,9 +2169,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -2136,9 +2202,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -2226,8 +2292,8 @@ results:
     value_note: ''
     sort_value: 0.9896
     sort_std: null
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2295,13 +2361,46 @@ results:
     value_note: ''
     sort_value: 0.9879
     sort_std: null
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.985
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.985
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2364,8 +2463,8 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2432,8 +2531,8 @@ results:
     value_note: ''
     sort_value: 0.6928
     sort_std: null
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2560,8 +2659,8 @@ results:
       Neural Networks'
     at_pub_source_date_iso: '2022-06-14'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
     gap_vs_at_pub: 0.009199999999999986
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2569,17 +2668,17 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7784
+    today_delta_significant: true
+    true_value: 0.7876
     true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.009199999999999986
     has_value_note: false
     value_note: ''
-    sort_value: 0.7784
+    sort_value: 0.7876
     sort_std: null
     global_rank: 2
     paper_rank: 2
@@ -2650,13 +2749,46 @@ results:
     value_note: ''
     sort_value: 0.7622
     sort_std: null
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GSAGE
+    model_key: gsage
+    model_plain: GSAGE
+    value: 0.7622
+    std: null
+    metric: F1 Score
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.06561'
+    title: 'FreeKD: Free-direction Knowledge Distillation for Graph Neural Networks'
+    date: Jun 14, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-14'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7622
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2719,8 +2851,8 @@ results:
     value_note: ''
     sort_value: 0.6081
     sort_std: null
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2787,8 +2919,8 @@ results:
     value_note: ''
     sort_value: 0.6054
     sort_std: null
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2856,8 +2988,8 @@ results:
     value_note: ''
     sort_value: 0.5973
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2925,8 +3057,8 @@ results:
     value_note: ''
     sort_value: 0.5946
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2994,8 +3126,8 @@ results:
     value_note: ''
     sort_value: 0.5892
     sort_std: null
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3063,8 +3195,8 @@ results:
     value_note: ''
     sort_value: 0.5865
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3132,8 +3264,8 @@ results:
     value_note: ''
     sort_value: 0.5784
     sort_std: null
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3201,8 +3333,8 @@ results:
     value_note: ''
     sort_value: 0.5757
     sort_std: null
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

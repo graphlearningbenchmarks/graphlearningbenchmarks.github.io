@@ -72,8 +72,8 @@ proposed_models:
 - kGCN-SSM
 - GCN-SSM (shared)
 - GCN-SSM (Optimal L)
-mrr: 0.0264
-adjusted_mrr: 0.0264
+mrr: 0.0265
+adjusted_mrr: 0.0265
 mrr_dataset_count: 4
 benchmark_categories:
 - LRGB
@@ -103,9 +103,9 @@ results:
 - &id004
   dataset: Amazon-ratings
   rows:
-  - model: H2GCN
+  - model: H2GCN + UniGAP
     model_key: h2gcn + unigap
-    model_plain: H2GCN
+    model_plain: H2GCN + UniGAP
     value: 0.6375
     std: 0.011
     metric: Accuracy
@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: H2GCN
+  - model: GraphSAGE + UniGAP
     model_key: graphsage + unigap
-    model_plain: H2GCN
+    model_plain: GraphSAGE + UniGAP
     value: 0.6283
     std: 0.009
     metric: Accuracy
@@ -171,9 +171,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: H2GCN
+  - model: GCN + UniGAP
     model_key: gcn + unigap
-    model_plain: H2GCN
+    model_plain: GCN + UniGAP
     value: 0.5976
     std: 0.008
     metric: Accuracy
@@ -200,6 +200,40 @@ results:
     global_rank: 3
     sort_value: 0.5976
     sort_std: 0.008
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.5569
+    std: 0.0023
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 14
+    sort_value: 0.5569
+    sort_std: 0.0023
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -264,9 +298,9 @@ results:
     sort_value: 0.5411
     sort_std: 0.0034
     global_rank: 26
-    paper_rank: 126
-    rank_delta: 100
-    rank_delta_abs: 100
+    paper_rank: 141
+    rank_delta: 115
+    rank_delta_abs: 115
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -311,8 +345,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -321,18 +355,57 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5172
+    true_std: 0.0033
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5172
     sort_std: 0.0033
-    global_rank: 72
+    global_rank: 73
+    paper_rank: 73
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.5058
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 95
+    sort_value: 0.5058
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -385,8 +458,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -395,21 +468,61 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -4.2652
+    true_std: 0.1776
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -4.2652
     sort_std: 0.1776
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: MP-SSM
+    model_key: mp-ssm
+    model_plain: MP-SSM
+    value: -2.9724
+    std: 0.0271
+    metric: MSE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2505.18728'
+    title: 'Message-Passing State-Space Models: Improving Graph Learning with Modern
+      Sequence Modeling'
+    date: May 24, 2025
+    date_display: May 2025
+    date_iso: '2025-05-24'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: -2.9724
+    sort_std: 0.0271
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GCN-SSM + eig(Lambda) approx 1
     model_key: gcn-ssm + eig(lambda) approx 1
@@ -447,8 +560,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -457,17 +570,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -2.2583
+    true_std: 0.0085
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -2.2583
     sort_std: 0.0085
-    global_rank: 1
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -509,8 +628,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -519,17 +638,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -2.2446
+    true_std: 0.0027
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -2.2446
     sort_std: 0.0027
-    global_rank: 1
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -571,8 +696,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -581,17 +706,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -2.1004
+    true_std: 0.0256
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -2.1004
     sort_std: 0.0256
-    global_rank: 1
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -633,8 +764,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -643,17 +774,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -2.0291
+    true_std: 0.024
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -2.0291
     sort_std: 0.024
-    global_rank: 1
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -695,8 +832,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -705,17 +842,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -0.9348
+    true_std: 0.2097
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -0.9348
     sort_std: 0.2097
-    global_rank: 1
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -757,8 +900,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -767,51 +910,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -0.0739
+    true_std: 0.219
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -0.0739
     sort_std: 0.219
-    global_rank: 1
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: A-DGN
-    model_key: odes
-    model_plain: A-DGN
-    value: 0.3046
-    std: 0.1181
-    metric: MSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-18'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.3046
-    sort_std: 0.1181
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -852,8 +968,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -862,17 +978,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4296
+    true_std: 0.1003
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4296
     sort_std: 0.1003
-    global_rank: 2
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -914,8 +1036,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -924,17 +1046,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6077
+    true_std: 0.0282
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6077
     sort_std: 0.0282
-    global_rank: 2
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -977,8 +1105,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -989,17 +1117,17 @@ results:
     today_delta_significant: false
     true_value: 0.6602
     true_std: 0.1393
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6602
     sort_std: 0.1393
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1045,8 +1173,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1055,51 +1183,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6833
+    true_std: 0.0074
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6833
     sort_std: 0.0074
-    global_rank: 3
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: A-DGN
-    model_key: a-dgn
-    model_plain: A-DGN
-    value: 0.7177
-    std: 0.0345
-    metric: MSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-18'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7177
-    sort_std: 0.0345
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1141,8 +1242,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1153,17 +1254,17 @@ results:
     today_delta_significant: false
     true_value: 0.764
     true_std: 0.0355
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.764
     sort_std: 0.0355
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1210,8 +1311,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1222,17 +1323,17 @@ results:
     today_delta_significant: false
     true_value: 0.7863
     true_std: 0.0207
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7863
     sort_std: 0.0207
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1279,8 +1380,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1291,17 +1392,17 @@ results:
     today_delta_significant: false
     true_value: 0.7909
     true_std: 0.0222
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7909
     sort_std: 0.0222
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1348,8 +1449,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1360,17 +1461,17 @@ results:
     today_delta_significant: false
     true_value: 0.8261
     true_std: 0.0032
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8261
     sort_std: 0.0032
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1417,8 +1518,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1429,17 +1530,17 @@ results:
     today_delta_significant: false
     true_value: 0.8468
     true_std: 0.0028
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8468
     sort_std: 0.0028
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1486,8 +1587,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1498,17 +1599,17 @@ results:
     today_delta_significant: false
     true_value: 0.9504
     true_std: 0.0007
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9504
     sort_std: 0.0007
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1530,9 +1631,9 @@ results:
 - &id005
   dataset: Minesweeper
   rows:
-  - model: Tango_GPS
+  - model: BuNN
     model_key: bunn
-    model_plain: Tango_GPS
+    model_plain: BuNN
     value: 0.9899
     std: 0.0016
     metric: ROC-AUC
@@ -1563,9 +1664,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango_GPS
+  - model: DC-GNN
     model_key: dc-gnn
-    model_plain: Tango_GPS
+    model_plain: DC-GNN
     value: 0.985
     std: 0.0021
     metric: ROC-AUC
@@ -1665,8 +1766,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1675,18 +1776,57 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9602
+    true_std: 0.0052
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9602
     sort_std: 0.0052
-    global_rank: 12
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9358
+    std: 0.0005
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2508.17531'
+    title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    date: Aug 24, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-24'
+    venue: European Conference on Artificial Intelligence
+    codebase_url: https://github.com/Bobowner/Gumbel-Softmax-MPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 40
+    sort_value: 0.9358
+    sort_std: 0.0005
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1747,13 +1887,47 @@ results:
     value_note: ''
     sort_value: 0.915
     sort_std: 0.0006
-    global_rank: 59
-    paper_rank: 80
+    global_rank: 63
+    paper_rank: 84
     rank_delta: 21
     rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.5099
+    std: 0.0147
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2602.07256'
+    title: 'Graph homophily booster: Reimagining the role of discrete features in
+      heterophilic graph learning'
+    date: Feb 6, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-06'
+    venue: ICLR 2026
+    codebase_url: https://github.com/q-rz/ICLR26-GRAPHITE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 147
+    sort_value: 0.5099
+    sort_std: 0.0147
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1770,9 +1944,9 @@ results:
 - &id002
   dataset: Peptides-func
   rows:
-  - model: GINE / GIN
+  - model: S^2GCN
     model_key: s^2gcn
-    model_plain: GINE / GIN
+    model_plain: S^2GCN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -1803,9 +1977,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GINE / GIN
+  - model: S^2 GCN + PE
     model_key: s^2 gcn + pe
-    model_plain: GINE / GIN
+    model_plain: S^2 GCN + PE
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -1837,9 +2011,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GINE / GIN
+  - model: S4G
     model_key: s4g
-    model_plain: GINE / GIN
+    model_plain: S4G
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -1870,13 +2044,11 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GRED
-    model_key: gred
-    model_plain: GRED
-    value: 0.7085
-    std: 0.0027
-    paper_value: 0.7085
-    paper_std: 0.0027
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7261
+    std: 0.0011
     metric: AP
     higher_is_better: true
     is_baseline: true
@@ -1886,57 +2058,24 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
+    arxiv_id: '2605.12358'
+    title: From Message-Passing to Linearized Graph Sequence Models
+    date: May 12, 2026
+    date_display: May 2026
+    date_iso: '2026-05-12'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to peptides-func (score=82)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 15, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-15'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7085
-    at_pub_std: 0.0027
-    at_pub_source_arxiv: '2312.01538'
-    at_pub_source_title: Recurrent Distance Filtering for Graph Representation Learning
-    at_pub_source_date_iso: '2023-12-03'
-    at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2023-12-03'
-    value_gap_source_date_label: ICML 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7085
-    true_std: 0.0027
-    value_gap_source_arxiv: '2312.01538'
-    value_gap_source_title: Recurrent Distance Filtering for Graph Representation
-      Learning
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7085
-    sort_std: 0.0027
-    global_rank: 24
-    paper_rank: 24
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
+    is_global_top: true
+    global_rank: 5
+    sort_value: 0.7261
+    sort_std: 0.0011
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: kGCN-SSM
     model_key: kgcn-ssm
@@ -1974,7 +2113,7 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-10-09'
+    value_gap_source_date_iso: '2025-02-15'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1982,26 +2121,128 @@ results:
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.6902
-    true_std: 0.0022
-    value_gap_source_arxiv: '2510.08450'
-    value_gap_source_title: 'gLSTM: Mitigating Over-Squashing by Increasing Storage
-      Capacity'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.030999999999999917
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7212
+    true_std: 0.0027
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6902
-    sort_std: 0.0022
-    global_rank: 60
+    sort_value: 0.7212
+    sort_std: 0.0027
+    global_rank: 9
     paper_rank: 9
-    rank_delta: -51
-    rank_delta_abs: 51
-    rank_delta_direction: better
-    has_value_gap: true
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GRED
+    model_key: gred
+    model_plain: GRED
+    value: 0.7085
+    std: 0.0027
+    paper_value: 0.7085
+    paper_std: 0.0027
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to peptides-func (score=82)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 15, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-15'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7085
+    at_pub_std: 0.0027
+    at_pub_source_arxiv: '2312.01538'
+    at_pub_source_title: Recurrent Distance Filtering for Graph Representation Learning
+    at_pub_source_date_iso: '2023-12-03'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7085
+    true_std: 0.0027
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7085
+    sort_std: 0.0027
+    global_rank: 25
+    paper_rank: 25
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.406
+    std: 0.0021
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.03561'
+    title: 'CIN++: Enhancing Topological Message Passing'
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    venue: arXiv.org
+    codebase_url: https://github.com/twitter-research/cwn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: For both datasets, we did not employ any feature augmentation
+      such as positional encoding.
+    is_global_top: true
+    global_rank: 196
+    sort_value: 0.406
+    sort_std: 0.0021
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2018,9 +2259,108 @@ results:
 - &id001
   dataset: Peptides-struct
   rows:
-  - model: GINE / GIN
+  - model: Energy GNN + attention
+    model_key: energy gnn + attention
+    model_plain: Energy GNN + attention
+    value: 0.036000000000000004
+    std: 0.038
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.036000000000000004
+    sort_std: 0.038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: true
+  - model: Energy GNN edge-wise
+    model_key: energy gnn edge-wise
+    model_plain: Energy GNN edge-wise
+    value: 0.04
+    std: 0.036000000000000004
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.04
+    sort_std: 0.036000000000000004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: true
+  - model: Energy GNN node-wise
+    model_key: energy gnn node-wise
+    model_plain: Energy GNN node-wise
+    value: 0.195
+    std: 0.017
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.195
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: true
+  - model: GCN
     model_key: gcn
-    model_plain: GINE / GIN
+    model_plain: GCN
     value: 0.2421
     std: 0.0016
     metric: MAE
@@ -2043,79 +2383,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 4
     sort_value: 0.2421
     sort_std: 0.0016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GINE / GIN
-    model_key: tango_gps
-    model_plain: GINE / GIN
-    value: 0.2422
-    std: 0.0014
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_display: Aug 2025
-    date_iso: '2025-08-07'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Tango does not use additional encodings.
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.2422
-    sort_std: 0.0014
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GINE / GIN
-    model_key: nba-gin+lappe
-    model_plain: GINE / GIN
-    value: 0.2424
-    std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-11'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.2424
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GRED
     model_key: gred
@@ -2154,8 +2428,8 @@ results:
       prediction
     at_pub_source_date_iso: '2025-01-29'
     at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2025-01-29'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-02-13'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: 0.0048000000000000265
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2166,19 +2440,19 @@ results:
     today_delta_significant: true
     true_value: 0.2455
     true_std: 0.0013
-    value_gap_source_arxiv: '2501.17901'
-    value_gap_source_title: Molecular fingerprints are strong models for peptide function
-      prediction
+    value_gap_source_arxiv: '2502.09263'
+    value_gap_source_title: Can Classic GNNs Be Strong Baselines for Graph-level Tasks?
+      Simple Architectures Meet Excellence
     value_gap_source_is_current_paper: false
     value_gap: 0.0048000000000000265
     has_value_note: false
     value_note: ''
     sort_value: 0.2455
     sort_std: 0.0013
-    global_rank: 26
-    paper_rank: 87
-    rank_delta: 61
-    rank_delta_abs: 61
+    global_rank: 38
+    paper_rank: 108
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2244,13 +2518,47 @@ results:
     value_note: ''
     sort_value: 0.2581
     sort_std: 0.0003
-    global_rank: 132
-    paper_rank: 150
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 159
+    paper_rank: 185
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4351
+    std: 0.0008
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.03561'
+    title: 'CIN++: Enhancing Topological Message Passing'
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    venue: arXiv.org
+    codebase_url: https://github.com/twitter-research/cwn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: For both datasets, we did not employ any feature augmentation
+      such as positional encoding.
+    is_global_top: true
+    global_rank: 219
+    sort_value: 0.4351
+    sort_std: 0.0008
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2267,9 +2575,9 @@ results:
 - &id003
   dataset: Roman-empire
   rows:
-  - model: GPS + Mamba
+  - model: Dir-NT
     model_key: dir-nt
-    model_plain: GPS + Mamba
+    model_plain: Dir-NT
     value: 0.9477
     std: 0.0031
     metric: Accuracy
@@ -2301,9 +2609,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPS + Mamba
+  - model: Dir-Poly
     model_key: dir-poly
-    model_plain: GPS + Mamba
+    model_plain: Dir-Poly
     value: 0.9451
     std: 0.0022
     metric: Accuracy
@@ -2335,34 +2643,67 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPS + Mamba
-    model_key: largescalenet
-    model_plain: GPS + Mamba
-    value: 0.9358
-    std: 0.0024
+  - model: D-CDE
+    model_key: d-cde
+    model_plain: D-CDE
+    value: 0.9387
+    std: 0.0041
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.19392'
-    title: Scale-aware Message Passing For Graph Node Classification
-    date: Nov 28, 2024
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.05274'
+    title: Distributed-Order Fractional Graph Operating Network
+    date: Nov 8, 2024
     date_display: Nov 2024
-    date_iso: '2024-11-28'
-    venue: null
-    codebase_url: https://github.com/Qin87/ScaleNet
+    date_iso: '2024-11-08'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/zknus/NeurIPS-2024-DRAGON
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9358
-    sort_std: 0.0024
+    sort_value: 0.9387
+    sort_std: 0.0041
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9106
+    std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.17939'
+    title: Directed Semi-Simplicial Learning with Applications to Brain Activity Decoding
+    date: May 23, 2025
+    date_display: May 2025
+    date_iso: '2025-05-23'
+    venue: null
+    codebase_url: https://github.com/ManuelLecha/ssn
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.9106
+    sort_std: 0.0027
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2404,8 +2745,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2414,17 +2755,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8837
+    true_std: 0.006
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8837
     sort_std: 0.006
-    global_rank: 50
+    global_rank: 52
+    paper_rank: 52
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2466,8 +2813,8 @@ results:
     at_pub_source_title: 'HyperAggregation: Aggregating over Graph Edges with Hypernetworks'
     at_pub_source_date_iso: '2024-06-30'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2025-08-24'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2024-06-30'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.09030000000000005
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2476,26 +2823,59 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7882
-    true_std: 0.0009
-    value_gap_source_arxiv: '2508.17531'
-    value_gap_source_title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    true_value: 0.8272
+    true_std: 0.0082
+    value_gap_source_arxiv: '2407.11596'
+    value_gap_source_title: 'HyperAggregation: Aggregating over Graph Edges with Hypernetworks'
     value_gap_source_is_current_paper: false
-    value_gap: 0.05130000000000001
+    value_gap: 0.09030000000000005
     has_value_note: false
     value_note: ''
-    sort_value: 0.7882
-    sort_std: 0.0009
-    global_rank: 99
-    paper_rank: 119
-    rank_delta: 20
-    rank_delta_abs: 20
+    sort_value: 0.8272
+    sort_std: 0.0082
+    global_rank: 85
+    paper_rank: 126
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'HyperAggregation: Aggregating over Graph Edges with
       Hypernetworks'
     comparison_source_arxiv: '2407.11596'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6665
+    std: 0.0047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.11596'
+    title: 'HyperAggregation: Aggregating over Graph Edges with Hypernetworks'
+    date: Jun 30, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-30'
+    venue: IEEE International Joint Conference on Neural Network
+    codebase_url: https://github.com/Foisunt/HyperAggregation
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 151
+    sort_value: 0.6665
+    sort_std: 0.0047
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -2546,8 +2926,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2556,17 +2936,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -4.2993
+    true_std: 0.0721
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -4.2993
     sort_std: 0.0721
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2608,8 +2994,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2618,17 +3004,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -3.6044
+    true_std: 0.0291
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -3.6044
     sort_std: 0.0291
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2670,8 +3062,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2680,17 +3072,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -3.599
+    true_std: 0.1949
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -3.599
     sort_std: 0.1949
-    global_rank: 1
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2732,8 +3130,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2742,17 +3140,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -3.5928
+    true_std: 0.1026
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -3.5928
     sort_std: 0.1026
-    global_rank: 1
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2794,8 +3198,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2804,51 +3208,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -3.5425
+    true_std: 0.083
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -3.5425
     sort_std: 0.083
-    global_rank: 1
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: A-DGN
-    model_key: odes
-    model_plain: A-DGN
-    value: -3.402
-    std: 0.1372
-    metric: MSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-18'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: -3.402
-    sort_std: 0.1372
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2889,8 +3266,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2899,17 +3276,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -3.2417
+    true_std: 0.0751
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -3.2417
     sort_std: 0.0751
-    global_rank: 2
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2951,8 +3334,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2961,51 +3344,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -2.8206
+    true_std: 0.5654
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -2.8206
     sort_std: 0.5654
-    global_rank: 2
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: A-DGN
-    model_key: a-dgn
-    model_plain: A-DGN
-    value: -1.8288
-    std: 0.0607
-    metric: MSE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-18'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: -1.8288
-    sort_std: 0.0607
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -3046,8 +3402,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3056,17 +3412,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -1.6023
+    true_std: 0.0078
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -1.6023
     sort_std: 0.0078
-    global_rank: 3
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3108,8 +3470,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3118,17 +3480,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -1.5905
+    true_std: 0.0034
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -1.5905
     sort_std: 0.0034
-    global_rank: 3
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3170,8 +3538,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3180,17 +3548,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -1.3836
+    true_std: 0.0092
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -1.3836
     sort_std: 0.0092
-    global_rank: 3
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3233,8 +3607,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3245,17 +3619,17 @@ results:
     today_delta_significant: false
     true_value: -1.1329
     true_std: 0.0135
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: -1.1329
     sort_std: 0.0135
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3302,8 +3676,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3314,17 +3688,17 @@ results:
     today_delta_significant: false
     true_value: -0.5408
     true_std: 0.4193
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: -0.5408
     sort_std: 0.4193
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3371,8 +3745,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3383,17 +3757,17 @@ results:
     today_delta_significant: false
     true_value: -0.1483
     true_std: 0.0231
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: -0.1483
     sort_std: 0.0231
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3440,8 +3814,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3452,17 +3826,17 @@ results:
     today_delta_significant: false
     true_value: -0.0942
     true_std: 0.3897
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: -0.0942
     sort_std: 0.3897
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3509,8 +3883,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3521,17 +3895,17 @@ results:
     today_delta_significant: false
     true_value: 0.2863
     true_std: 0.1843
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.2863
     sort_std: 0.1843
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3578,8 +3952,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3590,17 +3964,17 @@ results:
     today_delta_significant: false
     true_value: 0.6951
     true_std: 0.1499
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6951
     sort_std: 0.1499
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3647,8 +4021,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-15'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3658,18 +4032,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.9499
-    true_std: 9.18e-05
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    true_std: 0.0001
+    value_gap_source_arxiv: '2502.10818'
+    value_gap_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9499
-    sort_std: 9.18e-05
-    global_rank: 9
-    paper_rank: 9
+    sort_std: 0.0001
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

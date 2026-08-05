@@ -26,7 +26,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - EdgePool
-mrr: 0.0058
+mrr: 0.0056
 adjusted_mrr: 0.0019
 mrr_dataset_count: 1
 benchmark_categories:
@@ -44,9 +44,9 @@ results:
 - &id001
   dataset: COLLAB
   rows:
-  - model: GPM
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: GPM
+    model_plain: WL-MLP
     value: 0.9792
     std: null
     metric: Accuracy
@@ -78,9 +78,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: GPM
+    model_plain: MSH-GNN
     value: 0.964
     std: 0.007
     metric: Accuracy
@@ -111,9 +111,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GPM
+  - model: CoCN
     model_key: cocn
-    model_plain: GPM
+    model_plain: CoCN
     value: 0.8722
     std: 0.0013
     metric: Accuracy
@@ -201,9 +201,9 @@ results:
     sort_value: 0.826
     sort_std: 0.022
     global_rank: 29
-    paper_rank: 320
-    rank_delta: 291
-    rank_delta_abs: 291
+    paper_rank: 342
+    rank_delta: 313
+    rank_delta_abs: 313
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -268,9 +268,9 @@ results:
     sort_value: 0.822
     sort_std: 0.021
     global_rank: 37
-    paper_rank: 291
-    rank_delta: 254
-    rank_delta_abs: 254
+    paper_rank: 310
+    rank_delta: 273
+    rank_delta_abs: 273
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -335,9 +335,9 @@ results:
     sort_value: 0.8213
     sort_std: 0.0043
     global_rank: 41
-    paper_rank: 332
-    rank_delta: 291
-    rank_delta_abs: 291
+    paper_rank: 354
+    rank_delta: 313
+    rank_delta_abs: 313
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -401,10 +401,10 @@ results:
     value_note: ''
     sort_value: 0.8176
     sort_std: 0.0157
-    global_rank: 48
-    paper_rank: 360
-    rank_delta: 312
-    rank_delta_abs: 312
+    global_rank: 49
+    paper_rank: 383
+    rank_delta: 334
+    rank_delta_abs: 334
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -468,10 +468,10 @@ results:
     value_note: ''
     sort_value: 0.814
     sort_std: 0.0094
-    global_rank: 67
-    paper_rank: 358
-    rank_delta: 291
-    rank_delta_abs: 291
+    global_rank: 69
+    paper_rank: 381
+    rank_delta: 312
+    rank_delta_abs: 312
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -535,15 +535,49 @@ results:
     value_note: ''
     sort_value: 0.797
     sort_std: 0.017
-    global_rank: 158
-    paper_rank: 358
-    rank_delta: 200
-    rank_delta_abs: 200
+    global_rank: 164
+    paper_rank: 381
+    rank_delta: 217
+    rank_delta_abs: 217
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Fast Graph Representation Learning with PyTorch Geometric
     comparison_source_arxiv: '1903.02428'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.797
+    std: 0.017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11025'
+    title: 'SignGT: Signed Attention-based Graph Transformer for Graph Representation
+      Learning'
+    date: Oct 17, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-17'
+    venue: Knowledge and Information Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 163
+    sort_value: 0.797
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: EdgePool
@@ -602,10 +636,10 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.0166
-    global_rank: 172
-    paper_rank: 350
-    rank_delta: 178
-    rank_delta_abs: 178
+    global_rank: 179
+    paper_rank: 372
+    rank_delta: 193
+    rank_delta_abs: 193
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -670,10 +704,10 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.024
-    global_rank: 173
-    paper_rank: 346
-    rank_delta: 173
-    rank_delta_abs: 173
+    global_rank: 180
+    paper_rank: 368
+    rank_delta: 188
+    rank_delta_abs: 188
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -737,8 +771,8 @@ results:
     value_note: ''
     sort_value: 0.741
     sort_std: 0.016
-    global_rank: 294
-    paper_rank: 294
+    global_rank: 313
+    paper_rank: 313
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -804,8 +838,8 @@ results:
     value_note: ''
     sort_value: 0.654
     sort_std: 0.015
-    global_rank: 354
-    paper_rank: 354
+    global_rank: 377
+    paper_rank: 377
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -871,8 +905,8 @@ results:
     value_note: ''
     sort_value: 0.641
     sort_std: 0.021
-    global_rank: 360
-    paper_rank: 360
+    global_rank: 383
+    paper_rank: 383
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

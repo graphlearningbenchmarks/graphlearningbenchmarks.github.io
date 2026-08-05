@@ -75,9 +75,9 @@ results:
   dataset: Cora
   is_multi_metric: true
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     metric_values:
     - 0.9635
     - null
@@ -115,9 +115,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     metric_values:
     - 0.9629
     - null
@@ -155,9 +155,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     metric_values:
     - 0.9574
     - null
@@ -256,7 +256,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 18
+    global_rank: 26
   - model: GAT_(Llama3)
     model_key: gat_(llama3)
     model_plain: GAT_(Llama3)
@@ -318,7 +318,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 19
+    global_rank: 27
   - model: LinguGraph-Llama3 (8B)
     model_key: lingugraph-llama3 (8b)
     model_plain: LinguGraph-Llama3 (8B)
@@ -380,7 +380,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 20
+    global_rank: 28
   - model: GIN_(Llama3)
     model_key: gin_(llama3)
     model_plain: GIN_(Llama3)
@@ -442,7 +442,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 23
+    global_rank: 31
   - model: GCN_(Llama3)
     model_key: gcn_(llama3)
     model_plain: GCN_(Llama3)
@@ -504,7 +504,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 28
+    global_rank: 36
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -564,7 +564,7 @@ results:
     comparison_source_arxiv: '2401.09125'
     is_best: false
     is_std_outlier: false
-    global_rank: 33
+    global_rank: 42
   - model: BernNet
     model_key: bernnet
     model_plain: BernNet
@@ -624,7 +624,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 41
+    global_rank: 50
   - model: ACM-GCN
     model_key: acm-gcn
     model_plain: ACM-GCN
@@ -650,8 +650,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
+    value_gap_source_arxiv: '2402.05894'
+    value_gap_source_title: Large Language Model Meets Graph Neural Network in Knowledge
+      Distillation
     value_note: ''
     at_pub_value: 0.8975
     at_pub_std: 0.0116
@@ -659,8 +660,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-02-08'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -684,7 +685,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 42
+    global_rank: 51
   - model: RevGAT
     model_key: revgat
     model_plain: RevGAT
@@ -702,16 +703,17 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     sort_value: 0.8911
-    sort_std: 0.0
+    sort_std: 0.001
     true_value: 0.8911
-    true_std: 0.0
+    true_std: 0.001
     paper_value: 0.8911
     paper_std: 0.0
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
+    value_gap_source_arxiv: '2506.07168'
+    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
+      Annotation and Graph Alignment
     value_note: ''
     at_pub_value: 0.8911
     at_pub_std: 0.0
@@ -719,8 +721,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-08'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -744,7 +746,47 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 66
+    global_rank: 76
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    metric_values:
+    - 0.8911
+    - null
+    metric_stds:
+    - 0.0012
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    published_venue: ''
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 75
+    is_best: false
+    sort_value: 0.8911
+    sort_std: 0.0012
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: GAT
     model_key: gat
     model_plain: GAT
@@ -805,7 +847,7 @@ results:
     comparison_source_arxiv: '2009.09232'
     is_best: false
     is_std_outlier: false
-    global_rank: 72
+    global_rank: 81
   - model: GCNII
     model_key: gcnii
     model_plain: GCNII
@@ -831,8 +873,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
+    value_gap_source_arxiv: '2402.05894'
+    value_gap_source_title: Large Language Model Meets Graph Neural Network in Knowledge
+      Distillation
     value_note: ''
     at_pub_value: 0.8893
     at_pub_std: 0.0137
@@ -840,8 +883,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-02-08'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -865,7 +908,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 74
+    global_rank: 83
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
@@ -927,7 +970,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 79
+    global_rank: 88
   - model: FAGCN
     model_key: fagcn
     model_plain: FAGCN
@@ -953,8 +996,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
+    value_gap_source_arxiv: '2402.05894'
+    value_gap_source_title: Large Language Model Meets Graph Neural Network in Knowledge
+      Distillation
     value_note: ''
     at_pub_value: 0.8885
     at_pub_std: 0.0136
@@ -962,8 +1006,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-02-08'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -987,7 +1031,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 81
+    global_rank: 90
   - model: LinguGraph-Llama2 (7B)
     model_key: lingugraph-llama2 (7b)
     model_plain: LinguGraph-Llama2 (7B)
@@ -1049,7 +1093,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 126
+    global_rank: 135
   - model: LinguGraph-Mistral (7B)
     model_key: lingugraph-mistral (7b)
     model_plain: LinguGraph-Mistral (7B)
@@ -1111,7 +1155,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 152
+    global_rank: 162
   - model: GIN
     model_key: gin
     model_plain: GIN
@@ -1174,7 +1218,7 @@ results:
     comparison_source_arxiv: '2110.15777'
     is_best: false
     is_std_outlier: false
-    global_rank: 227
+    global_rank: 238
   - model: Graphtransformer
     model_key: graphtransformer
     model_plain: Graphtransformer
@@ -1235,7 +1279,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 239
+    global_rank: 250
   - model: SGC-v2
     model_key: sgc-v2
     model_plain: SGC-v2
@@ -1261,8 +1305,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
+    value_gap_source_arxiv: '2402.05894'
+    value_gap_source_title: Large Language Model Meets Graph Neural Network in Knowledge
+      Distillation
     value_note: ''
     at_pub_value: 0.8548
     at_pub_std: 0.0148
@@ -1270,8 +1315,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-02-08'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1295,7 +1340,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 290
+    global_rank: 301
   - model: Graphormer
     model_key: graphormer
     model_plain: Graphormer
@@ -1313,16 +1358,17 @@ results:
     architecture_label: GT
     architecture_title: Graph transformer
     sort_value: 0.8041
-    sort_std: 0.003
+    sort_std: 0.002
     true_value: 0.8041
-    true_std: 0.003
+    true_std: 0.002
     paper_value: 0.8041
     paper_std: 0.003
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
+    value_gap_source_arxiv: '2506.07168'
+    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
+      Annotation and Graph Alignment
     value_note: ''
     at_pub_value: 0.8041
     at_pub_std: 0.003
@@ -1330,8 +1376,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-08'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1355,7 +1401,46 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 759
+    global_rank: 772
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    metric_values:
+    - 0.7768
+    - null
+    metric_stds:
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    published_venue: ''
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 853
+    is_best: false
+    sort_value: 0.7768
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: Llama3 (8B)
     model_key: llama3 (8b)
     model_plain: Llama3 (8B)
@@ -1416,7 +1501,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1075
+    global_rank: 1092
   - model: Llama2 (7B)
     model_key: llama2 (7b)
     model_plain: Llama2 (7B)
@@ -1477,7 +1562,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1076
+    global_rank: 1093
   - model: Mistral (7B)
     model_key: mistral (7b)
     model_plain: Mistral (7B)
@@ -1538,7 +1623,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1077
+    global_rank: 1094
   metrics:
   - Accuracy
   - F1

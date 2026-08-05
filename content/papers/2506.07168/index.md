@@ -65,8 +65,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GAGA
-mrr: 0.0372
-adjusted_mrr: 0.0372
+mrr: 0.0357
+adjusted_mrr: 0.0357
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -88,9 +88,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -156,9 +156,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -248,8 +248,8 @@ results:
     value_note: ''
     sort_value: 0.9148
     sort_std: 0.001
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -316,8 +316,8 @@ results:
     value_note: ''
     sort_value: 0.9119
     sort_std: 0.0012
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -383,10 +383,10 @@ results:
     value_note: ''
     sort_value: 0.9077
     sort_std: null
-    global_rank: 26
-    paper_rank: 194
-    rank_delta: 168
-    rank_delta_abs: 168
+    global_rank: 34
+    paper_rank: 204
+    rank_delta: 170
+    rank_delta_abs: 170
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -450,8 +450,8 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 33
-    paper_rank: 122
+    global_rank: 42
+    paper_rank: 131
     rank_delta: 89
     rank_delta_abs: 89
     rank_delta_direction: worse
@@ -518,8 +518,8 @@ results:
     value_note: ''
     sort_value: 0.8967
     sort_std: 0.0012
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -587,8 +587,8 @@ results:
     value_note: ''
     sort_value: 0.8911
     sort_std: 0.0012
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -635,8 +635,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-08'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -646,22 +646,57 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8911
-    true_std: 0.0
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
-    value_gap_source_is_current_paper: false
+    true_std: 0.001
+    value_gap_source_arxiv: '2506.07168'
+    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
+      Annotation and Graph Alignment
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8911
-    sort_std: 0.0
-    global_rank: 66
-    paper_rank: 66
+    sort_std: 0.001
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8889
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 88
+    sort_value: 0.8889
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -724,8 +759,8 @@ results:
     value_note: ''
     sort_value: 0.8804
     sort_std: 0.0012
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 140
+    paper_rank: 140
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -793,10 +828,10 @@ results:
     value_note: ''
     sort_value: 0.856
     sort_std: 0.0009
-    global_rank: 284
-    paper_rank: 888
-    rank_delta: 604
-    rank_delta_abs: 604
+    global_rank: 295
+    paper_rank: 902
+    rank_delta: 607
+    rank_delta_abs: 607
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -863,8 +898,8 @@ results:
     value_note: ''
     sort_value: 0.8552
     sort_std: 0.0018
-    global_rank: 287
-    paper_rank: 287
+    global_rank: 298
+    paper_rank: 298
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -910,8 +945,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-08'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -921,17 +956,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8041
-    true_std: 0.003
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
-    value_gap_source_is_current_paper: false
+    true_std: 0.002
+    value_gap_source_arxiv: '2506.07168'
+    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
+      Annotation and Graph Alignment
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8041
-    sort_std: 0.003
-    global_rank: 759
-    paper_rank: 759
+    sort_std: 0.002
+    global_rank: 772
+    paper_rank: 772
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -997,10 +1033,10 @@ results:
     value_note: ''
     sort_value: 0.7768
     sort_std: null
-    global_rank: 840
-    paper_rank: 981
-    rank_delta: 141
-    rank_delta_abs: 141
+    global_rank: 853
+    paper_rank: 998
+    rank_delta: 145
+    rank_delta_abs: 145
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1020,9 +1056,9 @@ results:
 - &id002
   dataset: PubMed
   rows:
-  - model: R-SoftGraphAIN
+  - model: LGTL
     model_key: lgtl
-    model_plain: R-SoftGraphAIN
+    model_plain: LGTL
     value: 0.9518
     std: 0.0011
     metric: Accuracy
@@ -1054,9 +1090,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: SAGN
     model_key: sagn
-    model_plain: R-SoftGraphAIN
+    model_plain: SAGN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -1088,9 +1124,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: MixHop (LO)
     model_key: mixhop (lo)
-    model_plain: R-SoftGraphAIN
+    model_plain: MixHop (LO)
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -1121,6 +1157,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9487
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.9487
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GAGA
     model_key: gaga
@@ -1569,8 +1639,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-08'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1580,15 +1650,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.885
-    true_std: 0.0005
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
-    value_gap_source_is_current_paper: false
+    true_std: 0.002
+    value_gap_source_arxiv: '2506.07168'
+    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
+      Annotation and Graph Alignment
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.885
-    sort_std: 0.0005
+    sort_std: 0.002
     global_rank: 150
     paper_rank: 150
     rank_delta: 0
@@ -1636,8 +1707,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-08'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1647,15 +1718,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8824
-    true_std: 0.015
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
-    value_gap_source_is_current_paper: false
+    true_std: 0.0015
+    value_gap_source_arxiv: '2506.07168'
+    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
+      Annotation and Graph Alignment
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8824
-    sort_std: 0.015
+    sort_std: 0.0015
     global_rank: 169
     paper_rank: 169
     rank_delta: 0
@@ -1952,44 +2024,78 @@ results:
 - &id003
   dataset: ogbn-products
   rows:
-  - model: LargeGT-full
-    model_key: advsyngnn
-    model_plain: LargeGT-full
-    value: 0.8931
-    std: 0.0013
+  - model: Jacobi
+    model_key: jacobi
+    model_plain: Jacobi
+    value: 0.8968
+    std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.17071'
-    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
-      and Self-Corrective Propagation'
-    date: Feb 19, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-19'
-    venue: arXiv.org
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8931
-    sort_std: 0.0013
+    sort_value: 0.8968
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: gofa-f
-    model_plain: LargeGT-full
-    value: 0.8834
+  - model: GPR
+    model_key: gpr
+    model_plain: GPR
+    value: 0.8953
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8953
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LEMP4HG
+    model_key: lemp4hg
+    model_plain: LEMP4HG
+    value: 0.8939
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -2000,57 +2106,234 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.09709'
-    title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-    date: Jul 12, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-12'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/JiaruiFeng/GOFA
-    uses_external_data: false
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.8834
+    global_rank: 3
+    sort_value: 0.8939
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: llms
-    model_plain: LargeGT-full
-    value: 0.882
-    std: 0.0005
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.6913
+    std: 0.002
+    paper_value: 0.6913
+    paper_std: 0.002
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2412.16441'
-    title: 'Towards Graph Foundation Models: Learning Generalities Across Graphs via
-      Task-Trees'
-    date: Dec 21, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-21'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/Zehong-Wang/GIT
-    uses_external_data: false
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.882
-    sort_std: 0.0005
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for ogbn-products node classification
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    published_venue: TMLR 2025
+    published_conference: TMLR 2025
+    at_pub_value: 0.8933
+    at_pub_std: null
+    at_pub_source_arxiv: '2505.19762'
+    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    at_pub_source_date_iso: '2025-05-26'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.20199999999999996
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8933
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.20199999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8933
+    sort_std: null
+    global_rank: 4
+    paper_rank: 383
+    rank_delta: 379
+    rank_delta_abs: 379
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    comparison_source_arxiv: '2505.19762'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7052
+    std: 0.0012
+    paper_value: 0.7052
+    paper_std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for ogbn-products node classification
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    published_venue: TMLR 2025
+    published_conference: TMLR 2025
+    at_pub_value: 0.8868
+    at_pub_std: null
+    at_pub_source_arxiv: '2505.19762'
+    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    at_pub_source_date_iso: '2025-05-26'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.18159999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8868
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.18159999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8868
+    sort_std: null
+    global_rank: 7
+    paper_rank: 373
+    rank_delta: 366
+    rank_delta_abs: 366
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    comparison_source_arxiv: '2505.19762'
+    is_best: false
+    is_std_outlier: false
+  - model: RevGAT
+    model_key: revgat
+    model_plain: RevGAT
+    value: 0.6964
+    std: 0.0015
+    paper_value: 0.6964
+    paper_std: 0.0015
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for ogbn-products node classification
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    published_venue: TMLR 2025
+    published_conference: TMLR 2025
+    at_pub_value: 0.8859
+    at_pub_std: null
+    at_pub_source_arxiv: '2505.19762'
+    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    at_pub_source_date_iso: '2025-05-26'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.1895
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8859
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1895
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8859
+    sort_std: null
+    global_rank: 9
+    paper_rank: 381
+    rank_delta: 372
+    rank_delta_abs: 372
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    comparison_source_arxiv: '2505.19762'
     is_best: false
     is_std_outlier: false
   - model: GLEM
@@ -2111,86 +2394,16 @@ results:
     value_note: ''
     sort_value: 0.8736
     sort_std: 0.0007
-    global_rank: 6
-    paper_rank: 302
-    rank_delta: 296
-    rank_delta_abs: 296
+    global_rank: 17
+    paper_rank: 343
+    rank_delta: 326
+    rank_delta_abs: 326
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'SimTeG: A Frustratingly ple Approach Improves xtual
       raph Learning'
     comparison_source_arxiv: '2308.02565'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7052
-    std: 0.0012
-    paper_value: 0.7052
-    paper_std: 0.0012
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for ogbn-products node classification
-    date: Jun 8, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-08'
-    published_venue: TMLR 2025
-    published_conference: TMLR 2025
-    at_pub_value: 0.8868
-    at_pub_std: null
-    at_pub_source_arxiv: '2505.19762'
-    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    at_pub_source_date_iso: '2025-05-26'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2024-12-21'
-    value_gap_source_date_label: ICML 2024
-    gap_vs_at_pub: 0.18159999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8691
-    true_std: 0.0005
-    value_gap_source_arxiv: '2412.16441'
-    value_gap_source_title: 'Towards Graph Foundation Models: Learning Generalities
-      Across Graphs via Task-Trees'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.16389999999999993
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8691
-    sort_std: 0.0005
-    global_rank: 12
-    paper_rank: 332
-    rank_delta: 320
-    rank_delta_abs: 320
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    comparison_source_arxiv: '2505.19762'
     is_best: false
     is_std_outlier: false
   - model: SimTEG
@@ -2251,10 +2464,10 @@ results:
     value_note: ''
     sort_value: 0.854
     sort_std: 0.0028
-    global_rank: 27
-    paper_rank: 283
-    rank_delta: 256
-    rank_delta_abs: 256
+    global_rank: 42
+    paper_rank: 323
+    rank_delta: 281
+    rank_delta_abs: 281
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2320,10 +2533,10 @@ results:
     value_note: ''
     sort_value: 0.8418
     sort_std: 0.0015
-    global_rank: 44
-    paper_rank: 344
-    rank_delta: 300
-    rank_delta_abs: 300
+    global_rank: 63
+    paper_rank: 385
+    rank_delta: 322
+    rank_delta_abs: 322
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2331,13 +2544,11 @@ results:
     comparison_source_arxiv: '2405.19779'
     is_best: false
     is_std_outlier: false
-  - model: SAGE
-    model_key: sage
-    model_plain: SAGE
-    value: 0.6913
-    std: 0.002
-    paper_value: 0.6913
-    paper_std: 0.002
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8287
+    std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -2347,7 +2558,43 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 94
+    sort_value: 0.8287
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: TAPE
+    model_key: tape
+    model_plain: TAPE
+    value: 0.7996
+    std: 0.002
+    paper_value: 0.7996
+    paper_std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: llm
+    architecture_label: LLM
+    architecture_title: LLM applied to graphs
+    uses_external_data: 1
     input_feature_source: null
     feature_source_evidence: ''
     table_ref: Table 1
@@ -2361,16 +2608,16 @@ results:
     date_iso: '2025-06-08'
     published_venue: TMLR 2025
     published_conference: TMLR 2025
-    at_pub_value: 0.8933
-    at_pub_std: null
-    at_pub_source_arxiv: '2505.19762'
-    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    at_pub_source_date_iso: '2025-05-26'
+    at_pub_value: 0.8234
+    at_pub_std: 0.0036
+    at_pub_source_arxiv: '2502.13555'
+    at_pub_source_title: Democratizing Large Language Model-Based Graph Data Augmentation
+      via Latent Knowledge Graphs
+    at_pub_source_date_iso: '2025-02-19'
     at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: 2022-10
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: 0.20199999999999996
+    value_gap_source_date_iso: '2025-02-19'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.023800000000000043
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -2378,27 +2625,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8233
-    true_std: 0.0037
-    value_gap_source_arxiv: '2210.14709'
-    value_gap_source_title: Learning on Large-scale Text-attributed Graphs via Variational
-      Inference
+    true_value: 0.8234
+    true_std: 0.0036
+    value_gap_source_arxiv: '2502.13555'
+    value_gap_source_title: Democratizing Large Language Model-Based Graph Data Augmentation
+      via Latent Knowledge Graphs
     value_gap_source_is_current_paper: false
-    value_gap: 0.132
+    value_gap: 0.023800000000000043
     has_value_note: false
     value_note: ''
-    sort_value: 0.8233
-    sort_std: 0.0037
-    global_rank: 84
-    paper_rank: 342
-    rank_delta: 258
-    rank_delta_abs: 258
+    sort_value: 0.8234
+    sort_std: 0.0036
+    global_rank: 103
+    paper_rank: 169
+    rank_delta: 66
+    rank_delta_abs: 66
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    comparison_source_arxiv: '2505.19762'
+    comparison_source_title: Democratizing Large Language Model-Based Graph Data Augmentation
+      via Latent Knowledge Graphs
+    comparison_source_arxiv: '2502.13555'
     is_best: false
     is_std_outlier: false
   - model: GIANT
@@ -2459,10 +2706,10 @@ results:
     value_note: ''
     sort_value: 0.8049
     sort_std: 0.0028
-    global_rank: 132
-    paper_rank: 290
-    rank_delta: 158
-    rank_delta_abs: 158
+    global_rank: 155
+    paper_rank: 331
+    rank_delta: 176
+    rank_delta_abs: 176
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2529,8 +2776,8 @@ results:
     value_note: ''
     sort_value: 0.8005
     sort_std: 0.0015
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 166
+    paper_rank: 166
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2538,76 +2785,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TAPE
-    model_key: tape
-    model_plain: TAPE
-    value: 0.7996
-    std: 0.002
-    paper_value: 0.7996
-    paper_std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    uses_external_data: 1
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for ogbn-products node classification
-    date: Jun 8, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-08'
-    published_venue: TMLR 2025
-    published_conference: TMLR 2025
-    at_pub_value: 0.8234
-    at_pub_std: 0.0036
-    at_pub_source_arxiv: '2502.13555'
-    at_pub_source_title: Democratizing Large Language Model-Based Graph Data Augmentation
-      via Latent Knowledge Graphs
-    at_pub_source_date_iso: '2025-02-19'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2025-06-08'
-    value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: 0.023800000000000043
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7996
-    true_std: 0.002
-    value_gap_source_arxiv: '2506.07168'
-    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7996
-    sort_std: 0.002
-    global_rank: 146
-    paper_rank: 146
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Democratizing Large Language Model-Based Graph Data Augmentation
-      via Latent Knowledge Graphs
-    comparison_source_arxiv: '2502.13555'
     is_best: false
     is_std_outlier: false
   - model: GAGA
@@ -2667,8 +2844,8 @@ results:
     value_note: ''
     sort_value: 0.7887
     sort_std: 0.0018
-    global_rank: 200
-    paper_rank: 200
+    global_rank: 225
+    paper_rank: 225
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2676,76 +2853,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: RevGAT
-    model_key: revgat
-    model_plain: RevGAT
-    value: 0.6964
-    std: 0.0015
-    paper_value: 0.6964
-    paper_std: 0.0015
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for ogbn-products node classification
-    date: Jun 8, 2025
-    date_display: Jun 2025
-    date_iso: '2025-06-08'
-    published_venue: TMLR 2025
-    published_conference: TMLR 2025
-    at_pub_value: 0.8859
-    at_pub_std: null
-    at_pub_source_arxiv: '2505.19762'
-    at_pub_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    at_pub_source_date_iso: '2025-05-26'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2025-06-08'
-    value_gap_source_date_label: TMLR 2025
-    gap_vs_at_pub: 0.1895
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6964
-    true_std: 0.0015
-    value_gap_source_arxiv: '2506.07168'
-    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
-      Annotation and Graph Alignment
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6964
-    sort_std: 0.0015
-    global_rank: 340
-    paper_rank: 340
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Language Models as Messengers: Enhancing Message Passing
-      in Heterophilic Graph Learning'
-    comparison_source_arxiv: '2505.19762'
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -2804,10 +2911,10 @@ results:
     value_note: ''
     sort_value: 0.6605
     sort_std: 0.002
-    global_rank: 353
-    paper_rank: 380
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 394
+    paper_rank: 429
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2873,8 +2980,8 @@ results:
     value_note: ''
     sort_value: 0.6532
     sort_std: 0.0002
-    global_rank: 357
-    paper_rank: 357
+    global_rank: 399
+    paper_rank: 399
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

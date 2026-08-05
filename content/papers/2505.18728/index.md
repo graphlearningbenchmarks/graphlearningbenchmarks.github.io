@@ -74,6 +74,40 @@ results:
 - &id002
   dataset: Eccentricity
   rows:
+  - model: GCN-SSM + k-hop
+    model_key: gcn-ssm + k-hop
+    model_plain: GCN-SSM + k-hop
+    value: -4.2652
+    std: 0.1776
+    metric: MSE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: Feb 15, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-15'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: -4.2652
+    sort_std: 0.1776
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: MP-SSM
     model_key: mp-ssm
     model_plain: MP-SSM
@@ -110,8 +144,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -120,53 +154,130 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -2.9724
+    true_std: 0.0271
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -2.9724
     sort_std: 0.0271
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: GCN-SSM + eig(Lambda) approx 1
+    model_key: gcn-ssm + eig(lambda) approx 1
+    model_plain: GCN-SSM + eig(Lambda) approx 1
+    value: -2.2583
+    std: 0.0085
+    metric: MSE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2502.10818'
+    title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing in GNNs: Bridging
+      Recurrent and Graph Learning'
+    date: Feb 15, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-15'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: -2.2583
+    sort_std: 0.0085
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: A-DGN
-    model_key: odes
+    model_key: a-dgn
     model_plain: A-DGN
-    value: 0.3046
-    std: 0.1181
+    value: 0.4296
+    std: 0.1003
+    paper_value: 0.4296
+    paper_std: 0.1003
     metric: MSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2210.09789'
-    title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph Networks'
-    date: Oct 18, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-18'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/gravins/Anti-SymmetricDGN
-    uses_external_data: false
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.3046
-    sort_std: 0.1181
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 24, 2025
+    date_display: May 2025
+    date_iso: '2025-05-24'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7177
+    at_pub_std: 0.0345
+    at_pub_source_arxiv: '2210.09789'
+    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
+      Networks'
+    at_pub_source_date_iso: '2022-10-18'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.2881
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4296
+    true_std: 0.1003
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4296
+    sort_std: 0.1003
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
+      Networks'
+    comparison_source_arxiv: '2210.09789'
     is_best: false
     is_std_outlier: false
   - model: GPS
@@ -199,14 +310,15 @@ results:
     date_iso: '2025-05-24'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.6077
+    at_pub_std: 0.0282
+    at_pub_source_arxiv: '2502.10818'
+    at_pub_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    at_pub_source_date_iso: '2025-02-15'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -215,17 +327,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6077
+    true_std: 0.0282
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6077
     sort_std: 0.0282
-    global_rank: 2
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -268,8 +386,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -280,17 +398,17 @@ results:
     today_delta_significant: false
     true_value: 0.6602
     true_std: 0.1393
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6602
     sort_std: 0.1393
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -330,14 +448,15 @@ results:
     date_iso: '2025-05-24'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.6833
+    at_pub_std: 0.0074
+    at_pub_source_arxiv: '2502.10818'
+    at_pub_source_title: 'On Vanishing Gradients, Over-Smoothing, and Over-Squashing
+      in GNNs: Bridging Recurrent and Graph Learning'
+    at_pub_source_date_iso: '2025-02-15'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -346,90 +465,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6833
+    true_std: 0.0074
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6833
     sort_std: 0.0074
-    global_rank: 3
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: A-DGN
-    model_key: a-dgn
-    model_plain: A-DGN
-    value: 0.4296
-    std: 0.1003
-    paper_value: 0.4296
-    paper_std: 0.1003
-    metric: MSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 24, 2025
-    date_display: May 2025
-    date_iso: '2025-05-24'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7177
-    at_pub_std: 0.0345
-    at_pub_source_arxiv: '2210.09789'
-    at_pub_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    at_pub_source_date_iso: '2022-10-18'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: 0.2881
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7177
-    true_std: 0.0345
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.2881
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7177
-    sort_std: 0.0345
-    global_rank: 3
-    paper_rank: 2
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    comparison_source_arxiv: '2210.09789'
     is_best: false
     is_std_outlier: false
   - model: GCNII
@@ -469,8 +524,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -481,17 +536,17 @@ results:
     today_delta_significant: false
     true_value: 0.764
     true_std: 0.0355
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.764
     sort_std: 0.0355
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -538,8 +593,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -550,17 +605,17 @@ results:
     today_delta_significant: false
     true_value: 0.7863
     true_std: 0.0207
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7863
     sort_std: 0.0207
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -607,8 +662,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -619,17 +674,17 @@ results:
     today_delta_significant: false
     true_value: 0.7909
     true_std: 0.0222
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7909
     sort_std: 0.0222
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -676,8 +731,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -688,17 +743,17 @@ results:
     today_delta_significant: false
     true_value: 0.8261
     true_std: 0.0032
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8261
     sort_std: 0.0032
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -745,8 +800,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -757,17 +812,17 @@ results:
     today_delta_significant: false
     true_value: 0.8468
     true_std: 0.0028
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8468
     sort_std: 0.0028
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -814,8 +869,8 @@ results:
       Networks'
     at_pub_source_date_iso: '2022-10-18'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -826,17 +881,17 @@ results:
     today_delta_significant: false
     true_value: 0.9504
     true_std: 0.0007
-    value_gap_source_arxiv: '2210.09789'
-    value_gap_source_title: 'Anti-Symmetric DGN: a stable architecture for Deep Graph
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9504
     sort_std: 0.0007
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -894,8 +949,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -904,17 +959,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -4.6321
+    true_std: 0.0779
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -4.6321
     sort_std: 0.0779
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -956,8 +1017,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -966,17 +1027,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -3.599
+    true_std: 0.1949
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -3.599
     sort_std: 0.1949
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1018,8 +1085,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1028,17 +1095,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -3.2417
+    true_std: 0.0751
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -3.2417
     sort_std: 0.0751
-    global_rank: 1
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1080,8 +1153,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1090,17 +1163,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -1.3836
+    true_std: 0.0092
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -1.3836
     sort_std: 0.0092
-    global_rank: 1
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1142,8 +1221,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1152,17 +1231,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -1.1329
+    true_std: 0.0135
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -1.1329
     sort_std: 0.0135
-    global_rank: 1
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1204,8 +1289,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1214,17 +1299,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -0.5408
+    true_std: 0.4193
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -0.5408
     sort_std: 0.4193
-    global_rank: 1
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1266,8 +1357,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1276,17 +1367,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -0.1483
+    true_std: 0.0231
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -0.1483
     sort_std: 0.0231
-    global_rank: 1
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1328,8 +1425,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-24'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1338,17 +1435,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: -0.0942
+    true_std: 0.3897
+    value_gap_source_arxiv: '2505.18728'
+    value_gap_source_title: 'Message-Passing State-Space Models: Improving Graph Learning
+      with Modern Sequence Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: -0.0942
     sort_std: 0.3897
-    global_rank: 1
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1411,8 +1514,8 @@ results:
     value_note: ''
     sort_value: 0.2863
     sort_std: 0.1843
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1479,8 +1582,8 @@ results:
     value_note: ''
     sort_value: 0.6951
     sort_std: 0.1499
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1547,8 +1650,8 @@ results:
     value_note: ''
     sort_value: 0.9499
     sort_std: 0.0001
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

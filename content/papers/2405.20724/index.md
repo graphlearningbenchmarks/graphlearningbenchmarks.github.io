@@ -46,9 +46,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - ICG-NN
-mrr: 0.029
-adjusted_mrr: 0.0194
-mrr_dataset_count: 2
+mrr: 0.0254
+adjusted_mrr: 0.0254
+mrr_dataset_count: 4
 benchmark_categories:
 - Classic
 - Heterophily Benchmark
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: Cluster-GCN (2019)
+  - model: Node Sampled Soup
     model_key: node sampled soup
-    model_plain: Cluster-GCN (2019)
+    model_plain: Node Sampled Soup
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: EnGCN
     model_key: engcn
-    model_plain: Cluster-GCN (2019)
+    model_plain: EnGCN
     value: 0.9714
     std: 0.0003
     metric: F1
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: SAGN+SLE
     model_key: sagn+sle
-    model_plain: Cluster-GCN (2019)
+    model_plain: SAGN+SLE
     value: 0.971
     std: 0.0
     metric: F1
@@ -171,6 +171,39 @@ results:
     global_rank: 3
     sort_value: 0.971
     sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.966
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.04528'
+    title: Accelerating Large Scale Real-Time GNN Inference using Channel Pruning
+    date: May 10, 2021
+    date_display: May 2021
+    date_iso: '2021-05-10'
+    venue: Proceedings of the VLDB Endowment
+    codebase_url: https://github.com/tedzhouhk/GCNP
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.966
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -212,8 +245,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -222,17 +255,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.936
+    true_std: 0.012
+    value_gap_source_arxiv: '2405.20724'
+    value_gap_source_title: on Large Graphs using Intersecting Communities
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.936
     sort_std: 0.012
-    global_rank: 116
+    global_rank: 121
+    paper_rank: 121
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -295,10 +333,10 @@ results:
     value_note: ''
     sort_value: 0.9106
     sort_std: 0.0093
-    global_rank: 142
-    paper_rank: 145
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 151
+    paper_rank: 155
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -342,8 +380,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -352,17 +390,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.905
+    true_std: 0.012
+    value_gap_source_arxiv: '2405.20724'
+    value_gap_source_title: on Large Graphs using Intersecting Communities
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.905
     sort_std: 0.012
-    global_rank: 145
+    global_rank: 154
+    paper_rank: 154
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -404,8 +447,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -414,17 +457,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.899
+    true_std: 0.004
+    value_gap_source_arxiv: '2405.20724'
+    value_gap_source_title: on Large Graphs using Intersecting Communities
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.899
     sort_std: 0.004
-    global_rank: 146
+    global_rank: 156
+    paper_rank: 156
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -466,8 +514,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -476,17 +524,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.896
+    true_std: 0.012
+    value_gap_source_arxiv: '2405.20724'
+    value_gap_source_title: on Large Graphs using Intersecting Communities
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.896
     sort_std: 0.012
-    global_rank: 146
+    global_rank: 157
+    paper_rank: 157
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -549,8 +602,8 @@ results:
     value_note: ''
     sort_value: 0.7868
     sort_std: 0.0094
-    global_rank: 151
-    paper_rank: 157
+    global_rank: 163
+    paper_rank: 169
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -559,6 +612,40 @@ results:
     comparison_source_title: 'EXGC: Bridging Efficiency and Explainability in Graph
       Condensation'
     comparison_source_arxiv: '2402.05962'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7435
+    std: 0.0016
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2512.14908'
+    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
+      Graphs'
+    date: Dec 16, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/atlaspaper16/ATLAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 165
+    sort_value: 0.7435
+    sort_std: 0.0016
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Random
@@ -618,8 +705,8 @@ results:
     value_note: ''
     sort_value: 0.6992
     sort_std: 0.0232
-    global_rank: 158
-    paper_rank: 161
+    global_rank: 170
+    paper_rank: 173
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -686,8 +773,8 @@ results:
     value_note: ''
     sort_value: 0.6014
     sort_std: 0.0184
-    global_rank: 172
-    paper_rank: 174
+    global_rank: 184
+    paper_rank: 186
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -733,8 +820,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -743,17 +830,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.474
+    true_std: 0.009
+    value_gap_source_arxiv: '2405.20724'
+    value_gap_source_title: on Large Graphs using Intersecting Communities
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.474
     sort_std: 0.009
-    global_rank: 188
+    global_rank: 200
+    paper_rank: 200
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -772,9 +864,9 @@ results:
   dataset: Tolokers
   is_multi_metric: true
   rows:
-  - model: Schrödinger
+  - model: Polynormer-r
     model_key: polynormer-r
-    model_plain: Schrödinger
+    model_plain: Polynormer-r
     metric_values:
     - 0.8591
     - null
@@ -811,9 +903,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Schrödinger
+  - model: DC-GNN
     model_key: dc-gnn
-    model_plain: Schrödinger
+    model_plain: DC-GNN
     metric_values:
     - 0.8588
     - null
@@ -850,9 +942,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Schrödinger
+  - model: Polynormer + Wideformer
     model_key: polynormer + wideformer
-    model_plain: Schrödinger
+    model_plain: Polynormer + Wideformer
     metric_values:
     - 0.8533
     - null
@@ -1036,8 +1128,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2403.12529'
-    value_gap_source_title: Contextualized Messages Boost Graph Representations
+    value_gap_source_arxiv: '2605.13383'
+    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
+      in GNNs Via Observables'
     value_note: ''
     at_pub_value: 0.8364
     at_pub_std: 0.0067
@@ -1045,8 +1138,8 @@ results:
     at_pub_source_title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
     at_pub_source_date_iso: '2022-02-14'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1089,15 +1182,15 @@ results:
     architecture_title: Hybrid MPNN + transformer
     sort_value: 0.8351
     sort_std: 0.0052
-    true_value: null
-    true_std: null
+    true_value: 0.8351
+    true_std: 0.0052
     paper_value: 0.8351
     paper_std: 0.0052
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2405.20724'
+    value_gap_source_title: on Large Graphs using Intersecting Communities
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1105,8 +1198,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1156,8 +1249,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2405.16185'
-    value_gap_source_title: Differentiable Cluster Graph Neural Network
+    value_gap_source_arxiv: '2605.13383'
+    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
+      in GNNs Via Observables'
     value_note: ''
     at_pub_value: 0.8323
     at_pub_std: 0.0064
@@ -1165,8 +1259,8 @@ results:
     at_pub_source_title: Bundle Neural Networks for message diffusion on graphs
     at_pub_source_date_iso: '2024-05-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-05-25'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1191,6 +1285,106 @@ results:
     is_best: false
     is_std_outlier: false
     global_rank: 47
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    metric_values:
+    - 0.8243
+    - null
+    metric_stds:
+    - 0.0044
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    published_venue: ''
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 65
+    is_best: false
+    sort_value: 0.8243
+    sort_std: 0.0044
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: H2GCN
+    model_key: h2gcn
+    model_plain: H2GCN
+    metric_values:
+    - 0.7335
+    - 0.7335
+    metric_stds:
+    - 0.0101
+    - 0.0101
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.7815
+    sort_std: null
+    true_value: 0.7815
+    true_std: null
+    paper_value: 0.7335
+    paper_std: 0.0101
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.04799999999999993
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_note: ''
+    at_pub_value: 0.7335
+    at_pub_std: 0.0101
+    at_pub_source_arxiv: '2202.07082'
+    at_pub_source_title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
+    at_pub_source_date_iso: '2022-02-14'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: NeurIPS 2024
+    date: May 31, 2024
+    date_display: May 2024
+    date_iso: '2024-05-31'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 102
   - model: MLP
     model_key: mlp
     model_plain: MLP
@@ -1250,7 +1444,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 110
+    global_rank: 128
   - model: GloGNN
     model_key: glognn
     model_plain: GloGNN
@@ -1311,68 +1505,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 111
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    metric_values:
-    - 0.7335
-    - 0.7335
-    metric_stds:
-    - 0.0101
-    - 0.0101
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.7335
-    sort_std: 0.0101
-    true_value: 0.7335
-    true_std: 0.0101
-    paper_value: 0.7335
-    paper_std: 0.0101
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
-    value_note: ''
-    at_pub_value: 0.7335
-    at_pub_std: 0.0101
-    at_pub_source_arxiv: '2202.07082'
-    at_pub_source_title: 'Graph Neural Networks for Graphs with Heterophily: A Survey'
-    at_pub_source_date_iso: '2022-02-14'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2025-12-16'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2024
-    date: May 31, 2024
-    date_display: May 2024
-    date_iso: '2024-05-31'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 113
+    global_rank: 129
   - model: GPR-GNN
     model_key: gpr-gnn
     model_plain: GPR-GNN
@@ -1433,7 +1566,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 116
+    global_rank: 133
   metrics:
   - ROC-AUC
   - Accuracy
@@ -1451,9 +1584,9 @@ results:
 - &id003
   dataset: twitch-gamers
   rows:
-  - model: Polynormer + Wideformer
+  - model: CPF
     model_key: cpf
-    model_plain: Polynormer + Wideformer
+    model_plain: CPF
     value: 0.6977
     std: 0.003
     metric: Accuracy
@@ -1518,9 +1651,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Polynormer + Wideformer
+  - model: Polynormer
     model_key: polynormer
-    model_plain: Polynormer + Wideformer
+    model_plain: Polynormer
     value: 0.6715
     std: 0.0003
     metric: Accuracy
@@ -1655,8 +1788,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1665,17 +1798,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6608
+    true_std: 0.0074
+    value_gap_source_arxiv: '2405.20724'
+    value_gap_source_title: on Large Graphs using Intersecting Communities
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6608
     sort_std: 0.0074
-    global_rank: 15
+    global_rank: 16
+    paper_rank: 16
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1718,8 +1856,8 @@ results:
       Revisited
     at_pub_source_date_iso: '2022-02-04'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-06-03'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1729,18 +1867,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.6606
-    true_std: 0.0019
-    value_gap_source_arxiv: '2202.03580'
-    value_gap_source_title: Convolutional Neural Networks on Graphs with Chebyshev
-      Approximation, Revisited
+    true_std: 0.002
+    value_gap_source_arxiv: '2406.01249'
+    value_gap_source_title: Equivariant Machine Learning on Graphs with Nonlinear
+      Spectral Filters
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6606
-    sort_std: 0.0019
-    global_rank: 15
-    paper_rank: 15
+    sort_std: 0.002
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1786,8 +1924,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1796,18 +1934,56 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6527
+    true_std: 0.0082
+    value_gap_source_arxiv: '2405.20724'
+    value_gap_source_title: on Large Graphs using Intersecting Communities
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6527
     sort_std: 0.0082
-    global_rank: 24
+    global_rank: 27
+    paper_rank: 27
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.6473
+    std: 0.0011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.14337'
+    title: Deformable Graph Transformer
+    date: Jun 29, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-29'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 35
+    sort_value: 0.6473
+    sort_std: 0.0011
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1869,15 +2045,82 @@ results:
     value_note: ''
     sort_value: 0.6456
     sort_std: 0.0019
-    global_rank: 32
-    paper_rank: 43
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 38
+    paper_rank: 52
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Deformable Graph Transformer
     comparison_source_arxiv: '2206.14337'
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.5989
+    std: 0.0412
+    paper_value: 0.5989
+    paper_std: 0.0412
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 31, 2024
+    date_display: May 2024
+    date_iso: '2024-05-31'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: 0.629
+    at_pub_std: 0.0022
+    at_pub_source_arxiv: '2206.14337'
+    at_pub_source_title: Deformable Graph Transformer
+    at_pub_source_date_iso: '2022-06-29'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-06-29'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.030100000000000016
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.629
+    true_std: 0.0022
+    value_gap_source_arxiv: '2206.14337'
+    value_gap_source_title: Deformable Graph Transformer
+    value_gap_source_is_current_paper: false
+    value_gap: 0.030100000000000016
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.629
+    sort_std: 0.0022
+    global_rank: 50
+    paper_rank: 67
+    rank_delta: 17
+    rank_delta_abs: 17
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GPR-GNN
@@ -1917,8 +2160,8 @@ results:
       Revisited
     at_pub_source_date_iso: '2022-02-04'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-02-24'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: 0.007000000000000006
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1929,17 +2172,17 @@ results:
     today_delta_significant: true
     true_value: 0.6259
     true_std: 0.0038
-    value_gap_source_arxiv: '2202.03580'
-    value_gap_source_title: Convolutional Neural Networks on Graphs with Chebyshev
-      Approximation, Revisited
+    value_gap_source_arxiv: '2302.12432'
+    value_gap_source_title: Graph Neural Networks with Learnable and Optimal Polynomial
+      Bases
     value_gap_source_is_current_paper: false
     value_gap: 0.007000000000000006
     has_value_note: false
     value_note: ''
     sort_value: 0.6259
     sort_std: 0.0038
-    global_rank: 43
-    paper_rank: 45
+    global_rank: 52
+    paper_rank: 54
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -1986,8 +2229,8 @@ results:
     at_pub_source_title: Deformable Graph Transformer
     at_pub_source_date_iso: '2022-06-29'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-06-29'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.0022000000000000908
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1995,96 +2238,28 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6092
-    true_std: 0.0007
-    value_gap_source_arxiv: '2202.03580'
-    value_gap_source_title: Convolutional Neural Networks on Graphs with Chebyshev
-      Approximation, Revisited
+    today_delta_significant: true
+    true_value: 0.6114
+    true_std: 0.0006
+    value_gap_source_arxiv: '2206.14337'
+    value_gap_source_title: Deformable Graph Transformer
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.0022000000000000908
     has_value_note: false
     value_note: ''
-    sort_value: 0.6092
-    sort_std: 0.0007
-    global_rank: 54
-    paper_rank: 54
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.6114
+    sort_std: 0.0006
+    global_rank: 59
+    paper_rank: 63
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Deformable Graph Transformer
     comparison_source_arxiv: '2206.14337'
     is_best: false
     is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.5989
-    std: 0.0412
-    paper_value: 0.5989
-    paper_std: 0.0412
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 31, 2024
-    date_display: May 2024
-    date_iso: '2024-05-31'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: 0.629
-    at_pub_std: 0.0022
-    at_pub_source_arxiv: '2206.14337'
-    at_pub_source_title: Deformable Graph Transformer
-    at_pub_source_date_iso: '2022-06-29'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2023-11-09'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 0.030100000000000016
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.5989
-    true_std: 0.0412
-    value_gap_source_arxiv: '2311.05185'
-    value_gap_source_title: Mixture of Weak & Strong Experts on Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5989
-    sort_std: 0.0412
-    global_rank: 58
-    paper_rank: 58
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: true
   rank_metric: Accuracy
   higher_is_better: true
   experiment_scope: node-level

@@ -33,8 +33,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - EP-B
-mrr: 0.0058
-adjusted_mrr: 0.0019
+mrr: 0.0055
+adjusted_mrr: 0.0018
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -51,9 +51,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -84,9 +84,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -117,9 +117,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -149,6 +149,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.985
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.985
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: DeepWalk
     model_key: deepwalk
@@ -186,8 +219,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-09-22'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -198,8 +231,8 @@ results:
     today_delta_significant: true
     true_value: 0.529
     true_std: null
-    value_gap_source_arxiv: '2009.10273'
-    value_gap_source_title: Sub-graph Contrast for Scalable Self-Supervised Graph
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
       Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.27880000000000005
@@ -207,8 +240,8 @@ results:
     value_note: ''
     sort_value: 0.529
     sort_std: null
-    global_rank: 155
-    paper_rank: 170
+    global_rank: 166
+    paper_rank: 181
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
@@ -274,8 +307,8 @@ results:
     value_note: ''
     sort_value: 0.2528
     sort_std: 0.0168
-    global_rank: 170
-    paper_rank: 170
+    global_rank: 181
+    paper_rank: 181
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -341,8 +374,8 @@ results:
     value_note: ''
     sort_value: 0.2475
     sort_std: 0.0202
-    global_rank: 171
-    paper_rank: 171
+    global_rank: 182
+    paper_rank: 182
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -408,8 +441,8 @@ results:
     value_note: ''
     sort_value: 0.2474
     sort_std: 0.013
-    global_rank: 172
-    paper_rank: 172
+    global_rank: 183
+    paper_rank: 183
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -475,8 +508,8 @@ results:
     value_note: ''
     sort_value: 0.2149
     sort_std: 0.0119
-    global_rank: 173
-    paper_rank: 173
+    global_rank: 184
+    paper_rank: 184
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

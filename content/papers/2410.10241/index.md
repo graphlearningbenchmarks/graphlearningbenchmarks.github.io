@@ -59,9 +59,9 @@ proposed_models:
 - lrGAE 8
 - lrGAE (7)
 - lrGAE (8)
-mrr: 0.0139
-adjusted_mrr: 0.0139
-mrr_dataset_count: 3
+mrr: 0.0095
+adjusted_mrr: 0.0095
+mrr_dataset_count: 6
 benchmark_categories:
 - Classic
 - TU Dortmund
@@ -89,9 +89,9 @@ results:
 - &id008
   dataset: ACM
   rows:
-  - model: GCN+P+D
+  - model: SignGT
     model_key: signgt
-    model_plain: GCN+P+D
+    model_plain: SignGT
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -123,9 +123,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: NodeFormer
     model_key: nodeformer
-    model_plain: GCN+P+D
+    model_plain: NodeFormer
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -157,9 +157,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: FAGCN
     model_key: fagcn
-    model_plain: GCN+P+D
+    model_plain: FAGCN
     value: 0.9487
     std: 0.0059
     metric: Accuracy
@@ -463,6 +463,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.937
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.08331'
+    title: Model Stealing Attacks Against Inductive Graph Neural Networks
+    date: Dec 15, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-15'
+    venue: IEEE Symposium on Security and Privacy
+    codebase_url: https://github.com/xinleihe/GNNStealing
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.937
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: lrGAE 6
     model_key: lrgae 6
     model_plain: lrGAE 6
@@ -723,10 +756,10 @@ results:
     value_note: ''
     sort_value: 0.922
     sort_std: 0.002
-    global_rank: 42
-    paper_rank: 48
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 43
+    paper_rank: 52
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -790,10 +823,10 @@ results:
     value_note: ''
     sort_value: 0.919
     sort_std: 0.003
-    global_rank: 43
-    paper_rank: 47
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 44
+    paper_rank: 49
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -859,8 +892,8 @@ results:
     value_note: ''
     sort_value: 0.9175
     sort_std: 0.0035
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -882,9 +915,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: C (orthogonal)
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: C (orthogonal)
+    model_plain: GraphTARIF
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -916,9 +949,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GCN
     model_key: gcn
-    model_plain: C (orthogonal)
+    model_plain: GCN
     value: 0.9412
     std: 0.0008
     metric: Accuracy
@@ -950,9 +983,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GAT
     model_key: gat
-    model_plain: C (orthogonal)
+    model_plain: GAT
     value: 0.9398
     std: 0.0022
     metric: Accuracy
@@ -979,6 +1012,40 @@ results:
     global_rank: 3
     sort_value: 0.9398
     sort_std: 0.0022
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9351
+    std: 0.0006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 8
+    sort_value: 0.9351
+    sort_std: 0.0006
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1042,10 +1109,10 @@ results:
     value_note: ''
     sort_value: 0.9094
     sort_std: 0.0008
-    global_rank: 83
-    paper_rank: 188
-    rank_delta: 105
-    rank_delta_abs: 105
+    global_rank: 87
+    paper_rank: 200
+    rank_delta: 113
+    rank_delta_abs: 113
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1090,8 +1157,8 @@ results:
     at_pub_source_title: Spectral Augmentation for Self-Supervised Learning on Graphs
     at_pub_source_date_iso: '2022-10-02'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2025-06-25'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-05-04'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.020399999999999974
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1102,19 +1169,18 @@ results:
     today_delta_significant: true
     true_value: 0.9034
     true_std: 0.0019
-    value_gap_source_arxiv: '2506.20362'
-    value_gap_source_title: Self-Supervised Graph Learning via Spectral Bootstrapping
-      and Laplacian-Based Augmentations
+    value_gap_source_arxiv: '2605.03076'
+    value_gap_source_title: Adaptive Negative Scheduling for Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.020399999999999974
     has_value_note: false
     value_note: ''
     sort_value: 0.9034
     sort_std: 0.0019
-    global_rank: 110
-    paper_rank: 240
-    rank_delta: 130
-    rank_delta_abs: 130
+    global_rank: 114
+    paper_rank: 252
+    rank_delta: 138
+    rank_delta_abs: 138
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1180,15 +1246,85 @@ results:
     value_note: ''
     sort_value: 0.902
     sort_std: 0.0045
-    global_rank: 116
-    paper_rank: 155
-    rank_delta: 39
-    rank_delta_abs: 39
+    global_rank: 120
+    paper_rank: 162
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GGD
+    model_key: ggd
+    model_plain: GGD
+    value: 0.869
+    std: 0.003
+    paper_value: 0.869
+    paper_std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: ggd
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: 0.901
+    at_pub_std: 0.009
+    at_pub_source_arxiv: '2206.01535'
+    at_pub_source_title: 'Rethinking and Scaling Up Graph Contrastive Learning: An
+      Extremely Efficient Approach with Group Discrimination'
+    at_pub_source_date_iso: '2022-06-03'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-06-03'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: 0.03200000000000003
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.901
+    true_std: 0.009
+    value_gap_source_arxiv: '2206.01535'
+    value_gap_source_title: 'Rethinking and Scaling Up Graph Contrastive Learning:
+      An Extremely Efficient Approach with Group Discrimination'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03200000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.901
+    sort_std: 0.009
+    global_rank: 128
+    paper_rank: 327
+    rank_delta: 199
+    rank_delta_abs: 199
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'Rethinking and Scaling Up Graph Contrastive Learning:
+      An Extremely Efficient Approach with Group Discrimination'
+    comparison_source_arxiv: '2206.01535'
     is_best: false
     is_std_outlier: false
   - model: GraphMAE2
@@ -1247,10 +1383,10 @@ results:
     value_note: ''
     sort_value: 0.899
     sort_std: 0.003
-    global_rank: 139
-    paper_rank: 161
-    rank_delta: 22
-    rank_delta_abs: 22
+    global_rank: 145
+    paper_rank: 170
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1315,8 +1451,8 @@ results:
     value_note: ''
     sort_value: 0.8988
     sort_std: 0.001
-    global_rank: 141
-    paper_rank: 148
+    global_rank: 147
+    paper_rank: 154
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -1362,8 +1498,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1372,17 +1508,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.898
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.898
     sort_std: 0.002
-    global_rank: 150
+    global_rank: 155
+    paper_rank: 155
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1424,8 +1566,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1434,17 +1576,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.897
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.897
     sort_std: 0.003
-    global_rank: 158
+    global_rank: 164
+    paper_rank: 164
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1486,8 +1634,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1496,17 +1644,91 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.896
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.896
     sort_std: 0.002
-    global_rank: 163
+    global_rank: 173
+    paper_rank: 173
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AUG-MAE
+    model_key: aug-mae
+    model_plain: AUG-MAE
+    value: 0.896
+    std: 0.005
+    paper_value: 0.896
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: augmae
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.896
+    true_std: 0.005
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.896
+    sort_std: 0.005
+    global_rank: 172
+    paper_rank: 172
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1548,8 +1770,8 @@ results:
     at_pub_source_title: Spectral Augmentation for Self-Supervised Learning on Graphs
     at_pub_source_date_iso: '2022-10-02'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2025-06-25'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-05-04'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.033299999999999996
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1560,19 +1782,18 @@ results:
     today_delta_significant: true
     true_value: 0.8953
     true_std: 0.0035
-    value_gap_source_arxiv: '2506.20362'
-    value_gap_source_title: Self-Supervised Graph Learning via Spectral Bootstrapping
-      and Laplacian-Based Augmentations
+    value_gap_source_arxiv: '2605.03076'
+    value_gap_source_title: Adaptive Negative Scheduling for Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.033299999999999996
     has_value_note: false
     value_note: ''
     sort_value: 0.8953
     sort_std: 0.0035
-    global_rank: 171
-    paper_rank: 328
-    rank_delta: 157
-    rank_delta_abs: 157
+    global_rank: 182
+    paper_rank: 356
+    rank_delta: 174
+    rank_delta_abs: 174
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1617,33 +1838,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-04-16'
-    value_gap_source_date_label: WWW 2025
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.8936
-    true_std: 0.0018
-    value_gap_source_arxiv: '2504.12011'
-    value_gap_source_title: Balancing Graph Embedding Smoothness in Self-Supervised
-      Learning via Information-Theoretic Decomposition
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0014000000000000679
+    true_value: 0.895
+    true_std: 0.001
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.8936
-    sort_std: 0.0018
-    global_rank: 177
-    paper_rank: 172
-    rank_delta: -5
-    rank_delta_abs: 5
-    rank_delta_direction: better
-    has_value_gap: true
+    sort_value: 0.895
+    sort_std: 0.001
+    global_rank: 183
+    paper_rank: 183
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1685,8 +1906,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1695,17 +1916,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.891
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.891
     sort_std: 0.003
-    global_rank: 190
+    global_rank: 201
+    paper_rank: 201
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1768,79 +1995,11 @@ results:
     value_note: ''
     sort_value: 0.8896
     sort_std: 0.0013
-    global_rank: 198
-    paper_rank: 213
+    global_rank: 211
+    paper_rank: 226
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AUG-MAE
-    model_key: aug-mae
-    model_plain: AUG-MAE
-    value: 0.896
-    std: 0.005
-    paper_value: 0.896
-    paper_std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: augmae
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-04-16'
-    value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.8852
-    true_std: 0.0017
-    value_gap_source_arxiv: '2504.12011'
-    value_gap_source_title: Balancing Graph Embedding Smoothness in Self-Supervised
-      Learning via Information-Theoretic Decomposition
-    value_gap_source_is_current_paper: false
-    value_gap: 0.010800000000000032
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8852
-    sort_std: 0.0017
-    global_rank: 229
-    paper_rank: 163
-    rank_delta: -66
-    rank_delta_abs: 66
-    rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1883,8 +2042,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1893,89 +2052,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.883
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.883
     sort_std: 0.003
-    global_rank: 241
+    global_rank: 254
+    paper_rank: 254
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GGD
-    model_key: ggd
-    model_plain: GGD
-    value: 0.869
-    std: 0.003
-    paper_value: 0.869
-    paper_std: 0.003
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: ggd
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: 0.901
-    at_pub_std: 0.009
-    at_pub_source_arxiv: '2206.01535'
-    at_pub_source_title: 'Rethinking and Scaling Up Graph Contrastive Learning: An
-      Extremely Efficient Approach with Group Discrimination'
-    at_pub_source_date_iso: '2022-06-03'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-06-03'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.03200000000000003
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.88
-    true_std: 0.001
-    value_gap_source_arxiv: '2306.02117'
-    value_gap_source_title: 'Oversmoothing: A Nightmare for Graph Contrastive Learning?'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01100000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.88
-    sort_std: 0.001
-    global_rank: 255
-    paper_rank: 304
-    rank_delta: 49
-    rank_delta_abs: 49
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Rethinking and Scaling Up Graph Contrastive Learning:
-      An Extremely Efficient Approach with Group Discrimination'
-    comparison_source_arxiv: '2206.01535'
     is_best: false
     is_std_outlier: false
   - model: DGI
@@ -2036,10 +2132,10 @@ results:
     value_note: ''
     sort_value: 0.8798
     sort_std: 0.0081
-    global_rank: 256
-    paper_rank: 390
-    rank_delta: 134
-    rank_delta_abs: 134
+    global_rank: 270
+    paper_rank: 428
+    rank_delta: 158
+    rank_delta_abs: 158
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2104,10 +2200,10 @@ results:
     value_note: ''
     sort_value: 0.8666
     sort_std: 0.0007
-    global_rank: 313
-    paper_rank: 471
-    rank_delta: 158
-    rank_delta_abs: 158
+    global_rank: 337
+    paper_rank: 520
+    rank_delta: 183
+    rank_delta_abs: 183
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2151,8 +2247,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2161,18 +2257,58 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.864
+    true_std: 0.004
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.864
     sort_std: 0.004
-    global_rank: 321
+    global_rank: 347
+    paper_rank: 347
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8463
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.11907'
+    title: 'GraphFM: A generalist graph transformer that learns transferable representations
+      across diverse domains'
+    date: Jul 16, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/nerdslab/GraphFM
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 394
+    sort_value: 0.8463
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2213,8 +2349,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2223,17 +2359,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.709
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.709
     sort_std: 0.003
-    global_rank: 504
+    global_rank: 567
+    paper_rank: 567
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2251,9 +2393,9 @@ results:
 - &id001
   dataset: Amazon-Photo
   rows:
-  - model: C (orthogonal)
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: C (orthogonal)
+    model_plain: MSH-GNN
     value: 0.9766
     std: 0.005
     metric: Accuracy
@@ -2284,9 +2426,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GeoMancer
     model_key: geomancer
-    model_plain: C (orthogonal)
+    model_plain: GeoMancer
     value: 0.9705
     std: 0.0013
     metric: Accuracy
@@ -2318,9 +2460,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: C (orthogonal)
+    model_plain: GraphTARIF
     value: 0.9703
     std: 0.0019
     metric: Accuracy
@@ -2351,6 +2493,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9643
+    std: 0.0027
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 13
+    sort_value: 0.9643
+    sort_std: 0.0027
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: lrGAE 6
     model_key: lrgae 6
@@ -2388,8 +2564,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2398,17 +2574,91 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.935
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.935
     sort_std: 0.003
-    global_rank: 169
+    global_rank: 185
+    paper_rank: 185
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GiGaMAE
+    model_key: gigamae
+    model_plain: GiGaMAE
+    value: 0.935
+    std: 0.005
+    paper_value: 0.935
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gigamae
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.935
+    true_std: 0.005
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.935
+    sort_std: 0.005
+    global_rank: 184
+    paper_rank: 184
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2472,10 +2722,10 @@ results:
     value_note: ''
     sort_value: 0.9342
     sort_std: 0.0026
-    global_rank: 173
-    paper_rank: 219
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 194
+    paper_rank: 255
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2540,10 +2790,10 @@ results:
     value_note: ''
     sort_value: 0.9341
     sort_std: 0.001
-    global_rank: 176
-    paper_rank: 185
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 197
+    paper_rank: 210
+    rank_delta: 13
+    rank_delta_abs: 13
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2587,8 +2837,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2597,17 +2847,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.934
+    true_std: 0.005
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.934
     sort_std: 0.005
-    global_rank: 181
+    global_rank: 201
+    paper_rank: 201
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2649,8 +2905,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2659,17 +2915,91 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.934
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.934
     sort_std: 0.002
-    global_rank: 181
+    global_rank: 200
+    paper_rank: 200
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AUG-MAE
+    model_key: aug-mae
+    model_plain: AUG-MAE
+    value: 0.934
+    std: 0.008
+    paper_value: 0.934
+    paper_std: 0.008
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: augmae
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.934
+    true_std: 0.008
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.934
+    sort_std: 0.008
+    global_rank: 198
+    paper_rank: 198
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2733,10 +3063,10 @@ results:
     value_note: ''
     sort_value: 0.9337
     sort_std: 0.0021
-    global_rank: 181
-    paper_rank: 195
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 206
+    paper_rank: 223
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2802,10 +3132,10 @@ results:
     value_note: ''
     sort_value: 0.9325
     sort_std: 0.0021
-    global_rank: 192
-    paper_rank: 206
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 219
+    paper_rank: 238
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2849,8 +3179,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2859,17 +3189,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.932
+    true_std: 0.004
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.932
     sort_std: 0.004
-    global_rank: 200
+    global_rank: 226
+    paper_rank: 226
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2931,8 +3267,8 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.003
-    global_rank: 197
-    paper_rank: 197
+    global_rank: 225
+    paper_rank: 225
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2940,6 +3276,73 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GRACE
+    model_key: grace
+    model_plain: GRACE
+    value: 0.921
+    std: 0.002
+    paper_value: 0.921
+    paper_std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: grace
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: 0.928
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2201.09830'
+    at_pub_source_title: Learning Graph Augmentations to Learn Graph Representations
+    at_pub_source_date_iso: '2022-01-24'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2025-05-25'
+    value_gap_source_date_label: ICML 2025
+    gap_vs_at_pub: 0.007000000000000006
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9313
+    true_std: 0.0017
+    value_gap_source_arxiv: '2505.19024'
+    value_gap_source_title: Learn Beneficial Noise as Graph Augmentation
+    value_gap_source_is_current_paper: false
+    value_gap: 0.010299999999999976
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9313
+    sort_std: 0.0017
+    global_rank: 236
+    paper_rank: 368
+    rank_delta: 132
+    rank_delta_abs: 132
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Learning Graph Augmentations to Learn Graph Representations
+    comparison_source_arxiv: '2201.09830'
     is_best: false
     is_std_outlier: false
   - model: S2GAE
@@ -2978,8 +3381,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2988,17 +3391,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.931
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.931
     sort_std: 0.003
-    global_rank: 211
+    global_rank: 241
+    paper_rank: 241
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3062,84 +3471,16 @@ results:
     value_note: ''
     sort_value: 0.9309
     sort_std: 0.0008
-    global_rank: 211
-    paper_rank: 353
-    rank_delta: 142
-    rank_delta_abs: 142
+    global_rank: 246
+    paper_rank: 408
+    rank_delta: 162
+    rank_delta_abs: 162
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Noise-Resilient Unsupervised Graph Representation Learning
       via Multi-Hop Feature Quality Estimation
     comparison_source_arxiv: '2407.19944'
-    is_best: false
-    is_std_outlier: false
-  - model: GiGaMAE
-    model_key: gigamae
-    model_plain: GiGaMAE
-    value: 0.935
-    std: 0.005
-    paper_value: 0.935
-    paper_std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: gigamae
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-04-16'
-    value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.9301
-    true_std: 0.0046
-    value_gap_source_arxiv: '2504.12011'
-    value_gap_source_title: Balancing Graph Embedding Smoothness in Self-Supervised
-      Learning via Information-Theoretic Decomposition
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0049000000000000155
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9301
-    sort_std: 0.0046
-    global_rank: 217
-    paper_rank: 169
-    rank_delta: -48
-    rank_delta_abs: 48
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GGD
@@ -3198,150 +3539,15 @@ results:
     value_note: ''
     sort_value: 0.929
     sort_std: 0.002
-    global_rank: 230
-    paper_rank: 290
-    rank_delta: 60
-    rank_delta_abs: 60
+    global_rank: 263
+    paper_rank: 333
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Oversmoothing: A Nightmare for Graph Contrastive Learning?'
     comparison_source_arxiv: '2306.02117'
-    is_best: false
-    is_std_outlier: false
-  - model: AUG-MAE
-    model_key: aug-mae
-    model_plain: AUG-MAE
-    value: 0.934
-    std: 0.008
-    paper_value: 0.934
-    paper_std: 0.008
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: augmae
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-04-16'
-    value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.9282
-    true_std: 0.0017
-    value_gap_source_arxiv: '2504.12011'
-    value_gap_source_title: Balancing Graph Embedding Smoothness in Self-Supervised
-      Learning via Information-Theoretic Decomposition
-    value_gap_source_is_current_paper: false
-    value_gap: 0.005800000000000027
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9282
-    sort_std: 0.0017
-    global_rank: 236
-    paper_rank: 181
-    rank_delta: -55
-    rank_delta_abs: 55
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GRACE
-    model_key: grace
-    model_plain: GRACE
-    value: 0.921
-    std: 0.002
-    paper_value: 0.921
-    paper_std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: grace
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: 0.928
-    at_pub_std: 0.005
-    at_pub_source_arxiv: '2201.09830'
-    at_pub_source_title: Learning Graph Augmentations to Learn Graph Representations
-    at_pub_source_date_iso: '2022-01-24'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-01-24'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.007000000000000006
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.928
-    true_std: 0.005
-    value_gap_source_arxiv: '2201.09830'
-    value_gap_source_title: Learning Graph Augmentations to Learn Graph Representations
-    value_gap_source_is_current_paper: false
-    value_gap: 0.007000000000000006
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.928
-    sort_std: 0.005
-    global_rank: 238
-    paper_rank: 320
-    rank_delta: 82
-    rank_delta_abs: 82
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Learning Graph Augmentations to Learn Graph Representations
-    comparison_source_arxiv: '2201.09830'
     is_best: false
     is_std_outlier: false
   - model: SEEGERA
@@ -3380,8 +3586,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3390,17 +3596,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.928
+    true_std: 0.005
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.928
     sort_std: 0.005
-    global_rank: 245
+    global_rank: 274
+    paper_rank: 274
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3442,8 +3654,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3452,17 +3664,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.92
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.92
     sort_std: 0.003
-    global_rank: 332
+    global_rank: 382
+    paper_rank: 382
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3524,15 +3742,48 @@ results:
     value_note: ''
     sort_value: 0.9185
     sort_std: 0.0006
-    global_rank: 339
-    paper_rank: 436
-    rank_delta: 97
-    rank_delta_abs: 97
+    global_rank: 393
+    paper_rank: 503
+    rank_delta: 110
+    rank_delta_abs: 110
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Graph Masked Autoencoders with Transformers
     comparison_source_arxiv: '2202.08391'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.9128
+    std: 0.0063
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.02285'
+    title: Clarify Confused Nodes via Separated Learning
+    date: Jun 4, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-04'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: https://github.com/GISec-Team/NCGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 434
+    sort_value: 0.9128
+    sort_std: 0.0063
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAE_f
@@ -3571,8 +3822,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3581,17 +3832,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.801
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.801
     sort_std: 0.002
-    global_rank: 503
+    global_rank: 591
+    paper_rank: 591
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3609,9 +3866,9 @@ results:
 - &id006
   dataset: COLLAB
   rows:
-  - model: GPM
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: GPM
+    model_plain: WL-MLP
     value: 0.9792
     std: null
     metric: Accuracy
@@ -3643,9 +3900,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: GPM
+    model_plain: MSH-GNN
     value: 0.964
     std: 0.007
     metric: Accuracy
@@ -3676,9 +3933,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GPM
+  - model: CoCN
     model_key: cocn
-    model_plain: GPM
+    model_plain: CoCN
     value: 0.8722
     std: 0.0013
     metric: Accuracy
@@ -3766,9 +4023,9 @@ results:
     sort_value: 0.841
     sort_std: 0.003
     global_rank: 10
-    paper_rank: 50
-    rank_delta: 40
-    rank_delta_abs: 40
+    paper_rank: 52
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -3842,6 +4099,39 @@ results:
     comparison_type: improved
     comparison_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     comparison_source_arxiv: '2205.10803'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.826
+    std: 0.022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.11714'
+    title: Scalable Expressiveness through Preprocessed Graph Perturbations
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/Danial-sb/SE2P
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.826
+    sort_std: 0.022
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: S2GAE
@@ -4243,8 +4533,8 @@ results:
     value_note: ''
     sort_value: 0.815
     sort_std: 0.007
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4311,8 +4601,8 @@ results:
     value_note: ''
     sort_value: 0.808
     sort_std: 0.006
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4379,10 +4669,10 @@ results:
     value_note: ''
     sort_value: 0.8078
     sort_std: 0.0012
-    global_rank: 107
-    paper_rank: 137
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 111
+    paper_rank: 142
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4447,8 +4737,8 @@ results:
     value_note: ''
     sort_value: 0.807
     sort_std: 0.014
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4515,10 +4805,10 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.005
-    global_rank: 122
-    paper_rank: 148
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 126
+    paper_rank: 155
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4583,8 +4873,8 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.013
-    global_rank: 163
-    paper_rank: 163
+    global_rank: 168
+    paper_rank: 168
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4652,8 +4942,8 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: 0.006
-    global_rank: 166
-    paper_rank: 166
+    global_rank: 173
+    paper_rank: 173
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4720,13 +5010,46 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: 0.013
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.792
+    std: 0.024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 180
+    sort_value: 0.792
+    sort_std: 0.024
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -4788,8 +5111,8 @@ results:
     value_note: ''
     sort_value: 0.769
     sort_std: 0.015
-    global_rank: 240
-    paper_rank: 240
+    global_rank: 255
+    paper_rank: 255
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4856,8 +5179,8 @@ results:
     value_note: ''
     sort_value: 0.763
     sort_std: 0.012
-    global_rank: 253
-    paper_rank: 253
+    global_rank: 270
+    paper_rank: 270
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4924,8 +5247,8 @@ results:
     value_note: ''
     sort_value: 0.707
     sort_std: 0.014
-    global_rank: 328
-    paper_rank: 328
+    global_rank: 349
+    paper_rank: 349
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4947,9 +5270,9 @@ results:
 - &id003
   dataset: Coauthor-Physics
   rows:
-  - model: SelfGNN LDP
+  - model: GeoMancer
     model_key: geomancer
-    model_plain: SelfGNN LDP
+    model_plain: GeoMancer
     value: 0.9878
     std: 0.0012
     metric: Accuracy
@@ -4981,9 +5304,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SelfGNN LDP
+  - model: LGD
     model_key: lgd
-    model_plain: SelfGNN LDP
+    model_plain: LGD
     value: 0.9855
     std: 0.0012
     metric: Accuracy
@@ -5015,9 +5338,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SelfGNN LDP
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: SelfGNN LDP
+    model_plain: MSH-GNN
     value: 0.9837
     std: 0.0008
     metric: Accuracy
@@ -5043,6 +5366,73 @@ results:
     global_rank: 3
     sort_value: 0.9837
     sort_std: 0.0008
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9774
+    std: 0.0035
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.17296'
+    title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    date: Nov 26, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-26'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/GGA23/GrokFormer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 12
+    sort_value: 0.9774
+    sort_std: 0.0035
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.9597
+    std: 0.0007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 92
+    sort_value: 0.9597
+    sort_std: 0.0007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5084,8 +5474,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5094,17 +5484,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.958
+    true_std: 0.001
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.958
     sort_std: 0.001
-    global_rank: 90
+    global_rank: 105
+    paper_rank: 105
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5168,78 +5564,16 @@ results:
     value_note: ''
     sort_value: 0.958
     sort_std: 0.004
-    global_rank: 86
-    paper_rank: 153
-    rank_delta: 67
-    rank_delta_abs: 67
+    global_rank: 103
+    paper_rank: 204
+    rank_delta: 101
+    rank_delta_abs: 101
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Unifying Graph Contrastive Learning with Flexible Contextual
       Scopes
     comparison_source_arxiv: '2210.08792'
-    is_best: false
-    is_std_outlier: false
-  - model: lrGAE 7
-    model_key: lrgae 7
-    model_plain: lrGAE 7
-    value: 0.957
-    std: 0.002
-    paper_value: 0.957
-    paper_std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.957
-    sort_std: 0.002
-    global_rank: 101
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GRACE
@@ -5279,8 +5613,8 @@ results:
       for Graph Convolutional Networks
     at_pub_source_date_iso: '2023-02-17'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-02-17'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-25'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: 0.006300000000000083
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -5289,27 +5623,162 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9563
-    true_std: 0.001
-    value_gap_source_arxiv: '2302.08727'
-    value_gap_source_title: Building Shortcuts between Distant Nodes with Biaffine
-      Mapping for Graph Convolutional Networks
+    true_value: 0.9574
+    true_std: 0.0006
+    value_gap_source_arxiv: '2505.19024'
+    value_gap_source_title: Learn Beneficial Noise as Graph Augmentation
     value_gap_source_is_current_paper: false
-    value_gap: 0.006300000000000083
+    value_gap: 0.007400000000000073
     has_value_note: false
     value_note: ''
-    sort_value: 0.9563
-    sort_std: 0.001
-    global_rank: 104
-    paper_rank: 145
-    rank_delta: 41
-    rank_delta_abs: 41
+    sort_value: 0.9574
+    sort_std: 0.0006
+    global_rank: 111
+    paper_rank: 193
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Building Shortcuts between Distant Nodes with Biaffine
       Mapping for Graph Convolutional Networks
     comparison_source_arxiv: '2302.08727'
+    is_best: false
+    is_std_outlier: false
+  - model: lrGAE 7
+    model_key: lrgae 7
+    model_plain: lrGAE 7
+    value: 0.957
+    std: 0.002
+    paper_value: 0.957
+    paper_std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.957
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.957
+    sort_std: 0.002
+    global_rank: 121
+    paper_rank: 121
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MaskGAE
+    model_key: maskgae
+    model_plain: MaskGAE
+    value: 0.956
+    std: 0.002
+    paper_value: 0.956
+    paper_std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: maskgae
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.956
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.956
+    sort_std: 0.002
+    global_rank: 135
+    paper_rank: 135
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: CCA-SSG
@@ -5370,10 +5839,10 @@ results:
     value_note: ''
     sort_value: 0.9559
     sort_std: 0.0007
-    global_rank: 109
-    paper_rank: 138
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 140
+    paper_rank: 178
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5437,10 +5906,10 @@ results:
     value_note: ''
     sort_value: 0.955
     sort_std: 0.001
-    global_rank: 118
-    paper_rank: 145
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 152
+    paper_rank: 191
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -5504,10 +5973,10 @@ results:
     value_note: ''
     sort_value: 0.955
     sort_std: 0.002
-    global_rank: 119
-    paper_rank: 147
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 153
+    paper_rank: 196
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5551,8 +6020,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5561,17 +6030,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.955
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.955
     sort_std: 0.002
-    global_rank: 123
+    global_rank: 154
+    paper_rank: 154
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5613,8 +6088,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5623,17 +6098,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.954
+    true_std: 0.001
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.954
     sort_std: 0.001
-    global_rank: 128
+    global_rank: 161
+    paper_rank: 161
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5675,8 +6156,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5685,17 +6166,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.953
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.953
     sort_std: 0.003
-    global_rank: 134
+    global_rank: 173
+    paper_rank: 173
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5737,8 +6224,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5747,17 +6234,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.952
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.952
     sort_std: 0.002
-    global_rank: 141
+    global_rank: 181
+    paper_rank: 181
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5799,8 +6292,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5809,147 +6302,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.952
+    true_std: 0.001
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.952
     sort_std: 0.001
-    global_rank: 141
+    global_rank: 182
+    paper_rank: 182
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MaskGAE
-    model_key: maskgae
-    model_plain: MaskGAE
-    value: 0.956
-    std: 0.002
-    paper_value: 0.956
-    paper_std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: maskgae
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-04-16'
-    value_gap_source_date_label: WWW 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.9515
-    true_std: 0.0011
-    value_gap_source_arxiv: '2504.12011'
-    value_gap_source_title: Balancing Graph Embedding Smoothness in Self-Supervised
-      Learning via Information-Theoretic Decomposition
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0044999999999999485
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9515
-    sort_std: 0.0011
-    global_rank: 141
-    paper_rank: 109
-    rank_delta: -32
-    rank_delta_abs: 32
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GGD
-    model_key: ggd
-    model_plain: GGD
-    value: 0.95
-    std: 0.004
-    paper_value: 0.95
-    paper_std: 0.004
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: ggd
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.95
-    sort_std: 0.004
-    global_rank: 147
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5991,8 +6360,8 @@ results:
     at_pub_source_title: Graph Contrastive Learning with Adaptive Augmentation
     at_pub_source_date_iso: '2020-10-27'
     at_pub_source_date_label: WWW 2020
-    value_gap_source_date_iso: '2022-06-26'
-    value_gap_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: 0.0027999999999999137
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6000,27 +6369,95 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9492
-    true_std: 0.0007
-    value_gap_source_arxiv: '2206.12933'
-    value_gap_source_title: Wiener Graph Deconvolutional Network Improves Graph Self-Supervised
-      Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0027999999999999137
+    today_delta_significant: false
+    true_value: 0.952
+    true_std: 0.001
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.9492
-    sort_std: 0.0007
-    global_rank: 147
-    paper_rank: 141
-    rank_delta: -6
-    rank_delta_abs: 6
-    rank_delta_direction: better
+    sort_value: 0.952
+    sort_std: 0.001
+    global_rank: 180
+    paper_rank: 180
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Graph Contrastive Learning with Adaptive Augmentation
     comparison_source_arxiv: '2010.14945'
+    is_best: false
+    is_std_outlier: false
+  - model: GGD
+    model_key: ggd
+    model_plain: GGD
+    value: 0.95
+    std: 0.004
+    paper_value: 0.95
+    paper_std: 0.004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: ggd
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.95
+    true_std: 0.004
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.95
+    sort_std: 0.004
+    global_rank: 194
+    paper_rank: 194
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: DGI
@@ -6081,8 +6518,8 @@ results:
     value_note: ''
     sort_value: 0.9489
     sort_std: 0.0009
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 202
+    paper_rank: 202
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6128,8 +6565,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6138,17 +6575,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.556
+    true_std: 0.007
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.556
     sort_std: 0.007
-    global_rank: 265
+    global_rank: 351
+    paper_rank: 351
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6166,9 +6609,9 @@ results:
 - &id007
   dataset: DBLP
   rows:
-  - model: ACGCL
+  - model: HG-SCM
     model_key: hg-scm
-    model_plain: ACGCL
+    model_plain: HG-SCM
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -6200,9 +6643,43 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ACGCL
+  - model: SeHGNN
+    model_key: sehgnn
+    model_plain: SeHGNN
+    value: 0.9489
+    std: 0.0018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.05757'
+    title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
+      Graph'
+    date: Dec 10, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-10'
+    venue: Information Processing & Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9489
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AdvSynGNN
     model_key: advsyngnn
-    model_plain: ACGCL
+    model_plain: AdvSynGNN
     value: 0.9486
     std: 0.0012
     metric: Accuracy
@@ -6226,7 +6703,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9486
     sort_std: 0.0012
     comparison_type: global_top
@@ -6270,8 +6747,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6280,17 +6757,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.948
+    true_std: 0.004
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.948
     sort_std: 0.004
-    global_rank: 3
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6332,8 +6815,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6342,55 +6825,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.946
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.946
     sort_std: 0.003
-    global_rank: 3
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ACGCL
-    model_key: simplehgn
-    model_plain: ACGCL
-    value: 0.9446
-    std: 0.0022
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2312.05757'
-    title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
-      Graph'
-    date: Dec 10, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-10'
-    venue: Information Processing & Management
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9446
-    sort_std: 0.0022
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: lrGAE 6
     model_key: lrgae 6
@@ -6428,8 +6883,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6438,17 +6893,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.944
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.944
     sort_std: 0.002
-    global_rank: 4
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6490,8 +6951,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6500,17 +6961,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.943
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.943
     sort_std: 0.002
-    global_rank: 4
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6552,8 +7019,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6562,17 +7029,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.942
+    true_std: 0.0031
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.942
     sort_std: 0.0031
-    global_rank: 4
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6614,8 +7087,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6624,20 +7097,94 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.942
+    true_std: 0.002
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.942
     sort_std: 0.002
-    global_rank: 4
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAE
+    model_key: gae
+    model_plain: GAE
+    value: 0.941
+    std: 0.003
+    paper_value: 0.941
+    paper_std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: gae
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: 0.812
+    at_pub_std: null
+    at_pub_source_arxiv: '2006.04131'
+    at_pub_source_title: Deep Graph Contrastive Representation Learning
+    at_pub_source_date_iso: '2020-06-07'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
+    gap_vs_at_pub: 0.1289999999999999
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.941
+    true_std: 0.003
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.941
+    sort_std: 0.003
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Deep Graph Contrastive Representation Learning
+    comparison_source_arxiv: '2006.04131'
     is_best: false
     is_std_outlier: false
   - model: HGT
@@ -6677,8 +7224,8 @@ results:
       Model in Heterogeneous Graph'
     at_pub_source_date_iso: '2023-12-10'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-12-10'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6689,17 +7236,17 @@ results:
     today_delta_significant: false
     true_value: 0.9349
     true_std: 0.0025
-    value_gap_source_arxiv: '2312.05757'
-    value_gap_source_title: 'Towards Human-like Perception: Learning Structural Causal
-      Model in Heterogeneous Graph'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9349
     sort_std: 0.0025
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6746,8 +7293,8 @@ results:
       Model in Heterogeneous Graph'
     at_pub_source_date_iso: '2023-12-10'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-12-10'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6758,17 +7305,17 @@ results:
     today_delta_significant: false
     true_value: 0.9207
     true_std: 0.005
-    value_gap_source_arxiv: '2312.05757'
-    value_gap_source_title: 'Towards Human-like Perception: Learning Structural Causal
-      Model in Heterogeneous Graph'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9207
     sort_std: 0.005
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6815,8 +7362,8 @@ results:
       Model in Heterogeneous Graph'
     at_pub_source_date_iso: '2023-12-10'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-12-10'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6827,17 +7374,17 @@ results:
     today_delta_significant: false
     true_value: 0.9205
     true_std: 0.0062
-    value_gap_source_arxiv: '2312.05757'
-    value_gap_source_title: 'Towards Human-like Perception: Learning Structural Causal
-      Model in Heterogeneous Graph'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9205
     sort_std: 0.0062
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6847,13 +7394,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GAE
-    model_key: gae
-    model_plain: GAE
-    value: 0.941
-    std: 0.003
-    paper_value: 0.941
-    paper_std: 0.003
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8758
+    std: 0.002
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -6863,55 +7408,58 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-09'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/wooner49/TriCL
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: gae
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: 0.812
-    at_pub_std: null
-    at_pub_source_arxiv: '2006.04131'
-    at_pub_source_title: Deep Graph Contrastive Representation Learning
-    at_pub_source_date_iso: '2020-06-07'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-06-07'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.1289999999999999
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.812
-    true_std: null
-    value_gap_source_arxiv: '2006.04131'
-    value_gap_source_title: Deep Graph Contrastive Representation Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.1289999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.812
-    sort_std: null
-    global_rank: 71
-    paper_rank: 4
-    rank_delta: -67
-    rank_delta_abs: 67
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Deep Graph Contrastive Representation Learning
-    comparison_source_arxiv: '2006.04131'
+    is_global_top: true
+    global_rank: 36
+    sort_value: 0.8758
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8118
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-09'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/wooner49/TriCL
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 82
+    sort_value: 0.8118
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -6926,9 +7474,9 @@ results:
 - &id009
   dataset: IMDB
   rows:
-  - model: TAGs (70b)
+  - model: BERT-Base, Uncased
     model_key: bert-base, uncased
-    model_plain: TAGs (70b)
+    model_plain: BERT-Base, Uncased
     value: 0.919
     std: null
     metric: Accuracy
@@ -6995,9 +7543,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: TAGs (70b)
+  - model: UniMP
     model_key: unimp
-    model_plain: TAGs (70b)
+    model_plain: UniMP
     value: 0.6998
     std: 0.0058
     metric: Accuracy
@@ -7025,6 +7573,41 @@ results:
     global_rank: 3
     sort_value: 0.6998
     sort_std: 0.0058
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.6759
+    std: 0.0041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: nodes are characterized by a feature matrix X... text
+      attributes are encoded using a PLM
+    is_global_top: true
+    global_rank: 4
+    sort_value: 0.6759
+    sort_std: 0.0041
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -7726,9 +8309,9 @@ results:
 - &id004
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -7759,9 +8342,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -7784,7 +8400,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
@@ -7792,36 +8408,103 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.933
+    std: 0.029
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.00911'
+    title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    date: Dec 2, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-02'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
+    global_rank: 43
+    sort_value: 0.933
+    sort_std: 0.029
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GRACE
+    model_key: grace
+    model_plain: GRACE
+    value: 0.89
+    std: 0.011
+    paper_value: 0.89
+    paper_std: 0.011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: grace
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: Graph classification accuracy reported in Table 1
+    date: Oct 14, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-14'
+    published_venue: KDD 2024
+    published_conference: KDD 2024
+    at_pub_value: 0.9065
+    at_pub_std: 0.0081
+    at_pub_source_arxiv: '2401.03638'
+    at_pub_source_title: Unifying Graph Contrastive Learning via Graph Message Augmentation
+    at_pub_source_date_iso: '2024-01-08'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.01649999999999996
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.9065
+    true_std: 0.0081
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: false
+    value_gap: 0.01649999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9065
+    sort_std: 0.0081
+    global_rank: 148
+    paper_rank: 289
+    rank_delta: 141
+    rank_delta_abs: 141
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -7883,8 +8566,8 @@ results:
     value_note: ''
     sort_value: 0.905
     sort_std: 0.008
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 159
+    paper_rank: 159
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7930,8 +8613,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: KDD 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7940,17 +8623,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.905
+    true_std: 0.008
+    value_gap_source_arxiv: '2410.10241'
+    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
+      Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.905
     sort_std: 0.008
-    global_rank: 137
+    global_rank: 160
+    paper_rank: 160
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -8013,8 +8702,8 @@ results:
     value_note: ''
     sort_value: 0.899
     sort_std: 0.004
-    global_rank: 184
-    paper_rank: 184
+    global_rank: 218
+    paper_rank: 218
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8082,8 +8771,8 @@ results:
     value_note: ''
     sort_value: 0.898
     sort_std: 0.013
-    global_rank: 192
-    paper_rank: 192
+    global_rank: 226
+    paper_rank: 226
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8150,8 +8839,8 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: 0.013
-    global_rank: 200
-    paper_rank: 200
+    global_rank: 235
+    paper_rank: 235
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8217,10 +8906,10 @@ results:
     value_note: ''
     sort_value: 0.896
     sort_std: 0.003
-    global_rank: 206
-    paper_rank: 208
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 243
+    paper_rank: 244
+    rank_delta: 1
+    rank_delta_abs: 1
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -8285,8 +8974,8 @@ results:
     value_note: ''
     sort_value: 0.895
     sort_std: 0.007
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 248
+    paper_rank: 248
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8354,8 +9043,8 @@ results:
     value_note: ''
     sort_value: 0.895
     sort_std: 0.015
-    global_rank: 209
-    paper_rank: 209
+    global_rank: 245
+    paper_rank: 245
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8423,8 +9112,8 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.01
-    global_rank: 221
-    paper_rank: 221
+    global_rank: 259
+    paper_rank: 259
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8492,8 +9181,8 @@ results:
     value_note: ''
     sort_value: 0.893
     sort_std: 0.007
-    global_rank: 240
-    paper_rank: 240
+    global_rank: 277
+    paper_rank: 277
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8560,8 +9249,8 @@ results:
     value_note: ''
     sort_value: 0.893
     sort_std: 0.011
-    global_rank: 237
-    paper_rank: 237
+    global_rank: 274
+    paper_rank: 274
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8629,84 +9318,16 @@ results:
     value_note: ''
     sort_value: 0.8927
     sort_std: 0.0153
-    global_rank: 245
-    paper_rank: 413
-    rank_delta: 168
-    rank_delta_abs: 168
+    global_rank: 282
+    paper_rank: 459
+    rank_delta: 177
+    rank_delta_abs: 177
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Graph-level Representation Learning with Joint-Embedding
       Predictive Architectures
     comparison_source_arxiv: '2309.16014'
-    is_best: false
-    is_std_outlier: false
-  - model: GRACE
-    model_key: grace
-    model_plain: GRACE
-    value: 0.89
-    std: 0.011
-    paper_value: 0.89
-    paper_std: 0.011
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: grace
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: Graph classification accuracy reported in Table 1
-    date: Oct 14, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-14'
-    published_venue: KDD 2024
-    published_conference: KDD 2024
-    at_pub_value: 0.9065
-    at_pub_std: 0.0081
-    at_pub_source_arxiv: '2401.03638'
-    at_pub_source_title: Unifying Graph Contrastive Learning via Graph Message Augmentation
-    at_pub_source_date_iso: '2024-01-08'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-10-14'
-    value_gap_source_date_label: KDD 2024
-    gap_vs_at_pub: 0.01649999999999996
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.89
-    true_std: 0.011
-    value_gap_source_arxiv: '2410.10241'
-    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
-      Learners
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.89
-    sort_std: 0.011
-    global_rank: 252
-    paper_rank: 252
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SEEGERA
@@ -8766,8 +9387,8 @@ results:
     value_note: ''
     sort_value: 0.889
     sort_std: 0.012
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 299
+    paper_rank: 299
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8834,8 +9455,8 @@ results:
     value_note: ''
     sort_value: 0.886
     sort_std: 0.006
-    global_rank: 283
-    paper_rank: 283
+    global_rank: 322
+    paper_rank: 322
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8902,13 +9523,46 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: 0.012
-    global_rank: 373
-    paper_rank: 373
+    global_rank: 417
+    paper_rank: 417
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -8970,8 +9624,8 @@ results:
     value_note: ''
     sort_value: 0.865
     sort_std: 0.009
-    global_rank: 388
-    paper_rank: 388
+    global_rank: 432
+    paper_rank: 432
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9038,8 +9692,8 @@ results:
     value_note: ''
     sort_value: 0.854
     sort_std: 0.003
-    global_rank: 428
-    paper_rank: 428
+    global_rank: 474
+    paper_rank: 474
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9106,8 +9760,8 @@ results:
     value_note: ''
     sort_value: 0.832
     sort_std: 0.013
-    global_rank: 518
-    paper_rank: 518
+    global_rank: 570
+    paper_rank: 570
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9129,9 +9783,9 @@ results:
 - &id005
   dataset: NCI1
   rows:
-  - model: ECC
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: ECC
+    model_plain: WL-MLP
     value: 0.9954
     std: null
     metric: Accuracy
@@ -9163,9 +9817,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: GIN
     model_key: gin
-    model_plain: ECC
+    model_plain: GIN
     value: 0.9934
     std: null
     metric: Accuracy
@@ -9196,9 +9850,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ECC
+  - model: GCN
     model_key: gcn
-    model_plain: ECC
+    model_plain: GCN
     value: 0.9727
     std: null
     metric: Accuracy
@@ -9224,6 +9878,40 @@ results:
     global_rank: 3
     sort_value: 0.9727
     sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8303
+    std: 0.0137
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.01794'
+    title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based Gnn Explainers
+      through In-depth Benchmarking'
+    date: Oct 3, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-03'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/Armagaan/gnn-x-bench
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 81
+    sort_value: 0.8303
+    sort_std: 0.0137
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -9287,10 +9975,10 @@ results:
     value_note: ''
     sort_value: 0.8237
     sort_std: 0.0224
-    global_rank: 110
-    paper_rank: 371
-    rank_delta: 261
-    rank_delta_abs: 261
+    global_rank: 122
+    paper_rank: 391
+    rank_delta: 269
+    rank_delta_abs: 269
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -9356,8 +10044,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.009
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 126
+    paper_rank: 126
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9424,8 +10112,8 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: 0.004
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9492,8 +10180,8 @@ results:
     value_note: ''
     sort_value: 0.815
     sort_std: 0.006
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 162
+    paper_rank: 162
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9560,8 +10248,8 @@ results:
     value_note: ''
     sort_value: 0.814
     sort_std: 0.004
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 168
+    paper_rank: 168
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9628,8 +10316,8 @@ results:
     value_note: ''
     sort_value: 0.812
     sort_std: 0.007
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 183
+    paper_rank: 183
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9696,8 +10384,8 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.004
-    global_rank: 197
-    paper_rank: 197
+    global_rank: 215
+    paper_rank: 215
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9764,10 +10452,10 @@ results:
     value_note: ''
     sort_value: 0.8042
     sort_std: 0.0035
-    global_rank: 202
-    paper_rank: 222
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 220
+    paper_rank: 241
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -9832,10 +10520,10 @@ results:
     value_note: ''
     sort_value: 0.7978
     sort_std: 0.0017
-    global_rank: 240
-    paper_rank: 460
-    rank_delta: 220
-    rank_delta_abs: 220
+    global_rank: 259
+    paper_rank: 490
+    rank_delta: 231
+    rank_delta_abs: 231
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -9901,8 +10589,8 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.005
-    global_rank: 249
-    paper_rank: 249
+    global_rank: 268
+    paper_rank: 268
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9969,8 +10657,8 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: 0.006
-    global_rank: 259
-    paper_rank: 259
+    global_rank: 278
+    paper_rank: 278
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10037,8 +10725,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.005
-    global_rank: 284
-    paper_rank: 284
+    global_rank: 304
+    paper_rank: 304
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10105,8 +10793,8 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: 0.012
-    global_rank: 285
-    paper_rank: 285
+    global_rank: 305
+    paper_rank: 305
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10173,8 +10861,8 @@ results:
     value_note: ''
     sort_value: 0.776
     sort_std: 0.012
-    global_rank: 353
-    paper_rank: 353
+    global_rank: 373
+    paper_rank: 373
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10241,8 +10929,8 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.015
-    global_rank: 372
-    paper_rank: 372
+    global_rank: 392
+    paper_rank: 392
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10309,8 +10997,8 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.003
-    global_rank: 395
-    paper_rank: 395
+    global_rank: 415
+    paper_rank: 415
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10377,8 +11065,8 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.018
-    global_rank: 408
-    paper_rank: 408
+    global_rank: 429
+    paper_rank: 429
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10445,8 +11133,8 @@ results:
     value_note: ''
     sort_value: 0.745
     sort_std: 0.013
-    global_rank: 444
-    paper_rank: 444
+    global_rank: 471
+    paper_rank: 471
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

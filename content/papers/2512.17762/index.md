@@ -1665,9 +1665,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GHR
+  - model: GHR-GINE
     model_key: ghr-gine
-    model_plain: GHR
+    model_plain: GHR-GINE
     value: 0.379
     std: 0.191
     metric: MAE

@@ -37,9 +37,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - MPNNs
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0833
+adjusted_mrr: 0.0556
+mrr_dataset_count: 2
 benchmark_categories:
 - Classic
 - MoleculeNet
@@ -128,9 +128,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: GINE w/ VN
     model_key: gine w/ vn
-    model_plain: HOD-GNN
+    model_plain: GINE w/ VN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -161,9 +161,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: NaiveGINe+ K=3 w/ VN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: HOD-GNN
+    model_plain: NaiveGINe+ K=3 w/ VN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -230,8 +230,8 @@ results:
     at_pub_source_title: Graph convolutions that can finally model local structure
     at_pub_source_date_iso: '2020-11-30'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-11-30'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-06-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.016800000000000037
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -239,27 +239,28 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.85
-    true_std: 0.009
-    value_gap_source_arxiv: '2011.15069'
-    value_gap_source_title: Graph convolutions that can finally model local structure
-    value_gap_source_is_current_paper: false
-    value_gap: 0.016800000000000037
+    today_delta_significant: false
+    true_value: 0.8668
+    true_std: 0.0077
+    value_gap_source_arxiv: '2306.10767'
+    value_gap_source_title: 'P-tensors: a General Framework for Higher Order Message
+      Passing in Subgraph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.85
-    sort_std: 0.009
-    global_rank: 7
+    sort_value: 0.8668
+    sort_std: 0.0077
+    global_rank: 5
     paper_rank: 5
-    rank_delta: -2
-    rank_delta_abs: 2
-    rank_delta_direction: better
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Graph convolutions that can finally model local structure
     comparison_source_arxiv: '2011.15069'
-    is_best: false
+    is_best: true
     is_std_outlier: false
   - model: MPNNs
     model_key: mpnns
@@ -297,8 +298,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -307,18 +308,57 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8495
+    true_std: 0.0058
+    value_gap_source_arxiv: '2306.10767'
+    value_gap_source_title: 'P-tensors: a General Framework for Higher Order Message
+      Passing in Subgraph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8495
     sort_std: 0.0058
     global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.84
+    std: 0.004
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2011.15069'
+    title: Graph convolutions that can finally model local structure
+    date: Nov 30, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-30'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.84
+    sort_std: 0.004
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -359,8 +399,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -369,17 +409,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.794
+    true_std: 0.01
+    value_gap_source_arxiv: '2306.10767'
+    value_gap_source_title: 'P-tensors: a General Framework for Higher Order Message
+      Passing in Subgraph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.794
     sort_std: 0.01
-    global_rank: 84
+    global_rank: 80
+    paper_rank: 80
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -421,8 +467,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -431,17 +477,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7795
+    true_std: 0.004
+    value_gap_source_arxiv: '2306.10767'
+    value_gap_source_title: 'P-tensors: a General Framework for Higher Order Message
+      Passing in Subgraph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7795
     sort_std: 0.004
-    global_rank: 127
+    global_rank: 129
+    paper_rank: 129
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -483,8 +535,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -493,17 +545,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7639
+    true_std: 0.0118
+    value_gap_source_arxiv: '2306.10767'
+    value_gap_source_title: 'P-tensors: a General Framework for Higher Order Message
+      Passing in Subgraph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7639
     sort_std: 0.0118
-    global_rank: 176
+    global_rank: 179
+    paper_rank: 179
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -521,9 +579,9 @@ results:
 - &id001
   dataset: ZINC
   rows:
-  - model: GPS
+  - model: TIGT
     model_key: tigt
-    model_plain: GPS
+    model_plain: TIGT
     value: 0.014
     std: 0.001
     metric: MAE
@@ -554,10 +612,43 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPS
-    model_key: ppgn++
-    model_plain: GPS
-    value: 0.02
+  - model: FloydNet
+    model_key: floydnet
+    model_plain: FloydNet
+    value: 0.016
+    std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.016
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PST
+    model_key: pst
+    model_plain: PST
+    value: 0.018
     std: 0.001
     metric: MAE
     higher_is_better: false
@@ -565,57 +656,23 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2302.11556'
-    title: Equivariant Polynomials for Graph Neural Networks
-    date: Feb 22, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-22'
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2405.02795'
+    title: Graph as Point Set
+    date: May 5, 2024
+    date_display: May 2024
+    date_iso: '2024-05-05'
     venue: International Conference on Machine Learning
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.02
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS
-    model_key: subgraphormer
-    model_plain: GPS
-    value: 0.02
-    std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2406.09291'
-    title: A Flexible, Equivariant Framework for Subgraph GNNs via Graph Products
-      and Graph Coarsening
-    date: Jun 13, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-13'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/BarSGuy/Efficient-Subgraph-GNNs
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
     global_rank: 3
-    sort_value: 0.02
-    sort_std: 0.002
+    sort_value: 0.018
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -677,8 +734,8 @@ results:
     value_note: ''
     sort_value: 0.021
     sort_std: 0.001
-    global_rank: 4
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 10
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -724,8 +781,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -734,17 +791,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.024
+    true_std: 0.001
+    value_gap_source_arxiv: '2306.10767'
+    value_gap_source_title: 'P-tensors: a General Framework for Higher Order Message
+      Passing in Subgraph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.024
     sort_std: 0.001
-    global_rank: 12
+    global_rank: 18
+    paper_rank: 18
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -786,8 +849,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -796,17 +859,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.024
+    true_std: 0.001
+    value_gap_source_arxiv: '2306.10767'
+    value_gap_source_title: 'P-tensors: a General Framework for Higher Order Message
+      Passing in Subgraph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.024
     sort_std: 0.001
-    global_rank: 12
+    global_rank: 19
+    paper_rank: 19
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -849,8 +918,8 @@ results:
       with I$^2$-GNNs
     at_pub_source_date_iso: '2022-10-22'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2023-02-22'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-09-10'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -861,16 +930,17 @@ results:
     today_delta_significant: false
     true_value: 0.036
     true_std: 0.002
-    value_gap_source_arxiv: '2302.11556'
-    value_gap_source_title: Equivariant Polynomials for Graph Neural Networks
+    value_gap_source_arxiv: '2309.04941'
+    value_gap_source_title: Distance-Restricted Folklore Weisfeiler-Leman GNNs with
+      Provable Cycle Counting Power
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.036
     sort_std: 0.002
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -936,10 +1006,10 @@ results:
     value_note: ''
     sort_value: 0.067
     sort_std: 0.009
-    global_rank: 35
-    paper_rank: 63
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 68
+    paper_rank: 104
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -984,8 +1054,8 @@ results:
     at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     at_pub_source_date_iso: '2021-06-23'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-02-22'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -996,16 +1066,17 @@ results:
     today_delta_significant: false
     true_value: 0.088
     true_std: 0.002
-    value_gap_source_arxiv: '2302.11556'
-    value_gap_source_title: Equivariant Polynomials for Graph Neural Networks
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1051,8 +1122,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1061,18 +1132,57 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.088
+    true_std: 0.002
+    value_gap_source_arxiv: '2306.10767'
+    value_gap_source_title: 'P-tensors: a General Framework for Higher Order Message
+      Passing in Subgraph Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 42
+    global_rank: 75
+    paper_rank: 75
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.113
+    std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.05815'
+    title: What Can We Learn from State Space Models for Machine Learning on Graphs?
+    date: Jun 9, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-09'
+    venue: arXiv.org
+    codebase_url: https://github.com/Graph-COM/GSSC
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 83
+    sort_value: 0.113
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

@@ -54,9 +54,9 @@ results:
 - &id003
   dataset: COLLAB
   rows:
-  - model: GPM
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: GPM
+    model_plain: WL-MLP
     value: 0.9792
     std: null
     metric: Accuracy
@@ -88,9 +88,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: GPM
+    model_plain: MSH-GNN
     value: 0.964
     std: 0.007
     metric: Accuracy
@@ -121,9 +121,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GPM
+  - model: CoCN
     model_key: cocn
-    model_plain: GPM
+    model_plain: CoCN
     value: 0.8722
     std: 0.0013
     metric: Accuracy
@@ -149,6 +149,39 @@ results:
     global_rank: 3
     sort_value: 0.8722
     sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.826
+    std: 0.022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.11714'
+    title: Scalable Expressiveness through Preprocessed Graph Perturbations
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/Danial-sb/SE2P
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.826
+    sort_std: 0.022
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -212,9 +245,9 @@ results:
     sort_value: 0.822
     sort_std: 0.021
     global_rank: 37
-    paper_rank: 130
-    rank_delta: 93
-    rank_delta_abs: 93
+    paper_rank: 135
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -278,8 +311,8 @@ results:
     value_note: ''
     sort_value: 0.8138
     sort_std: 0.0142
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -345,13 +378,46 @@ results:
     value_note: ''
     sort_value: 0.8016
     sort_std: 0.0111
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.792
+    std: 0.024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 180
+    sort_value: 0.792
+    sort_std: 0.024
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -412,8 +478,8 @@ results:
     value_note: ''
     sort_value: 0.7836
     sort_std: 0.0247
-    global_rank: 196
-    paper_rank: 196
+    global_rank: 207
+    paper_rank: 207
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -480,10 +546,10 @@ results:
     value_note: ''
     sort_value: 0.7759
     sort_std: 0.0224
-    global_rank: 215
-    paper_rank: 302
-    rank_delta: 87
-    rank_delta_abs: 87
+    global_rank: 228
+    paper_rank: 321
+    rank_delta: 93
+    rank_delta_abs: 93
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -527,8 +593,8 @@ results:
     at_pub_source_title: Wasserstein Embedding for Graph Learning
     at_pub_source_date_iso: '2020-06-16'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-06-17'
-    value_gap_source_date_label: KDD 2020
+    value_gap_source_date_iso: '2021-10-28'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: 9.999999999998899e-05
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -538,18 +604,17 @@ results:
     insignificant_value_gap: true
     today_delta_significant: false
     true_value: 0.731
-    true_std: null
-    value_gap_source_arxiv: '2006.09963'
-    value_gap_source_title: 'GCC: Graph Contrastive Coding for Graph Neural Network
-      Pre-Training'
+    true_std: 0.003
+    value_gap_source_arxiv: '2110.15438'
+    value_gap_source_title: 'InfoGCL: Information-Aware Graph Contrastive Learning'
     value_gap_source_is_current_paper: false
     value_gap: 9.999999999998899e-05
     has_value_note: false
     value_note: ''
     sort_value: 0.731
-    sort_std: null
-    global_rank: 306
-    paper_rank: 307
+    sort_std: 0.003
+    global_rank: 327
+    paper_rank: 328
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -616,8 +681,8 @@ results:
     value_note: ''
     sort_value: 0.726
     sort_std: 0.0215
-    global_rank: 313
-    paper_rank: 313
+    global_rank: 334
+    paper_rank: 334
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -663,8 +728,8 @@ results:
     at_pub_source_title: Graph Capsule Convolutional Neural Networks
     at_pub_source_date_iso: '2018-05-21'
     at_pub_source_date_label: ICML 2018
-    value_gap_source_date_iso: '2018-05-21'
-    value_gap_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2020-07-16'
+    value_gap_source_date_label: NeurIPS 2020
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -674,17 +739,17 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.5211
-    true_std: 0.0071
-    value_gap_source_arxiv: '1805.08090'
-    value_gap_source_title: Graph Capsule Convolutional Neural Networks
-    value_gap_source_is_current_paper: false
+    true_std: 0.007
+    value_gap_source_arxiv: '2007.08349'
+    value_gap_source_title: Natural Graph Networks
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.5211
-    sort_std: 0.0071
-    global_rank: 384
-    paper_rank: 384
+    sort_std: 0.007
+    global_rank: 407
+    paper_rank: 407
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -706,9 +771,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -739,9 +804,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -764,47 +862,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -862,10 +926,10 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.029
-    global_rank: 34
-    paper_rank: 217
-    rank_delta: 183
-    rank_delta_abs: 183
+    global_rank: 43
+    paper_rank: 254
+    rank_delta: 211
+    rank_delta_abs: 211
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -910,8 +974,8 @@ results:
       Networks on Graphs
     at_pub_source_date_iso: '2017-04-10'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-04-10'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2020-08-12'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: 0.036800000000000055
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -921,23 +985,55 @@ results:
     insignificant_value_gap: true
     today_delta_significant: false
     true_value: 0.9263
-    true_std: null
-    value_gap_source_arxiv: '1704.02901'
-    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
-      Networks on Graphs
+    true_std: 0.0421
+    value_gap_source_arxiv: '2008.05089'
+    value_gap_source_title: Quaternion Graph Neural Networks
     value_gap_source_is_current_paper: false
     value_gap: 0.036800000000000055
     has_value_note: false
     value_note: ''
     sort_value: 0.9263
-    sort_std: null
-    global_rank: 42
-    paper_rank: 258
-    rank_delta: 216
-    rank_delta_abs: 216
+    sort_std: 0.0421
+    global_rank: 56
+    paper_rank: 296
+    rank_delta: 240
+    rank_delta_abs: 240
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.922
+    std: 0.044
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 71
+    sort_value: 0.922
+    sort_std: 0.044
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -999,8 +1095,8 @@ results:
     value_note: ''
     sort_value: 0.9164
     sort_std: 0.072
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1066,8 +1162,8 @@ results:
     value_note: ''
     sort_value: 0.9055
     sort_std: 0.087
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 156
+    paper_rank: 156
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1114,8 +1210,8 @@ results:
       Networks on Graphs
     at_pub_source_date_iso: '2017-04-10'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-04-10'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2021-01-20'
+    value_gap_source_date_label: WWW 2021
     gap_vs_at_pub: 0.13329999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1126,19 +1222,19 @@ results:
     today_delta_significant: true
     true_value: 0.8944
     true_std: null
-    value_gap_source_arxiv: '1704.02901'
-    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
-      Networks on Graphs
+    value_gap_source_arxiv: '2101.08170'
+    value_gap_source_title: 'SUGAR: Subgraph Neural Network with Reinforcement Pooling
+      and Self-Supervised Mutual Information Mechanism'
     value_gap_source_is_current_paper: false
     value_gap: 0.13329999999999997
     has_value_note: false
     value_note: ''
     sort_value: 0.8944
     sort_std: null
-    global_rank: 217
-    paper_rank: 699
-    rank_delta: 482
-    rank_delta_abs: 482
+    global_rank: 253
+    paper_rank: 760
+    rank_delta: 507
+    rank_delta_abs: 507
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1183,8 +1279,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-10-16'
+    value_gap_source_date_label: ICLR 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1195,17 +1291,16 @@ results:
     today_delta_significant: false
     true_value: 0.8939
     true_std: 0.016
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    value_gap_source_arxiv: '2310.10434'
+    value_gap_source_title: Equivariant Matrix Function Neural Networks
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8939
     sort_std: 0.016
-    global_rank: 235
-    paper_rank: 235
+    global_rank: 272
+    paper_rank: 272
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1271,8 +1366,8 @@ results:
     value_note: ''
     sort_value: 0.8888
     sort_std: 0.074
-    global_rank: 268
-    paper_rank: 268
+    global_rank: 307
+    paper_rank: 307
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1338,10 +1433,10 @@ results:
     value_note: ''
     sort_value: 0.888
     sort_std: 0.07
-    global_rank: 272
-    paper_rank: 396
-    rank_delta: 124
-    rank_delta_abs: 124
+    global_rank: 311
+    paper_rank: 442
+    rank_delta: 131
+    rank_delta_abs: 131
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1385,8 +1480,8 @@ results:
     at_pub_source_title: Provably Powerful Graph Networks
     at_pub_source_date_iso: '2019-05-27'
     at_pub_source_date_label: NeurIPS 2019
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-06-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1397,22 +1492,54 @@ results:
     today_delta_significant: false
     true_value: 0.8744
     true_std: 0.0272
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    value_gap_source_arxiv: '2506.06212'
+    value_gap_source_title: Model-Driven Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8744
     sort_std: 0.0272
-    global_rank: 339
-    paper_rank: 339
+    global_rank: 383
+    paper_rank: 383
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1454,8 +1581,8 @@ results:
       to Their Embeddings and Back'
     at_pub_source_date_iso: '2018-12-14'
     at_pub_source_date_label: '2018'
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-12-20'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1465,18 +1592,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8583
-    true_std: 0.0166
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    true_std: 0.0116
+    value_gap_source_arxiv: '2412.17856'
+    value_gap_source_title: Graph Structure Refinement with Energy-based Contrastive
+      Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8583
-    sort_std: 0.0166
-    global_rank: 408
-    paper_rank: 408
+    sort_std: 0.0116
+    global_rank: 454
+    paper_rank: 454
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1542,8 +1669,8 @@ results:
     value_note: ''
     sort_value: 0.8389
     sort_std: 0.1295
-    global_rank: 499
-    paper_rank: 499
+    global_rank: 549
+    paper_rank: 549
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1565,9 +1692,9 @@ results:
 - &id002
   dataset: NCI1
   rows:
-  - model: ECC
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: ECC
+    model_plain: WL-MLP
     value: 0.9954
     std: null
     metric: Accuracy
@@ -1656,9 +1783,9 @@ results:
     sort_value: 0.9934
     sort_std: null
     global_rank: 2
-    paper_rank: 93
-    rank_delta: 91
-    rank_delta_abs: 91
+    paper_rank: 100
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1666,9 +1793,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: GCN
     model_key: gcn
-    model_plain: ECC
+    model_plain: GCN
     value: 0.9727
     std: null
     metric: Accuracy
@@ -1736,8 +1863,8 @@ results:
       Networks on Graphs
     at_pub_source_date_iso: '2017-04-10'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-04-10'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2021-01-20'
+    value_gap_source_date_label: WWW 2021
     gap_vs_at_pub: 0.06979999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1748,19 +1875,19 @@ results:
     today_delta_significant: true
     true_value: 0.838
     true_std: null
-    value_gap_source_arxiv: '1704.02901'
-    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
-      Networks on Graphs
+    value_gap_source_arxiv: '2101.08170'
+    value_gap_source_title: 'SUGAR: Subgraph Neural Network with Reinforcement Pooling
+      and Self-Supervised Mutual Information Mechanism'
     value_gap_source_is_current_paper: false
     value_gap: 0.06979999999999997
     has_value_note: false
     value_note: ''
     sort_value: 0.838
     sort_std: null
-    global_rank: 43
-    paper_rank: 389
-    rank_delta: 346
-    rank_delta_abs: 346
+    global_rank: 46
+    paper_rank: 409
+    rank_delta: 363
+    rank_delta_abs: 363
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1825,13 +1952,47 @@ results:
     value_note: ''
     sort_value: 0.8319
     sort_std: 0.0111
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8303
+    std: 0.0137
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.01794'
+    title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based Gnn Explainers
+      through In-depth Benchmarking'
+    date: Oct 3, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-03'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/Armagaan/gnn-x-bench
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 81
+    sort_value: 0.8303
+    sort_std: 0.0137
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1893,8 +2054,8 @@ results:
     value_note: ''
     sort_value: 0.8274
     sort_std: 0.0135
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1960,8 +2121,8 @@ results:
     value_note: ''
     sort_value: 0.8121
     sort_std: 0.0214
-    global_rank: 165
-    paper_rank: 165
+    global_rank: 181
+    paper_rank: 181
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2007,8 +2168,8 @@ results:
     at_pub_source_title: Graph Capsule Convolutional Neural Networks
     at_pub_source_date_iso: '2018-05-21'
     at_pub_source_date_label: ICML 2018
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-06-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2019,17 +2180,16 @@ results:
     today_delta_significant: false
     true_value: 0.8031
     true_std: 0.0046
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    value_gap_source_arxiv: '2506.06212'
+    value_gap_source_title: Model-Driven Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8031
     sort_std: 0.0046
-    global_rank: 210
-    paper_rank: 210
+    global_rank: 229
+    paper_rank: 229
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2076,8 +2236,8 @@ results:
       Networks on Graphs
     at_pub_source_date_iso: '2017-04-10'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-04-10'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2018-12-14'
+    value_gap_source_date_label: '2018'
     gap_vs_at_pub: 0.022500000000000075
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2088,19 +2248,19 @@ results:
     today_delta_significant: true
     true_value: 0.7859
     true_std: null
-    value_gap_source_arxiv: '1704.02901'
-    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
-      Networks on Graphs
+    value_gap_source_arxiv: '1901.08296'
+    value_gap_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
     value_gap_source_is_current_paper: false
     value_gap: 0.022500000000000075
     has_value_note: false
     value_note: ''
     sort_value: 0.7859
     sort_std: null
-    global_rank: 302
-    paper_rank: 401
-    rank_delta: 99
-    rank_delta_abs: 99
+    global_rank: 322
+    paper_rank: 422
+    rank_delta: 100
+    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2165,10 +2325,10 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.019
-    global_rank: 394
-    paper_rank: 445
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 414
+    paper_rank: 473
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2233,8 +2393,8 @@ results:
     value_note: ''
     sort_value: 0.7627
     sort_std: 0.041
-    global_rank: 404
-    paper_rank: 404
+    global_rank: 425
+    paper_rank: 425
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2300,8 +2460,8 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: null
-    global_rank: 409
-    paper_rank: 409
+    global_rank: 430
+    paper_rank: 430
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2367,8 +2527,8 @@ results:
     value_note: ''
     sort_value: 0.7433
     sort_std: 0.0271
-    global_rank: 449
-    paper_rank: 449
+    global_rank: 478
+    paper_rank: 478
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2415,8 +2575,8 @@ results:
       Networks on Graphs
     at_pub_source_date_iso: '2017-04-10'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-04-10'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2018-12-14'
+    value_gap_source_date_label: '2018'
     gap_vs_at_pub: 0.05999999999999994
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2427,19 +2587,19 @@ results:
     today_delta_significant: true
     true_value: 0.6261
     true_std: null
-    value_gap_source_arxiv: '1704.02901'
-    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
-      Networks on Graphs
+    value_gap_source_arxiv: '1901.08296'
+    value_gap_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
     value_gap_source_is_current_paper: false
     value_gap: 0.05999999999999994
     has_value_note: false
     value_note: ''
     sort_value: 0.6261
     sort_std: null
-    global_rank: 560
-    paper_rank: 583
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 603
+    paper_rank: 631
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind

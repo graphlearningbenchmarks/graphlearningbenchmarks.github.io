@@ -70,6 +70,146 @@ results:
 - &id003
   dataset: London
   rows:
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.6147
+    std: 0.0014
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    venue: Accepted at the ICLR 2026 GRaM Workshop. 9 pages, 9 figures, 16 tables;
+      30 pages of supplementary material
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.6147
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GINE
+    model_key: gine
+    model_plain: GINE
+    value: 0.576
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    venue: Accepted at the ICLR 2026 GRaM Workshop. 9 pages, 9 figures, 16 tables;
+      30 pages of supplementary material
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.576
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.52
+    std: 0.003
+    paper_value: 0.52
+    paper_std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: nodes represent road junctions with features like longitude,
+      latitude, land use, etc.
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive node classification with train/validation/test splits
+      of 10%/10%/80%
+    date: Mar 12, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-12'
+    published_venue: ICLR 2025
+    published_conference: ICLR 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5719
+    true_std: 0.0109
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: false
+    value_gap: 0.051899999999999946
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5719
+    sort_std: 0.0109
+    global_rank: 3
+    paper_rank: 8
+    rank_delta: 5
+    rank_delta_abs: 5
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
@@ -128,8 +268,8 @@ results:
     value_note: ''
     sort_value: 0.554
     sort_std: 0.002
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -137,7 +277,77 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.501
+    std: 0.007
+    paper_value: 0.501
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: nodes represent road junctions with features like longitude,
+      latitude, land use, etc.
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: transductive node classification with train/validation/test splits
+      of 10%/10%/80%
+    date: Mar 12, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-12'
+    published_venue: ICLR 2025
+    published_conference: ICLR 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5525
+    true_std: 0.0006
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05149999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5525
+    sort_std: 0.0006
+    global_rank: 6
+    paper_rank: 8
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: ChebNet
     model_key: chebnet
@@ -197,146 +407,8 @@ results:
     value_note: ''
     sort_value: 0.547
     sort_std: 0.002
-    global_rank: 2
-    paper_rank: 2
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.52
-    std: 0.003
-    paper_value: 0.52
-    paper_std: 0.003
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: nodes represent road junctions with features like longitude,
-      latitude, land use, etc.
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: transductive node classification with train/validation/test splits
-      of 10%/10%/80%
-    date: Mar 12, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-12'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-03-12'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.52
-    true_std: 0.003
-    value_gap_source_arxiv: '2503.09008'
-    value_gap_source_title: City-Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.52
-    sort_std: 0.003
-    global_rank: 3
-    paper_rank: 3
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.501
-    std: 0.007
-    paper_value: 0.501
-    paper_std: 0.007
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: nodes represent road junctions with features like longitude,
-      latitude, land use, etc.
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: transductive node classification with train/validation/test splits
-      of 10%/10%/80%
-    date: Mar 12, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-12'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-03-12'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.501
-    true_std: 0.007
-    value_gap_source_arxiv: '2503.09008'
-    value_gap_source_title: City-Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.501
-    sort_std: 0.007
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -404,8 +476,8 @@ results:
     value_note: ''
     sort_value: 0.495
     sort_std: 0.004
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -473,8 +545,8 @@ results:
     value_note: ''
     sort_value: 0.483
     sort_std: 0.003
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -542,8 +614,8 @@ results:
     value_note: ''
     sort_value: 0.482
     sort_std: 0.003
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -611,8 +683,8 @@ results:
     value_note: ''
     sort_value: 0.45
     sort_std: 0.003
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -680,8 +752,8 @@ results:
     value_note: ''
     sort_value: 0.279
     sort_std: 0.001
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1395,6 +1467,75 @@ results:
 - &id001
   dataset: Paris
   rows:
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.511
+    std: 0.003
+    paper_value: 0.511
+    paper_std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: node features such as geographical coordinates, land
+      use, etc.
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for City-Networks node classification task
+    date: Mar 12, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-12'
+    published_venue: ICLR 2025
+    published_conference: ICLR 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5583
+    true_std: 0.0042
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: false
+    value_gap: 0.04730000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5583
+    sort_std: 0.0042
+    global_rank: 1
+    paper_rank: 13
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: Exphormer
     model_key: exphormer
     model_plain: Exphormer
@@ -1452,8 +1593,8 @@ results:
     value_note: ''
     sort_value: 0.551
     sort_std: 0.008
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1520,8 +1661,8 @@ results:
     value_note: ''
     sort_value: 0.546
     sort_std: 0.002
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1529,7 +1670,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: ChebNet
     model_key: chebnet
@@ -1588,8 +1729,8 @@ results:
     value_note: ''
     sort_value: 0.541
     sort_std: 0.002
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1597,7 +1738,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -1656,8 +1797,8 @@ results:
     value_note: ''
     sort_value: 0.532
     sort_std: 0.003
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1724,8 +1865,8 @@ results:
     value_note: ''
     sort_value: 0.521
     sort_std: 0.006
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1792,8 +1933,8 @@ results:
     value_note: ''
     sort_value: 0.52
     sort_std: 0.008
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1860,76 +2001,8 @@ results:
     value_note: ''
     sort_value: 0.513
     sort_std: 0.002
-    global_rank: 7
-    paper_rank: 7
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.511
-    std: 0.003
-    paper_value: 0.511
-    paper_std: 0.003
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: node features such as geographical coordinates, land
-      use, etc.
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for City-Networks node classification task
-    date: Mar 12, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-12'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-03-12'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.511
-    true_std: 0.003
-    value_gap_source_arxiv: '2503.09008'
-    value_gap_source_title: City-Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.511
-    sort_std: 0.003
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1996,8 +2069,8 @@ results:
     value_note: ''
     sort_value: 0.482
     sort_std: 0.002
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2064,8 +2137,8 @@ results:
     value_note: ''
     sort_value: 0.255
     sort_std: 0.004
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2087,6 +2160,75 @@ results:
 - &id002
   dataset: Shanghai
   rows:
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.68
+    std: 0.005
+    paper_value: 0.68
+    paper_std: 0.005
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: node features such as geographical coordinates, land
+      use, etc.
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard split for Shanghai node classification task
+    date: Mar 12, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-12'
+    published_venue: ICLR 2025
+    published_conference: ICLR 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7253
+    true_std: 0.0023
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: false
+    value_gap: 0.045299999999999896
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7253
+    sort_std: 0.0023
+    global_rank: 1
+    paper_rank: 4
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: Exphormer
     model_key: exphormer
     model_plain: Exphormer
@@ -2144,8 +2286,8 @@ results:
     value_note: ''
     sort_value: 0.702
     sort_std: 0.004
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 2
+    paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2153,7 +2295,42 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.688
+    std: 0.0021
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    venue: Accepted at the ICLR 2026 GRaM Workshop. 9 pages, 9 figures, 16 tables;
+      30 pages of supplementary material
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.688
+    sort_std: 0.0021
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GraphSAGE
     model_key: graphsage
@@ -2212,76 +2389,8 @@ results:
     value_note: ''
     sort_value: 0.683
     sort_std: 0.005
-    global_rank: 2
-    paper_rank: 2
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.68
-    std: 0.005
-    paper_value: 0.68
-    paper_std: 0.005
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: node features such as geographical coordinates, land
-      use, etc.
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard split for Shanghai node classification task
-    date: Mar 12, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-12'
-    published_venue: ICLR 2025
-    published_conference: ICLR 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-03-12'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.68
-    true_std: 0.005
-    value_gap_source_arxiv: '2503.09008'
-    value_gap_source_title: City-Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.68
-    sort_std: 0.005
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2348,8 +2457,8 @@ results:
     value_note: ''
     sort_value: 0.665
     sort_std: 0.001
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2416,8 +2525,8 @@ results:
     value_note: ''
     sort_value: 0.641
     sort_std: 0.003
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2484,8 +2593,8 @@ results:
     value_note: ''
     sort_value: 0.63
     sort_std: 0.005
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2552,8 +2661,8 @@ results:
     value_note: ''
     sort_value: 0.621
     sort_std: 0.002
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2620,8 +2729,8 @@ results:
     value_note: ''
     sort_value: 0.615
     sort_std: 0.004
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2688,8 +2797,8 @@ results:
     value_note: ''
     sort_value: 0.608
     sort_std: 0.004
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2756,8 +2865,8 @@ results:
     value_note: ''
     sort_value: 0.284
     sort_std: 0.006
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

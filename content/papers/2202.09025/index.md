@@ -47,8 +47,8 @@ proposed_models:
 - GAE
 - NWR-GAE full
 - NWR-GAE
-mrr: 0.0031
-adjusted_mrr: 0.0031
+mrr: 0.003
+adjusted_mrr: 0.003
 mrr_dataset_count: 4
 benchmark_categories:
 - Heterophilic Graphs
@@ -70,9 +70,9 @@ results:
 - &id002
   dataset: Cornell
   rows:
-  - model: R-SoftGraphAIN
+  - model: P^2GNN
     model_key: p^2gnn
-    model_plain: R-SoftGraphAIN
+    model_plain: P^2GNN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -103,9 +103,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: ACM-GCN
     model_key: acm-gcn
-    model_plain: R-SoftGraphAIN
+    model_plain: ACM-GCN
     value: 0.948
     std: 0.038
     metric: Accuracy
@@ -136,9 +136,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: RF-GCN
     model_key: rf-gcn
-    model_plain: R-SoftGraphAIN
+    model_plain: RF-GCN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -168,6 +168,73 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.9136
+    std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2212.03654'
+    title: Node-oriented Spectral Filtering for Graph Neural Networks
+    date: Dec 7, 2022
+    date_display: Dec 2022
+    date_iso: '2022-12-07'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.9136
+    sort_std: 0.007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8269
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 177
+    sort_value: 0.8269
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: DGI
     model_key: dgi
@@ -226,10 +293,10 @@ results:
     value_note: ''
     sort_value: 0.7082
     sort_std: 0.0271
-    global_rank: 296
-    paper_rank: 529
-    rank_delta: 233
-    rank_delta_abs: 233
+    global_rank: 344
+    paper_rank: 609
+    rank_delta: 265
+    rank_delta_abs: 265
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -294,10 +361,10 @@ results:
     value_note: ''
     sort_value: 0.643
     sort_std: 0.0543
-    global_rank: 357
-    paper_rank: 479
-    rank_delta: 122
-    rank_delta_abs: 122
+    global_rank: 417
+    paper_rank: 540
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -361,10 +428,10 @@ results:
     value_note: ''
     sort_value: 0.6309
     sort_std: 0.0987
-    global_rank: 372
-    paper_rank: 534
-    rank_delta: 162
-    rank_delta_abs: 162
+    global_rank: 432
+    paper_rank: 615
+    rank_delta: 183
+    rank_delta_abs: 183
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -429,10 +496,10 @@ results:
     value_note: ''
     sort_value: 0.5919
     sort_std: 0.0409
-    global_rank: 406
-    paper_rank: 515
-    rank_delta: 109
-    rank_delta_abs: 109
+    global_rank: 466
+    paper_rank: 583
+    rank_delta: 117
+    rank_delta_abs: 117
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -496,8 +563,8 @@ results:
     value_note: ''
     sort_value: 0.5864
     sort_std: 0.0561
-    global_rank: 414
-    paper_rank: 414
+    global_rank: 474
+    paper_rank: 474
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -563,10 +630,10 @@ results:
     value_note: ''
     sort_value: 0.4867
     sort_std: 0.2784
-    global_rank: 519
-    paper_rank: 560
-    rank_delta: 41
-    rank_delta_abs: 41
+    global_rank: 589
+    paper_rank: 642
+    rank_delta: 53
+    rank_delta_abs: 53
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -631,10 +698,10 @@ results:
     value_note: ''
     sort_value: 0.4722
     sort_std: 0.045
-    global_rank: 524
-    paper_rank: 536
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 602
+    paper_rank: 617
+    rank_delta: 15
+    rank_delta_abs: 15
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -678,8 +745,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-08-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -690,16 +757,17 @@ results:
     today_delta_significant: false
     true_value: 0.4596
     true_std: 0.022
-    value_gap_source_arxiv: '2202.09025'
-    value_gap_source_title: Graph Auto-Encoder Via Neighborhood Wasserstein Reconstruction
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2308.10077'
+    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
+      Structural Views
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4596
     sort_std: 0.022
-    global_rank: 532
-    paper_rank: 532
+    global_rank: 613
+    paper_rank: 613
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -766,8 +834,8 @@ results:
     value_note: ''
     sort_value: 0.4294
     sort_std: 0.0746
-    global_rank: 551
-    paper_rank: 564
+    global_rank: 633
+    paper_rank: 646
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -813,8 +881,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-08-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -825,16 +893,17 @@ results:
     today_delta_significant: false
     true_value: 0.4108
     true_std: 0.0485
-    value_gap_source_arxiv: '2202.09025'
-    value_gap_source_title: Graph Auto-Encoder Via Neighborhood Wasserstein Reconstruction
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2308.10077'
+    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
+      Structural Views
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4108
     sort_std: 0.0485
-    global_rank: 562
-    paper_rank: 562
+    global_rank: 644
+    paper_rank: 644
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -901,8 +970,8 @@ results:
     value_note: ''
     sort_value: 0.3022
     sort_std: 0.0587
-    global_rank: 587
-    paper_rank: 602
+    global_rank: 669
+    paper_rank: 684
     rank_delta: 15
     rank_delta_abs: 15
     rank_delta_direction: worse
@@ -948,8 +1017,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-08-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -960,16 +1029,17 @@ results:
     today_delta_significant: false
     true_value: 0.2567
     true_std: 0.1178
-    value_gap_source_arxiv: '2202.09025'
-    value_gap_source_title: Graph Auto-Encoder Via Neighborhood Wasserstein Reconstruction
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2308.10077'
+    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
+      Structural Views
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.2567
     sort_std: 0.1178
-    global_rank: 592
-    paper_rank: 592
+    global_rank: 674
+    paper_rank: 674
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1780,9 +1850,9 @@ results:
 - &id001
   dataset: Texas
   rows:
-  - model: R-SoftGraphAIN
+  - model: P^2GNN
     model_key: p^2gnn
-    model_plain: R-SoftGraphAIN
+    model_plain: P^2GNN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -1813,9 +1883,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: DoG
     model_key: dog
-    model_plain: R-SoftGraphAIN
+    model_plain: DoG
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -1847,9 +1917,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: GPF-plus
     model_key: gpf-plus
-    model_plain: R-SoftGraphAIN
+    model_plain: GPF-plus
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -1879,6 +1949,72 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.923
+    std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 47
+    sort_value: 0.923
+    sort_std: 0.007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9001
+    std: 0.023
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11762'
+    title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    date: Oct 18, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-18'
+    venue: The Web Conference
+    codebase_url: https://github.com/SDS-Lab/QW_Loss
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 76
+    sort_value: 0.9001
+    sort_std: 0.023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: DGI
     model_key: dgi
@@ -1937,10 +2073,78 @@ results:
     value_note: ''
     sort_value: 0.8148
     sort_std: 0.0279
-    global_rank: 251
-    paper_rank: 610
-    rank_delta: 359
-    rank_delta_abs: 359
+    global_rank: 294
+    paper_rank: 709
+    rank_delta: 415
+    rank_delta_abs: 415
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MVGRL
+    model_key: mvgrl
+    model_plain: MVGRL
+    value: 0.5675
+    std: 0.0597
+    paper_value: 0.5675
+    paper_std: 0.0597
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: 60/20/20 split, average over 10 random splits
+    date: Feb 18, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-18'
+    published_venue: ICLR 2022
+    published_conference: ICLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-10-24'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7301
+    true_std: 0.0552
+    value_gap_source_arxiv: '2510.21207'
+    value_gap_source_title: 'Adaptive Graph Mixture of Residual Experts: Unsupervised
+      Learning on Diverse Graphs with Heterogeneous Specialization'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.16259999999999997
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7301
+    sort_std: 0.0552
+    global_rank: 464
+    paper_rank: 685
+    rank_delta: 221
+    rank_delta_abs: 221
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2004,80 +2208,12 @@ results:
     value_note: ''
     sort_value: 0.6962
     sort_std: 0.0666
-    global_rank: 424
-    paper_rank: 424
+    global_rank: 508
+    paper_rank: 508
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MVGRL
-    model_key: mvgrl
-    model_plain: MVGRL
-    value: 0.5675
-    std: 0.0597
-    paper_value: 0.5675
-    paper_std: 0.0597
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: 60/20/20 split, average over 10 random splits
-    date: Feb 18, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-18'
-    published_venue: ICLR 2022
-    published_conference: ICLR 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-11-25'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.6238
-    true_std: 0.0561
-    value_gap_source_arxiv: '2211.14065'
-    value_gap_source_title: 'Beyond Smoothing: Unsupervised Graph Representation Learning
-      with Edge Heterophily Discriminating'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05630000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6238
-    sort_std: 0.0561
-    global_rank: 506
-    paper_rank: 586
-    rank_delta: 80
-    rank_delta_abs: 80
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2140,10 +2276,10 @@ results:
     value_note: ''
     sort_value: 0.592
     sort_std: 0.0426
-    global_rank: 548
-    paper_rank: 638
-    rank_delta: 90
-    rank_delta_abs: 90
+    global_rank: 648
+    paper_rank: 743
+    rank_delta: 95
+    rank_delta_abs: 95
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2207,8 +2343,8 @@ results:
     value_note: ''
     sort_value: 0.5909
     sort_std: 0.1626
-    global_rank: 553
-    paper_rank: 557
+    global_rank: 652
+    paper_rank: 656
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -2275,10 +2411,10 @@ results:
     value_note: ''
     sort_value: 0.4931
     sort_std: 0.0322
-    global_rank: 620
-    paper_rank: 627
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 719
+    paper_rank: 728
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2343,10 +2479,10 @@ results:
     value_note: ''
     sort_value: 0.4867
     sort_std: 0.0437
-    global_rank: 622
-    paper_rank: 630
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 722
+    paper_rank: 732
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2390,8 +2526,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-08-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2402,16 +2538,17 @@ results:
     today_delta_significant: false
     true_value: 0.4864
     true_std: 0.0292
-    value_gap_source_arxiv: '2202.09025'
-    value_gap_source_title: Graph Auto-Encoder Via Neighborhood Wasserstein Reconstruction
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2308.10077'
+    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
+      Structural Views
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4864
     sort_std: 0.0292
-    global_rank: 623
-    paper_rank: 623
+    global_rank: 723
+    paper_rank: 723
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2477,10 +2614,10 @@ results:
     value_note: ''
     sort_value: 0.47
     sort_std: 0.2928
-    global_rank: 628
-    paper_rank: 637
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 729
+    paper_rank: 741
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2524,8 +2661,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-08-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2536,16 +2673,17 @@ results:
     today_delta_significant: false
     true_value: 0.4324
     true_std: 0.0538
-    value_gap_source_arxiv: '2202.09025'
-    value_gap_source_title: Graph Auto-Encoder Via Neighborhood Wasserstein Reconstruction
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2308.10077'
+    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
+      Structural Views
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4324
     sort_std: 0.0538
-    global_rank: 634
-    paper_rank: 634
+    global_rank: 738
+    paper_rank: 738
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2591,8 +2729,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-08-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2603,16 +2741,17 @@ results:
     today_delta_significant: false
     true_value: 0.4256
     true_std: 0.0713
-    value_gap_source_arxiv: '2202.09025'
-    value_gap_source_title: Graph Auto-Encoder Via Neighborhood Wasserstein Reconstruction
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2308.10077'
+    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
+      Structural Views
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4256
     sort_std: 0.0713
-    global_rank: 636
-    paper_rank: 636
+    global_rank: 740
+    paper_rank: 740
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2658,8 +2797,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-18'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-08-19'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2670,16 +2809,17 @@ results:
     today_delta_significant: false
     true_value: 0.3745
     true_std: 0.0709
-    value_gap_source_arxiv: '2202.09025'
-    value_gap_source_title: Graph Auto-Encoder Via Neighborhood Wasserstein Reconstruction
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2308.10077'
+    value_gap_source_title: Contrastive Learning for Non-Local Graphs with Multi-Resolution
+      Structural Views
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.3745
     sort_std: 0.0709
-    global_rank: 644
-    paper_rank: 644
+    global_rank: 750
+    paper_rank: 750
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

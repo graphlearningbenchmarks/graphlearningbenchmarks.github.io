@@ -54,9 +54,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - SE3Set
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.027
+adjusted_mrr: 0.009
+mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
 benchmark_coverage:
@@ -72,9 +72,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -106,9 +106,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -140,9 +140,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -170,130 +170,6 @@ results:
     sort_value: 1.759e-05
     sort_std: null
     comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SE3Set
-    model_key: se3set
-    model_plain: SE3Set
-    value: 0.039
-    std: null
-    paper_value: 0.039
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 26, 2024
-    date_display: May 2024
-    date_iso: '2024-05-26'
-    published_venue: TMLR 2024
-    published_conference: TMLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.039
-    sort_std: null
-    global_rank: 21
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NequIP
-    model_key: nequip (l=3)
-    model_plain: NequIP
-    value: 0.039
-    std: null
-    paper_value: 0.039
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 26, 2024
-    date_display: May 2024
-    date_iso: '2024-05-26'
-    published_venue: TMLR 2024
-    published_conference: TMLR 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.039
-    sort_std: null
-    global_rank: 21
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -335,8 +211,216 @@ results:
       with vector-scalar interactive message passing for molecules'
     at_pub_source_date_iso: '2022-10-29'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-07-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.0007
+    true_std: null
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0383
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0007
+    sort_std: null
+    global_rank: 6
+    paper_rank: 33
+    rank_delta: 27
+    rank_delta_abs: 27
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PaiNN
+    model_key: painn
+    model_plain: PaiNN
+    value: 0.064
+    std: null
+    paper_value: 0.064
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 26, 2024
+    date_display: May 2024
+    date_iso: '2024-05-26'
+    published_venue: TMLR 2024
+    published_conference: TMLR 2024
+    at_pub_value: 0.01
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.09375'
+    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    at_pub_source_date_iso: '2023-06-15'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.054
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.01
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 0.054
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.01
+    sort_std: null
+    global_rank: 22
+    paper_rank: 64
+    rank_delta: 42
+    rank_delta_abs: 42
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    comparison_source_arxiv: '2306.09375'
+    is_best: false
+    is_std_outlier: false
+  - model: Equiformer
+    model_key: equiformer
+    model_plain: Equiformer
+    value: 0.046
+    std: null
+    paper_value: 0.046
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 26, 2024
+    date_display: May 2024
+    date_iso: '2024-05-26'
+    published_venue: TMLR 2024
+    published_conference: TMLR 2024
+    at_pub_value: 0.02
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.09375'
+    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    at_pub_source_date_iso: '2023-06-15'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.026
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.02
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 0.026
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.02
+    sort_std: null
+    global_rank: 26
+    paper_rank: 42
+    rank_delta: 16
+    rank_delta_abs: 16
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    comparison_source_arxiv: '2306.09375'
+    is_best: false
+    is_std_outlier: false
+  - model: SE3Set
+    model_key: se3set
+    model_plain: SE3Set
+    value: 0.039
+    std: null
+    paper_value: 0.039
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 26, 2024
+    date_display: May 2024
+    date_iso: '2024-05-26'
+    published_venue: TMLR 2024
+    published_conference: TMLR 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-26'
+    value_gap_source_date_label: TMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -347,17 +431,17 @@ results:
     today_delta_significant: false
     true_value: 0.039
     true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2405.16511'
+    value_gap_source_title: 'SE3Set: Harnessing equivariant hypergraph neural networks
+      for molecular representation learning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.039
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -365,6 +449,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NequIP
+    model_key: nequip (l=3)
+    model_plain: NequIP
+    value: 0.039
+    std: null
+    paper_value: 0.039
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 26, 2024
+    date_display: May 2024
+    date_iso: '2024-05-26'
+    published_venue: TMLR 2024
+    published_conference: TMLR 2024
+    at_pub_value: 2.2
+    at_pub_std: null
+    at_pub_source_arxiv: '2101.03164'
+    at_pub_source_title: E(3)-Equivariant Graph Neural Networks for Data-Efficient
+      and Accurate Interatomic Potentials
+    at_pub_source_date_iso: '2021-01-08'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2024-05-26'
+    value_gap_source_date_label: TMLR 2024
+    gap_vs_at_pub: 2.161
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.039
+    true_std: null
+    value_gap_source_arxiv: '2405.16511'
+    value_gap_source_title: 'SE3Set: Harnessing equivariant hypergraph neural networks
+      for molecular representation learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.039
+    sort_std: null
+    global_rank: 34
+    paper_rank: 34
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: E(3)-Equivariant Graph Neural Networks for Data-Efficient
+      and Accurate Interatomic Potentials
+    comparison_source_arxiv: '2101.03164'
     is_best: false
     is_std_outlier: false
   - model: QuinNet
@@ -403,8 +557,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-26'
+    value_gap_source_date_label: TMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -413,28 +567,34 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.039
+    true_std: null
+    value_gap_source_arxiv: '2405.16511'
+    value_gap_source_title: 'SE3Set: Harnessing equivariant hypergraph neural networks
+      for molecular representation learning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.039
     sort_std: null
-    global_rank: 21
+    global_rank: 36
+    paper_rank: 36
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Equiformer
-    model_key: equiformer
-    model_plain: Equiformer
-    value: 0.046
+  - model: SchNet
+    model_key: schnet
+    model_plain: SchNet
+    value: 0.08
     std: null
-    paper_value: 0.046
+    paper_value: 0.08
     paper_std: null
     metric: MAE
     higher_is_better: false
@@ -459,36 +619,44 @@ results:
     date_iso: '2024-05-26'
     published_venue: TMLR 2024
     published_conference: TMLR 2024
-    at_pub_value: null
+    at_pub_value: 0.05
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_source_arxiv: '1902.08408'
+    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    at_pub_source_date_iso: '2019-02-22'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.03
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.046
-    sort_std: null
-    global_rank: 26
-    has_value_gap: false
+    today_delta_significant: true
+    true_value: 0.05
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.05
+    sort_std: null
+    global_rank: 46
+    paper_rank: 68
+    rank_delta: 22
+    rank_delta_abs: 22
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   - model: GemNet
@@ -549,8 +717,8 @@ results:
     value_note: ''
     sort_value: 0.0502
     sort_std: null
-    global_rank: 28
-    paper_rank: 29
+    global_rank: 47
+    paper_rank: 48
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -598,8 +766,8 @@ results:
       based Molecular Potentials'
     at_pub_source_date_iso: '2022-01-01'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-01-01'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-06-19'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -610,17 +778,16 @@ results:
     today_delta_significant: false
     true_value: 0.052
     true_std: null
-    value_gap_source_arxiv: '2202.02541'
-    value_gap_source_title: 'TorchMD-NET: Equivariant Transformers for Neural Network
-      based Molecular Potentials'
+    value_gap_source_arxiv: '2406.13265'
+    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.052
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -686,8 +853,8 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -695,145 +862,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PaiNN
-    model_key: painn
-    model_plain: PaiNN
-    value: 0.064
-    std: null
-    paper_value: 0.064
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 26, 2024
-    date_display: May 2024
-    date_iso: '2024-05-26'
-    published_venue: TMLR 2024
-    published_conference: TMLR 2024
-    at_pub_value: 0.01
-    at_pub_std: null
-    at_pub_source_arxiv: '2306.09375'
-    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    at_pub_source_date_iso: '2023-06-15'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-11-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 0.054
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.077
-    true_std: null
-    value_gap_source_arxiv: '2311.02124'
-    value_gap_source_title: 'Sliced Denoising: A Physics-Informed Molecular Pre-Training
-      Method'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.012999999999999998
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.077
-    sort_std: null
-    global_rank: 45
-    paper_rank: 43
-    rank_delta: -2
-    rank_delta_abs: 2
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    comparison_source_arxiv: '2306.09375'
-    is_best: false
-    is_std_outlier: false
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    value: 0.08
-    std: null
-    paper_value: 0.08
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 26, 2024
-    date_display: May 2024
-    date_iso: '2024-05-26'
-    published_venue: TMLR 2024
-    published_conference: TMLR 2024
-    at_pub_value: 0.05
-    at_pub_std: null
-    at_pub_source_arxiv: '1902.08408'
-    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    at_pub_source_date_iso: '2019-02-22'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.03
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.08
-    true_std: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.08
-    sort_std: null
-    global_rank: 46
-    paper_rank: 46
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   rank_metric: MAE

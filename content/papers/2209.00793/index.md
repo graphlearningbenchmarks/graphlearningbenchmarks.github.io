@@ -100,8 +100,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-02'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -110,25 +110,63 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9398
+    true_std: null
+    value_gap_source_arxiv: '2209.00793'
+    value_gap_source_title: Structure-Preserving Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9398
     sort_std: null
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: AM-GCN
+  - model: CDC
+    model_key: cdc
+    model_plain: CDC
+    value: 0.936
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2403.03670'
+    title: 'CDC: A Simple Framework for Complex Data Clustering'
+    date: Mar 6, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-06'
+    venue: IEEE Transactions on Neural Networks and Learning Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.936
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SynC SSL
     model_key: sync ssl
-    model_plain: AM-GCN
+    model_plain: SynC SSL
     value: 0.9274
     std: 0.0004
     metric: F1
@@ -152,77 +190,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.9274
     sort_std: 0.0004
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AM-GCN
-    model_key: idcrn
-    model_plain: AM-GCN
-    value: 0.926
-    std: 0.0008
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.926
-    sort_std: 0.0008
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AM-GCN
-    model_key: agc-drr
-    model_plain: AM-GCN
-    value: 0.9255
-    std: 0.0009
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9255
-    sort_std: 0.0009
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -264,8 +234,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-02'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -274,17 +244,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9179
+    true_std: null
+    value_gap_source_arxiv: '2209.00793'
+    value_gap_source_title: Structure-Preserving Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9179
     sort_std: null
-    global_rank: 7
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -346,10 +321,10 @@ results:
     value_note: ''
     sort_value: 0.9049
     sort_std: null
-    global_rank: 11
-    paper_rank: 17
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 17
+    paper_rank: 31
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -393,8 +368,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-02'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -403,17 +378,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9043
+    true_std: null
+    value_gap_source_arxiv: '2209.00793'
+    value_gap_source_title: Structure-Preserving Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9043
     sort_std: null
-    global_rank: 12
+    global_rank: 18
+    paper_rank: 18
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -455,8 +435,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-02'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -465,17 +445,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.904
+    true_std: null
+    value_gap_source_arxiv: '2209.00793'
+    value_gap_source_title: Structure-Preserving Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.904
     sort_std: null
-    global_rank: 13
+    global_rank: 20
+    paper_rank: 20
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -537,10 +522,10 @@ results:
     value_note: ''
     sort_value: 0.9039
     sort_std: null
-    global_rank: 13
-    paper_rank: 17
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 21
+    paper_rank: 31
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -584,8 +569,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-02'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -594,17 +579,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9
+    true_std: null
+    value_gap_source_arxiv: '2209.00793'
+    value_gap_source_title: Structure-Preserving Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9
     sort_std: null
-    global_rank: 14
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -646,8 +636,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-02'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -656,17 +646,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.89
+    true_std: null
+    value_gap_source_arxiv: '2209.00793'
+    value_gap_source_title: Structure-Preserving Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.89
     sort_std: null
-    global_rank: 16
+    global_rank: 28
+    paper_rank: 28
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -708,8 +703,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-02'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -718,17 +713,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8879
+    true_std: null
+    value_gap_source_arxiv: '2209.00793'
+    value_gap_source_title: Structure-Preserving Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8879
     sort_std: null
-    global_rank: 17
+    global_rank: 30
+    paper_rank: 30
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -790,8 +790,8 @@ results:
     value_note: ''
     sort_value: 0.8483
     sort_std: null
-    global_rank: 19
-    paper_rank: 20
+    global_rank: 35
+    paper_rank: 36
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -857,8 +857,8 @@ results:
     value_note: ''
     sort_value: 0.8224
     sort_std: null
-    global_rank: 22
-    paper_rank: 23
+    global_rank: 38
+    paper_rank: 39
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -924,8 +924,8 @@ results:
     value_note: ''
     sort_value: 0.8195
     sort_std: null
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -971,8 +971,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-02'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -981,17 +981,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7486
+    true_std: null
+    value_gap_source_arxiv: '2209.00793'
+    value_gap_source_title: Structure-Preserving Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7486
     sort_std: null
-    global_rank: 24
+    global_rank: 40
+    paper_rank: 40
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1053,11 +1058,11 @@ results:
     value_note: ''
     sort_value: 0.6699
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    global_rank: 41
+    paper_rank: 44
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
@@ -1100,8 +1105,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-09-02'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1110,17 +1115,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6
+    true_std: null
+    value_gap_source_arxiv: '2209.00793'
+    value_gap_source_title: Structure-Preserving Graph Representation Learning
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6
     sort_std: null
-    global_rank: 25
+    global_rank: 51
+    paper_rank: 51
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1182,8 +1192,8 @@ results:
     value_note: ''
     sort_value: 0.4992
     sort_std: null
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

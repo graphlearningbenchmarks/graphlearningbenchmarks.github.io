@@ -63,8 +63,8 @@ proposed_models:
 - simGRACE+GraphControl
 - RoSA+GraphControl
 - COSTA+GraphControl
-mrr: 0.0076
-adjusted_mrr: 0.0025
+mrr: 0.0069
+adjusted_mrr: 0.0023
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -81,9 +81,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: SlotGAT
+  - model: HERec
     model_key: herec
-    model_plain: SlotGAT
+    model_plain: HERec
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -114,9 +114,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: HetSANN
     model_key: hetsann
-    model_plain: SlotGAT
+    model_plain: HetSANN
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SlotGAT
+  - model: DeepWalk
     model_key: deepwalk
-    model_plain: SlotGAT
+    model_plain: DeepWalk
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -178,6 +178,109 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.946
+    std: 0.0031
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.16401'
+    title: Graph Neural Networks with a Distribution of Parametrized Graphs
+    date: Oct 25, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-25'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.946
+    sort_std: 0.0031
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Node2Vec
+    model_key: node2vec
+    model_plain: Node2Vec
+    value: 0.7752
+    std: 0.0038
+    paper_value: 0.7752
+    paper_std: 0.0038
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Standard node classification task on DBLP
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    published_venue: WWW 2023
+    published_conference: WWW 2023
+    at_pub_value: 0.9282
+    at_pub_std: null
+    at_pub_source_arxiv: '2012.10024'
+    at_pub_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    at_pub_source_date_iso: '2020-12-18'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-12-18'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.15300000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9282
+    true_std: null
+    value_gap_source_arxiv: '2012.10024'
+    value_gap_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15300000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9282
+    sort_std: null
+    global_rank: 62
+    paper_rank: 153
+    rank_delta: 91
+    rank_delta_abs: 91
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    comparison_source_arxiv: '2012.10024'
     is_best: false
     is_std_outlier: false
   - model: GRACE
@@ -236,10 +339,10 @@ results:
     value_note: ''
     sort_value: 0.9128
     sort_std: 0.0007
-    global_rank: 79
-    paper_rank: 173
-    rank_delta: 94
-    rank_delta_abs: 94
+    global_rank: 84
+    paper_rank: 191
+    rank_delta: 107
+    rank_delta_abs: 107
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -304,8 +407,8 @@ results:
     value_note: ''
     sort_value: 0.8074
     sort_std: 0.0065
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -372,8 +475,8 @@ results:
     value_note: ''
     sort_value: 0.8042
     sort_std: 0.0065
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 140
+    paper_rank: 140
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -440,8 +543,8 @@ results:
     value_note: ''
     sort_value: 0.8033
     sort_std: 0.0069
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -508,8 +611,8 @@ results:
     value_note: ''
     sort_value: 0.8025
     sort_std: 0.009
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -576,8 +679,8 @@ results:
     value_note: ''
     sort_value: 0.8023
     sort_std: 0.0079
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -585,76 +688,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Node2Vec
-    model_key: node2vec
-    model_plain: Node2Vec
-    value: 0.7752
-    std: 0.0038
-    paper_value: 0.7752
-    paper_std: 0.0038
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Standard node classification task on DBLP
-    date: Oct 11, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-11'
-    published_venue: WWW 2023
-    published_conference: WWW 2023
-    at_pub_value: 0.9282
-    at_pub_std: null
-    at_pub_source_arxiv: '2012.10024'
-    at_pub_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
-      Information Networks
-    at_pub_source_date_iso: '2020-12-18'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-10-11'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.15300000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7752
-    true_std: 0.0038
-    value_gap_source_arxiv: '2310.07365'
-    value_gap_source_title: 'GraphControl: Adding Conditional Control to Universal
-      Graph Pre-trained Models for Graph Domain Transfer Learning'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7752
-    sort_std: 0.0038
-    global_rank: 139
-    paper_rank: 139
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
-      Information Networks
-    comparison_source_arxiv: '2012.10024'
     is_best: false
     is_std_outlier: false
   - model: GIN
@@ -714,8 +747,8 @@ results:
     value_note: ''
     sort_value: 0.7462
     sort_std: 0.03
-    global_rank: 144
-    paper_rank: 144
+    global_rank: 163
+    paper_rank: 163
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -783,8 +816,8 @@ results:
     value_note: ''
     sort_value: 0.6447
     sort_std: 0.0136
-    global_rank: 167
-    paper_rank: 167
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -851,8 +884,8 @@ results:
     value_note: ''
     sort_value: 0.5901
     sort_std: 0.0019
-    global_rank: 173
-    paper_rank: 173
+    global_rank: 191
+    paper_rank: 191
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -919,8 +952,8 @@ results:
     value_note: ''
     sort_value: 0.5787
     sort_std: 0.0032
-    global_rank: 174
-    paper_rank: 174
+    global_rank: 192
+    paper_rank: 192
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -987,8 +1020,8 @@ results:
     value_note: ''
     sort_value: 0.5702
     sort_std: 0.0068
-    global_rank: 175
-    paper_rank: 175
+    global_rank: 193
+    paper_rank: 193
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1055,8 +1088,8 @@ results:
     value_note: ''
     sort_value: 0.5641
     sort_std: 0.007
-    global_rank: 176
-    paper_rank: 176
+    global_rank: 194
+    paper_rank: 194
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

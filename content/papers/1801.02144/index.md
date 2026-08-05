@@ -46,8 +46,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - Second order CCN
-mrr: 0.0079
-adjusted_mrr: 0.0053
+mrr: 0.0066
+adjusted_mrr: 0.0044
 mrr_dataset_count: 2
 benchmark_categories:
 - TU Dortmund
@@ -64,9 +64,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -97,9 +97,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -122,7 +155,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
@@ -130,35 +163,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.933
+    std: 0.029
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.00911'
+    title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    date: Dec 2, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-02'
+    venue: AAAI Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
+    global_rank: 43
+    sort_value: 0.933
+    sort_std: 0.029
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -220,8 +252,8 @@ results:
     value_note: ''
     sort_value: 0.9164
     sort_std: 0.0724
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -268,8 +300,8 @@ results:
       Classification
     at_pub_source_date_iso: '2016-06-03'
     at_pub_source_date_label: NeurIPS 2016
-    value_gap_source_date_iso: '2022-05-26'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-05-23'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.015000000000000013
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -280,19 +312,18 @@ results:
     today_delta_significant: true
     true_value: 0.904
     true_std: 0.057
-    value_gap_source_arxiv: '2205.13328'
-    value_gap_source_title: How Powerful are $K$-hop Message Passing Graph Neural
-      Networks
+    value_gap_source_arxiv: '2305.13987'
+    value_gap_source_title: On Structural Expressive Power of Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: 0.05900000000000005
     has_value_note: false
     value_note: ''
     sort_value: 0.904
     sort_std: 0.057
-    global_rank: 141
-    paper_rank: 459
-    rank_delta: 318
-    rank_delta_abs: 318
+    global_rank: 171
+    paper_rank: 507
+    rank_delta: 336
+    rank_delta_abs: 336
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -356,8 +387,8 @@ results:
     value_note: ''
     sort_value: 0.89
     sort_std: 0.07
-    global_rank: 256
-    paper_rank: 256
+    global_rank: 295
+    paper_rank: 295
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -403,8 +434,8 @@ results:
     at_pub_source_title: Learning Convolutional Neural Networks for Graphs
     at_pub_source_date_iso: '2016-05-17'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2016-05-17'
-    value_gap_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2018-01-07'
+    value_gap_source_date_label: ICLR 2018
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -415,16 +446,16 @@ results:
     today_delta_significant: false
     true_value: 0.8895
     true_std: 0.0437
-    value_gap_source_arxiv: '1605.05273'
-    value_gap_source_title: Learning Convolutional Neural Networks for Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '1801.02144'
+    value_gap_source_title: Covariant Compositional Networks for Learning Graphs
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8895
     sort_std: 0.0437
-    global_rank: 259
-    paper_rank: 259
+    global_rank: 297
+    paper_rank: 297
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -490,13 +521,46 @@ results:
     value_note: ''
     sort_value: 0.8794
     sort_std: 0.0161
-    global_rank: 311
-    paper_rank: 311
+    global_rank: 351
+    paper_rank: 351
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -557,8 +621,8 @@ results:
     value_note: ''
     sort_value: 0.858
     sort_std: 0.002
-    global_rank: 409
-    paper_rank: 425
+    global_rank: 455
+    paper_rank: 471
     rank_delta: 16
     rank_delta_abs: 16
     rank_delta_direction: worse
@@ -624,8 +688,8 @@ results:
     value_note: ''
     sort_value: 0.8294
     sort_std: 0.0233
-    global_rank: 526
-    paper_rank: 526
+    global_rank: 579
+    paper_rank: 579
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -691,8 +755,8 @@ results:
     value_note: ''
     sort_value: 0.8244
     sort_std: 0.0129
-    global_rank: 552
-    paper_rank: 552
+    global_rank: 606
+    paper_rank: 606
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -758,8 +822,8 @@ results:
     value_note: ''
     sort_value: 0.8033
     sort_std: 0.0135
-    global_rank: 619
-    paper_rank: 619
+    global_rank: 678
+    paper_rank: 678
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -781,9 +845,9 @@ results:
 - &id002
   dataset: NCI1
   rows:
-  - model: ECC
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: ECC
+    model_plain: WL-MLP
     value: 0.9954
     std: null
     metric: Accuracy
@@ -815,9 +879,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: GIN
     model_key: gin
-    model_plain: ECC
+    model_plain: GIN
     value: 0.9934
     std: null
     metric: Accuracy
@@ -848,9 +912,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ECC
+  - model: GCN
     model_key: gcn
-    model_plain: ECC
+    model_plain: GCN
     value: 0.9727
     std: null
     metric: Accuracy
@@ -938,9 +1002,9 @@ results:
     sort_value: 0.86
     sort_std: 0.018
     global_rank: 10
-    paper_rank: 26
-    rank_delta: 16
-    rank_delta_abs: 16
+    paper_rank: 27
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1004,13 +1068,47 @@ results:
     value_note: ''
     sort_value: 0.8465
     sort_std: 0.0025
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8303
+    std: 0.0137
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.01794'
+    title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based Gnn Explainers
+      through In-depth Benchmarking'
+    date: Oct 3, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-03'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/Armagaan/gnn-x-bench
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 81
+    sort_value: 0.8303
+    sort_std: 0.0137
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1071,8 +1169,8 @@ results:
     value_note: ''
     sort_value: 0.8175
     sort_std: 0.0024
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 156
+    paper_rank: 156
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1118,8 +1216,8 @@ results:
     at_pub_source_title: Learning Convolutional Neural Networks for Graphs
     at_pub_source_date_iso: '2016-05-17'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2016-05-17'
-    value_gap_source_date_label: ICML 2016
+    value_gap_source_date_iso: '2018-01-07'
+    value_gap_source_date_label: ICLR 2018
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1130,16 +1228,16 @@ results:
     today_delta_significant: false
     true_value: 0.7634
     true_std: 0.0168
-    value_gap_source_arxiv: '1605.05273'
-    value_gap_source_title: Learning Convolutional Neural Networks for Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '1801.02144'
+    value_gap_source_title: Covariant Compositional Networks for Learning Graphs
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7634
     sort_std: 0.0168
-    global_rank: 402
-    paper_rank: 402
+    global_rank: 423
+    paper_rank: 423
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1205,8 +1303,8 @@ results:
     value_note: ''
     sort_value: 0.7627
     sort_std: 0.0413
-    global_rank: 405
-    paper_rank: 405
+    global_rank: 426
+    paper_rank: 426
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1274,10 +1372,10 @@ results:
     value_note: ''
     sort_value: 0.745
     sort_std: 0.003
-    global_rank: 443
-    paper_rank: 464
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 470
+    paper_rank: 495
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1344,10 +1442,10 @@ results:
     value_note: ''
     sort_value: 0.66
     sort_std: null
-    global_rank: 539
-    paper_rank: 563
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 578
+    paper_rank: 606
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1412,8 +1510,8 @@ results:
     value_note: ''
     sort_value: 0.6221
     sort_std: 0.0472
-    global_rank: 564
-    paper_rank: 564
+    global_rank: 607
+    paper_rank: 607
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

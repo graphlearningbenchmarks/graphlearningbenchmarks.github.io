@@ -227,9 +227,9 @@ results:
     comparison_source_arxiv: '2506.15448'
     is_best: true
     is_std_outlier: false
-  - model: weakly supervised graph anomaly detection method
+  - model: GGAD
     model_key: ggad
-    model_plain: weakly supervised graph anomaly detection method
+    model_plain: GGAD
     value: 0.9443
     std: null
     metric: AUROC
@@ -1092,9 +1092,9 @@ results:
 - &id001
   dataset: Questions
   rows:
-  - model: Tango GPS
+  - model: GraphSAGE + UniGAP
     model_key: graphsage + unigap
-    model_plain: Tango GPS
+    model_plain: GraphSAGE + UniGAP
     value: 0.8421
     std: 0.008
     metric: ROC-AUC
@@ -1126,9 +1126,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango GPS
+  - model: H2GCN + UniGAP
     model_key: h2gcn + unigap
-    model_plain: Tango GPS
+    model_plain: H2GCN + UniGAP
     value: 0.8359
     std: 0.007
     metric: ROC-AUC
@@ -1160,9 +1160,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Tango GPS
+  - model: GCN + UniGAP
     model_key: gcn + unigap
-    model_plain: Tango GPS
+    model_plain: GCN + UniGAP
     value: 0.8273
     std: 0.009
     metric: ROC-AUC
@@ -1254,9 +1254,9 @@ results:
     sort_value: 0.7902
     sort_std: 0.006
     global_rank: 17
-    paper_rank: 170
-    rank_delta: 153
-    rank_delta_abs: 153
+    paper_rank: 178
+    rank_delta: 161
+    rank_delta_abs: 161
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1302,8 +1302,8 @@ results:
     at_pub_source_title: Contextualized Messages Boost Graph Representations
     at_pub_source_date_iso: '2024-03-19'
     at_pub_source_date_label: TMLR 2024
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2026-05-13'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.1703
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1314,8 +1314,9 @@ results:
     today_delta_significant: true
     true_value: 0.7743
     true_std: 0.012
-    value_gap_source_arxiv: '2403.12529'
-    value_gap_source_title: Contextualized Messages Boost Graph Representations
+    value_gap_source_arxiv: '2605.13383'
+    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
+      in GNNs Via Observables'
     value_gap_source_is_current_paper: false
     value_gap: 0.1703
     has_value_note: false
@@ -1323,9 +1324,9 @@ results:
     sort_value: 0.7743
     sort_std: 0.012
     global_rank: 40
-    paper_rank: 142
-    rank_delta: 102
-    rank_delta_abs: 102
+    paper_rank: 151
+    rank_delta: 111
+    rank_delta_abs: 111
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1393,15 +1394,48 @@ results:
     sort_value: 0.7721
     sort_std: 0.013
     global_rank: 48
-    paper_rank: 169
-    rank_delta: 121
-    rank_delta_abs: 121
+    paper_rank: 177
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach
       to Mitigate Over-Smoothing in Node Classification Tasks'
     comparison_source_arxiv: '2407.19420'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7644
+    std: 0.0062
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 59
+    sort_value: 0.7644
+    sort_std: 0.0062
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -1461,10 +1495,10 @@ results:
     value_note: ''
     sort_value: 0.7082
     sort_std: 0.001
-    global_rank: 99
-    paper_rank: 141
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 104
+    paper_rank: 150
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1531,10 +1565,10 @@ results:
     value_note: ''
     sort_value: 0.6996
     sort_std: null
-    global_rank: 109
-    paper_rank: 138
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 116
+    paper_rank: 147
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1602,10 +1636,10 @@ results:
     value_note: ''
     sort_value: 0.6947
     sort_std: null
-    global_rank: 115
-    paper_rank: 141
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 122
+    paper_rank: 150
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1673,8 +1707,8 @@ results:
     value_note: ''
     sort_value: 0.6838
     sort_std: null
-    global_rank: 117
-    paper_rank: 148
+    global_rank: 126
+    paper_rank: 157
     rank_delta: 31
     rank_delta_abs: 31
     rank_delta_direction: worse
@@ -1744,8 +1778,8 @@ results:
     value_note: ''
     sort_value: 0.6824
     sort_std: null
-    global_rank: 118
-    paper_rank: 142
+    global_rank: 127
+    paper_rank: 151
     rank_delta: 24
     rank_delta_abs: 24
     rank_delta_direction: worse
@@ -1815,8 +1849,8 @@ results:
     value_note: ''
     sort_value: 0.6776
     sort_std: null
-    global_rank: 123
-    paper_rank: 146
+    global_rank: 132
+    paper_rank: 155
     rank_delta: 23
     rank_delta_abs: 23
     rank_delta_direction: worse
@@ -1885,8 +1919,8 @@ results:
     value_note: ''
     sort_value: 0.657
     sort_std: 0.02
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1955,8 +1989,8 @@ results:
     value_note: ''
     sort_value: 0.638
     sort_std: 0.06
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2025,8 +2059,8 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: 0.01
-    global_rank: 142
-    paper_rank: 142
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2094,8 +2128,8 @@ results:
     value_note: ''
     sort_value: 0.595
     sort_std: 0.06
-    global_rank: 144
-    paper_rank: 144
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2163,8 +2197,8 @@ results:
     value_note: ''
     sort_value: 0.565
     sort_std: 0.01
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

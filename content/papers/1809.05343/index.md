@@ -62,9 +62,42 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: TinyGraph
+  - model: GAP-EDP
+    model_key: gap-edp
+    model_plain: GAP-EDP
+    value: 0.987
+    std: 0.0003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.00949'
+    title: 'GAP: Differentially Private Graph Neural Networks with Aggregation Perturbation'
+    date: Mar 2, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-02'
+    venue: USENIX Security Symposium
+    codebase_url: https://github.com/sisaman/GAP
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.987
+    sort_std: 0.0003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: NE-ASGCN
     model_key: ne-asgcn
-    model_plain: TinyGraph
+    model_plain: NE-ASGCN
     value: 0.9758
     std: 0.0027
     metric: Accuracy
@@ -88,17 +121,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.9758
     sort_std: 0.0027
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: TinyGraph
+  - model: HSGT
     model_key: hsgt
-    model_plain: TinyGraph
+    model_plain: HSGT
     value: 0.973
     std: 0.0024
     metric: Accuracy
@@ -121,43 +154,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.973
     sort_std: 0.0024
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: TinyGraph
-    model_key: gcmae
-    model_plain: TinyGraph
-    value: 0.9713
-    std: 0.0017
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2310.15523'
-    title: Generative and Contrastive Paradigms Are Complementary for Graph Self-Supervised
-      Learning
-    date: Oct 24, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-24'
-    venue: IEEE International Conference on Data Engineering
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9713
-    sort_std: 0.0017
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -219,13 +218,46 @@ results:
     value_note: ''
     sort_value: 0.9653
     sort_std: 0.0011
-    global_rank: 19
-    paper_rank: 68
-    rank_delta: 49
-    rank_delta_abs: 49
+    global_rank: 20
+    paper_rank: 72
+    rank_delta: 52
+    rank_delta_abs: 52
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.965
+    std: 0.0003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.12059'
+    title: A Scalable and Effective Alternative to Graph Transformers
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 22
+    sort_value: 0.965
+    sort_std: 0.0003
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -286,8 +318,8 @@ results:
     value_note: ''
     sort_value: 0.9627
     sort_std: 0.0032
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -353,8 +385,8 @@ results:
     value_note: ''
     sort_value: 0.9568
     sort_std: 0.0069
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -420,8 +452,8 @@ results:
     value_note: ''
     sort_value: 0.9449
     sort_std: 0.0026
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -467,8 +499,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-02-22'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2021-07-25'
+    value_gap_source_date_label: KDD 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -478,20 +510,19 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.937
-    true_std: null
-    value_gap_source_arxiv: '2102.10739'
-    value_gap_source_title: Dissecting the Diffusion Process in Linear Graph Convolutional
-      Networks
+    true_std: 0.0
+    value_gap_source_arxiv: '2107.11789'
+    value_gap_source_title: 'ROD: Reception-aware Online Distillation for Sparse Graphs'
     value_gap_source_is_current_paper: false
     value_gap: 0.017000000000000015
     has_value_note: false
     value_note: ''
     sort_value: 0.937
-    sort_std: null
-    global_rank: 78
-    paper_rank: 94
-    rank_delta: 16
-    rank_delta_abs: 16
+    sort_std: 0.0
+    global_rank: 83
+    paper_rank: 102
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -555,8 +586,8 @@ results:
     value_note: ''
     sort_value: 0.8611
     sort_std: 0.0437
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -566,6 +597,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: true
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.824
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2203.00949'
+    title: 'GAP: Differentially Private Graph Neural Networks with Aggregation Perturbation'
+    date: Mar 2, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-02'
+    venue: USENIX Security Symposium
+    codebase_url: https://github.com/sisaman/GAP
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 145
+    sort_value: 0.824
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   rank_metric: Accuracy
   higher_is_better: true
   experiment_scope: node-level

@@ -61,8 +61,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CauEMO
-mrr: 0.1166
-adjusted_mrr: 0.1166
+mrr: 0.0721
+adjusted_mrr: 0.0721
 mrr_dataset_count: 3
 benchmark_categories:
 - TU Dortmund
@@ -117,9 +117,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: CamS-LLaMA
     model_key: cams-llama
-    model_plain: MAGPrompt+
+    model_plain: CamS-LLaMA
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -151,9 +151,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: MAGPrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -245,9 +245,9 @@ results:
     sort_value: 0.8875
     sort_std: 0.0049
     global_rank: 32
-    paper_rank: 234
-    rank_delta: 202
-    rank_delta_abs: 202
+    paper_rank: 240
+    rank_delta: 208
+    rank_delta_abs: 208
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -315,15 +315,49 @@ results:
     sort_value: 0.881
     sort_std: 0.036
     global_rank: 36
-    paper_rank: 258
-    rank_delta: 222
-    rank_delta_abs: 222
+    paper_rank: 264
+    rank_delta: 228
+    rank_delta_abs: 228
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Motif-based Graph Representation Learning with Application
       to Chemical Molecules
     comparison_source_arxiv: '2208.04529'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8304
+    std: 0.0038
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 55
+    sort_value: 0.8304
+    sort_std: 0.0038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: CauEMO
@@ -383,8 +417,8 @@ results:
     value_note: ''
     sort_value: 0.7231
     sort_std: 0.0102
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -452,8 +486,8 @@ results:
     value_note: ''
     sort_value: 0.7155
     sort_std: 0.0156
-    global_rank: 107
-    paper_rank: 166
+    global_rank: 111
+    paper_rank: 170
     rank_delta: 59
     rank_delta_abs: 59
     rank_delta_direction: worse
@@ -500,8 +534,8 @@ results:
       Generalization
     at_pub_source_date_iso: '2023-12-18'
     at_pub_source_date_label: AAAI 2023
-    value_gap_source_date_iso: '2023-12-18'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-07'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -512,17 +546,17 @@ results:
     today_delta_significant: false
     true_value: 0.7103
     true_std: 0.0079
-    value_gap_source_arxiv: '2312.10988'
-    value_gap_source_title: Graph Invariant Learning with Subgraph Co-mixup for Out-Of-Distribution
-      Generalization
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.06283'
+    value_gap_source_title: 'Soft causal learning for generalized molecule property
+      prediction: An environment modeling perspective'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7103
     sort_std: 0.0079
-    global_rank: 114
-    paper_rank: 114
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -589,8 +623,8 @@ results:
     value_note: ''
     sort_value: 0.7021
     sort_std: 0.0131
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -637,8 +671,8 @@ results:
       Generalization
     at_pub_source_date_iso: '2023-12-18'
     at_pub_source_date_label: AAAI 2023
-    value_gap_source_date_iso: '2023-12-18'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-07'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -649,17 +683,17 @@ results:
     today_delta_significant: false
     true_value: 0.6973
     true_std: 0.0154
-    value_gap_source_arxiv: '2312.10988'
-    value_gap_source_title: Graph Invariant Learning with Subgraph Co-mixup for Out-Of-Distribution
-      Generalization
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.06283'
+    value_gap_source_title: 'Soft causal learning for generalized molecule property
+      prediction: An environment modeling perspective'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6973
     sort_std: 0.0154
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -706,8 +740,8 @@ results:
       Generalization
     at_pub_source_date_iso: '2023-12-18'
     at_pub_source_date_label: AAAI 2023
-    value_gap_source_date_iso: '2023-12-18'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2025-05-07'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -718,17 +752,17 @@ results:
     today_delta_significant: false
     true_value: 0.6965
     true_std: 0.0132
-    value_gap_source_arxiv: '2312.10988'
-    value_gap_source_title: Graph Invariant Learning with Subgraph Co-mixup for Out-Of-Distribution
-      Generalization
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2505.06283'
+    value_gap_source_title: 'Soft causal learning for generalized molecule property
+      prediction: An environment modeling perspective'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6965
     sort_std: 0.0132
-    global_rank: 157
-    paper_rank: 157
+    global_rank: 161
+    paper_rank: 161
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -795,8 +829,8 @@ results:
     value_note: ''
     sort_value: 0.6812
     sort_std: 0.0112
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 194
+    paper_rank: 194
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -863,8 +897,8 @@ results:
     value_note: ''
     sort_value: 0.6416
     sort_std: 0.0283
-    global_rank: 273
-    paper_rank: 273
+    global_rank: 279
+    paper_rank: 279
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -886,9 +920,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -919,9 +953,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -944,7 +1011,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
@@ -1009,8 +1076,8 @@ results:
     value_note: ''
     sort_value: 0.9692
     sort_std: 0.0136
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1077,8 +1144,8 @@ results:
     value_note: ''
     sort_value: 0.9676
     sort_std: 0.017
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1145,8 +1212,8 @@ results:
     value_note: ''
     sort_value: 0.9637
     sort_std: 0.0215
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1213,8 +1280,8 @@ results:
     value_note: ''
     sort_value: 0.9604
     sort_std: 0.0201
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1281,8 +1348,8 @@ results:
     value_note: ''
     sort_value: 0.9601
     sort_std: 0.0224
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1349,8 +1416,8 @@ results:
     value_note: ''
     sort_value: 0.9577
     sort_std: 0.0123
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1417,8 +1484,8 @@ results:
     value_note: ''
     sort_value: 0.9433
     sort_std: 0.0644
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1484,10 +1551,10 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.029
-    global_rank: 34
-    paper_rank: 217
-    rank_delta: 183
-    rank_delta_abs: 183
+    global_rank: 43
+    paper_rank: 254
+    rank_delta: 211
+    rank_delta_abs: 211
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1532,8 +1599,8 @@ results:
       Curvature
     at_pub_source_date_iso: '2025-03-03'
     at_pub_source_date_label: KDD 2025
-    value_gap_source_date_iso: '2023-08-16'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-03-03'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: 0.08450000000000002
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1541,24 +1608,91 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.891
-    true_std: 0.058
-    value_gap_source_arxiv: '2308.08235'
-    value_gap_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
+    today_delta_significant: true
+    true_value: 0.922
+    true_std: 0.044
+    value_gap_source_arxiv: '2503.01079'
+    value_gap_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
     value_gap_source_is_current_paper: false
-    value_gap: 0.05349999999999999
+    value_gap: 0.08450000000000002
     has_value_note: false
     value_note: ''
-    sort_value: 0.891
-    sort_std: 0.058
-    global_rank: 250
-    paper_rank: 500
-    rank_delta: 250
-    rank_delta_abs: 250
+    sort_value: 0.922
+    sort_std: 0.044
+    global_rank: 71
+    paper_rank: 550
+    rank_delta: 479
+    rank_delta_abs: 479
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.904
+    std: 0.078
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.12245'
+    title: Asynchronous Neural Networks for Learning in Graphs
+    date: May 24, 2022
+    date_display: May 2022
+    date_iso: '2022-05-24'
+    venue: arXiv.org
+    codebase_url: https://github.com/beabevi/ESAN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 170
+    sort_value: 0.904
+    sort_std: 0.078
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1620,8 +1754,8 @@ results:
     value_note: ''
     sort_value: 0.846
     sort_std: 0.0534
-    global_rank: 455
-    paper_rank: 455
+    global_rank: 503
+    paper_rank: 503
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1643,9 +1777,9 @@ results:
 - &id003
   dataset: SIDER
   rows:
-  - model: DGI
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: DGI
+    model_plain: KA-GAT
     value: 0.847
     std: 0.002
     metric: ROC-AUC
@@ -1677,9 +1811,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DGI
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: DGI
+    model_plain: KA-GCN
     value: 0.842
     std: 0.001
     metric: ROC-AUC
@@ -1711,9 +1845,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: DGI
+  - model: GraphKAN
     model_key: graphkan
-    model_plain: DGI
+    model_plain: GraphKAN
     value: 0.837
     std: 0.001
     metric: ROC-AUC
@@ -1804,9 +1938,9 @@ results:
     sort_value: 0.6403
     sort_std: 0.0104
     global_rank: 66
-    paper_rank: 230
-    rank_delta: 164
-    rank_delta_abs: 164
+    paper_rank: 232
+    rank_delta: 166
+    rank_delta_abs: 166
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1874,9 +2008,9 @@ results:
     sort_value: 0.615
     sort_std: 0.025
     global_rank: 127
-    paper_rank: 241
-    rank_delta: 114
-    rank_delta_abs: 114
+    paper_rank: 243
+    rank_delta: 116
+    rank_delta_abs: 116
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1942,8 +2076,8 @@ results:
     value_note: ''
     sort_value: 0.599
     sort_std: 0.0128
-    global_rank: 186
-    paper_rank: 186
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2011,8 +2145,8 @@ results:
     value_note: ''
     sort_value: 0.5919
     sort_std: 0.0103
-    global_rank: 202
-    paper_rank: 202
+    global_rank: 203
+    paper_rank: 203
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2079,8 +2213,8 @@ results:
     value_note: ''
     sort_value: 0.5904
     sort_std: 0.013
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2147,8 +2281,8 @@ results:
     value_note: ''
     sort_value: 0.5895
     sort_std: 0.0122
-    global_rank: 204
-    paper_rank: 204
+    global_rank: 205
+    paper_rank: 205
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2215,8 +2349,8 @@ results:
     value_note: ''
     sort_value: 0.5881
     sort_std: 0.0184
-    global_rank: 205
-    paper_rank: 205
+    global_rank: 206
+    paper_rank: 206
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2283,8 +2417,8 @@ results:
     value_note: ''
     sort_value: 0.5823
     sort_std: 0.0143
-    global_rank: 212
-    paper_rank: 212
+    global_rank: 214
+    paper_rank: 214
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2351,13 +2485,47 @@ results:
     value_note: ''
     sort_value: 0.5771
     sort_std: 0.0214
-    global_rank: 216
-    paper_rank: 216
+    global_rank: 218
+    paper_rank: 218
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.5752
+    std: 0.0006
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 222
+    sort_value: 0.5752
+    sort_std: 0.0006
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2419,8 +2587,8 @@ results:
     value_note: ''
     sort_value: 0.5252
     sort_std: 0.0169
-    global_rank: 241
-    paper_rank: 241
+    global_rank: 243
+    paper_rank: 243
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

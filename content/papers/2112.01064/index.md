@@ -42,9 +42,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - AutoGEL
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0326
+adjusted_mrr: 0.0326
+mrr_dataset_count: 4
 benchmark_categories:
 - TU Dortmund
 - Knowledge Graphs
@@ -67,44 +67,45 @@ results:
 - &id004
   dataset: FB15k-237
   rows:
-  - model: CompGCN
-    model_key: llms
-    model_plain: CompGCN
-    value: 0.815
-    std: 0.023
+  - model: sum, Msg_r^3, f(t)=0
+    model_key: sum, msg_r^3, f(t)=0
+    model_plain: sum, Msg_r^3, f(t)=0
+    value: 0.85
+    std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.815
-    sort_std: 0.023
+    sort_value: 0.85
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CompGCN
-    model_key: gcope
-    model_plain: CompGCN
-    value: 0.793
-    std: 0.022
+  - model: sum, Msg_r^3, f(t)=t
+    model_key: sum, msg_r^3, f(t)=t
+    model_plain: sum, Msg_r^3, f(t)=t
+    value: 0.844
+    std: null
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -114,30 +115,65 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.793
-    sort_std: 0.022
+    sort_value: 0.844
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: CompGCN
-    model_key: gft
-    model_plain: CompGCN
-    value: 0.791
-    std: 0.016
+  - model: relation-specific
+    model_key: relation-specific
+    model_plain: relation-specific
+    value: 0.835
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.835
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.637
+    std: 0.017
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -158,13 +194,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.791
-    sort_std: 0.016
+    global_rank: 28
+    sort_value: 0.637
+    sort_std: 0.017
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: AutoGEL
     model_key: autogel
@@ -202,8 +238,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -212,17 +248,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.357
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.357
     sort_std: null
-    global_rank: 30
+    global_rank: 59
+    paper_rank: 59
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -264,8 +306,8 @@ results:
     at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
     at_pub_source_date_iso: '2019-11-08'
     at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -276,17 +318,17 @@ results:
     today_delta_significant: false
     true_value: 0.355
     true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.355
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -353,8 +395,8 @@ results:
     value_note: ''
     sort_value: 0.35
     sort_std: null
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -421,8 +463,8 @@ results:
     value_note: ''
     sort_value: 0.35
     sort_std: null
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -489,10 +531,10 @@ results:
     value_note: ''
     sort_value: 0.346
     sort_std: null
-    global_rank: 42
-    paper_rank: 74
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 73
+    paper_rank: 115
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -536,8 +578,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -546,17 +588,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.341
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.341
     sort_std: null
-    global_rank: 48
+    global_rank: 81
+    paper_rank: 81
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -599,8 +647,8 @@ results:
       in Complex Space'
     at_pub_source_date_iso: '2018-09-27'
     at_pub_source_date_label: ICLR 2018
-    value_gap_source_date_iso: '2022-12-12'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-02-25'
+    value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -611,21 +659,88 @@ results:
     today_delta_significant: false
     true_value: 0.338
     true_std: null
-    value_gap_source_arxiv: '2212.05767'
-    value_gap_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
-      Static, Dynamic, and Multi-Modal'
+    value_gap_source_arxiv: '2302.13083'
+    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.338
     sort_std: null
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: TransE
+    model_key: transe
+    model_plain: TransE
+    value: 0.294
+    std: null
+    paper_value: 0.294
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: toutanova2015observed
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 2, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-02'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.294
+    at_pub_std: null
+    at_pub_source_arxiv: '1911.03082'
+    at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
+    at_pub_source_date_iso: '2019-11-08'
+    at_pub_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.33
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.03600000000000003
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.33
+    sort_std: null
+    global_rank: 91
+    paper_rank: 103
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -688,76 +803,8 @@ results:
     value_note: ''
     sort_value: 0.325
     sort_std: null
-    global_rank: 59
-    paper_rank: 59
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TransE
-    model_key: transe
-    model_plain: TransE
-    value: 0.294
-    std: null
-    paper_value: 0.294
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: toutanova2015observed
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 2, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-02'
-    published_venue: NeurIPS 2021
-    published_conference: NeurIPS 2021
-    at_pub_value: 0.294
-    at_pub_std: null
-    at_pub_source_arxiv: '1911.03082'
-    at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
-    at_pub_source_date_iso: '2019-11-08'
-    at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.294
-    true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.294
-    sort_std: null
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -824,10 +871,10 @@ results:
     value_note: ''
     sort_value: 0.289
     sort_std: null
-    global_rank: 68
-    paper_rank: 74
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 107
+    paper_rank: 115
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -891,11 +938,11 @@ results:
     value_note: ''
     sort_value: 0.249
     sort_std: null
-    global_rank: 72
-    paper_rank: 72
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    global_rank: 113
+    paper_rank: 114
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Multi-hop Attention Graph Neural Networks
@@ -938,8 +985,8 @@ results:
     at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
     at_pub_source_date_iso: '2019-11-08'
     at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -950,17 +997,17 @@ results:
     today_delta_significant: false
     true_value: 0.248
     true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.248
     sort_std: null
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 115
+    paper_rank: 115
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1027,8 +1074,8 @@ results:
     value_note: ''
     sort_value: 0.243
     sort_std: null
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1050,9 +1097,9 @@ results:
 - &id002
   dataset: IMDB-MULTI
   rows:
-  - model: GatedGCN-LSPE
+  - model: GraphSNN
     model_key: graphsnn
-    model_plain: GatedGCN-LSPE
+    model_plain: GraphSNN
     value: 0.779
     std: 0.036
     metric: Accuracy
@@ -1083,9 +1130,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-LSPE
+  - model: SIN
     model_key: sin
-    model_plain: GatedGCN-LSPE
+    model_plain: SIN
     value: 0.756
     std: 0.032
     metric: Accuracy
@@ -1116,9 +1163,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-LSPE
+  - model: CIN
     model_key: cin
-    model_plain: GatedGCN-LSPE
+    model_plain: CIN
     value: 0.756
     std: 0.037
     metric: Accuracy
@@ -1206,9 +1253,9 @@ results:
     sort_value: 0.751
     sort_std: 0.051
     global_rank: 5
-    paper_rank: 19
-    rank_delta: 14
-    rank_delta_abs: 14
+    paper_rank: 31
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1252,8 +1299,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1262,79 +1309,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.568
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.568
     sort_std: null
-    global_rank: 8
+    global_rank: 16
+    paper_rank: 16
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.509
-    std: null
-    paper_value: 0.509
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 2, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-02'
-    published_venue: NeurIPS 2021
-    published_conference: NeurIPS 2021
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.509
-    sort_std: null
-    global_rank: 28
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1376,32 +1367,101 @@ results:
     at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
     at_pub_source_date_iso: '2020-06-01'
     at_pub_source_date_label: ICML 2020
-    value_gap_source_date_iso: '2021-08-24'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-06-06'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.504
-    true_std: 0.0302
-    value_gap_source_arxiv: '2108.10587'
-    value_gap_source_title: Pooling Architecture Search for Graph Classification
+    true_value: 0.519
+    true_std: 0.038
+    value_gap_source_arxiv: '2306.04004'
+    value_gap_source_title: Randomized Schur Complement Views for Graph Contrastive
+      Learning
     value_gap_source_is_current_paper: false
-    value_gap: 0.015000000000000013
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.504
-    sort_std: 0.0302
-    global_rank: 32
-    paper_rank: 23
-    rank_delta: -9
-    rank_delta_abs: 9
-    rank_delta_direction: better
-    has_value_gap: true
+    sort_value: 0.519
+    sort_std: 0.038
+    global_rank: 38
+    paper_rank: 38
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.509
+    std: null
+    paper_value: 0.509
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 2, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-02'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.509
+    at_pub_std: 0.022
+    at_pub_source_arxiv: '2006.05582'
+    at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
+    at_pub_source_date_iso: '2020-06-01'
+    at_pub_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.509
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.509
+    sort_std: null
+    global_rank: 45
+    paper_rank: 45
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1463,13 +1523,46 @@ results:
     value_note: ''
     sort_value: 0.49
     sort_std: 0.0356
-    global_rank: 54
-    paper_rank: 66
+    global_rank: 77
+    paper_rank: 89
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.4853
+    std: 0.0543
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2108.10587'
+    title: Pooling Architecture Search for Graph Classification
+    date: Aug 24, 2021
+    date_display: Aug 2021
+    date_iso: '2021-08-24'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/GraphNAS/GraphNAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 85
+    sort_value: 0.4853
+    sort_std: 0.0543
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1510,8 +1603,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1520,17 +1613,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.478
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.478
     sort_std: null
-    global_rank: 67
+    global_rank: 90
+    paper_rank: 90
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1572,8 +1671,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1582,17 +1681,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.452
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.452
     sort_std: null
-    global_rank: 82
+    global_rank: 106
+    paper_rank: 106
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1610,9 +1715,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1643,9 +1748,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1668,47 +1806,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: AutoGEL
     model_key: autogel
@@ -1746,8 +1850,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1756,17 +1860,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9474
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9474
     sort_std: null
-    global_rank: 19
+    global_rank: 25
+    paper_rank: 25
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1828,10 +1938,10 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.029
-    global_rank: 34
-    paper_rank: 217
-    rank_delta: 183
-    rank_delta_abs: 183
+    global_rank: 43
+    paper_rank: 254
+    rank_delta: 211
+    rank_delta_abs: 211
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1875,8 +1985,8 @@ results:
     at_pub_source_title: How Powerful are Graph Neural Networks?
     at_pub_source_date_iso: '2018-10-01'
     at_pub_source_date_label: ICLR 2018
-    value_gap_source_date_iso: '2019-05-30'
-    value_gap_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2025-04-18'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.47400000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1887,24 +1997,92 @@ results:
     today_delta_significant: true
     true_value: 0.926
     true_std: 0.042
-    value_gap_source_arxiv: '1905.13192'
-    value_gap_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
-      with Graph Kernels'
+    value_gap_source_arxiv: '2504.13426'
+    value_gap_source_title: Simplifying Graph Convolutional Networks with Redundancy-Free
+      Neighbors
     value_gap_source_is_current_paper: false
     value_gap: 0.47400000000000003
     has_value_note: false
     value_note: ''
     sort_value: 0.926
     sort_std: 0.042
-    global_rank: 47
-    paper_rank: 801
-    rank_delta: 754
-    rank_delta_abs: 754
+    global_rank: 61
+    paper_rank: 865
+    rank_delta: 804
+    rank_delta_abs: 804
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: How Powerful are Graph Neural Networks?
     comparison_source_arxiv: '1810.00826'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.856
+    std: null
+    paper_value: 0.856
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 2, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-02'
+    published_venue: NeurIPS 2021
+    published_conference: NeurIPS 2021
+    at_pub_value: 0.891
+    at_pub_std: 0.0581
+    at_pub_source_arxiv: '2106.04319'
+    at_pub_source_title: Breaking the Limits of Message Passing Graph Neural Networks
+    at_pub_source_date_iso: '2021-06-08'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2025-03-03'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: 0.03500000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.922
+    true_std: 0.044
+    value_gap_source_arxiv: '2503.01079'
+    value_gap_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.06600000000000006
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.922
+    sort_std: 0.044
+    global_rank: 71
+    paper_rank: 464
+    rank_delta: 393
+    rank_delta_abs: 393
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GraphSAGE
@@ -1963,10 +2141,10 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.078
-    global_rank: 140
-    paper_rank: 436
-    rank_delta: 296
-    rank_delta_abs: 296
+    global_rank: 170
+    paper_rank: 482
+    rank_delta: 312
+    rank_delta_abs: 312
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1974,69 +2152,35 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.856
-    std: null
-    paper_value: 0.856
-    paper_std: null
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 2, 2021
-    date_display: Dec 2021
-    date_iso: '2021-12-02'
-    published_venue: NeurIPS 2021
-    published_conference: NeurIPS 2021
-    at_pub_value: 0.891
-    at_pub_std: 0.0581
-    at_pub_source_arxiv: '2106.04319'
-    at_pub_source_title: Breaking the Limits of Message Passing Graph Neural Networks
-    at_pub_source_date_iso: '2021-06-08'
-    at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2023-08-16'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.03500000000000003
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.891
-    true_std: 0.058
-    value_gap_source_arxiv: '2308.08235'
-    value_gap_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03500000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.891
-    sort_std: 0.058
-    global_rank: 250
-    paper_rank: 418
-    rank_delta: 168
-    rank_delta_abs: 168
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2078,8 +2222,8 @@ results:
       to Their Embeddings and Back'
     at_pub_source_date_iso: '2018-12-14'
     at_pub_source_date_label: '2018'
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-12-20'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: 0.00029999999999996696
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2089,18 +2233,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8583
-    true_std: 0.0166
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    true_std: 0.0116
+    value_gap_source_arxiv: '2412.17856'
+    value_gap_source_title: Graph Structure Refinement with Energy-based Contrastive
+      Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.00029999999999996696
     has_value_note: false
     value_note: ''
     sort_value: 0.8583
-    sort_std: 0.0166
-    global_rank: 408
-    paper_rank: 408
+    sort_std: 0.0116
+    global_rank: 454
+    paper_rank: 454
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2109,6 +2253,39 @@ results:
     comparison_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
       to Their Embeddings and Back'
     comparison_source_arxiv: '1901.08296'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7518
+    std: 0.047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.01249'
+    title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
+    date: Jun 3, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-03'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 778
+    sort_value: 0.7518
+    sort_std: 0.047
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: NAS-GCN
@@ -2147,8 +2324,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2157,17 +2334,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.478
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.478
     sort_std: null
-    global_rank: 802
+    global_rank: 865
+    paper_rank: 865
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2185,77 +2368,113 @@ results:
 - &id003
   dataset: WN18RR
   rows:
-  - model: CompGCN
-    model_key: gft
-    model_plain: CompGCN
-    value: 0.9191
+  - model: PNA, Msg_r^2, f(t)=t
+    model_key: pna, msg_r^2, f(t)=t
+    model_plain: PNA, Msg_r^2, f(t)=t
+    value: 0.947
     std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2411.06070'
-    title: 'GFT: Graph Foundation Model with Transferable Tree Vocabulary'
-    date: Nov 9, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-09'
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
     venue: Neural Information Processing Systems
-    codebase_url: https://github.com/Zehong-Wang/GFT
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9191
+    sort_value: 0.947
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CompGCN
-    model_key: unigraph2
-    model_plain: CompGCN
-    value: 0.8786
-    std: 0.0006
+  - model: PNA, Msg_r^3, f(t)=0
+    model_key: pna, msg_r^3, f(t)=0
+    model_plain: PNA, Msg_r^3, f(t)=0
+    value: 0.947
+    std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2502.00806'
-    title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-    date: Feb 2, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-02'
-    venue: The Web Conference
-    codebase_url: https://github.com/yf-he/UniGraph2
-    uses_external_data: true
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8786
-    sort_std: 0.0006
+    sort_value: 0.947
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PNA, Msg_r^2, f(t)=0
+    model_key: pna, msg_r^2, f(t)=0
+    model_plain: PNA, Msg_r^2, f(t)=0
+    value: 0.946
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.946
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CompGCN
-    model_key: gat
-    model_plain: CompGCN
-    value: 0.8552
-    std: 0.0012
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8298
+    std: 0.0022
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -2277,9 +2496,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.8552
-    sort_std: 0.0012
+    global_rank: 27
+    sort_value: 0.8298
+    sort_std: 0.0022
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2321,8 +2540,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2331,17 +2550,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.479
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.479
     sort_std: null
-    global_rank: 47
+    global_rank: 90
+    paper_rank: 90
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2383,8 +2608,8 @@ results:
     at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
     at_pub_source_date_iso: '2019-11-08'
     at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2395,17 +2620,17 @@ results:
     today_delta_significant: false
     true_value: 0.479
     true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.479
     sort_std: null
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2452,8 +2677,8 @@ results:
       in Complex Space'
     at_pub_source_date_iso: '2018-09-27'
     at_pub_source_date_label: ICLR 2018
-    value_gap_source_date_iso: '2018-09-27'
-    value_gap_source_date_label: ICLR 2018
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.0010000000000000009
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2463,18 +2688,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.477
-    true_std: 0.001
-    value_gap_source_arxiv: '1902.10197'
-    value_gap_source_title: 'RotatE: Knowledge Graph Embedding by Relational Rotation
-      in Complex Space'
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
     value_gap_source_is_current_paper: false
     value_gap: 0.0010000000000000009
     has_value_note: false
     value_note: ''
     sort_value: 0.477
-    sort_std: 0.001
-    global_rank: 47
-    paper_rank: 47
+    sort_std: null
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2542,8 +2767,8 @@ results:
     value_note: ''
     sort_value: 0.475
     sort_std: null
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2610,8 +2835,8 @@ results:
     value_note: ''
     sort_value: 0.47
     sort_std: null
-    global_rank: 52
-    paper_rank: 52
+    global_rank: 98
+    paper_rank: 98
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2657,8 +2882,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2667,17 +2892,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.465
+    true_std: null
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.465
     sort_std: null
-    global_rank: 56
+    global_rank: 102
+    paper_rank: 102
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2739,10 +2970,10 @@ results:
     value_note: ''
     sort_value: 0.462
     sort_std: null
-    global_rank: 58
-    paper_rank: 69
-    rank_delta: 11
-    rank_delta_abs: 11
+    global_rank: 105
+    paper_rank: 117
+    rank_delta: 12
+    rank_delta_abs: 12
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2807,8 +3038,8 @@ results:
     value_note: ''
     sort_value: 0.44
     sort_std: null
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2854,33 +3085,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-12-12'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2021-12-02'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.42
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.43
     true_std: null
-    value_gap_source_arxiv: '2212.05767'
-    value_gap_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
-      Static, Dynamic, and Multi-Modal'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.010000000000000009
+    value_gap_source_arxiv: '2112.01064'
+    value_gap_source_title: 'AutoGEL: An Automated Graph Neural Network with Explicit
+      Link Information'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.42
+    sort_value: 0.43
     sort_std: null
-    global_rank: 74
-    paper_rank: 72
-    rank_delta: -2
-    rank_delta_abs: 2
-    rank_delta_direction: better
-    has_value_gap: true
+    global_rank: 118
+    paper_rank: 118
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2943,8 +3174,8 @@ results:
     value_note: ''
     sort_value: 0.265
     sort_std: null
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3012,8 +3243,8 @@ results:
     value_note: ''
     sort_value: 0.231
     sort_std: null
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

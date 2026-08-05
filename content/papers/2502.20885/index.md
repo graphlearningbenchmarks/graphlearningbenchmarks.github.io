@@ -48,8 +48,8 @@ paper_type: method
 proposed_models:
 - FOSSIL
 - FOSSIL v2
-mrr: 0.026
-adjusted_mrr: 0.0173
+mrr: 0.0257
+adjusted_mrr: 0.0171
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -71,9 +71,9 @@ results:
 - &id002
   dataset: Actor
   rows:
-  - model: R-SoftGraphAIN
+  - model: NodeFormer
     model_key: nodeformer
-    model_plain: R-SoftGraphAIN
+    model_plain: NodeFormer
     value: 0.7623
     std: 0.0042
     metric: Accuracy
@@ -105,9 +105,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: DiGGR
     model_key: diggr
-    model_plain: R-SoftGraphAIN
+    model_plain: DiGGR
     value: 0.4535
     std: 0.0353
     metric: Accuracy
@@ -138,35 +138,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: R-SoftGraphAIN
-    model_key: dog
-    model_plain: R-SoftGraphAIN
-    value: 0.432
-    std: 0.012
+  - model: TRIGON
+    model_key: trigon
+    model_plain: TRIGON
+    value: 0.4402
+    std: 0.0028
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2503.12563'
-    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
-    date: Mar 16, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-16'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
-    uses_external_data: true
-    input_feature_source: raw_features
-    feature_source_evidence: DoG generates synthetic graph structures to boost the
-      performance of GNNs.
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.19071'
+    title: Dynamic Triangulation-Based Graph Rewiring for Graph Neural Networks
+    date: Aug 26, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-26'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/Hugo-Attali/TRIGON-CIKM-2025
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.432
-    sort_std: 0.012
+    sort_value: 0.4402
+    sort_std: 0.0028
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -210,8 +209,8 @@ results:
       Models'
     at_pub_source_date_iso: '2024-06-04'
     at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-06-04'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2026-04-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.14629999999999999
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -222,25 +221,91 @@ results:
     today_delta_significant: true
     true_value: 0.4115
     true_std: 0.0088
-    value_gap_source_arxiv: '2406.01899'
-    value_gap_source_title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion
-      Models'
+    value_gap_source_arxiv: '2604.01878'
+    value_gap_source_title: 'ASPECT: Node-Level Adaptive Spectral Fusion for Graph
+      Contrastive Learning'
     value_gap_source_is_current_paper: false
     value_gap: 0.14629999999999999
     has_value_note: false
     value_note: ''
     sort_value: 0.4115
     sort_std: 0.0088
-    global_rank: 34
-    paper_rank: 425
-    rank_delta: 391
-    rank_delta_abs: 391
+    global_rank: 43
+    paper_rank: 474
+    rank_delta: 431
+    rank_delta_abs: 431
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Cross-Domain Graph Data Scaling: A Showcase with Diffusion
       Models'
     comparison_source_arxiv: '2406.01899'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4026
+    std: 0.0108
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2302.03228'
+    title: Heterophily-Aware Graph Attention Network
+    date: Feb 7, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-07'
+    venue: Pattern Recognition
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 56
+    sort_value: 0.4026
+    sort_std: 0.0108
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.3899
+    std: 0.0085
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11762'
+    title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    date: Oct 18, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-18'
+    venue: The Web Conference
+    codebase_url: https://github.com/SDS-Lab/QW_Loss
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 88
+    sort_value: 0.3899
+    sort_std: 0.0085
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MUSE
@@ -280,8 +345,8 @@ results:
     at_pub_source_title: 'MUSE: Multi-View Contrastive Learning for Heterophilic Graphs'
     at_pub_source_date_iso: '2023-07-29'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-07-29'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-08-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.01940000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -292,19 +357,18 @@ results:
     today_delta_significant: true
     true_value: 0.3855
     true_std: 0.0134
-    value_gap_source_arxiv: '2307.16026'
-    value_gap_source_title: 'MUSE: Multi-View Contrastive Learning for Heterophilic
-      Graphs'
+    value_gap_source_arxiv: '2408.13471'
+    value_gap_source_title: Disentangled Generative Graph Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.01940000000000003
     has_value_note: false
     value_note: ''
     sort_value: 0.3855
     sort_std: 0.0134
-    global_rank: 81
-    paper_rank: 164
-    rank_delta: 83
-    rank_delta_abs: 83
+    global_rank: 99
+    paper_rank: 196
+    rank_delta: 97
+    rank_delta_abs: 97
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -371,8 +435,8 @@ results:
     value_note: ''
     sort_value: 0.3561
     sort_std: 0.0015
-    global_rank: 221
-    paper_rank: 221
+    global_rank: 252
+    paper_rank: 252
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -440,8 +504,8 @@ results:
     value_note: ''
     sort_value: 0.3541
     sort_std: 0.0018
-    global_rank: 231
-    paper_rank: 231
+    global_rank: 262
+    paper_rank: 262
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -509,10 +573,10 @@ results:
     value_note: ''
     sort_value: 0.345
     sort_std: 0.011
-    global_rank: 269
-    paper_rank: 390
-    rank_delta: 121
-    rank_delta_abs: 121
+    global_rank: 303
+    paper_rank: 439
+    rank_delta: 136
+    rank_delta_abs: 136
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -579,8 +643,8 @@ results:
     value_note: ''
     sort_value: 0.3246
     sort_std: 0.0013
-    global_rank: 314
-    paper_rank: 314
+    global_rank: 354
+    paper_rank: 354
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -649,10 +713,10 @@ results:
     value_note: ''
     sort_value: 0.3209
     sort_std: 0.0118
-    global_rank: 319
-    paper_rank: 385
-    rank_delta: 66
-    rank_delta_abs: 66
+    global_rank: 359
+    paper_rank: 433
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -718,8 +782,8 @@ results:
     value_note: ''
     sort_value: 0.3008
     sort_std: 0.002
-    global_rank: 366
-    paper_rank: 366
+    global_rank: 412
+    paper_rank: 412
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -788,10 +852,10 @@ results:
     value_note: ''
     sort_value: 0.2986
     sort_std: 0.0075
-    global_rank: 371
-    paper_rank: 410
-    rank_delta: 39
-    rank_delta_abs: 39
+    global_rank: 418
+    paper_rank: 460
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -858,8 +922,8 @@ results:
     value_note: ''
     sort_value: 0.2969
     sort_std: 0.0014
-    global_rank: 374
-    paper_rank: 374
+    global_rank: 422
+    paper_rank: 422
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -927,8 +991,8 @@ results:
     value_note: ''
     sort_value: 0.2843
     sort_std: 0.0016
-    global_rank: 400
-    paper_rank: 400
+    global_rank: 450
+    paper_rank: 450
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -996,10 +1060,10 @@ results:
     value_note: ''
     sort_value: 0.2836
     sort_std: 0.0065
-    global_rank: 402
-    paper_rank: 423
-    rank_delta: 21
-    rank_delta_abs: 21
+    global_rank: 452
+    paper_rank: 472
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1066,8 +1130,8 @@ results:
     value_note: ''
     sort_value: 0.276
     sort_std: 0.0018
-    global_rank: 417
-    paper_rank: 417
+    global_rank: 466
+    paper_rank: 466
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1135,8 +1199,8 @@ results:
     value_note: ''
     sort_value: 0.2533
     sort_std: 0.0034
-    global_rank: 442
-    paper_rank: 442
+    global_rank: 490
+    paper_rank: 490
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1158,9 +1222,9 @@ results:
 - &id001
   dataset: Coauthor-CS
   rows:
-  - model: DGI (PPR)
+  - model: DoG
     model_key: dog
-    model_plain: DGI (PPR)
+    model_plain: DoG
     value: 0.969
     std: 0.003
     metric: Accuracy
@@ -1191,9 +1255,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DGI (PPR)
+  - model: GWN-fa
     model_key: gwn-fa
-    model_plain: DGI (PPR)
+    model_plain: GWN-fa
     value: 0.9667
     std: 0.0026
     metric: Accuracy
@@ -1224,9 +1288,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DGI (PPR)
+  - model: GWN-sym
     model_key: gwn-sym
-    model_plain: DGI (PPR)
+    model_plain: GWN-sym
     value: 0.9666
     std: 0.0026
     metric: Accuracy
@@ -1256,6 +1320,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9593
+    std: 0.0025
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.20034'
+    title: Graph Wave Networks
+    date: Apr 22, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-22'
+    venue: The Web Conference
+    codebase_url: https://github.com/YueAWu/Graph-Wave-Networks
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 7
+    sort_value: 0.9593
+    sort_std: 0.0025
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: FOSSIL v2
     model_key: fossil v2
@@ -1640,8 +1737,8 @@ results:
     at_pub_source_title: Spectral Augmentation for Self-Supervised Learning on Graphs
     at_pub_source_date_iso: '2022-10-02'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2025-06-25'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-05-04'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.015000000000000013
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1652,9 +1749,8 @@ results:
     today_delta_significant: true
     true_value: 0.9331
     true_std: 0.0013
-    value_gap_source_arxiv: '2506.20362'
-    value_gap_source_title: Self-Supervised Graph Learning via Spectral Bootstrapping
-      and Laplacian-Based Augmentations
+    value_gap_source_arxiv: '2605.03076'
+    value_gap_source_title: Adaptive Negative Scheduling for Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.015000000000000013
     has_value_note: false
@@ -1742,6 +1838,40 @@ results:
     comparison_source_title: Topology Reorganized Graph Contrastive Learning with
       Mitigating Semantic Drift
     comparison_source_arxiv: '2407.16726'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.928
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2412.06173'
+    title: Revisiting the Necessity of Graph Learning and Common Graph Benchmarks
+    date: Dec 9, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-09'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: MLP operating solely on node features can sufficiently
+      close the gap
+    is_global_top: true
+    global_rank: 112
+    sort_value: 0.928
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: FS-GCN

@@ -13,7 +13,7 @@ Papers that reported a result better than the best known for that model and data
 **Total rows:** 2801
 **Significant:** 1604
 **Within uncertainty (not highlighted on paper pages):** 1197
-**Later surpassed by another paper:** 307
+**Later surpassed by another paper:** 332
 
 
 Detailed table: 500 rows (loaded below).

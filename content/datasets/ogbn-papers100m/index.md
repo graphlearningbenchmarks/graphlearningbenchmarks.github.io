@@ -12,13 +12,13 @@ stats:
   avg_nodes: 1615685872.0
   avg_edges: null
   num_classes: 172
-result_count: 136
+result_count: 137
 best_model:
-  model: GAMLP
-  value: 0.7036
+  model: SGC
+  value: 0.791
   metric: Accuracy
-  arxiv_id: '2210.14709'
-  paper_title: Learning on Large-scale Text-attributed Graphs via Variational Inference
+  arxiv_id: '2403.13268'
+  paper_title: 'Unifews: You Need Fewer Operations for Efficient Graph Neural Networks'
 papers:
 - arxiv_id: '2602.12613'
   title: 'Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction'
@@ -188,6 +188,34 @@ variants:
   chart_default_log_scale: false
   chart_hidden_models: []
   rows:
+  - model: SGC
+    model_plain: SGC
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2403.13268'
+    title: 'Unifews: You Need Fewer Operations for Efficient Graph Neural Networks'
+    date: Mar 19, 2024
+    date_iso: '2024-03-19'
+    date_display: Mar 2024
+    codebase_url: https://github.com/gdmnl/Unifews
+    published_conference: ICML 2024
+    published_conference_short: ICML
+    published_conference_slug: icml
+    published_venue: ICML 2024
+    uses_external_data: false
+    is_best: true
+    is_std_outlier: false
+    metric_values:
+    - 0.791
+    - null
+    metric_stds:
+    - null
+    - null
   - model: GAMLP
     model_plain: GAMLP
     is_baseline: true
@@ -208,7 +236,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2022
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7036
@@ -236,7 +264,7 @@ variants:
     published_conference_slug: iclr
     published_venue: ICLR 2022
     uses_external_data: false
-    is_best: true
+    is_best: false
     is_std_outlier: false
     metric_values:
     - 0.7036
@@ -1579,46 +1607,18 @@ variants:
     metric_stds:
     - 0.002
     - null
-  - model: SGC
-    model_plain: SGC
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2111.00064'
-    title: Node Feature Extraction by Self-Supervised Multi-scale Neighborhood Prediction
-    date: Oct 29, 2021
-    date_iso: '2021-10-29'
-    date_display: Oct 2021
-    codebase_url: https://github.com/amzn/pecos
-    published_conference: ICLR 2021
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2021
-    uses_external_data: true
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.661
-    - null
-    metric_stds:
-    - 0.0013
-    - null
-  row_count: 136
+  row_count: 137
   rows_json: /data/datasets/ogbn-papers100m/standard-split-rows.json
   chart_json: /data/datasets/ogbn-papers100m/standard-split-chart.json
   arch_counts:
-    gnn: 95
+    gnn: 96
     hybrid: 18
     graph_transformer: 5
     llm: 3
     walk: 2
     traditional: 12
   metric_counts:
-  - 130
+  - 131
   - 6
   milestones: &id001
   - value: 0.6511
@@ -1651,6 +1651,12 @@ variants:
     arxiv_id: '2210.14709'
     title: Learning on Large-scale Text-attributed Graphs via Variational Inference
     date: '2022-10-01'
+  - value: 0.791
+    std: null
+    model: SGC
+    arxiv_id: '2403.13268'
+    title: 'Unifews: You Need Fewer Operations for Efficient Graph Neural Networks'
+    date: '2024-03-19'
   milestones_by_metric:
     Accuracy: *id001
     F1:

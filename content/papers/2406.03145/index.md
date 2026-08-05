@@ -61,9 +61,9 @@ results:
   dataset: QM9
   is_multi_metric: true
   rows:
-  - model: Graphormer-SPIS
+  - model: PF-GNN
     model_key: pf-gnn
-    model_plain: Graphormer-SPIS
+    model_plain: PF-GNN
     metric_values:
     - 0.017
     - null
@@ -200,9 +200,9 @@ results:
     is_best: true
     is_std_outlier: false
     global_rank: 2
-  - model: Graphormer-SPIS
+  - model: FGNN
     model_key: fgnn
-    model_plain: Graphormer-SPIS
+    model_plain: FGNN
     metric_values:
     - 0.027
     - null
@@ -301,9 +301,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
+    value_gap_source_arxiv: '2505.23086'
+    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
+      Modeling
     value_note: ''
     at_pub_value: 0.045
     at_pub_std: null
@@ -312,8 +312,8 @@ results:
       Graphs'
     at_pub_source_date_iso: '2021-10-04'
     at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -381,9 +381,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
+    value_gap_source_arxiv: '2406.03145'
+    value_gap_source_title: E(n) Equivariant Message Passing Cellular Networks
     value_note: ''
     at_pub_value: 0.046
     at_pub_std: null
@@ -392,8 +391,8 @@ results:
       equivariant graph neural networks
     at_pub_source_date_iso: '2023-04-07'
     at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-06-05'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -461,9 +460,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
+    value_gap_source_arxiv: '2505.23086'
+    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
+      Modeling
     value_note: ''
     at_pub_value: 0.06
     at_pub_std: null
@@ -472,8 +471,8 @@ results:
       equivariant graph neural networks
     at_pub_source_date_iso: '2023-04-07'
     at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -697,9 +696,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
+    value_gap_source_arxiv: '2406.03145'
+    value_gap_source_title: E(n) Equivariant Message Passing Cellular Networks
     value_note: ''
     at_pub_value: 0.071
     at_pub_std: null
@@ -708,8 +706,8 @@ results:
       equivariant graph neural networks
     at_pub_source_date_iso: '2023-04-07'
     at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-06-05'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -777,9 +775,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
+    value_gap_source_arxiv: '2406.03145'
+    value_gap_source_title: E(n) Equivariant Message Passing Cellular Networks
     value_note: ''
     at_pub_value: 0.085
     at_pub_std: null
@@ -788,8 +785,8 @@ results:
       equivariant graph neural networks
     at_pub_source_date_iso: '2023-04-07'
     at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-06-05'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -857,9 +854,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
+    value_gap_source_arxiv: '2406.03145'
+    value_gap_source_title: E(n) Equivariant Message Passing Cellular Networks
     value_note: ''
     at_pub_value: 0.092
     at_pub_std: null
@@ -868,8 +864,8 @@ results:
       equivariant graph neural networks
     at_pub_source_date_iso: '2023-04-07'
     at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-06-05'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -937,9 +933,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
+    value_gap_source_arxiv: '2406.03145'
+    value_gap_source_title: E(n) Equivariant Message Passing Cellular Networks
     value_note: ''
     at_pub_value: 0.142
     at_pub_std: null
@@ -948,8 +943,8 @@ results:
       equivariant graph neural networks
     at_pub_source_date_iso: '2023-04-07'
     at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-06-05'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1017,9 +1012,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
+    value_gap_source_arxiv: '2505.23086'
+    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
+      Modeling
     value_note: ''
     at_pub_value: 0.223
     at_pub_std: null
@@ -1028,8 +1023,8 @@ results:
       equivariant graph neural networks
     at_pub_source_date_iso: '2023-04-07'
     at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1097,9 +1092,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
+    value_gap_source_arxiv: '2505.23086'
+    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
+      Modeling
     value_note: ''
     at_pub_value: 0.235
     at_pub_std: null
@@ -1108,8 +1103,8 @@ results:
       Non-Equilibrium Molecules
     at_pub_source_date_iso: '2020-11-28'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false

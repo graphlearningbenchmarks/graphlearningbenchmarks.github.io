@@ -57,8 +57,8 @@ paper_type: method
 proposed_models:
 - DIFFormer-s
 - DIFFORMER-a
-mrr: 0.0038
-adjusted_mrr: 0.0013
+mrr: 0.0036
+adjusted_mrr: 0.0012
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -80,9 +80,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: SGC+TSC
+  - model: CNA
     model_key: cna
-    model_plain: SGC+TSC
+    model_plain: CNA
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -113,9 +113,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: IS-GIB
     model_key: is-gib
-    model_plain: SGC+TSC
+    model_plain: IS-GIB
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: EERM
     model_key: eerm
-    model_plain: SGC+TSC
+    model_plain: EERM
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -176,6 +176,39 @@ results:
     global_rank: 3
     sort_value: 0.9112
     sort_std: 0.0145
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8774
+    std: 0.0041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.06142'
+    title: Feature Expansion for Graph Neural Networks
+    date: May 10, 2023
+    date_display: May 2023
+    date_iso: '2023-05-10'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/sajqavril/Feature-Extension-Graph-Neural-Networks
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 20
+    sort_value: 0.8774
+    sort_std: 0.0041
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -757,8 +790,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-03-29'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -769,9 +802,9 @@ results:
     today_delta_significant: false
     true_value: 0.734
     true_std: 0.005
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2403.20221'
+    value_gap_source_title: Graph Neural Aggregation-diffusion with Metastability
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -1472,9 +1505,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -1506,9 +1539,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -1540,9 +1573,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -1630,15 +1663,49 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 33
-    paper_rank: 695
-    rank_delta: 662
-    rank_delta_abs: 662
+    global_rank: 42
+    paper_rank: 709
+    rank_delta: 667
+    rank_delta_abs: 667
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
     comparison_source_arxiv: '2210.03930'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8911
+    std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 75
+    sort_value: 0.8911
+    sort_std: 0.0012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -1698,10 +1765,10 @@ results:
     value_note: ''
     sort_value: 0.8897
     sort_std: null
-    global_rank: 72
-    paper_rank: 538
-    rank_delta: 466
-    rank_delta_abs: 466
+    global_rank: 81
+    paper_rank: 551
+    rank_delta: 470
+    rank_delta_abs: 470
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1745,8 +1812,8 @@ results:
     at_pub_source_title: Transformers over Directed Acyclic Graphs
     at_pub_source_date_iso: '2022-10-24'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-01-28'
-    value_gap_source_date_label: IJCAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: WWW 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -1756,20 +1823,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.8848
-    true_std: 0.0033
-    value_gap_source_arxiv: '2401.15569'
-    value_gap_source_title: Efficient Tuning and Inference for Large Language Models
-      on Textual Graphs
+    true_std: 0.0327
+    value_gap_source_arxiv: '2602.19622'
+    value_gap_source_title: 'VecFormer: Towards Efficient and Generalizable Graph
+      Transformer with Graph Token Attention'
     value_gap_source_is_current_paper: false
     value_gap: 0.05080000000000007
     has_value_note: false
     value_note: ''
     sort_value: 0.8848
-    sort_std: 0.0033
-    global_rank: 105
-    paper_rank: 490
-    rank_delta: 385
-    rank_delta_abs: 385
+    sort_std: 0.0327
+    global_rank: 114
+    paper_rank: 501
+    rank_delta: 387
+    rank_delta_abs: 387
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1833,10 +1900,10 @@ results:
     value_note: ''
     sort_value: 0.8815
     sort_std: null
-    global_rank: 127
-    paper_rank: 500
-    rank_delta: 373
-    rank_delta_abs: 373
+    global_rank: 136
+    paper_rank: 511
+    rank_delta: 375
+    rank_delta_abs: 375
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1902,10 +1969,10 @@ results:
     value_note: ''
     sort_value: 0.8797
     sort_std: null
-    global_rank: 138
-    paper_rank: 735
-    rank_delta: 597
-    rank_delta_abs: 597
+    global_rank: 148
+    paper_rank: 749
+    rank_delta: 601
+    rank_delta_abs: 601
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1950,8 +2017,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1962,16 +2029,17 @@ results:
     today_delta_significant: false
     true_value: 0.859
     true_std: 0.004
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.859
     sort_std: 0.004
-    global_rank: 265
-    paper_rank: 265
+    global_rank: 276
+    paper_rank: 276
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2037,8 +2105,8 @@ results:
     value_note: ''
     sort_value: 0.847
     sort_std: 0.006
-    global_rank: 342
-    paper_rank: 452
+    global_rank: 353
+    paper_rank: 463
     rank_delta: 110
     rank_delta_abs: 110
     rank_delta_direction: worse
@@ -2084,8 +2152,8 @@ results:
     at_pub_source_title: Transformers over Directed Acyclic Graphs
     at_pub_source_date_iso: '2022-10-24'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2096,16 +2164,17 @@ results:
     today_delta_significant: false
     true_value: 0.841
     true_std: 0.006
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.841
     sort_std: 0.006
-    global_rank: 393
-    paper_rank: 393
+    global_rank: 404
+    paper_rank: 404
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2151,8 +2220,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2163,16 +2232,17 @@ results:
     today_delta_significant: false
     true_value: 0.839
     true_std: 0.006
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.839
     sort_std: 0.006
-    global_rank: 413
-    paper_rank: 413
+    global_rank: 424
+    paper_rank: 424
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2218,8 +2288,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2230,16 +2300,17 @@ results:
     today_delta_significant: false
     true_value: 0.837
     true_std: null
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.837
     sort_std: null
-    global_rank: 435
-    paper_rank: 435
+    global_rank: 446
+    paper_rank: 446
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2285,8 +2356,8 @@ results:
     at_pub_source_title: Scalable Graph Neural Networks via Bidirectional Propagation
     at_pub_source_date_iso: '2020-10-29'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: 0.0030000000000000027
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2297,16 +2368,17 @@ results:
     today_delta_significant: false
     true_value: 0.836
     true_std: 0.002
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.836
     sort_std: 0.002
-    global_rank: 457
-    paper_rank: 457
+    global_rank: 468
+    paper_rank: 468
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2372,8 +2444,8 @@ results:
     value_note: ''
     sort_value: 0.833
     sort_std: 0.0
-    global_rank: 501
-    paper_rank: 501
+    global_rank: 512
+    paper_rank: 512
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2419,8 +2491,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2431,16 +2503,17 @@ results:
     today_delta_significant: false
     true_value: 0.831
     true_std: 0.005
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.831
     sort_std: 0.005
-    global_rank: 530
-    paper_rank: 530
+    global_rank: 542
+    paper_rank: 542
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2486,8 +2559,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2498,16 +2571,17 @@ results:
     today_delta_significant: false
     true_value: 0.785
     true_std: 0.025
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.785
     sort_std: 0.025
-    global_rank: 821
-    paper_rank: 821
+    global_rank: 834
+    paper_rank: 834
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2573,10 +2647,10 @@ results:
     value_note: ''
     sort_value: 0.7768
     sort_std: null
-    global_rank: 840
-    paper_rank: 1009
-    rank_delta: 169
-    rank_delta_abs: 169
+    global_rank: 853
+    paper_rank: 1026
+    rank_delta: 173
+    rank_delta_abs: 173
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2620,8 +2694,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2632,16 +2706,17 @@ results:
     today_delta_significant: false
     true_value: 0.738
     true_std: 0.017
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.738
     sort_std: 0.017
-    global_rank: 897
-    paper_rank: 897
+    global_rank: 913
+    paper_rank: 913
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2687,8 +2762,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2699,16 +2774,17 @@ results:
     today_delta_significant: false
     true_value: 0.722
     true_std: 0.018
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.722
     sort_std: 0.018
-    global_rank: 919
-    paper_rank: 919
+    global_rank: 935
+    paper_rank: 935
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2775,8 +2851,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.0
-    global_rank: 925
-    paper_rank: 950
+    global_rank: 941
+    paper_rank: 966
     rank_delta: 25
     rank_delta_abs: 25
     rank_delta_direction: worse
@@ -2822,8 +2898,8 @@ results:
     at_pub_source_title: Revisiting Semi-Supervised Learning with Graph Embeddings
     at_pub_source_date_iso: '2016-03-29'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: 0.009000000000000008
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2834,16 +2910,17 @@ results:
     today_delta_significant: false
     true_value: 0.604
     true_std: 0.008
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.604
     sort_std: 0.008
-    global_rank: 990
-    paper_rank: 990
+    global_rank: 1007
+    paper_rank: 1007
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2865,9 +2942,9 @@ results:
 - &id004
   dataset: Pokec
   rows:
-  - model: FMP
+  - model: Polynormer-r
     model_key: polynormer-r
-    model_plain: FMP
+    model_plain: Polynormer-r
     value: 0.861
     std: 0.0005
     metric: Accuracy
@@ -2898,9 +2975,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FMP
+  - model: Polynormer
     model_key: polynormer
-    model_plain: FMP
+    model_plain: Polynormer
     value: 0.8595
     std: 0.0007
     metric: Accuracy
@@ -2931,9 +3008,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: FMP
+  - model: MoE-H2GCN
     model_key: moe-h2gcn
-    model_plain: FMP
+    model_plain: MoE-H2GCN
     value: 0.8302
     std: 0.003
     metric: Accuracy
@@ -3022,8 +3099,8 @@ results:
     value_note: ''
     sort_value: 0.7601
     sort_std: 0.0049
-    global_rank: 25
-    paper_rank: 45
+    global_rank: 26
+    paper_rank: 46
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -3032,6 +3109,39 @@ results:
     comparison_source_title: Convolutional Neural Networks on Graphs with Chebyshev
       Approximation, Revisited
     comparison_source_arxiv: '2202.03580'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7576
+    std: 0.0004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.05185'
+    title: Mixture of Weak & Strong Experts on Graphs
+    date: Nov 9, 2023
+    date_display: Nov 2023
+    date_iso: '2023-11-09'
+    venue: Accepted for publication in ICLR 2024
+    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.7576
+    sort_std: 0.0004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -3093,8 +3203,8 @@ results:
     value_note: ''
     sort_value: 0.7223
     sort_std: 0.0018
-    global_rank: 31
-    paper_rank: 38
+    global_rank: 32
+    paper_rank: 39
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -3163,8 +3273,8 @@ results:
     value_note: ''
     sort_value: 0.7124
     sort_std: 0.0046
-    global_rank: 32
-    paper_rank: 49
+    global_rank: 33
+    paper_rank: 50
     rank_delta: 17
     rank_delta_abs: 17
     rank_delta_direction: worse
@@ -3233,8 +3343,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.013
-    global_rank: 33
-    paper_rank: 36
+    global_rank: 34
+    paper_rank: 37
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -3302,8 +3412,8 @@ results:
     value_note: ''
     sort_value: 0.7048
     sort_std: 0.0077
-    global_rank: 35
-    paper_rank: 46
+    global_rank: 36
+    paper_rank: 47
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -3351,8 +3461,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3363,16 +3473,17 @@ results:
     today_delta_significant: false
     true_value: 0.6924
     true_std: 0.0076
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.6924
     sort_std: 0.0076
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3418,8 +3529,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3430,16 +3541,17 @@ results:
     today_delta_significant: false
     true_value: 0.5273
     true_std: null
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.5273
     sort_std: null
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3461,9 +3573,9 @@ results:
 - &id003
   dataset: PubMed
   rows:
-  - model: R-SoftGraphAIN
+  - model: LGTL
     model_key: lgtl
-    model_plain: R-SoftGraphAIN
+    model_plain: LGTL
     value: 0.9518
     std: 0.0011
     metric: Accuracy
@@ -3495,9 +3607,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: SAGN
     model_key: sagn
-    model_plain: R-SoftGraphAIN
+    model_plain: SAGN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -3529,9 +3641,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: MixHop (LO)
     model_key: mixhop (lo)
-    model_plain: R-SoftGraphAIN
+    model_plain: MixHop (LO)
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -3630,6 +3742,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9487
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.9487
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -3805,8 +3951,8 @@ results:
     at_pub_source_title: Multi-grained Semantics-aware Graph Neural Networks
     at_pub_source_date_iso: '2020-10-01'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-07-29'
-    value_gap_source_date_label: AAAI 2023
+    value_gap_source_date_iso: '2026-02-17'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.08529999999999993
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -3816,15 +3962,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.8902
-    true_std: null
-    value_gap_source_arxiv: '2307.16092'
-    value_gap_source_title: Feature Transportation Improves Graph Neural Networks
+    true_std: 0.0051
+    value_gap_source_arxiv: '2602.15634'
+    value_gap_source_title: 'Beyond ReLU: Bifurcation, Oversmoothing, and Topological
+      Priors'
     value_gap_source_is_current_paper: false
     value_gap: 0.10919999999999996
     has_value_note: false
     value_note: ''
     sort_value: 0.8902
-    sort_std: null
+    sort_std: 0.0051
     global_rank: 130
     paper_rank: 702
     rank_delta: 572

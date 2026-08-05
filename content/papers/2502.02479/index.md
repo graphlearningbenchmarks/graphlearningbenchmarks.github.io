@@ -35,9 +35,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - ENGNN
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0335
+adjusted_mrr: 0.0335
+mrr_dataset_count: 3
 benchmark_categories:
 - Classic
 - OGB
@@ -60,9 +60,9 @@ results:
 - &id001
   dataset: ZINC
   rows:
-  - model: GPS
+  - model: TIGT
     model_key: tigt
-    model_plain: GPS
+    model_plain: TIGT
     value: 0.014
     std: 0.001
     metric: MAE
@@ -93,10 +93,43 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPS
-    model_key: ppgn++
-    model_plain: GPS
-    value: 0.02
+  - model: FloydNet
+    model_key: floydnet
+    model_plain: FloydNet
+    value: 0.016
+    std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.016
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PST
+    model_key: pst
+    model_plain: PST
+    value: 0.018
     std: 0.001
     metric: MAE
     higher_is_better: false
@@ -104,57 +137,23 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2302.11556'
-    title: Equivariant Polynomials for Graph Neural Networks
-    date: Feb 22, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-22'
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2405.02795'
+    title: Graph as Point Set
+    date: May 5, 2024
+    date_display: May 2024
+    date_iso: '2024-05-05'
     venue: International Conference on Machine Learning
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.02
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS
-    model_key: subgraphormer
-    model_plain: GPS
-    value: 0.02
-    std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2406.09291'
-    title: A Flexible, Equivariant Framework for Subgraph GNNs via Graph Products
-      and Graph Coarsening
-    date: Jun 13, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-13'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/BarSGuy/Efficient-Subgraph-GNNs
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
     global_rank: 3
-    sort_value: 0.02
-    sort_std: 0.002
+    sort_value: 0.018
+    sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -216,8 +215,8 @@ results:
     value_note: ''
     sort_value: 0.021
     sort_std: 0.001
-    global_rank: 4
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 10
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -257,14 +256,14 @@ results:
     date_iso: '2025-02-04'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.022
+    at_pub_std: 0.002
+    at_pub_source_arxiv: '2405.02795'
+    at_pub_source_title: Graph as Point Set
+    at_pub_source_date_iso: '2024-05-05'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -273,17 +272,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.022
+    true_std: 0.002
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.022
     sort_std: 0.002
-    global_rank: 8
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -319,14 +324,15 @@ results:
     date_iso: '2025-02-04'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.024
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2402.08450'
+    at_pub_source_title: 'Subgraphormer: Unifying Subgraph GNNs and Graph Transformers
+      via Graph Products'
+    at_pub_source_date_iso: '2024-02-13'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -335,17 +341,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.024
+    true_std: 0.003
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.024
     sort_std: 0.003
-    global_rank: 12
+    global_rank: 24
+    paper_rank: 24
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -381,14 +393,14 @@ results:
     date_iso: '2025-02-04'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.025
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2405.02795'
+    at_pub_source_title: Graph as Point Set
+    at_pub_source_date_iso: '2024-05-05'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -397,17 +409,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.025
+    true_std: 0.003
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.025
     sort_std: 0.003
-    global_rank: 14
+    global_rank: 27
+    paper_rank: 27
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -443,14 +461,14 @@ results:
     date_iso: '2025-02-04'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.029
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2405.02795'
+    at_pub_source_title: Graph as Point Set
+    at_pub_source_date_iso: '2024-05-05'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -459,17 +477,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.029
+    true_std: 0.003
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.029
     sort_std: 0.003
-    global_rank: 19
+    global_rank: 38
+    paper_rank: 38
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -505,14 +529,15 @@ results:
     date_iso: '2025-02-04'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.029
+    at_pub_std: 0.001
+    at_pub_source_arxiv: '2402.08450'
+    at_pub_source_title: 'Subgraphormer: Unifying Subgraph GNNs and Graph Transformers
+      via Graph Products'
+    at_pub_source_date_iso: '2024-02-13'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -521,20 +546,93 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.029
+    true_std: 0.001
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.029
     sort_std: 0.001
-    global_rank: 19
+    global_rank: 36
+    paper_rank: 36
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MPNN
+    model_key: mpnn
+    model_plain: MPNN
+    value: 0.046
+    std: 0.002
+    paper_value: 0.046
+    paper_std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.041
+    at_pub_std: 0.0002
+    at_pub_source_arxiv: '1910.12892'
+    at_pub_source_title: Hyperbolic Graph Neural Networks
+    at_pub_source_date_iso: '2019-10-28'
+    at_pub_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.0049999999999999975
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.03
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.016
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.03
+    sort_std: null
+    global_rank: 41
+    paper_rank: 59
+    rank_delta: 18
+    rank_delta_abs: 18
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hyperbolic Graph Neural Networks
+    comparison_source_arxiv: '1910.12892'
     is_best: false
     is_std_outlier: false
   - model: ENGNN
@@ -573,8 +671,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -583,79 +681,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.044
+    true_std: 0.002
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.044
     sort_std: 0.002
-    global_rank: 30
+    global_rank: 57
+    paper_rank: 57
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MPNN
-    model_key: mpnn
-    model_plain: MPNN
-    value: 0.046
-    std: 0.002
-    paper_value: 0.046
-    paper_std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 4, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-04'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.046
-    sort_std: 0.002
-    global_rank: 31
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -697,8 +739,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -707,17 +749,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.051
+    true_std: 0.004
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.051
     sort_std: 0.004
-    global_rank: 32
+    global_rank: 62
+    paper_rank: 62
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -759,8 +807,8 @@ results:
     at_pub_source_title: 'Weisfeiler and Lehman Go Cellular: CW Networks'
     at_pub_source_date_iso: '2021-06-23'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-02-22'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -771,21 +819,55 @@ results:
     today_delta_significant: false
     true_value: 0.088
     true_std: 0.002
-    value_gap_source_arxiv: '2302.11556'
-    value_gap_source_title: Equivariant Polynomials for Graph Neural Networks
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.088
     sort_std: 0.002
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.113
+    std: 0.002
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.05815'
+    title: What Can We Learn from State Space Models for Machine Learning on Graphs?
+    date: Jun 9, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-09'
+    venue: arXiv.org
+    codebase_url: https://github.com/Graph-COM/GSSC
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 83
+    sort_value: 0.113
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -802,9 +884,9 @@ results:
 - &id003
   dataset: ogbl-ddi
   rows:
-  - model: MPNNs
+  - model: ELGNN
     model_key: elgnn
-    model_plain: MPNNs
+    model_plain: ELGNN
     value: 0.9777
     std: 0.0037
     metric: Hits@20
@@ -836,9 +918,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MPNNs
+  - model: GIDN
     model_key: gidn
-    model_plain: MPNNs
+    model_plain: GIDN
     value: 0.9542
     std: 0.0
     metric: Hits@20
@@ -869,9 +951,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MPNNs
+  - model: AGDN
     model_key: agdn
-    model_plain: MPNNs
+    model_plain: AGDN
     value: 0.9538
     std: 0.0094
     metric: Hits@20
@@ -938,8 +1020,8 @@ results:
     at_pub_source_title: Graph Neural Networks for Link Prediction with Subgraph Sketching
     at_pub_source_date_iso: '2022-09-30'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2023-10-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -950,17 +1032,17 @@ results:
     today_delta_significant: false
     true_value: 0.7851
     true_std: 0.0136
-    value_gap_source_arxiv: '2310.09516'
-    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
-      Sampling
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7851
     sort_std: 0.0136
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1006,8 +1088,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1016,82 +1098,19 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7761
+    true_std: 0.045
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7761
     sort_std: 0.045
-    global_rank: 17
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Neo-GNN
-    model_key: neo-gnn
-    model_plain: Neo-GNN
-    value: 0.6357
-    std: 0.0352
-    paper_value: 0.6357
-    paper_std: 0.0352
-    metric: Hits@20
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 4, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-04'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6357
-    at_pub_std: 0.0352
-    at_pub_source_arxiv: '2206.04216'
-    at_pub_source_title: 'Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks
-      for Link Prediction'
-    at_pub_source_date_iso: '2022-06-09'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6357
-    true_std: 0.0352
-    value_gap_source_arxiv: '2206.04216'
-    value_gap_source_title: 'Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks
-      for Link Prediction'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6357
-    sort_std: 0.0352
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1137,8 +1156,8 @@ results:
     at_pub_source_title: Link Prediction with Untrained Message Passing Layers
     at_pub_source_date_iso: '2024-06-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2023-10-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.13290000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1146,23 +1165,22 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.539
-    true_std: 0.0474
-    value_gap_source_arxiv: '2310.09516'
-    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
-      Sampling
+    today_delta_significant: true
+    true_value: 0.6719
+    true_std: 0.0118
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.13290000000000002
     has_value_note: false
     value_note: ''
-    sort_value: 0.539
-    sort_std: 0.0474
-    global_rank: 26
-    paper_rank: 26
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.6719
+    sort_std: 0.0118
+    global_rank: 22
+    paper_rank: 39
+    rank_delta: 17
+    rank_delta_abs: 17
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Link Prediction with Untrained Message Passing Layers
@@ -1205,8 +1223,8 @@ results:
     at_pub_source_title: Link Prediction with Untrained Message Passing Layers
     at_pub_source_date_iso: '2024-06-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2023-10-01'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.2769
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1215,25 +1233,127 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.499
-    true_std: 0.0723
-    value_gap_source_arxiv: '2310.00793'
-    value_gap_source_title: 'Revisiting Link Prediction: a data perspective'
+    true_value: 0.6476
+    true_std: 0.0145
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: 0.12830000000000003
+    value_gap: 0.2769
     has_value_note: false
     value_note: ''
-    sort_value: 0.499
-    sort_std: 0.0723
-    global_rank: 28
-    paper_rank: 32
-    rank_delta: 4
-    rank_delta_abs: 4
+    sort_value: 0.6476
+    sort_std: 0.0145
+    global_rank: 26
+    paper_rank: 56
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Link Prediction with Untrained Message Passing Layers
     comparison_source_arxiv: '2406.16687'
+    is_best: false
+    is_std_outlier: false
+  - model: Neo-GNN
+    model_key: neo-gnn
+    model_plain: Neo-GNN
+    value: 0.6357
+    std: 0.0352
+    paper_value: 0.6357
+    paper_std: 0.0352
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6357
+    at_pub_std: 0.0352
+    at_pub_source_arxiv: '2206.04216'
+    at_pub_source_title: 'Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks
+      for Link Prediction'
+    at_pub_source_date_iso: '2022-06-09'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6357
+    true_std: 0.0352
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6357
+    sort_std: 0.0352
+    global_rank: 28
+    paper_rank: 28
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.539
+    std: 0.0474
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.14166'
+    title: Ensemble Learning for Graph Neural Networks
+    date: Oct 22, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-22'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 40
+    sort_value: 0.539
+    sort_std: 0.0474
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SEAL
@@ -1272,8 +1392,8 @@ results:
     at_pub_source_title: Link Prediction with Untrained Message Passing Layers
     at_pub_source_date_iso: '2024-06-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2023-10-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.19180000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1281,23 +1401,22 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3056
-    true_std: 0.0386
-    value_gap_source_arxiv: '2310.09516'
-    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
-      Sampling
+    today_delta_significant: true
+    true_value: 0.4974
+    true_std: 0.0239
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.19180000000000003
     has_value_note: false
     value_note: ''
-    sort_value: 0.3056
-    sort_std: 0.0386
-    global_rank: 37
-    paper_rank: 37
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.4974
+    sort_std: 0.0239
+    global_rank: 46
+    paper_rank: 62
+    rank_delta: 16
+    rank_delta_abs: 16
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Link Prediction with Untrained Message Passing Layers
@@ -1340,8 +1459,8 @@ results:
     at_pub_source_title: Link Prediction with Untrained Message Passing Layers
     at_pub_source_date_iso: '2024-06-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2023-10-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.16409999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1349,151 +1468,26 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.276
-    true_std: 0.0
-    value_gap_source_arxiv: '2310.09516'
-    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
-      Sampling
+    today_delta_significant: true
+    true_value: 0.4401
+    true_std: null
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.16409999999999997
     has_value_note: false
     value_note: ''
-    sort_value: 0.276
-    sort_std: 0.0
-    global_rank: 41
-    paper_rank: 41
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.4401
+    sort_std: null
+    global_rank: 50
+    paper_rank: 65
+    rank_delta: 15
+    rank_delta_abs: 15
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Link Prediction with Untrained Message Passing Layers
     comparison_source_arxiv: '2406.16687'
-    is_best: false
-    is_std_outlier: false
-  - model: MPNN
-    model_key: mpnn
-    model_plain: MPNN
-    value: 0.2476
-    std: 0.1529
-    paper_value: 0.2476
-    paper_std: 0.1529
-    metric: Hits@20
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 4, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-04'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.2476
-    sort_std: 0.1529
-    global_rank: 45
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NMPNN
-    model_key: nmpnn
-    model_plain: NMPNN
-    value: 0.2308
-    std: 0.0589
-    paper_value: 0.2308
-    paper_std: 0.0589
-    metric: Hits@20
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 4, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-04'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.2308
-    sort_std: 0.0589
-    global_rank: 48
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: AA
@@ -1532,8 +1526,8 @@ results:
     at_pub_source_title: Link Prediction with Untrained Message Passing Layers
     at_pub_source_date_iso: '2024-06-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2023-10-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.21140000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1541,23 +1535,22 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1861
-    true_std: 0.0
-    value_gap_source_arxiv: '2310.09516'
-    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
-      Sampling
+    today_delta_significant: true
+    true_value: 0.3975
+    true_std: null
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.21140000000000003
     has_value_note: false
     value_note: ''
-    sort_value: 0.1861
-    sort_std: 0.0
-    global_rank: 52
-    paper_rank: 52
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.3975
+    sort_std: null
+    global_rank: 53
+    paper_rank: 78
+    rank_delta: 25
+    rank_delta_abs: 25
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Link Prediction with Untrained Message Passing Layers
@@ -1600,8 +1593,8 @@ results:
     at_pub_source_title: Link Prediction with Untrained Message Passing Layers
     at_pub_source_date_iso: '2024-06-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2023-10-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.2096
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1609,27 +1602,162 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.1773
-    true_std: 0.0
-    value_gap_source_arxiv: '2310.09516'
-    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
-      Sampling
+    today_delta_significant: true
+    true_value: 0.3869
+    true_std: null
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
+    value_gap: 0.2096
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3869
+    sort_std: null
+    global_rank: 54
+    paper_rank: 81
+    rank_delta: 27
+    rank_delta_abs: 27
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Link Prediction with Untrained Message Passing Layers
+    comparison_source_arxiv: '2406.16687'
+    is_best: false
+    is_std_outlier: false
+  - model: MPNN
+    model_key: mpnn
+    model_plain: MPNN
+    value: 0.2476
+    std: 0.1529
+    paper_value: 0.2476
+    paper_std: 0.1529
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9443
+    at_pub_std: 0.0057
+    at_pub_source_arxiv: '2411.03845'
+    at_pub_source_title: Reconsidering the Performance of GAE in Link Prediction
+    at_pub_source_date_iso: '2024-11-06'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.6967000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2476
+    true_std: 0.1529
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.1773
-    sort_std: 0.0
-    global_rank: 55
-    paper_rank: 55
+    sort_value: 0.2476
+    sort_std: 0.1529
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: behind
-    comparison_source_title: Link Prediction with Untrained Message Passing Layers
-    comparison_source_arxiv: '2406.16687'
+    comparison_source_title: Reconsidering the Performance of GAE in Link Prediction
+    comparison_source_arxiv: '2411.03845'
+    is_best: false
+    is_std_outlier: false
+  - model: NMPNN
+    model_key: nmpnn
+    model_plain: NMPNN
+    value: 0.2308
+    std: 0.0589
+    paper_value: 0.2308
+    paper_std: 0.0589
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-04'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.2308
+    true_std: 0.0589
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.2308
+    sort_std: 0.0589
+    global_rank: 72
+    paper_rank: 72
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: NBFnet
@@ -1668,8 +1796,8 @@ results:
     at_pub_source_title: Graph Neural Networks for Link Prediction with Subgraph Sketching
     at_pub_source_date_iso: '2022-09-30'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2023-10-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1680,17 +1808,17 @@ results:
     today_delta_significant: false
     true_value: 0.04
     true_std: 0.0058
-    value_gap_source_arxiv: '2310.09516'
-    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
-      Sampling
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.04
     sort_std: 0.0058
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1712,42 +1840,75 @@ results:
 - &id002
   dataset: ogbl-ppa
   rows:
-  - model: Classification
-    model_key: mplp
-    model_plain: Classification
-    value: 0.6524
-    std: 0.015
+  - model: Optimized GAE
+    model_key: optimized gae
+    model_plain: Optimized GAE
+    value: 0.7841
+    std: 0.0083
     metric: Hits@100
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2309.00976'
-    title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
-    date: Sep 2, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-02'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/Barcavin/efficient-node-labelling
+    arxiv_id: '2411.03845'
+    title: Reconsidering the Performance of GAE in Link Prediction
+    date: Nov 6, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-06'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/GraphPKU/Refined-GAE
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.6524
-    sort_std: 0.015
+    sort_value: 0.7841
+    sort_std: 0.0083
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Classification
+  - model: MPLP
+    model_key: mplp
+    model_plain: MPLP
+    value: 0.6524
+    std: 0.015
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.03845'
+    title: Reconsidering the Performance of GAE in Link Prediction
+    date: Nov 6, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-06'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/GraphPKU/Refined-GAE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.6524
+    sort_std: 0.015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OGB Leader
     model_key: ogb leader
-    model_plain: Classification
+    model_plain: OGB Leader
     value: 0.6524
     std: 0.015
     metric: Hits@100
@@ -1770,46 +1931,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.6524
     sort_std: 0.015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: Classification
-    model_key: prb
-    model_plain: Classification
-    value: 0.6347
-    std: 0.0175
-    metric: Hits@100
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.01410'
-    title: PageRank Bandits for Link Prediction
-    date: Nov 3, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-03'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/jiaruzouu/PRB
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.6347
-    sort_std: 0.0175
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: RA
     model_key: ra
@@ -1867,8 +1995,8 @@ results:
     value_note: ''
     sort_value: 0.5324
     sort_std: 0.0
-    global_rank: 8
-    paper_rank: 16
+    global_rank: 11
+    paper_rank: 19
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -1935,10 +2063,10 @@ results:
     value_note: ''
     sort_value: 0.5013
     sort_std: 0.0055
-    global_rank: 13
-    paper_rank: 58
-    rank_delta: 45
-    rank_delta_abs: 45
+    global_rank: 16
+    paper_rank: 67
+    rank_delta: 51
+    rank_delta_abs: 51
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1983,8 +2111,8 @@ results:
     at_pub_source_title: Graph Neural Networks for Link Prediction with Subgraph Sketching
     at_pub_source_date_iso: '2022-09-30'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-09-30'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1995,17 +2123,17 @@ results:
     today_delta_significant: false
     true_value: 0.4985
     true_std: 0.002
-    value_gap_source_arxiv: '2209.15486'
-    value_gap_source_title: Graph Neural Networks for Link Prediction with Subgraph
-      Sketching
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4985
     sort_std: 0.002
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2052,8 +2180,8 @@ results:
       for Link Prediction'
     at_pub_source_date_iso: '2022-06-09'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-09-30'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2064,17 +2192,17 @@ results:
     today_delta_significant: false
     true_value: 0.4913
     true_std: 0.006
-    value_gap_source_arxiv: '2209.15486'
-    value_gap_source_title: Graph Neural Networks for Link Prediction with Subgraph
-      Sketching
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4913
     sort_std: 0.006
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2121,8 +2249,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2023-03-01'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2133,22 +2261,55 @@ results:
     today_delta_significant: false
     true_value: 0.488
     true_std: 0.0316
-    value_gap_source_arxiv: '2303.00170'
-    value_gap_source_title: Asymmetric Learning for Graph Neural Network based Link
-      Prediction
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.488
     sort_std: 0.0316
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.46
+    std: 0.0
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.09516'
+    title: Efficient Link Prediction via GNN Layers Induced by Negative Sampling
+    date: Oct 14, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-14'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/yxzwang/SubmissionverOfYinYanGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 26
+    sort_value: 0.46
+    sort_std: 0.0
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2189,8 +2350,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2199,17 +2360,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4497
+    true_std: 0.0074
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4497
     sort_std: 0.0074
-    global_rank: 28
+    global_rank: 33
+    paper_rank: 33
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2251,8 +2418,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2261,17 +2428,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.399
+    true_std: 0.0552
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.399
     sort_std: 0.0552
-    global_rank: 31
+    global_rank: 37
+    paper_rank: 37
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2314,8 +2487,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2023-03-01'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2326,17 +2499,17 @@ results:
     today_delta_significant: false
     true_value: 0.3245
     true_std: 0.0
-    value_gap_source_arxiv: '2303.00170'
-    value_gap_source_title: Asymmetric Learning for Graph Neural Network based Link
-      Prediction
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.3245
     sort_std: 0.0
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2382,8 +2555,8 @@ results:
     at_pub_source_title: Link Prediction with Untrained Message Passing Layers
     at_pub_source_date_iso: '2024-06-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2023-10-01'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.1217
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2392,18 +2565,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.2957
-    true_std: 0.029
-    value_gap_source_arxiv: '2310.00793'
-    value_gap_source_title: 'Revisiting Link Prediction: a data perspective'
+    true_value: 0.3084
+    true_std: 0.0178
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: 0.10900000000000001
+    value_gap: 0.1217
     has_value_note: false
     value_note: ''
-    sort_value: 0.2957
-    sort_std: 0.029
-    global_rank: 41
-    paper_rank: 55
+    sort_value: 0.3084
+    sort_std: 0.0178
+    global_rank: 49
+    paper_rank: 63
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -2449,8 +2622,8 @@ results:
     at_pub_source_title: Pairwise Learning for Neural Link Prediction
     at_pub_source_date_iso: '2021-12-06'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2022-09-30'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2461,22 +2634,55 @@ results:
     today_delta_significant: false
     true_value: 0.2765
     true_std: 0.0
-    value_gap_source_arxiv: '2209.15486'
-    value_gap_source_title: Graph Neural Networks for Link Prediction with Subgraph
-      Sketching
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.2765
     sort_std: 0.0
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.1655
+    std: 0.024
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2301.12562'
+    title: Simplifying Subgraph Representation Learning for Scalable Link Prediction
+    date: Jan 29, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-29'
+    venue: arXiv.org
+    codebase_url: https://github.com/venomouscyanide/S3GRL
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 68
+    sort_value: 0.1655
+    sort_std: 0.024
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2517,8 +2723,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2527,17 +2733,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.0562
+    true_std: 0.0252
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.0562
     sort_std: 0.0252
-    global_rank: 64
+    global_rank: 75
+    paper_rank: 75
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

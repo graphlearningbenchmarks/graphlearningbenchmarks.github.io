@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphPFN
-mrr: 0.007
-adjusted_mrr: 0.0023
+mrr: 0.0063
+adjusted_mrr: 0.0021
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterophily Benchmark
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: Amazon-ratings
   rows:
-  - model: H2GCN
+  - model: H2GCN + UniGAP
     model_key: h2gcn + unigap
-    model_plain: H2GCN
+    model_plain: H2GCN + UniGAP
     value: 0.6375
     std: 0.011
     metric: Accuracy
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: H2GCN
+  - model: GraphSAGE + UniGAP
     model_key: graphsage + unigap
-    model_plain: H2GCN
+    model_plain: GraphSAGE + UniGAP
     value: 0.6283
     std: 0.009
     metric: Accuracy
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: H2GCN
+  - model: GCN + UniGAP
     model_key: gcn + unigap
-    model_plain: H2GCN
+    model_plain: GCN + UniGAP
     value: 0.5976
     std: 0.008
     metric: Accuracy
@@ -171,6 +171,40 @@ results:
     global_rank: 3
     sort_value: 0.5976
     sort_std: 0.008
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.5569
+    std: 0.0023
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 14
+    sort_value: 0.5569
+    sort_std: 0.0023
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -234,9 +268,9 @@ results:
     sort_value: 0.5559
     sort_std: 0.0027
     global_rank: 16
-    paper_rank: 178
-    rank_delta: 162
-    rank_delta_abs: 162
+    paper_rank: 203
+    rank_delta: 187
+    rank_delta_abs: 187
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -303,9 +337,9 @@ results:
     sort_value: 0.554
     sort_std: 0.002
     global_rank: 17
-    paper_rank: 178
-    rank_delta: 161
-    rank_delta_abs: 161
+    paper_rank: 205
+    rank_delta: 188
+    rank_delta_abs: 188
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -373,9 +407,9 @@ results:
     sort_value: 0.5411
     sort_std: 0.0034
     global_rank: 26
-    paper_rank: 177
-    rank_delta: 151
-    rank_delta_abs: 151
+    paper_rank: 202
+    rank_delta: 176
+    rank_delta_abs: 176
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -420,7 +454,7 @@ results:
     at_pub_source_title: Bundle Neural Networks for message diffusion on graphs
     at_pub_source_date_iso: '2024-05-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2025-07-19'
+    value_gap_source_date_iso: '2025-08-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.09610000000000002
     worse_than_at_pub: true
@@ -432,24 +466,57 @@ results:
     today_delta_significant: true
     true_value: 0.5117
     true_std: 0.0066
-    value_gap_source_arxiv: '2507.14484'
-    value_gap_source_title: 'ReDiSC: A Reparameterized Masked Diffusion Model for
-      Scalable Node Classification with Structured Predictions'
+    value_gap_source_arxiv: '2508.05070'
+    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
     value_gap_source_is_current_paper: false
     value_gap: 0.09610000000000002
     has_value_note: false
     value_note: ''
     sort_value: 0.5117
     sort_std: 0.0066
-    global_rank: 79
-    paper_rank: 177
-    rank_delta: 98
-    rank_delta_abs: 98
+    global_rank: 81
+    paper_rank: 202
+    rank_delta: 121
+    rank_delta_abs: 121
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Bundle Neural Networks for message diffusion on graphs
     comparison_source_arxiv: '2405.15540'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.5058
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 95
+    sort_value: 0.5058
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: G2T-LimiX (FT, E)
@@ -508,8 +575,8 @@ results:
     value_note: ''
     sort_value: 0.4605
     sort_std: 0.0023
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -575,8 +642,8 @@ results:
     value_note: ''
     sort_value: 0.4589
     sort_std: 0.0053
-    global_rank: 142
-    paper_rank: 142
+    global_rank: 158
+    paper_rank: 158
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,8 +709,8 @@ results:
     value_note: ''
     sort_value: 0.4489
     sort_std: 0.0015
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 167
+    paper_rank: 167
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -709,8 +776,8 @@ results:
     value_note: ''
     sort_value: 0.4397
     sort_std: 0.0052
-    global_rank: 161
-    paper_rank: 161
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -776,8 +843,8 @@ results:
     value_note: ''
     sort_value: 0.43
     sort_std: 0.0013
-    global_rank: 169
-    paper_rank: 169
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -843,8 +910,8 @@ results:
     value_note: ''
     sort_value: 0.399
     sort_std: 0.0043
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 208
+    paper_rank: 208
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -910,8 +977,8 @@ results:
     value_note: ''
     sort_value: 0.3349
     sort_std: 0.0344
-    global_rank: 190
-    paper_rank: 190
+    global_rank: 219
+    paper_rank: 219
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -977,8 +1044,8 @@ results:
     value_note: ''
     sort_value: 0.2936
     sort_std: 0.0124
-    global_rank: 191
-    paper_rank: 191
+    global_rank: 220
+    paper_rank: 220
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

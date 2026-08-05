@@ -65,9 +65,9 @@ results:
 - &id003
   dataset: COLLAB
   rows:
-  - model: GPM
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: GPM
+    model_plain: WL-MLP
     value: 0.9792
     std: null
     metric: Accuracy
@@ -99,9 +99,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: GPM
+    model_plain: MSH-GNN
     value: 0.964
     std: 0.007
     metric: Accuracy
@@ -132,9 +132,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GPM
+  - model: CoCN
     model_key: cocn
-    model_plain: GPM
+    model_plain: CoCN
     value: 0.8722
     std: 0.0013
     metric: Accuracy
@@ -160,6 +160,39 @@ results:
     global_rank: 3
     sort_value: 0.8722
     sort_std: 0.0013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.826
+    std: 0.022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.11714'
+    title: Scalable Expressiveness through Preprocessed Graph Perturbations
+    date: Jun 17, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-17'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/Danial-sb/SE2P
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.826
+    sort_std: 0.022
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -223,9 +256,9 @@ results:
     sort_value: 0.8216
     sort_std: 0.0017
     global_rank: 40
-    paper_rank: 267
-    rank_delta: 227
-    rank_delta_abs: 227
+    paper_rank: 286
+    rank_delta: 246
+    rank_delta_abs: 246
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -291,10 +324,10 @@ results:
     value_note: ''
     sort_value: 0.8108
     sort_std: 0.0017
-    global_rank: 92
-    paper_rank: 268
-    rank_delta: 176
-    rank_delta_abs: 176
+    global_rank: 96
+    paper_rank: 287
+    rank_delta: 191
+    rank_delta_abs: 191
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -360,10 +393,10 @@ results:
     value_note: ''
     sort_value: 0.8104
     sort_std: 0.0012
-    global_rank: 93
-    paper_rank: 302
-    rank_delta: 209
-    rank_delta_abs: 209
+    global_rank: 97
+    paper_rank: 321
+    rank_delta: 224
+    rank_delta_abs: 224
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -429,10 +462,10 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.013
-    global_rank: 163
-    paper_rank: 276
-    rank_delta: 113
-    rank_delta_abs: 113
+    global_rank: 168
+    paper_rank: 295
+    rank_delta: 127
+    rank_delta_abs: 127
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -496,15 +529,116 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: null
-    global_rank: 165
-    paper_rank: 328
-    rank_delta: 163
-    rank_delta_abs: 163
+    global_rank: 172
+    paper_rank: 349
+    rank_delta: 177
+    rank_delta_abs: 177
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'CogDL: A Comprehensive Library for Graph Deep Learning'
     comparison_source_arxiv: '2103.00959'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.792
+    std: 0.024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 180
+    sort_value: 0.792
+    sort_std: 0.024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AutoGCL
+    model_key: autogcl
+    model_plain: AutoGCL
+    value: 0.7716
+    std: 0.0148
+    paper_value: 0.7716
+    paper_std: 0.0148
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: autoGCL
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 8, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7716
+    at_pub_std: 0.0148
+    at_pub_source_arxiv: '2305.17437'
+    at_pub_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
+    at_pub_source_date_iso: '2023-05-27'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7716
+    true_std: 0.0148
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7716
+    sort_std: 0.0148
+    global_rank: 246
+    paper_rank: 246
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GMCL-M
@@ -543,8 +677,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -553,17 +687,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.767
+    true_std: 0.018
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.767
     sort_std: 0.018
-    global_rank: 245
+    global_rank: 258
+    paper_rank: 258
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -605,8 +745,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -615,17 +755,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7644
+    true_std: 0.0167
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7644
     sort_std: 0.0167
-    global_rank: 249
+    global_rank: 265
+    paper_rank: 265
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -667,8 +813,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -677,17 +823,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.764
+    true_std: 0.014
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.764
     sort_std: 0.014
-    global_rank: 251
+    global_rank: 266
+    paper_rank: 266
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -729,8 +881,8 @@ results:
     at_pub_source_title: Graph Contrastive Learning with Personalized Augmentation
     at_pub_source_date_iso: '2022-09-14'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-09-14'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -741,87 +893,21 @@ results:
     today_delta_significant: false
     true_value: 0.7582
     true_std: 0.0026
-    value_gap_source_arxiv: '2209.06560'
-    value_gap_source_title: Graph Contrastive Learning with Personalized Augmentation
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7582
     sort_std: 0.0026
-    global_rank: 262
-    paper_rank: 262
+    global_rank: 280
+    paper_rank: 280
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AutoGCL
-    model_key: autogcl
-    model_plain: AutoGCL
-    value: 0.7716
-    std: 0.0148
-    paper_value: 0.7716
-    paper_std: 0.0148
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: autoGCL
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 8, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7716
-    at_pub_std: 0.0148
-    at_pub_source_arxiv: '2305.17437'
-    at_pub_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
-    at_pub_source_date_iso: '2023-05-27'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2022-02-26'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.745
-    true_std: 0.002
-    value_gap_source_arxiv: '2202.13248'
-    value_gap_source_title: Automated Data Augmentations for Graph Classification
-    value_gap_source_is_current_paper: false
-    value_gap: 0.026599999999999957
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.745
-    sort_std: 0.002
-    global_rank: 289
-    paper_rank: 232
-    rank_delta: -57
-    rank_delta_abs: 57
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -857,14 +943,14 @@ results:
     date_iso: '2024-01-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7432
+    at_pub_std: 0.023
+    at_pub_source_arxiv: '2305.17437'
+    at_pub_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
+    at_pub_source_date_iso: '2023-05-27'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -873,17 +959,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7432
+    true_std: 0.023
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7432
     sort_std: 0.023
-    global_rank: 291
+    global_rank: 309
+    paper_rank: 309
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -901,9 +993,9 @@ results:
 - &id004
   dataset: IMDB-BINARY
   rows:
-  - model: DMoNPool-TIP
+  - model: GCFL
     model_key: gcfl
-    model_plain: DMoNPool-TIP
+    model_plain: GCFL
     value: 0.8299
     std: 0.052
     metric: Accuracy
@@ -934,11 +1026,77 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DMoNPool-TIP
-    model_key: gat +del-f
-    model_plain: DMoNPool-TIP
-    value: 0.7863
-    std: 0.0054
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.815
+    std: 0.024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.815
+    sort_std: 0.024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN+BEC
+    model_key: gin+bec
+    model_plain: GIN+BEC
+    value: 0.808
+    std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.808
+    sort_std: 0.033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.798
+    std: 0.023
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -948,53 +1106,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.16402'
-    title: Graph Learning with Distributional Edge Layouts
-    date: Feb 26, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-26'
-    venue: arXiv.org
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.7863
-    sort_std: 0.0054
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: DMoNPool-TIP
-    model_key: graph transformer +del-f
-    model_plain: DMoNPool-TIP
-    value: 0.7828
-    std: 0.0027
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2402.16402'
-    title: Graph Learning with Distributional Edge Layouts
-    date: Feb 26, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-26'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7828
-    sort_std: 0.0027
+    global_rank: 5
+    sort_value: 0.798
+    sort_std: 0.023
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1036,8 +1161,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1046,17 +1171,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.756
+    true_std: 0.0317
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.756
     sort_std: 0.0317
-    global_rank: 25
+    global_rank: 38
+    paper_rank: 38
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1098,8 +1229,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1108,17 +1239,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.752
+    true_std: 0.0404
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.752
     sort_std: 0.0404
-    global_rank: 30
+    global_rank: 44
+    paper_rank: 44
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1160,8 +1297,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1170,17 +1307,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.751
+    true_std: 0.0416
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.751
     sort_std: 0.0416
-    global_rank: 33
+    global_rank: 48
+    paper_rank: 48
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1242,16 +1385,84 @@ results:
     value_note: ''
     sort_value: 0.734
     sort_std: 0.0463
-    global_rank: 72
-    paper_rank: 98
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 93
+    paper_rank: 120
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: AutoGCL
+    model_key: autogcl
+    model_plain: AutoGCL
+    value: 0.733
+    std: 0.004
+    paper_value: 0.733
+    paper_std: 0.004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: autoGCL
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 8, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.707
+    at_pub_std: 0.007
+    at_pub_source_arxiv: '2202.13248'
+    at_pub_source_title: Automated Data Augmentations for Graph Classification
+    at_pub_source_date_iso: '2022-02-26'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.026000000000000023
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.733
+    true_std: 0.004
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.733
+    sort_std: 0.004
+    global_rank: 94
+    paper_rank: 94
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Automated Data Augmentations for Graph Classification
+    comparison_source_arxiv: '2202.13248'
+    is_best: false
     is_std_outlier: false
   - model: InfoGraph
     model_key: infograph
@@ -1290,8 +1501,8 @@ results:
       Flaws & Towards Better Practices'
     at_pub_source_date_iso: '2021-11-05'
     at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2021-11-05'
-    value_gap_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1302,21 +1513,89 @@ results:
     today_delta_significant: false
     true_value: 0.7303
     true_std: 0.0087
-    value_gap_source_arxiv: '2111.03220'
-    value_gap_source_title: 'Augmentations in Graph Contrastive Learning: Current
-      Methodological Flaws & Towards Better Practices'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7303
     sort_std: 0.0087
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: JOAOv2
+    model_key: joaov2
+    model_plain: JOAOv2
+    value: 0.716
+    std: 0.0086
+    paper_value: 0.716
+    paper_std: 0.0086
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: JOAO
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 8, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.707
+    at_pub_std: 0.008
+    at_pub_source_arxiv: '2202.13248'
+    at_pub_source_title: Automated Data Augmentations for Graph Classification
+    at_pub_source_date_iso: '2022-02-26'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.009000000000000008
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.716
+    true_std: 0.0086
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.716
+    sort_std: 0.0086
+    global_rank: 137
+    paper_rank: 137
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1358,8 +1637,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1368,17 +1647,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7135
+    true_std: 0.0046
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7135
     sort_std: 0.0046
-    global_rank: 122
+    global_rank: 145
+    paper_rank: 145
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1421,8 +1706,8 @@ results:
       Flaws & Towards Better Practices'
     at_pub_source_date_iso: '2021-11-05'
     at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2021-11-05'
-    value_gap_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1433,17 +1718,17 @@ results:
     today_delta_significant: false
     true_value: 0.7114
     true_std: 0.0044
-    value_gap_source_arxiv: '2111.03220'
-    value_gap_source_title: 'Augmentations in Graph Contrastive Learning: Current
-      Methodological Flaws & Towards Better Practices'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7114
     sort_std: 0.0044
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1483,14 +1768,14 @@ results:
     date_iso: '2024-01-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.711
+    at_pub_std: 0.005
+    at_pub_source_arxiv: '2006.05582'
+    at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
+    at_pub_source_date_iso: '2020-06-01'
+    at_pub_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1499,154 +1784,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.711
+    true_std: 0.0054
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.711
     sort_std: 0.0054
-    global_rank: 124
+    global_rank: 147
+    paper_rank: 147
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: JOAOv2
-    model_key: joaov2
-    model_plain: JOAOv2
-    value: 0.716
-    std: 0.0086
-    paper_value: 0.716
-    paper_std: 0.0086
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: JOAO
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 8, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.707
-    at_pub_std: 0.008
-    at_pub_source_arxiv: '2202.13248'
-    at_pub_source_title: Automated Data Augmentations for Graph Classification
-    at_pub_source_date_iso: '2022-02-26'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-02-26'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: 0.009000000000000008
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.707
-    true_std: 0.008
-    value_gap_source_arxiv: '2202.13248'
-    value_gap_source_title: Automated Data Augmentations for Graph Classification
-    value_gap_source_is_current_paper: false
-    value_gap: 0.009000000000000008
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.707
-    sort_std: 0.008
-    global_rank: 134
-    paper_rank: 116
-    rank_delta: -18
-    rank_delta_abs: 18
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AutoGCL
-    model_key: autogcl
-    model_plain: AutoGCL
-    value: 0.733
-    std: 0.004
-    paper_value: 0.733
-    paper_std: 0.004
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: autoGCL
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 8, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.707
-    at_pub_std: 0.007
-    at_pub_source_arxiv: '2202.13248'
-    at_pub_source_title: Automated Data Augmentations for Graph Classification
-    at_pub_source_date_iso: '2022-02-26'
-    at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-02-26'
-    value_gap_source_date_label: ICLR 2022
-    gap_vs_at_pub: 0.026000000000000023
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.707
-    true_std: 0.007
-    value_gap_source_arxiv: '2202.13248'
-    value_gap_source_title: Automated Data Augmentations for Graph Classification
-    value_gap_source_is_current_paper: false
-    value_gap: 0.026000000000000023
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.707
-    sort_std: 0.007
-    global_rank: 135
-    paper_rank: 74
-    rank_delta: -61
-    rank_delta_abs: 61
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Automated Data Augmentations for Graph Classification
-    comparison_source_arxiv: '2202.13248'
     is_best: false
     is_std_outlier: false
   - model: DGK
@@ -1685,8 +1842,8 @@ results:
     at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
     at_pub_source_date_iso: '2020-06-01'
     at_pub_source_date_label: ICML 2020
-    value_gap_source_date_iso: '2018-05-21'
-    value_gap_source_date_label: ICML 2018
+    value_gap_source_date_iso: '2020-06-01'
+    value_gap_source_date_label: ICML 2020
     gap_vs_at_pub: 0.00040000000000006697
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1695,18 +1852,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
     today_delta_significant: false
-    true_value: 0.6696
-    true_std: 0.0056
-    value_gap_source_arxiv: '1805.08090'
-    value_gap_source_title: Graph Capsule Convolutional Neural Networks
+    true_value: 0.67
+    true_std: 0.006
+    value_gap_source_arxiv: '2006.05582'
+    value_gap_source_title: Contrastive Multi-View Representation Learning on Graphs
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.00040000000000006697
     has_value_note: false
     value_note: ''
-    sort_value: 0.6696
-    sort_std: 0.0056
-    global_rank: 140
-    paper_rank: 140
+    sort_value: 0.67
+    sort_std: 0.006
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1752,8 +1909,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1762,17 +1919,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6587
+    true_std: 0.0098
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6587
     sort_std: 0.0098
-    global_rank: 142
+    global_rank: 168
+    paper_rank: 168
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1808,33 +1971,38 @@ results:
     date_iso: '2024-01-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
+    at_pub_value: 0.553
+    at_pub_std: 0.015
+    at_pub_source_arxiv: '2006.05582'
+    at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
+    at_pub_source_date_iso: '2020-06-01'
+    at_pub_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2020-06-01'
+    value_gap_source_date_label: ICML 2020
+    gap_vs_at_pub: 0.00040000000000006697
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
+    insignificant_value_gap: true
     today_delta_significant: false
-    sort_value: 0.5526
-    sort_std: 0.0154
-    global_rank: 151
-    has_value_gap: false
+    true_value: 0.553
+    true_std: 0.015
+    value_gap_source_arxiv: '2006.05582'
+    value_gap_source_title: Contrastive Multi-View Representation Learning on Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.00040000000000006697
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.553
+    sort_std: 0.015
+    global_rank: 179
+    paper_rank: 179
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1852,9 +2020,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1885,9 +2053,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1910,47 +2111,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: GMCL-D
     model_key: gmcl-d
@@ -1988,8 +2155,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1998,21 +2165,60 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9409
+    true_std: 0.0628
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9409
     sort_std: 0.0628
-    global_rank: 25
+    global_rank: 32
+    paper_rank: 32
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.933
+    std: 0.029
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.00911'
+    title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    date: Dec 2, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-02'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 43
+    sort_value: 0.933
+    sort_std: 0.029
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GMCL-P
     model_key: gmcl-p
@@ -2050,8 +2256,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2060,17 +2266,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.931
+    true_std: 0.0533
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.931
     sort_std: 0.0533
-    global_rank: 37
+    global_rank: 46
+    paper_rank: 46
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2112,8 +2324,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2122,17 +2334,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.931
+    true_std: 0.063
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.931
     sort_std: 0.063
-    global_rank: 37
+    global_rank: 47
+    paper_rank: 47
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2174,8 +2392,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2184,17 +2402,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.931
+    true_std: 0.0533
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.931
     sort_std: 0.0533
-    global_rank: 37
+    global_rank: 48
+    paper_rank: 48
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2236,8 +2460,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2246,17 +2470,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9254
+    true_std: 0.0685
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9254
     sort_std: 0.0685
-    global_rank: 51
+    global_rank: 66
+    paper_rank: 66
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2298,8 +2528,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2308,17 +2538,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9208
+    true_std: 0.0484
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9208
     sort_std: 0.0484
-    global_rank: 63
+    global_rank: 80
+    paper_rank: 80
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2360,8 +2596,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2370,17 +2606,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9149
+    true_std: 0.0587
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9149
     sort_std: 0.0587
-    global_rank: 86
+    global_rank: 105
+    paper_rank: 105
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2422,8 +2664,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2432,17 +2674,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9146
+    true_std: 0.0612
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9146
     sort_std: 0.0612
-    global_rank: 86
+    global_rank: 106
+    paper_rank: 106
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2484,8 +2732,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2494,17 +2742,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9146
+    true_std: 0.0428
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9146
     sort_std: 0.0428
-    global_rank: 86
+    global_rank: 107
+    paper_rank: 107
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2546,8 +2800,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2556,17 +2810,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9096
+    true_std: 0.0426
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9096
     sort_std: 0.0426
-    global_rank: 110
+    global_rank: 134
+    paper_rank: 134
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2608,8 +2868,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2618,17 +2878,158 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9096
+    true_std: 0.0337
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9096
     sort_std: 0.0337
-    global_rank: 110
+    global_rank: 135
+    paper_rank: 135
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GRACE
+    model_key: grace
+    model_plain: GRACE
+    value: 0.9065
+    std: 0.0081
+    paper_value: 0.9065
+    paper_std: 0.0081
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 8, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9065
+    true_std: 0.0081
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.9065
+    sort_std: 0.0081
+    global_rank: 148
+    paper_rank: 148
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCA
+    model_key: gca
+    model_plain: GCA
+    value: 0.8079
+    std: 0.1051
+    paper_value: 0.8079
+    paper_std: 0.1051
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 8, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.906
+    at_pub_std: 0.0076
+    at_pub_source_arxiv: '2305.17437'
+    at_pub_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
+    at_pub_source_date_iso: '2023-05-27'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2023-05-27'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: 0.09810000000000008
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.906
+    true_std: 0.0076
+    value_gap_source_arxiv: '2305.17437'
+    value_gap_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09810000000000008
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.906
+    sort_std: 0.0076
+    global_rank: 149
+    paper_rank: 659
+    rank_delta: 510
+    rank_delta_abs: 510
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2670,8 +3071,8 @@ results:
     at_pub_source_title: Coloring graph neural networks for node disambiguation
     at_pub_source_date_iso: '2019-12-12'
     at_pub_source_date_label: IJCAI 2019
-    value_gap_source_date_iso: '2022-05-26'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-05-23'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: 0.0968
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2682,19 +3083,18 @@ results:
     today_delta_significant: true
     true_value: 0.904
     true_std: 0.057
-    value_gap_source_arxiv: '2205.13328'
-    value_gap_source_title: How Powerful are $K$-hop Message Passing Graph Neural
-      Networks
+    value_gap_source_arxiv: '2305.13987'
+    value_gap_source_title: On Structural Expressive Power of Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: 0.0968
     has_value_note: false
     value_note: ''
     sort_value: 0.904
     sort_std: 0.057
-    global_rank: 141
-    paper_rank: 603
-    rank_delta: 462
-    rank_delta_abs: 462
+    global_rank: 171
+    paper_rank: 660
+    rank_delta: 489
+    rank_delta_abs: 489
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2738,8 +3138,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2748,79 +3148,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9038
+    true_std: 0.0528
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9038
     sort_std: 0.0528
-    global_rank: 155
+    global_rank: 185
+    paper_rank: 185
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: subgraph
-    model_key: subgraph
-    model_plain: subgraph
-    value: 0.9
-    std: 0.0598
-    paper_value: 0.9
-    paper_std: 0.0598
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 8, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.9
-    sort_std: 0.0598
-    global_rank: 179
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2862,8 +3206,8 @@ results:
     at_pub_source_title: 'Graph Self-Supervised Learning: A Survey'
     at_pub_source_date_iso: '2021-02-27'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-02-27'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.005800000000000027
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2872,21 +3216,158 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.897
-    true_std: null
-    value_gap_source_arxiv: '2103.00111'
-    value_gap_source_title: 'Graph Self-Supervised Learning: A Survey'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.005800000000000027
+    true_value: 0.9028
+    true_std: 0.0401
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.897
-    sort_std: null
-    global_rank: 196
-    paper_rank: 160
-    rank_delta: -36
-    rank_delta_abs: 36
-    rank_delta_direction: better
+    sort_value: 0.9028
+    sort_std: 0.0401
+    global_rank: 191
+    paper_rank: 191
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: subgraph
+    model_key: subgraph
+    model_plain: subgraph
+    value: 0.9
+    std: 0.0598
+    paper_value: 0.9
+    paper_std: 0.0598
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 8, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9
+    true_std: 0.0598
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9
+    sort_std: 0.0598
+    global_rank: 202
+    paper_rank: 202
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: JOAOv2
+    model_key: joaov2
+    model_plain: JOAOv2
+    value: 0.8967
+    std: 0.0524
+    paper_value: 0.8967
+    paper_std: 0.0524
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 8, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8767
+    at_pub_std: 0.0079
+    at_pub_source_arxiv: '2106.07594'
+    at_pub_source_title: Graph Contrastive Learning Automated
+    at_pub_source_date_iso: '2021-06-10'
+    at_pub_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.020000000000000018
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.8967
+    true_std: 0.0524
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8967
+    sort_std: 0.0524
+    global_rank: 239
+    paper_rank: 239
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -2951,79 +3432,11 @@ results:
     value_note: ''
     sort_value: 0.893
     sort_std: 0.0514
-    global_rank: 236
-    paper_rank: 251
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 273
+    paper_rank: 289
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GRACE
-    model_key: grace
-    model_plain: GRACE
-    value: 0.9065
-    std: 0.0081
-    paper_value: 0.9065
-    paper_std: 0.0081
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 8, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-14'
-    value_gap_source_date_label: KDD 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.89
-    true_std: 0.011
-    value_gap_source_arxiv: '2410.10241'
-    value_gap_source_title: Revisiting Graph Autoencoders as Implicit Contrastive
-      Learners
-    value_gap_source_is_current_paper: false
-    value_gap: 0.01649999999999996
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.89
-    sort_std: 0.011
-    global_rank: 252
-    paper_rank: 122
-    rank_delta: -130
-    rank_delta_abs: 130
-    rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -3066,8 +3479,8 @@ results:
     at_pub_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
     at_pub_source_date_iso: '2023-05-27'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-10-02'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2024-10-14'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3078,17 +3491,17 @@ results:
     today_delta_significant: false
     true_value: 0.8864
     true_std: 0.0108
-    value_gap_source_arxiv: '2410.01778'
-    value_gap_source_title: 'TopER: Topological Embeddings in Graph Representation
-      Learning'
+    value_gap_source_arxiv: '2410.10365'
+    value_gap_source_title: 'SpeGCL: Self-supervised Graph Spectrum Contrastive Learning
+      without Positive Samples'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8864
     sort_std: 0.0108
-    global_rank: 281
-    paper_rank: 281
+    global_rank: 320
+    paper_rank: 320
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3135,8 +3548,8 @@ results:
       Predictive Architectures
     at_pub_source_date_iso: '2023-09-27'
     at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2023-09-27'
-    value_gap_source_date_label: TMLR 2023
+    value_gap_source_date_iso: '2025-05-25'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: 0.014900000000000024
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3147,88 +3560,19 @@ results:
     today_delta_significant: true
     true_value: 0.8829
     true_std: 0.0131
-    value_gap_source_arxiv: '2309.16014'
-    value_gap_source_title: Graph-level Representation Learning with Joint-Embedding
-      Predictive Architectures
+    value_gap_source_arxiv: '2505.19024'
+    value_gap_source_title: Learn Beneficial Noise as Graph Augmentation
     value_gap_source_is_current_paper: false
     value_gap: 0.014900000000000024
     has_value_note: false
     value_note: ''
     sort_value: 0.8829
     sort_std: 0.0131
-    global_rank: 301
-    paper_rank: 377
-    rank_delta: 76
-    rank_delta_abs: 76
+    global_rank: 341
+    paper_rank: 421
+    rank_delta: 80
+    rank_delta_abs: 80
     rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: JOAOv2
-    model_key: joaov2
-    model_plain: JOAOv2
-    value: 0.8967
-    std: 0.0524
-    paper_value: 0.8967
-    paper_std: 0.0524
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 8, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8767
-    at_pub_std: 0.0079
-    at_pub_source_arxiv: '2106.07594'
-    at_pub_source_title: Graph Contrastive Learning Automated
-    at_pub_source_date_iso: '2021-06-10'
-    at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2021-06-10'
-    value_gap_source_date_label: NeurIPS 2021
-    gap_vs_at_pub: 0.020000000000000018
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: true
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.8767
-    true_std: 0.0079
-    value_gap_source_arxiv: '2106.05819'
-    value_gap_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.020000000000000018
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8767
-    sort_std: 0.0079
-    global_rank: 331
-    paper_rank: 205
-    rank_delta: -126
-    rank_delta_abs: 126
-    rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -3271,8 +3615,8 @@ results:
     at_pub_source_title: Provably Powerful Graph Networks
     at_pub_source_date_iso: '2019-05-27'
     at_pub_source_date_label: NeurIPS 2019
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-06-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3283,22 +3627,54 @@ results:
     today_delta_significant: false
     true_value: 0.8744
     true_std: 0.0272
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    value_gap_source_arxiv: '2506.06212'
+    value_gap_source_title: Model-Driven Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8744
     sort_std: 0.0272
-    global_rank: 339
-    paper_rank: 339
+    global_rank: 383
+    paper_rank: 383
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -3359,10 +3735,10 @@ results:
     value_note: ''
     sort_value: 0.8644
     sort_std: 0.0125
-    global_rank: 389
-    paper_rank: 518
-    rank_delta: 129
-    rank_delta_abs: 129
+    global_rank: 433
+    paper_rank: 570
+    rank_delta: 137
+    rank_delta_abs: 137
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -3428,10 +3804,10 @@ results:
     value_note: ''
     sort_value: 0.852
     sort_std: 0.009
-    global_rank: 434
-    paper_rank: 583
-    rank_delta: 149
-    rank_delta_abs: 149
+    global_rank: 479
+    paper_rank: 639
+    rank_delta: 160
+    rank_delta_abs: 160
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3496,77 +3872,15 @@ results:
     value_note: ''
     sort_value: 0.8447
     sort_std: 0.0037
-    global_rank: 466
-    paper_rank: 789
-    rank_delta: 323
-    rank_delta_abs: 323
+    global_rank: 514
+    paper_rank: 852
+    rank_delta: 338
+    rank_delta_abs: 338
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Graph Masked Autoencoders with Transformers
     comparison_source_arxiv: '2202.08391'
-    is_best: false
-    is_std_outlier: false
-  - model: GCA
-    model_key: gca
-    model_plain: GCA
-    value: 0.8079
-    std: 0.1051
-    paper_value: 0.8079
-    paper_std: 0.1051
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 8, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.8079
-    sort_std: 0.1051
-    global_rank: 604
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Node2Vec
@@ -3625,8 +3939,8 @@ results:
     value_note: ''
     sort_value: 0.7263
     sort_std: 0.102
-    global_rank: 750
-    paper_rank: 750
+    global_rank: 812
+    paper_rank: 812
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3648,9 +3962,9 @@ results:
 - &id002
   dataset: NCI1
   rows:
-  - model: ECC
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: ECC
+    model_plain: WL-MLP
     value: 0.9954
     std: null
     metric: Accuracy
@@ -3682,9 +3996,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: GIN
     model_key: gin
-    model_plain: ECC
+    model_plain: GIN
     value: 0.9934
     std: null
     metric: Accuracy
@@ -3715,9 +4029,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ECC
+  - model: GCN
     model_key: gcn
-    model_plain: ECC
+    model_plain: GCN
     value: 0.9727
     std: null
     metric: Accuracy
@@ -3805,15 +4119,49 @@ results:
     sort_value: 0.86
     sort_std: 0.018
     global_rank: 10
-    paper_rank: 226
-    rank_delta: 216
-    rank_delta_abs: 216
+    paper_rank: 245
+    rank_delta: 235
+    rank_delta_abs: 235
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Going Deeper into Permutation-Sensitive Graph Neural
       Networks
     comparison_source_arxiv: '2205.14368'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8303
+    std: 0.0137
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.01794'
+    title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based Gnn Explainers
+      through In-depth Benchmarking'
+    date: Oct 3, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-03'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/Armagaan/gnn-x-bench
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 81
+    sort_value: 0.8303
+    sort_std: 0.0137
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GMCL-D
@@ -3852,8 +4200,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3862,17 +4210,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8299
+    true_std: 0.0206
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8299
     sort_std: 0.0206
-    global_rank: 80
+    global_rank: 85
+    paper_rank: 85
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3914,8 +4268,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3924,17 +4278,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8275
+    true_std: 0.017
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8275
     sort_std: 0.017
-    global_rank: 92
+    global_rank: 98
+    paper_rank: 98
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3997,10 +4357,10 @@ results:
     value_note: ''
     sort_value: 0.825
     sort_std: 0.0013
-    global_rank: 104
-    paper_rank: 342
-    rank_delta: 238
-    rank_delta_abs: 238
+    global_rank: 115
+    paper_rank: 362
+    rank_delta: 247
+    rank_delta_abs: 247
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4045,7 +4405,7 @@ results:
     at_pub_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
     at_pub_source_date_iso: '2023-05-27'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-08-24'
+    value_gap_source_date_iso: '2024-10-14'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.0824999999999999
     worse_than_at_pub: false
@@ -4057,16 +4417,17 @@ results:
     today_delta_significant: false
     true_value: 0.82
     true_std: 0.0029
-    value_gap_source_arxiv: '2408.13471'
-    value_gap_source_title: Disentangled Generative Graph Representation Learning
+    value_gap_source_arxiv: '2410.10365'
+    value_gap_source_title: 'SpeGCL: Self-supervised Graph Spectrum Contrastive Learning
+      without Positive Samples'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.82
     sort_std: 0.0029
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4112,8 +4473,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4122,17 +4483,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8199
+    true_std: 0.0218
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8199
     sort_std: 0.0218
-    global_rank: 134
+    global_rank: 146
+    paper_rank: 146
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4174,8 +4541,8 @@ results:
     at_pub_source_title: Graph Capsule Convolutional Neural Networks
     at_pub_source_date_iso: '2018-05-21'
     at_pub_source_date_label: ICML 2018
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-06-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4186,17 +4553,16 @@ results:
     today_delta_significant: false
     true_value: 0.8031
     true_std: 0.0046
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    value_gap_source_arxiv: '2506.06212'
+    value_gap_source_title: Model-Driven Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8031
     sort_std: 0.0046
-    global_rank: 210
-    paper_rank: 210
+    global_rank: 229
+    paper_rank: 229
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4262,10 +4628,10 @@ results:
     value_note: ''
     sort_value: 0.775
     sort_std: 0.0074
-    global_rank: 358
-    paper_rank: 406
-    rank_delta: 48
-    rank_delta_abs: 48
+    global_rank: 378
+    paper_rank: 427
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4330,10 +4696,10 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.015
-    global_rank: 372
-    paper_rank: 409
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 392
+    paper_rank: 430
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -4377,8 +4743,8 @@ results:
     at_pub_source_title: 'InfoGCL: Information-Aware Graph Contrastive Learning'
     at_pub_source_date_iso: '2021-10-28'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-06-26'
-    value_gap_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2021-10-28'
+    value_gap_source_date_label: NeurIPS 2021
     gap_vs_at_pub: 0.02180000000000004
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4386,23 +4752,22 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.7322
-    true_std: 0.0181
-    value_gap_source_arxiv: '2206.12933'
-    value_gap_source_title: Wiener Graph Deconvolutional Network Improves Graph Self-Supervised
-      Learning
+    today_delta_significant: true
+    true_value: 0.754
+    true_std: 0.012
+    value_gap_source_arxiv: '2110.15438'
+    value_gap_source_title: 'InfoGCL: Information-Aware Graph Contrastive Learning'
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.02180000000000004
     has_value_note: false
     value_note: ''
-    sort_value: 0.7322
-    sort_std: 0.0181
-    global_rank: 469
-    paper_rank: 469
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.754
+    sort_std: 0.012
+    global_rank: 450
+    paper_rank: 501
+    rank_delta: 51
+    rank_delta_abs: 51
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -4465,10 +4830,10 @@ results:
     value_note: ''
     sort_value: 0.5976
     sort_std: 0.0035
-    global_rank: 573
-    paper_rank: 593
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 619
+    paper_rank: 641
+    rank_delta: 22
+    rank_delta_abs: 22
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4512,8 +4877,8 @@ results:
     at_pub_source_title: 'InfoGCL: Information-Aware Graph Contrastive Learning'
     at_pub_source_date_iso: '2021-10-28'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-05-31'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-01-29'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 9.999999999998899e-05
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4524,17 +4889,17 @@ results:
     today_delta_significant: false
     true_value: 0.549
     true_std: 0.016
-    value_gap_source_arxiv: '2205.15746'
-    value_gap_source_title: Omni-Granular Ego-Semantic Propagation for Self-Supervised
-      Graph Representation Learning
+    value_gap_source_arxiv: '2401.16011'
+    value_gap_source_title: 'GPS: graph contrastive learning via multi-scale augmented
+      views from adversarial pooling'
     value_gap_source_is_current_paper: false
     value_gap: 9.999999999998899e-05
     has_value_note: false
     value_note: ''
     sort_value: 0.549
     sort_std: 0.016
-    global_rank: 589
-    paper_rank: 589
+    global_rank: 637
+    paper_rank: 637
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4556,9 +4921,9 @@ results:
 - &id005
   dataset: REDDIT-MULTI-5K
   rows:
-  - model: Coarsened
+  - model: SpeGCL
     model_key: spegcl
-    model_plain: Coarsened
+    model_plain: SpeGCL
     value: 0.5944
     std: 0.0018
     metric: Accuracy
@@ -4590,9 +4955,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Coarsened
+  - model: GIN
     model_key: gin
-    model_plain: Coarsened
+    model_plain: GIN
     value: 0.576
     std: 0.015
     metric: Accuracy
@@ -4624,9 +4989,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Coarsened
+  - model: Sum--MLP (GIN-0)
     model_key: sum--mlp (gin-0)
-    model_plain: Coarsened
+    model_plain: Sum--MLP (GIN-0)
     value: 0.575
     std: 0.015
     metric: Accuracy
@@ -4693,8 +5058,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4703,17 +5068,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5681
+    true_std: 0.025
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5681
     sort_std: 0.025
     global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4776,8 +5147,8 @@ results:
     value_note: ''
     sort_value: 0.5675
     sort_std: 0.0018
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4823,8 +5194,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4833,17 +5204,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5663
+    true_std: 0.0186
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5663
     sort_std: 0.0186
-    global_rank: 7
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4885,8 +5262,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4895,17 +5272,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5635
+    true_std: 0.0231
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5635
     sort_std: 0.0231
-    global_rank: 7
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4968,8 +5351,8 @@ results:
     value_note: ''
     sort_value: 0.56
     sort_std: 0.003
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5015,8 +5398,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5025,17 +5408,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5571
+    true_std: 0.0083
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5571
     sort_std: 0.0083
-    global_rank: 12
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5098,10 +5487,10 @@ results:
     value_note: ''
     sort_value: 0.549
     sort_std: 0.004
-    global_rank: 14
-    paper_rank: 16
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 18
+    paper_rank: 22
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -5145,8 +5534,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5155,17 +5544,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5361
+    true_std: 0.0031
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5361
     sort_std: 0.0031
-    global_rank: 16
+    global_rank: 21
+    paper_rank: 21
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5228,12 +5623,80 @@ results:
     value_note: ''
     sort_value: 0.535
     sort_std: 0.01
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: JOAOv2
+    model_key: joaov2
+    model_plain: JOAOv2
+    value: 0.5271
+    std: 0.0028
+    paper_value: 0.5271
+    paper_std: 0.0028
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: JOAO
+    variant_inference_reason: 'dataset: fuzzy match to reddit-multi-5k (score=85)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 8, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-08'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5271
+    at_pub_std: 0.0028
+    at_pub_source_arxiv: '2305.17437'
+    at_pub_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
+    at_pub_source_date_iso: '2023-05-27'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5271
+    true_std: 0.0028
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5271
+    sort_std: 0.0028
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5296,8 +5759,8 @@ results:
     value_note: ''
     sort_value: 0.479
     sort_std: 0.003
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5364,8 +5827,8 @@ results:
     value_note: ''
     sort_value: 0.461
     sort_std: 0.002
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5375,13 +5838,11 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: JOAOv2
-    model_key: joaov2
-    model_plain: JOAOv2
-    value: 0.5271
-    std: 0.0028
-    paper_value: 0.5271
-    paper_std: 0.0028
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.438
+    std: 0.032
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -5391,54 +5852,22 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    uses_external_data: 0
+    arxiv_id: '2401.16011'
+    title: 'GPS: graph contrastive learning via multi-scale augmented views from adversarial
+      pooling'
+    date: Jan 29, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-29'
+    venue: Science China Information Sciences
+    codebase_url: ''
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: JOAO
-    variant_inference_reason: 'dataset: fuzzy match to reddit-multi-5k (score=85)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 8, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-08'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.5271
-    at_pub_std: 0.0028
-    at_pub_source_arxiv: '2305.17437'
-    at_pub_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
-    at_pub_source_date_iso: '2023-05-27'
-    at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-10-14'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.4557
-    true_std: 0.0286
-    value_gap_source_arxiv: '2410.10365'
-    value_gap_source_title: 'SpeGCL: Self-supervised Graph Spectrum Contrastive Learning
-      without Positive Samples'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07140000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4557
-    sort_std: 0.0286
-    global_rank: 24
-    paper_rank: 17
-    rank_delta: -7
-    rank_delta_abs: 7
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
+    is_global_top: true
+    global_rank: 31
+    sort_value: 0.438
+    sort_std: 0.032
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -5500,8 +5929,8 @@ results:
     value_note: ''
     sort_value: 0.4127
     sort_std: 0.0018
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5568,8 +5997,8 @@ results:
     value_note: ''
     sort_value: 0.4101
     sort_std: 0.0017
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5636,8 +6065,8 @@ results:
     value_note: ''
     sort_value: 0.367
     sort_std: 0.004
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5677,14 +6106,14 @@ results:
     date_iso: '2024-01-08'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.3295
+    at_pub_std: 0.1089
+    at_pub_source_arxiv: '2305.17437'
+    at_pub_source_title: 'GIMM: InfoMin-Max for Automated Graph Contrastive Learning'
+    at_pub_source_date_iso: '2023-05-27'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-01-08'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5693,17 +6122,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3295
+    true_std: 0.1089
+    value_gap_source_arxiv: '2401.03638'
+    value_gap_source_title: Unifying Graph Contrastive Learning via Graph Message
+      Augmentation
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3295
     sort_std: 0.1089
-    global_rank: 31
+    global_rank: 37
+    paper_rank: 37
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

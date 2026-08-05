@@ -71,8 +71,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - Information-Flow (IF) framework
-mrr: 0.1111
-adjusted_mrr: 0.037
+mrr: 0.0588
+adjusted_mrr: 0.0196
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -89,9 +89,43 @@ results:
 - &id001
   dataset: ogbl-wikikg2
   rows:
-  - model: Information-Flow (IF) framework
+  - model: InterHT + DigPiece
+    model_key: interht + digpiece
+    model_plain: InterHT + DigPiece
+    value: 0.7293
+    std: 0.0018
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04897'
+    title: 'InterHT: Knowledge Graph Embeddings by Interaction between Head and Tail
+      Entities'
+    date: Feb 10, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-10'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7293
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: StarGraph + TripleRE'
     model_key: stargraph + triplere'
-    model_plain: Information-Flow (IF) framework
+    model_plain: StarGraph + TripleRE'
     value: 0.729
     std: null
     metric: MRR
@@ -115,7 +149,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.729
     sort_std: null
     comparison_type: global_top
@@ -123,69 +157,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Information-Flow (IF) framework
-    model_key: trans(large) + nodepiece
-    model_plain: Information-Flow (IF) framework
-    value: 0.6939
+  - model: TripleRE + StarGraph
+    model_key: triplere + stargraph
+    model_plain: TripleRE + StarGraph
+    value: 0.7201
     std: 0.0011
     metric: MRR
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 38.430804
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2205.14209'
-    title: 'StarGraph: Knowledge Representation Learning based on Incomplete Two-hop
-      Subgraph'
-    date: May 27, 2022
-    date_display: May 2022
-    date_iso: '2022-05-27'
-    venue: Under review in ICLR 2023 (https://openreview.net/forum?id=mTOB_VK_BWk)
-    codebase_url: https://github.com/hzli-ucas/StarGraph
+    params_millions: 86.7
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04897'
+    title: 'InterHT: Knowledge Graph Embeddings by Interaction between Head and Tail
+      Entities'
+    date: Feb 10, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-10'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6939
-    sort_std: 0.0011
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Information-Flow (IF) framework
-    model_key: trans + nodepiece
-    model_plain: Information-Flow (IF) framework
-    value: 0.6882
-    std: 0.0019
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 19.215402
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2205.14209'
-    title: 'StarGraph: Knowledge Representation Learning based on Incomplete Two-hop
-      Subgraph'
-    date: May 27, 2022
-    date_display: May 2022
-    date_iso: '2022-05-27'
-    venue: Under review in ICLR 2023 (https://openreview.net/forum?id=mTOB_VK_BWk)
-    codebase_url: https://github.com/hzli-ucas/StarGraph
-    uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.6882
-    sort_std: 0.0019
+    sort_value: 0.7201
+    sort_std: 0.0011
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -248,8 +248,8 @@ results:
     value_note: ''
     sort_value: 0.611
     sort_std: 0.011
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -316,8 +316,8 @@ results:
     value_note: ''
     sort_value: 0.577
     sort_std: 0.015
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -384,8 +384,8 @@ results:
     value_note: ''
     sort_value: 0.282
     sort_std: 0.022
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -452,8 +452,8 @@ results:
     value_note: ''
     sort_value: 0.263
     sort_std: 0.005
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -520,8 +520,8 @@ results:
     value_note: ''
     sort_value: 0.261
     sort_std: 0.123
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

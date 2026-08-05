@@ -77,9 +77,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -110,9 +110,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -232,8 +232,8 @@ results:
     value_note: ''
     sort_value: 0.9943
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -299,8 +299,8 @@ results:
     value_note: ''
     sort_value: 0.9941
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -366,8 +366,8 @@ results:
     value_note: ''
     sort_value: 0.994
     sort_std: null
-    global_rank: 8
-    paper_rank: 9
+    global_rank: 10
+    paper_rank: 11
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -414,8 +414,8 @@ results:
       Spatiotemporal Graphs'
     at_pub_source_date_iso: '2018-03-20'
     at_pub_source_date_label: '2018'
-    value_gap_source_date_iso: '2020-07-04'
-    value_gap_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2026-03-17'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -426,16 +426,17 @@ results:
     today_delta_significant: false
     true_value: 0.9871
     true_std: null
-    value_gap_source_arxiv: '2007.02133'
-    value_gap_source_title: Simple and Deep Graph Convolutional Networks
+    value_gap_source_arxiv: '2603.16849'
+    value_gap_source_title: 'GIST: Gauge-Invariant Spectral Transformers for Scalable
+      Graph Neural Operators'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9871
     sort_std: null
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -482,8 +483,8 @@ results:
       Large Graph Convolutional Networks'
     at_pub_source_date_iso: '2019-05-20'
     at_pub_source_date_label: KDD 2019
-    value_gap_source_date_iso: '2020-07-04'
-    value_gap_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2022-02-04'
+    value_gap_source_date_label: ICML 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -494,21 +495,54 @@ results:
     today_delta_significant: false
     true_value: 0.985
     true_std: null
-    value_gap_source_arxiv: '2007.02133'
-    value_gap_source_title: Simple and Deep Graph Convolutional Networks
+    value_gap_source_arxiv: '2202.02296'
+    value_gap_source_title: Graph-Coupled Oscillator Networks
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.985
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.985
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.985
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -550,8 +584,8 @@ results:
       Large Graph Convolutional Networks'
     at_pub_source_date_iso: '2019-05-20'
     at_pub_source_date_label: KDD 2019
-    value_gap_source_date_iso: '2020-07-04'
-    value_gap_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2025-05-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -562,16 +596,16 @@ results:
     today_delta_significant: false
     true_value: 0.978
     true_std: null
-    value_gap_source_arxiv: '2007.02133'
-    value_gap_source_title: Simple and Deep Graph Convolutional Networks
+    value_gap_source_arxiv: '2505.02020'
+    value_gap_source_title: Wide & Deep Learning for Node Classification
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.978
     sort_std: null
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -637,8 +671,8 @@ results:
     value_note: ''
     sort_value: 0.973
     sort_std: null
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -705,10 +739,10 @@ results:
     value_note: ''
     sort_value: 0.958
     sort_std: 0.001
-    global_rank: 70
-    paper_rank: 144
-    rank_delta: 74
-    rank_delta_abs: 74
+    global_rank: 78
+    paper_rank: 155
+    rank_delta: 77
+    rank_delta_abs: 77
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind

@@ -78,9 +78,9 @@ results:
 - &id001
   dataset: Amazon2M
   rows:
-  - model: GraphConsis
+  - model: GFD
     model_key: gfd
-    model_plain: GraphConsis
+    model_plain: GFD
     value: 0.9757
     std: 0.0012
     metric: AUC
@@ -111,9 +111,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphConsis
+  - model: BWGNN
     model_key: bwgnn
-    model_plain: GraphConsis
+    model_plain: BWGNN
     value: 0.9742
     std: 0.0048
     metric: AUC
@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphConsis
+  - model: GDN
     model_key: gdn
-    model_plain: GraphConsis
+    model_plain: GDN
     value: 0.9709
     std: 0.0016
     metric: AUC
@@ -234,10 +234,146 @@ results:
     value_note: ''
     sort_value: 0.9316
     sort_std: 0.0087
-    global_rank: 9
-    paper_rank: 22
+    global_rank: 13
+    paper_rank: 26
     rank_delta: 13
     rank_delta_abs: 13
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.7516
+    std: null
+    paper_value: 0.7516
+    paper_std: null
+    metric: AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Semi-supervised fraud detection on Amazon dataset with 40% training
+      split
+    date: Aug 19, 2020
+    date_display: Aug 2020
+    date_iso: '2020-08-19'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.913
+    true_std: 0.006
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1614
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.913
+    sort_std: 0.006
+    global_rank: 14
+    paper_rank: 26
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7525
+    std: null
+    paper_value: 0.7525
+    paper_std: null
+    metric: AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Semi-supervised fraud detection on Amazon dataset with 10% training
+      split
+    date: Aug 19, 2020
+    date_display: Aug 2020
+    date_iso: '2020-08-19'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.911
+    true_std: 0.006
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15850000000000009
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.911
+    sort_std: 0.006
+    global_rank: 15
+    paper_rank: 26
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -302,8 +438,8 @@ results:
     value_note: ''
     sort_value: 0.9067
     sort_std: 0.0149
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -371,8 +507,8 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: null
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -440,8 +576,8 @@ results:
     value_note: ''
     sort_value: 0.8969
     sort_std: null
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -509,81 +645,12 @@ results:
     value_note: ''
     sort_value: 0.8952
     sort_std: null
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7525
-    std: null
-    paper_value: 0.7525
-    paper_std: null
-    metric: AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised fraud detection on Amazon dataset with 10% training
-      split
-    date: Aug 19, 2020
-    date_display: Aug 2020
-    date_iso: '2020-08-19'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-02-27'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8667
-    true_std: null
-    value_gap_source_arxiv: '2401.14155'
-    value_gap_source_title: Alleviating Structural Distribution Shift in Graph Anomaly
-      Detection
-    value_gap_source_is_current_paper: false
-    value_gap: 0.11420000000000008
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8667
-    sort_std: null
-    global_rank: 15
-    paper_rank: 22
-    rank_delta: 7
-    rank_delta_abs: 7
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -647,80 +714,12 @@ results:
     value_note: ''
     sort_value: 0.855
     sort_std: null
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7516
-    std: null
-    paper_value: 0.7516
-    paper_std: null
-    metric: AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Semi-supervised fraud detection on Amazon dataset with 40% training
-      split
-    date: Aug 19, 2020
-    date_display: Aug 2020
-    date_iso: '2020-08-19'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-11-16'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8102
-    true_std: 0.0179
-    value_gap_source_arxiv: '2412.00020'
-    value_gap_source_title: Partitioning Message Passing for Graph Fraud Detection
-    value_gap_source_is_current_paper: false
-    value_gap: 0.058599999999999985
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8102
-    sort_std: 0.0179
-    global_rank: 18
-    paper_rank: 22
-    rank_delta: 4
-    rank_delta_abs: 4
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -784,8 +783,8 @@ results:
     value_note: ''
     sort_value: 0.7686
     sort_std: null
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -853,8 +852,8 @@ results:
     value_note: ''
     sort_value: 0.7621
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -922,13 +921,46 @@ results:
     value_note: ''
     sort_value: 0.7558
     sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7535
+    std: null
+    metric: AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2401.14155'
+    title: Alleviating Structural Distribution Shift in Graph Anomaly Detection
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/blacksingular/wsdm_GDN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 26
+    sort_value: 0.7535
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -991,8 +1023,8 @@ results:
     value_note: ''
     sort_value: 0.7265
     sort_std: null
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

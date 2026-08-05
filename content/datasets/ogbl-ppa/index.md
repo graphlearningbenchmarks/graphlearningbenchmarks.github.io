@@ -1608,6 +1608,12 @@ variants:
     arxiv_id: '2309.00976'
     title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
     date: '2023-09-02'
+  - value: 0.7841
+    std: 0.0083
+    model: Optimized GAE
+    arxiv_id: '2411.03845'
+    title: Reconsidering the Performance of GAE in Link Prediction
+    date: '2024-11-06'
   milestones_by_metric:
     Hits@100: *id001
     Hits@50: []

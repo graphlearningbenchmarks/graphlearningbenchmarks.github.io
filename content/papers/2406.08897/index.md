@@ -81,9 +81,9 @@ results:
 - &id002
   dataset: ENZYMES
   rows:
-  - model: WL
+  - model: BGNN(m)-CS
     model_key: bgnn(m)-cs
-    model_plain: WL
+    model_plain: BGNN(m)-CS
     value: 0.8068
     std: 0.0149
     metric: Accuracy
@@ -114,9 +114,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: WL
+  - model: BGNN
     model_key: bgnn
-    model_plain: WL
+    model_plain: BGNN
     value: 0.7936
     std: 0.0281
     metric: Accuracy
@@ -147,9 +147,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: WL
+  - model: BGNN(m)-SC
     model_key: bgnn(m)-sc
-    model_plain: WL
+    model_plain: BGNN(m)-SC
     value: 0.7889
     std: 0.0079
     metric: Accuracy
@@ -250,6 +250,39 @@ results:
     comparison_source_arxiv: '2305.06102'
     is_best: false
     is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.68167
+    std: 0.05449
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 38
+    sort_value: 0.68167
+    sort_std: 0.05449
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -307,9 +340,9 @@ results:
     sort_value: 0.665
     sort_std: 0.0691
     global_rank: 48
-    paper_rank: 183
-    rank_delta: 135
-    rank_delta_abs: 135
+    paper_rank: 184
+    rank_delta: 136
+    rank_delta_abs: 136
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -514,6 +547,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.55833
+    std: 0.03516
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 145
+    sort_value: 0.55833
+    sort_std: 0.03516
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -911,8 +977,8 @@ results:
     value_note: ''
     sort_value: 0.4817
     sort_std: 0.0558
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -934,9 +1000,9 @@ results:
 - &id001
   dataset: PROTEINS
   rows:
-  - model: Graphormer-SPIS
+  - model: GMN
     model_key: gmn
-    model_plain: Graphormer-SPIS
+    model_plain: GMN
     value: 0.8225
     std: null
     metric: Accuracy
@@ -967,9 +1033,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: CI-GNN
     model_key: ci-gnn
-    model_plain: Graphormer-SPIS
+    model_plain: CI-GNN
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -1001,9 +1067,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: DiffPool+GPL
     model_key: diffpool+gpl
-    model_plain: Graphormer-SPIS
+    model_plain: DiffPool+GPL
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -1209,8 +1275,8 @@ results:
       Perspective'
     at_pub_source_date_iso: '2019-04-10'
     at_pub_source_date_label: WWW 2019
-    value_gap_source_date_iso: '2019-04-10'
-    value_gap_source_date_label: WWW 2019
+    value_gap_source_date_iso: '2022-06-11'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.08699999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1221,9 +1287,8 @@ results:
     today_delta_significant: true
     true_value: 0.7726
     true_std: 0.0228
-    value_gap_source_arxiv: '1904.05003'
-    value_gap_source_title: 'Semi-Supervised Graph Classification: A Hierarchical
-      Graph Perspective'
+    value_gap_source_arxiv: '2206.05416'
+    value_gap_source_title: Semi-Supervised Hierarchical Graph Classification
     value_gap_source_is_current_paper: false
     value_gap: 0.08699999999999997
     has_value_note: false
@@ -1240,6 +1305,39 @@ results:
     comparison_source_title: 'Semi-Supervised Graph Classification: A Hierarchical
       Graph Perspective'
     comparison_source_arxiv: '1904.05003'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7667
+    std: 0.0305
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.16346'
+    title: Boosting Graph Pooling with Persistent Homology
+    date: Feb 26, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-26'
+    venue: Published at NeurIPS 2024
+    codebase_url: https://github.com/LOGO-CUHKSZ/TIP
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 93
+    sort_value: 0.7667
+    sort_std: 0.0305
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -1307,6 +1405,39 @@ results:
     comparison_type: behind
     comparison_source_title: Boosting Graph Pooling with Persistent Homology
     comparison_source_arxiv: '2402.16346'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.76
+    std: 0.032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 153
+    sort_value: 0.76
+    sort_std: 0.032
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: EdgePool
@@ -1412,8 +1543,8 @@ results:
     at_pub_source_title: Structural Entropy Guided Graph Hierarchical Pooling
     at_pub_source_date_iso: '2022-06-26'
     at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2022-06-26'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-10-09'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: 0.01319999999999999
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1424,8 +1555,9 @@ results:
     today_delta_significant: false
     true_value: 0.7509
     true_std: 0.0059
-    value_gap_source_arxiv: '2206.13510'
-    value_gap_source_title: Structural Entropy Guided Graph Hierarchical Pooling
+    value_gap_source_arxiv: '2410.06746'
+    value_gap_source_title: Cluster-wise Graph Transformer with Dual-granularity Kernelized
+      Attention
     value_gap_source_is_current_paper: false
     value_gap: 0.01319999999999999
     has_value_note: false
@@ -1790,9 +1922,9 @@ results:
 - &id003
   dataset: RDT-B
   rows:
-  - model: CIN
+  - model: OEPG
     model_key: oepg
-    model_plain: CIN
+    model_plain: OEPG
     value: 0.963
     std: 0.009
     metric: Accuracy
@@ -1824,9 +1956,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CIN
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: CIN
+    model_plain: MSH-GNN
     value: 0.958
     std: 0.009
     metric: Accuracy
@@ -1857,9 +1989,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CIN
+  - model: GNN-AK+
     model_key: gnn-ak+
-    model_plain: CIN
+    model_plain: GNN-AK+
     value: 0.948
     std: 0.008
     metric: Accuracy
@@ -1926,8 +2058,8 @@ results:
     at_pub_source_title: 'Graph Self-Supervised Learning: A Survey'
     at_pub_source_date_iso: '2021-02-27'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.16900000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1938,9 +2070,9 @@ results:
     today_delta_significant: true
     true_value: 0.924
     true_std: 0.025
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
     value_gap_source_is_current_paper: false
     value_gap: 0.16900000000000004
     has_value_note: false
@@ -1948,9 +2080,9 @@ results:
     sort_value: 0.924
     sort_std: 0.025
     global_rank: 12
-    paper_rank: 68
-    rank_delta: 56
-    rank_delta_abs: 56
+    paper_rank: 76
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2014,8 +2146,8 @@ results:
     value_note: ''
     sort_value: 0.848
     sort_std: 0.0625
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2081,8 +2213,8 @@ results:
     value_note: ''
     sort_value: 0.8415
     sort_std: 0.0247
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2148,8 +2280,8 @@ results:
     value_note: ''
     sort_value: 0.8125
     sort_std: 0.0223
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2215,8 +2347,8 @@ results:
     value_note: ''
     sort_value: 0.8115
     sort_std: 0.0356
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2282,8 +2414,8 @@ results:
     value_note: ''
     sort_value: 0.7645
     sort_std: 0.0297
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2349,8 +2481,8 @@ results:
     value_note: ''
     sort_value: 0.706
     sort_std: 0.0369
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2416,8 +2548,8 @@ results:
     value_note: ''
     sort_value: 0.678
     sort_std: 0.0424
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

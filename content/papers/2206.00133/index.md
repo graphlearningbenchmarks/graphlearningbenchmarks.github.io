@@ -82,101 +82,137 @@ results:
 - &id001
   dataset: PCQM4Mv2
   rows:
-  - model: TorchMD-NET + Pre-training
-    model_key: egt-large
-    model_plain: TorchMD-NET + Pre-training
-    value: 0.0872
+  - model: DeMol
+    model_key: demol
+    model_plain: DeMol
+    value: 0.0603
     std: null
     metric: MAE
     higher_is_better: false
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
-    params_millions: 110.8
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2201.12787'
-    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    date: Jan 30, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-30'
-    venue: null
+    params_millions: 186.0
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2603.00568'
+    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
+      and Interactions
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    venue: Accepted to ICLR 2026
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.0872
+    sort_value: 0.0603
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: TorchMD-NET + Pre-training
-    model_key: grpe-standard
-    model_plain: TorchMD-NET + Pre-training
-    value: 0.0898
+  - model: TGT-At
+    model_key: tgt-at
+    model_plain: TGT-At
+    value: 0.0671
     std: null
     metric: MAE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 46.2
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2201.12787'
-    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    date: Jan 30, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-30'
-    venue: null
+    params_millions: 203.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2603.00568'
+    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
+      and Interactions
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    venue: Accepted to ICLR 2026
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.0898
+    sort_value: 0.0671
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: TorchMD-NET + Pre-training
-    model_key: advsyngnn
-    model_plain: TorchMD-NET + Pre-training
-    value: 0.108
-    std: 0.002
+  - model: UniMol
+    model_key: unimol
+    model_plain: UniMol
+    value: 0.0693
+    std: null
     metric: MAE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.17071'
-    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
-      and Self-Corrective Propagation'
-    date: Feb 19, 2026
+    params_millions: 77.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2603.00568'
+    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
+      and Interactions
+    date: Feb 28, 2026
     date_display: Feb 2026
-    date_iso: '2026-02-19'
-    venue: arXiv.org
+    date_iso: '2026-02-28'
+    venue: Accepted to ICLR 2026
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.108
-    sort_std: 0.002
+    sort_value: 0.0693
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.1195
+    std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 3.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2603.00568'
+    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
+      and Interactions
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    venue: Accepted to ICLR 2026
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 62
+    sort_value: 0.1195
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -238,8 +274,8 @@ results:
     value_note: ''
     sort_value: 15.6
     sort_std: 0.1
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -305,8 +341,8 @@ results:
     value_note: ''
     sort_value: 18.1
     sort_std: 0.1
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -372,8 +408,8 @@ results:
     value_note: ''
     sort_value: 22.0
     sort_std: 0.6
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

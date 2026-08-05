@@ -61,8 +61,8 @@ paper_type: method
 proposed_models:
 - HGCML
 - HGCML-P
-mrr: 0.0158
-adjusted_mrr: 0.0158
+mrr: 0.0153
+adjusted_mrr: 0.0153
 mrr_dataset_count: 3
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -79,9 +79,9 @@ results:
 - &id002
   dataset: ACM
   rows:
-  - model: SlotGAT
+  - model: HetGNN
     model_key: hetgnn
-    model_plain: SlotGAT
+    model_plain: HetGNN
     value: 0.979
     std: null
     metric: Micro-F1
@@ -112,9 +112,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: ComCH
     model_key: comch
-    model_plain: SlotGAT
+    model_plain: ComCH
     value: 0.947
     std: null
     metric: Micro-F1
@@ -145,9 +145,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SlotGAT
+  - model: LMSPS
     model_key: lmsps
-    model_plain: SlotGAT
+    model_plain: LMSPS
     value: 0.9469
     std: 0.0036
     metric: Micro-F1
@@ -237,9 +237,9 @@ results:
     sort_value: 0.9278
     sort_std: null
     global_rank: 31
-    paper_rank: 76
-    rank_delta: 45
-    rank_delta_abs: 45
+    paper_rank: 79
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -307,9 +307,9 @@ results:
     sort_value: 0.9246
     sort_std: null
     global_rank: 36
-    paper_rank: 70
-    rank_delta: 34
-    rank_delta_abs: 34
+    paper_rank: 72
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -376,12 +376,45 @@ results:
     sort_value: 0.9185
     sort_std: null
     global_rank: 50
-    paper_rank: 72
-    rank_delta: 22
-    rank_delta_abs: 22
+    paper_rank: 74
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.9135
+    std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2007.08294'
+    title: Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs
+    date: Jul 16, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-16'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/mlvlab/SELAR
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 55
+    sort_value: 0.9135
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -442,8 +475,8 @@ results:
     value_note: ''
     sort_value: 0.9134
     sort_std: 0.0017
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -509,8 +542,8 @@ results:
     value_note: ''
     sort_value: 0.9102
     sort_std: 0.0013
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -577,10 +610,10 @@ results:
     value_note: ''
     sort_value: 0.898
     sort_std: null
-    global_rank: 71
-    paper_rank: 109
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 73
+    paper_rank: 113
+    rank_delta: 40
+    rank_delta_abs: 40
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -644,8 +677,8 @@ results:
     value_note: ''
     sort_value: 0.8897
     sort_std: 0.0112
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -711,8 +744,8 @@ results:
     value_note: ''
     sort_value: 0.8844
     sort_std: 0.003
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -778,8 +811,8 @@ results:
     value_note: ''
     sort_value: 0.8823
     sort_std: 0.0091
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -846,10 +879,10 @@ results:
     value_note: ''
     sort_value: 0.881
     sort_std: 0.003
-    global_rank: 83
-    paper_rank: 108
-    rank_delta: 25
-    rank_delta_abs: 25
+    global_rank: 86
+    paper_rank: 112
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -914,8 +947,8 @@ results:
     value_note: ''
     sort_value: 0.8764
     sort_std: 0.0031
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -982,8 +1015,8 @@ results:
     value_note: ''
     sort_value: 0.8523
     sort_std: 0.0009
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1049,8 +1082,8 @@ results:
     value_note: ''
     sort_value: 0.8178
     sort_std: 0.0004
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1116,13 +1149,46 @@ results:
     value_note: ''
     sort_value: 0.7445
     sort_std: 0.0045
-    global_rank: 112
-    paper_rank: 117
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 116
+    paper_rank: 122
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7102
+    std: 0.0221
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2206.02796'
+    title: Mixed Graph Contrastive Network for Semi-Supervised Node Classification
+    date: Jun 6, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-06'
+    venue: ACM Transactions on Knowledge Discovery from Data
+    codebase_url: https://github.com/xihongyang1999/MGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 118
+    sort_value: 0.7102
+    sort_std: 0.0221
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1198,9 +1264,9 @@ results:
     sort_value: 0.9993
     sort_std: null
     global_rank: 1
-    paper_rank: 79
-    rank_delta: 78
-    rank_delta_abs: 78
+    paper_rank: 84
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1209,9 +1275,9 @@ results:
     comparison_source_arxiv: '1912.10832'
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: HetSANN
     model_key: hetsann
-    model_plain: SlotGAT
+    model_plain: HetSANN
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -1301,9 +1367,9 @@ results:
     sort_value: 0.9941
     sort_std: null
     global_rank: 3
-    paper_rank: 84
-    rank_delta: 81
-    rank_delta_abs: 81
+    paper_rank: 92
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1370,10 +1436,10 @@ results:
     value_note: ''
     sort_value: 0.946
     sort_std: 0.0031
-    global_rank: 28
-    paper_rank: 71
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 29
+    paper_rank: 76
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1439,10 +1505,10 @@ results:
     value_note: ''
     sort_value: 0.9448
     sort_std: 0.0022
-    global_rank: 29
-    paper_rank: 65
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 31
+    paper_rank: 70
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1508,10 +1574,10 @@ results:
     value_note: ''
     sort_value: 0.9369
     sort_std: null
-    global_rank: 46
-    paper_rank: 53
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 47
+    paper_rank: 55
+    rank_delta: 8
+    rank_delta_abs: 8
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1575,8 +1641,8 @@ results:
     value_note: ''
     sort_value: 0.9344
     sort_std: 0.0008
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1643,10 +1709,10 @@ results:
     value_note: ''
     sort_value: 0.9331
     sort_std: null
-    global_rank: 52
-    paper_rank: 75
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 54
+    paper_rank: 80
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1710,13 +1776,46 @@ results:
     value_note: ''
     sort_value: 0.9329
     sort_std: 0.0012
-    global_rank: 53
-    paper_rank: 53
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9306
+    std: 0.0047
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.14481'
+    title: Efficient Heterogeneous Graph Learning via Random Projection
+    date: Oct 23, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-23'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/CrawlScript/RpHGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 56
+    sort_value: 0.9306
+    sort_std: 0.0047
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1758,8 +1857,8 @@ results:
       Information Networks
     at_pub_source_date_iso: '2020-12-18'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-11-14'
-    value_gap_source_date_label: KDD 2023
+    value_gap_source_date_iso: '2020-12-18'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: 0.05369999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1768,21 +1867,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.9287
+    true_value: 0.9304
     true_std: null
-    value_gap_source_arxiv: '2311.07929'
-    value_gap_source_title: Variational Graph Autoencoder for Heterogeneous Information
-      Networks with Missing and Inaccurate Attributes
+    value_gap_source_arxiv: '2012.10024'
+    value_gap_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.051999999999999935
+    value_gap: 0.05369999999999997
     has_value_note: false
     value_note: ''
-    sort_value: 0.9287
+    sort_value: 0.9304
     sort_std: null
     global_rank: 57
-    paper_rank: 86
-    rank_delta: 29
-    rank_delta_abs: 29
+    paper_rank: 94
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1847,8 +1946,8 @@ results:
     value_note: ''
     sort_value: 0.9256
     sort_std: 0.0022
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1914,8 +2013,8 @@ results:
     value_note: ''
     sort_value: 0.9224
     sort_std: 0.0048
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1981,8 +2080,8 @@ results:
     value_note: ''
     sort_value: 0.914
     sort_std: 0.0008
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2048,8 +2147,8 @@ results:
     value_note: ''
     sort_value: 0.9128
     sort_std: 0.0007
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 84
+    paper_rank: 84
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2115,8 +2214,8 @@ results:
     value_note: ''
     sort_value: 0.9016
     sort_std: 0.006
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2124,6 +2223,40 @@ results:
     comparison_type: improved
     comparison_source_title: Geometry Contrastive Learning on Heterogeneous Graphs
     comparison_source_arxiv: '2206.12547'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6447
+    std: 0.0136
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.07365'
+    title: 'GraphControl: Adding Conditional Control to Universal Graph Pre-trained
+      Models for Graph Domain Transfer Learning'
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: The Web Conference
+    codebase_url: https://github.com/wykk00/GraphControl
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 185
+    sort_value: 0.6447
+    sort_std: 0.0136
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Micro-F1
@@ -3088,9 +3221,9 @@ results:
 - &id003
   dataset: IMDB
   rows:
-  - model: SlotGAT
+  - model: GAT BGNN(m)-SC
     model_key: gat bgnn(m)-sc
-    model_plain: SlotGAT
+    model_plain: GAT BGNN(m)-SC
     value: 0.8133
     std: 0.0179
     metric: Micro-F1
@@ -3121,9 +3254,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: SAGE BAN
     model_key: sage ban
-    model_plain: SlotGAT
+    model_plain: SAGE BAN
     value: 0.8073
     std: 0.002
     metric: Micro-F1
@@ -3154,9 +3287,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: GAT BGNN(m)-CS
     model_key: gat bgnn(m)-cs
-    model_plain: SlotGAT
+    model_plain: GAT BGNN(m)-CS
     value: 0.8033
     std: 0.0094
     metric: Micro-F1
@@ -3245,9 +3378,9 @@ results:
     sort_value: 0.6813
     sort_std: 0.0083
     global_rank: 45
-    paper_rank: 97
-    rank_delta: 52
-    rank_delta_abs: 52
+    paper_rank: 102
+    rank_delta: 57
+    rank_delta_abs: 57
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3314,9 +3447,9 @@ results:
     sort_value: 0.6808
     sort_std: 0.0049
     global_rank: 46
-    paper_rank: 99
-    rank_delta: 53
-    rank_delta_abs: 53
+    paper_rank: 104
+    rank_delta: 58
+    rank_delta_abs: 58
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3383,9 +3516,9 @@ results:
     sort_value: 0.6769
     sort_std: 0.0064
     global_rank: 49
-    paper_rank: 111
-    rank_delta: 62
-    rank_delta_abs: 62
+    paper_rank: 117
+    rank_delta: 68
+    rank_delta_abs: 68
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3429,8 +3562,8 @@ results:
     at_pub_source_title: Implicit Graph Neural Networks
     at_pub_source_date_iso: '2020-09-14'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2020-09-14'
-    value_gap_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2022-08-21'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.13639999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -3441,18 +3574,18 @@ results:
     today_delta_significant: true
     true_value: 0.648
     true_std: null
-    value_gap_source_arxiv: '2009.06211'
-    value_gap_source_title: Implicit Graph Neural Networks
+    value_gap_source_arxiv: '2208.10493'
+    value_gap_source_title: Relational Self-Supervised Learning on Graphs
     value_gap_source_is_current_paper: false
     value_gap: 0.13639999999999997
     has_value_note: false
     value_note: ''
     sort_value: 0.648
     sort_std: null
-    global_rank: 69
-    paper_rank: 120
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 71
+    paper_rank: 125
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3516,10 +3649,10 @@ results:
     value_note: ''
     sort_value: 0.6407
     sort_std: 0.008
-    global_rank: 72
-    paper_rank: 111
-    rank_delta: 39
-    rank_delta_abs: 39
+    global_rank: 75
+    paper_rank: 117
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3585,16 +3718,49 @@ results:
     value_note: ''
     sort_value: 0.6353
     sort_std: null
-    global_rank: 76
-    paper_rank: 105
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 79
+    paper_rank: 110
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: An Attention-based Graph Neural Network for Heterogeneous
       Structural Learning
     comparison_source_arxiv: '1912.10832'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.6276
+    std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.11122'
+    title: Heterogeneous Graph Representation Learning with Relation Awareness
+    date: May 24, 2021
+    date_display: May 2021
+    date_iso: '2021-05-24'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/yule-BUAA/R-HGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 83
+    sort_value: 0.6276
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: HERec
@@ -3655,8 +3821,8 @@ results:
     value_note: ''
     sort_value: 0.6254
     sort_std: null
-    global_rank: 79
-    paper_rank: 127
+    global_rank: 84
+    paper_rank: 132
     rank_delta: 48
     rank_delta_abs: 48
     rank_delta_direction: worse
@@ -3723,8 +3889,8 @@ results:
     value_note: ''
     sort_value: 0.6102
     sort_std: 0.0049
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3790,8 +3956,8 @@ results:
     value_note: ''
     sort_value: 0.6075
     sort_std: 0.0071
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3857,10 +4023,10 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: null
-    global_rank: 90
-    paper_rank: 120
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 94
+    paper_rank: 125
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3924,13 +4090,46 @@ results:
     value_note: ''
     sort_value: 0.5783
     sort_std: 0.0062
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.5514
+    std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2105.11122'
+    title: Heterogeneous Graph Representation Learning with Relation Awareness
+    date: May 24, 2021
+    date_display: May 2021
+    date_iso: '2021-05-24'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/yule-BUAA/R-HGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 117
+    sort_value: 0.5514
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -3991,8 +4190,8 @@ results:
     value_note: ''
     sort_value: 0.5212
     sort_std: 0.0072
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4058,8 +4257,8 @@ results:
     value_note: ''
     sort_value: 0.5078
     sort_std: 0.0018
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4125,8 +4324,8 @@ results:
     value_note: ''
     sort_value: 0.5073
     sort_std: 0.0023
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

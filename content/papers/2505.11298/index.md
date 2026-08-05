@@ -200,6 +200,39 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
+  - model: Diffusion Wavelets
+    model_key: diffusion wavelets
+    model_plain: Diffusion Wavelets
+    value: 0.94
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: Oct 27, 2017
+    date_display: Oct 2017
+    date_iso: '2017-10-27'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.94
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: F3-MPNN
     model_key: f3-mpnn
     model_plain: F3-MPNN
@@ -257,8 +290,8 @@ results:
     value_note: ''
     sort_value: 0.8657
     sort_std: 0.0085
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -325,8 +358,8 @@ results:
     value_note: ''
     sort_value: 0.8623
     sort_std: 0.0058
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -393,13 +426,46 @@ results:
     value_note: ''
     sort_value: 0.8543
     sort_std: 0.0063
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.85
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: Oct 27, 2017
+    date_display: Oct 2017
+    date_iso: '2017-10-27'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 7
+    sort_value: 0.85
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -461,8 +527,8 @@ results:
     value_note: ''
     sort_value: 0.849
     sort_std: 0.0045
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -529,8 +595,8 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.0135
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -552,6 +618,105 @@ results:
 - &id001
   dataset: ER graph
   rows:
+  - model: FloydNet
+    model_key: floydnet
+    model_plain: FloydNet
+    value: 1.0
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 1.0
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PGN
+    model_key: pgn
+    model_plain: PGN
+    value: 0.995
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.995
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: RecGNN
+    model_key: recgnn
+    model_plain: RecGNN
+    value: 0.995
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.995
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: F_4-MPNN
     model_key: f_4-mpnn
     model_plain: F_4-MPNN
@@ -610,8 +775,8 @@ results:
     value_note: ''
     sort_value: 0.9793
     sort_std: 0.0068
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -619,7 +784,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: F_7-MPNN
     model_key: f_7-mpnn
@@ -679,8 +844,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: 0.0065
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -688,36 +853,35 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: GraphWiz-DPO (LLaMA 2-7B)
-    model_key: graphwiz (llama 2-13b)
-    model_plain: GraphWiz-DPO (LLaMA 2-7B)
-    value: 0.9475
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.88
     std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2402.16029'
-    title: 'GraphWiz: An Instruction-Following Language Model for Graph Computational
-      Problems'
-    date: Feb 25, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-25'
-    venue: null
-    codebase_url: https://github.com/nuochenpku/Graph-Reasoning-LLM
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: Oct 27, 2017
+    date_display: Oct 2017
+    date_iso: '2017-10-27'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9475
+    global_rank: 10
+    sort_value: 0.88
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -782,8 +946,8 @@ results:
     value_note: ''
     sort_value: 0.8657
     sort_std: 0.0085
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -851,8 +1015,8 @@ results:
     value_note: ''
     sort_value: 0.8623
     sort_std: 0.0058
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -920,8 +1084,8 @@ results:
     value_note: ''
     sort_value: 0.8543
     sort_std: 0.0063
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -989,8 +1153,8 @@ results:
     value_note: ''
     sort_value: 0.849
     sort_std: 0.0045
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1058,8 +1222,8 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.0135
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1478,8 +1642,8 @@ results:
     value_note: ''
     sort_value: 0.849
     sort_std: 0.0045
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1546,13 +1710,46 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.0135
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.81
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: Oct 27, 2017
+    date_display: Oct 2017
+    date_iso: '2017-10-27'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.81
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

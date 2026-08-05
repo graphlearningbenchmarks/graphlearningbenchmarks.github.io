@@ -87,9 +87,9 @@ results:
 - &id002
   dataset: ACM
   rows:
-  - model: GCN+P+D
+  - model: SignGT
     model_key: signgt
-    model_plain: GCN+P+D
+    model_plain: SignGT
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -121,9 +121,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: NodeFormer
     model_key: nodeformer
-    model_plain: GCN+P+D
+    model_plain: NodeFormer
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -155,9 +155,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: FAGCN
     model_key: fagcn
-    model_plain: GCN+P+D
+    model_plain: FAGCN
     value: 0.9487
     std: 0.0059
     metric: Accuracy
@@ -188,6 +188,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.937
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.08331'
+    title: Model Stealing Attacks Against Inductive Graph Neural Networks
+    date: Dec 15, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-15'
+    venue: IEEE Symposium on Security and Privacy
+    codebase_url: https://github.com/xinleihe/GNNStealing
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.937
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: HG-SCM
     model_key: hg-scm
@@ -449,10 +482,10 @@ results:
     value_note: ''
     sort_value: 0.922
     sort_std: 0.002
-    global_rank: 42
-    paper_rank: 48
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 43
+    paper_rank: 52
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -516,10 +549,10 @@ results:
     value_note: ''
     sort_value: 0.919
     sort_std: 0.003
-    global_rank: 43
-    paper_rank: 47
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 44
+    paper_rank: 51
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -584,11 +617,11 @@ results:
     value_note: ''
     sort_value: 0.9175
     sort_std: 0.0035
-    global_rank: 45
-    paper_rank: 45
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    global_rank: 46
+    paper_rank: 47
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -652,8 +685,8 @@ results:
     value_note: ''
     sort_value: 0.912
     sort_std: 0.0071
-    global_rank: 47
-    paper_rank: 47
+    global_rank: 49
+    paper_rank: 49
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -720,8 +753,8 @@ results:
     value_note: ''
     sort_value: 0.9077
     sort_std: 0.0065
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -788,8 +821,8 @@ results:
     value_note: ''
     sort_value: 0.9032
     sort_std: 0.0154
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -856,8 +889,8 @@ results:
     value_note: ''
     sort_value: 0.8991
     sort_std: 0.0037
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -924,8 +957,8 @@ results:
     value_note: ''
     sort_value: 0.8505
     sort_std: 0.0025
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -968,15 +1001,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.9489
     sort_std: 0.0018
-    true_value: null
-    true_std: null
+    true_value: 0.9489
+    true_std: 0.0018
     paper_value: 0.9489
     paper_std: 0.0018
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2312.05757'
+    value_gap_source_title: 'Towards Human-like Perception: Learning Structural Causal
+      Model in Heterogeneous Graph'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -984,8 +1018,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-12-10'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1009,7 +1043,7 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 2
   - model: HG-SCM
     model_key: hg-scm
     model_plain: HG-SCM
@@ -1135,7 +1169,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 2
+    global_rank: 3
   - model: GTN
     model_key: gtn
     model_plain: GTN
@@ -1198,7 +1232,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 3
+    global_rank: 4
   - model: RSHN
     model_key: rshn
     model_plain: RSHN
@@ -1261,7 +1295,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 4
+    global_rank: 5
   - model: MAGNN
     model_key: magnn
     model_plain: MAGNN
@@ -1324,7 +1358,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 5
+    global_rank: 6
   - model: HGT
     model_key: hgt
     model_plain: HGT
@@ -1387,7 +1421,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 6
+    global_rank: 7
   - model: HetGNN
     model_key: hetgnn
     model_plain: HetGNN
@@ -1450,7 +1484,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 7
+    global_rank: 8
   - model: HAN
     model_key: han
     model_plain: HAN
@@ -1513,7 +1547,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 8
+    global_rank: 9
   - model: RGCN
     model_key: rgcn
     model_plain: RGCN
@@ -1576,7 +1610,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 10
   - model: HetSANN
     model_key: hetsann
     model_plain: HetSANN
@@ -1639,7 +1673,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 10
+    global_rank: 11
   metrics:
   - Micro-F1
   - Macro F1

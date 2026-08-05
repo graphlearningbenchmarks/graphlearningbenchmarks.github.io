@@ -92,9 +92,9 @@ results:
   dataset: MD17
   is_multi_metric: true
   rows:
-  - model: SPHNet
+  - model: PhiSNet (ori)
     model_key: phisnet (ori)
-    model_plain: SPHNet
+    model_plain: PhiSNet (ori)
     metric_values:
     - 1.073e-05
     - null
@@ -165,9 +165,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2406.03794'
-    value_gap_source_title: Infusing Self-Consistency into Density Functional Theory
-      Hamiltonian Prediction via Deep Equilibrium Models
+    value_gap_source_arxiv: '2502.01171'
+    value_gap_source_title: Efficient and Scalable Density Functional Theory Hamiltonian
+      Prediction through Adaptive Sparsity
     value_note: ''
     at_pub_value: 1.079e-05
     at_pub_std: null
@@ -176,8 +176,8 @@ results:
       Hamiltonian Prediction via Deep Equilibrium Models
     at_pub_source_date_iso: '2024-06-06'
     at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-06-06'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2025-02-03'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -202,9 +202,9 @@ results:
     is_best: false
     is_std_outlier: false
     global_rank: 2
-  - model: SPHNet
+  - model: DEQHNet
     model_key: deqhnet
-    model_plain: SPHNet
+    model_plain: DEQHNet
     metric_values:
     - 1.507e-05
     - null
@@ -405,9 +405,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2406.03794'
-    value_gap_source_title: Infusing Self-Consistency into Density Functional Theory
-      Hamiltonian Prediction via Deep Equilibrium Models
+    value_gap_source_arxiv: '2502.01171'
+    value_gap_source_title: Efficient and Scalable Density Functional Theory Hamiltonian
+      Prediction through Adaptive Sparsity
     value_note: ''
     at_pub_value: 0.0001654
     at_pub_std: null
@@ -416,8 +416,8 @@ results:
       Hamiltonian Prediction via Deep Equilibrium Models
     at_pub_source_date_iso: '2024-06-06'
     at_pub_source_date_label: NeurIPS 2024
-    value_gap_source_date_iso: '2024-06-06'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2025-02-03'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false

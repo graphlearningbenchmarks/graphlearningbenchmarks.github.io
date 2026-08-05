@@ -43,8 +43,8 @@ paper_type: method
 proposed_models:
 - DiSe-GAE
 - DiSe-FCAE
-mrr: 0.0128
-adjusted_mrr: 0.0043
+mrr: 0.0115
+adjusted_mrr: 0.0038
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -62,9 +62,9 @@ results:
   dataset: PPI
   is_multi_metric: true
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     metric_values:
     - 0.9982
     - null
@@ -103,9 +103,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     metric_values:
     - 0.996
     - null
@@ -144,9 +144,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     metric_values:
     - 0.9956
     - null
@@ -175,6 +175,47 @@ results:
     is_best: true
     sort_value: 0.9956
     sort_std: 0.02
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    metric_values:
+    - 0.985
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    published_venue: ''
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 21
+    is_best: false
+    sort_value: 0.985
+    sort_std: null
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -249,7 +290,7 @@ results:
     comparison_source_arxiv: '2201.13410'
     is_best: false
     is_std_outlier: false
-    global_rank: 70
+    global_rank: 78
   - model: DiSe-GAE
     model_key: dise-gae
     model_plain: DiSe-GAE
@@ -312,7 +353,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 78
+    global_rank: 87
   - model: DiSe-FCAE
     model_key: dise-fcae
     model_plain: DiSe-FCAE
@@ -375,7 +416,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 79
+    global_rank: 88
   - model: DW+Dine
     model_key: dw+dine
     model_plain: DW+Dine
@@ -438,7 +479,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 88
+    global_rank: 96
   - model: GAE+Dine
     model_key: gae+dine
     model_plain: GAE+Dine
@@ -501,7 +542,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 135
+    global_rank: 146
   - model: DeepWalk
     model_key: deepwalk
     model_plain: DeepWalk
@@ -529,8 +570,8 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.514
-    value_gap_source_arxiv: '2009.10273'
-    value_gap_source_title: Sub-graph Contrast for Scalable Self-Supervised Graph
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
       Representation Learning
     value_note: ''
     at_pub_value: 0.529
@@ -540,8 +581,8 @@ results:
       Learning
     at_pub_source_date_iso: '2020-09-22'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-09-22'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.514
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -566,7 +607,7 @@ results:
     comparison_source_arxiv: '2009.10273'
     is_best: false
     is_std_outlier: false
-    global_rank: 155
+    global_rank: 166
   - model: GraphAE
     model_key: graphae
     model_plain: GraphAE
@@ -629,7 +670,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 164
+    global_rank: 175
   - model: InfWalk
     model_key: infwalk
     model_plain: InfWalk
@@ -692,7 +733,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 174
+    global_rank: 185
   - model: DGLFRM
     model_key: dglfrm
     model_plain: DGLFRM
@@ -755,7 +796,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 175
+    global_rank: 186
   metrics:
   - F1
   - Topological Alignment

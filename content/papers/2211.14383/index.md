@@ -50,8 +50,8 @@ paper_type: method
 proposed_models:
 - BIND 1%
 - BIND 10%
-mrr: 0.0238
-adjusted_mrr: 0.0079
+mrr: 0.0233
+adjusted_mrr: 0.0078
 mrr_dataset_count: 1
 benchmark_categories:
 - LINKX Benchmarks
@@ -68,9 +68,9 @@ results:
 - &id001
   dataset: Pokec
   rows:
-  - model: FMP
+  - model: Polynormer-r
     model_key: polynormer-r
-    model_plain: FMP
+    model_plain: Polynormer-r
     value: 0.861
     std: 0.0005
     metric: Accuracy
@@ -101,9 +101,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FMP
+  - model: Polynormer
     model_key: polynormer
-    model_plain: FMP
+    model_plain: Polynormer
     value: 0.8595
     std: 0.0007
     metric: Accuracy
@@ -134,9 +134,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: FMP
+  - model: MoE-H2GCN
     model_key: moe-h2gcn
-    model_plain: FMP
+    model_plain: MoE-H2GCN
     value: 0.8302
     std: 0.003
     metric: Accuracy
@@ -162,6 +162,72 @@ results:
     global_rank: 3
     sort_value: 0.8302
     sort_std: 0.003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7601
+    std: 0.0049
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.05185'
+    title: Mixture of Weak & Strong Experts on Graphs
+    date: Nov 9, 2023
+    date_display: Nov 2023
+    date_iso: '2023-11-09'
+    venue: Accepted for publication in ICLR 2024
+    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 26
+    sort_value: 0.7601
+    sort_std: 0.0049
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7048
+    std: 0.0077
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2202.04187'
+    title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
+    date: Feb 8, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 36
+    sort_value: 0.7048
+    sort_std: 0.0077
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -224,8 +290,8 @@ results:
     value_note: ''
     sort_value: 0.653
     sort_std: 0.002
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -292,8 +358,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: 0.007
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -360,8 +426,8 @@ results:
     value_note: ''
     sort_value: 0.635
     sort_std: 0.004
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -428,8 +494,8 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.007
-    global_rank: 43
-    paper_rank: 43
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -496,8 +562,8 @@ results:
     value_note: ''
     sort_value: 0.629
     sort_std: 0.004
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -564,8 +630,8 @@ results:
     value_note: ''
     sort_value: 0.616
     sort_std: 0.009
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

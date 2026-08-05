@@ -60,9 +60,9 @@ proposed_models:
 - GINE + Neural Atoms
 - GCNII + Neural Atoms
 - GatedGCN + Neural Atoms
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.011
+adjusted_mrr: 0.0037
+mrr_dataset_count: 1
 benchmark_categories:
 - LRGB
 benchmark_coverage:
@@ -78,42 +78,42 @@ results:
 - &id001
   dataset: PCQM-Contact
   rows:
-  - model: differential encoding
-    model_key: exphormer
-    model_plain: differential encoding
-    value: 0.4737
-    std: 0.0024
+  - model: FloydNet
+    model_key: floydnet
+    model_plain: FloydNet
+    value: 0.6143
+    std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.4737
-    sort_std: 0.0024
+    sort_value: 0.6143
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: differential encoding
-    model_key: exphormer + lappe
-    model_plain: differential encoding
+  - model: Exphormer
+    model_key: exphormer
+    model_plain: Exphormer
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -142,22 +142,22 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: differential encoding
-    model_key: graphgps + rwse
-    model_plain: differential encoding
-    value: 0.4685
-    std: 0.0009
+  - model: Exphormer + LapPE
+    model_key: exphormer + lappe
+    model_plain: Exphormer + LapPE
+    value: 0.4737
+    std: 0.0024
     metric: MRR
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
     arxiv_id: '2411.12732'
     title: Benchmarking Positional Encodings for GNNs and Graph Transformers
     date: Nov 19, 2024
@@ -170,8 +170,8 @@ results:
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.4685
-    sort_std: 0.0009
+    sort_value: 0.4737
+    sort_std: 0.0024
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -233,10 +233,10 @@ results:
     value_note: ''
     sort_value: 0.467
     sort_std: 0.0004
-    global_rank: 5
-    paper_rank: 47
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 8
+    paper_rank: 77
+    rank_delta: 69
+    rank_delta_abs: 69
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -300,13 +300,46 @@ results:
     value_note: ''
     sort_value: 0.4617
     sort_std: 0.0005
-    global_rank: 12
-    paper_rank: 47
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 15
+    paper_rank: 78
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.4617
+    std: 0.0005
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.03386'
+    title: Learning Long Range Dependencies on Graphs via Random Walks
+    date: Jun 5, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-05'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/BorgwardtLab/NeuralWalker
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.4617
+    sort_std: 0.0005
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -367,10 +400,10 @@ results:
     value_note: ''
     sort_value: 0.4526
     sort_std: 0.0006
-    global_rank: 24
-    paper_rank: 52
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 28
+    paper_rank: 93
+    rank_delta: 65
+    rank_delta_abs: 65
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -414,8 +447,8 @@ results:
     at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
     at_pub_source_date_iso: '2022-05-25'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-06-17'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2024-12-02'
+    value_gap_source_date_label: TMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -426,16 +459,17 @@ results:
     today_delta_significant: false
     true_value: 0.335
     true_std: 0.0003
-    value_gap_source_arxiv: '2406.12059'
-    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_arxiv: '2412.01519'
+    value_gap_source_title: 'ReHub: Linear Complexity Graph Transformers with Adaptive
+      Hub-Spoke Reassignment'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.335
     sort_std: 0.0003
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -475,14 +509,14 @@ results:
     date_iso: '2023-11-02'
     published_venue: ICLR 2023
     published_conference: ICLR 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.3337
+    at_pub_std: 0.0006
+    at_pub_source_arxiv: '2303.06147'
+    at_pub_source_title: 'Exphormer: Sparse Transformers for Graphs'
+    at_pub_source_date_iso: '2023-03-10'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-12-02'
+    value_gap_source_date_label: TMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -491,17 +525,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3337
+    true_std: 0.0006
+    value_gap_source_arxiv: '2412.01519'
+    value_gap_source_title: 'ReHub: Linear Complexity Graph Transformers with Adaptive
+      Hub-Spoke Reassignment'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3337
     sort_std: 0.0006
-    global_rank: 44
+    global_rank: 64
+    paper_rank: 64
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -543,8 +583,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-11-02'
+    value_gap_source_date_label: ICLR 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -553,17 +593,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3262
+    true_std: 0.001
+    value_gap_source_arxiv: '2311.01276'
+    value_gap_source_title: 'Neural Atoms: Propagating Long-range Interaction in Molecular
+      Graphs through Efficient Communication Channel'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3262
     sort_std: 0.001
-    global_rank: 45
+    global_rank: 72
+    paper_rank: 72
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -605,8 +651,8 @@ results:
     at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
     at_pub_source_date_iso: '2022-05-25'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-06-17'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2024-12-02'
+    value_gap_source_date_label: TMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -617,16 +663,17 @@ results:
     today_delta_significant: false
     true_value: 0.3242
     true_std: 0.0008
-    value_gap_source_arxiv: '2406.12059'
-    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_arxiv: '2412.01519'
+    value_gap_source_title: 'ReHub: Linear Complexity Graph Transformers with Adaptive
+      Hub-Spoke Reassignment'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.3242
     sort_std: 0.0008
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -672,8 +719,8 @@ results:
     at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
     at_pub_source_date_iso: '2022-05-25'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-06-17'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2024-12-02'
+    value_gap_source_date_label: TMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -684,16 +731,17 @@ results:
     today_delta_significant: false
     true_value: 0.3174
     true_std: 0.002
-    value_gap_source_arxiv: '2406.12059'
-    value_gap_source_title: A Scalable and Effective Alternative to Graph Transformers
+    value_gap_source_arxiv: '2412.01519'
+    value_gap_source_title: 'ReHub: Linear Complexity Graph Transformers with Adaptive
+      Hub-Spoke Reassignment'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.3174
     sort_std: 0.002
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -739,7 +787,7 @@ results:
     at_pub_source_title: LRGB
     at_pub_source_date_iso: '2022-06-16'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-07-03'
+    value_gap_source_date_iso: '2024-07-26'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -751,17 +799,16 @@ results:
     today_delta_significant: false
     true_value: 0.3161
     true_std: 0.0004
-    value_gap_source_arxiv: '2407.02758'
-    value_gap_source_title: Differential Encoding for Improved Representation Learning
-      Over Graphs
+    value_gap_source_arxiv: '2407.18480'
+    value_gap_source_title: Scalable Graph Compressed Convolutions
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.3161
     sort_std: 0.0004
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -807,8 +854,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-11-02'
+    value_gap_source_date_label: ICLR 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -817,17 +864,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3126
+    true_std: 0.0021
+    value_gap_source_arxiv: '2311.01276'
+    value_gap_source_title: 'Neural Atoms: Propagating Long-range Interaction in Molecular
+      Graphs through Efficient Communication Channel'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3126
     sort_std: 0.0021
-    global_rank: 51
+    global_rank: 84
+    paper_rank: 84
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -869,8 +922,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-11-02'
+    value_gap_source_date_label: ICLR 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -879,17 +932,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3049
+    true_std: 0.0006
+    value_gap_source_arxiv: '2311.01276'
+    value_gap_source_title: 'Neural Atoms: Propagating Long-range Interaction in Molecular
+      Graphs through Efficient Communication Channel'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3049
     sort_std: 0.0006
-    global_rank: 51
+    global_rank: 86
+    paper_rank: 86
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -931,8 +990,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-11-02'
+    value_gap_source_date_label: ICLR 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -941,17 +1000,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2534
+    true_std: 0.02
+    value_gap_source_arxiv: '2311.01276'
+    value_gap_source_title: 'Neural Atoms: Propagating Long-range Interaction in Molecular
+      Graphs through Efficient Communication Channel'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2534
     sort_std: 0.02
-    global_rank: 53
+    global_rank: 91
+    paper_rank: 91
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

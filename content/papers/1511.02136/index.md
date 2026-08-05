@@ -34,7 +34,7 @@ paper_type: method
 proposed_models:
 - 5-hop DCNN
 - DCNNs
-mrr: 0.0031
+mrr: 0.0029
 adjusted_mrr: 0.001
 mrr_dataset_count: 1
 benchmark_categories:
@@ -53,9 +53,9 @@ results:
   dataset: ENZYMES
   is_multi_metric: true
   rows:
-  - model: WL
+  - model: BGNN(m)-CS
     model_key: bgnn(m)-cs
-    model_plain: WL
+    model_plain: BGNN(m)-CS
     metric_values:
     - 0.8068
     - null
@@ -94,9 +94,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: WL
+  - model: BGNN
     model_key: bgnn
-    model_plain: WL
+    model_plain: BGNN
     metric_values:
     - 0.7936
     - null
@@ -135,9 +135,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: WL
+  - model: BGNN(m)-SC
     model_key: bgnn(m)-sc
-    model_plain: WL
+    model_plain: BGNN(m)-SC
     metric_values:
     - 0.7889
     - null
@@ -176,6 +176,89 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    metric_values:
+    - 0.762
+    - null
+    - null
+    metric_stds:
+    - 0.028
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.51
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.06102'
+    title: Towards Better Graph Representation Learning with Parameterized Decomposition
+      & Filtering
+    published_venue: ''
+    date: May 10, 2023
+    date_display: May 2023
+    date_iso: '2023-05-10'
+    codebase_url: https://github.com/qslim/PDF
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 8
+    is_best: false
+    sort_value: 0.762
+    sort_std: 0.028
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    metric_values:
+    - 0.55833
+    - null
+    - null
+    metric_stds:
+    - 0.03516
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    published_venue: ''
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 145
+    is_best: false
+    sort_value: 0.55833
+    sort_std: 0.03516
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: deepwl
     model_key: deepwl
     model_plain: deepwl
@@ -203,9 +286,9 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.3188
-    value_gap_source_arxiv: '1704.02901'
-    value_gap_source_title: Dynamic Edge-Conditioned Filters in Convolutional Neural
-      Networks on Graphs
+    value_gap_source_arxiv: '1901.08296'
+    value_gap_source_title: 'Deep Learning on Attributed Graphs: A Journey from Graphs
+      to Their Embeddings and Back'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -213,8 +296,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2017-04-10'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2018-12-14'
+    value_gap_source_date_label: '2018'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -301,7 +384,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 319
+    global_rank: 337
   - model: 5-hop DCNN
     model_key: 5-hop dcnn
     model_plain: 5-hop DCNN
@@ -363,7 +446,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 322
+    global_rank: 343
   - model: l1logistic
     model_key: l1logistic
     model_plain: l1logistic
@@ -426,7 +509,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 324
+    global_rank: 345
   - model: DCNNs
     model_key: dcnns
     model_plain: DCNNs
@@ -488,7 +571,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 325
+    global_rank: 346
   metrics:
   - Accuracy
   - F (micro)

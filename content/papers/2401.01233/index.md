@@ -47,9 +47,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - GENs
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0238
+adjusted_mrr: 0.0079
+mrr_dataset_count: 1
 benchmark_categories:
 - LRGB
 benchmark_coverage:
@@ -65,6 +65,39 @@ results:
 - &id001
   dataset: PCQM-Contact
   rows:
+  - model: FloydNet
+    model_key: floydnet
+    model_plain: FloydNet
+    value: 0.6143
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.6143
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: Exphormer
     model_key: exphormer
     model_plain: Exphormer
@@ -121,20 +154,20 @@ results:
     value_note: ''
     sort_value: 0.4737
     sort_std: 0.0024
-    global_rank: 1
-    paper_rank: 32
-    rank_delta: 31
-    rank_delta_abs: 31
+    global_rank: 2
+    paper_rank: 36
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: differential encoding
+  - model: Exphormer + LapPE
     model_key: exphormer + lappe
-    model_plain: differential encoding
+    model_plain: Exphormer + LapPE
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -157,19 +190,21 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.4737
     sort_std: 0.0024
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: differential encoding
-    model_key: graphgps + rwse
-    model_plain: differential encoding
-    value: 0.4685
-    std: 0.0009
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.3498
+    std: 0.0005
+    paper_value: 0.3498
+    paper_std: 0.0005
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -179,23 +214,56 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
-    uses_external_data: false
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.4685
-    sort_std: 0.0009
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jan 2, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3337
+    at_pub_std: 0.0006
+    at_pub_source_arxiv: '2205.12454'
+    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
+    at_pub_source_date_iso: '2022-05-25'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-06-05'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.016100000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4703
+    true_std: 0.0014
+    value_gap_source_arxiv: '2406.03386'
+    value_gap_source_title: Learning Long Range Dependencies on Graphs via Random
+      Walks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1205
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4703
+    sort_std: 0.0014
+    global_rank: 5
+    paper_rank: 44
+    rank_delta: 39
+    rank_delta_abs: 39
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
+    comparison_source_arxiv: '2205.12454'
     is_best: false
     is_std_outlier: false
   - model: GatedGCN
@@ -254,15 +322,48 @@ results:
     value_note: ''
     sort_value: 0.467
     sort_std: 0.0004
-    global_rank: 5
-    paper_rank: 34
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 8
+    paper_rank: 44
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
     comparison_source_arxiv: '2205.12454'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.4617
+    std: 0.0005
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.03386'
+    title: Learning Long Range Dependencies on Graphs via Random Walks
+    date: Jun 5, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-05'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/BorgwardtLab/NeuralWalker
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.4617
+    sort_std: 0.0005
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -321,78 +422,10 @@ results:
     value_note: ''
     sort_value: 0.4526
     sort_std: 0.0006
-    global_rank: 24
-    paper_rank: 38
-    rank_delta: 14
-    rank_delta_abs: 14
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    comparison_source_arxiv: '2205.12454'
-    is_best: false
-    is_std_outlier: false
-  - model: GPS
-    model_key: gps
-    model_plain: GPS
-    value: 0.3498
-    std: 0.0005
-    paper_value: 0.3498
-    paper_std: 0.0005
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jan 2, 2024
-    date_display: Jan 2024
-    date_iso: '2024-01-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3337
-    at_pub_std: 0.0006
-    at_pub_source_arxiv: '2205.12454'
-    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    at_pub_source_date_iso: '2022-05-25'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-10-13'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.016100000000000003
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3543
-    true_std: 0.0004
-    value_gap_source_arxiv: '2410.09737'
-    value_gap_source_title: Towards Stable, Globally Expressive Graph Representations
-      with Laplacian Eigenvectors
-    value_gap_source_is_current_paper: false
-    value_gap: 0.004500000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3543
-    sort_std: 0.0004
-    global_rank: 33
-    paper_rank: 34
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 28
+    paper_rank: 52
+    rank_delta: 24
+    rank_delta_abs: 24
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -436,8 +469,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-02'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -446,17 +479,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.352
+    true_std: 0.001
+    value_gap_source_arxiv: '2401.01233'
+    value_gap_source_title: 'GEN: A Practical Alternative to Graph Transformers for
+      Long-Range Graph Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.352
     sort_std: 0.001
-    global_rank: 35
+    global_rank: 42
+    paper_rank: 42
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -498,8 +537,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-02'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -508,22 +547,28 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3516
+    true_std: 0.0102
+    value_gap_source_arxiv: '2401.01233'
+    value_gap_source_title: 'GEN: A Practical Alternative to Graph Transformers for
+      Long-Range Graph Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3516
     sort_std: 0.0102
-    global_rank: 35
+    global_rank: 44
+    paper_rank: 44
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: true
+    is_std_outlier: false
   - model: DRew
     model_key: drew
     model_plain: DRew
@@ -560,32 +605,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-11-19'
-    value_gap_source_date_label: KDD 2024
+    value_gap_source_date_iso: '2024-01-02'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.3442
-    true_std: 0.0006
-    value_gap_source_arxiv: '2411.12732'
-    value_gap_source_title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    value_gap_source_is_current_paper: false
-    value_gap: 0.00019999999999997797
+    true_value: 0.3444
+    true_std: 0.0017
+    value_gap_source_arxiv: '2401.01233'
+    value_gap_source_title: 'GEN: A Practical Alternative to Graph Transformers for
+      Long-Range Graph Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.3442
-    sort_std: 0.0006
-    global_rank: 38
-    paper_rank: 38
+    sort_value: 0.3444
+    sort_std: 0.0017
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -627,8 +673,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-02'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -637,17 +683,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3441
+    true_std: 0.0008
+    value_gap_source_arxiv: '2401.01233'
+    value_gap_source_title: 'GEN: A Practical Alternative to Graph Transformers for
+      Long-Range Graph Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3441
     sort_std: 0.0008
-    global_rank: 39
+    global_rank: 50
+    paper_rank: 50
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -689,8 +741,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-02'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -699,17 +751,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3414
+    true_std: 0.0006
+    value_gap_source_arxiv: '2401.01233'
+    value_gap_source_title: 'GEN: A Practical Alternative to Graph Transformers for
+      Long-Range Graph Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3414
     sort_std: 0.0006
-    global_rank: 39
+    global_rank: 53
+    paper_rank: 53
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -751,8 +809,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-01-27'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -761,17 +819,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    sort_value: 0.3395
-    sort_std: 0.0013
-    global_rank: 39
-    has_value_gap: false
-    has_value_note: false
+    true_value: 0.3395
+    true_std: null
+    value_gap_source_arxiv: '2601.19094'
+    value_gap_source_title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    value_gap_source_is_current_paper: false
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.3395
+    sort_std: null
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -813,8 +876,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-02'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -823,17 +886,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3364
+    true_std: 0.0008
+    value_gap_source_arxiv: '2401.01233'
+    value_gap_source_title: 'GEN: A Practical Alternative to Graph Transformers for
+      Long-Range Graph Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3364
     sort_std: 0.0008
-    global_rank: 40
+    global_rank: 59
+    paper_rank: 59
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -875,8 +944,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-01-02'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -885,17 +954,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3287
+    true_std: 0.002
+    value_gap_source_arxiv: '2401.01233'
+    value_gap_source_title: 'GEN: A Practical Alternative to Graph Transformers for
+      Long-Range Graph Modeling'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3287
     sort_std: 0.002
-    global_rank: 44
+    global_rank: 68
+    paper_rank: 68
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

@@ -75,9 +75,9 @@ results:
 - &id001
   dataset: ogbl-collab
   rows:
-  - model: SIGN
+  - model: PROXI
     model_key: proxi
-    model_plain: SIGN
+    model_plain: PROXI
     value: 0.765
     std: 0.0027
     metric: Hits@50
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SIGN
+  - model: OGB Leader
     model_key: ogb leader
-    model_plain: SIGN
+    model_plain: OGB Leader
     value: 0.7129
     std: 0.0018
     metric: Hits@50
@@ -277,6 +277,40 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6621
+    std: 0.0033
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.17475'
+    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
+      Networks
+    date: Sep 26, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-26'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/tensor-gales/HeteLinkPred
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.6621
+    sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: AGDN
     model_key: agdn
     model_plain: AGDN
@@ -334,13 +368,47 @@ results:
     value_note: ''
     sort_value: 0.448
     sort_std: 0.0542
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: true
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4438
+    std: 0.0347
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.06193'
+    title: 'Weak Models Can be Good Teachers: A Case Study on Link Prediction with
+      MLPs'
+    date: Apr 8, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 88
+    sort_value: 0.4438
+    sort_std: 0.0347
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

@@ -214,6 +214,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: NE
+    model_key: ne
+    model_plain: NE
+    value: 0.7574
+    std: null
+    metric: ACC
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.10866'
+    title: Unsupervised Network Embedding Beyond Homophily
+    date: Mar 21, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-21'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/zhiqiangzhongddu/SELENE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7574
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: DeepWalk
     model_key: deepwalk
     model_plain: DeepWalk
@@ -271,8 +304,8 @@ results:
     value_note: ''
     sort_value: 0.7438
     sort_std: null
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -339,8 +372,8 @@ results:
     value_note: ''
     sort_value: 0.7297
     sort_std: null
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -407,8 +440,8 @@ results:
     value_note: ''
     sort_value: 0.7215
     sort_std: null
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -475,8 +508,8 @@ results:
     value_note: ''
     sort_value: 0.7199
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -543,8 +576,8 @@ results:
     value_note: ''
     sort_value: 0.6971
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -611,13 +644,46 @@ results:
     value_note: ''
     sort_value: 0.6392
     sort_std: null
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.4868
+    std: null
+    metric: ACC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.10866'
+    title: Unsupervised Network Embedding Beyond Homophily
+    date: Mar 21, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-21'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/zhiqiangzhongddu/SELENE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 20
+    sort_value: 0.4868
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -679,8 +745,8 @@ results:
     value_note: ''
     sort_value: 0.4567
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -77,6 +77,244 @@ results:
 - &id001
   dataset: MD17
   rows:
+  - model: Equiformer
+    model_key: equiformer
+    model_plain: Equiformer
+    value: 0.286
+    std: null
+    metric: Force
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2306.09375'
+    title: Symmetry-Informed Geometric Representation for Molecules, Proteins, and
+      Crystalline Materials
+    date: Jun 15, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-15'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/chao1224/Geom3D
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.286
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SphereNet
+    model_key: spherenet
+    model_plain: SphereNet
+    value: 1.5
+    std: null
+    paper_value: 1.5
+    paper_std: null
+    metric: Force
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Force MAE in meV/A on 10,000 randomly sampled test configurations
+    date: Oct 13, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-13'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.546
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 0.954
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.546
+    sort_std: null
+    global_rank: 2
+    paper_rank: 6
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GemNet-T
+    model_key: gemnet-t
+    model_plain: GemNet-T
+    value: 1.5
+    std: null
+    paper_value: 1.5
+    paper_std: null
+    metric: Force
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Force MAE in meV/A on 10,000 randomly sampled test configurations
+    date: Oct 13, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-13'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.558
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 0.942
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.558
+    sort_std: null
+    global_rank: 3
+    paper_rank: 6
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PaiNN
+    model_key: painn
+    model_plain: PaiNN
+    value: 3.8
+    std: null
+    paper_value: 3.8
+    paper_std: null
+    metric: Force
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Force MAE in meV/A on 10,000 randomly sampled test configurations
+    date: Oct 13, 2022
+    date_display: Oct 2022
+    date_iso: '2022-10-13'
+    published_venue: TMLR 2022
+    published_conference: TMLR 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.572
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 3.2279999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.572
+    sort_std: null
+    global_rank: 4
+    paper_rank: 9
+    rank_delta: 5
+    rank_delta_abs: 5
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: NequIP
     model_key: nequip
     model_plain: NequIP
@@ -134,76 +372,8 @@ results:
     value_note: ''
     sort_value: 1.1
     sort_std: null
-    global_rank: 1
-    paper_rank: 1
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SphereNet
-    model_key: spherenet
-    model_plain: SphereNet
-    value: 1.5
-    std: null
-    paper_value: 1.5
-    paper_std: null
-    metric: Force
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Force MAE in meV/A on 10,000 randomly sampled test configurations
-    date: Oct 13, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-13'
-    published_venue: TMLR 2022
-    published_conference: TMLR 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-13'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 1.5
-    true_std: null
-    value_gap_source_arxiv: '2210.07237'
-    value_gap_source_title: 'Forces are not Enough: Benchmark and Critical Evaluation
-      for Machine Learning Force Fields with Molecular Simulations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 1.5
-    sort_std: null
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -213,12 +383,12 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GemNet-T
-    model_key: gemnet-t
-    model_plain: GemNet-T
-    value: 1.5
+  - model: SchNet
+    model_key: schnet
+    model_plain: SchNet
+    value: 16.8
     std: null
-    paper_value: 1.5
+    paper_value: 16.8
     paper_std: null
     metric: Force
     higher_is_better: false
@@ -249,33 +419,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-13'
-    value_gap_source_date_label: TMLR 2022
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 1.5
+    today_delta_significant: true
+    true_value: 1.203
     true_std: null
-    value_gap_source_arxiv: '2210.07237'
-    value_gap_source_title: 'Forces are not Enough: Benchmark and Critical Evaluation
-      for Machine Learning Force Fields with Molecular Simulations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 15.597000000000001
     has_value_note: false
     value_note: ''
-    sort_value: 1.5
+    sort_value: 1.203
     sort_std: null
-    global_rank: 3
-    paper_rank: 3
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    global_rank: 6
+    paper_rank: 13
+    rank_delta: 7
+    rank_delta_abs: 7
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -338,76 +508,8 @@ results:
     value_note: ''
     sort_value: 1.7
     sort_std: null
-    global_rank: 4
-    paper_rank: 4
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PaiNN
-    model_key: painn
-    model_plain: PaiNN
-    value: 3.8
-    std: null
-    paper_value: 3.8
-    paper_std: null
-    metric: Force
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Force MAE in meV/A on 10,000 randomly sampled test configurations
-    date: Oct 13, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-13'
-    published_venue: TMLR 2022
-    published_conference: TMLR 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-13'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 3.8
-    true_std: null
-    value_gap_source_arxiv: '2210.07237'
-    value_gap_source_title: 'Forces are not Enough: Benchmark and Critical Evaluation
-      for Machine Learning Force Fields with Molecular Simulations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 3.8
-    sort_std: null
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -474,8 +576,8 @@ results:
     value_note: ''
     sort_value: 4.2
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -542,8 +644,8 @@ results:
     value_note: ''
     sort_value: 8.9
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -610,76 +712,8 @@ results:
     value_note: ''
     sort_value: 9.9
     sort_std: null
-    global_rank: 8
-    paper_rank: 8
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    value: 16.8
-    std: null
-    paper_value: 16.8
-    paper_std: null
-    metric: Force
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Force MAE in meV/A on 10,000 randomly sampled test configurations
-    date: Oct 13, 2022
-    date_display: Oct 2022
-    date_iso: '2022-10-13'
-    published_venue: TMLR 2022
-    published_conference: TMLR 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-13'
-    value_gap_source_date_label: TMLR 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 16.8
-    true_std: null
-    value_gap_source_arxiv: '2210.07237'
-    value_gap_source_title: 'Forces are not Enough: Benchmark and Critical Evaluation
-      for Machine Learning Force Fields with Molecular Simulations'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 16.8
-    sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

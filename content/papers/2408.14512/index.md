@@ -49,7 +49,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - TEA-GLM
-mrr: 0.0019
+mrr: 0.0017
 adjusted_mrr: 0.0006
 mrr_dataset_count: 1
 benchmark_categories:
@@ -67,9 +67,9 @@ results:
 - &id001
   dataset: Amazon-Computers
   rows:
-  - model: C (orthogonal)
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: C (orthogonal)
+    model_plain: GraphTARIF
     value: 0.9461
     std: 0.0017
     metric: Accuracy
@@ -159,9 +159,9 @@ results:
     sort_value: 0.9412
     sort_std: 0.0008
     global_rank: 2
-    paper_rank: 531
-    rank_delta: 529
-    rank_delta_abs: 529
+    paper_rank: 601
+    rank_delta: 599
+    rank_delta_abs: 599
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -228,15 +228,49 @@ results:
     sort_value: 0.9398
     sort_std: 0.0022
     global_rank: 3
-    paper_rank: 518
-    rank_delta: 515
-    rank_delta_abs: 515
+    paper_rank: 584
+    rank_delta: 581
+    rank_delta_abs: 581
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Tokenized Graph Transformer with Neighborhood Augmentation
       for Node Classification in Large Graphs
     comparison_source_arxiv: '2305.12677'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.9351
+    std: 0.0006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    venue: null
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 8
+    sort_value: 0.9351
+    sort_std: 0.0006
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: DIFFormer
@@ -276,8 +310,8 @@ results:
       Time'
     at_pub_source_date_iso: '2024-03-02'
     at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2025-10-24'
+    value_gap_source_date_label: NeurIPS 2025
     gap_vs_at_pub: 0.29090000000000005
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -288,19 +322,18 @@ results:
     today_delta_significant: true
     true_value: 0.9199
     true_std: 0.0076
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: 0.29090000000000005
     has_value_note: false
     value_note: ''
     sort_value: 0.9199
     sort_std: 0.0076
-    global_rank: 27
-    paper_rank: 517
-    rank_delta: 490
-    rank_delta_abs: 490
+    global_rank: 30
+    paper_rank: 582
+    rank_delta: 552
+    rank_delta_abs: 552
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -346,8 +379,8 @@ results:
       Time'
     at_pub_source_date_iso: '2024-03-02'
     at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2025-12-09'
+    value_gap_source_date_label: LoG 2025
     gap_vs_at_pub: 0.378
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -358,19 +391,19 @@ results:
     today_delta_significant: true
     true_value: 0.912
     true_std: 0.0029
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
+    value_gap_source_arxiv: '2512.08798'
+    value_gap_source_title: Can TabPFN Compete with GNNs for Node Classification via
+      Graph Tabularization?
     value_gap_source_is_current_paper: false
     value_gap: 0.378
     has_value_note: false
     value_note: ''
     sort_value: 0.912
     sort_std: 0.0029
-    global_rank: 62
-    paper_rank: 524
-    rank_delta: 462
-    rank_delta_abs: 462
+    global_rank: 66
+    paper_rank: 593
+    rank_delta: 527
+    rank_delta_abs: 527
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -437,10 +470,10 @@ results:
     value_note: ''
     sort_value: 0.9112
     sort_std: 0.0019
-    global_rank: 65
-    paper_rank: 530
-    rank_delta: 465
-    rank_delta_abs: 465
+    global_rank: 69
+    paper_rank: 600
+    rank_delta: 531
+    rank_delta_abs: 531
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -507,10 +540,10 @@ results:
     value_note: ''
     sort_value: 0.8798
     sort_std: 0.0081
-    global_rank: 256
-    paper_rank: 518
-    rank_delta: 262
-    rank_delta_abs: 262
+    global_rank: 270
+    paper_rank: 585
+    rank_delta: 315
+    rank_delta_abs: 315
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -577,10 +610,10 @@ results:
     value_note: ''
     sort_value: 0.8775
     sort_std: null
-    global_rank: 274
-    paper_rank: 516
-    rank_delta: 242
-    rank_delta_abs: 242
+    global_rank: 288
+    paper_rank: 581
+    rank_delta: 293
+    rank_delta_abs: 293
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -645,10 +678,10 @@ results:
     value_note: ''
     sort_value: 0.875
     sort_std: 0.006
-    global_rank: 288
-    paper_rank: 533
-    rank_delta: 245
-    rank_delta_abs: 245
+    global_rank: 303
+    paper_rank: 603
+    rank_delta: 300
+    rank_delta_abs: 300
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -713,10 +746,113 @@ results:
     value_note: ''
     sort_value: 0.8578
     sort_std: 0.0013
-    global_rank: 337
-    paper_rank: 486
-    rank_delta: 149
-    rank_delta_abs: 149
+    global_rank: 367
+    paper_rank: 543
+    rank_delta: 176
+    rank_delta_abs: 176
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8463
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.11907'
+    title: 'GraphFM: A generalist graph transformer that learns transferable representations
+      across diverse domains'
+    date: Jul 16, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-16'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/nerdslab/GraphFM
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 394
+    sort_value: 0.8463
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP+LLM_features
+    model_key: mlp+llm_features
+    model_plain: MLP+LLM_features
+    value: 0.42
+    std: 0.006
+    paper_value: 0.42
+    paper_std: 0.006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: llm_features
+    feature_source_evidence: The paper uses pretrained BERT node features for the
+      MLP baseline.
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Supervised learning on training dataset
+    date: Aug 25, 2024
+    date_display: Aug 2024
+    date_iso: '2024-08-25'
+    published_venue: NeurIPS 2024
+    published_conference: NeurIPS 2024
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-27'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6174
+    true_std: null
+    value_gap_source_arxiv: '2501.15755'
+    value_gap_source_title: 'GraphICL: Unlocking Graph Learning Potential in LLMs
+      through Structured Prompt Design'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.19739999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6174
+    sort_std: null
+    global_rank: 583
+    paper_rank: 602
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -760,8 +896,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-08-25'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2026-05-08'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -772,86 +908,17 @@ results:
     today_delta_significant: false
     true_value: 0.578
     true_std: 0.002
-    value_gap_source_arxiv: '2408.14512'
-    value_gap_source_title: 'LLMs as Zero-shot Graph Learners: Alignment of GNN Representations
-      with LLM Token Embeddings'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2605.07357'
+    value_gap_source_title: 'GraphReAct: Reasoning and Acting for Multi-step Graph
+      Inference'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.578
     sort_std: 0.002
-    global_rank: 521
-    paper_rank: 521
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP+LLM_features
-    model_key: mlp+llm_features
-    model_plain: MLP+LLM_features
-    value: 0.42
-    std: 0.006
-    paper_value: 0.42
-    paper_std: 0.006
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: llm_features
-    feature_source_evidence: The paper uses pretrained BERT node features for the
-      MLP baseline.
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Supervised learning on training dataset
-    date: Aug 25, 2024
-    date_display: Aug 2024
-    date_iso: '2024-08-25'
-    published_venue: NeurIPS 2024
-    published_conference: NeurIPS 2024
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-08-25'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.42
-    true_std: 0.006
-    value_gap_source_arxiv: '2408.14512'
-    value_gap_source_title: 'LLMs as Zero-shot Graph Learners: Alignment of GNN Representations
-      with LLM Token Embeddings'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.42
-    sort_std: 0.006
-    global_rank: 532
-    paper_rank: 532
+    global_rank: 589
+    paper_rank: 589
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -897,8 +964,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-08-25'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2026-05-08'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -909,17 +976,17 @@ results:
     today_delta_significant: false
     true_value: 0.372
     true_std: 0.01
-    value_gap_source_arxiv: '2408.14512'
-    value_gap_source_title: 'LLMs as Zero-shot Graph Learners: Alignment of GNN Representations
-      with LLM Token Embeddings'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2605.07357'
+    value_gap_source_title: 'GraphReAct: Reasoning and Acting for Multi-step Graph
+      Inference'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.372
     sort_std: 0.01
-    global_rank: 540
-    paper_rank: 540
+    global_rank: 611
+    paper_rank: 611
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -965,8 +1032,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-08-25'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2026-05-08'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -977,17 +1044,17 @@ results:
     today_delta_significant: false
     true_value: 0.351
     true_std: 0.031
-    value_gap_source_arxiv: '2408.14512'
-    value_gap_source_title: 'LLMs as Zero-shot Graph Learners: Alignment of GNN Representations
-      with LLM Token Embeddings'
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2605.07357'
+    value_gap_source_title: 'GraphReAct: Reasoning and Acting for Multi-step Graph
+      Inference'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.351
     sort_std: 0.031
-    global_rank: 542
-    paper_rank: 542
+    global_rank: 613
+    paper_rank: 613
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -996,7 +1063,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   rank_metric: Accuracy
   higher_is_better: true
   experiment_scope: node-level

@@ -60,8 +60,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - R-HGNN
-mrr: 0.0246
-adjusted_mrr: 0.0164
+mrr: 0.0219
+adjusted_mrr: 0.0146
 mrr_dataset_count: 2
 benchmark_categories:
 - OGB
@@ -83,9 +83,9 @@ results:
 - &id002
   dataset: IMDB
   rows:
-  - model: SlotGAT
+  - model: GAT BGNN(m)-SC
     model_key: gat bgnn(m)-sc
-    model_plain: SlotGAT
+    model_plain: GAT BGNN(m)-SC
     value: 0.8133
     std: 0.0179
     metric: Micro-F1
@@ -116,9 +116,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: SAGE BAN
     model_key: sage ban
-    model_plain: SlotGAT
+    model_plain: SAGE BAN
     value: 0.8073
     std: 0.002
     metric: Micro-F1
@@ -149,9 +149,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: GAT BGNN(m)-CS
     model_key: gat bgnn(m)-cs
-    model_plain: SlotGAT
+    model_plain: GAT BGNN(m)-CS
     value: 0.8033
     std: 0.0094
     metric: Micro-F1
@@ -241,9 +241,9 @@ results:
     sort_value: 0.7311
     sort_std: null
     global_rank: 34
-    paper_rank: 89
-    rank_delta: 55
-    rank_delta_abs: 55
+    paper_rank: 93
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -311,9 +311,9 @@ results:
     sort_value: 0.6813
     sort_std: 0.0083
     global_rank: 45
-    paper_rank: 90
-    rank_delta: 45
-    rank_delta_abs: 45
+    paper_rank: 95
+    rank_delta: 50
+    rank_delta_abs: 50
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -381,9 +381,9 @@ results:
     sort_value: 0.6808
     sort_std: 0.0049
     global_rank: 46
-    paper_rank: 83
-    rank_delta: 37
-    rank_delta_abs: 37
+    paper_rank: 87
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -451,9 +451,9 @@ results:
     sort_value: 0.6769
     sort_std: 0.0064
     global_rank: 49
-    paper_rank: 78
-    rank_delta: 29
-    rank_delta_abs: 29
+    paper_rank: 82
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -498,8 +498,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-07-06'
-    value_gap_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2024-05-03'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -510,8 +510,9 @@ results:
     today_delta_significant: true
     true_value: 0.672
     true_std: 0.0057
-    value_gap_source_arxiv: '2207.02547'
-    value_gap_source_title: Simple and Efficient Heterogeneous Graph Neural Network
+    value_gap_source_arxiv: '2405.01927'
+    value_gap_source_title: 'SlotGAT: Slot-based Message Passing for Heterogeneous
+      Graphs'
     value_gap_source_is_current_paper: false
     value_gap: 0.03550000000000009
     has_value_note: false
@@ -519,9 +520,9 @@ results:
     sort_value: 0.672
     sort_std: 0.0057
     global_rank: 55
-    paper_rank: 75
-    rank_delta: 20
-    rank_delta_abs: 20
+    paper_rank: 78
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -587,9 +588,9 @@ results:
     sort_value: 0.6651
     sort_std: 0.0028
     global_rank: 61
-    paper_rank: 75
-    rank_delta: 14
-    rank_delta_abs: 14
+    paper_rank: 78
+    rank_delta: 17
+    rank_delta_abs: 17
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -633,8 +634,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-07-06'
-    value_gap_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2024-05-03'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -645,150 +646,21 @@ results:
     today_delta_significant: false
     true_value: 0.6422
     true_std: 0.0103
-    value_gap_source_arxiv: '2207.02547'
-    value_gap_source_title: Simple and Efficient Heterogeneous Graph Neural Network
+    value_gap_source_arxiv: '2405.01927'
+    value_gap_source_title: 'SlotGAT: Slot-based Message Passing for Heterogeneous
+      Graphs'
     value_gap_source_is_current_paper: false
     value_gap: 0.008499999999999952
     has_value_note: false
     value_note: ''
     sort_value: 0.6422
     sort_std: 0.0103
-    global_rank: 71
-    paper_rank: 76
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 73
+    paper_rank: 80
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GraphSAGE
-    model_key: graphsage
-    model_plain: GraphSAGE
-    value: 0.6276
-    std: null
-    paper_value: 0.6276
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 24, 2021
-    date_display: May 2021
-    date_iso: '2021-05-24'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.6206
-    true_std: null
-    value_gap_source_arxiv: '2403.04780'
-    value_gap_source_title: Graph-oriented Instruction Tuning of Large Language Models
-      for Generic Graph Mining
-    value_gap_source_is_current_paper: false
-    value_gap: 0.007000000000000006
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6206
-    sort_std: null
-    global_rank: 82
-    paper_rank: 79
-    rank_delta: -3
-    rank_delta_abs: 3
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.5514
-    std: null
-    paper_value: 0.5514
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 24, 2021
-    date_display: May 2021
-    date_iso: '2021-05-24'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.5514
-    sort_std: null
-    global_rank: 112
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -830,32 +702,169 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-11-22'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2021-05-24'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.464
-    true_std: 0.01
-    value_gap_source_arxiv: '2511.17923'
-    value_gap_source_title: Towards Efficient LLM-aware Heterogeneous Graph Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.17770000000000002
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6417
+    true_std: null
+    value_gap_source_arxiv: '2105.11122'
+    value_gap_source_title: Heterogeneous Graph Representation Learning with Relation
+      Awareness
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.464
-    sort_std: 0.01
-    global_rank: 133
-    paper_rank: 72
-    rank_delta: -61
-    rank_delta_abs: 61
-    rank_delta_direction: better
-    has_value_gap: true
+    sort_value: 0.6417
+    sort_std: null
+    global_rank: 74
+    paper_rank: 74
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.6276
+    std: null
+    paper_value: 0.6276
+    paper_std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 24, 2021
+    date_display: May 2021
+    date_iso: '2021-05-24'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-24'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6276
+    true_std: null
+    value_gap_source_arxiv: '2105.11122'
+    value_gap_source_title: Heterogeneous Graph Representation Learning with Relation
+      Awareness
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6276
+    sort_std: null
+    global_rank: 83
+    paper_rank: 83
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.5514
+    std: null
+    paper_value: 0.5514
+    paper_std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 24, 2021
+    date_display: May 2021
+    date_iso: '2021-05-24'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-24'
+    value_gap_source_date_label: '2021'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5514
+    true_std: null
+    value_gap_source_arxiv: '2105.11122'
+    value_gap_source_title: Heterogeneous Graph Representation Learning with Relation
+      Awareness
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5514
+    sort_std: null
+    global_rank: 117
+    paper_rank: 117
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -873,9 +882,9 @@ results:
 - &id001
   dataset: ogbn-mag
   rows:
-  - model: ALS (GraphSAINT)
+  - model: LMSPS+LP+MS
     model_key: lmsps+lp+ms
-    model_plain: ALS (GraphSAINT)
+    model_plain: LMSPS+LP+MS
     value: 0.5784
     std: 0.0022
     metric: Accuracy
@@ -906,27 +915,27 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ALS (GraphSAINT)
+  - model: SeHGNN+emb+ms
     model_key: sehgnn+emb+ms
-    model_plain: ALS (GraphSAINT)
+    model_plain: SeHGNN+emb+ms
     value: 0.5719
     std: 0.0012
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2207.02547'
-    title: Simple and Efficient Heterogeneous Graph Neural Network
-    date: Jul 6, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-06'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
+    arxiv_id: '2307.08430'
+    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
+    date: Jul 17, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-17'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
     uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
@@ -939,9 +948,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ALS (GraphSAINT)
+  - model: SeHGNN+ms
     model_key: sehgnn+ms
-    model_plain: ALS (GraphSAINT)
+    model_plain: SeHGNN+ms
     value: 0.5671
     std: 0.0014
     metric: Accuracy
@@ -1008,8 +1017,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-10-03'
+    value_gap_source_date_label: TMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1019,17 +1028,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.5204
-    true_std: 0.0026
-    value_gap_source_arxiv: '2206.04355'
-    value_gap_source_title: Graph Attention Multi-Layer Perceptron
+    true_std: null
+    value_gap_source_arxiv: '2410.02158'
+    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
+      Representation Learning'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.5204
-    sort_std: 0.0026
-    global_rank: 24
-    paper_rank: 24
+    sort_std: null
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1075,32 +1085,100 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-05-31'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.4927
-    true_std: 0.0061
-    value_gap_source_arxiv: '2205.15653'
-    value_gap_source_title: Label-Enhanced Graph Neural Network for Semi-supervised
-      Node Classification
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5023
+    true_std: 0.0048
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
     value_gap_source_is_current_paper: false
-    value_gap: 0.0006000000000000449
+    value_gap: 0.010199999999999987
     has_value_note: false
     value_note: ''
-    sort_value: 0.4927
-    sort_std: 0.0061
-    global_rank: 34
-    paper_rank: 34
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.5023
+    sort_std: 0.0048
+    global_rank: 42
+    paper_rank: 45
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.3767
+    std: null
+    paper_value: 0.3767
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to ogbn-mag (score=93)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 24, 2021
+    date_display: May 2021
+    date_iso: '2021-05-24'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.486
+    true_std: 0.0029
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10930000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.486
+    sort_std: 0.0029
+    global_rank: 47
+    paper_rank: 64
+    rank_delta: 17
+    rank_delta_abs: 17
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1163,8 +1241,8 @@ results:
     value_note: ''
     sort_value: 0.4811
     sort_std: 0.0048
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1210,8 +1288,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-24'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1220,17 +1298,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4781
+    true_std: null
+    value_gap_source_arxiv: '2105.11122'
+    value_gap_source_title: Heterogeneous Graph Representation Learning with Relation
+      Awareness
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4781
     sort_std: null
-    global_rank: 37
+    global_rank: 50
+    paper_rank: 50
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1272,8 +1356,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-05-24'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1282,17 +1366,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4728
+    true_std: null
+    value_gap_source_arxiv: '2105.11122'
+    value_gap_source_title: Heterogeneous Graph Representation Learning with Relation
+      Awareness
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4728
     sort_std: null
-    global_rank: 40
+    global_rank: 54
+    paper_rank: 54
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1356,84 +1446,16 @@ results:
     value_note: ''
     sort_value: 0.4678
     sort_std: 0.0067
-    global_rank: 40
-    paper_rank: 42
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 57
+    paper_rank: 66
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Scalable and Adaptive Graph Neural Networks with Self-Label-Enhanced
       Training
     comparison_source_arxiv: '2104.09376'
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.3767
-    std: null
-    paper_value: 0.3767
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to ogbn-mag (score=93)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 24, 2021
-    date_display: May 2021
-    date_iso: '2021-05-24'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3767
-    true_std: null
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3767
-    sort_std: null
-    global_rank: 42
-    paper_rank: 42
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -1473,37 +1495,71 @@ results:
       Training
     at_pub_source_date_iso: '2021-04-19'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.044399999999999995
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: true
     insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
+    improvement_surpassed_since_pub: true
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3487
-    true_std: null
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
+    today_delta_significant: true
+    true_value: 0.429
+    true_std: 0.005
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.08029999999999998
     has_value_note: false
     value_note: ''
-    sort_value: 0.3487
-    sort_std: null
-    global_rank: 46
-    paper_rank: 46
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.429
+    sort_std: 0.005
+    global_rank: 60
+    paper_rank: 69
+    rank_delta: 9
+    rank_delta_abs: 9
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Scalable and Adaptive Graph Neural Networks with Self-Label-Enhanced
       Training
     comparison_source_arxiv: '2104.09376'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.3732
+    std: 0.0033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.27387'
+    title: 'Robust Learning on Heterogeneous Graphs with Heterophily: A Graph Structure
+      Learning Approach'
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 66
+    sort_value: 0.3732
+    sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MLP
@@ -1543,8 +1599,8 @@ results:
       Training
     at_pub_source_date_iso: '2021-04-19'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-07-17'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2021-05-24'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: 0.05509999999999998
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1552,23 +1608,23 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.2692
-    true_std: 0.0026
-    value_gap_source_arxiv: '2307.08430'
-    value_gap_source_title: Long-range Meta-path Search on Large-scale Heterogeneous
-      Graphs
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05509999999999998
+    today_delta_significant: false
+    true_value: 0.3243
+    true_std: null
+    value_gap_source_arxiv: '2105.11122'
+    value_gap_source_title: Heterogeneous Graph Representation Learning with Relation
+      Awareness
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.2692
-    sort_std: 0.0026
-    global_rank: 51
-    paper_rank: 49
-    rank_delta: -2
-    rank_delta_abs: 2
-    rank_delta_direction: better
+    sort_value: 0.3243
+    sort_std: null
+    global_rank: 72
+    paper_rank: 72
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Scalable and Adaptive Graph Neural Networks with Self-Label-Enhanced

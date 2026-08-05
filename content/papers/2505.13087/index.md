@@ -56,9 +56,9 @@ results:
 - &id001
   dataset: AQSOL
   rows:
-  - model: 3WLGNN-E
+  - model: Ours(100K)
     model_key: ours(100k)
-    model_plain: 3WLGNN-E
+    model_plain: Ours(100K)
     value: 0.92
     std: 0.009
     metric: MAE
@@ -89,9 +89,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: 3WLGNN-E
+  - model: GatedGCN-PE/E(500K)
     model_key: gatedgcn-pe/e(500k)
-    model_plain: 3WLGNN-E
+    model_plain: GatedGCN-PE/E(500K)
     value: 0.996
     std: 0.008
     metric: MAE
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: 3WLGNN-E
+  - model: GatedGCN-E-PE
     model_key: gatedgcn-e-pe
-    model_plain: 3WLGNN-E
+    model_plain: GatedGCN-E-PE
     value: 0.996
     std: 0.008
     metric: MAE
@@ -836,6 +836,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 1.402
+    std: 0.013
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 23
+    sort_value: 1.402
+    sort_std: 0.013
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: None
     model_key: none
     model_plain: None
@@ -900,6 +933,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 1.744
+    std: 0.016
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 28
+    sort_value: 1.744
+    sort_std: 0.016
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

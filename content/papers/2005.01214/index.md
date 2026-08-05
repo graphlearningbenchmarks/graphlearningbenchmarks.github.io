@@ -33,8 +33,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GHC-Cycles
-mrr: 0.0631
-adjusted_mrr: 0.0631
+mrr: 0.0614
+adjusted_mrr: 0.0614
 mrr_dataset_count: 3
 benchmark_categories:
 - TU Dortmund
@@ -123,9 +123,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: PPGN
     model_key: ppgn
-    model_plain: GPM
+    model_plain: PPGN
     value: 1.0
     std: null
     metric: Accuracy
@@ -156,9 +156,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: RW-AgentNet
     model_key: rw-agentnet
-    model_plain: GPM
+    model_plain: RW-AgentNet
     value: 1.0
     std: null
     metric: Accuracy
@@ -189,9 +189,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GPM
+  - model: AgentNet
     model_key: agentnet
-    model_plain: GPM
+    model_plain: AgentNet
     value: 1.0
     std: null
     metric: Accuracy
@@ -217,6 +217,39 @@ results:
     global_rank: 3
     sort_value: 1.0
     sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 1.0
+    std: 0.0
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: Node Positional Encoding with Laplacian Eigenvectors
+    is_global_top: true
+    global_rank: 9
+    sort_value: 1.0
+    sort_std: 0.0
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -507,9 +540,9 @@ results:
 - &id002
   dataset: IMDB-BINARY
   rows:
-  - model: DMoNPool-TIP
+  - model: GCFL
     model_key: gcfl
-    model_plain: DMoNPool-TIP
+    model_plain: GCFL
     value: 0.8299
     std: 0.052
     metric: Accuracy
@@ -540,11 +573,77 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DMoNPool-TIP
-    model_key: gat +del-f
-    model_plain: DMoNPool-TIP
-    value: 0.7863
-    std: 0.0054
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.815
+    std: 0.024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.815
+    sort_std: 0.024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN+BEC
+    model_key: gin+bec
+    model_plain: GIN+BEC
+    value: 0.808
+    std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.808
+    sort_std: 0.033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.798
+    std: 0.023
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -554,54 +653,89 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.16402'
-    title: Graph Learning with Distributional Edge Layouts
-    date: Feb 26, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-26'
-    venue: arXiv.org
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.7863
-    sort_std: 0.0054
+    global_rank: 5
+    sort_value: 0.798
+    sort_std: 0.023
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DMoNPool-TIP
-    model_key: graph transformer +del-f
-    model_plain: DMoNPool-TIP
-    value: 0.7828
-    std: 0.0027
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.751
+    std: 0.051
+    paper_value: 0.751
+    paper_std: 0.051
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2402.16402'
-    title: Graph Learning with Distributional Edge Layouts
-    date: Feb 26, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-26'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7828
-    sort_std: 0.0027
-    comparison_type: global_top
+    table_ref: Table 1
+    source_ref: Literature
+    variant_inference_reason: 'dataset: fuzzy match to imdb-binary (score=84)'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: One run of stratified 10-folds CV
+    date: May 3, 2020
+    date_display: May 2020
+    date_iso: '2020-05-03'
+    published_venue: ICML 2020
+    published_conference: ICML 2020
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-03-03'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.781
+    true_std: 0.035
+    value_gap_source_arxiv: '2503.01079'
+    value_gap_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.030000000000000027
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.781
+    sort_std: 0.035
+    global_rank: 15
+    paper_rank: 46
+    rank_delta: 31
+    rank_delta_abs: 31
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
@@ -662,8 +796,8 @@ results:
     value_note: ''
     sort_value: 0.769
     sort_std: 0.036
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -672,73 +806,6 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.751
-    std: 0.051
-    paper_value: 0.751
-    paper_std: 0.051
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Literature
-    variant_inference_reason: 'dataset: fuzzy match to imdb-binary (score=84)'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: One run of stratified 10-folds CV
-    date: May 3, 2020
-    date_display: May 2020
-    date_iso: '2020-05-03'
-    published_venue: ICML 2020
-    published_conference: ICML 2020
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-02-26'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.7641
-    true_std: 0.0093
-    value_gap_source_arxiv: '2402.16402'
-    value_gap_source_title: Graph Learning with Distributional Edge Layouts
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0131
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7641
-    sort_std: 0.0093
-    global_rank: 14
-    paper_rank: 29
-    rank_delta: 15
-    rank_delta_abs: 15
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: AWL kernel
     model_key: awl kernel
@@ -796,8 +863,8 @@ results:
     value_note: ''
     sort_value: 0.745
     sort_std: 0.059
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -863,8 +930,8 @@ results:
     value_note: ''
     sort_value: 0.7437
     sort_std: 0.0083
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -930,8 +997,8 @@ results:
     value_note: ''
     sort_value: 0.7312
     sort_std: 0.004
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -997,8 +1064,8 @@ results:
     value_note: ''
     sort_value: 0.721
     sort_std: 0.0262
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1064,8 +1131,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.022
-    global_rank: 127
-    paper_rank: 127
+    global_rank: 152
+    paper_rank: 152
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1131,8 +1198,8 @@ results:
     value_note: ''
     sort_value: 0.7093
     sort_std: 0.0454
-    global_rank: 131
-    paper_rank: 131
+    global_rank: 156
+    paper_rank: 156
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1154,9 +1221,9 @@ results:
 - &id003
   dataset: IMDB-MULTI
   rows:
-  - model: GatedGCN-LSPE
+  - model: GraphSNN
     model_key: graphsnn
-    model_plain: GatedGCN-LSPE
+    model_plain: GraphSNN
     value: 0.779
     std: 0.036
     metric: Accuracy
@@ -1187,9 +1254,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-LSPE
+  - model: SIN
     model_key: sin
-    model_plain: GatedGCN-LSPE
+    model_plain: SIN
     value: 0.756
     std: 0.032
     metric: Accuracy
@@ -1220,9 +1287,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-LSPE
+  - model: CIN
     model_key: cin
-    model_plain: GatedGCN-LSPE
+    model_plain: CIN
     value: 0.756
     std: 0.037
     metric: Accuracy
@@ -1310,9 +1377,9 @@ results:
     sort_value: 0.751
     sort_std: 0.051
     global_rank: 5
-    paper_rank: 19
-    rank_delta: 14
-    rank_delta_abs: 14
+    paper_rank: 31
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1376,13 +1443,46 @@ results:
     value_note: ''
     sort_value: 0.528
     sort_std: 0.046
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.519
+    std: 0.038
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2306.04004'
+    title: Randomized Schur Complement Views for Graph Contrastive Learning
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/kvignesh1420/rlap
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 38
+    sort_value: 0.519
+    sort_std: 0.038
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1443,8 +1543,8 @@ results:
     value_note: ''
     sort_value: 0.515
     sort_std: 0.036
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 41
+    paper_rank: 41
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1510,8 +1610,8 @@ results:
     value_note: ''
     sort_value: 0.486
     sort_std: 0.044
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1577,8 +1677,8 @@ results:
     value_note: ''
     sort_value: 0.4761
     sort_std: 0.0367
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1644,8 +1744,8 @@ results:
     value_note: ''
     sort_value: 0.452
     sort_std: 0.028
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1667,9 +1767,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1700,9 +1800,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1725,47 +1858,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -1823,10 +1922,10 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.029
-    global_rank: 34
-    paper_rank: 217
-    rank_delta: 183
-    rank_delta_abs: 183
+    global_rank: 43
+    paper_rank: 254
+    rank_delta: 211
+    rank_delta_abs: 211
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1892,16 +1991,49 @@ results:
     value_note: ''
     sort_value: 0.9263
     sort_std: 0.0421
-    global_rank: 43
-    paper_rank: 50
-    rank_delta: 7
-    rank_delta_abs: 7
+    global_rank: 57
+    paper_rank: 66
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: 'DEMO-Net: Degree-specific Graph Neural Networks for
       Node and Graph Classification'
     comparison_source_arxiv: '1906.02319'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.922
+    std: 0.044
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 71
+    sort_value: 0.922
+    sort_std: 0.044
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: WL kernel
@@ -1940,8 +2072,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-06-06'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-09-27'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1952,16 +2084,17 @@ results:
     today_delta_significant: false
     true_value: 0.904
     true_std: 0.057
-    value_gap_source_arxiv: '2306.03561'
-    value_gap_source_title: 'CIN++: Enhancing Topological Message Passing'
+    value_gap_source_arxiv: '2409.19117'
+    value_gap_source_title: 'Range-aware Positional Encoding via High-order Pretraining:
+      Theory and Practice'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.904
     sort_std: 0.057
-    global_rank: 145
-    paper_rank: 145
+    global_rank: 176
+    paper_rank: 176
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2008,8 +2141,8 @@ results:
       with Graph Kernels'
     at_pub_source_date_iso: '2019-05-30'
     at_pub_source_date_label: NeurIPS 2019
-    value_gap_source_date_iso: '2019-05-30'
-    value_gap_source_date_label: NeurIPS 2019
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2020,17 +2153,17 @@ results:
     today_delta_significant: false
     true_value: 0.9
     true_std: 0.085
-    value_gap_source_arxiv: '1905.13192'
-    value_gap_source_title: 'Graph Neural Tangent Kernel: Fusing Graph Neural Networks
-      with Graph Kernels'
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9
     sort_std: 0.085
-    global_rank: 171
-    paper_rank: 171
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2096,8 +2229,8 @@ results:
     value_note: ''
     sort_value: 0.8928
     sort_std: 0.0826
-    global_rank: 244
-    paper_rank: 244
+    global_rank: 281
+    paper_rank: 281
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2163,8 +2296,8 @@ results:
     value_note: ''
     sort_value: 0.8886
     sort_std: 0.0482
-    global_rank: 270
-    paper_rank: 270
+    global_rank: 309
+    paper_rank: 309
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2230,8 +2363,8 @@ results:
     value_note: ''
     sort_value: 0.879
     sort_std: 0.098
-    global_rank: 318
-    paper_rank: 318
+    global_rank: 359
+    paper_rank: 359
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2297,8 +2430,8 @@ results:
     value_note: ''
     sort_value: 0.8781
     sort_std: 0.0746
-    global_rank: 320
-    paper_rank: 320
+    global_rank: 362
+    paper_rank: 362
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2364,13 +2497,46 @@ results:
     value_note: ''
     sort_value: 0.8727
     sort_std: 0.015
-    global_rank: 351
-    paper_rank: 351
+    global_rank: 394
+    paper_rank: 394
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2431,8 +2597,8 @@ results:
     value_note: ''
     sort_value: 0.852
     sort_std: 0.009
-    global_rank: 435
-    paper_rank: 435
+    global_rank: 481
+    paper_rank: 481
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2498,8 +2664,8 @@ results:
     value_note: ''
     sort_value: 0.845
     sort_std: 0.0017
-    global_rank: 463
-    paper_rank: 463
+    global_rank: 511
+    paper_rank: 511
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

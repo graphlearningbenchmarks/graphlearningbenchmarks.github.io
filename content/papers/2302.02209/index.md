@@ -44,9 +44,9 @@ paper_type: method
 proposed_models:
 - C-MPNN
 - C-MPNN-basic
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0767
+adjusted_mrr: 0.0511
+mrr_dataset_count: 2
 benchmark_categories:
 - OGB
 - Knowledge Graphs
@@ -103,8 +103,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -113,17 +113,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.85
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.85
     sort_std: null
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -165,8 +171,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -175,17 +181,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.844
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.844
     sort_std: null
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -227,8 +239,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -237,51 +249,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.835
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.835
     sort_std: null
-    global_rank: 1
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: CompGCN
-    model_key: llms
-    model_plain: CompGCN
-    value: 0.815
-    std: 0.023
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.815
-    sort_std: 0.023
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -322,8 +307,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -332,17 +317,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.804
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.804
     sort_std: null
-    global_rank: 2
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -384,8 +375,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -394,17 +385,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.804
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.804
     sort_std: null
-    global_rank: 2
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -446,8 +443,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -456,17 +453,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.801
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.801
     sort_std: null
-    global_rank: 2
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -508,8 +511,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -518,17 +521,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.799
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.799
     sort_std: null
-    global_rank: 2
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -570,8 +579,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -580,17 +589,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.795
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.795
     sort_std: null
-    global_rank: 2
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -632,8 +647,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -642,17 +657,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.794
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.794
     sort_std: null
-    global_rank: 2
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -694,8 +715,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -704,84 +725,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.794
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.794
     sort_std: null
-    global_rank: 2
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: CompGCN
-    model_key: gcope
-    model_plain: CompGCN
-    value: 0.793
-    std: 0.022
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.793
-    sort_std: 0.022
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: CompGCN
-    model_key: gft
-    model_plain: CompGCN
-    value: 0.791
-    std: 0.016
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.791
-    sort_std: 0.016
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -822,8 +783,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -832,17 +793,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.788
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.788
     sort_std: null
-    global_rank: 4
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -884,8 +851,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -894,17 +861,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.784
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.784
     sort_std: null
-    global_rank: 4
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -946,8 +919,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -956,17 +929,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.734
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.734
     sort_std: null
-    global_rank: 8
+    global_rank: 20
+    paper_rank: 20
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1008,8 +987,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1018,17 +997,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.728
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.728
     sort_std: null
-    global_rank: 8
+    global_rank: 21
+    paper_rank: 21
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1070,8 +1055,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1080,17 +1065,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.715
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.715
     sort_std: null
-    global_rank: 9
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1132,8 +1123,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1142,17 +1133,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.709
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.709
     sort_std: null
-    global_rank: 9
+    global_rank: 24
+    paper_rank: 24
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1188,167 +1185,75 @@ results:
     date_iso: '2023-02-04'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: null
+    at_pub_value: 0.279
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.642
-    sort_std: null
-    global_rank: 11
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: RuleN
-    model_key: rulen
-    model_plain: RuleN
-    value: 0.498
-    std: null
-    paper_value: 0.498
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: ruleN
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 4, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-04'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.498
-    sort_std: null
-    global_rank: 15
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DRUM
-    model_key: drum
-    model_plain: DRUM
-    value: 0.529
-    std: null
-    paper_value: 0.529
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: DRUM
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 4, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-04'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.343
-    at_pub_std: null
-    at_pub_source_arxiv: '2106.06935'
-    at_pub_source_title: 'Neural Bellman-Ford Networks: A General Graph Neural Network
-      Framework for Link Prediction'
-    at_pub_source_date_iso: '2021-06-13'
-    at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-02-25'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.186
+    at_pub_source_arxiv: '2108.06040'
+    at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
+    at_pub_source_date_iso: '2021-08-13'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.363
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.343
+    today_delta_significant: false
+    true_value: 0.642
     true_std: null
-    value_gap_source_arxiv: '2302.13083'
-    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
-    value_gap_source_is_current_paper: false
-    value_gap: 0.186
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.343
+    sort_value: 0.642
     sort_std: null
-    global_rank: 45
-    paper_rank: 13
-    rank_delta: -32
-    rank_delta_abs: 32
-    rank_delta_direction: better
+    global_rank: 27
+    paper_rank: 27
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
-    comparison_source_title: 'Neural Bellman-Ford Networks: A General Graph Neural
-      Network Framework for Link Prediction'
-    comparison_source_arxiv: '2106.06935'
+    comparison_source_title: Knowledge Graph Reasoning with Relational Digraph
+    comparison_source_arxiv: '2108.06040'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.637
+    std: 0.017
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2603.00618'
+    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    venue: Accepted by ICLR'26, 41 pages
+    codebase_url: https://github.com/RiemannGraph/GraphGlue
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 28
+    sort_value: 0.637
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: NeuralLP
@@ -1388,8 +1293,8 @@ results:
       Framework for Link Prediction'
     at_pub_source_date_iso: '2021-06-13'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-02-25'
-    value_gap_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.28900000000000003
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1397,27 +1302,166 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.24
+    today_delta_significant: false
+    true_value: 0.529
     true_std: null
-    value_gap_source_arxiv: '2302.13083'
-    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
-    value_gap_source_is_current_paper: false
-    value_gap: 0.28900000000000003
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.24
+    sort_value: 0.529
     sort_std: null
-    global_rank: 77
-    paper_rank: 13
-    rank_delta: -64
-    rank_delta_abs: 64
-    rank_delta_direction: better
+    global_rank: 30
+    paper_rank: 30
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: 'Neural Bellman-Ford Networks: A General Graph Neural
       Network Framework for Link Prediction'
     comparison_source_arxiv: '2106.06935'
+    is_best: false
+    is_std_outlier: false
+  - model: DRUM
+    model_key: drum
+    model_plain: DRUM
+    value: 0.529
+    std: null
+    paper_value: 0.529
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: DRUM
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.343
+    at_pub_std: null
+    at_pub_source_arxiv: '2106.06935'
+    at_pub_source_title: 'Neural Bellman-Ford Networks: A General Graph Neural Network
+      Framework for Link Prediction'
+    at_pub_source_date_iso: '2021-06-13'
+    at_pub_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.186
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.529
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.529
+    sort_std: null
+    global_rank: 31
+    paper_rank: 31
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'Neural Bellman-Ford Networks: A General Graph Neural
+      Network Framework for Link Prediction'
+    comparison_source_arxiv: '2106.06935'
+    is_best: false
+    is_std_outlier: false
+  - model: RuleN
+    model_key: rulen
+    model_plain: RuleN
+    value: 0.498
+    std: null
+    paper_value: 0.498
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: ruleN
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.363
+    at_pub_std: null
+    at_pub_source_arxiv: '2108.06040'
+    at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
+    at_pub_source_date_iso: '2021-08-13'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.135
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.498
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.498
+    sort_std: null
+    global_rank: 34
+    paper_rank: 34
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Knowledge Graph Reasoning with Relational Digraph
+    comparison_source_arxiv: '2108.06040'
     is_best: false
     is_std_outlier: false
   rank_metric: MRR
@@ -1468,8 +1512,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1478,17 +1522,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.947
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.947
     sort_std: null
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1530,8 +1580,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1540,17 +1590,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.947
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.947
     sort_std: null
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1592,8 +1648,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1602,17 +1658,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.946
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.946
     sort_std: null
-    global_rank: 1
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1654,8 +1716,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1664,17 +1726,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.946
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.946
     sort_std: null
-    global_rank: 1
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1716,8 +1784,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1726,17 +1794,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.944
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.944
     sort_std: null
-    global_rank: 1
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1778,8 +1852,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1788,17 +1862,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.943
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.943
     sort_std: null
-    global_rank: 1
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1840,8 +1920,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1850,17 +1930,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.943
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.943
     sort_std: null
-    global_rank: 1
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1902,8 +1988,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1912,17 +1998,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.941
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.941
     sort_std: null
-    global_rank: 1
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1964,8 +2056,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1974,17 +2066,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.941
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.941
     sort_std: null
-    global_rank: 1
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2026,8 +2124,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2036,17 +2134,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.939
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.939
     sort_std: null
-    global_rank: 1
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2088,8 +2192,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2098,17 +2202,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.937
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 1
+    global_rank: 11
+    paper_rank: 11
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2150,8 +2260,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2160,17 +2270,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.934
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.934
     sort_std: null
-    global_rank: 1
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2212,8 +2328,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2222,17 +2338,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.934
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.934
     sort_std: null
-    global_rank: 1
+    global_rank: 13
+    paper_rank: 13
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2274,8 +2396,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2284,17 +2406,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.932
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.932
     sort_std: null
-    global_rank: 1
+    global_rank: 16
+    paper_rank: 16
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2336,8 +2464,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2346,17 +2474,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.932
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.932
     sort_std: null
-    global_rank: 1
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2398,8 +2532,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2408,93 +2542,33 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.932
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.932
     sort_std: null
-    global_rank: 1
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CompGCN
-    model_key: gft
-    model_plain: CompGCN
-    value: 0.9191
-    std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2411.06070'
-    title: 'GFT: Graph Foundation Model with Transferable Tree Vocabulary'
-    date: Nov 9, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-09'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/Zehong-Wang/GFT
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9191
-    sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: CompGCN
-    model_key: unigraph2
-    model_plain: CompGCN
-    value: 0.8786
-    std: 0.0006
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2502.00806'
-    title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-    date: Feb 2, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-02'
-    venue: The Web Conference
-    codebase_url: https://github.com/yf-he/UniGraph2
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8786
-    sort_std: 0.0006
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: CompGCN
-    model_key: gat
-    model_plain: CompGCN
-    value: 0.8552
-    std: 0.0012
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8298
+    std: 0.0022
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -2516,9 +2590,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.8552
-    sort_std: 0.0012
+    global_rank: 27
+    sort_value: 0.8298
+    sort_std: 0.0022
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2554,36 +2628,42 @@ results:
     date_iso: '2023-02-04'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: null
+    at_pub_value: 0.627
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
+    at_pub_source_arxiv: '2108.06040'
+    at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
+    at_pub_source_date_iso: '2021-08-13'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.19799999999999995
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.825
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.825
     sort_std: null
-    global_rank: 12
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    global_rank: 28
+    paper_rank: 28
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Knowledge Graph Reasoning with Relational Digraph
+    comparison_source_arxiv: '2108.06040'
     is_best: false
     is_std_outlier: false
   - model: RuleN
@@ -2616,234 +2696,42 @@ results:
     date_iso: '2023-02-04'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.809
-    sort_std: null
-    global_rank: 14
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: C-MPNN-basic
-    model_key: c-mpnn-basic
-    model_plain: C-MPNN-basic
-    value: 0.534
-    std: null
-    paper_value: 0.534
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 4, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-04'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.534
-    sort_std: null
-    global_rank: 28
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DRUM
-    model_key: drum
-    model_plain: DRUM
-    value: 0.744
-    std: null
-    paper_value: 0.744
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 3
-    source_ref: DRUM
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 4, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-04'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.666
+    at_pub_value: 0.668
     at_pub_std: null
     at_pub_source_arxiv: '2108.06040'
     at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
     at_pub_source_date_iso: '2021-08-13'
     at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2023-02-25'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.07799999999999996
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.14100000000000001
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.486
+    today_delta_significant: false
+    true_value: 0.809
     true_std: null
-    value_gap_source_arxiv: '2302.13083'
-    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
-    value_gap_source_is_current_paper: false
-    value_gap: 0.258
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.486
+    sort_value: 0.809
     sort_std: null
-    global_rank: 37
-    paper_rank: 20
-    rank_delta: -17
-    rank_delta_abs: 17
-    rank_delta_direction: better
+    global_rank: 31
+    paper_rank: 31
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Knowledge Graph Reasoning with Relational Digraph
     comparison_source_arxiv: '2108.06040'
-    is_best: false
-    is_std_outlier: false
-  - model: CompGCN
-    model_key: compgcn
-    model_plain: CompGCN
-    value: 0.433
-    std: null
-    paper_value: 0.433
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 4
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 4, 2023
-    date_display: Feb 2023
-    date_iso: '2023-02-04'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: 0.479
-    at_pub_std: null
-    at_pub_source_arxiv: '1911.03082'
-    at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
-    at_pub_source_date_iso: '2019-11-08'
-    at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
-    gap_vs_at_pub: 0.045999999999999985
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.479
-    true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.045999999999999985
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.479
-    sort_std: null
-    global_rank: 46
-    paper_rank: 69
-    rank_delta: 23
-    rank_delta_abs: 23
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    comparison_source_arxiv: '1911.03082'
     is_best: false
     is_std_outlier: false
   - model: NeuralLP
@@ -2883,8 +2771,8 @@ results:
       Dynamic, and Multi-Modal'
     at_pub_source_date_iso: '2022-12-12'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-12-12'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.285
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2892,28 +2780,233 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.459
+    today_delta_significant: false
+    true_value: 0.744
     true_std: null
-    value_gap_source_arxiv: '2212.05767'
-    value_gap_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
-      Static, Dynamic, and Multi-Modal'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.285
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.459
+    sort_value: 0.744
     sort_std: null
-    global_rank: 61
-    paper_rank: 20
-    rank_delta: -41
-    rank_delta_abs: 41
-    rank_delta_direction: better
+    global_rank: 38
+    paper_rank: 38
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
       Static, Dynamic, and Multi-Modal'
     comparison_source_arxiv: '2212.05767'
+    is_best: false
+    is_std_outlier: false
+  - model: DRUM
+    model_key: drum
+    model_plain: DRUM
+    value: 0.744
+    std: null
+    paper_value: 0.744
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 3
+    source_ref: DRUM
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.666
+    at_pub_std: null
+    at_pub_source_arxiv: '2108.06040'
+    at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
+    at_pub_source_date_iso: '2021-08-13'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.07799999999999996
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.744
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.744
+    sort_std: null
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Knowledge Graph Reasoning with Relational Digraph
+    comparison_source_arxiv: '2108.06040'
+    is_best: false
+    is_std_outlier: false
+  - model: C-MPNN-basic
+    model_key: c-mpnn-basic
+    model_plain: C-MPNN-basic
+    value: 0.534
+    std: null
+    paper_value: 0.534
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.534
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.534
+    sort_std: null
+    global_rank: 64
+    paper_rank: 64
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CompGCN
+    model_key: compgcn
+    model_plain: CompGCN
+    value: 0.433
+    std: null
+    paper_value: 0.433
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 4
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.479
+    at_pub_std: null
+    at_pub_source_arxiv: '1911.03082'
+    at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
+    at_pub_source_date_iso: '2019-11-08'
+    at_pub_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.045999999999999985
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.479
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.045999999999999985
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.479
+    sort_std: null
+    global_rank: 89
+    paper_rank: 116
+    rank_delta: 27
+    rank_delta_abs: 27
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Composition-based Multi-Relational Graph Convolutional
+      Networks
+    comparison_source_arxiv: '1911.03082'
     is_best: false
     is_std_outlier: false
   - model: RGCN
@@ -2974,10 +3067,10 @@ results:
     value_note: ''
     sort_value: 0.427
     sort_std: null
-    global_rank: 73
-    paper_rank: 75
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 121
+    paper_rank: 124
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2998,9 +3091,77 @@ results:
 - &id001
   dataset: ogbl-biokg
   rows:
-  - model: TripleREv2
+  - model: PairRE+LRE
+    model_key: pairre+lre
+    model_plain: PairRE+LRE
+    value: 0.836
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 501.0
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2204.13957'
+    title: 'PIE: a Parameter and Inference Efficient Solution for Large Scale Knowledge
+      Graph Embedding Reasoning'
+    date: Apr 29, 2022
+    date_display: Apr 2022
+    date_iso: '2022-04-29'
+    venue: null
+    codebase_url: https://github.com/migalkin/NodePiece
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.836
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: NBFnet
+    model_key: nbfnet
+    model_plain: NBFnet
+    value: 0.8317
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 3.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.06935'
+    title: 'Neural Bellman-Ford Networks: A General Graph Neural Network Framework
+      for Link Prediction'
+    date: Jun 13, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-13'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/DeepGraphLearning/NBFNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8317
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AutoSF
     model_key: autosf
-    model_plain: TripleREv2
+    model_plain: AutoSF
     value: 0.8309
     std: 0.0008
     metric: MRR
@@ -3023,75 +3184,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.8309
     sort_std: 0.0008
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: TripleREv2
-    model_key: triplerev2
-    model_plain: TripleREv2
-    value: 0.8272
-    std: 0.0007
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: 500.0
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2209.08271'
-    title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation Vectors'
-    date: Sep 17, 2022
-    date_display: Sep 2022
-    date_iso: '2022-09-17'
-    venue: null
-    codebase_url: https://github.com/DeepGraphLearning/KnowledgeGraph-
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8272
-    sort_std: 0.0007
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TripleREv2
-    model_key: triplere
-    model_plain: TripleREv2
-    value: 0.8191
-    std: 0.0014
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2209.08271'
-    title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation Vectors'
-    date: Sep 17, 2022
-    date_display: Sep 2022
-    date_iso: '2022-09-17'
-    venue: null
-    codebase_url: https://github.com/DeepGraphLearning/KnowledgeGraph-
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8191
-    sort_std: 0.0014
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3133,8 +3228,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3143,17 +3238,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.79
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.79
     sort_std: null
-    global_rank: 8
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3195,8 +3296,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3205,17 +3306,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.636
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.636
     sort_std: null
-    global_rank: 9
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

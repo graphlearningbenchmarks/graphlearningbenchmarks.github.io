@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - BNNs
-mrr: 0.0077
-adjusted_mrr: 0.0026
+mrr: 0.0074
+adjusted_mrr: 0.0025
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -736,9 +736,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: CamS-LLaMA
     model_key: cams-llama
-    model_plain: MAGPrompt+
+    model_plain: CamS-LLaMA
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -770,9 +770,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: MAGPrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -804,6 +804,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8875
+    std: 0.0049
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 32
+    sort_value: 0.8875
+    sort_std: 0.0049
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: DeepEnsemble
     model_key: deepensemble
@@ -862,8 +896,8 @@ results:
     value_note: ''
     sort_value: 0.7198
     sort_std: null
-    global_rank: 99
-    paper_rank: 99
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -931,8 +965,8 @@ results:
     value_note: ''
     sort_value: 0.7155
     sort_std: 0.0156
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -999,8 +1033,8 @@ results:
     value_note: ''
     sort_value: 0.7025
     sort_std: 0.007
-    global_rank: 130
-    paper_rank: 130
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1067,8 +1101,8 @@ results:
     value_note: ''
     sort_value: 0.7003
     sort_std: 0.0198
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1135,8 +1169,8 @@ results:
     value_note: ''
     sort_value: 0.7002
     sort_std: 0.0069
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1203,8 +1237,8 @@ results:
     value_note: ''
     sort_value: 0.6982
     sort_std: 0.0217
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1271,8 +1305,8 @@ results:
     value_note: ''
     sort_value: 0.6954
     sort_std: 0.0226
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 162
+    paper_rank: 162
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1339,8 +1373,8 @@ results:
     value_note: ''
     sort_value: 0.6898
     sort_std: 0.0176
-    global_rank: 175
-    paper_rank: 175
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1407,8 +1441,8 @@ results:
     value_note: ''
     sort_value: 0.6787
     sort_std: 0.0234
-    global_rank: 196
-    paper_rank: 196
+    global_rank: 201
+    paper_rank: 201
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1475,8 +1509,8 @@ results:
     value_note: ''
     sort_value: 0.6393
     sort_std: 0.0266
-    global_rank: 274
-    paper_rank: 274
+    global_rank: 280
+    paper_rank: 280
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1543,8 +1577,8 @@ results:
     value_note: ''
     sort_value: 0.637
     sort_std: 0.0049
-    global_rank: 275
-    paper_rank: 275
+    global_rank: 281
+    paper_rank: 281
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1611,8 +1645,8 @@ results:
     value_note: ''
     sort_value: 0.5975
     sort_std: 0.0246
-    global_rank: 297
-    paper_rank: 297
+    global_rank: 303
+    paper_rank: 303
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1679,8 +1713,8 @@ results:
     value_note: ''
     sort_value: 0.5855
     sort_std: 0.024
-    global_rank: 300
-    paper_rank: 300
+    global_rank: 306
+    paper_rank: 306
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1747,8 +1781,8 @@ results:
     value_note: ''
     sort_value: 0.5623
     sort_std: 0.0425
-    global_rank: 303
-    paper_rank: 303
+    global_rank: 309
+    paper_rank: 309
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1770,9 +1804,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1803,9 +1837,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1828,47 +1895,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: GSAT
     model_key: gsat
@@ -1929,16 +1962,49 @@ results:
     value_note: ''
     sort_value: 0.9637
     sort_std: 0.0215
-    global_rank: 6
-    paper_rank: 658
-    rank_delta: 652
-    rank_delta_abs: 652
+    global_rank: 8
+    paper_rank: 719
+    rank_delta: 711
+    rank_delta_abs: 711
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Soft causal learning for generalized molecule property
       prediction: An environment modeling perspective'
     comparison_source_arxiv: '2505.06283'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.933
+    std: 0.029
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.00911'
+    title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
+    date: Dec 2, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-02'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 43
+    sort_value: 0.933
+    sort_std: 0.029
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: DropEdge
@@ -1999,10 +2065,10 @@ results:
     value_note: ''
     sort_value: 0.91
     sort_std: 0.057
-    global_rank: 105
-    paper_rank: 694
-    rank_delta: 589
-    rank_delta_abs: 589
+    global_rank: 128
+    paper_rank: 755
+    rank_delta: 627
+    rank_delta_abs: 627
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2069,10 +2135,10 @@ results:
     value_note: ''
     sort_value: 0.88
     sort_std: 0.03
-    global_rank: 309
-    paper_rank: 783
-    rank_delta: 474
-    rank_delta_abs: 474
+    global_rank: 350
+    paper_rank: 846
+    rank_delta: 496
+    rank_delta_abs: 496
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2139,16 +2205,49 @@ results:
     value_note: ''
     sort_value: 0.87
     sort_std: 0.03
-    global_rank: 372
-    paper_rank: 724
-    rank_delta: 352
-    rank_delta_abs: 352
+    global_rank: 416
+    paper_rank: 785
+    rank_delta: 369
+    rank_delta_abs: 369
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'CI-GNN: A Granger Causality-Inspired Graph Neural Network
       for Interpretable Brain Network-Based Psychiatric Diagnosis'
     comparison_source_arxiv: '2301.01642'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Vanilla
@@ -2208,10 +2307,10 @@ results:
     value_note: ''
     sort_value: 0.843
     sort_std: 0.032
-    global_rank: 474
-    paper_rank: 646
-    rank_delta: 172
-    rank_delta_abs: 172
+    global_rank: 522
+    paper_rank: 707
+    rank_delta: 185
+    rank_delta_abs: 185
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2277,8 +2376,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.0071
-    global_rank: 635
-    paper_rank: 635
+    global_rank: 696
+    paper_rank: 696
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2346,8 +2445,8 @@ results:
     value_note: ''
     sort_value: 0.7903
     sort_std: 0.0065
-    global_rank: 652
-    paper_rank: 652
+    global_rank: 713
+    paper_rank: 713
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2415,8 +2514,8 @@ results:
     value_note: ''
     sort_value: 0.7834
     sort_std: 0.0081
-    global_rank: 664
-    paper_rank: 664
+    global_rank: 725
+    paper_rank: 725
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2484,8 +2583,8 @@ results:
     value_note: ''
     sort_value: 0.7816
     sort_std: 0.0103
-    global_rank: 666
-    paper_rank: 666
+    global_rank: 727
+    paper_rank: 727
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2553,8 +2652,8 @@ results:
     value_note: ''
     sort_value: 0.7789
     sort_std: 0.0059
-    global_rank: 675
-    paper_rank: 675
+    global_rank: 736
+    paper_rank: 736
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2622,8 +2721,8 @@ results:
     value_note: ''
     sort_value: 0.7682
     sort_std: 0.0059
-    global_rank: 692
-    paper_rank: 692
+    global_rank: 753
+    paper_rank: 753
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2690,8 +2789,8 @@ results:
     value_note: ''
     sort_value: 0.7519
     sort_std: 0.0073
-    global_rank: 716
-    paper_rank: 716
+    global_rank: 777
+    paper_rank: 777
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2758,8 +2857,8 @@ results:
     value_note: ''
     sort_value: 0.6832
     sort_std: 0.0117
-    global_rank: 772
-    paper_rank: 772
+    global_rank: 835
+    paper_rank: 835
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2826,8 +2925,8 @@ results:
     value_note: ''
     sort_value: 0.6586
     sort_std: 0.0196
-    global_rank: 780
-    paper_rank: 780
+    global_rank: 843
+    paper_rank: 843
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

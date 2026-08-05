@@ -52,8 +52,8 @@ proposed_models:
 - GCN
 - GMoE-GIN
 - GMoE-GIN+Pretrain
-mrr: 0.0158
-adjusted_mrr: 0.0158
+mrr: 0.0127
+adjusted_mrr: 0.0127
 mrr_dataset_count: 5
 benchmark_categories:
 - OGB
@@ -79,9 +79,9 @@ results:
 - &id006
   dataset: Tox21
   rows:
-  - model: HOD-GNN
+  - model: HIMP
     model_key: himp
-    model_plain: HOD-GNN
+    model_plain: HIMP
     value: 0.874
     std: 0.005
     metric: ROC-AUC
@@ -112,9 +112,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: GINE w/ VN
     model_key: gine w/ vn
-    model_plain: HOD-GNN
+    model_plain: GINE w/ VN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -145,9 +145,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: NaiveGINe+ K=3 w/ VN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: HOD-GNN
+    model_plain: NaiveGINe+ K=3 w/ VN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -234,10 +234,10 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.004
-    global_rank: 15
-    paper_rank: 213
-    rank_delta: 198
-    rank_delta_abs: 198
+    global_rank: 16
+    paper_rank: 220
+    rank_delta: 204
+    rank_delta_abs: 204
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -303,16 +303,50 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.0069
-    global_rank: 25
-    paper_rank: 247
-    rank_delta: 222
-    rank_delta_abs: 222
+    global_rank: 26
+    paper_rank: 255
+    rank_delta: 229
+    rank_delta_abs: 229
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Towards Interpretable Sparse Graph Representation Learning
       with Laplacian Pooling
     comparison_source_arxiv: '1905.11577'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7744
+    std: 0.0038
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 141
+    sort_value: 0.7744
+    sort_std: 0.0038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GMoE-GCN
@@ -372,8 +406,8 @@ results:
     value_note: ''
     sort_value: 0.7545
     sort_std: 0.0058
-    global_rank: 205
-    paper_rank: 205
+    global_rank: 210
+    paper_rank: 210
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -441,8 +475,8 @@ results:
     value_note: ''
     sort_value: 0.7525
     sort_std: 0.0078
-    global_rank: 214
-    paper_rank: 214
+    global_rank: 221
+    paper_rank: 221
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -509,8 +543,8 @@ results:
     value_note: ''
     sort_value: 0.7476
     sort_std: 0.0066
-    global_rank: 234
-    paper_rank: 234
+    global_rank: 241
+    paper_rank: 241
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -578,8 +612,8 @@ results:
     value_note: ''
     sort_value: 0.7385
     sort_std: 0.0064
-    global_rank: 261
-    paper_rank: 261
+    global_rank: 270
+    paper_rank: 270
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -601,9 +635,9 @@ results:
 - &id001
   dataset: ogbg-molhiv
   rows:
-  - model: SigGate-GT
+  - model: Multi-RF Fusion with Multi-GNN Blending
     model_key: multi-rf fusion with multi-gnn blending
-    model_plain: SigGate-GT
+    model_plain: Multi-RF Fusion with Multi-GNN Blending
     value: 0.8476
     std: 0.0002
     metric: ROC-AUC
@@ -635,9 +669,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: HyperFusion
     model_key: hyperfusion
-    model_plain: SigGate-GT
+    model_plain: HyperFusion
     value: 0.8475
     std: 0.0003
     metric: ROC-AUC
@@ -668,9 +702,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: PAS+FPs
     model_key: pas+fps
-    model_plain: SigGate-GT
+    model_plain: PAS+FPs
     value: 0.842
     std: 0.0015
     metric: ROC-AUC
@@ -696,6 +730,39 @@ results:
     global_rank: 3
     sort_value: 0.842
     sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.809
+    std: 0.016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.809
+    sort_std: 0.016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -901,6 +968,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.769
+    std: 0.0136
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.07141'
+    title: 'SoGCN: Second-Order Graph Convolutional Networks'
+    date: Oct 14, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-14'
+    venue: null
+    codebase_url: https://github.com/yuehaowang/SoGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 171
+    sort_value: 0.769
+    sort_std: 0.0136
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1123,9 +1223,9 @@ results:
 - &id002
   dataset: ogbg-molpcba
   rows:
-  - model: UGTs
+  - model: PrunE
     model_key: prune
-    model_plain: UGTs
+    model_plain: PrunE
     value: 0.8159
     std: 0.0535
     metric: ROC-AUC
@@ -1156,9 +1256,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: UGTs
+  - model: EGTAS
     model_key: egtas
-    model_plain: UGTs
+    model_plain: EGTAS
     value: 0.7919
     std: 0.0137
     metric: ROC-AUC
@@ -1630,6 +1730,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.6078
+    std: 0.0243
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.15747'
+    title: Union Subgraph Neural Networks
+    date: May 25, 2023
+    date_display: May 2023
+    date_iso: '2023-05-25'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/AngusMonroe/UnionSNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 39
+    sort_value: 0.6078
+    sort_std: 0.0243
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   rank_metric: ROC-AUC
   higher_is_better: true
   experiment_scope: graph-level
@@ -1642,9 +1775,9 @@ results:
 - &id004
   dataset: ogbl-ddi
   rows:
-  - model: MPNNs
+  - model: ELGNN
     model_key: elgnn
-    model_plain: MPNNs
+    model_plain: ELGNN
     value: 0.9777
     std: 0.0037
     metric: Hits@20
@@ -1676,9 +1809,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MPNNs
+  - model: GIDN
     model_key: gidn
-    model_plain: MPNNs
+    model_plain: GIDN
     value: 0.9542
     std: 0.0
     metric: Hits@20
@@ -1709,9 +1842,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MPNNs
+  - model: AGDN
     model_key: agdn
-    model_plain: MPNNs
+    model_plain: AGDN
     value: 0.9538
     std: 0.0094
     metric: Hits@20
@@ -1737,6 +1870,39 @@ results:
     global_rank: 3
     sort_value: 0.9538
     sort_std: 0.0094
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.6719
+    std: 0.0118
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.16687'
+    title: Link Prediction with Untrained Message Passing Layers
+    date: Jun 24, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-24'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 22
+    sort_value: 0.6719
+    sort_std: 0.0118
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1779,8 +1945,8 @@ results:
       for Link Prediction'
     at_pub_source_date_iso: '2022-06-09'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-10-01'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.07530000000000003
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -1789,27 +1955,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.499
-    true_std: 0.0723
-    value_gap_source_arxiv: '2310.00793'
-    value_gap_source_title: 'Revisiting Link Prediction: a data perspective'
+    true_value: 0.6476
+    true_std: 0.0145
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: 0.12830000000000003
+    value_gap: 0.2769
     has_value_note: false
     value_note: ''
-    sort_value: 0.499
-    sort_std: 0.0723
-    global_rank: 28
-    paper_rank: 32
-    rank_delta: 4
-    rank_delta_abs: 4
+    sort_value: 0.6476
+    sort_std: 0.0145
+    global_rank: 26
+    paper_rank: 56
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: true
+    is_std_outlier: false
   - model: GMoE-GCN
     model_key: gmoe-gcn
     model_plain: GMoE-GCN
@@ -1867,8 +2033,8 @@ results:
     value_note: ''
     sort_value: 0.3796
     sort_std: 0.00082
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1890,42 +2056,75 @@ results:
 - &id003
   dataset: ogbl-ppa
   rows:
-  - model: Classification
-    model_key: mplp
-    model_plain: Classification
-    value: 0.6524
-    std: 0.015
+  - model: Optimized GAE
+    model_key: optimized gae
+    model_plain: Optimized GAE
+    value: 0.7841
+    std: 0.0083
     metric: Hits@100
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2309.00976'
-    title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
-    date: Sep 2, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-02'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/Barcavin/efficient-node-labelling
+    arxiv_id: '2411.03845'
+    title: Reconsidering the Performance of GAE in Link Prediction
+    date: Nov 6, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-06'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/GraphPKU/Refined-GAE
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.6524
-    sort_std: 0.015
+    sort_value: 0.7841
+    sort_std: 0.0083
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Classification
+  - model: MPLP
+    model_key: mplp
+    model_plain: MPLP
+    value: 0.6524
+    std: 0.015
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.03845'
+    title: Reconsidering the Performance of GAE in Link Prediction
+    date: Nov 6, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-06'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/GraphPKU/Refined-GAE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.6524
+    sort_std: 0.015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OGB Leader
     model_key: ogb leader
-    model_plain: Classification
+    model_plain: OGB Leader
     value: 0.6524
     std: 0.015
     metric: Hits@100
@@ -1948,46 +2147,79 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.6524
     sort_std: 0.015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Classification
-    model_key: prb
-    model_plain: Classification
-    value: 0.6347
-    std: 0.0175
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.5013
+    std: 0.0055
     metric: Hits@100
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.01410'
-    title: PageRank Bandits for Link Prediction
-    date: Nov 3, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-03'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/jiaruzouu/PRB
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.00170'
+    title: Asymmetric Learning for Graph Neural Network based Link Prediction
+    date: Mar 1, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-01'
+    venue: ACM Transactions on Knowledge Discovery from Data
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.6347
-    sort_std: 0.0175
+    global_rank: 16
+    sort_value: 0.5013
+    sort_std: 0.0055
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.46
+    std: 0.0
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.09516'
+    title: Efficient Link Prediction via GNN Layers Induced by Negative Sampling
+    date: Oct 14, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-14'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/yxzwang/SubmissionverOfYinYanGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 26
+    sort_value: 0.46
+    sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -2025,8 +2257,8 @@ results:
     at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
     at_pub_source_date_iso: '2020-06-14'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-10-01'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.0002999999999999947
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -2035,18 +2267,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.2957
-    true_std: 0.029
-    value_gap_source_arxiv: '2310.00793'
-    value_gap_source_title: 'Revisiting Link Prediction: a data perspective'
+    true_value: 0.3084
+    true_std: 0.0178
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: 0.10900000000000001
+    value_gap: 0.1217
     has_value_note: false
     value_note: ''
-    sort_value: 0.2957
-    sort_std: 0.029
-    global_rank: 41
-    paper_rank: 55
+    sort_value: 0.3084
+    sort_std: 0.0178
+    global_rank: 49
+    paper_rank: 63
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -2113,8 +2345,8 @@ results:
     value_note: ''
     sort_value: 0.1925
     sort_std: 0.0167
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 63
+    paper_rank: 63
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2136,9 +2368,9 @@ results:
 - &id005
   dataset: ogbn-proteins
   rows:
-  - model: RevGNN
+  - model: LD
     model_key: ld
-    model_plain: RevGNN
+    model_plain: LD
     value: 0.8942
     std: 0.0007
     metric: ROC-AUC
@@ -2170,9 +2402,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RevGNN
+  - model: X_WO/LD
     model_key: x_wo/ld
-    model_plain: RevGNN
+    model_plain: X_WO/LD
     value: 0.8915
     std: 0.0012
     metric: ROC-AUC
@@ -2204,9 +2436,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: RevGNN
+  - model: MoG
     model_key: mog
-    model_plain: RevGNN
+    model_plain: MoG
     value: 0.8904
     std: 0.0072
     metric: ROC-AUC
@@ -2236,6 +2468,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.843
+    std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.05573'
+    title: Learning to Model Graph Structural Information on MLPs via Graph Structure
+      Self-Contrasting
+    date: Sep 9, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-09'
+    venue: IEEE Transactions on Neural Networks and Learning Systems
+    codebase_url: https://github.com/LirongWu/GSSC
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 17
+    sort_value: 0.843
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -2369,6 +2635,40 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7204
+    std: 0.0048
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 69
+    sort_value: 0.7204
+    sort_std: 0.0048
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

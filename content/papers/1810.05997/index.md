@@ -59,9 +59,9 @@ results:
   dataset: PubMed
   is_multi_metric: true
   rows:
-  - model: R-SoftGraphAIN
+  - model: LGTL
     model_key: lgtl
-    model_plain: R-SoftGraphAIN
+    model_plain: LGTL
     metric_values:
     - 0.9518
     - null
@@ -99,9 +99,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: SAGN
     model_key: sagn
-    model_plain: R-SoftGraphAIN
+    model_plain: SAGN
     metric_values:
     - 0.9517
     - null
@@ -139,9 +139,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: MixHop (LO)
     model_key: mixhop (lo)
-    model_plain: R-SoftGraphAIN
+    model_plain: MixHop (LO)
     metric_values:
     - 0.9513
     - null
@@ -169,6 +169,46 @@ results:
     is_best: true
     sort_value: 0.9513
     sort_std: 0.0038
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    metric_values:
+    - 0.9487
+    - null
+    metric_stds:
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    published_venue: ''
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 9
+    is_best: false
+    sort_value: 0.9487
+    sort_std: null
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -365,6 +405,45 @@ results:
     is_best: false
     is_std_outlier: false
     global_rank: 23
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    metric_values:
+    - 0.869
+    - null
+    metric_stds:
+    - 0.0074
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.00183'
+    title: On the Equivalence of Graph Convolution and Mixup
+    published_venue: ''
+    date: Sep 29, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-29'
+    codebase_url: https://github.com/ahxt/GraphConv_is_Mixup
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 233
+    is_best: false
+    sort_value: 0.869
+    sort_std: 0.0074
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: JK
     model_key: jk
     model_plain: JK

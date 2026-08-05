@@ -74,9 +74,9 @@ results:
 - &id003
   dataset: IMDB-BINARY
   rows:
-  - model: DMoNPool-TIP
+  - model: GCFL
     model_key: gcfl
-    model_plain: DMoNPool-TIP
+    model_plain: GCFL
     value: 0.8299
     std: 0.052
     metric: Accuracy
@@ -107,11 +107,79 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DMoNPool-TIP
-    model_key: gat +del-f
-    model_plain: DMoNPool-TIP
-    value: 0.7863
-    std: 0.0054
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.815
+    std: 0.024
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.815
+    sort_std: 0.024
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GIN+BEC
+    model_key: gin+bec
+    model_plain: GIN+BEC
+    value: 0.808
+    std: 0.033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.808
+    sort_std: 0.033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.707
+    std: 0.037
+    paper_value: 0.707
+    paper_std: 0.037
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -121,54 +189,122 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.16402'
-    title: Graph Learning with Distributional Edge Layouts
-    date: Feb 26, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-26'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.7863
-    sort_std: 0.0054
-    comparison_type: global_top
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Oct 12, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-12'
+    published_venue: ICLR 2020
+    published_conference: ICLR 2020
+    at_pub_value: 0.74
+    at_pub_std: 0.034
+    at_pub_source_arxiv: '2006.05582'
+    at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
+    at_pub_source_date_iso: '2020-06-01'
+    at_pub_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2025-03-03'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: 0.03300000000000003
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.798
+    true_std: 0.023
+    value_gap_source_arxiv: '2503.01079'
+    value_gap_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09100000000000008
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.798
+    sort_std: 0.023
+    global_rank: 5
+    paper_rank: 157
+    rank_delta: 152
+    rank_delta_abs: 152
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DMoNPool-TIP
-    model_key: graph transformer +del-f
-    model_plain: DMoNPool-TIP
-    value: 0.7828
-    std: 0.0027
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.732
+    std: 0.048
+    paper_value: 0.732
+    paper_std: 0.048
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2402.16402'
-    title: Graph Learning with Distributional Edge Layouts
-    date: Feb 26, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-26'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.7828
-    sort_std: 0.0027
-    comparison_type: global_top
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Oct 12, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-12'
+    published_venue: ICLR 2020
+    published_conference: ICLR 2020
+    at_pub_value: 0.751
+    at_pub_std: 0.051
+    at_pub_source_arxiv: '2005.01214'
+    at_pub_source_title: Graph Homomorphism Convolution
+    at_pub_source_date_iso: '2020-05-03'
+    at_pub_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2025-03-03'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: 0.019000000000000017
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.781
+    true_std: 0.035
+    value_gap_source_arxiv: '2503.01079'
+    value_gap_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.049000000000000044
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.781
+    sort_std: 0.035
+    global_rank: 15
+    paper_rank: 96
+    rank_delta: 81
+    rank_delta_abs: 81
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
@@ -229,150 +365,16 @@ results:
     value_note: ''
     sort_value: 0.766
     sort_std: 0.0237
-    global_rank: 11
-    paper_rank: 132
-    rank_delta: 121
-    rank_delta_abs: 121
+    global_rank: 24
+    paper_rank: 157
+    rank_delta: 133
+    rank_delta_abs: 133
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.732
-    std: 0.048
-    paper_value: 0.732
-    paper_std: 0.048
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Oct 12, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-12'
-    published_venue: ICLR 2020
-    published_conference: ICLR 2020
-    at_pub_value: 0.751
-    at_pub_std: 0.051
-    at_pub_source_arxiv: '2005.01214'
-    at_pub_source_title: Graph Homomorphism Convolution
-    at_pub_source_date_iso: '2020-05-03'
-    at_pub_source_date_label: ICML 2020
-    value_gap_source_date_iso: '2024-02-26'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.019000000000000017
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.7641
-    true_std: 0.0093
-    value_gap_source_arxiv: '2402.16402'
-    value_gap_source_title: Graph Learning with Distributional Edge Layouts
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03210000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7641
-    sort_std: 0.0093
-    global_rank: 14
-    paper_rank: 74
-    rank_delta: 60
-    rank_delta_abs: 60
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.707
-    std: 0.037
-    paper_value: 0.707
-    paper_std: 0.037
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Oct 12, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-12'
-    published_venue: ICLR 2020
-    published_conference: ICLR 2020
-    at_pub_value: 0.74
-    at_pub_std: 0.034
-    at_pub_source_arxiv: '2006.05582'
-    at_pub_source_title: Contrastive Multi-View Representation Learning on Graphs
-    at_pub_source_date_iso: '2020-06-01'
-    at_pub_source_date_label: ICML 2020
-    value_gap_source_date_iso: '2024-02-26'
-    value_gap_source_date_label: NeurIPS 2024
-    gap_vs_at_pub: 0.03300000000000003
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.742
-    true_std: 0.024
-    value_gap_source_arxiv: '2402.16346'
-    value_gap_source_title: Boosting Graph Pooling with Persistent Homology
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03500000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.742
-    sort_std: 0.024
-    global_rank: 47
-    paper_rank: 132
-    rank_delta: 85
-    rank_delta_abs: 85
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: GAT
     model_key: gat
@@ -430,10 +432,10 @@ results:
     value_note: ''
     sort_value: 0.7407
     sort_std: 0.0453
-    global_rank: 53
-    paper_rank: 121
-    rank_delta: 68
-    rank_delta_abs: 68
+    global_rank: 73
+    paper_rank: 145
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -497,8 +499,8 @@ results:
     value_note: ''
     sort_value: 0.737
     sort_std: 0.07
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -564,10 +566,10 @@ results:
     value_note: ''
     sort_value: 0.7315
     sort_std: 0.033
-    global_rank: 78
-    paper_rank: 132
-    rank_delta: 54
-    rank_delta_abs: 54
+    global_rank: 100
+    paper_rank: 157
+    rank_delta: 57
+    rank_delta_abs: 57
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -631,8 +633,8 @@ results:
     value_note: ''
     sort_value: 0.729
     sort_std: 0.046
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -678,8 +680,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-12'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2021-03-20'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -690,16 +692,17 @@ results:
     today_delta_significant: false
     true_value: 0.728
     true_std: 0.044
-    value_gap_source_arxiv: '2010.05563'
-    value_gap_source_title: Graph Information Bottleneck for Subgraph Recognition
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2103.11155'
+    value_gap_source_title: Recognizing Predictive Substructures with Subgraph Information
+      Bottleneck
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.728
     sort_std: 0.044
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -745,8 +748,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-12'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2021-03-20'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -757,16 +760,17 @@ results:
     today_delta_significant: false
     true_value: 0.722
     true_std: 0.047
-    value_gap_source_arxiv: '2010.05563'
-    value_gap_source_title: Graph Information Bottleneck for Subgraph Recognition
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2103.11155'
+    value_gap_source_title: Recognizing Predictive Substructures with Subgraph Information
+      Bottleneck
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.722
     sort_std: 0.047
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 122
+    paper_rank: 122
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -832,13 +836,46 @@ results:
     value_note: ''
     sort_value: 0.722
     sort_std: 0.039
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7217
+    std: 0.0529
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2108.10587'
+    title: Pooling Architecture Search for Graph Classification
+    date: Aug 24, 2021
+    date_display: Aug 2021
+    date_iso: '2021-08-24'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/GraphNAS/GraphNAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 125
+    sort_value: 0.7217
+    sort_std: 0.0529
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -879,8 +916,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-26'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-10-09'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -891,18 +928,19 @@ results:
     today_delta_significant: false
     true_value: 0.7212
     true_std: 0.0112
-    value_gap_source_arxiv: '2206.13510'
-    value_gap_source_title: Structural Entropy Guided Graph Hierarchical Pooling
+    value_gap_source_arxiv: '2410.06746'
+    value_gap_source_title: Cluster-wise Graph Transformer with Dual-granularity Kernelized
+      Attention
     value_gap_source_is_current_paper: false
     value_gap: 0.009199999999999986
     has_value_note: false
     value_note: ''
     sort_value: 0.7212
     sort_std: 0.0112
-    global_rank: 104
-    paper_rank: 121
-    rank_delta: 17
-    rank_delta_abs: 17
+    global_rank: 126
+    paper_rank: 145
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -966,8 +1004,8 @@ results:
     value_note: ''
     sort_value: 0.719
     sort_std: 0.052
-    global_rank: 110
-    paper_rank: 110
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1013,8 +1051,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-12'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2021-03-20'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1025,16 +1063,17 @@ results:
     today_delta_significant: false
     true_value: 0.715
     true_std: 0.044
-    value_gap_source_arxiv: '2010.05563'
-    value_gap_source_title: Graph Information Bottleneck for Subgraph Recognition
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2103.11155'
+    value_gap_source_title: Recognizing Predictive Substructures with Subgraph Information
+      Bottleneck
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.715
     sort_std: 0.044
-    global_rank: 119
-    paper_rank: 119
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1056,9 +1095,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -1089,9 +1128,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -1114,47 +1186,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -1212,10 +1250,78 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.029
-    global_rank: 34
-    paper_rank: 546
-    rank_delta: 512
-    rank_delta_abs: 512
+    global_rank: 43
+    paper_rank: 600
+    rank_delta: 557
+    rank_delta_abs: 557
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.743
+    std: 0.11
+    paper_value: 0.743
+    paper_std: 0.11
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV
+    date: Oct 12, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-12'
+    published_venue: ICLR 2020
+    published_conference: ICLR 2020
+    at_pub_value: 0.857
+    at_pub_std: 0.066
+    at_pub_source_arxiv: '1901.01343'
+    at_pub_source_title: Graph Neural Networks With Convolutional ARMA Filters
+    at_pub_source_date_iso: '2019-01-05'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2025-03-03'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: 0.11399999999999999
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.922
+    true_std: 0.044
+    value_gap_source_arxiv: '2503.01079'
+    value_gap_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.17900000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.922
+    sort_std: 0.044
+    global_rank: 71
+    paper_rank: 787
+    rank_delta: 716
+    rank_delta_abs: 716
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1279,10 +1385,10 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.078
-    global_rank: 140
-    paper_rank: 726
-    rank_delta: 586
-    rank_delta_abs: 586
+    global_rank: 170
+    paper_rank: 787
+    rank_delta: 617
+    rank_delta_abs: 617
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1346,10 +1452,10 @@ results:
     value_note: ''
     sort_value: 0.901
     sort_std: 0.058
-    global_rank: 164
-    paper_rank: 739
-    rank_delta: 575
-    rank_delta_abs: 575
+    global_rank: 196
+    paper_rank: 800
+    rank_delta: 604
+    rank_delta_abs: 604
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1414,10 +1520,10 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.0224
-    global_rank: 170
-    paper_rank: 468
-    rank_delta: 298
-    rank_delta_abs: 298
+    global_rank: 203
+    paper_rank: 516
+    rank_delta: 313
+    rank_delta_abs: 313
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1482,10 +1588,10 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.046
-    global_rank: 218
-    paper_rank: 492
-    rank_delta: 274
-    rank_delta_abs: 274
+    global_rank: 256
+    paper_rank: 542
+    rank_delta: 286
+    rank_delta_abs: 286
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1493,69 +1599,35 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.743
-    std: 0.11
-    paper_value: 0.743
-    paper_std: 0.11
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV
-    date: Oct 12, 2020
-    date_display: Oct 2020
-    date_iso: '2020-10-12'
-    published_venue: ICLR 2020
-    published_conference: ICLR 2020
-    at_pub_value: 0.857
-    at_pub_std: 0.066
-    at_pub_source_arxiv: '1901.01343'
-    at_pub_source_title: Graph Neural Networks With Convolutional ARMA Filters
-    at_pub_source_date_iso: '2019-01-05'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2023-08-16'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.11399999999999999
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.891
-    true_std: 0.058
-    value_gap_source_arxiv: '2308.08235'
-    value_gap_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.14800000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.891
-    sort_std: 0.058
-    global_rank: 250
-    paper_rank: 726
-    rank_delta: 476
-    rank_delta_abs: 476
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1616,8 +1688,8 @@ results:
     value_note: ''
     sort_value: 0.839
     sort_std: 0.064
-    global_rank: 495
-    paper_rank: 495
+    global_rank: 545
+    paper_rank: 545
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1683,10 +1755,10 @@ results:
     value_note: ''
     sort_value: 0.8101
     sort_std: 0.0082
-    global_rank: 595
-    paper_rank: 707
-    rank_delta: 112
-    rank_delta_abs: 112
+    global_rank: 651
+    paper_rank: 768
+    rank_delta: 117
+    rank_delta_abs: 117
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1750,8 +1822,8 @@ results:
     value_note: ''
     sort_value: 0.776
     sort_std: 0.075
-    global_rank: 680
-    paper_rank: 680
+    global_rank: 741
+    paper_rank: 741
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1817,13 +1889,46 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: 0.074
-    global_rank: 705
-    paper_rank: 705
+    global_rank: 766
+    paper_rank: 766
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7518
+    std: 0.047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.01249'
+    title: Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters
+    date: Jun 3, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-03'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 778
+    sort_value: 0.7518
+    sort_std: 0.047
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1884,8 +1989,8 @@ results:
     value_note: ''
     sort_value: 0.749
     sort_std: 0.097
-    global_rank: 723
-    paper_rank: 723
+    global_rank: 784
+    paper_rank: 784
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1931,8 +2036,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-12'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2021-03-20'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1943,16 +2048,17 @@ results:
     today_delta_significant: false
     true_value: 0.743
     true_std: 0.077
-    value_gap_source_arxiv: '2010.05563'
-    value_gap_source_title: Graph Information Bottleneck for Subgraph Recognition
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2103.11155'
+    value_gap_source_title: Recognizing Predictive Substructures with Subgraph Information
+      Bottleneck
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.743
     sort_std: 0.077
-    global_rank: 727
-    paper_rank: 727
+    global_rank: 788
+    paper_rank: 788
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1998,8 +2104,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-12'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2021-03-20'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2010,16 +2116,17 @@ results:
     today_delta_significant: false
     true_value: 0.721
     true_std: 0.086
-    value_gap_source_arxiv: '2010.05563'
-    value_gap_source_title: Graph Information Bottleneck for Subgraph Recognition
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2103.11155'
+    value_gap_source_title: Recognizing Predictive Substructures with Subgraph Information
+      Bottleneck
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.721
     sort_std: 0.086
-    global_rank: 755
-    paper_rank: 755
+    global_rank: 817
+    paper_rank: 817
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2041,9 +2148,9 @@ results:
 - &id002
   dataset: PROTEINS
   rows:
-  - model: Graphormer-SPIS
+  - model: GMN
     model_key: gmn
-    model_plain: Graphormer-SPIS
+    model_plain: GMN
     value: 0.8225
     std: null
     metric: Accuracy
@@ -2074,9 +2181,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: CI-GNN
     model_key: ci-gnn
-    model_plain: Graphormer-SPIS
+    model_plain: CI-GNN
     value: 0.82
     std: 0.02
     metric: Accuracy
@@ -2108,9 +2215,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: DiffPool+GPL
     model_key: diffpool+gpl
-    model_plain: Graphormer-SPIS
+    model_plain: DiffPool+GPL
     value: 0.8196
     std: 0.0286
     metric: Accuracy
@@ -2347,6 +2454,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7726
+    std: 0.0228
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2206.05416'
+    title: Semi-Supervised Hierarchical Graph Classification
+    date: Jun 11, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-11'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 63
+    sort_value: 0.7726
+    sort_std: 0.0228
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GraphSAGE
     model_key: graphsage
     model_plain: GraphSAGE
@@ -2477,6 +2617,39 @@ results:
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.76
+    std: 0.032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.13426'
+    title: Simplifying Graph Convolutional Networks with Redundancy-Free Neighbors
+    date: Apr 18, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-18'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 153
+    sort_value: 0.76
+    sort_std: 0.032
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2920,8 +3093,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-10-12'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2021-03-20'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2932,9 +3105,10 @@ results:
     today_delta_significant: false
     true_value: 0.728
     true_std: 0.041
-    value_gap_source_arxiv: '2010.05563'
-    value_gap_source_title: Graph Information Bottleneck for Subgraph Recognition
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2103.11155'
+    value_gap_source_title: Recognizing Predictive Substructures with Subgraph Information
+      Bottleneck
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''

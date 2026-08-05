@@ -43,8 +43,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - S-CGIB
-mrr: 0.0205
-adjusted_mrr: 0.0205
+mrr: 0.0183
+adjusted_mrr: 0.0183
 mrr_dataset_count: 12
 benchmark_categories:
 - TU Dortmund
@@ -72,9 +72,9 @@ results:
 - &id003
   dataset: BACE
   rows:
-  - model: MAGPrompt+
+  - model: ProtoMol
     model_key: protomol
-    model_plain: MAGPrompt+
+    model_plain: ProtoMol
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -106,9 +106,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MMSG
     model_key: mmsg
-    model_plain: MAGPrompt+
+    model_plain: MMSG
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -140,9 +140,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MemGNN
     model_key: memgnn
-    model_plain: MAGPrompt+
+    model_plain: MemGNN
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -366,9 +366,9 @@ results:
     sort_value: 0.86
     sort_std: 0.011
     global_rank: 49
-    paper_rank: 301
-    rank_delta: 252
-    rank_delta_abs: 252
+    paper_rank: 306
+    rank_delta: 257
+    rank_delta_abs: 257
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -435,9 +435,9 @@ results:
     sort_value: 0.854
     sort_std: 0.011
     global_rank: 60
-    paper_rank: 266
-    rank_delta: 206
-    rank_delta_abs: 206
+    paper_rank: 271
+    rank_delta: 211
+    rank_delta_abs: 211
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -505,9 +505,9 @@ results:
     sort_value: 0.8451
     sort_std: null
     global_rank: 78
-    paper_rank: 269
-    rank_delta: 191
-    rank_delta_abs: 191
+    paper_rank: 274
+    rank_delta: 196
+    rank_delta_abs: 196
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -553,8 +553,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-05-22'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-02-12'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.06899999999999995
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -565,8 +565,8 @@ results:
     today_delta_significant: true
     true_value: 0.835
     true_std: 0.012
-    value_gap_source_arxiv: '2205.10803'
-    value_gap_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    value_gap_source_arxiv: '2402.08023'
+    value_gap_source_title: 'UGMAE: A Unified Framework for Graph Masked Autoencoders'
     value_gap_source_is_current_paper: false
     value_gap: 0.06899999999999995
     has_value_note: false
@@ -574,9 +574,9 @@ results:
     sort_value: 0.835
     sort_std: 0.012
     global_rank: 95
-    paper_rank: 229
-    rank_delta: 134
-    rank_delta_abs: 134
+    paper_rank: 234
+    rank_delta: 139
+    rank_delta_abs: 139
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -644,9 +644,9 @@ results:
     sort_value: 0.834
     sort_std: 0.033
     global_rank: 97
-    paper_rank: 241
-    rank_delta: 144
-    rank_delta_abs: 144
+    paper_rank: 247
+    rank_delta: 150
+    rank_delta_abs: 150
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -713,8 +713,8 @@ results:
     value_note: ''
     sort_value: 0.8203
     sort_std: 0.0379
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -782,10 +782,10 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.004
-    global_rank: 126
-    paper_rank: 290
-    rank_delta: 164
-    rank_delta_abs: 164
+    global_rank: 129
+    paper_rank: 295
+    rank_delta: 166
+    rank_delta_abs: 166
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -851,8 +851,8 @@ results:
     value_note: ''
     sort_value: 0.8132
     sort_std: 0.0106
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 142
+    paper_rank: 142
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -919,8 +919,8 @@ results:
     value_note: ''
     sort_value: 0.8113
     sort_std: 0.0014
-    global_rank: 144
-    paper_rank: 144
+    global_rank: 147
+    paper_rank: 147
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -987,8 +987,8 @@ results:
     value_note: ''
     sort_value: 0.803
     sort_std: 0.031
-    global_rank: 164
-    paper_rank: 164
+    global_rank: 167
+    paper_rank: 167
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1035,8 +1035,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-05-31'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-05-02'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.05610000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1047,19 +1047,18 @@ results:
     today_delta_significant: true
     true_value: 0.799
     true_std: 0.009
-    value_gap_source_arxiv: '2205.15746'
-    value_gap_source_title: Omni-Granular Ego-Semantic Propagation for Self-Supervised
-      Graph Representation Learning
+    value_gap_source_arxiv: '2405.01350'
+    value_gap_source_title: Community-Invariant Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.05610000000000004
     has_value_note: false
     value_note: ''
     sort_value: 0.799
     sort_std: 0.009
-    global_rank: 168
-    paper_rank: 243
-    rank_delta: 75
-    rank_delta_abs: 75
+    global_rank: 171
+    paper_rank: 249
+    rank_delta: 78
+    rank_delta_abs: 78
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1125,8 +1124,8 @@ results:
     value_note: ''
     sort_value: 0.798
     sort_std: 0.013
-    global_rank: 172
-    paper_rank: 173
+    global_rank: 175
+    paper_rank: 176
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1173,8 +1172,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-06-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-06-01'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.0121
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1185,19 +1184,18 @@ results:
     today_delta_significant: true
     true_value: 0.796
     true_std: 0.012
-    value_gap_source_arxiv: '2206.07869'
-    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2406.00403'
+    value_gap_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: 0.0121
     has_value_note: false
     value_note: ''
     sort_value: 0.796
     sort_std: 0.012
-    global_rank: 177
-    paper_rank: 203
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 180
+    paper_rank: 207
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1241,8 +1239,8 @@ results:
     at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     at_pub_source_date_iso: '2022-05-22'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-06-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-06-01'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.033500000000000085
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1253,19 +1251,18 @@ results:
     today_delta_significant: true
     true_value: 0.793
     true_std: 0.016
-    value_gap_source_arxiv: '2206.07869'
-    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2406.00403'
+    value_gap_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: 0.033500000000000085
     has_value_note: false
     value_note: ''
     sort_value: 0.793
     sort_std: 0.016
-    global_rank: 183
-    paper_rank: 234
-    rank_delta: 51
-    rank_delta_abs: 51
+    global_rank: 185
+    paper_rank: 239
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1331,8 +1328,8 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.012
-    global_rank: 205
-    paper_rank: 215
+    global_rank: 209
+    paper_rank: 219
     rank_delta: 10
     rank_delta_abs: 10
     rank_delta_direction: worse
@@ -1400,8 +1397,8 @@ results:
     value_note: ''
     sort_value: 0.778
     sort_std: 0.0046
-    global_rank: 216
-    paper_rank: 216
+    global_rank: 221
+    paper_rank: 221
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1448,8 +1445,8 @@ results:
       Learning
     at_pub_source_date_iso: '2021-06-10'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-06-10'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.011099999999999999
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1460,17 +1457,16 @@ results:
     today_delta_significant: false
     true_value: 0.7549
     true_std: 0.0127
-    value_gap_source_arxiv: '2106.05819'
-    value_gap_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.011099999999999999
     has_value_note: false
     value_note: ''
     sort_value: 0.7549
     sort_std: 0.0127
-    global_rank: 238
-    paper_rank: 243
+    global_rank: 244
+    paper_rank: 249
     rank_delta: 5
     rank_delta_abs: 5
     rank_delta_direction: worse
@@ -1537,8 +1533,8 @@ results:
     value_note: ''
     sort_value: 0.6803
     sort_std: 0.0181
-    global_rank: 281
-    paper_rank: 281
+    global_rank: 286
+    paper_rank: 286
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1593,9 +1589,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: CamS-LLaMA
     model_key: cams-llama
-    model_plain: MAGPrompt+
+    model_plain: CamS-LLaMA
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -1627,9 +1623,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: MAGPrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -1858,9 +1854,9 @@ results:
     sort_value: 0.887
     sort_std: 0.019
     global_rank: 34
-    paper_rank: 185
-    rank_delta: 151
-    rank_delta_abs: 151
+    paper_rank: 190
+    rank_delta: 156
+    rank_delta_abs: 156
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1998,9 +1994,9 @@ results:
     sort_value: 0.879
     sort_std: 0.02
     global_rank: 37
-    paper_rank: 102
-    rank_delta: 65
-    rank_delta_abs: 65
+    paper_rank: 106
+    rank_delta: 69
+    rank_delta_abs: 69
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2068,9 +2064,9 @@ results:
     sort_value: 0.877
     sort_std: 0.026
     global_rank: 38
-    paper_rank: 167
-    rank_delta: 129
-    rank_delta_abs: 129
+    paper_rank: 171
+    rank_delta: 133
+    rank_delta_abs: 133
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2138,9 +2134,9 @@ results:
     sort_value: 0.873
     sort_std: 0.016
     global_rank: 42
-    paper_rank: 265
-    rank_delta: 223
-    rank_delta_abs: 223
+    paper_rank: 271
+    rank_delta: 229
+    rank_delta_abs: 229
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2276,9 +2272,9 @@ results:
     sort_value: 0.87
     sort_std: 0.008
     global_rank: 44
-    paper_rank: 216
-    rank_delta: 172
-    rank_delta_abs: 172
+    paper_rank: 222
+    rank_delta: 178
+    rank_delta_abs: 178
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2414,9 +2410,9 @@ results:
     sort_value: 0.846
     sort_std: 0.008
     global_rank: 52
-    paper_rank: 229
-    rank_delta: 177
-    rank_delta_abs: 177
+    paper_rank: 236
+    rank_delta: 184
+    rank_delta_abs: 184
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2484,9 +2480,9 @@ results:
     sort_value: 0.84
     sort_std: 0.026
     global_rank: 53
-    paper_rank: 185
-    rank_delta: 132
-    rank_delta_abs: 132
+    paper_rank: 190
+    rank_delta: 137
+    rank_delta_abs: 137
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2760,8 +2756,8 @@ results:
     value_note: ''
     sort_value: 0.7205
     sort_std: 0.0117
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2829,8 +2825,8 @@ results:
     value_note: ''
     sort_value: 0.7198
     sort_std: 0.0018
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2897,8 +2893,8 @@ results:
     value_note: ''
     sort_value: 0.7151
     sort_std: 0.0175
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2966,8 +2962,8 @@ results:
     value_note: ''
     sort_value: 0.6776
     sort_std: null
-    global_rank: 200
-    paper_rank: 309
+    global_rank: 206
+    paper_rank: 315
     rank_delta: 109
     rank_delta_abs: 109
     rank_delta_direction: worse
@@ -3035,8 +3031,8 @@ results:
     value_note: ''
     sort_value: 0.6712
     sort_std: 0.0045
-    global_rank: 220
-    paper_rank: 220
+    global_rank: 226
+    paper_rank: 226
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3058,9 +3054,9 @@ results:
 - &id005
   dataset: ClinTox
   rows:
-  - model: EdgePrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: EdgePrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.993
     std: 0.004
     metric: ROC-AUC
@@ -3093,9 +3089,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: EdgePrompt+
+    model_plain: KA-GCN
     value: 0.992
     std: 0.005
     metric: ROC-AUC
@@ -3127,9 +3123,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EdgePrompt+
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: EdgePrompt+
+    model_plain: KA-GAT
     value: 0.991
     std: 0.005
     metric: ROC-AUC
@@ -3160,6 +3156,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.913
+    std: 0.017
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.03806'
+    title: 'OOD-GNN: Out-of-Distribution Generalized Graph Neural Network'
+    date: Dec 7, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-07'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.913
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: MoAMa
     model_key: moama
@@ -3218,9 +3247,9 @@ results:
     sort_value: 0.853
     sort_std: 0.022
     global_rank: 55
-    paper_rank: 112
-    rank_delta: 57
-    rank_delta_abs: 57
+    paper_rank: 113
+    rank_delta: 58
+    rank_delta_abs: 58
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3265,8 +3294,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.04300000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -3277,17 +3306,16 @@ results:
     today_delta_significant: true
     true_value: 0.8132
     true_std: 0.0249
-    value_gap_source_arxiv: '2202.02989'
-    value_gap_source_title: Graph Self-supervised Learning with Accurate Discrepancy
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.04300000000000004
     has_value_note: false
     value_note: ''
     sort_value: 0.8132
     sort_std: 0.0249
-    global_rank: 77
-    paper_rank: 112
+    global_rank: 78
+    paper_rank: 113
     rank_delta: 35
     rank_delta_abs: 35
     rank_delta_direction: worse
@@ -3335,8 +3363,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-07'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.15749999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -3347,19 +3375,18 @@ results:
     today_delta_significant: true
     true_value: 0.8097
     true_std: 0.0164
-    value_gap_source_arxiv: '2202.02989'
-    value_gap_source_title: Graph Self-supervised Learning with Accurate Discrepancy
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.15749999999999997
     has_value_note: false
     value_note: ''
     sort_value: 0.8097
     sort_std: 0.0164
-    global_rank: 78
-    paper_rank: 198
-    rank_delta: 120
-    rank_delta_abs: 120
+    global_rank: 79
+    paper_rank: 201
+    rank_delta: 122
+    rank_delta_abs: 122
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3426,8 +3453,8 @@ results:
     value_note: ''
     sort_value: 0.807
     sort_std: 0.021
-    global_rank: 83
-    paper_rank: 118
+    global_rank: 84
+    paper_rank: 119
     rank_delta: 35
     rank_delta_abs: 35
     rank_delta_direction: worse
@@ -3474,8 +3501,8 @@ results:
     at_pub_source_title: 16 Pre-training Molecular Graph Representation with 3D Geometry
     at_pub_source_date_iso: '2021-10-07'
     at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2021-10-07'
-    value_gap_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2025-01-02'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: 0.17280000000000006
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -3486,19 +3513,18 @@ results:
     today_delta_significant: true
     true_value: 0.789
     true_std: 0.042
-    value_gap_source_arxiv: '2110.07728'
-    value_gap_source_title: 16 Pre-training Molecular Graph Representation with 3D
-      Geometry
+    value_gap_source_arxiv: '2501.01073'
+    value_gap_source_title: Graph Generative Pre-trained Transformer
     value_gap_source_is_current_paper: false
     value_gap: 0.17280000000000006
     has_value_note: false
     value_note: ''
     sort_value: 0.789
     sort_std: 0.042
-    global_rank: 94
-    paper_rank: 215
-    rank_delta: 121
-    rank_delta_abs: 121
+    global_rank: 95
+    paper_rank: 218
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3544,8 +3570,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-06-16'
     at_pub_source_date_label: ICML 2022
-    value_gap_source_date_iso: '2022-06-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.24960000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -3556,19 +3582,18 @@ results:
     today_delta_significant: true
     true_value: 0.7872
     true_std: 0.0258
-    value_gap_source_arxiv: '2206.07869'
-    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.24960000000000004
     has_value_note: false
     value_note: ''
     sort_value: 0.7872
     sort_std: 0.0258
-    global_rank: 100
-    paper_rank: 240
-    rank_delta: 140
-    rank_delta_abs: 140
+    global_rank: 101
+    paper_rank: 243
+    rank_delta: 142
+    rank_delta_abs: 142
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3634,8 +3659,8 @@ results:
     value_note: ''
     sort_value: 0.7858
     sort_std: 0.0201
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3703,8 +3728,8 @@ results:
     value_note: ''
     sort_value: 0.7756
     sort_std: 0.0156
-    global_rank: 105
-    paper_rank: 105
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3752,8 +3777,8 @@ results:
       for Molecule Multi-modal Pretraining
     at_pub_source_date_iso: '2023-05-28'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2024-05-09'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.2157
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -3764,19 +3789,19 @@ results:
     today_delta_significant: true
     true_value: 0.772
     true_std: 0.0088
-    value_gap_source_arxiv: '2405.05665'
-    value_gap_source_title: 'SubGDiff: A Subgraph Diffusion Model to Improve Molecular
-      Representation Learning'
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
     value_gap_source_is_current_paper: false
     value_gap: 0.2157
     has_value_note: false
     value_note: ''
     sort_value: 0.772
     sort_std: 0.0088
-    global_rank: 112
-    paper_rank: 239
-    rank_delta: 127
-    rank_delta_abs: 127
+    global_rank: 113
+    paper_rank: 242
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3842,8 +3867,8 @@ results:
     value_note: ''
     sort_value: 0.768
     sort_std: 0.0183
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3910,8 +3935,8 @@ results:
     value_note: ''
     sort_value: 0.7411
     sort_std: 0.0105
-    global_rank: 136
-    paper_rank: 136
+    global_rank: 137
+    paper_rank: 137
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3979,10 +4004,10 @@ results:
     value_note: ''
     sort_value: 0.73
     sort_std: 0.032
-    global_rank: 148
-    paper_rank: 226
-    rank_delta: 78
-    rank_delta_abs: 78
+    global_rank: 149
+    paper_rank: 229
+    rank_delta: 80
+    rank_delta_abs: 80
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4048,8 +4073,8 @@ results:
     value_note: ''
     sort_value: 0.7253
     sort_std: 0.0014
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4095,8 +4120,8 @@ results:
     at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     at_pub_source_date_iso: '2022-05-22'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-06-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-06-01'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.1169
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -4107,19 +4132,18 @@ results:
     today_delta_significant: true
     true_value: 0.718
     true_std: 0.041
-    value_gap_source_arxiv: '2206.07869'
-    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2406.00403'
+    value_gap_source_title: Dual-perspective Cross Contrastive Learning in Graph Transformers
     value_gap_source_is_current_paper: false
     value_gap: 0.1169
     has_value_note: false
     value_note: ''
     sort_value: 0.718
     sort_std: 0.041
-    global_rank: 160
-    paper_rank: 221
-    rank_delta: 61
-    rank_delta_abs: 61
+    global_rank: 161
+    paper_rank: 224
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4185,10 +4209,10 @@ results:
     value_note: ''
     sort_value: 0.673
     sort_std: 0.02
-    global_rank: 191
-    paper_rank: 215
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 193
+    paper_rank: 218
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4209,9 +4233,43 @@ results:
 - &id008
   dataset: ESOL
   rows:
-  - model: AMCT
+  - model: 10% ZINC + 10% PubChem
+    model_key: 10% zinc + 10% pubchem
+    model_plain: 10% ZINC + 10% PubChem
+    value: 0.2775
+    std: null
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.2775
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: MAT
     model_key: mat
-    model_plain: AMCT
+    model_plain: MAT
     value: 0.278
     std: 0.02
     metric: RMSE
@@ -4235,7 +4293,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.278
     sort_std: 0.02
     comparison_type: global_top
@@ -4243,54 +4301,54 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: AMCT
-    model_key: smiles
-    model_plain: AMCT
-    value: 0.356
-    std: 0.017
+  - model: MoLFormer-XL
+    model_key: molformer-xl
+    model_plain: MoLFormer-XL
+    value: 0.2787
+    std: null
     metric: RMSE
     higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2002.08264'
-    title: Molecule Attention Transformer
-    date: Feb 19, 2020
-    date_display: Feb 2020
-    date_iso: '2020-02-19'
-    venue: Graph Representation Learning workshop and Machine Learning and the Physical
-      Sciences workshop at NeurIPS 2019
-    codebase_url: https://github.com/gmum/MAT
-    uses_external_data: true
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.356
-    sort_std: 0.017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AMCT
-    model_key: graphormer-spis
-    model_plain: AMCT
-    value: 0.484
-    std: 0.005
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2787
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.564
+    std: 0.015
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2305.13987'
     title: On Structural Expressive Power of Graph Transformers
     date: May 23, 2023
@@ -4302,9 +4360,9 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.484
-    sort_std: 0.005
+    global_rank: 13
+    sort_value: 0.564
+    sort_std: 0.015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -4367,8 +4425,8 @@ results:
     value_note: ''
     sort_value: 0.816
     sort_std: 0.019
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4435,8 +4493,8 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.055
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4503,8 +4561,8 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.026
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4550,8 +4608,8 @@ results:
     at_pub_source_title: 3D Infomax improves GNNs for Molecular Property Prediction
     at_pub_source_date_iso: '2021-10-08'
     at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2021-10-08'
-    value_gap_source_date_label: ICML 2021
+    value_gap_source_date_iso: '2023-12-12'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: 0.43099999999999994
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -4562,18 +4620,19 @@ results:
     today_delta_significant: true
     true_value: 0.959
     true_std: 0.047
-    value_gap_source_arxiv: '2110.04126'
-    value_gap_source_title: 3D Infomax improves GNNs for Molecular Property Prediction
+    value_gap_source_arxiv: '2312.07633'
+    value_gap_source_title: SE(3)-Invariant Multiparameter Persistent Homology for
+      Chiral-Sensitive Molecular Property Prediction
     value_gap_source_is_current_paper: false
     value_gap: 0.43099999999999994
     has_value_note: false
     value_note: ''
     sort_value: 0.959
     sort_std: 0.047
-    global_rank: 70
-    paper_rank: 112
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 85
+    paper_rank: 130
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4617,8 +4676,8 @@ results:
     at_pub_source_title: 16 Pre-training Molecular Graph Representation with 3D Geometry
     at_pub_source_date_iso: '2021-10-07'
     at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2022-09-29'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-05-01'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.8579999999999999
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -4628,19 +4687,19 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 1.12
-    true_std: 0.019
-    value_gap_source_arxiv: '2209.15101'
-    value_gap_source_title: Improving Molecular Pretraining with Complementary Featurizations
+    true_std: null
+    value_gap_source_arxiv: '2305.13315'
+    value_gap_source_title: 3D Molecular Geometry Analysis with 2D Graphs
     value_gap_source_is_current_paper: false
     value_gap: 0.8579999999999999
     has_value_note: false
     value_note: ''
     sort_value: 1.12
-    sort_std: 0.019
-    global_rank: 96
-    paper_rank: 128
-    rank_delta: 32
-    rank_delta_abs: 32
+    sort_std: null
+    global_rank: 112
+    paper_rank: 147
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4706,8 +4765,8 @@ results:
     value_note: ''
     sort_value: 1.125
     sort_std: 0.029
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4775,10 +4834,10 @@ results:
     value_note: ''
     sort_value: 1.179
     sort_std: 0.008
-    global_rank: 103
-    paper_rank: 137
-    rank_delta: 34
-    rank_delta_abs: 34
+    global_rank: 119
+    paper_rank: 155
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4843,10 +4902,10 @@ results:
     value_note: ''
     sort_value: 1.196
     sort_std: 0.037
-    global_rank: 104
-    paper_rank: 133
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 120
+    paper_rank: 151
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -4890,8 +4949,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4902,17 +4961,17 @@ results:
     today_delta_significant: false
     true_value: 1.237
     true_std: 0.403
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 1.237
     sort_std: 0.403
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4978,8 +5037,8 @@ results:
     value_note: ''
     sort_value: 1.507
     sort_std: 0.13
-    global_rank: 118
-    paper_rank: 122
+    global_rank: 136
+    paper_rank: 140
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -5025,33 +5084,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-04-07'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 2.136
-    true_std: 0.096
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    today_delta_significant: true
+    true_value: 1.935
+    true_std: null
+    value_gap_source_arxiv: '2604.06336'
+    value_gap_source_title: 'BiScale-GTR: Fragment-Aware Graph Transformers for Multi-Scale
+      Molecular Representation Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.20100000000000007
     has_value_note: false
     value_note: ''
-    sort_value: 2.136
-    sort_std: 0.096
-    global_rank: 132
-    paper_rank: 132
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 1.935
+    sort_std: null
+    global_rank: 146
+    paper_rank: 150
+    rank_delta: 4
+    rank_delta_abs: 4
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -5114,8 +5173,8 @@ results:
     value_note: ''
     sort_value: 2.144
     sort_std: 0.009
-    global_rank: 133
-    paper_rank: 133
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5161,8 +5220,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5173,17 +5232,17 @@ results:
     today_delta_significant: false
     true_value: 2.368
     true_std: 0.07
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 2.368
     sort_std: 0.07
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 155
+    paper_rank: 155
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5229,8 +5288,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5241,17 +5300,17 @@ results:
     today_delta_significant: false
     true_value: 2.953
     true_std: 0.049
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 2.953
     sort_std: 0.049
-    global_rank: 138
-    paper_rank: 138
+    global_rank: 156
+    paper_rank: 156
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5297,8 +5356,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5309,17 +5368,17 @@ results:
     today_delta_significant: false
     true_value: 2.954
     true_std: 0.087
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 2.954
     sort_std: 0.087
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 157
+    paper_rank: 157
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5341,79 +5400,44 @@ results:
 - &id009
   dataset: FreeSolv
   rows:
-  - model: D&D-Node +vn
-    model_key: se(3)-i mpph
-    model_plain: D&D-Node +vn
-    value: 0.354
-    std: 0.053
+  - model: 10% ZINC + 10% PubChem
+    model_key: 10% zinc + 10% pubchem
+    model_plain: 10% ZINC + 10% PubChem
+    value: 0.205
+    std: null
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.07633'
-    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    date: Dec 12, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-12'
-    venue: NeurIPS 2023 AI for Science Workshop
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
-      homology
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.354
-    sort_std: 0.053
+    sort_value: 0.205
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: D&D-Node +vn
-    model_key: ecfp-4 + rf
-    model_plain: D&D-Node +vn
-    value: 0.56
-    std: 0.066
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: random_forest
-    architecture_label: RF
-    architecture_title: Random forest
-    arxiv_id: '2312.07633'
-    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    date: Dec 12, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-12'
-    venue: NeurIPS 2023 AI for Science Workshop
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: trained on ECFP-4 fingerprints
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.56
-    sort_std: 0.066
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: D&D-Node +vn
-    model_key: geomgcl
-    model_plain: D&D-Node +vn
-    value: 0.866
+  - model: MoLFormer-XL
+    model_key: molformer-xl
+    model_plain: MoLFormer-XL
+    value: 0.2308
     std: null
     metric: RMSE
     higher_is_better: false
@@ -5421,23 +5445,57 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2109.11730'
-    title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property Prediction'
-    date: Sep 24, 2021
-    date_display: Sep 2021
-    date_iso: '2021-09-24'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: mixed
-    feature_source_evidence: The model uses a 2D-3D geometric contrastive scheme to
-      bridge knowledge between 2D chemical semantics and 3D spatial information.
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.2308
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MoLFormer-Base
+    model_key: molformer-base
+    model_plain: MoLFormer-Base
+    value: 0.2596
+    std: null
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.866
+    sort_value: 0.2596
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -5501,8 +5559,8 @@ results:
     value_note: ''
     sort_value: 1.648
     sort_std: 0.074
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5569,8 +5627,8 @@ results:
     value_note: ''
     sort_value: 1.865
     sort_std: 0.061
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5616,8 +5674,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5628,17 +5686,17 @@ results:
     today_delta_significant: false
     true_value: 1.953
     true_std: 0.038
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 1.953
     sort_std: 0.038
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5705,8 +5763,8 @@ results:
     value_note: ''
     sort_value: 2.072
     sort_std: 0.053
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 58
+    paper_rank: 58
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5773,8 +5831,8 @@ results:
     value_note: ''
     sort_value: 2.335
     sort_std: 0.052
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5782,6 +5840,40 @@ results:
     comparison_type: improved
     comparison_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
     comparison_source_arxiv: '2309.04589'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 2.346
+    std: 0.122
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.06130'
+    title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning for Property
+      Prediction'
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/PaddlePaddle/PaddleHelix
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 73
+    sort_value: 2.346
+    sort_std: 0.122
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GraphFP
@@ -5820,8 +5912,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5832,17 +5924,17 @@ results:
     today_delta_significant: false
     true_value: 2.528
     true_std: 0.016
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 2.528
     sort_std: 0.016
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5888,8 +5980,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -5900,17 +5992,17 @@ results:
     today_delta_significant: false
     true_value: 2.712
     true_std: 0.327
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 2.712
     sort_std: 0.327
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -5976,10 +6068,10 @@ results:
     value_note: ''
     sort_value: 2.84
     sort_std: 0.19
-    global_rank: 78
-    paper_rank: 83
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 94
+    paper_rank: 98
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -6023,8 +6115,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6035,17 +6127,17 @@ results:
     today_delta_significant: false
     true_value: 3.033
     true_std: 0.026
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 3.033
     sort_std: 0.026
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6111,8 +6203,8 @@ results:
     value_note: ''
     sort_value: 3.057
     sort_std: 0.17
-    global_rank: 88
-    paper_rank: 92
+    global_rank: 102
+    paper_rank: 106
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -6158,8 +6250,8 @@ results:
     at_pub_source_title: 3D Infomax improves GNNs for Molecular Property Prediction
     at_pub_source_date_iso: '2021-10-08'
     at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.5780000000000003
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6170,17 +6262,17 @@ results:
     today_delta_significant: false
     true_value: 3.166
     true_std: 0.027
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 3.166
     sort_std: 0.027
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6226,8 +6318,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6238,17 +6330,17 @@ results:
     today_delta_significant: false
     true_value: 3.192
     true_std: 0.023
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 3.192
     sort_std: 0.023
-    global_rank: 92
-    paper_rank: 92
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6294,8 +6386,8 @@ results:
     at_pub_source_title: Motif-aware Attribute Masking for Molecular Graph Pre-training
     at_pub_source_date_iso: '2023-09-08'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.18500000000000005
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6306,17 +6398,17 @@ results:
     today_delta_significant: false
     true_value: 3.282
     true_std: 0.002
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 3.282
     sort_std: 0.002
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6383,8 +6475,8 @@ results:
     value_note: ''
     sort_value: 3.842
     sort_std: 0.012
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6430,8 +6522,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -6442,17 +6534,17 @@ results:
     today_delta_significant: false
     true_value: 4.023
     true_std: 0.039
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 4.023
     sort_std: 0.039
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6474,20 +6566,122 @@ results:
 - &id010
   dataset: Lipophilicity
   rows:
-  - model: SE(3)-I MPPH
-    model_key: memgnn
-    model_plain: SE(3)-I MPPH
-    value: 0.556
-    std: 0.023
+  - model: MoLFormer-XL
+    model_key: molformer-xl
+    model_plain: MoLFormer-XL
+    value: 0.5289
+    std: null
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.5289
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: 10% ZINC + 10% PubChem
+    model_key: 10% zinc + 10% pubchem
+    model_plain: 10% ZINC + 10% PubChem
+    value: 0.5331
+    std: null
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.5331
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GeomGCL
+    model_key: geomgcl
+    model_plain: GeomGCL
+    value: 0.541
+    std: null
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: true
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.541
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.655
+    std: 0.036
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
     arxiv_id: '2002.09518'
     title: Memory-Based Graph Networks
     date: Feb 21, 2020
@@ -6499,75 +6693,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
-    sort_value: 0.556
-    sort_std: 0.023
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SE(3)-I MPPH
-    model_key: protos-l2
-    model_plain: SE(3)-I MPPH
-    value: 0.58
-    std: 0.016
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.065
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2006.04804'
-    title: Optimal Transport Graph Neural Networks
-    date: Jun 8, 2020
-    date_display: Jun 2020
-    date_iso: '2020-06-08'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.58
-    sort_std: 0.016
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SE(3)-I MPPH
-    model_key: protow-l2
-    model_plain: SE(3)-I MPPH
-    value: 0.604
-    std: 0.014
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2006.04804'
-    title: Optimal Transport Graph Neural Networks
-    date: Jun 8, 2020
-    date_display: Jun 2020
-    date_iso: '2020-06-08'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.604
-    sort_std: 0.014
+    global_rank: 13
+    sort_value: 0.655
+    sort_std: 0.036
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -6629,10 +6757,10 @@ results:
     value_note: ''
     sort_value: 0.702
     sort_std: 0.02
-    global_rank: 13
-    paper_rank: 83
-    rank_delta: 70
-    rank_delta_abs: 70
+    global_rank: 23
+    paper_rank: 96
+    rank_delta: 73
+    rank_delta_abs: 73
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6676,8 +6804,8 @@ results:
     at_pub_source_title: Improving Molecular Pretraining with Complementary Featurizations
     at_pub_source_date_iso: '2022-09-29'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-09-29'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-05-01'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.385
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -6687,19 +6815,19 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.708
-    true_std: 0.007
-    value_gap_source_arxiv: '2209.15101'
-    value_gap_source_title: Improving Molecular Pretraining with Complementary Featurizations
+    true_std: null
+    value_gap_source_arxiv: '2305.13315'
+    value_gap_source_title: 3D Molecular Geometry Analysis with 2D Graphs
     value_gap_source_is_current_paper: false
     value_gap: 0.385
     has_value_note: false
     value_note: ''
     sort_value: 0.708
-    sort_std: 0.007
-    global_rank: 16
-    paper_rank: 84
-    rank_delta: 68
-    rank_delta_abs: 68
+    sort_std: null
+    global_rank: 27
+    paper_rank: 97
+    rank_delta: 70
+    rank_delta_abs: 70
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6765,10 +6893,10 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: 0.011
-    global_rank: 18
-    paper_rank: 81
-    rank_delta: 63
-    rank_delta_abs: 63
+    global_rank: 30
+    paper_rank: 94
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -6834,8 +6962,8 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.042
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6902,8 +7030,8 @@ results:
     value_note: ''
     sort_value: 0.771
     sort_std: 0.041
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -6969,10 +7097,10 @@ results:
     value_note: ''
     sort_value: 0.772
     sort_std: 0.03
-    global_rank: 41
-    paper_rank: 83
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 53
+    paper_rank: 96
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7016,8 +7144,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7028,17 +7156,17 @@ results:
     today_delta_significant: false
     true_value: 0.823
     true_std: 0.027
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.823
     sort_std: 0.027
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7105,8 +7233,8 @@ results:
     value_note: ''
     sort_value: 0.851
     sort_std: 0.073
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7172,10 +7300,10 @@ results:
     value_note: ''
     sort_value: 0.869
     sort_std: 0.06
-    global_rank: 65
-    paper_rank: 84
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 77
+    paper_rank: 97
+    rank_delta: 20
+    rank_delta_abs: 20
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7240,8 +7368,8 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.052
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7287,8 +7415,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7299,17 +7427,17 @@ results:
     today_delta_significant: false
     true_value: 0.97
     true_std: 0.023
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.97
     sort_std: 0.023
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7355,8 +7483,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7367,17 +7495,17 @@ results:
     today_delta_significant: false
     true_value: 0.982
     true_std: 0.052
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.982
     sort_std: 0.052
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 92
+    paper_rank: 92
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7423,8 +7551,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7435,17 +7563,17 @@ results:
     today_delta_significant: false
     true_value: 1.085
     true_std: 0.061
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 1.085
     sort_std: 0.061
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7512,8 +7640,8 @@ results:
     value_note: ''
     sort_value: 1.116
     sort_std: 0.024
-    global_rank: 86
-    paper_rank: 86
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7559,8 +7687,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -7571,17 +7699,17 @@ results:
     today_delta_significant: false
     true_value: 1.371
     true_std: 0.058
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 1.371
     sort_std: 0.058
-    global_rank: 93
-    paper_rank: 93
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -7603,9 +7731,9 @@ results:
 - &id001
   dataset: NCI1
   rows:
-  - model: ECC
+  - model: WL-MLP
     model_key: wl-mlp
-    model_plain: ECC
+    model_plain: WL-MLP
     value: 0.9954
     std: null
     metric: Accuracy
@@ -7637,9 +7765,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: GIN
     model_key: gin
-    model_plain: ECC
+    model_plain: GIN
     value: 0.9934
     std: null
     metric: Accuracy
@@ -7670,9 +7798,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ECC
+  - model: GCN
     model_key: gcn
-    model_plain: ECC
+    model_plain: GCN
     value: 0.9727
     std: null
     metric: Accuracy
@@ -7698,6 +7826,40 @@ results:
     global_rank: 3
     sort_value: 0.9727
     sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8303
+    std: 0.0137
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.01794'
+    title: 'GnnX-Bench: Unravelling the Utility of Perturbation-based Gnn Explainers
+      through In-depth Benchmarking'
+    date: Oct 3, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-03'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/Armagaan/gnn-x-bench
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 81
+    sort_value: 0.8303
+    sort_std: 0.0137
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -7760,10 +7922,10 @@ results:
     value_note: ''
     sort_value: 0.8285
     sort_std: 0.0016
-    global_rank: 84
-    paper_rank: 599
-    rank_delta: 515
-    rank_delta_abs: 515
+    global_rank: 90
+    paper_rank: 647
+    rank_delta: 557
+    rank_delta_abs: 557
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7829,10 +7991,10 @@ results:
     value_note: ''
     sort_value: 0.825
     sort_std: 0.0013
-    global_rank: 104
-    paper_rank: 600
-    rank_delta: 496
-    rank_delta_abs: 496
+    global_rank: 115
+    paper_rank: 648
+    rank_delta: 533
+    rank_delta_abs: 533
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7898,10 +8060,10 @@ results:
     value_note: ''
     sort_value: 0.817
     sort_std: 0.0026
-    global_rank: 144
-    paper_rank: 596
-    rank_delta: 452
-    rank_delta_abs: 452
+    global_rank: 157
+    paper_rank: 644
+    rank_delta: 487
+    rank_delta_abs: 487
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -7967,8 +8129,8 @@ results:
     value_note: ''
     sort_value: 0.7975
     sort_std: 0.0082
-    global_rank: 243
-    paper_rank: 243
+    global_rank: 262
+    paper_rank: 262
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8035,8 +8197,8 @@ results:
     value_note: ''
     sort_value: 0.7859
     sort_std: 0.0081
-    global_rank: 304
-    paper_rank: 304
+    global_rank: 324
+    paper_rank: 324
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8104,10 +8266,10 @@ results:
     value_note: ''
     sort_value: 0.784
     sort_std: 0.005
-    global_rank: 313
-    paper_rank: 600
-    rank_delta: 287
-    rank_delta_abs: 287
+    global_rank: 332
+    paper_rank: 648
+    rank_delta: 316
+    rank_delta_abs: 316
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8174,10 +8336,10 @@ results:
     value_note: ''
     sort_value: 0.7782
     sort_std: 0.0295
-    global_rank: 343
-    paper_rank: 599
-    rank_delta: 256
-    rank_delta_abs: 256
+    global_rank: 363
+    paper_rank: 647
+    rank_delta: 284
+    rank_delta_abs: 284
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -8243,8 +8405,8 @@ results:
     value_note: ''
     sort_value: 0.7579
     sort_std: 0.0091
-    global_rank: 423
-    paper_rank: 423
+    global_rank: 445
+    paper_rank: 445
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8311,8 +8473,8 @@ results:
     value_note: ''
     sort_value: 0.7445
     sort_std: 0.0151
-    global_rank: 445
-    paper_rank: 445
+    global_rank: 473
+    paper_rank: 473
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8378,10 +8540,10 @@ results:
     value_note: ''
     sort_value: 0.73
     sort_std: 0.003
-    global_rank: 474
-    paper_rank: 600
-    rank_delta: 126
-    rank_delta_abs: 126
+    global_rank: 506
+    paper_rank: 648
+    rank_delta: 142
+    rank_delta_abs: 142
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -8446,8 +8608,8 @@ results:
     value_note: ''
     sort_value: 0.6094
     sort_std: 0.0193
-    global_rank: 567
-    paper_rank: 567
+    global_rank: 611
+    paper_rank: 611
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8514,8 +8676,8 @@ results:
     value_note: ''
     sort_value: 0.6094
     sort_std: 0.0193
-    global_rank: 568
-    paper_rank: 568
+    global_rank: 612
+    paper_rank: 612
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8582,8 +8744,8 @@ results:
     value_note: ''
     sort_value: 0.5693
     sort_std: 0.0043
-    global_rank: 582
-    paper_rank: 582
+    global_rank: 630
+    paper_rank: 630
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8650,8 +8812,8 @@ results:
     value_note: ''
     sort_value: 0.5377
     sort_std: 0.0113
-    global_rank: 593
-    paper_rank: 593
+    global_rank: 641
+    paper_rank: 641
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8718,8 +8880,8 @@ results:
     value_note: ''
     sort_value: 0.4951
     sort_std: 0.0121
-    global_rank: 600
-    paper_rank: 600
+    global_rank: 648
+    paper_rank: 648
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8741,9 +8903,9 @@ results:
 - &id012
   dataset: Peptides-func
   rows:
-  - model: GINE / GIN
+  - model: S^2GCN
     model_key: s^2gcn
-    model_plain: GINE / GIN
+    model_plain: S^2GCN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -8774,9 +8936,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GINE / GIN
+  - model: S^2 GCN + PE
     model_key: s^2 gcn + pe
-    model_plain: GINE / GIN
+    model_plain: S^2 GCN + PE
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -8808,9 +8970,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GINE / GIN
+  - model: S4G
     model_key: s4g
-    model_plain: GINE / GIN
+    model_plain: S4G
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -8836,6 +8998,39 @@ results:
     global_rank: 3
     sort_value: 0.7293
     sort_std: 0.0004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7261
+    std: 0.0011
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.12358'
+    title: From Message-Passing to Linearized Graph Sequence Models
+    date: May 12, 2026
+    date_display: May 2026
+    date_iso: '2026-05-12'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 5
+    sort_value: 0.7261
+    sort_std: 0.0011
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -8898,8 +9093,8 @@ results:
     value_note: ''
     sort_value: 0.694
     sort_std: 0.002
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -8966,8 +9161,8 @@ results:
     value_note: ''
     sort_value: 0.618
     sort_std: 0.014
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9034,8 +9229,8 @@ results:
     value_note: ''
     sort_value: 0.612
     sort_std: 0.005
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9102,8 +9297,8 @@ results:
     value_note: ''
     sort_value: 0.587
     sort_std: 0.023
-    global_rank: 163
-    paper_rank: 163
+    global_rank: 162
+    paper_rank: 162
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9170,8 +9365,8 @@ results:
     value_note: ''
     sort_value: 0.584
     sort_std: 0.019
-    global_rank: 169
-    paper_rank: 169
+    global_rank: 168
+    paper_rank: 168
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9238,8 +9433,8 @@ results:
     value_note: ''
     sort_value: 0.541
     sort_std: 0.006
-    global_rank: 183
-    paper_rank: 183
+    global_rank: 182
+    paper_rank: 182
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9306,13 +9501,47 @@ results:
     value_note: ''
     sort_value: 0.505
     sort_std: 0.014
-    global_rank: 190
-    paper_rank: 190
+    global_rank: 189
+    paper_rank: 189
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.406
+    std: 0.0021
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.03561'
+    title: 'CIN++: Enhancing Topological Message Passing'
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    venue: arXiv.org
+    codebase_url: https://github.com/twitter-research/cwn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: For both datasets, we did not employ any feature augmentation
+      such as positional encoding.
+    is_global_top: true
+    global_rank: 196
+    sort_value: 0.406
+    sort_std: 0.0021
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -9374,8 +9603,8 @@ results:
     value_note: ''
     sort_value: 0.398
     sort_std: 0.009
-    global_rank: 198
-    paper_rank: 198
+    global_rank: 197
+    paper_rank: 197
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9442,8 +9671,8 @@ results:
     value_note: ''
     sort_value: 0.386
     sort_std: 0.009
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 198
+    paper_rank: 198
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9510,8 +9739,8 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: 0.002
-    global_rank: 200
-    paper_rank: 200
+    global_rank: 199
+    paper_rank: 199
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9578,8 +9807,8 @@ results:
     value_note: ''
     sort_value: 0.335
     sort_std: 0.013
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 200
+    paper_rank: 200
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9646,8 +9875,8 @@ results:
     value_note: ''
     sort_value: 0.318
     sort_std: 0.002
-    global_rank: 202
-    paper_rank: 202
+    global_rank: 201
+    paper_rank: 201
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9714,8 +9943,8 @@ results:
     value_note: ''
     sort_value: 0.313
     sort_std: 0.034
-    global_rank: 203
-    paper_rank: 203
+    global_rank: 202
+    paper_rank: 202
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9782,8 +10011,8 @@ results:
     value_note: ''
     sort_value: 0.311
     sort_std: 0.013
-    global_rank: 204
-    paper_rank: 204
+    global_rank: 203
+    paper_rank: 203
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9850,8 +10079,8 @@ results:
     value_note: ''
     sort_value: 0.31
     sort_std: 0.012
-    global_rank: 205
-    paper_rank: 205
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -9873,9 +10102,108 @@ results:
 - &id011
   dataset: Peptides-struct
   rows:
-  - model: GINE / GIN
+  - model: Energy GNN + attention
+    model_key: energy gnn + attention
+    model_plain: Energy GNN + attention
+    value: 0.036000000000000004
+    std: 0.038
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.036000000000000004
+    sort_std: 0.038
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Energy GNN edge-wise
+    model_key: energy gnn edge-wise
+    model_plain: Energy GNN edge-wise
+    value: 0.04
+    std: 0.036000000000000004
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.04
+    sort_std: 0.036000000000000004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Energy GNN node-wise
+    model_key: energy gnn node-wise
+    model_plain: Energy GNN node-wise
+    value: 0.195
+    std: 0.017
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.00494'
+    title: Graph Neural Networks Gone Hogwild
+    date: Jun 29, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-29'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.195
+    sort_std: 0.017
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
     model_key: gcn
-    model_plain: GINE / GIN
+    model_plain: GCN
     value: 0.2421
     std: 0.0016
     metric: MAE
@@ -9898,79 +10226,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 4
     sort_value: 0.2421
     sort_std: 0.0016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GINE / GIN
-    model_key: tango_gps
-    model_plain: GINE / GIN
-    value: 0.2422
-    std: 0.0014
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2508.05070'
-    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
-    date: Aug 7, 2025
-    date_display: Aug 2025
-    date_iso: '2025-08-07'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Tango does not use additional encodings.
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.2422
-    sort_std: 0.0014
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GINE / GIN
-    model_key: nba-gin+lappe
-    model_plain: GINE / GIN
-    value: 0.2424
-    std: 0.001
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2310.07430'
-    title: Non-backtracking Graph Neural Networks
-    date: Oct 11, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-11'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/seonghyun26/nba-gnn
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.2424
-    sort_std: 0.001
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: S-CGIB
     model_key: s-cgib
@@ -10029,8 +10291,8 @@ results:
     value_note: ''
     sort_value: 0.269
     sort_std: 0.004
-    global_rank: 149
-    paper_rank: 149
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10097,8 +10359,8 @@ results:
     value_note: ''
     sort_value: 0.322
     sort_std: 0.008
-    global_rank: 162
-    paper_rank: 162
+    global_rank: 199
+    paper_rank: 199
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10165,8 +10427,8 @@ results:
     value_note: ''
     sort_value: 0.327
     sort_std: 0.026
-    global_rank: 164
-    paper_rank: 164
+    global_rank: 201
+    paper_rank: 201
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10233,8 +10495,8 @@ results:
     value_note: ''
     sort_value: 0.332
     sort_std: 0.002
-    global_rank: 165
-    paper_rank: 165
+    global_rank: 202
+    paper_rank: 202
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10301,8 +10563,8 @@ results:
     value_note: ''
     sort_value: 0.358
     sort_std: 0.003
-    global_rank: 174
-    paper_rank: 174
+    global_rank: 210
+    paper_rank: 210
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10369,8 +10631,8 @@ results:
     value_note: ''
     sort_value: 0.365
     sort_std: 0.005
-    global_rank: 176
-    paper_rank: 176
+    global_rank: 212
+    paper_rank: 212
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10437,8 +10699,8 @@ results:
     value_note: ''
     sort_value: 0.376
     sort_std: 0.005
-    global_rank: 178
-    paper_rank: 178
+    global_rank: 214
+    paper_rank: 214
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10505,13 +10767,47 @@ results:
     value_note: ''
     sort_value: 0.419
     sort_std: 0.006
-    global_rank: 179
-    paper_rank: 179
+    global_rank: 217
+    paper_rank: 217
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4351
+    std: 0.0008
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.03561'
+    title: 'CIN++: Enhancing Topological Message Passing'
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    venue: arXiv.org
+    codebase_url: https://github.com/twitter-research/cwn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: For both datasets, we did not employ any feature augmentation
+      such as positional encoding.
+    is_global_top: true
+    global_rank: 219
+    sort_value: 0.4351
+    sort_std: 0.0008
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -10573,8 +10869,8 @@ results:
     value_note: ''
     sort_value: 0.463
     sort_std: 0.008
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 220
+    paper_rank: 220
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10641,8 +10937,8 @@ results:
     value_note: ''
     sort_value: 0.541
     sort_std: 0.008
-    global_rank: 184
-    paper_rank: 184
+    global_rank: 222
+    paper_rank: 222
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10709,8 +11005,8 @@ results:
     value_note: ''
     sort_value: 0.546
     sort_std: 0.001
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 223
+    paper_rank: 223
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10777,8 +11073,8 @@ results:
     value_note: ''
     sort_value: 0.574
     sort_std: 0.001
-    global_rank: 186
-    paper_rank: 186
+    global_rank: 224
+    paper_rank: 224
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10845,8 +11141,8 @@ results:
     value_note: ''
     sort_value: 0.58
     sort_std: 0.002
-    global_rank: 187
-    paper_rank: 187
+    global_rank: 225
+    paper_rank: 225
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10913,8 +11209,8 @@ results:
     value_note: ''
     sort_value: 0.587
     sort_std: 0.001
-    global_rank: 188
-    paper_rank: 188
+    global_rank: 226
+    paper_rank: 226
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -10981,8 +11277,8 @@ results:
     value_note: ''
     sort_value: 0.973
     sort_std: 0.014
-    global_rank: 189
-    paper_rank: 189
+    global_rank: 227
+    paper_rank: 227
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -11004,9 +11300,9 @@ results:
 - &id006
   dataset: SIDER
   rows:
-  - model: DGI
+  - model: KA-GAT
     model_key: ka-gat
-    model_plain: DGI
+    model_plain: KA-GAT
     value: 0.847
     std: 0.002
     metric: ROC-AUC
@@ -11038,9 +11334,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DGI
+  - model: KA-GCN
     model_key: ka-gcn
-    model_plain: DGI
+    model_plain: KA-GCN
     value: 0.842
     std: 0.001
     metric: ROC-AUC
@@ -11072,9 +11368,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: DGI
+  - model: GraphKAN
     model_key: graphkan
-    model_plain: DGI
+    model_plain: GraphKAN
     value: 0.837
     std: 0.001
     metric: ROC-AUC
@@ -11484,8 +11780,8 @@ results:
       for Molecule Multi-modal Pretraining
     at_pub_source_date_iso: '2023-05-28'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2024-05-09'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.0037000000000000366
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -11496,9 +11792,9 @@ results:
     today_delta_significant: false
     true_value: 0.622
     true_std: 0.0059
-    value_gap_source_arxiv: '2405.05665'
-    value_gap_source_title: 'SubGDiff: A Subgraph Diffusion Model to Improve Molecular
-      Representation Learning'
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
     value_gap_source_is_current_paper: false
     value_gap: 0.0037000000000000366
     has_value_note: false
@@ -11643,9 +11939,9 @@ results:
     sort_value: 0.618
     sort_std: 0.008
     global_rank: 118
-    paper_rank: 220
-    rank_delta: 102
-    rank_delta_abs: 102
+    paper_rank: 222
+    rank_delta: 104
+    rank_delta_abs: 104
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -11713,9 +12009,9 @@ results:
     sort_value: 0.617
     sort_std: 0.018
     global_rank: 119
-    paper_rank: 174
-    rank_delta: 55
-    rank_delta_abs: 55
+    paper_rank: 175
+    rank_delta: 56
+    rank_delta_abs: 56
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -11782,9 +12078,9 @@ results:
     sort_value: 0.616
     sort_std: 0.024
     global_rank: 122
-    paper_rank: 203
-    rank_delta: 81
-    rank_delta_abs: 81
+    paper_rank: 204
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -11851,9 +12147,9 @@ results:
     sort_value: 0.615
     sort_std: 0.013
     global_rank: 125
-    paper_rank: 202
-    rank_delta: 77
-    rank_delta_abs: 77
+    paper_rank: 203
+    rank_delta: 78
+    rank_delta_abs: 78
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -11921,9 +12217,9 @@ results:
     sort_value: 0.615
     sort_std: 0.025
     global_rank: 127
-    paper_rank: 232
-    rank_delta: 105
-    rank_delta_abs: 105
+    paper_rank: 234
+    rank_delta: 107
+    rank_delta_abs: 107
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -12037,8 +12333,8 @@ results:
       Learning
     at_pub_source_date_iso: '2021-06-10'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-06-10'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.006099999999999994
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -12049,9 +12345,8 @@ results:
     today_delta_significant: false
     true_value: 0.6049
     true_std: 0.0074
-    value_gap_source_arxiv: '2106.05819'
-    value_gap_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.006099999999999994
     has_value_note: false
@@ -12059,9 +12354,9 @@ results:
     sort_value: 0.6049
     sort_std: 0.0074
     global_rank: 168
-    paper_rank: 186
-    rank_delta: 18
-    rank_delta_abs: 18
+    paper_rank: 187
+    rank_delta: 19
+    rank_delta_abs: 19
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -12106,8 +12401,8 @@ results:
       Learning
     at_pub_source_date_iso: '2022-02-07'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-06-06'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-05-02'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.0021999999999999797
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -12118,16 +12413,16 @@ results:
     today_delta_significant: false
     true_value: 0.604
     true_std: 0.007
-    value_gap_source_arxiv: '2306.03506'
-    value_gap_source_title: Subgraph Networks Based Contrastive Learning
+    value_gap_source_arxiv: '2405.01350'
+    value_gap_source_title: Community-Invariant Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.0021999999999999797
     has_value_note: false
     value_note: ''
     sort_value: 0.604
     sort_std: 0.007
-    global_rank: 170
-    paper_rank: 177
+    global_rank: 171
+    paper_rank: 178
     rank_delta: 7
     rank_delta_abs: 7
     rank_delta_direction: worse
@@ -12194,8 +12489,8 @@ results:
     value_note: ''
     sort_value: 0.5974
     sort_std: 0.0132
-    global_rank: 191
-    paper_rank: 191
+    global_rank: 192
+    paper_rank: 192
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12262,8 +12557,8 @@ results:
     value_note: ''
     sort_value: 0.5753
     sort_std: 0.0023
-    global_rank: 219
-    paper_rank: 219
+    global_rank: 221
+    paper_rank: 221
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12330,8 +12625,8 @@ results:
     value_note: ''
     sort_value: 0.5752
     sort_std: 0.0006
-    global_rank: 220
-    paper_rank: 220
+    global_rank: 222
+    paper_rank: 222
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12398,8 +12693,8 @@ results:
     value_note: ''
     sort_value: 0.5715
     sort_std: 0.0026
-    global_rank: 225
-    paper_rank: 225
+    global_rank: 227
+    paper_rank: 227
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12466,8 +12761,8 @@ results:
     value_note: ''
     sort_value: 0.5341
     sort_std: 0.005
-    global_rank: 238
-    paper_rank: 238
+    global_rank: 240
+    paper_rank: 240
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -12489,9 +12784,9 @@ results:
 - &id002
   dataset: Tox21
   rows:
-  - model: HOD-GNN
+  - model: HIMP
     model_key: himp
-    model_plain: HOD-GNN
+    model_plain: HIMP
     value: 0.874
     std: 0.005
     metric: ROC-AUC
@@ -12522,9 +12817,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: GINE w/ VN
     model_key: gine w/ vn
-    model_plain: HOD-GNN
+    model_plain: GINE w/ VN
     value: 0.872
     std: 0.003
     metric: ROC-AUC
@@ -12555,9 +12850,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: HOD-GNN
+  - model: NaiveGINe+ K=3 w/ VN
     model_key: naivegine+ k=3 w/ vn
-    model_plain: HOD-GNN
+    model_plain: NaiveGINe+ K=3 w/ VN
     value: 0.87
     std: 0.004
     metric: ROC-AUC
@@ -12644,10 +12939,10 @@ results:
     value_note: ''
     sort_value: 0.84
     sort_std: 0.004
-    global_rank: 15
-    paper_rank: 304
-    rank_delta: 289
-    rank_delta_abs: 289
+    global_rank: 16
+    paper_rank: 313
+    rank_delta: 297
+    rank_delta_abs: 297
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -12713,8 +13008,8 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.0069
-    global_rank: 25
-    paper_rank: 43
+    global_rank: 26
+    paper_rank: 44
     rank_delta: 18
     rank_delta_abs: 18
     rank_delta_direction: worse
@@ -12783,10 +13078,10 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.022
-    global_rank: 32
-    paper_rank: 263
-    rank_delta: 231
-    rank_delta_abs: 231
+    global_rank: 33
+    paper_rank: 272
+    rank_delta: 239
+    rank_delta_abs: 239
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -12853,10 +13148,10 @@ results:
     value_note: ''
     sort_value: 0.818
     sort_std: 0.025
-    global_rank: 36
-    paper_rank: 295
-    rank_delta: 259
-    rank_delta_abs: 259
+    global_rank: 37
+    paper_rank: 304
+    rank_delta: 267
+    rank_delta_abs: 267
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -12923,10 +13218,10 @@ results:
     value_note: ''
     sort_value: 0.816
     sort_std: 0.021
-    global_rank: 38
-    paper_rank: 281
-    rank_delta: 243
-    rank_delta_abs: 243
+    global_rank: 39
+    paper_rank: 290
+    rank_delta: 251
+    rank_delta_abs: 251
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -12992,8 +13287,8 @@ results:
     value_note: ''
     sort_value: 0.8094
     sort_std: 0.0017
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13061,10 +13356,10 @@ results:
     value_note: ''
     sort_value: 0.806
     sort_std: 0.012
-    global_rank: 52
-    paper_rank: 274
-    rank_delta: 222
-    rank_delta_abs: 222
+    global_rank: 53
+    paper_rank: 283
+    rank_delta: 230
+    rank_delta_abs: 230
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13131,10 +13426,10 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.017
-    global_rank: 53
-    paper_rank: 274
-    rank_delta: 221
-    rank_delta_abs: 221
+    global_rank: 54
+    paper_rank: 283
+    rank_delta: 229
+    rank_delta_abs: 229
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13201,10 +13496,10 @@ results:
     value_note: ''
     sort_value: 0.796
     sort_std: 0.025
-    global_rank: 75
-    paper_rank: 287
-    rank_delta: 212
-    rank_delta_abs: 212
+    global_rank: 76
+    paper_rank: 296
+    rank_delta: 220
+    rank_delta_abs: 220
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13270,8 +13565,8 @@ results:
     value_note: ''
     sort_value: 0.7829
     sort_std: 0.0055
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13338,8 +13633,8 @@ results:
     value_note: ''
     sort_value: 0.7775
     sort_std: 0.0024
-    global_rank: 129
-    paper_rank: 129
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13406,8 +13701,8 @@ results:
     value_note: ''
     sort_value: 0.7744
     sort_std: 0.0038
-    global_rank: 138
-    paper_rank: 138
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13475,10 +13770,10 @@ results:
     value_note: ''
     sort_value: 0.774
     sort_std: 0.006
-    global_rank: 141
-    paper_rank: 287
-    rank_delta: 146
-    rank_delta_abs: 146
+    global_rank: 144
+    paper_rank: 296
+    rank_delta: 152
+    rank_delta_abs: 152
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13544,8 +13839,8 @@ results:
     value_note: ''
     sort_value: 0.7735
     sort_std: 0.014
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13591,8 +13886,8 @@ results:
     at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     at_pub_source_date_iso: '2022-05-22'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-05-22'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-05-02'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.033299999999999996
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -13603,18 +13898,18 @@ results:
     today_delta_significant: true
     true_value: 0.767
     true_std: 0.004
-    value_gap_source_arxiv: '2205.10803'
-    value_gap_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    value_gap_source_arxiv: '2405.01350'
+    value_gap_source_title: Community-Invariant Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.033299999999999996
     has_value_note: false
     value_note: ''
     sort_value: 0.767
     sort_std: 0.004
-    global_rank: 163
-    paper_rank: 272
-    rank_delta: 109
-    rank_delta_abs: 109
+    global_rank: 166
+    paper_rank: 281
+    rank_delta: 115
+    rank_delta_abs: 115
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13680,10 +13975,10 @@ results:
     value_note: ''
     sort_value: 0.765
     sort_std: 0.003
-    global_rank: 174
-    paper_rank: 233
-    rank_delta: 59
-    rank_delta_abs: 59
+    global_rank: 177
+    paper_rank: 240
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -13748,8 +14043,8 @@ results:
     value_note: ''
     sort_value: 0.7623
     sort_std: 0.0127
-    global_rank: 179
-    paper_rank: 179
+    global_rank: 183
+    paper_rank: 183
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13796,8 +14091,8 @@ results:
       Learning
     at_pub_source_date_iso: '2021-06-10'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-06-10'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.0031999999999999806
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -13808,17 +14103,16 @@ results:
     today_delta_significant: false
     true_value: 0.7427
     true_std: 0.0062
-    value_gap_source_arxiv: '2106.05819'
-    value_gap_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.0031999999999999806
     has_value_note: false
     value_note: ''
     sort_value: 0.7427
     sort_std: 0.0062
-    global_rank: 254
-    paper_rank: 260
+    global_rank: 262
+    paper_rank: 268
     rank_delta: 6
     rank_delta_abs: 6
     rank_delta_direction: worse
@@ -13884,10 +14178,10 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: 0.009
-    global_rank: 260
-    paper_rank: 341
-    rank_delta: 81
-    rank_delta_abs: 81
+    global_rank: 268
+    paper_rank: 350
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -13952,8 +14246,8 @@ results:
     value_note: ''
     sort_value: 0.6859
     sort_std: 0.0024
-    global_rank: 305
-    paper_rank: 305
+    global_rank: 314
+    paper_rank: 314
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -13975,9 +14269,9 @@ results:
 - &id007
   dataset: ToxCast
   rows:
-  - model: GIN (Supervised EdgePred)
+  - model: GeomGCL
     model_key: geomgcl
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: GeomGCL
     value: 0.763
     std: null
     metric: ROC-AUC
@@ -14009,9 +14303,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN (Supervised EdgePred)
+  - model: LiGhT DeepGPT
     model_key: light deepgpt
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: LiGhT DeepGPT
     value: 0.757
     std: 0.011
     metric: ROC-AUC
@@ -14042,9 +14336,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN (Supervised EdgePred)
+  - model: D&D-Node +vn
     model_key: d&d-node +vn
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: D&D-Node +vn
     value: 0.7556
     std: 0.0068
     metric: ROC-AUC
@@ -14133,9 +14427,9 @@ results:
     sort_value: 0.735
     sort_std: 0.002
     global_rank: 18
-    paper_rank: 117
-    rank_delta: 99
-    rank_delta_abs: 99
+    paper_rank: 118
+    rank_delta: 100
+    rank_delta_abs: 100
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14202,9 +14496,9 @@ results:
     sort_value: 0.714
     sort_std: 0.018
     global_rank: 34
-    paper_rank: 156
-    rank_delta: 122
-    rank_delta_abs: 122
+    paper_rank: 158
+    rank_delta: 124
+    rank_delta_abs: 124
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14272,9 +14566,9 @@ results:
     sort_value: 0.712
     sort_std: 0.011
     global_rank: 36
-    paper_rank: 199
-    rank_delta: 163
-    rank_delta_abs: 163
+    paper_rank: 203
+    rank_delta: 167
+    rank_delta_abs: 167
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14342,9 +14636,9 @@ results:
     sort_value: 0.711
     sort_std: 0.014
     global_rank: 37
-    paper_rank: 152
-    rank_delta: 115
-    rank_delta_abs: 115
+    paper_rank: 154
+    rank_delta: 117
+    rank_delta_abs: 117
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14618,9 +14912,9 @@ results:
     sort_value: 0.696
     sort_std: 0.023
     global_rank: 49
-    paper_rank: 170
-    rank_delta: 121
-    rank_delta_abs: 121
+    paper_rank: 172
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14756,9 +15050,9 @@ results:
     sort_value: 0.69
     sort_std: 0.012
     global_rank: 57
-    paper_rank: 170
-    rank_delta: 113
-    rank_delta_abs: 113
+    paper_rank: 172
+    rank_delta: 115
+    rank_delta_abs: 115
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -14964,9 +15258,9 @@ results:
     sort_value: 0.677
     sort_std: 0.019
     global_rank: 72
-    paper_rank: 186
-    rank_delta: 114
-    rank_delta_abs: 114
+    paper_rank: 190
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -15100,8 +15394,8 @@ results:
     value_note: ''
     sort_value: 0.6445
     sort_std: 0.0014
-    global_rank: 123
-    paper_rank: 123
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -15147,8 +15441,8 @@ results:
     at_pub_source_title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
     at_pub_source_date_iso: '2022-05-22'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-06-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2024-05-02'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.025399999999999978
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -15159,19 +15453,18 @@ results:
     today_delta_significant: true
     true_value: 0.642
     true_std: 0.005
-    value_gap_source_arxiv: '2206.07869'
-    value_gap_source_title: Let Invariant Rationale Discovery Inspire Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2405.01350'
+    value_gap_source_title: Community-Invariant Graph Contrastive Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.025399999999999978
     has_value_note: false
     value_note: ''
     sort_value: 0.642
     sort_std: 0.005
-    global_rank: 129
-    paper_rank: 185
-    rank_delta: 56
-    rank_delta_abs: 56
+    global_rank: 131
+    paper_rank: 189
+    rank_delta: 58
+    rank_delta_abs: 58
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -15237,8 +15530,8 @@ results:
     value_note: ''
     sort_value: 0.641
     sort_std: 0.007
-    global_rank: 133
-    paper_rank: 137
+    global_rank: 135
+    paper_rank: 139
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -15304,10 +15597,10 @@ results:
     value_note: ''
     sort_value: 0.632
     sort_std: 0.008
-    global_rank: 159
-    paper_rank: 206
-    rank_delta: 47
-    rank_delta_abs: 47
+    global_rank: 161
+    paper_rank: 210
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -15352,8 +15645,8 @@ results:
       Learning
     at_pub_source_date_iso: '2021-06-10'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-06-10'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2023-09-05'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: 0.00040000000000006697
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -15364,17 +15657,16 @@ results:
     today_delta_significant: false
     true_value: 0.6316
     true_std: 0.0045
-    value_gap_source_arxiv: '2106.05819'
-    value_gap_source_title: Adversarial Graph Augmentation to Improve Graph Contrastive
-      Learning
+    value_gap_source_arxiv: '2309.02304'
+    value_gap_source_title: Graph Self-Contrast Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.00040000000000006697
     has_value_note: false
     value_note: ''
     sort_value: 0.6316
     sort_std: 0.0045
-    global_rank: 160
-    paper_rank: 160
+    global_rank: 162
+    paper_rank: 162
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -15441,8 +15733,8 @@ results:
     value_note: ''
     sort_value: 0.608
     sort_std: 0.0115
-    global_rank: 195
-    paper_rank: 195
+    global_rank: 199
+    paper_rank: 199
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

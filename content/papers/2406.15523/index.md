@@ -1311,9 +1311,9 @@ results:
 - &id004
   dataset: ENZYMES
   rows:
-  - model: GOODAT
+  - model: LGKDE
     model_key: lgkde
-    model_plain: GOODAT
+    model_plain: LGKDE
     value: 0.7104
     std: 0.0045
     metric: AUROC
@@ -1345,9 +1345,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GOODAT
+  - model: Uniform
     model_key: uniform
-    model_plain: GOODAT
+    model_plain: Uniform
     value: 0.6934
     std: 0.0041
     metric: AUROC
@@ -2605,9 +2605,9 @@ results:
 - &id001
   dataset: NCI1
   rows:
-  - model: GOODAT
+  - model: LGKDE
     model_key: lgkde
-    model_plain: GOODAT
+    model_plain: LGKDE
     value: 0.7667
     std: 0.003
     metric: AUROC
@@ -2706,9 +2706,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GOODAT
+  - model: MUSE
     model_key: muse
-    model_plain: GOODAT
+    model_plain: MUSE
     value: 0.7445
     std: 0.0026
     metric: AUROC

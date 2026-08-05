@@ -73,9 +73,9 @@ results:
 - &id001
   dataset: Amazon2M
   rows:
-  - model: GraphConsis
+  - model: GFD
     model_key: gfd
-    model_plain: GraphConsis
+    model_plain: GFD
     value: 0.9757
     std: 0.0012
     metric: AUC
@@ -106,9 +106,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphConsis
+  - model: BWGNN
     model_key: bwgnn
-    model_plain: GraphConsis
+    model_plain: BWGNN
     value: 0.9742
     std: 0.0048
     metric: AUC
@@ -139,9 +139,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphConsis
+  - model: GDN
     model_key: gdn
-    model_plain: GraphConsis
+    model_plain: GDN
     value: 0.9709
     std: 0.0016
     metric: AUC
@@ -208,8 +208,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -218,17 +218,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.964
+    true_std: 0.011
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.964
     sort_std: 0.011
     global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -270,8 +275,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -280,17 +285,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.961
+    true_std: 0.0
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.961
     sort_std: 0.0
-    global_rank: 5
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -332,8 +342,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -342,17 +352,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.948
+    true_std: 0.008
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.948
     sort_std: 0.008
-    global_rank: 8
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -394,8 +409,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -404,17 +419,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.935
+    true_std: 0.006
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.935
     sort_std: 0.006
-    global_rank: 9
+    global_rank: 12
+    paper_rank: 12
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -477,81 +497,11 @@ results:
     value_note: ''
     sort_value: 0.9316
     sort_std: 0.0087
-    global_rank: 9
-    paper_rank: 10
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 13
+    paper_rank: 16
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Enhancing Graph Neural Network-based Fraud Detectors
-      against Camouflaged Fraudsters
-    comparison_source_arxiv: '2008.08692'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.911
-    std: 0.006
-    paper_value: 0.911
-    paper_std: 0.006
-    metric: AUC
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 15, 2021
-    date_display: Apr 2021
-    date_iso: '2021-04-15'
-    published_venue: WWW 2021
-    published_conference: WWW 2021
-    at_pub_value: 0.7525
-    at_pub_std: null
-    at_pub_source_arxiv: '2008.08692'
-    at_pub_source_title: Enhancing Graph Neural Network-based Fraud Detectors against
-      Camouflaged Fraudsters
-    at_pub_source_date_iso: '2020-08-19'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-02-27'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.15850000000000009
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8667
-    true_std: null
-    value_gap_source_arxiv: '2401.14155'
-    value_gap_source_title: Alleviating Structural Distribution Shift in Graph Anomaly
-      Detection
-    value_gap_source_is_current_paper: false
-    value_gap: 0.044300000000000006
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8667
-    sort_std: null
-    global_rank: 15
-    paper_rank: 10
-    rank_delta: -5
-    rank_delta_abs: 5
-    rank_delta_direction: better
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Enhancing Graph Neural Network-based Fraud Detectors
@@ -596,8 +546,8 @@ results:
       Camouflaged Fraudsters
     at_pub_source_date_iso: '2020-08-19'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2024-11-16'
-    value_gap_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
     gap_vs_at_pub: 0.1614
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -605,27 +555,129 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8102
-    true_std: 0.0179
-    value_gap_source_arxiv: '2412.00020'
-    value_gap_source_title: Partitioning Message Passing for Graph Fraud Detection
-    value_gap_source_is_current_paper: false
-    value_gap: 0.1028
+    today_delta_significant: false
+    true_value: 0.913
+    true_std: 0.006
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.8102
-    sort_std: 0.0179
-    global_rank: 18
-    paper_rank: 10
-    rank_delta: -8
-    rank_delta_abs: 8
-    rank_delta_direction: better
+    sort_value: 0.913
+    sort_std: 0.006
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Enhancing Graph Neural Network-based Fraud Detectors
       against Camouflaged Fraudsters
     comparison_source_arxiv: '2008.08692'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.911
+    std: 0.006
+    paper_value: 0.911
+    paper_std: 0.006
+    metric: AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to amazon2m (score=86)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 15, 2021
+    date_display: Apr 2021
+    date_iso: '2021-04-15'
+    published_venue: WWW 2021
+    published_conference: WWW 2021
+    at_pub_value: 0.7525
+    at_pub_std: null
+    at_pub_source_arxiv: '2008.08692'
+    at_pub_source_title: Enhancing Graph Neural Network-based Fraud Detectors against
+      Camouflaged Fraudsters
+    at_pub_source_date_iso: '2020-08-19'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2021-04-15'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: 0.15850000000000009
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.911
+    true_std: 0.006
+    value_gap_source_arxiv: '2104.07477'
+    value_gap_source_title: Lorentzian Graph Convolutional Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.911
+    sort_std: 0.006
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Enhancing Graph Neural Network-based Fraud Detectors
+      against Camouflaged Fraudsters
+    comparison_source_arxiv: '2008.08692'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7535
+    std: null
+    metric: AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2401.14155'
+    title: Alleviating Structural Distribution Shift in Graph Anomaly Detection
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: Web Search and Data Mining
+    codebase_url: https://github.com/blacksingular/wsdm_GDN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 26
+    sort_value: 0.7535
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: AUC

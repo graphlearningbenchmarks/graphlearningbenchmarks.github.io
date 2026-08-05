@@ -62,9 +62,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: ACGCL
+  - model: HG-SCM
     model_key: hg-scm
-    model_plain: ACGCL
+    model_plain: HG-SCM
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -96,9 +96,43 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ACGCL
+  - model: SeHGNN
+    model_key: sehgnn
+    model_plain: SeHGNN
+    value: 0.9489
+    std: 0.0018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.05757'
+    title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
+      Graph'
+    date: Dec 10, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-10'
+    venue: Information Processing & Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9489
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AdvSynGNN
     model_key: advsyngnn
-    model_plain: ACGCL
+    model_plain: AdvSynGNN
     value: 0.9486
     std: 0.0012
     metric: Accuracy
@@ -122,7 +156,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9486
     sort_std: 0.0012
     comparison_type: global_top
@@ -130,11 +164,11 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ACGCL
-    model_key: simplehgn
-    model_plain: ACGCL
-    value: 0.9446
-    std: 0.0022
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8758
+    std: 0.002
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -144,21 +178,55 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2312.05757'
-    title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
-      Graph'
-    date: Dec 10, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-10'
-    venue: Information Processing & Management
-    codebase_url: ''
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-09'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/wooner49/TriCL
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9446
-    sort_std: 0.0022
+    global_rank: 36
+    sort_value: 0.8758
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.8118
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2206.04739'
+    title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive Learning
+      on Hypergraphs'
+    date: Jun 9, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-09'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/wooner49/TriCL
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 82
+    sort_value: 0.8118
+    sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -220,8 +288,8 @@ results:
     value_note: ''
     sort_value: 0.793
     sort_std: 0.031
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -287,8 +355,8 @@ results:
     value_note: ''
     sort_value: 0.754
     sort_std: 0.023
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -354,8 +422,8 @@ results:
     value_note: ''
     sort_value: 0.749
     sort_std: 0.032
-    global_rank: 101
-    paper_rank: 101
+    global_rank: 119
+    paper_rank: 119
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -421,8 +489,8 @@ results:
     value_note: ''
     sort_value: 0.731
     sort_std: 0.034
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -488,8 +556,8 @@ results:
     value_note: ''
     sort_value: 0.664
     sort_std: 0.028
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -555,8 +623,8 @@ results:
     value_note: ''
     sort_value: 0.634
     sort_std: 0.033
-    global_rank: 120
-    paper_rank: 120
+    global_rank: 139
+    paper_rank: 139
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -622,8 +690,8 @@ results:
     value_note: ''
     sort_value: 0.604
     sort_std: 0.045
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 143
+    paper_rank: 143
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -689,8 +757,8 @@ results:
     value_note: ''
     sort_value: 0.585
     sort_std: 0.026
-    global_rank: 125
-    paper_rank: 125
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

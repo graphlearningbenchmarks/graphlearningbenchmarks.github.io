@@ -70,9 +70,9 @@ results:
   dataset: Amazon-Photo
   is_multi_metric: true
   rows:
-  - model: C (orthogonal)
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: C (orthogonal)
+    model_plain: MSH-GNN
     metric_values:
     - 0.9766
     - null
@@ -109,9 +109,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GeoMancer
     model_key: geomancer
-    model_plain: C (orthogonal)
+    model_plain: GeoMancer
     metric_values:
     - 0.9705
     - null
@@ -149,9 +149,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: C (orthogonal)
+  - model: GraphTARIF
     model_key: graphtarif
-    model_plain: C (orthogonal)
+    model_plain: GraphTARIF
     metric_values:
     - 0.9703
     - null
@@ -189,6 +189,85 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    metric_values:
+    - 0.9643
+    - null
+    metric_stds:
+    - 0.0027
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    published_venue: ''
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 13
+    is_best: false
+    sort_value: 0.9643
+    sort_std: 0.0027
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    metric_values:
+    - 0.9128
+    - null
+    metric_stds:
+    - 0.0063
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.02285'
+    title: Clarify Confused Nodes via Separated Learning
+    published_venue: ''
+    date: Jun 4, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-04'
+    codebase_url: https://github.com/GISec-Team/NCGNN
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 434
+    is_best: false
+    sort_value: 0.9128
+    sort_std: 0.0063
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: PATTON
     model_key: patton
     model_plain: PATTON
@@ -205,18 +284,18 @@ results:
     architecture_type: llm
     architecture_label: LLM
     architecture_title: LLM applied to graphs
-    sort_value: 0.7598
-    sort_std: 0.0014
-    true_value: 0.7598
-    true_std: 0.0014
+    sort_value: 0.786
+    sort_std: 0.0015
+    true_value: 0.786
+    true_std: 0.0015
     paper_value: 0.786
     paper_std: 0.0015
     has_value_gap: true
     has_value_note: false
-    value_gap: 0.0262
-    value_gap_source_arxiv: '2406.12052'
-    value_gap_source_title: 'UniGLM: Training One Unified Language Model for Text-Attributed
-      Graph Embedding'
+    value_gap: null
+    value_gap_source_arxiv: '2412.19211'
+    value_gap_source_title: 'Large Language Models Meet Graph Neural Networks: A Perspective
+      of Graph Mining'
     value_note: ''
     at_pub_value: 0.7598
     at_pub_std: 0.0014
@@ -225,7 +304,7 @@ results:
       Graph Embedding'
     at_pub_source_date_iso: '2024-06-17'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-06-17'
+    value_gap_source_date_iso: '2024-12-26'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.0262
     worse_than_at_pub: false
@@ -234,7 +313,7 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
+    today_delta_significant: false
     arxiv_id: ''
     title: ''
     published_venue: ''
@@ -251,7 +330,7 @@ results:
     comparison_source_arxiv: '2406.12052'
     is_best: false
     is_std_outlier: false
-    global_rank: 514
+    global_rank: 597
   metrics:
   - Accuracy
   - Recall

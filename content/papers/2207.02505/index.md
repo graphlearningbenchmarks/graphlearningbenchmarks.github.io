@@ -55,9 +55,9 @@ paper_type: method
 proposed_models:
 - TokenGT (Lap)
 - TokenGT (Lap) + Performer
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0238
+adjusted_mrr: 0.0079
+mrr_dataset_count: 1
 benchmark_categories:
 - OGB
 benchmark_coverage:
@@ -73,6 +73,108 @@ results:
 - &id001
   dataset: PCQM4Mv2
   rows:
+  - model: DeMol
+    model_key: demol
+    model_plain: DeMol
+    value: 0.0603
+    std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 186.0
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2603.00568'
+    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
+      and Interactions
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    venue: Accepted to ICLR 2026
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.0603
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: TGT-At
+    model_key: tgt-at
+    model_plain: TGT-At
+    value: 0.0671
+    std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 203.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2603.00568'
+    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
+      and Interactions
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    venue: Accepted to ICLR 2026
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.0671
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: UniMol
+    model_key: unimol
+    model_plain: UniMol
+    value: 0.0693
+    std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 77.0
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2603.00568'
+    title: Enhancing Molecular Property Predictions by Learning from Bond Modelling
+      and Interactions
+    date: Feb 28, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-28'
+    venue: Accepted to ICLR 2026
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.0693
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: EGT
     model_key: egt
     model_plain: EGT
@@ -103,14 +205,82 @@ results:
     date_iso: '2022-07-06'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: null
+    at_pub_value: 0.0869
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_source_arxiv: '2205.12454'
+    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
+    at_pub_source_date_iso: '2022-05-25'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2022-08-11'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.0862
+    true_std: null
+    value_gap_source_arxiv: '2208.05863'
+    value_gap_source_title: 'GEM-2: Next Generation Molecular Property Prediction
+      Network by Modeling Full-range Many-body Interactions'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0007000000000000062
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0862
+    sort_std: null
+    global_rank: 26
+    paper_rank: 29
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Graphormer
+    model_key: graphormer
+    model_plain: Graphormer
+    value: 0.0864
+    std: null
+    paper_value: 0.0864
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 48.3
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: shi2022benchmarking
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jul 6, 2022
+    date_display: Jul 2022
+    date_iso: '2022-07-06'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: 0.0864
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.12454'
+    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
+    at_pub_source_date_iso: '2022-05-25'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -119,51 +289,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    sort_value: 0.0869
-    sort_std: null
-    global_rank: 1
-    has_value_gap: false
-    has_value_note: false
+    true_value: 0.0864
+    true_std: null
+    value_gap_source_arxiv: '2603.00568'
+    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
+      Bond Modelling and Interactions
+    value_gap_source_is_current_paper: false
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: TorchMD-NET + Pre-training
-    model_key: egt-large
-    model_plain: TorchMD-NET + Pre-training
-    value: 0.0872
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 110.8
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2201.12787'
-    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    date: Jan 30, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-30'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.0872
+    sort_value: 0.0864
     sort_std: null
-    comparison_type: global_top
+    global_rank: 27
+    paper_rank: 27
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -198,14 +341,14 @@ results:
     date_iso: '2022-07-06'
     published_venue: NeurIPS 2022
     published_conference: NeurIPS 2022
-    at_pub_value: null
+    at_pub_value: 0.089
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_source_arxiv: '2205.12454'
+    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
+    at_pub_source_date_iso: '2022-05-25'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-03-02'
+    value_gap_source_date_label: ICLR 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -214,51 +357,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.089
+    true_std: null
+    value_gap_source_arxiv: '2303.01028'
+    value_gap_source_title: 'Specformer: Spectral Graph Neural Networks Meet Transformers'
+    value_gap_source_is_current_paper: false
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.089
     sort_std: null
-    global_rank: 2
+    global_rank: 35
+    paper_rank: 35
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TorchMD-NET + Pre-training
-    model_key: grpe-standard
-    model_plain: TorchMD-NET + Pre-training
-    value: 0.0898
-    std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: 46.2
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2201.12787'
-    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    date: Jan 30, 2022
-    date_display: Jan 2022
-    date_iso: '2022-01-30'
-    venue: null
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.0898
-    sort_std: null
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -299,8 +414,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-07-06'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -309,17 +424,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.091
+    true_std: null
+    value_gap_source_arxiv: '2207.02505'
+    value_gap_source_title: Pure Transformers are Powerful Graph Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.091
     sort_std: null
-    global_rank: 3
+    global_rank: 42
+    paper_rank: 42
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -361,8 +481,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-07-06'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -371,52 +491,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.0935
+    true_std: null
+    value_gap_source_arxiv: '2207.02505'
+    value_gap_source_title: Pure Transformers are Powerful Graph Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.0935
     sort_std: null
-    global_rank: 3
+    global_rank: 46
+    paper_rank: 46
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TorchMD-NET + Pre-training
-    model_key: advsyngnn
-    model_plain: TorchMD-NET + Pre-training
-    value: 0.108
-    std: 0.002
-    metric: MAE
-    higher_is_better: false
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.17071'
-    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
-      and Self-Corrective Propagation'
-    date: Feb 19, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-19'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.108
-    sort_std: 0.002
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -457,8 +548,8 @@ results:
     at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
     at_pub_source_date_iso: '2022-01-30'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: 0.00010000000000000286
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -466,19 +557,20 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.1084
+    today_delta_significant: false
+    true_value: 0.1083
     true_std: null
-    value_gap_source_arxiv: '2201.12787'
-    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    value_gap_source_arxiv: '2603.00568'
+    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
+      Bond Modelling and Interactions
     value_gap_source_is_current_paper: false
-    value_gap: 0.00010000000000000286
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.1084
+    sort_value: 0.1083
     sort_std: null
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -524,8 +616,8 @@ results:
     at_pub_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
     at_pub_source_date_iso: '2022-01-30'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-05-19'
+    value_gap_source_date_label: IJCAI 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -536,16 +628,16 @@ results:
     today_delta_significant: false
     true_value: 0.1152
     true_std: null
-    value_gap_source_arxiv: '2201.12787'
-    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    value_gap_source_arxiv: '2305.11424'
+    value_gap_source_title: IJCAI--23 Formatting Instructions
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.1152
     sort_std: null
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -591,8 +683,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-07-06'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -601,213 +693,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.1192
+    true_std: null
+    value_gap_source_arxiv: '2207.02505'
+    value_gap_source_title: Pure Transformers are Powerful Graph Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.1192
     sort_std: null
-    global_rank: 6
+    global_rank: 60
+    paper_rank: 60
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.1195
-    std: null
-    paper_value: 0.1195
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 3.8
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: hu2021ogb
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jul 6, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-06'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: 0.1195
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.12454'
-    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    at_pub_source_date_iso: '2022-05-25'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.1218
-    true_std: null
-    value_gap_source_arxiv: '2201.12787'
-    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0023000000000000104
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1218
-    sort_std: null
-    global_rank: 7
-    paper_rank: 6
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.1302
-    std: null
-    paper_value: 0.1302
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 6.7
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jul 6, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-06'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.1302
-    sort_std: null
-    global_rank: 10
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Graphormer
-    model_key: graphormer
-    model_plain: Graphormer
-    value: 0.0864
-    std: null
-    paper_value: 0.0864
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 48.3
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: shi2022benchmarking
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jul 6, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-06'
-    published_venue: NeurIPS 2022
-    published_conference: NeurIPS 2022
-    at_pub_value: 0.0864
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.12454'
-    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
-    at_pub_source_date_iso: '2022-05-25'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.1328
-    true_std: null
-    value_gap_source_arxiv: '2201.12787'
-    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0464
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.1328
-    sort_std: null
-    global_rank: 11
-    paper_rank: 1
-    rank_delta: -10
-    rank_delta_abs: 10
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -849,32 +750,168 @@ results:
     at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
     at_pub_source_date_iso: '2022-05-25'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-10-31'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.1195
+    true_std: null
+    value_gap_source_arxiv: '2310.20519'
+    value_gap_source_title: Enhancing Graph Neural Networks with Quantum Computed
+      Encodings
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0184
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1195
+    sort_std: null
+    global_rank: 63
+    paper_rank: 73
+    rank_delta: 10
+    rank_delta_abs: 10
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.1195
+    std: null
+    paper_value: 0.1195
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 3.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: hu2021ogb
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jul 6, 2022
+    date_display: Jul 2022
+    date_iso: '2022-07-06'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: 0.1195
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.12454'
+    at_pub_source_title: Recipe for a General, Powerful, Scalable Graph Transformer
+    at_pub_source_date_iso: '2022-05-25'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-02-28'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.1398
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1195
     true_std: null
-    value_gap_source_arxiv: '2201.12787'
-    value_gap_source_title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    value_gap_source_arxiv: '2603.00568'
+    value_gap_source_title: Enhancing Molecular Property Predictions by Learning from
+      Bond Modelling and Interactions
     value_gap_source_is_current_paper: false
-    value_gap: 0.0019000000000000128
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.1398
+    sort_value: 0.1195
     sort_std: null
-    global_rank: 18
-    paper_rank: 17
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
-    has_value_gap: true
+    global_rank: 62
+    paper_rank: 62
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.1302
+    std: null
+    paper_value: 0.1302
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 6.7
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jul 6, 2022
+    date_display: Jul 2022
+    date_iso: '2022-07-06'
+    published_venue: NeurIPS 2022
+    published_conference: NeurIPS 2022
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-07-06'
+    value_gap_source_date_label: NeurIPS 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.1302
+    true_std: null
+    value_gap_source_arxiv: '2207.02505'
+    value_gap_source_title: Pure Transformers are Powerful Graph Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.1302
+    sort_std: null
+    global_rank: 67
+    paper_rank: 67
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -916,8 +953,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-07-06'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -926,17 +963,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.234
+    true_std: null
+    value_gap_source_arxiv: '2207.02505'
+    value_gap_source_title: Pure Transformers are Powerful Graph Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.234
     sort_std: null
-    global_rank: 22
+    global_rank: 81
+    paper_rank: 81
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

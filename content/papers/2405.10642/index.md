@@ -69,9 +69,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - Hi-GMAE-F
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.027
+adjusted_mrr: 0.009
+mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
 benchmark_coverage:
@@ -87,11 +87,11 @@ results:
 - &id001
   dataset: QM7b
   rows:
-  - model: ISGR
-    model_key: ani-1
-    model_plain: ISGR
-    value: 2.86
-    std: 0.25
+  - model: DTNN
+    model_key: dtnn
+    model_plain: DTNN
+    value: 0.074
+    std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
@@ -101,86 +101,86 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '1907.04786'
-    title: Fast Haar Transforms for Graph Neural Networks
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    venue: Neural Networks
-    codebase_url: ''
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: Mar 2, 2017
+    date_display: Mar 2017
+    date_iso: '2017-03-02'
+    venue: Chemical Science
+    codebase_url: https://github.com/deepchem/deepchem
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 2.86
-    sort_std: 0.25
+    sort_value: 0.074
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ISGR
-    model_key: dtnn
-    model_plain: ISGR
-    value: 8.8
-    std: 3.5
+  - model: Multitask(CM)
+    model_key: multitask(cm)
+    model_plain: Multitask(CM)
+    value: 0.086
+    std: null
     metric: MAE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1907.04786'
-    title: Fast Haar Transforms for Graph Neural Networks
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    venue: Neural Networks
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: Mar 2, 2017
+    date_display: Mar 2017
+    date_iso: '2017-03-02'
+    venue: Chemical Science
+    codebase_url: https://github.com/deepchem/deepchem
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 8.8
-    sort_std: 3.5
+    sort_value: 0.086
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ISGR
-    model_key: hanet
-    model_plain: ISGR
-    value: 9.5
-    std: 0.71
+  - model: KRR(CM)
+    model_key: krr(cm)
+    model_plain: KRR(CM)
+    value: 0.098
+    std: null
     metric: MAE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '1907.04786'
-    title: Fast Haar Transforms for Graph Neural Networks
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    venue: Neural Networks
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '1703.00564'
+    title: MoleculeNet
+    date: Mar 2, 2017
+    date_display: Mar 2017
+    date_iso: '2017-03-02'
+    venue: Chemical Science
+    codebase_url: https://github.com/deepchem/deepchem
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 9.5
-    sort_std: 0.71
+    sort_value: 0.098
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -222,8 +222,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -232,17 +232,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 74.4
+    true_std: 1.9
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 74.4
     sort_std: 1.9
-    global_rank: 23
+    global_rank: 37
+    paper_rank: 37
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -278,14 +283,15 @@ results:
     date_iso: '2024-05-17'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 78.4
+    at_pub_std: 2.3
+    at_pub_source_arxiv: '2310.14753'
+    at_pub_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    at_pub_source_date_iso: '2023-10-23'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -294,17 +300,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 78.4
+    true_std: 2.6
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 78.4
     sort_std: 2.6
-    global_rank: 25
+    global_rank: 41
+    paper_rank: 41
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -340,14 +351,15 @@ results:
     date_iso: '2024-05-17'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 79.8
+    at_pub_std: 2.6
+    at_pub_source_arxiv: '2310.14753'
+    at_pub_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    at_pub_source_date_iso: '2023-10-23'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -356,17 +368,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 79.8
+    true_std: 2.6
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 79.8
     sort_std: 2.6
-    global_rank: 25
+    global_rank: 42
+    paper_rank: 42
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -402,14 +419,15 @@ results:
     date_iso: '2024-05-17'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 80.4
+    at_pub_std: 3.3
+    at_pub_source_arxiv: '2310.14753'
+    at_pub_source_title: Rethinking Tokenizer and Decoder in Masked Graph Modeling
+      for Molecules
+    at_pub_source_date_iso: '2023-10-23'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -418,17 +436,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 80.4
+    true_std: 3.3
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 80.4
     sort_std: 3.3
-    global_rank: 25
+    global_rank: 43
+    paper_rank: 43
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -470,8 +493,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -480,17 +503,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 84.3
+    true_std: 2.1
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 84.3
     sort_std: 2.1
-    global_rank: 25
+    global_rank: 44
+    paper_rank: 44
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -532,8 +560,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -542,17 +570,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 88.3
+    true_std: 0.5
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 88.3
     sort_std: 0.5
-    global_rank: 26
+    global_rank: 46
+    paper_rank: 46
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -594,8 +627,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-05-17'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -604,18 +637,56 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 109.5
+    true_std: 7.6
+    value_gap_source_arxiv: '2405.10642'
+    value_gap_source_title: 'Hi-GMAE: Hierarchical Graph Masked Autoencoders'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 109.5
     sort_std: 7.6
-    global_rank: 31
+    global_rank: 52
+    paper_rank: 52
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 122.9
+    std: 2.2
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2502.12638'
+    title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for 3D Molecule Generation'
+    date: Feb 18, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-18'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/acharkq/NExT-Mol
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 60
+    sort_value: 122.9
+    sort_std: 2.2
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

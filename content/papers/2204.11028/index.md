@@ -66,8 +66,8 @@ proposed_models:
 - PGExplainer
 - PGM-Explainer
 - RC-Explainer
-mrr: 0.0263
-adjusted_mrr: 0.0088
+mrr: 0.0222
+adjusted_mrr: 0.0074
 mrr_dataset_count: 1
 benchmark_categories:
 - TU Dortmund
@@ -84,9 +84,9 @@ results:
 - &id001
   dataset: REDDIT-MULTI-5K
   rows:
-  - model: Coarsened
+  - model: SpeGCL
     model_key: spegcl
-    model_plain: Coarsened
+    model_plain: SpeGCL
     value: 0.5944
     std: 0.0018
     metric: Accuracy
@@ -118,9 +118,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Coarsened
+  - model: GIN
     model_key: gin
-    model_plain: Coarsened
+    model_plain: GIN
     value: 0.576
     std: 0.015
     metric: Accuracy
@@ -152,9 +152,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Coarsened
+  - model: Sum--MLP (GIN-0)
     model_key: sum--mlp (gin-0)
-    model_plain: Coarsened
+    model_plain: Sum--MLP (GIN-0)
     value: 0.575
     std: 0.015
     metric: Accuracy
@@ -241,13 +241,47 @@ results:
     value_note: ''
     sort_value: 0.472
     sort_std: null
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.438
+    std: 0.032
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2401.16011'
+    title: 'GPS: graph contrastive learning via multi-scale augmented views from adversarial
+      pooling'
+    date: Jan 29, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-29'
+    venue: Science China Information Sciences
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 31
+    sort_value: 0.438
+    sort_std: 0.032
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -308,8 +342,8 @@ results:
     value_note: ''
     sort_value: 0.3
     sort_std: null
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -375,8 +409,8 @@ results:
     value_note: ''
     sort_value: 0.279
     sort_std: null
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -442,8 +476,8 @@ results:
     value_note: ''
     sort_value: 0.175
     sort_std: null
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -509,8 +543,8 @@ results:
     value_note: ''
     sort_value: 0.158
     sort_std: null
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -576,8 +610,8 @@ results:
     value_note: ''
     sort_value: 0.158
     sort_std: null
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -643,8 +677,8 @@ results:
     value_note: ''
     sort_value: 0.125
     sort_std: null
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

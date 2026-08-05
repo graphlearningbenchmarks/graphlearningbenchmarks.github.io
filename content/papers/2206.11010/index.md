@@ -45,8 +45,8 @@ paper_type: method
 proposed_models:
 - AgentNet
 - 1-AgentNet
-mrr: 0.0694
-adjusted_mrr: 0.0694
+mrr: 0.0682
+adjusted_mrr: 0.0682
 mrr_dataset_count: 5
 benchmark_categories:
 - TU Dortmund
@@ -74,9 +74,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -107,9 +107,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -132,47 +165,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: AgentNet
     model_key: agentnet
@@ -210,8 +209,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-22'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-07-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -222,16 +221,16 @@ results:
     today_delta_significant: false
     true_value: 0.936
     true_std: 0.086
-    value_gap_source_arxiv: '2206.11010'
-    value_gap_source_title: Agent-based Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2408.00165'
+    value_gap_source_title: Non-convolutional Graph Neural Networks
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.936
     sort_std: 0.086
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -297,13 +296,46 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.029
-    global_rank: 34
-    paper_rank: 217
-    rank_delta: 183
-    rank_delta_abs: 183
+    global_rank: 43
+    paper_rank: 254
+    rank_delta: 211
+    rank_delta_abs: 211
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.922
+    std: 0.044
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 71
+    sort_value: 0.922
+    sort_std: 0.044
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -364,10 +396,10 @@ results:
     value_note: ''
     sort_value: 0.92
     sort_std: 0.05
-    global_rank: 63
-    paper_rank: 95
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 81
+    paper_rank: 117
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -412,8 +444,8 @@ results:
       Graph Neural Networks'
     at_pub_source_date_iso: '2021-11-11'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2022-03-15'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-08-16'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -424,17 +456,16 @@ results:
     today_delta_significant: false
     true_value: 0.906
     true_std: 0.087
-    value_gap_source_arxiv: '2203.07691'
-    value_gap_source_title: Supervised Contrastive Learning with Structure Inference
-      for Graph Classification
+    value_gap_source_arxiv: '2308.08235'
+    value_gap_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.906
     sort_std: 0.087
-    global_rank: 122
-    paper_rank: 122
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -501,8 +532,8 @@ results:
     value_note: ''
     sort_value: 0.904
     sort_std: 0.07
-    global_rank: 142
-    paper_rank: 142
+    global_rank: 172
+    paper_rank: 172
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -548,8 +579,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-22'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-07-31'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -560,16 +591,16 @@ results:
     today_delta_significant: false
     true_value: 0.904
     true_std: 0.071
-    value_gap_source_arxiv: '2206.11010'
-    value_gap_source_title: Agent-based Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2408.00165'
+    value_gap_source_title: Non-convolutional Graph Neural Networks
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.904
     sort_std: 0.071
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -635,8 +666,8 @@ results:
     value_note: ''
     sort_value: 0.894
     sort_std: 0.109
-    global_rank: 226
-    paper_rank: 226
+    global_rank: 264
+    paper_rank: 264
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -702,13 +733,46 @@ results:
     value_note: ''
     sort_value: 0.888
     sort_std: 0.07
-    global_rank: 272
-    paper_rank: 272
+    global_rank: 311
+    paper_rank: 311
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.866
+    std: 0.0495
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.04319'
+    title: Breaking the Limits of Message Passing Graph Neural Networks
+    date: Jun 8, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-08'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/balcilar/gnn-matlang
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 429
+    sort_value: 0.866
+    sort_std: 0.0495
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -726,9 +790,9 @@ results:
   dataset: QM9
   is_multi_metric: true
   rows:
-  - model: Graphormer-SPIS
+  - model: Equiformer v2
     model_key: equiformer v2
-    model_plain: Graphormer-SPIS
+    model_plain: Equiformer v2
     metric_values:
     - 0.01
     - null
@@ -783,9 +847,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: EQGAT
     model_key: eqgat
-    model_plain: Graphormer-SPIS
+    model_plain: EQGAT
     metric_values:
     - 0.011
     - null
@@ -840,9 +904,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: Equiformer
     model_key: equiformer
-    model_plain: Graphormer-SPIS
+    model_plain: Equiformer
     metric_values:
     - 0.011
     - null
@@ -1021,9 +1085,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2111.06283'
-    value_gap_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness
-      of Graph Neural Networks'
+    value_gap_source_arxiv: '2206.11010'
+    value_gap_source_title: Agent-based Graph Neural Networks
     value_note: ''
     at_pub_value: 0.059
     at_pub_std: null
@@ -1032,8 +1095,8 @@ results:
       Graph Neural Networks'
     at_pub_source_date_iso: '2021-11-11'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-11-11'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2022-06-22'
+    value_gap_source_date_label: ICLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1101,9 +1164,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2111.06283'
-    value_gap_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness
-      of Graph Neural Networks'
+    value_gap_source_arxiv: '2206.11010'
+    value_gap_source_title: Agent-based Graph Neural Networks
     value_note: ''
     at_pub_value: 0.0934
     at_pub_std: null
@@ -1112,8 +1174,8 @@ results:
       Graph Neural Networks'
     at_pub_source_date_iso: '2021-11-11'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-11-11'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2022-06-22'
+    value_gap_source_date_label: ICLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1259,9 +1321,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2111.06283'
-    value_gap_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness
-      of Graph Neural Networks'
+    value_gap_source_arxiv: '2206.11010'
+    value_gap_source_title: Agent-based Graph Neural Networks
     value_note: ''
     at_pub_value: 0.453
     at_pub_std: null
@@ -1270,8 +1331,8 @@ results:
       Graph Neural Networks'
     at_pub_source_date_iso: '2021-11-11'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-11-11'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2022-06-22'
+    value_gap_source_date_label: ICLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1339,9 +1400,8 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2111.06283'
-    value_gap_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness
-      of Graph Neural Networks'
+    value_gap_source_arxiv: '2206.11010'
+    value_gap_source_title: Agent-based Graph Neural Networks
     value_note: ''
     at_pub_value: 0.473
     at_pub_std: null
@@ -1350,8 +1410,8 @@ results:
       Graph Neural Networks'
     at_pub_source_date_iso: '2021-11-11'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-11-11'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2022-06-22'
+    value_gap_source_date_label: ICLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1419,9 +1479,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2111.06283'
-    value_gap_source_title: 'DropGNN: Random Dropouts Increase the Expressiveness
-      of Graph Neural Networks'
+    value_gap_source_arxiv: '2303.10576'
+    value_gap_source_title: An Efficient Subgraph GNN with Provable Substructure Counting
+      Power
     value_note: ''
     at_pub_value: 0.493
     at_pub_std: null
@@ -1430,8 +1490,8 @@ results:
       Graph Neural Networks'
     at_pub_source_date_iso: '2021-11-11'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2021-11-11'
-    value_gap_source_date_label: NeurIPS 2021
+    value_gap_source_date_iso: '2023-03-19'
+    value_gap_source_date_label: KDD 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1490,9 +1550,9 @@ results:
 - &id002
   dataset: RDT-B
   rows:
-  - model: CIN
+  - model: OEPG
     model_key: oepg
-    model_plain: CIN
+    model_plain: OEPG
     value: 0.963
     std: 0.009
     metric: Accuracy
@@ -1524,9 +1584,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CIN
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: CIN
+    model_plain: MSH-GNN
     value: 0.958
     std: 0.009
     metric: Accuracy
@@ -1557,9 +1617,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CIN
+  - model: GNN-AK+
     model_key: gnn-ak+
-    model_plain: CIN
+    model_plain: GNN-AK+
     value: 0.948
     std: 0.008
     metric: Accuracy
@@ -1827,8 +1887,8 @@ results:
     at_pub_source_title: 'Graph Self-Supervised Learning: A Survey'
     at_pub_source_date_iso: '2021-02-27'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-05-10'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2025-05-21'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1839,9 +1899,9 @@ results:
     today_delta_significant: false
     true_value: 0.924
     true_std: 0.025
-    value_gap_source_arxiv: '2305.06102'
-    value_gap_source_title: Towards Better Graph Representation Learning with Parameterized
-      Decomposition & Filtering
+    value_gap_source_arxiv: '2505.15015'
+    value_gap_source_title: Multi-Scale Harmonic Encoding for Feature-Wise Graph Message
+      Passing
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -1915,8 +1975,8 @@ results:
     value_note: ''
     sort_value: 0.899
     sort_std: 0.017
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1982,13 +2042,46 @@ results:
     value_note: ''
     sort_value: 0.779
     sort_std: 0.03
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.706
+    std: 0.0369
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.08897'
+    title: Motif-driven Subgraph Structure Learning for Graph Classification
+    date: Jun 13, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-13'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 81
+    sort_value: 0.706
+    sort_std: 0.0369
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2005,9 +2098,9 @@ results:
 - &id003
   dataset: ogbg-molhiv
   rows:
-  - model: SigGate-GT
+  - model: Multi-RF Fusion with Multi-GNN Blending
     model_key: multi-rf fusion with multi-gnn blending
-    model_plain: SigGate-GT
+    model_plain: Multi-RF Fusion with Multi-GNN Blending
     value: 0.8476
     std: 0.0002
     metric: ROC-AUC
@@ -2039,9 +2132,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: HyperFusion
     model_key: hyperfusion
-    model_plain: SigGate-GT
+    model_plain: HyperFusion
     value: 0.8475
     std: 0.0003
     metric: ROC-AUC
@@ -2072,9 +2165,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: PAS+FPs
     model_key: pas+fps
-    model_plain: SigGate-GT
+    model_plain: PAS+FPs
     value: 0.842
     std: 0.0015
     metric: ROC-AUC
@@ -2100,6 +2193,39 @@ results:
     global_rank: 3
     sort_value: 0.842
     sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.809
+    std: 0.016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.809
+    sort_std: 0.016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2440,6 +2566,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.769
+    std: 0.0136
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.07141'
+    title: 'SoGCN: Second-Order Graph Convolutional Networks'
+    date: Oct 14, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-14'
+    venue: null
+    codebase_url: https://github.com/yuehaowang/SoGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 171
+    sort_value: 0.769
+    sort_std: 0.0136
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   rank_metric: ROC-AUC
   higher_is_better: true
   experiment_scope: graph-level
@@ -2452,9 +2611,9 @@ results:
 - &id004
   dataset: ogbg-molpcba
   rows:
-  - model: GatedGCN-VN
+  - model: HIG with Graphormer
     model_key: hig with graphormer
-    model_plain: GatedGCN-VN
+    model_plain: HIG with Graphormer
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -2485,9 +2644,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-VN
+  - model: GRPE-Large
     model_key: grpe-large
-    model_plain: GatedGCN-VN
+    model_plain: GRPE-Large
     value: 0.315
     std: 0.001
     metric: AP
@@ -2518,35 +2677,34 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-VN
-    model_key: gatedgcn-vn
-    model_plain: GatedGCN-VN
-    value: 0.3141
-    std: 0.0019
+  - model: Graphormer
+    model_key: graphormer
+    model_plain: Graphormer
+    value: 0.314
+    std: null
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 57.0
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_display: May 2024
-    date_iso: '2024-05-20'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2207.08806'
+    title: Unified 2D and 3D Pre-Training of Molecular Representations
+    date: Jul 14, 2022
+    date_display: Jul 2022
+    date_iso: '2022-07-14'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
     uses_external_data: false
     input_feature_source: raw_features
-    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
-      encodings computed on the graph.
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.3141
-    sort_std: 0.0019
+    sort_value: 0.314
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2608,8 +2766,8 @@ results:
     value_note: ''
     sort_value: 0.2986
     sort_std: 0.0025
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2675,8 +2833,8 @@ results:
     value_note: ''
     sort_value: 0.2902
     sort_std: 0.0017
-    global_rank: 35
-    paper_rank: 98
+    global_rank: 32
+    paper_rank: 95
     rank_delta: 63
     rank_delta_abs: 63
     rank_delta_direction: worse
@@ -2722,8 +2880,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-22'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2023-01-27'
+    value_gap_source_date_label: ICML 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2734,21 +2892,55 @@ results:
     today_delta_significant: false
     true_value: 0.2703
     true_std: 0.0023
-    value_gap_source_arxiv: '2206.11010'
-    value_gap_source_title: Agent-based Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2301.11956'
+    value_gap_source_title: On the Connection Between MPNN and Graph Transformer
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.2703
     sort_std: 0.0023
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.269
+    std: 0.002
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.24293'
+    title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
+      via Continuous Phase Transitions'
+    date: Apr 27, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-27'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 59
+    sort_value: 0.269
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2809,8 +3001,8 @@ results:
     value_note: ''
     sort_value: 0.2664
     sort_std: 0.0027
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2876,8 +3068,8 @@ results:
     value_note: ''
     sort_value: 0.2549
     sort_std: 0.0027
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2899,9 +3091,9 @@ results:
 - &id005
   dataset: ogbg-ppa
   rows:
-  - model: differential encoding
+  - model: A-NLSF
     model_key: a-nlsf
-    model_plain: differential encoding
+    model_plain: A-NLSF
     value: 0.8149
     std: 0.0067
     metric: Accuracy
@@ -2966,9 +3158,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: differential encoding
+  - model: MPNN + VN + NoPE
     model_key: mpnn + vn + nope
-    model_plain: differential encoding
+    model_plain: MPNN + VN + NoPE
     value: 0.8055
     std: 0.0038
     metric: Accuracy
@@ -2998,6 +3190,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.7531
+    std: 0.0083
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.24886'
+    title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
+      Networks
+    date: Sep 29, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-29'
+    venue: arXiv.org
+    codebase_url: https://github.com/ywelld/_ac
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.7531
+    sort_std: 0.0083
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: AgentNet
     model_key: agentnet
@@ -3171,8 +3397,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-22'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-07-03'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3183,9 +3409,10 @@ results:
     today_delta_significant: false
     true_value: 0.7037
     true_std: 0.0107
-    value_gap_source_arxiv: '2206.11010'
-    value_gap_source_title: Agent-based Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2407.02758'
+    value_gap_source_title: Differential Encoding for Improved Representation Learning
+      Over Graphs
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -3265,6 +3492,40 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6857
+    std: 0.0061
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.24886'
+    title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
+      Networks
+    date: Sep 29, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-29'
+    venue: arXiv.org
+    codebase_url: https://github.com/ywelld/_ac
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 40
+    sort_value: 0.6857
+    sort_std: 0.0061
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

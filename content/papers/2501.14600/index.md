@@ -135,9 +135,9 @@ results:
     is_best: true
     is_std_outlier: false
     global_rank: 1
-  - model: HDHGR
+  - model: HGT HDHGR
     model_key: hgt hdhgr
-    model_plain: HDHGR
+    model_plain: HGT HDHGR
     metric_values:
     - 0.7725
     - null

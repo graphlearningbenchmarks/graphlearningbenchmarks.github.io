@@ -64,8 +64,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - VQ-GNN
-mrr: 0.0171
-adjusted_mrr: 0.0114
+mrr: 0.0154
+adjusted_mrr: 0.0103
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -89,9 +89,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -155,9 +155,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -245,16 +245,49 @@ results:
     value_note: ''
     sort_value: 0.994
     sort_std: null
-    global_rank: 8
-    paper_rank: 83
-    rank_delta: 75
-    rank_delta_abs: 75
+    global_rank: 10
+    paper_rank: 92
+    rank_delta: 82
+    rank_delta_abs: 82
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: A Comprehensive Survey on Graph Neural Networks
     comparison_source_arxiv: '1901.00596'
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.985
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.985
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GraphSAINT-RW
     model_key: graphsaint-rw
@@ -314,10 +347,10 @@ results:
     value_note: ''
     sort_value: 0.981
     sort_std: 0.004
-    global_rank: 27
-    paper_rank: 65
-    rank_delta: 38
-    rank_delta_abs: 38
+    global_rank: 31
+    paper_rank: 72
+    rank_delta: 41
+    rank_delta_abs: 41
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -383,8 +416,8 @@ results:
     value_note: ''
     sort_value: 0.9737
     sort_std: 0.0033
-    global_rank: 50
-    paper_rank: 50
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -452,8 +485,8 @@ results:
     value_note: ''
     sort_value: 0.9722
     sort_std: 0.0035
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -521,8 +554,8 @@ results:
     value_note: ''
     sort_value: 0.9407
     sort_std: 0.0025
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -544,9 +577,9 @@ results:
 - &id002
   dataset: ogbl-collab
   rows:
-  - model: SIGN
+  - model: PROXI
     model_key: proxi
-    model_plain: SIGN
+    model_plain: PROXI
     value: 0.765
     std: 0.0027
     metric: Hits@50
@@ -577,9 +610,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SIGN
+  - model: OGB Leader
     model_key: ogb leader
-    model_plain: SIGN
+    model_plain: OGB Leader
     value: 0.7129
     std: 0.0018
     metric: Hits@50
@@ -610,9 +643,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SIGN
+  - model: GIDN
     model_key: gidn
-    model_plain: SIGN
+    model_plain: GIDN
     value: 0.7096
     std: 0.0055
     metric: Hits@50
@@ -639,6 +672,40 @@ results:
     global_rank: 3
     sort_value: 0.7096
     sort_std: 0.0055
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6621
+    std: 0.0033
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.17475'
+    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
+      Networks
+    date: Sep 26, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-26'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/tensor-gales/HeteLinkPred
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.6621
+    sort_std: 0.0033
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -701,8 +768,8 @@ results:
     value_note: ''
     sort_value: 0.481
     sort_std: 0.0081
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -769,8 +836,8 @@ results:
     value_note: ''
     sort_value: 0.4776
     sort_std: 0.0041
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -837,13 +904,47 @@ results:
     value_note: ''
     sort_value: 0.4673
     sort_std: 0.0164
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4438
+    std: 0.0347
+    metric: Hits@50
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.06193'
+    title: 'Weak Models Can be Good Teachers: A Case Study on Link Prediction with
+      MLPs'
+    date: Apr 8, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 88
+    sort_value: 0.4438
+    sort_std: 0.0347
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -905,8 +1006,8 @@ results:
     value_note: ''
     sort_value: 0.4402
     sort_std: 0.0137
-    global_rank: 79
-    paper_rank: 83
+    global_rank: 90
+    paper_rank: 94
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -973,8 +1074,8 @@ results:
     value_note: ''
     sort_value: 0.4368
     sort_std: 0.0169
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

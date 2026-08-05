@@ -66,7 +66,7 @@ has_results: true
 paper_type: method
 proposed_models:
 - GEOM
-mrr: 0.0033
+mrr: 0.0032
 adjusted_mrr: 0.0011
 mrr_dataset_count: 1
 benchmark_categories:
@@ -84,9 +84,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -118,9 +118,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -152,9 +152,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -181,6 +181,39 @@ results:
     global_rank: 3
     sort_value: 0.9574
     sort_std: 0.0039
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9004
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 42
+    sort_value: 0.9004
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -245,10 +278,10 @@ results:
     value_note: ''
     sort_value: 0.8527
     sort_std: null
-    global_rank: 304
-    paper_rank: 546
-    rank_delta: 242
-    rank_delta_abs: 242
+    global_rank: 316
+    paper_rank: 559
+    rank_delta: 243
+    rank_delta_abs: 243
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -295,7 +328,7 @@ results:
       Rational Gradient Matching'
     at_pub_source_date_iso: '2024-02-07'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_iso: '2024-03-22'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.17399999999999993
     worse_than_at_pub: true
@@ -307,19 +340,18 @@ results:
     today_delta_significant: true
     true_value: 0.817
     true_std: 0.005
-    value_gap_source_arxiv: '2402.04924'
-    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
-      Rational Gradient Matching'
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
     value_gap_source_is_current_paper: false
     value_gap: 0.17399999999999993
     has_value_note: false
     value_note: ''
     sort_value: 0.817
     sort_std: 0.005
-    global_rank: 682
-    paper_rank: 980
-    rank_delta: 298
-    rank_delta_abs: 298
+    global_rank: 696
+    paper_rank: 997
+    rank_delta: 301
+    rank_delta_abs: 301
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -387,16 +419,49 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: 0.032
-    global_rank: 744
-    paper_rank: 985
-    rank_delta: 241
-    rank_delta_abs: 241
+    global_rank: 758
+    paper_rank: 1002
+    rank_delta: 244
+    rank_delta_abs: 244
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
       Rational Gradient Matching'
     comparison_source_arxiv: '2402.04924'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7768
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 853
+    sort_value: 0.7768
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: DC-Graph
@@ -457,8 +522,8 @@ results:
     value_note: ''
     sort_value: 0.593
     sort_std: 0.016
-    global_rank: 994
-    paper_rank: 994
+    global_rank: 1011
+    paper_rank: 1011
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -109,8 +109,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -119,17 +119,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6147
+    true_std: 0.0014
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6147
     sort_std: 0.0014
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -171,8 +177,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -181,209 +187,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.576
+    true_std: 0.002
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.576
     sort_std: 0.002
-    global_rank: 1
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS + k-MIP
-    model_key: gps + k-mip
-    model_plain: GPS + k-MIP
-    value: 0.5605
-    std: null
-    paper_value: 0.5605
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 4, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-04'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.5605
-    sort_std: null
-    global_rank: 1
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: graphsage
-    model_plain: SGFormer
-    value: 0.554
-    std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2503.09008'
-    title: City-Networks
-    date: Mar 12, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-12'
-    venue: Published as a conference paper at ICLR 2026
-    codebase_url: https://github.com/LeonResearch/City-Networks
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: nodes represent road junctions with features like longitude,
-      latitude, land use, etc.
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.554
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: chebnet
-    model_plain: SGFormer
-    value: 0.547
-    std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2503.09008'
-    title: City-Networks
-    date: Mar 12, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-12'
-    venue: Published as a conference paper at ICLR 2026
-    codebase_url: https://github.com/LeonResearch/City-Networks
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: nodes represent road junctions with features like longitude,
-      latitude, land use, etc.
-    is_global_top: true
     global_rank: 2
-    sort_value: 0.547
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS + Performer
-    model_key: gps + performer
-    model_plain: GPS + Performer
-    value: 0.532
-    std: null
-    paper_value: 0.532
-    paper_std: null
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 4, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-04'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.532
-    sort_std: null
-    global_rank: 3
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -425,8 +245,8 @@ results:
     at_pub_source_title: City-Networks
     at_pub_source_date_iso: '2025-03-12'
     at_pub_source_date_label: ICLR 2025
-    value_gap_source_date_iso: '2025-03-12'
-    value_gap_source_date_label: ICLR 2025
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: 0.051899999999999946
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -434,26 +254,129 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.52
-    true_std: 0.003
-    value_gap_source_arxiv: '2503.09008'
-    value_gap_source_title: City-Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.051899999999999946
+    today_delta_significant: false
+    true_value: 0.5719
+    true_std: 0.0109
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.52
-    sort_std: 0.003
+    sort_value: 0.5719
+    sort_std: 0.0109
     global_rank: 3
-    paper_rank: 1
-    rank_delta: -2
-    rank_delta_abs: 2
-    rank_delta_direction: better
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: City-Networks
     comparison_source_arxiv: '2503.09008'
+    is_best: false
+    is_std_outlier: false
+  - model: GPS + k-MIP
+    model_key: gps + k-mip
+    model_plain: GPS + k-MIP
+    value: 0.5605
+    std: null
+    paper_value: 0.5605
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5605
+    true_std: null
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5605
+    sort_std: null
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.554
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-12'
+    venue: Published as a conference paper at ICLR 2026
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: nodes represent road junctions with features like longitude,
+      latitude, land use, etc.
+    is_global_top: true
+    global_rank: 5
+    sort_value: 0.554
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -492,8 +415,8 @@ results:
     at_pub_source_title: City-Networks
     at_pub_source_date_iso: '2025-03-12'
     at_pub_source_date_label: ICLR 2025
-    value_gap_source_date_iso: '2025-03-12'
-    value_gap_source_date_label: ICLR 2025
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: 0.05149999999999999
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -501,26 +424,129 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.501
-    true_std: 0.007
-    value_gap_source_arxiv: '2503.09008'
-    value_gap_source_title: City-Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05149999999999999
+    today_delta_significant: false
+    true_value: 0.5525
+    true_std: 0.0006
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.501
-    sort_std: 0.007
-    global_rank: 4
-    paper_rank: 2
-    rank_delta: -2
-    rank_delta_abs: 2
-    rank_delta_direction: better
+    sort_value: 0.5525
+    sort_std: 0.0006
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: City-Networks
     comparison_source_arxiv: '2503.09008'
+    is_best: false
+    is_std_outlier: false
+  - model: GPS + Performer
+    model_key: gps + performer
+    model_plain: GPS + Performer
+    value: 0.532
+    std: null
+    paper_value: 0.532
+    paper_std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.532
+    true_std: null
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.532
+    sort_std: null
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.279
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-12'
+    venue: Published as a conference paper at ICLR 2026
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: nodes represent road junctions with features like longitude,
+      latitude, land use, etc.
+    is_global_top: true
+    global_rank: 13
+    sort_value: 0.279
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -535,6 +561,74 @@ results:
 - &id002
   dataset: Paris
   rows:
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.5583
+    std: 0.0042
+    paper_value: 0.5583
+    paper_std: 0.0042
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    published_venue: ICLR 2026
+    published_conference: ICLR 2026
+    at_pub_value: 0.511
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2503.09008'
+    at_pub_source_title: City-Networks
+    at_pub_source_date_iso: '2025-03-12'
+    at_pub_source_date_label: ICLR 2025
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: 0.04730000000000001
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5583
+    true_std: 0.0042
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5583
+    sort_std: 0.0042
+    global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: City-Networks
+    comparison_source_arxiv: '2503.09008'
+    is_best: true
+    is_std_outlier: false
   - model: Exphormer
     model_key: exphormer
     model_plain: Exphormer
@@ -591,10 +685,10 @@ results:
     value_note: ''
     sort_value: 0.551
     sort_std: 0.008
-    global_rank: 1
-    paper_rank: 6
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 2
+    paper_rank: 12
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -602,9 +696,9 @@ results:
     comparison_source_arxiv: '2503.09008'
     is_best: true
     is_std_outlier: false
-  - model: SGFormer
+  - model: GraphSAGE
     model_key: graphsage
-    model_plain: SGFormer
+    model_plain: GraphSAGE
     value: 0.546
     std: 0.002
     metric: Accuracy
@@ -628,47 +722,13 @@ results:
     feature_source_evidence: node features such as geographical coordinates, land
       use, etc.
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.546
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: chebnet
-    model_plain: SGFormer
-    value: 0.541
-    std: 0.002
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2503.09008'
-    title: City-Networks
-    date: Mar 12, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-12'
-    venue: Published as a conference paper at ICLR 2026
-    codebase_url: https://github.com/LeonResearch/City-Networks
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: node features such as geographical coordinates, land
-      use, etc.
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.541
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GPS + Performer
     model_key: gps + performer
@@ -706,8 +766,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -716,21 +776,27 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5406
+    true_std: 0.0027
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5406
     sort_std: 0.0027
-    global_rank: 4
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GPS + k-MIP
     model_key: gps + k-mip
@@ -768,8 +834,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -778,17 +844,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5362
+    true_std: 0.0022
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5362
     sort_std: 0.0022
-    global_rank: 4
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -830,8 +902,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -840,17 +912,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5353
+    true_std: 0.0037
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5353
     sort_std: 0.0037
-    global_rank: 4
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -892,8 +970,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -902,17 +980,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5336
+    true_std: 0.0023
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5336
     sort_std: 0.0023
-    global_rank: 4
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -954,8 +1038,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -964,17 +1048,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5327
+    true_std: 0.001
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5327
     sort_std: 0.001
-    global_rank: 4
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1036,8 +1126,8 @@ results:
     value_note: ''
     sort_value: 0.532
     sort_std: 0.003
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1047,13 +1137,59 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.255
+    std: 0.004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-12'
+    venue: Published as a conference paper at ICLR 2026
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: node features such as geographical coordinates, land
+      use, etc.
+    is_global_top: true
+    global_rank: 15
+    sort_value: 0.255
+    sort_std: 0.004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  rank_metric: Accuracy
+  higher_is_better: true
+  experiment_scope: node-level
+  dataset_primary_metric: Accuracy
+  paper_metrics:
+  - Accuracy
+  metric: Accuracy
+  uses_non_primary_metric: false
+  paper_has_primary_metric: true
+- &id003
+  dataset: Shanghai
+  rows:
   - model: GAT
     model_key: gat
     model_plain: GAT
-    value: 0.5583
-    std: 0.0042
-    paper_value: 0.5583
-    paper_std: 0.0042
+    value: 0.7253
+    std: 0.0023
+    paper_value: 0.7253
+    paper_std: 0.0023
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1077,55 +1213,44 @@ results:
     date_iso: '2026-04-04'
     published_venue: ICLR 2026
     published_conference: ICLR 2026
-    at_pub_value: 0.511
-    at_pub_std: 0.003
+    at_pub_value: 0.68
+    at_pub_std: 0.005
     at_pub_source_arxiv: '2503.09008'
     at_pub_source_title: City-Networks
     at_pub_source_date_iso: '2025-03-12'
     at_pub_source_date_label: ICLR 2025
-    value_gap_source_date_iso: '2025-03-12'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: 0.04730000000000001
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
+    gap_vs_at_pub: 0.045299999999999896
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.511
-    true_std: 0.003
-    value_gap_source_arxiv: '2503.09008'
-    value_gap_source_title: City-Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.04730000000000001
+    today_delta_significant: false
+    true_value: 0.7253
+    true_std: 0.0023
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.511
-    sort_std: 0.003
-    global_rank: 8
+    sort_value: 0.7253
+    sort_std: 0.0023
+    global_rank: 1
     paper_rank: 1
-    rank_delta: -7
-    rank_delta_abs: 7
-    rank_delta_direction: better
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: City-Networks
     comparison_source_arxiv: '2503.09008'
-    is_best: false
+    is_best: true
     is_std_outlier: false
-  rank_metric: Accuracy
-  higher_is_better: true
-  experiment_scope: node-level
-  dataset_primary_metric: Accuracy
-  paper_metrics:
-  - Accuracy
-  metric: Accuracy
-  uses_non_primary_metric: false
-  paper_has_primary_metric: true
-- &id003
-  dataset: Shanghai
-  rows:
   - model: Exphormer
     model_key: exphormer
     model_plain: Exphormer
@@ -1182,16 +1307,16 @@ results:
     value_note: ''
     sort_value: 0.702
     sort_std: 0.004
-    global_rank: 1
-    paper_rank: 6
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 2
+    paper_rank: 11
+    rank_delta: 9
+    rank_delta_abs: 9
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: City-Networks
     comparison_source_arxiv: '2503.09008'
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: GatedGCN
     model_key: gatedgcn
@@ -1229,8 +1354,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1239,25 +1364,31 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.688
+    true_std: 0.0021
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.688
     sort_std: 0.0021
-    global_rank: 2
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SGFormer
+  - model: GraphSAGE
     model_key: graphsage
-    model_plain: SGFormer
+    model_plain: GraphSAGE
     value: 0.683
     std: 0.005
     metric: Accuracy
@@ -1281,79 +1412,12 @@ results:
     feature_source_evidence: node features such as geographical coordinates, land
       use, etc.
     is_global_top: true
-    global_rank: 2
+    global_rank: 4
     sort_value: 0.683
     sort_std: 0.005
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.7253
-    std: 0.0023
-    paper_value: 0.7253
-    paper_std: 0.0023
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 4, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-04'
-    published_venue: ICLR 2026
-    published_conference: ICLR 2026
-    at_pub_value: 0.68
-    at_pub_std: 0.005
-    at_pub_source_arxiv: '2503.09008'
-    at_pub_source_title: City-Networks
-    at_pub_source_date_iso: '2025-03-12'
-    at_pub_source_date_label: ICLR 2025
-    value_gap_source_date_iso: '2025-03-12'
-    value_gap_source_date_label: ICLR 2025
-    gap_vs_at_pub: 0.045299999999999896
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.68
-    true_std: 0.005
-    value_gap_source_arxiv: '2503.09008'
-    value_gap_source_title: City-Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.045299999999999896
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.68
-    sort_std: 0.005
-    global_rank: 3
-    paper_rank: 1
-    rank_delta: -2
-    rank_delta_abs: 2
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: City-Networks
-    comparison_source_arxiv: '2503.09008'
     is_best: false
     is_std_outlier: false
   - model: GPS + Performer
@@ -1392,8 +1456,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1402,17 +1466,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6727
+    true_std: 0.0017
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6727
     sort_std: 0.0017
-    global_rank: 4
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1454,8 +1524,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1464,17 +1534,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6694
+    true_std: 0.0044
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6694
     sort_std: 0.0044
-    global_rank: 4
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1516,8 +1592,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1526,17 +1602,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6524
+    true_std: 0.0017
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6524
     sort_std: 0.0017
-    global_rank: 5
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1578,8 +1660,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1588,17 +1670,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6335
+    true_std: 0.002
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6335
     sort_std: 0.002
-    global_rank: 6
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1660,8 +1748,8 @@ results:
     value_note: ''
     sort_value: 0.621
     sort_std: 0.002
-    global_rank: 7
-    paper_rank: 9
+    global_rank: 12
+    paper_rank: 14
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -1669,6 +1757,40 @@ results:
     comparison_type: behind
     comparison_source_title: City-Networks
     comparison_source_arxiv: '2503.09008'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.284
+    std: 0.006
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2503.09008'
+    title: City-Networks
+    date: Mar 12, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-12'
+    venue: Published as a conference paper at ICLR 2026
+    codebase_url: https://github.com/LeonResearch/City-Networks
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: node features such as geographical coordinates, land
+      use, etc.
+    is_global_top: true
+    global_rank: 15
+    sort_value: 0.284
+    sort_std: 0.006
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -1719,8 +1841,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1729,17 +1851,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8268
+    true_std: 0.0064
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8268
     sort_std: 0.0064
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1781,8 +1909,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1791,25 +1919,31 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.8262
+    true_std: 0.0031
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.8262
     sort_std: 0.0031
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: AC-DGCNN
+  - model: VN-DGCNN
     model_key: vn-dgcnn
-    model_plain: AC-DGCNN
+    model_plain: VN-DGCNN
     value: 0.814
     std: null
     metric: F1
@@ -1833,43 +1967,9 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.814
     sort_std: null
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AC-DGCNN
-    model_key: ac-dgcnn
-    model_plain: AC-DGCNN
-    value: 0.809
-    std: 0.007
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: null
-    architecture_label: null
-    architecture_title: ''
-    arxiv_id: '2509.24886'
-    title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
-      Networks
-    date: Sep 29, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-29'
-    venue: arXiv.org
-    codebase_url: https://github.com/ywelld/_ac
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.809
-    sort_std: 0.007
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1911,8 +2011,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1921,52 +2021,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7965
+    true_std: 0.0098
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7965
     sort_std: 0.0098
-    global_rank: 3
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AC-DGCNN
-    model_key: dgcnn
-    model_plain: AC-DGCNN
-    value: 0.786
-    std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2509.24886'
-    title: Adaptive Canonicalization with Application to Invariant Anisotropic Geometric
-      Networks
-    date: Sep 29, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-29'
-    venue: arXiv.org
-    codebase_url: https://github.com/ywelld/_ac
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.786
-    sort_std: null
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2007,8 +2079,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2017,17 +2089,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7736
+    true_std: 0.0123
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7736
     sort_std: 0.0123
-    global_rank: 5
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2069,8 +2147,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2079,17 +2157,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.762
+    true_std: 0.0032
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.762
     sort_std: 0.0032
-    global_rank: 5
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2131,8 +2215,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2141,17 +2225,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6457
+    true_std: 0.0035
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6457
     sort_std: 0.0035
-    global_rank: 8
+    global_rank: 13
+    paper_rank: 13
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2193,8 +2283,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2203,17 +2293,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6301
+    true_std: 0.0017
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6301
     sort_std: 0.0017
-    global_rank: 8
+    global_rank: 14
+    paper_rank: 14
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2255,8 +2351,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-04'
+    value_gap_source_date_label: ICLR 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2265,17 +2361,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6018
+    true_std: 0.0004
+    value_gap_source_arxiv: '2604.03815'
+    value_gap_source_title: k-Maximum Inner Product Attention for Graph Transformers
+      and the Expressive Power of GraphGPS
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6018
     sort_std: 0.0004
-    global_rank: 9
+    global_rank: 16
+    paper_rank: 16
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

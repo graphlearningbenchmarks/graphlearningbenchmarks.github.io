@@ -261,8 +261,8 @@ variants:
     - 0.0094
     - null
     - null
-  - model: MPNN
-    model_plain: MPNN
+  - model: Optimized GAE
+    model_plain: Optimized GAE
     is_baseline: false
     is_overridden: false
     override_reason: ''

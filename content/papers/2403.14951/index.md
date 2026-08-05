@@ -52,8 +52,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SimGC
-mrr: 0.0026
-adjusted_mrr: 0.0026
+mrr: 0.0025
+adjusted_mrr: 0.0025
 mrr_dataset_count: 3
 benchmark_categories:
 - Classic
@@ -75,9 +75,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: SGC+TSC
+  - model: CNA
     model_key: cna
-    model_plain: SGC+TSC
+    model_plain: CNA
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: IS-GIB
     model_key: is-gib
-    model_plain: SGC+TSC
+    model_plain: IS-GIB
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -142,9 +142,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: EERM
     model_key: eerm
-    model_plain: SGC+TSC
+    model_plain: EERM
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -171,6 +171,39 @@ results:
     global_rank: 3
     sort_value: 0.9112
     sort_std: 0.0145
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8774
+    std: 0.0041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.06142'
+    title: Feature Expansion for Graph Neural Networks
+    date: May 10, 2023
+    date_display: May 2023
+    date_iso: '2023-05-10'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/sajqavril/Feature-Extension-Graph-Neural-Networks
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 20
+    sort_value: 0.8774
+    sort_std: 0.0041
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -240,6 +273,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7289
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2508.17531'
+    title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    date: Aug 24, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-24'
+    venue: European Conference on Artificial Intelligence
+    codebase_url: https://github.com/Bobowner/Gumbel-Softmax-MPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 401
+    sort_value: 0.7289
+    sort_std: 0.001
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -351,8 +417,8 @@ results:
     at_pub_source_title: Condensing Graphs via One-Step Gradient Matching
     at_pub_source_date_iso: '2022-06-15'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2022-06-15'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -362,15 +428,15 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.717
-    true_std: null
-    value_gap_source_arxiv: '2206.07746'
-    value_gap_source_title: Condensing Graphs via One-Step Gradient Matching
-    value_gap_source_is_current_paper: false
+    true_std: 0.001
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.717
-    sort_std: null
+    sort_std: 0.001
     global_rank: 549
     paper_rank: 549
     rank_delta: 0
@@ -450,7 +516,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: Random
     model_key: random
     model_plain: Random
@@ -810,9 +876,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -844,9 +910,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -878,9 +944,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -907,6 +973,39 @@ results:
     global_rank: 3
     sort_value: 0.9574
     sort_std: 0.0039
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9004
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 42
+    sort_value: 0.9004
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -971,10 +1070,10 @@ results:
     value_note: ''
     sort_value: 0.8699
     sort_std: 0.006
-    global_rank: 204
-    paper_rank: 852
-    rank_delta: 648
-    rank_delta_abs: 648
+    global_rank: 215
+    paper_rank: 866
+    rank_delta: 651
+    rank_delta_abs: 651
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1040,8 +1139,8 @@ results:
     value_note: ''
     sort_value: 0.821
     sort_std: 0.013
-    global_rank: 640
-    paper_rank: 640
+    global_rank: 654
+    paper_rank: 654
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1089,7 +1188,7 @@ results:
       Rational Gradient Matching'
     at_pub_source_date_iso: '2024-02-07'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_iso: '2024-03-22'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1101,17 +1200,16 @@ results:
     today_delta_significant: false
     true_value: 0.817
     true_std: 0.005
-    value_gap_source_arxiv: '2402.04924'
-    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
-      Rational Gradient Matching'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.817
     sort_std: 0.005
-    global_rank: 682
-    paper_rank: 682
+    global_rank: 696
+    paper_rank: 696
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1180,10 +1278,10 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: 0.032
-    global_rank: 744
-    paper_rank: 773
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 758
+    paper_rank: 786
+    rank_delta: 28
+    rank_delta_abs: 28
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1248,8 +1346,8 @@ results:
     value_note: ''
     sort_value: 0.806
     sort_std: 0.008
-    global_rank: 753
-    paper_rank: 753
+    global_rank: 766
+    paper_rank: 766
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1316,13 +1414,46 @@ results:
     value_note: ''
     sort_value: 0.794
     sort_std: 0.001
-    global_rank: 799
-    paper_rank: 799
+    global_rank: 812
+    paper_rank: 812
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7768
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 853
+    sort_value: 0.7768
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1365,7 +1496,7 @@ results:
       Kernel
     at_pub_source_date_iso: '2023-10-17'
     at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_iso: '2024-03-22'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1377,17 +1508,16 @@ results:
     today_delta_significant: false
     true_value: 0.768
     true_std: 0.001
-    value_gap_source_arxiv: '2402.04924'
-    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
-      Rational Gradient Matching'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.768
     sort_std: 0.001
-    global_rank: 853
-    paper_rank: 853
+    global_rank: 867
+    paper_rank: 867
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1435,7 +1565,7 @@ results:
       Kernel
     at_pub_source_date_iso: '2023-10-17'
     at_pub_source_date_label: WWW 2023
-    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_iso: '2024-03-22'
     value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1447,17 +1577,16 @@ results:
     today_delta_significant: false
     true_value: 0.767
     true_std: 0.001
-    value_gap_source_arxiv: '2402.04924'
-    value_gap_source_title: 'Two Trades are not Baffled: Condensing Graph via Crafting
-      Rational Gradient Matching'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.767
     sort_std: 0.001
-    global_rank: 854
-    paper_rank: 854
+    global_rank: 868
+    paper_rank: 868
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1479,9 +1608,42 @@ results:
 - &id003
   dataset: Reddit
   rows:
-  - model: TinyGraph
+  - model: GAP-EDP
+    model_key: gap-edp
+    model_plain: GAP-EDP
+    value: 0.987
+    std: 0.0003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.00949'
+    title: 'GAP: Differentially Private Graph Neural Networks with Aggregation Perturbation'
+    date: Mar 2, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-02'
+    venue: USENIX Security Symposium
+    codebase_url: https://github.com/sisaman/GAP
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.987
+    sort_std: 0.0003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: NE-ASGCN
     model_key: ne-asgcn
-    model_plain: TinyGraph
+    model_plain: NE-ASGCN
     value: 0.9758
     std: 0.0027
     metric: Accuracy
@@ -1505,17 +1667,17 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.9758
     sort_std: 0.0027
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: TinyGraph
+  - model: HSGT
     model_key: hsgt
-    model_plain: TinyGraph
+    model_plain: HSGT
     value: 0.973
     std: 0.0024
     metric: Accuracy
@@ -1538,43 +1700,42 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.973
     sort_std: 0.0024
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: TinyGraph
-    model_key: gcmae
-    model_plain: TinyGraph
-    value: 0.9713
-    std: 0.0017
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9653
+    std: 0.0011
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2310.15523'
-    title: Generative and Contrastive Paradigms Are Complementary for Graph Self-Supervised
-      Learning
-    date: Oct 24, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-24'
-    venue: IEEE International Conference on Data Engineering
+    arxiv_id: '2305.02866'
+    title: Hierarchical Transformer for Scalable Graph Learning
+    date: May 4, 2023
+    date_display: May 2023
+    date_iso: '2023-05-04'
+    venue: International Joint Conference on Artificial Intelligence
     codebase_url: ''
     uses_external_data: false
-    input_feature_source: null
+    input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.9713
-    sort_std: 0.0017
+    global_rank: 20
+    sort_value: 0.9653
+    sort_std: 0.0011
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1616,8 +1777,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1628,16 +1789,16 @@ results:
     today_delta_significant: false
     true_value: 0.935
     true_std: 0.001
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.935
     sort_std: 0.001
-    global_rank: 84
-    paper_rank: 84
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1703,8 +1864,8 @@ results:
     value_note: ''
     sort_value: 0.918
     sort_std: 0.019
-    global_rank: 97
-    paper_rank: 130
+    global_rank: 105
+    paper_rank: 138
     rank_delta: 33
     rank_delta_abs: 33
     rank_delta_direction: worse
@@ -1770,8 +1931,8 @@ results:
     value_note: ''
     sort_value: 0.914
     sort_std: 0.002
-    global_rank: 102
-    paper_rank: 102
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1839,10 +2000,10 @@ results:
     value_note: ''
     sort_value: 0.911
     sort_std: null
-    global_rank: 106
-    paper_rank: 142
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 114
+    paper_rank: 152
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1908,10 +2069,10 @@ results:
     value_note: ''
     sort_value: 0.903
     sort_std: 0.031
-    global_rank: 111
-    paper_rank: 135
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 119
+    paper_rank: 144
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1978,8 +2139,8 @@ results:
     value_note: ''
     sort_value: 0.9
     sort_std: 0.003
-    global_rank: 114
-    paper_rank: 122
+    global_rank: 122
+    paper_rank: 130
     rank_delta: 8
     rank_delta_abs: 8
     rank_delta_direction: worse
@@ -2047,13 +2208,46 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: 0.002
-    global_rank: 115
-    paper_rank: 135
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 123
+    paper_rank: 146
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.824
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2203.00949'
+    title: 'GAP: Differentially Private Graph Neural Networks with Aggregation Perturbation'
+    date: Mar 2, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-02'
+    venue: USENIX Security Symposium
+    codebase_url: https://github.com/sisaman/GAP
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 145
+    sort_value: 0.824
+    sort_std: 0.001
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2094,8 +2288,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2106,16 +2300,16 @@ results:
     today_delta_significant: false
     true_value: 0.714
     true_std: 0.016
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.714
     sort_std: 0.016
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 151
+    paper_rank: 151
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2161,8 +2355,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2173,16 +2367,16 @@ results:
     today_delta_significant: false
     true_value: 0.574
     true_std: 0.018
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.574
     sort_std: 0.018
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 159
+    paper_rank: 159
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2204,44 +2398,78 @@ results:
 - &id004
   dataset: ogbn-products
   rows:
-  - model: LargeGT-full
-    model_key: advsyngnn
-    model_plain: LargeGT-full
-    value: 0.8931
-    std: 0.0013
+  - model: Jacobi
+    model_key: jacobi
+    model_plain: Jacobi
+    value: 0.8968
+    std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2602.17071'
-    title: 'AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis
-      and Self-Corrective Propagation'
-    date: Feb 19, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-19'
-    venue: arXiv.org
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8931
-    sort_std: 0.0013
+    sort_value: 0.8968
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: gofa-f
-    model_plain: LargeGT-full
-    value: 0.8834
+  - model: GPR
+    model_key: gpr
+    model_plain: GPR
+    value: 0.8953
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8953
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LEMP4HG
+    model_key: lemp4hg
+    model_plain: LEMP4HG
+    value: 0.8939
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -2252,54 +2480,55 @@ results:
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2407.09709'
-    title: 'GOFA: A Generative One-For-All Model for Joint Graph Language Modeling'
-    date: Jul 12, 2024
-    date_display: Jul 2024
-    date_iso: '2024-07-12'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/JiaruiFeng/GOFA
-    uses_external_data: false
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
+    uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
-    sort_value: 0.8834
+    global_rank: 3
+    sort_value: 0.8939
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: llms
-    model_plain: LargeGT-full
-    value: 0.882
-    std: 0.0005
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8933
+    std: null
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2412.16441'
-    title: 'Towards Graph Foundation Models: Learning Generalities Across Graphs via
-      Task-Trees'
-    date: Dec 21, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-21'
-    venue: International Conference on Machine Learning
-    codebase_url: https://github.com/Zehong-Wang/GIT
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.882
-    sort_std: 0.0005
+    global_rank: 4
+    sort_value: 0.8933
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2342,8 +2571,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2354,16 +2583,16 @@ results:
     today_delta_significant: false
     true_value: 0.74
     true_std: 0.001
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.74
     sort_std: 0.001
-    global_rank: 294
-    paper_rank: 294
+    global_rank: 335
+    paper_rank: 335
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2431,10 +2660,10 @@ results:
     value_note: ''
     sort_value: 0.704
     sort_std: 0.006
-    global_rank: 333
-    paper_rank: 366
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 375
+    paper_rank: 409
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2499,13 +2728,46 @@ results:
     value_note: ''
     sort_value: 0.67
     sort_std: 0.007
-    global_rank: 348
-    paper_rank: 348
+    global_rank: 389
+    paper_rank: 389
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6605
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2211.16199'
+    title: Latent Graph Inference using Product Manifolds
+    date: Nov 26, 2022
+    date_display: Nov 2022
+    date_iso: '2022-11-26'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 394
+    sort_value: 0.6605
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2546,8 +2808,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2558,16 +2820,16 @@ results:
     today_delta_significant: false
     true_value: 0.644
     true_std: 0.004
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.644
     sort_std: 0.004
-    global_rank: 362
-    paper_rank: 362
+    global_rank: 404
+    paper_rank: 404
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2613,8 +2875,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2625,16 +2887,16 @@ results:
     today_delta_significant: false
     true_value: 0.624
     true_std: 0.005
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.624
     sort_std: 0.005
-    global_rank: 367
-    paper_rank: 367
+    global_rank: 410
+    paper_rank: 410
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2680,8 +2942,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2692,16 +2954,16 @@ results:
     today_delta_significant: false
     true_value: 0.593
     true_std: 0.017
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.593
     sort_std: 0.017
-    global_rank: 376
-    paper_rank: 376
+    global_rank: 420
+    paper_rank: 420
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2747,8 +3009,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2759,16 +3021,16 @@ results:
     today_delta_significant: false
     true_value: 0.591
     true_std: 0.001
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.591
     sort_std: 0.001
-    global_rank: 377
-    paper_rank: 377
+    global_rank: 421
+    paper_rank: 421
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2814,8 +3076,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2826,16 +3088,16 @@ results:
     today_delta_significant: false
     true_value: 0.564
     true_std: 0.01
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.564
     sort_std: 0.01
-    global_rank: 378
-    paper_rank: 378
+    global_rank: 425
+    paper_rank: 425
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2881,8 +3143,8 @@ results:
     at_pub_source_title: Disentangled Condensation for Large-scale Graphs
     at_pub_source_date_iso: '2024-01-18'
     at_pub_source_date_label: WWW 2024
-    value_gap_source_date_iso: '2024-01-18'
-    value_gap_source_date_label: WWW 2024
+    value_gap_source_date_iso: '2024-03-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2893,16 +3155,16 @@ results:
     today_delta_significant: false
     true_value: 0.535
     true_std: 0.011
-    value_gap_source_arxiv: '2401.12231'
-    value_gap_source_title: Disentangled Condensation for Large-scale Graphs
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2403.14951'
+    value_gap_source_title: Simple Graph Condensation
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.535
     sort_std: 0.011
-    global_rank: 381
-    paper_rank: 381
+    global_rank: 430
+    paper_rank: 430
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

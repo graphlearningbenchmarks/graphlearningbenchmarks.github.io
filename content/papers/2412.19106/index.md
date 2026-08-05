@@ -43,9 +43,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - ERGNN
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0942
+adjusted_mrr: 0.0628
+mrr_dataset_count: 2
 benchmark_categories:
 - OGB
 - Other Graph Benchmarks
@@ -66,9 +66,9 @@ results:
 - &id002
   dataset: Amazon2M
   rows:
-  - model: VecFormer
+  - model: GAT
     model_key: gat
-    model_plain: VecFormer
+    model_plain: GAT
     value: 0.953
     std: null
     metric: Accuracy
@@ -99,9 +99,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: VecFormer
+  - model: SAGE
     model_key: sage
-    model_plain: VecFormer
+    model_plain: SAGE
     value: 0.937
     std: null
     metric: Accuracy
@@ -132,9 +132,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: VecFormer
+  - model: BGRL
     model_key: bgrl
-    model_plain: VecFormer
+    model_plain: BGRL
     value: 0.932
     std: 0.003
     metric: Accuracy
@@ -224,9 +224,9 @@ results:
     sort_value: 0.8785
     sort_std: 0.0024
     global_rank: 14
-    paper_rank: 50
-    rank_delta: 36
-    rank_delta_abs: 36
+    paper_rank: 72
+    rank_delta: 58
+    rank_delta_abs: 58
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -294,15 +294,82 @@ results:
     sort_value: 0.8651
     sort_std: 0.005
     global_rank: 18
-    paper_rank: 48
-    rank_delta: 30
-    rank_delta_abs: 30
+    paper_rank: 61
+    rank_delta: 43
+    rank_delta_abs: 43
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'MA-GCL: Model Augmentation Tricks for Graph Contrastive
       Learning'
     comparison_source_arxiv: '2212.07035'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.856
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.08331'
+    title: Model Stealing Attacks Against Inductive Graph Neural Networks
+    date: Dec 15, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-15'
+    venue: IEEE Symposium on Security and Privacy
+    codebase_url: https://github.com/xinleihe/GNNStealing
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 20
+    sort_value: 0.856
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6346
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2602.19622'
+    title: 'VecFormer: Towards Efficient and Generalizable Graph Transformer with
+      Graph Token Attention'
+    date: Feb 23, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-23'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 44
+    sort_value: 0.6346
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: ERGNN
@@ -341,8 +408,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -351,341 +418,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5369
+    true_std: 0.0054
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5369
     sort_std: 0.0054
-    global_rank: 42
+    global_rank: 46
+    paper_rank: 46
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PCNet
-    model_key: pcnet
-    model_plain: PCNet
-    value: 0.4877
-    std: 0.0057
-    paper_value: 0.4877
-    paper_std: 0.0057
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 26, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.4877
-    sort_std: 0.0057
-    global_rank: 48
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: BernNet
-    model_key: bernnet
-    model_plain: BernNet
-    value: 0.4873
-    std: 0.0043
-    paper_value: 0.4873
-    paper_std: 0.0043
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 26, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.4873
-    sort_std: 0.0043
-    global_rank: 48
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: APPNP
-    model_key: appnp
-    model_plain: APPNP
-    value: 0.4841
-    std: 0.0034
-    paper_value: 0.4841
-    paper_std: 0.0034
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 26, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.4841
-    sort_std: 0.0034
-    global_rank: 48
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPRGNN
-    model_key: gprgnn
-    model_plain: GPRGNN
-    value: 0.4956
-    std: 0.0047
-    paper_value: 0.4956
-    paper_std: 0.0047
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 26, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.4488
-    at_pub_std: 0.0082
-    at_pub_source_arxiv: '2410.02158'
-    at_pub_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation
-      Learning'
-    at_pub_source_date_iso: '2024-10-03'
-    at_pub_source_date_label: TMLR 2024
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: 0.04680000000000001
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4488
-    true_std: 0.0082
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.04680000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4488
-    sort_std: 0.0082
-    global_rank: 52
-    paper_rank: 47
-    rank_delta: -5
-    rank_delta_abs: 5
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    comparison_source_arxiv: '2410.02158'
-    is_best: false
-    is_std_outlier: false
-  - model: ChebNetII
-    model_key: chebnetii
-    model_plain: ChebNetII
-    value: 0.4943
-    std: 0.0041
-    paper_value: 0.4943
-    paper_std: 0.0041
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 26, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-20'
-    value_gap_source_date_label: KDD 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.4244
-    true_std: 0.009
-    value_gap_source_arxiv: '2505.14033'
-    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
-      Through the Lens of Graph Coarsening'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06990000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4244
-    sort_std: 0.009
-    global_rank: 56
-    paper_rank: 47
-    rank_delta: -9
-    rank_delta_abs: 9
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -728,8 +477,8 @@ results:
       Learning'
     at_pub_source_date_iso: '2024-10-03'
     at_pub_source_date_label: TMLR 2024
-    value_gap_source_date_iso: '2025-05-20'
-    value_gap_source_date_label: KDD 2025
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.12990000000000002
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -737,28 +486,370 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4219
-    true_std: 0.006
-    value_gap_source_arxiv: '2505.14033'
-    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
-      Through the Lens of Graph Coarsening'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07690000000000002
+    today_delta_significant: false
+    true_value: 0.4988
+    true_std: 0.0044
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.4219
-    sort_std: 0.006
-    global_rank: 60
-    paper_rank: 47
-    rank_delta: -13
-    rank_delta_abs: 13
-    rank_delta_direction: better
+    sort_value: 0.4988
+    sort_std: 0.0044
+    global_rank: 52
+    paper_rank: 52
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
       Representation Learning'
     comparison_source_arxiv: '2410.02158'
+    is_best: false
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.4956
+    std: 0.0047
+    paper_value: 0.4956
+    paper_std: 0.0047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 26, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4488
+    at_pub_std: 0.0082
+    at_pub_source_arxiv: '2410.02158'
+    at_pub_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation
+      Learning'
+    at_pub_source_date_iso: '2024-10-03'
+    at_pub_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.04680000000000001
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4956
+    true_std: 0.0047
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4956
+    sort_std: 0.0047
+    global_rank: 53
+    paper_rank: 53
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
+      Representation Learning'
+    comparison_source_arxiv: '2410.02158'
+    is_best: false
+    is_std_outlier: false
+  - model: OptBasis
+    model_key: optbasis
+    model_plain: OptBasis
+    value: 0.4948
+    std: 0.0036
+    paper_value: 0.4948
+    paper_std: 0.0036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 26, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4948
+    true_std: 0.0036
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4948
+    sort_std: 0.0036
+    global_rank: 54
+    paper_rank: 54
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: ChebNetII
+    model_key: chebnetii
+    model_plain: ChebNetII
+    value: 0.4943
+    std: 0.0041
+    paper_value: 0.4943
+    paper_std: 0.0041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 26, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4943
+    true_std: 0.0041
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4943
+    sort_std: 0.0041
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PCNet
+    model_key: pcnet
+    model_plain: PCNet
+    value: 0.4877
+    std: 0.0057
+    paper_value: 0.4877
+    paper_std: 0.0057
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 26, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4877
+    true_std: 0.0057
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4877
+    sort_std: 0.0057
+    global_rank: 57
+    paper_rank: 57
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: BernNet
+    model_key: bernnet
+    model_plain: BernNet
+    value: 0.4873
+    std: 0.0043
+    paper_value: 0.4873
+    paper_std: 0.0043
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 26, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4873
+    true_std: 0.0043
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4873
+    sort_std: 0.0043
+    global_rank: 58
+    paper_rank: 58
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: JacobiConv
@@ -797,32 +888,238 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-20'
-    value_gap_source_date_label: KDD 2025
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.4218
-    true_std: 0.004
-    value_gap_source_arxiv: '2505.14033'
-    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
-      Through the Lens of Graph Coarsening'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.06379999999999997
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4856
+    true_std: 0.0022
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.4218
-    sort_std: 0.004
-    global_rank: 62
-    paper_rank: 48
-    rank_delta: -14
-    rank_delta_abs: 14
-    rank_delta_direction: better
+    sort_value: 0.4856
+    sort_std: 0.0022
+    global_rank: 59
+    paper_rank: 59
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.4841
+    std: 0.0034
+    paper_value: 0.4841
+    paper_std: 0.0034
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 26, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4841
+    true_std: 0.0034
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4841
+    sort_std: 0.0034
+    global_rank: 60
+    paper_rank: 60
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: H2GCN
+    model_key: h2gcn
+    model_plain: H2GCN
+    value: 0.4652
+    std: 0.007
+    paper_value: 0.4652
+    paper_std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 26, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3647
+    at_pub_std: 0.0023
+    at_pub_source_arxiv: '2410.02158'
+    at_pub_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation
+      Learning'
+    at_pub_source_date_iso: '2024-10-03'
+    at_pub_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.10049999999999998
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4652
+    true_std: 0.007
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4652
+    sort_std: 0.007
+    global_rank: 64
+    paper_rank: 64
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
+      Representation Learning'
+    comparison_source_arxiv: '2410.02158'
+    is_best: false
+    is_std_outlier: false
+  - model: GCNII
+    model_key: gcnii
+    model_plain: GCNII
+    value: 0.4362
+    std: 0.0052
+    paper_value: 0.4362
+    paper_std: 0.0052
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 26, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-26'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-26'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4429
+    true_std: null
+    value_gap_source_arxiv: '2505.19762'
+    value_gap_source_title: 'Language Models as Messengers: Enhancing Message Passing
+      in Heterophilic Graph Learning'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.006700000000000039
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4429
+    sort_std: null
+    global_rank: 75
+    paper_rank: 77
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -865,8 +1162,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -875,85 +1172,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4209
+    true_std: 0.0062
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4209
     sort_std: 0.0062
-    global_rank: 63
+    global_rank: 89
+    paper_rank: 89
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: OptBasis
-    model_key: optbasis
-    model_plain: OptBasis
-    value: 0.4948
-    std: 0.0036
-    paper_value: 0.4948
-    paper_std: 0.0036
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 26, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-20'
-    value_gap_source_date_label: KDD 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.4163
-    true_std: 0.008
-    value_gap_source_arxiv: '2505.14033'
-    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
-      Through the Lens of Graph Coarsening'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07850000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4163
-    sort_std: 0.008
-    global_rank: 64
-    paper_rank: 47
-    rank_delta: -17
-    rank_delta_abs: 17
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -995,8 +1230,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1005,85 +1240,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4125
+    true_std: 0.0088
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4125
     sort_std: 0.0088
-    global_rank: 68
+    global_rank: 94
+    paper_rank: 94
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCNII
-    model_key: gcnii
-    model_plain: GCNII
-    value: 0.4362
-    std: 0.0052
-    paper_value: 0.4362
-    paper_std: 0.0052
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 26, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2025-05-20'
-    value_gap_source_date_label: KDD 2025
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.4089
-    true_std: 0.004
-    value_gap_source_arxiv: '2505.14033'
-    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
-      Through the Lens of Graph Coarsening'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.02729999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4089
-    sort_std: 0.004
-    global_rank: 69
-    paper_rank: 54
-    rank_delta: -15
-    rank_delta_abs: 15
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1146,8 +1319,8 @@ results:
     value_note: ''
     sort_value: 0.3881
     sort_std: 0.007
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1155,76 +1328,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: H2GCN
-    model_key: h2gcn
-    model_plain: H2GCN
-    value: 0.4652
-    std: 0.007
-    paper_value: 0.4652
-    paper_std: 0.007
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 26, 2024
-    date_display: Dec 2024
-    date_iso: '2024-12-26'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3647
-    at_pub_std: 0.0023
-    at_pub_source_arxiv: '2410.02158'
-    at_pub_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph Representation
-      Learning'
-    at_pub_source_date_iso: '2024-10-03'
-    at_pub_source_date_label: TMLR 2024
-    value_gap_source_date_iso: '2025-05-20'
-    value_gap_source_date_label: KDD 2025
-    gap_vs_at_pub: 0.10049999999999998
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3717
-    true_std: 0.005
-    value_gap_source_arxiv: '2505.14033'
-    value_gap_source_title: 'Partition-wise Graph Filtering: A Unified Perspective
-      Through the Lens of Graph Coarsening'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.09350000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3717
-    sort_std: 0.005
-    global_rank: 74
-    paper_rank: 49
-    rank_delta: -25
-    rank_delta_abs: 25
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    comparison_source_arxiv: '2410.02158'
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy
@@ -1239,11 +1342,11 @@ results:
 - &id001
   dataset: ogbn-papers100M
   rows:
-  - model: LargeGT-full
-    model_key: gamlp
-    model_plain: LargeGT-full
-    value: 0.7036
-    std: 0.0002
+  - model: SGC
+    model_key: sgc
+    model_plain: SGC
+    value: 0.791
+    std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -1253,33 +1356,33 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2210.14709'
-    title: Learning on Large-scale Text-attributed Graphs via Variational Inference
-    date: Oct 2022
-    date_display: Oct 2022
-    date_iso: 2022-10
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/AndyJZhao/GLEM
+    arxiv_id: '2403.13268'
+    title: 'Unifews: You Need Fewer Operations for Efficient Graph Neural Networks'
+    date: Mar 19, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-19'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/gdmnl/Unifews
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.7036
-    sort_std: 0.0002
+    sort_value: 0.791
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: glem-gnn
-    model_plain: LargeGT-full
+  - model: GAMLP
+    model_key: gamlp
+    model_plain: GAMLP
     value: 0.7036
     std: 0.0002
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
@@ -1303,36 +1406,36 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: LargeGT-full
-    model_key: shadow+atp
-    model_plain: LargeGT-full
-    value: 0.698
-    std: 0.001
+  - model: GLEM-GNN
+    model_key: glem-gnn
+    model_plain: GLEM-GNN
+    value: 0.7036
+    std: 0.0002
     metric: Accuracy
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2402.06128'
-    title: Rethinking Node-wise Propagation for Large-scale Graph Learning
-    date: Feb 9, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-09'
-    venue: The Web Conference
-    codebase_url: ''
+    arxiv_id: '2210.14709'
+    title: Learning on Large-scale Text-attributed Graphs via Variational Inference
+    date: Oct 2022
+    date_display: Oct 2022
+    date_iso: 2022-10
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/AndyJZhao/GLEM
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.698
-    sort_std: 0.001
+    sort_value: 0.7036
+    sort_std: 0.0002
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1374,8 +1477,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1384,17 +1487,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6908
+    true_std: 0.0047
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6908
     sort_std: 0.0047
-    global_rank: 5
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1437,8 +1546,8 @@ results:
       Revisited
     at_pub_source_date_iso: '2022-02-04'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.000300000000000078
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1447,22 +1556,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    true_value: 0.6718
-    true_std: 0.0032
-    value_gap_source_arxiv: '2202.03580'
-    value_gap_source_title: Convolutional Neural Networks on Graphs with Chebyshev
-      Approximation, Revisited
-    value_gap_source_is_current_paper: false
-    value_gap: 0.000300000000000078
+    true_value: 0.6721
+    true_std: 0.0033
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.6718
-    sort_std: 0.0032
-    global_rank: 13
-    paper_rank: 12
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
+    sort_value: 0.6721
+    sort_std: 0.0033
+    global_rank: 20
+    paper_rank: 20
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1527,8 +1636,8 @@ results:
     value_note: ''
     sort_value: 0.6703
     sort_std: 0.003
-    global_rank: 16
-    paper_rank: 17
+    global_rank: 28
+    paper_rank: 29
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -1574,8 +1683,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1584,18 +1693,58 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6673
+    true_std: 0.0041
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6673
     sort_std: 0.0041
-    global_rank: 21
+    global_rank: 33
+    paper_rank: 33
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.6644
+    std: 0.0017
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2504.13266'
+    title: 'Graph Learning at Scale: Characterizing and Optimizing Pre-Propagation
+      GNNs'
+    date: Apr 17, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-17'
+    venue: Conference on Machine Learning and Systems
+    codebase_url: https://github.com/cornell-zhang/preprop-gnn
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 38
+    sort_value: 0.6644
+    sort_std: 0.0017
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1658,10 +1807,10 @@ results:
     value_note: ''
     sort_value: 0.6613
     sort_std: 0.002
-    global_rank: 32
-    paper_rank: 41
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 47
+    paper_rank: 54
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1727,10 +1876,10 @@ results:
     value_note: ''
     sort_value: 0.6608
     sort_std: 0.002
-    global_rank: 34
-    paper_rank: 46
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 48
+    paper_rank: 61
+    rank_delta: 13
+    rank_delta_abs: 13
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1775,8 +1924,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-12-26'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1785,17 +1934,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6563
+    true_std: 0.0027
+    value_gap_source_arxiv: '2412.19106'
+    value_gap_source_title: 'ERGNN: Spectral Graph Neural Network With Explicitly-Optimized
+      Rational Graph Filters'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6563
     sort_std: 0.0027
-    global_rank: 42
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1859,16 +2014,50 @@ results:
     value_note: ''
     sort_value: 0.6545
     sort_std: 0.002
-    global_rank: 44
-    paper_rank: 54
-    rank_delta: 10
-    rank_delta_abs: 10
+    global_rank: 58
+    paper_rank: 69
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Polynomial Selection in Spectral Graph Neural Networks:
       An Error-Sum of Function Slices Approach'
     comparison_source_arxiv: '2404.15354'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.496
+    std: 0.003
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2206.01535'
+    title: 'Rethinking and Scaling Up Graph Contrastive Learning: An Extremely Efficient
+      Approach with Group Discrimination'
+    date: Jun 3, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-03'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/zyzisastudyreallyhardguy/Graph-Group-Discrimination
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 98
+    sort_value: 0.496
+    sort_std: 0.003
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy

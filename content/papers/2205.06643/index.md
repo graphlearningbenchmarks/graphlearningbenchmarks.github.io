@@ -72,8 +72,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - BOTNet
-mrr: 0.0278
-adjusted_mrr: 0.0093
+mrr: 0.2
+adjusted_mrr: 0.0667
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -91,9 +91,9 @@ results:
   dataset: MD17
   is_multi_metric: true
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     metric_values:
     - 1.036e-05
     - null
@@ -133,9 +133,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     metric_values:
     - 1.038e-05
     - null
@@ -175,9 +175,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     metric_values:
     - 1.759e-05
     - null
@@ -235,18 +235,18 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.053
+    sort_value: 0.0007
     sort_std: null
-    true_value: 0.053
+    true_value: 0.0007
     true_std: null
     paper_value: 0.03
     paper_std: null
     has_value_gap: true
     has_value_note: false
-    value_gap: 0.023
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
+    value_gap: 0.0293
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -254,15 +254,15 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-07-02'
+    value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
+    insignificant_value_gap: false
     today_delta_significant: true
     arxiv_id: ''
     title: ''
@@ -279,7 +279,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 36
+    global_rank: 5
   - model: NequIP
     model_key: nequip
     model_plain: NequIP
@@ -298,18 +298,18 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.053
+    sort_value: 0.0009
     sort_std: null
-    true_value: 0.053
+    true_value: 0.0009
     true_std: null
     paper_value: 2.3
     paper_std: null
     has_value_gap: true
     has_value_note: false
-    value_gap: 2.247
-    value_gap_source_arxiv: '2402.04836'
-    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
+    value_gap: 2.2990999999999997
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
     value_note: ''
     at_pub_value: 0.348
     at_pub_std: null
@@ -318,7 +318,7 @@ results:
       based Molecular Potentials'
     at_pub_source_date_iso: '2022-01-01'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_iso: '2024-07-02'
     value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: 1.952
     worse_than_at_pub: true
@@ -343,7 +343,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 34
+    global_rank: 7
   - model: Linear ACE
     model_key: linear ace
     model_plain: Linear ACE
@@ -364,15 +364,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 6.1
     sort_std: null
-    true_value: null
+    true_value: 6.1
     true_std: null
     paper_value: 6.1
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -380,8 +381,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -405,7 +406,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 88
+    global_rank: 123
   - model: FCHL
     model_key: fchl
     model_plain: FCHL
@@ -426,15 +427,16 @@ results:
     architecture_title: Traditional / classical method
     sort_value: 6.2
     sort_std: null
-    true_value: null
+    true_value: 6.2
     true_std: null
     paper_value: 6.2
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -442,8 +444,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -467,7 +469,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 88
+    global_rank: 99
   - model: PaiNN
     model_key: painn
     model_plain: PaiNN
@@ -488,15 +490,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 6.9
     sort_std: null
-    true_value: null
+    true_value: 6.9
     true_std: null
     paper_value: 6.9
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -504,8 +507,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -529,7 +532,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 45
+    global_rank: 22
   - model: sGDML
     model_key: sgdml
     model_plain: sGDML
@@ -550,15 +553,16 @@ results:
     architecture_title: Traditional / classical method
     sort_value: 7.2
     sort_std: null
-    true_value: null
+    true_value: 7.2
     true_std: null
     paper_value: 7.2
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -566,8 +570,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -591,7 +595,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 40
+    global_rank: 62
   - model: NewtonNet
     model_key: newtonnet
     model_plain: NewtonNet
@@ -612,15 +616,16 @@ results:
     architecture_title: Hybrid MPNN + transformer
     sort_value: 7.3
     sort_std: null
-    true_value: null
+    true_value: 7.3
     true_std: null
     paper_value: 7.3
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -628,8 +633,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -653,7 +658,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 41
+    global_rank: 64
   - model: DimeNet++
     model_key: dimenet++
     model_plain: DimeNet++
@@ -674,15 +679,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 8.8
     sort_std: null
-    true_value: null
+    true_value: 8.8
     true_std: null
     paper_value: 8.8
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -690,8 +696,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -715,7 +721,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 42
+    global_rank: 65
   - model: SchNet
     model_key: schnet
     model_plain: SchNet
@@ -736,15 +742,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 16.0
     sort_std: null
-    true_value: null
+    true_value: 16.0
     true_std: null
     paper_value: 16.0
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -752,8 +759,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -798,15 +805,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 16.5
     sort_std: null
-    true_value: null
+    true_value: 16.5
     true_std: null
     paper_value: 16.5
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -814,8 +822,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -839,7 +847,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 90
+    global_rank: 126
   - model: ANI
     model_key: ani
     model_plain: ANI
@@ -860,15 +868,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 16.6
     sort_std: null
-    true_value: null
+    true_value: 16.6
     true_std: null
     paper_value: 16.6
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -876,8 +885,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -901,7 +910,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 90
+    global_rank: 126
   - model: GAP
     model_key: gap
     model_plain: GAP
@@ -922,15 +931,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 17.7
     sort_std: null
-    true_value: null
+    true_value: 17.7
     true_std: null
     paper_value: 17.7
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2205.06643'
+    value_gap_source_title: The design space of E(3)-equivariant atom-centred interatomic
+      potentials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -938,8 +948,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-05-13'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -963,7 +973,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 91
+    global_rank: 127
   metrics:
   - MAE
   - E

@@ -87,8 +87,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - VecFormer
-mrr: 0.0559
-adjusted_mrr: 0.0559
+mrr: 0.0551
+adjusted_mrr: 0.0551
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -120,9 +120,9 @@ results:
 - &id005
   dataset: Amazon2M
   rows:
-  - model: VecFormer
+  - model: GAT
     model_key: gat
-    model_plain: VecFormer
+    model_plain: GAT
     value: 0.953
     std: null
     metric: Accuracy
@@ -153,9 +153,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: VecFormer
+  - model: SAGE
     model_key: sage
-    model_plain: VecFormer
+    model_plain: SAGE
     value: 0.937
     std: null
     metric: Accuracy
@@ -186,9 +186,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: VecFormer
+  - model: BGRL
     model_key: bgrl
-    model_plain: VecFormer
+    model_plain: BGRL
     value: 0.932
     std: 0.003
     metric: Accuracy
@@ -498,6 +498,39 @@ results:
     comparison_source_arxiv: '2212.07035'
     is_best: false
     is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.856
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.08331'
+    title: Model Stealing Attacks Against Inductive Graph Neural Networks
+    date: Dec 15, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-15'
+    venue: IEEE Symposium on Security and Privacy
+    codebase_url: https://github.com/xinleihe/GNNStealing
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 20
+    sort_value: 0.856
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GAT-NSampler
     model_key: gat-nsampler
     model_plain: GAT-NSampler
@@ -691,8 +724,8 @@ results:
     value_note: ''
     sort_value: 0.8121
     sort_std: 0.0012
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -759,8 +792,8 @@ results:
     value_note: ''
     sort_value: 0.8098
     sort_std: 0.0031
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -827,8 +860,8 @@ results:
     value_note: ''
     sort_value: 0.6346
     sort_std: 0.001
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1550,6 +1583,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9004
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 42
+    sort_value: 0.9004
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: NodeFormer
     model_key: nodeformer
     model_plain: NodeFormer
@@ -1588,8 +1654,8 @@ results:
       on Textual Graphs
     at_pub_source_date_iso: '2024-01-28'
     at_pub_source_date_label: IJCAI 2024
-    value_gap_source_date_iso: '2024-01-28'
-    value_gap_source_date_label: IJCAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: WWW 2026
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1599,23 +1665,56 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8848
-    true_std: 0.0033
-    value_gap_source_arxiv: '2401.15569'
-    value_gap_source_title: Efficient Tuning and Inference for Large Language Models
-      on Textual Graphs
-    value_gap_source_is_current_paper: false
+    true_std: 0.0327
+    value_gap_source_arxiv: '2602.19622'
+    value_gap_source_title: 'VecFormer: Towards Efficient and Generalizable Graph
+      Transformer with Graph Token Attention'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8848
-    sort_std: 0.0033
-    global_rank: 105
-    paper_rank: 105
+    sort_std: 0.0327
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: true
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7768
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 853
+    sort_value: 0.7768
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1632,9 +1731,9 @@ results:
 - &id004
   dataset: Pokec
   rows:
-  - model: FMP
+  - model: Polynormer-r
     model_key: polynormer-r
-    model_plain: FMP
+    model_plain: Polynormer-r
     value: 0.861
     std: 0.0005
     metric: Accuracy
@@ -1665,9 +1764,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FMP
+  - model: Polynormer
     model_key: polynormer
-    model_plain: FMP
+    model_plain: Polynormer
     value: 0.8595
     std: 0.0007
     metric: Accuracy
@@ -1698,9 +1797,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: FMP
+  - model: MoE-H2GCN
     model_key: moe-h2gcn
-    model_plain: FMP
+    model_plain: MoE-H2GCN
     value: 0.8302
     std: 0.003
     metric: Accuracy
@@ -1789,8 +1888,8 @@ results:
     value_note: ''
     sort_value: 0.8101
     sort_std: null
-    global_rank: 10
-    paper_rank: 36
+    global_rank: 11
+    paper_rank: 37
     rank_delta: 26
     rank_delta_abs: 26
     rank_delta_direction: worse
@@ -1858,8 +1957,8 @@ results:
     value_note: ''
     sort_value: 0.7806
     sort_std: 0.0021
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1925,8 +2024,8 @@ results:
     value_note: ''
     sort_value: 0.7601
     sort_std: 0.0049
-    global_rank: 25
-    paper_rank: 45
+    global_rank: 26
+    paper_rank: 46
     rank_delta: 20
     rank_delta_abs: 20
     rank_delta_direction: worse
@@ -1934,6 +2033,39 @@ results:
     comparison_type: behind
     comparison_source_title: Mixture of Weak & Strong Experts on Graphs
     comparison_source_arxiv: '2311.05185'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.7576
+    std: 0.0004
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2311.05185'
+    title: Mixture of Weak & Strong Experts on Graphs
+    date: Nov 9, 2023
+    date_display: Nov 2023
+    date_iso: '2023-11-09'
+    venue: Accepted for publication in ICLR 2024
+    codebase_url: https://github.com/VITA-Group/Graph-Mixture-of-Experts
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.7576
+    sort_std: 0.0004
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SGFormer
@@ -1993,8 +2125,8 @@ results:
     value_note: ''
     sort_value: 0.7376
     sort_std: 0.0024
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2062,8 +2194,8 @@ results:
     value_note: ''
     sort_value: 0.7124
     sort_std: 0.0046
-    global_rank: 32
-    paper_rank: 49
+    global_rank: 33
+    paper_rank: 50
     rank_delta: 17
     rank_delta_abs: 17
     rank_delta_direction: worse
@@ -2132,8 +2264,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.013
-    global_rank: 33
-    paper_rank: 35
+    global_rank: 34
+    paper_rank: 36
     rank_delta: 2
     rank_delta_abs: 2
     rank_delta_direction: worse
@@ -2201,8 +2333,8 @@ results:
     value_note: ''
     sort_value: 0.7048
     sort_std: 0.0077
-    global_rank: 35
-    paper_rank: 46
+    global_rank: 36
+    paper_rank: 47
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -2270,8 +2402,8 @@ results:
     value_note: ''
     sort_value: 0.6375
     sort_std: 0.0077
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2338,8 +2470,8 @@ results:
     value_note: ''
     sort_value: 0.6232
     sort_std: 0.0065
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2361,9 +2493,9 @@ results:
 - &id002
   dataset: PubMed
   rows:
-  - model: R-SoftGraphAIN
+  - model: LGTL
     model_key: lgtl
-    model_plain: R-SoftGraphAIN
+    model_plain: LGTL
     value: 0.9518
     std: 0.0011
     metric: Accuracy
@@ -2395,9 +2527,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: SAGN
     model_key: sagn
-    model_plain: R-SoftGraphAIN
+    model_plain: SAGN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -2429,9 +2561,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: MixHop (LO)
     model_key: mixhop (lo)
-    model_plain: R-SoftGraphAIN
+    model_plain: MixHop (LO)
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -2532,6 +2664,40 @@ results:
       in Tokenized Graph Learning Models'
     comparison_source_arxiv: '2505.15845'
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9487
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.9487
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -3295,6 +3461,39 @@ results:
     comparison_source_arxiv: '2506.07168'
     is_best: false
     is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.869
+    std: 0.0074
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.00183'
+    title: On the Equivalence of Graph Convolution and Mixup
+    date: Sep 29, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-29'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/ahxt/GraphConv_is_Mixup
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 233
+    sort_value: 0.869
+    sort_std: 0.0074
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   rank_metric: Accuracy
   higher_is_better: true
   experiment_scope: node-level
@@ -3307,9 +3506,9 @@ results:
 - &id003
   dataset: ogbn-proteins
   rows:
-  - model: RevGNN
+  - model: LD
     model_key: ld
-    model_plain: RevGNN
+    model_plain: LD
     value: 0.8942
     std: 0.0007
     metric: ROC-AUC
@@ -3341,9 +3540,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: RevGNN
+  - model: X_WO/LD
     model_key: x_wo/ld
-    model_plain: RevGNN
+    model_plain: X_WO/LD
     value: 0.8915
     std: 0.0012
     metric: ROC-AUC
@@ -3375,9 +3574,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: RevGNN
+  - model: MoG
     model_key: mog
-    model_plain: RevGNN
+    model_plain: MoG
     value: 0.8904
     std: 0.0072
     metric: ROC-AUC
@@ -3407,6 +3606,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.843
+    std: null
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.05573'
+    title: Learning to Model Graph Structural Information on MLPs via Graph Structure
+      Self-Contrasting
+    date: Sep 9, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-09'
+    venue: IEEE Transactions on Neural Networks and Learning Systems
+    codebase_url: https://github.com/LirongWu/GSSC
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 17
+    sort_value: 0.843
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GCN
     model_key: gcn

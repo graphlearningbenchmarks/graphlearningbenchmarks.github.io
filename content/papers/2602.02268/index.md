@@ -50,9 +50,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - HopFormer
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0044
+adjusted_mrr: 0.0044
+mrr_dataset_count: 3
 benchmark_categories:
 - Heterophilic Graphs
 benchmark_coverage:
@@ -127,9 +127,9 @@ results:
     sort_value: 0.7623
     sort_std: 0.0042
     global_rank: 1
-    paper_rank: 239
-    rank_delta: 238
-    rank_delta_abs: 238
+    paper_rank: 271
+    rank_delta: 270
+    rank_delta_abs: 270
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -138,9 +138,9 @@ results:
     comparison_source_arxiv: '2505.15845'
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: DiGGR
     model_key: diggr
-    model_plain: R-SoftGraphAIN
+    model_plain: DiGGR
     value: 0.4535
     std: 0.0353
     metric: Accuracy
@@ -171,35 +171,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: R-SoftGraphAIN
-    model_key: dog
-    model_plain: R-SoftGraphAIN
-    value: 0.432
-    std: 0.012
+  - model: TRIGON
+    model_key: trigon
+    model_plain: TRIGON
+    value: 0.4402
+    std: 0.0028
     metric: Accuracy
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2503.12563'
-    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
-    date: Mar 16, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-16'
-    venue: Trans. Mach. Learn. Res.
-    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
-    uses_external_data: true
-    input_feature_source: raw_features
-    feature_source_evidence: DoG generates synthetic graph structures to boost the
-      performance of GNNs.
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.19071'
+    title: Dynamic Triangulation-Based Graph Rewiring for Graph Neural Networks
+    date: Aug 26, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-26'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/Hugo-Attali/TRIGON-CIKM-2025
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.432
-    sort_std: 0.012
+    sort_value: 0.4402
+    sort_std: 0.0028
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -242,8 +241,8 @@ results:
       Neural Networks
     at_pub_source_date_iso: '2023-11-30'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-11-30'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: 0.05459999999999998
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -254,25 +253,92 @@ results:
     today_delta_significant: true
     true_value: 0.4193
     true_std: 0.0104
-    value_gap_source_arxiv: '2311.18177'
-    value_gap_source_title: An Effective Universal Polynomial Basis for Spectral Graph
-      Neural Networks
+    value_gap_source_arxiv: '2505.23014'
+    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
+      the Perspective of A System of Hyperbolic Partial Differential Equations'
     value_gap_source_is_current_paper: false
     value_gap: 0.05459999999999998
     has_value_note: false
     value_note: ''
     sort_value: 0.4193
     sort_std: 0.0104
-    global_rank: 19
-    paper_rank: 170
-    rank_delta: 151
-    rank_delta_abs: 151
+    global_rank: 23
+    paper_rank: 203
+    rank_delta: 180
+    rank_delta_abs: 180
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: An Effective Universal Polynomial Basis for Spectral
       Graph Neural Networks
     comparison_source_arxiv: '2311.18177'
+    is_best: false
+    is_std_outlier: false
+  - model: SGFormer
+    model_key: sgformer
+    model_plain: SGFormer
+    value: 0.3746
+    std: 0.0084
+    paper_value: 0.3746
+    paper_std: 0.0084
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4169
+    at_pub_std: 0.0063
+    at_pub_source_arxiv: '2411.17296'
+    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    at_pub_source_date_iso: '2024-11-26'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-11-26'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.042300000000000004
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4169
+    true_std: 0.0063
+    value_gap_source_arxiv: '2411.17296'
+    value_gap_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.042300000000000004
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4169
+    sort_std: 0.0063
+    global_rank: 29
+    paper_rank: 144
+    rank_delta: 115
+    rank_delta_abs: 115
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    comparison_source_arxiv: '2411.17296'
     is_best: false
     is_std_outlier: false
   - model: APPNP
@@ -331,15 +397,48 @@ results:
     value_note: ''
     sort_value: 0.4046
     sort_std: 0.0064
-    global_rank: 46
-    paper_rank: 409
-    rank_delta: 363
-    rank_delta_abs: 363
+    global_rank: 55
+    paper_rank: 459
+    rank_delta: 404
+    rank_delta_abs: 404
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
     comparison_source_arxiv: '2310.11762'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.4026
+    std: 0.0108
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2302.03228'
+    title: Heterophily-Aware Graph Attention Network
+    date: Feb 7, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-07'
+    venue: Pattern Recognition
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 56
+    sort_value: 0.4026
+    sort_std: 0.0108
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: Exphormer
@@ -398,10 +497,10 @@ results:
     value_note: ''
     sort_value: 0.3901
     sort_std: 0.0069
-    global_rank: 69
-    paper_rank: 208
-    rank_delta: 139
-    rank_delta_abs: 139
+    global_rank: 87
+    paper_rank: 240
+    rank_delta: 153
+    rank_delta_abs: 153
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -409,71 +508,37 @@ results:
     comparison_source_arxiv: '2411.16278'
     is_best: false
     is_std_outlier: false
-  - model: SGFormer
-    model_key: sgformer
-    model_plain: SGFormer
-    value: 0.3746
-    std: 0.0084
-    paper_value: 0.3746
-    paper_std: 0.0084
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.3899
+    std: 0.0085
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11762'
+    title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    date: Oct 18, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-18'
+    venue: The Web Conference
+    codebase_url: https://github.com/SDS-Lab/QW_Loss
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.4169
-    at_pub_std: 0.0063
-    at_pub_source_arxiv: '2411.17296'
-    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    at_pub_source_date_iso: '2024-11-26'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2024-08-14'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.042300000000000004
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.379
-    true_std: 0.011
-    value_gap_source_arxiv: '2408.07654'
-    value_gap_source_title: 'Graph Triple Attention Network: A Decoupled Perspective'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.004400000000000015
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.379
-    sort_std: 0.011
-    global_rank: 100
-    paper_rank: 122
-    rank_delta: 22
-    rank_delta_abs: 22
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    comparison_source_arxiv: '2411.17296'
+    is_global_top: true
+    global_rank: 88
+    sort_value: 0.3899
+    sort_std: 0.0085
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: DeGTA
@@ -532,10 +597,10 @@ results:
     value_note: ''
     sort_value: 0.3787
     sort_std: 0.01
-    global_rank: 104
-    paper_rank: 251
-    rank_delta: 147
-    rank_delta_abs: 147
+    global_rank: 123
+    paper_rank: 284
+    rank_delta: 161
+    rank_delta_abs: 161
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -599,10 +664,10 @@ results:
     value_note: ''
     sort_value: 0.3785
     sort_std: 0.0029
-    global_rank: 105
-    paper_rank: 133
-    rank_delta: 28
-    rank_delta_abs: 28
+    global_rank: 124
+    paper_rank: 159
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -646,8 +711,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -656,17 +721,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3736
+    true_std: 0.0016
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3736
     sort_std: 0.0016
-    global_rank: 125
+    global_rank: 147
+    paper_rank: 147
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -702,14 +773,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.3721
+    at_pub_std: 0.0117
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -718,17 +789,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3721
+    true_std: 0.0117
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3721
     sort_std: 0.0117
-    global_rank: 132
+    global_rank: 155
+    paper_rank: 155
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -764,14 +841,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.3719
+    at_pub_std: 0.0088
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -780,17 +857,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3719
+    true_std: 0.0088
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3719
     sort_std: 0.0088
-    global_rank: 132
+    global_rank: 157
+    paper_rank: 157
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -832,8 +915,8 @@ results:
     at_pub_source_title: Beyond Low-frequency Information in Graph Convolutional Networks
     at_pub_source_date_iso: '2021-01-04'
     at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2022-06-06'
-    value_gap_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2021-01-04'
+    value_gap_source_date_label: AAAI 2021
     gap_vs_at_pub: 0.09770000000000001
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -842,27 +925,95 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.362
-    true_std: 0.01
-    value_gap_source_arxiv: '2206.02386'
-    value_gap_source_title: Restructuring Graphs for Higher Homophily via Adaptive
-      Spectral Clustering
+    true_value: 0.369
+    true_std: null
+    value_gap_source_arxiv: '2101.00797'
+    value_gap_source_title: Beyond Low-frequency Information in Graph Convolutional
+      Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.0907
+    value_gap: 0.09770000000000001
     has_value_note: false
     value_note: ''
-    sort_value: 0.362
-    sort_std: 0.01
-    global_rank: 184
-    paper_rank: 422
-    rank_delta: 238
-    rank_delta_abs: 238
+    sort_value: 0.369
+    sort_std: null
+    global_rank: 173
+    paper_rank: 471
+    rank_delta: 298
+    rank_delta_abs: 298
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Beyond Low-frequency Information in Graph Convolutional
       Networks
     comparison_source_arxiv: '2101.00797'
+    is_best: false
+    is_std_outlier: false
+  - model: DIFFormer
+    model_key: difformer
+    model_plain: DIFFormer
+    value: 0.3682
+    std: 0.011
+    paper_value: 0.3682
+    paper_std: 0.011
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3682
+    at_pub_std: 0.011
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3682
+    true_std: 0.011
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3682
+    sort_std: 0.011
+    global_rank: 180
+    paper_rank: 180
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -921,10 +1072,10 @@ results:
     value_note: ''
     sort_value: 0.3605
     sort_std: 0.0035
-    global_rank: 191
-    paper_rank: 400
-    rank_delta: 209
-    rank_delta_abs: 209
+    global_rank: 224
+    paper_rank: 450
+    rank_delta: 226
+    rank_delta_abs: 226
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -962,14 +1113,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.2873
+    at_pub_std: 0.0006
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -978,85 +1129,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2873
+    true_std: 0.0006
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2873
     sort_std: 0.0006
-    global_rank: 395
+    global_rank: 444
+    paper_rank: 444
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DIFFormer
-    model_key: difformer
-    model_plain: DIFFormer
-    value: 0.3682
-    std: 0.011
-    paper_value: 0.3682
-    paper_std: 0.011
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3682
-    at_pub_std: 0.011
-    at_pub_source_arxiv: '2506.04765'
-    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
-    at_pub_source_date_iso: '2025-06-05'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2025-09-16'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.2631
-    true_std: 0.0119
-    value_gap_source_arxiv: '2509.12530'
-    value_gap_source_title: 'Graph Homophily Booster: Rethinking the Role of Discrete
-      Features on Heterophilic Graphs'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.10510000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.2631
-    sort_std: 0.0119
-    global_rank: 427
-    paper_rank: 155
-    rank_delta: -272
-    rank_delta_abs: 272
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1074,9 +1163,9 @@ results:
 - &id002
   dataset: Cornell
   rows:
-  - model: R-SoftGraphAIN
+  - model: P^2GNN
     model_key: p^2gnn
-    model_plain: R-SoftGraphAIN
+    model_plain: P^2GNN
     value: 0.9541
     std: 0.0272
     metric: Accuracy
@@ -1107,9 +1196,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: ACM-GCN
     model_key: acm-gcn
-    model_plain: R-SoftGraphAIN
+    model_plain: ACM-GCN
     value: 0.948
     std: 0.038
     metric: Accuracy
@@ -1140,9 +1229,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: RF-GCN
     model_key: rf-gcn
-    model_plain: R-SoftGraphAIN
+    model_plain: RF-GCN
     value: 0.9429
     std: null
     metric: Accuracy
@@ -1209,8 +1298,8 @@ results:
     at_pub_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
     at_pub_source_date_iso: '2023-03-24'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-03-24'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: 0.4767
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1221,24 +1310,92 @@ results:
     today_delta_significant: true
     true_value: 0.9181
     true_std: 0.0196
-    value_gap_source_arxiv: '2303.13750'
-    value_gap_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    value_gap_source_arxiv: '2505.23014'
+    value_gap_source_title: 'Hyperbolic-PDE GNN: Spectral Graph Neural Networks in
+      the Perspective of A System of Hyperbolic Partial Differential Equations'
     value_gap_source_is_current_paper: false
     value_gap: 0.4767
     has_value_note: false
     value_note: ''
     sort_value: 0.9181
     sort_std: 0.0196
-    global_rank: 20
-    paper_rank: 544
-    rank_delta: 524
-    rank_delta_abs: 524
+    global_rank: 23
+    paper_rank: 624
+    rank_delta: 601
+    rank_delta_abs: 601
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
     comparison_source_arxiv: '2303.13750'
     is_best: true
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.9136
+    std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2212.03654'
+    title: Node-oriented Spectral Filtering for Graph Neural Networks
+    date: Dec 7, 2022
+    date_display: Dec 2022
+    date_iso: '2022-12-07'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 27
+    sort_value: 0.9136
+    sort_std: 0.007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8269
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2505.19762'
+    title: 'Language Models as Messengers: Enhancing Message Passing in Heterophilic
+      Graph Learning'
+    date: May 26, 2025
+    date_display: May 2025
+    date_iso: '2025-05-26'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 177
+    sort_value: 0.8269
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GAT
     model_key: gat
@@ -1298,10 +1455,10 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: 0.054
-    global_rank: 171
-    paper_rank: 579
-    rank_delta: 408
-    rank_delta_abs: 408
+    global_rank: 201
+    paper_rank: 661
+    rank_delta: 460
+    rank_delta_abs: 460
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1346,8 +1503,8 @@ results:
     at_pub_source_title: Bayesian Neighborhood Adaptation for Graph Neural Networks
     at_pub_source_date_iso: '2025-07-01'
     at_pub_source_date_label: TMLR 2025
-    value_gap_source_date_iso: '2024-05-25'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2025-07-01'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: 0.48390000000000005
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1356,20 +1513,20 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.8015
-    true_std: 0.0037
-    value_gap_source_arxiv: '2405.16185'
-    value_gap_source_title: Differentiable Cluster Graph Neural Network
+    true_value: 0.8082
+    true_std: 0.036
+    value_gap_source_arxiv: '2602.05358'
+    value_gap_source_title: Bayesian Neighborhood Adaptation for Graph Neural Networks
     value_gap_source_is_current_paper: false
-    value_gap: 0.4772
+    value_gap: 0.48390000000000005
     has_value_note: false
     value_note: ''
-    sort_value: 0.8015
-    sort_std: 0.0037
-    global_rank: 190
-    paper_rank: 582
-    rank_delta: 392
-    rank_delta_abs: 392
+    sort_value: 0.8082
+    sort_std: 0.036
+    global_rank: 217
+    paper_rank: 664
+    rank_delta: 447
+    rank_delta_abs: 447
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1413,8 +1570,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1423,17 +1580,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7657
+    true_std: 0.0412
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7657
     sort_std: 0.0412
-    global_rank: 242
+    global_rank: 281
+    paper_rank: 281
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1469,14 +1632,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7478
+    at_pub_std: 0.0255
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1485,17 +1648,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7478
+    true_std: 0.0255
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7478
     sort_std: 0.0255
-    global_rank: 262
+    global_rank: 302
+    paper_rank: 302
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1531,14 +1700,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7297
+    at_pub_std: 0.0221
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1547,17 +1716,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7297
+    true_std: 0.0221
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7297
     sort_std: 0.0221
-    global_rank: 278
+    global_rank: 321
+    paper_rank: 321
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1593,14 +1768,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7207
+    at_pub_std: 0.0127
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1609,338 +1784,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7207
+    true_std: 0.0127
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7207
     sort_std: 0.0127
-    global_rank: 288
+    global_rank: 333
+    paper_rank: 333
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: CoBFormer
-    model_key: cobformer
-    model_plain: CoBFormer
-    value: 0.7117
-    std: 0.0337
-    paper_value: 0.7117
-    paper_std: 0.0337
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.7117
-    sort_std: 0.0337
-    global_rank: 295
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DIFFormer
-    model_key: difformer
-    model_plain: DIFFormer
-    value: 0.6486
-    std: 0.0441
-    paper_value: 0.6486
-    paper_std: 0.0441
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.6486
-    sort_std: 0.0441
-    global_rank: 350
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GRIT
-    model_key: grit
-    model_plain: GRIT
-    value: 0.6486
-    std: 0.0584
-    paper_value: 0.6486
-    paper_std: 0.0584
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.6486
-    sort_std: 0.0584
-    global_rank: 350
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SAN
-    model_key: san
-    model_plain: SAN
-    value: 0.6667
-    std: 0.0337
-    paper_value: 0.6667
-    paper_std: 0.0337
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6667
-    at_pub_std: 0.0337
-    at_pub_source_arxiv: '2506.04765'
-    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
-    at_pub_source_date_iso: '2025-06-05'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2022-10-08'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.612
-    true_std: 0.0117
-    value_gap_source_arxiv: '2210.03930'
-    value_gap_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05469999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.612
-    sort_std: 0.0117
-    global_rank: 381
-    paper_rank: 335
-    rank_delta: -46
-    rank_delta_abs: 46
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    value: 0.6577
-    std: 0.0459
-    paper_value: 0.6577
-    paper_std: 0.0459
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6577
-    at_pub_std: 0.0459
-    at_pub_source_arxiv: '2506.04765'
-    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
-    at_pub_source_date_iso: '2025-06-05'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2025-05-19'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.6053
-    true_std: 0.0234
-    value_gap_source_arxiv: '2505.15845'
-    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
-      in Tokenized Graph Learning Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0524
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6053
-    sort_std: 0.0234
-    global_rank: 392
-    paper_rank: 344
-    rank_delta: -48
-    rank_delta_abs: 48
-    rank_delta_direction: better
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1982,32 +1842,373 @@ results:
     at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
     at_pub_source_date_iso: '2025-06-05'
     at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2022-10-08'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.5941
-    true_std: 0.0121
-    value_gap_source_arxiv: '2210.03930'
-    value_gap_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    value_gap_source_is_current_paper: false
-    value_gap: 0.11760000000000004
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7117
+    true_std: 0.0127
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.5941
-    sort_std: 0.0121
-    global_rank: 402
-    paper_rank: 295
-    rank_delta: -107
-    rank_delta_abs: 107
-    rank_delta_direction: better
-    has_value_gap: true
+    sort_value: 0.7117
+    sort_std: 0.0127
+    global_rank: 341
+    paper_rank: 341
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: CoBFormer
+    model_key: cobformer
+    model_plain: CoBFormer
+    value: 0.7117
+    std: 0.0337
+    paper_value: 0.7117
+    paper_std: 0.0337
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7117
+    at_pub_std: 0.0337
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7117
+    true_std: 0.0337
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7117
+    sort_std: 0.0337
+    global_rank: 342
+    paper_rank: 342
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAN
+    model_key: san
+    model_plain: SAN
+    value: 0.6667
+    std: 0.0337
+    paper_value: 0.6667
+    paper_std: 0.0337
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6667
+    at_pub_std: 0.0337
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6667
+    true_std: 0.0337
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6667
+    sort_std: 0.0337
+    global_rank: 389
+    paper_rank: 389
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: NodeFormer
+    model_key: nodeformer
+    model_plain: NodeFormer
+    value: 0.6577
+    std: 0.0459
+    paper_value: 0.6577
+    paper_std: 0.0459
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6577
+    at_pub_std: 0.0459
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6577
+    true_std: 0.0459
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6577
+    sort_std: 0.0459
+    global_rank: 399
+    paper_rank: 399
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DIFFormer
+    model_key: difformer
+    model_plain: DIFFormer
+    value: 0.6486
+    std: 0.0441
+    paper_value: 0.6486
+    paper_std: 0.0441
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6486
+    at_pub_std: 0.0441
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6486
+    true_std: 0.0441
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6486
+    sort_std: 0.0441
+    global_rank: 406
+    paper_rank: 406
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GRIT
+    model_key: grit
+    model_plain: GRIT
+    value: 0.6486
+    std: 0.0584
+    paper_value: 0.6486
+    paper_std: 0.0584
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6486
+    at_pub_std: 0.0584
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.6486
+    true_std: 0.0584
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6486
+    sort_std: 0.0584
+    global_rank: 407
+    paper_rank: 407
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2043,14 +2244,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.5405
+    at_pub_std: 0.0441
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2059,17 +2260,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5405
+    true_std: 0.0441
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5405
     sort_std: 0.0441
-    global_rank: 470
+    global_rank: 530
+    paper_rank: 530
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2105,14 +2312,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.5315
+    at_pub_std: 0.0459
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2121,17 +2328,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5315
+    true_std: 0.0459
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5315
     sort_std: 0.0459
-    global_rank: 482
+    global_rank: 543
+    paper_rank: 543
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2167,14 +2380,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.3874
+    at_pub_std: 0.0127
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2183,17 +2396,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3874
+    true_std: 0.0127
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3874
     sort_std: 0.0127
-    global_rank: 571
+    global_rank: 652
+    paper_rank: 652
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2211,9 +2430,9 @@ results:
 - &id001
   dataset: Texas
   rows:
-  - model: R-SoftGraphAIN
+  - model: P^2GNN
     model_key: p^2gnn
-    model_plain: R-SoftGraphAIN
+    model_plain: P^2GNN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -2244,9 +2463,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: DoG
     model_key: dog
-    model_plain: R-SoftGraphAIN
+    model_plain: DoG
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -2278,9 +2497,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: GPF-plus
     model_key: gpf-plus
-    model_plain: R-SoftGraphAIN
+    model_plain: GPF-plus
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -2310,6 +2529,106 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: SGFormer
+    model_key: sgformer
+    model_plain: SGFormer
+    value: 0.7568
+    std: 0.0221
+    paper_value: 0.7568
+    paper_std: 0.0221
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.9246
+    at_pub_std: 0.0148
+    at_pub_source_arxiv: '2411.17296'
+    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    at_pub_source_date_iso: '2024-11-26'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-11-26'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.16779999999999995
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9246
+    true_std: 0.0148
+    value_gap_source_arxiv: '2411.17296'
+    value_gap_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.16779999999999995
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9246
+    sort_std: 0.0148
+    global_rank: 45
+    paper_rank: 412
+    rank_delta: 367
+    rank_delta_abs: 367
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    comparison_source_arxiv: '2411.17296'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.923
+    std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 47
+    sort_value: 0.923
+    sort_std: 0.007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: APPNP
     model_key: appnp
@@ -2367,15 +2686,182 @@ results:
     value_note: ''
     sort_value: 0.9131
     sort_std: 0.0197
-    global_rank: 55
-    paper_rank: 606
-    rank_delta: 551
-    rank_delta_abs: 551
+    global_rank: 63
+    paper_rank: 705
+    rank_delta: 642
+    rank_delta_abs: 642
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
     comparison_source_arxiv: '2310.11762'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9001
+    std: 0.023
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11762'
+    title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    date: Oct 18, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-18'
+    venue: The Web Conference
+    codebase_url: https://github.com/SDS-Lab/QW_Loss
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 76
+    sort_value: 0.9001
+    sort_std: 0.023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Specformer
+    model_key: specformer
+    model_plain: Specformer
+    value: 0.7838
+    std: 0.0221
+    paper_value: 0.7838
+    paper_std: 0.0221
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8823
+    at_pub_std: 0.0038
+    at_pub_source_arxiv: '2411.17296'
+    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    at_pub_source_date_iso: '2024-11-26'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-11-26'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.09849999999999992
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8823
+    true_std: 0.0038
+    value_gap_source_arxiv: '2411.17296'
+    value_gap_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09849999999999992
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8823
+    sort_std: 0.0038
+    global_rank: 114
+    paper_rank: 359
+    rank_delta: 245
+    rank_delta_abs: 245
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    comparison_source_arxiv: '2411.17296'
+    is_best: false
+    is_std_outlier: false
+  - model: NodeFormer
+    model_key: nodeformer
+    model_plain: NodeFormer
+    value: 0.6937
+    std: 0.0255
+    paper_value: 0.6937
+    paper_std: 0.0255
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8463
+    at_pub_std: 0.0347
+    at_pub_source_arxiv: '2411.17296'
+    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    at_pub_source_date_iso: '2024-11-26'
+    at_pub_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2024-11-26'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.15260000000000007
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8463
+    true_std: 0.0347
+    value_gap_source_arxiv: '2411.17296'
+    value_gap_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.15260000000000007
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8463
+    sort_std: 0.0347
+    global_rank: 213
+    paper_rank: 513
+    rank_delta: 300
+    rank_delta_abs: 300
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
+    comparison_source_arxiv: '2411.17296'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -2436,84 +2922,16 @@ results:
     value_note: ''
     sort_value: 0.8162
     sort_std: 0.0645
-    global_rank: 245
-    paper_rank: 644
-    rank_delta: 399
-    rank_delta_abs: 399
+    global_rank: 288
+    paper_rank: 750
+    rank_delta: 462
+    rank_delta_abs: 462
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Equivariance Everywhere All At Once: A Recipe for Graph
       Foundation Models'
     comparison_source_arxiv: '2506.14291'
-    is_best: false
-    is_std_outlier: false
-  - model: NodeFormer
-    model_key: nodeformer
-    model_plain: NodeFormer
-    value: 0.6937
-    std: 0.0255
-    paper_value: 0.6937
-    paper_std: 0.0255
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.8463
-    at_pub_std: 0.0347
-    at_pub_source_arxiv: '2411.17296'
-    at_pub_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    at_pub_source_date_iso: '2024-11-26'
-    at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2025-05-19'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.15260000000000007
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.8129
-    true_std: 0.0125
-    value_gap_source_arxiv: '2505.15845'
-    value_gap_source_title: 'Adaptive Tokenization: On the Hop-Overpriority Problem
-      in Tokenized Graph Learning Models'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.11919999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.8129
-    sort_std: 0.0125
-    global_rank: 258
-    paper_rank: 428
-    rank_delta: 170
-    rank_delta_abs: 170
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
-    comparison_source_arxiv: '2411.17296'
     is_best: false
     is_std_outlier: false
   - model: HopFormer
@@ -2552,8 +2970,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2562,17 +2980,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7937
+    true_std: 0.027
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7937
     sort_std: 0.027
-    global_rank: 299
+    global_rank: 347
+    paper_rank: 347
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2634,10 +3058,10 @@ results:
     value_note: ''
     sort_value: 0.7933
     sort_std: 0.0447
-    global_rank: 299
-    paper_rank: 633
-    rank_delta: 334
-    rank_delta_abs: 334
+    global_rank: 348
+    paper_rank: 735
+    rank_delta: 387
+    rank_delta_abs: 387
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2645,136 +3069,12 @@ results:
     comparison_source_arxiv: '2505.20034'
     is_best: false
     is_std_outlier: false
-  - model: Specformer
-    model_key: specformer
-    model_plain: Specformer
-    value: 0.7838
-    std: 0.0221
-    paper_value: 0.7838
-    paper_std: 0.0221
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.7838
-    sort_std: 0.0221
-    global_rank: 310
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SGFormer
-    model_key: sgformer
-    model_plain: SGFormer
-    value: 0.7568
-    std: 0.0221
-    paper_value: 0.7568
-    paper_std: 0.0221
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.7568
-    sort_std: 0.0221
-    global_rank: 348
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GPS
-    model_key: gps
-    model_plain: GPS
-    value: 0.7478
+  - model: Graphormer
+    model_key: graphormer
+    model_plain: Graphormer
+    value: 0.7748
     std: 0.0127
-    paper_value: 0.7478
+    paper_value: 0.7748
     paper_std: 0.0127
     metric: Accuracy
     higher_is_better: true
@@ -2782,9 +3082,9 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
     uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
@@ -2799,14 +3099,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7748
+    at_pub_std: 0.0127
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2815,17 +3115,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    sort_value: 0.7478
-    sort_std: 0.0127
-    global_rank: 359
-    has_value_gap: false
-    has_value_note: false
+    true_value: 0.7748
+    true_std: 0.0127
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.7748
+    sort_std: 0.0127
+    global_rank: 376
+    paper_rank: 376
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2861,14 +3167,83 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7652
+    at_pub_std: 0.0238
+    at_pub_source_arxiv: '2510.17457'
+    at_pub_source_title: 'Deeper with Riemannian Geometry: Overcoming Oversmoothing
+      and Oversquashing for Graph Foundation Models'
+    at_pub_source_date_iso: '2025-10-20'
+    at_pub_source_date_label: NeurIPS 2025
+    value_gap_source_date_iso: '2025-10-20'
+    value_gap_source_date_label: NeurIPS 2025
+    gap_vs_at_pub: 0.026499999999999968
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: false
+    true_value: 0.7652
+    true_std: 0.0238
+    value_gap_source_arxiv: '2510.17457'
+    value_gap_source_title: 'Deeper with Riemannian Geometry: Overcoming Oversmoothing
+      and Oversquashing for Graph Foundation Models'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.026499999999999968
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7652
+    sort_std: 0.0238
+    global_rank: 396
+    paper_rank: 451
+    rank_delta: 55
+    rank_delta_abs: 55
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.7478
+    std: 0.0127
+    paper_value: 0.7478
+    paper_std: 0.0127
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 2, 2026
+    date_display: Feb 2026
+    date_iso: '2026-02-02'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7478
+    at_pub_std: 0.0127
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2877,17 +3252,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
-    sort_value: 0.7387
-    sort_std: 0.0637
-    global_rank: 376
-    has_value_gap: false
-    has_value_note: false
+    true_value: 0.7478
+    true_std: 0.0127
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
     value_gap: null
+    has_value_note: false
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
+    sort_value: 0.7478
+    sort_std: 0.0127
+    global_rank: 432
+    paper_rank: 432
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2923,14 +3304,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7207
+    at_pub_std: 0.0337
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2939,17 +3320,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7207
+    true_std: 0.0337
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7207
     sort_std: 0.0337
-    global_rank: 400
+    global_rank: 482
+    paper_rank: 482
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2985,14 +3372,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.7027
+    at_pub_std: 0.0382
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3001,17 +3388,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7027
+    true_std: 0.0382
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7027
     sort_std: 0.0382
-    global_rank: 419
+    global_rank: 500
+    paper_rank: 500
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3073,78 +3466,11 @@ results:
     value_note: ''
     sort_value: 0.701
     sort_std: 0.0182
-    global_rank: 420
-    paper_rank: 452
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 504
+    paper_rank: 539
+    rank_delta: 35
+    rank_delta_abs: 35
     rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Graphormer
-    model_key: graphormer
-    model_plain: Graphormer
-    value: 0.7748
-    std: 0.0127
-    paper_value: 0.7748
-    paper_std: 0.0127
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 2, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-02'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7748
-    at_pub_std: 0.0127
-    at_pub_source_arxiv: '2506.04765'
-    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
-    at_pub_source_date_iso: '2025-06-05'
-    at_pub_source_date_label: '2025'
-    value_gap_source_date_iso: '2022-10-08'
-    value_gap_source_date_label: NeurIPS 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.6856
-    true_std: 0.0174
-    value_gap_source_arxiv: '2210.03930'
-    value_gap_source_title: Hierarchical Graph Transformer with Adaptive Node Sampling
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08920000000000006
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6856
-    sort_std: 0.0174
-    global_rank: 435
-    paper_rank: 321
-    rank_delta: -114
-    rank_delta_abs: 114
-    rank_delta_direction: better
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -3181,14 +3507,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.6126
+    at_pub_std: 0.0127
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3197,17 +3523,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6126
+    true_std: 0.0127
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6126
     sort_std: 0.0127
-    global_rank: 522
+    global_rank: 614
+    paper_rank: 614
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3243,14 +3575,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.6036
+    at_pub_std: 0.0255
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3259,17 +3591,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6036
+    true_std: 0.0255
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6036
     sort_std: 0.0255
-    global_rank: 530
+    global_rank: 625
+    paper_rank: 625
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -3305,14 +3643,14 @@ results:
     date_iso: '2026-02-02'
     published_venue: ''
     published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_value: 0.3784
+    at_pub_std: 0.0221
+    at_pub_source_arxiv: '2506.04765'
+    at_pub_source_title: 'OpenGT: A Comprehensive Benchmark For Graph Transformers'
+    at_pub_source_date_iso: '2025-06-05'
+    at_pub_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-02-02'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3321,17 +3659,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3784
+    true_std: 0.0221
+    value_gap_source_arxiv: '2602.02268'
+    value_gap_source_title: 'HopFormer: Sparse Graph Transformers with Explicit Receptive
+      Field Control'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3784
     sort_std: 0.0221
-    global_rank: 643
+    global_rank: 748
+    paper_rank: 748
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

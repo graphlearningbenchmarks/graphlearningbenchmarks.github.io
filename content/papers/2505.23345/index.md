@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GraphPAE
-mrr: 0.0175
-adjusted_mrr: 0.0058
+mrr: 0.0179
+adjusted_mrr: 0.006
 mrr_dataset_count: 1
 benchmark_categories:
 - MoleculeNet
@@ -74,79 +74,44 @@ results:
 - &id001
   dataset: FreeSolv
   rows:
-  - model: D&D-Node +vn
-    model_key: se(3)-i mpph
-    model_plain: D&D-Node +vn
-    value: 0.354
-    std: 0.053
+  - model: 10% ZINC + 10% PubChem
+    model_key: 10% zinc + 10% pubchem
+    model_plain: 10% ZINC + 10% PubChem
+    value: 0.205
+    std: null
     metric: RMSE
     higher_is_better: false
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2312.07633'
-    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    date: Dec 12, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-12'
-    venue: NeurIPS 2023 AI for Science Workshop
-    codebase_url: ''
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: integrating SE(3)-invariance into Vietoris-Rips persistent
-      homology
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.354
-    sort_std: 0.053
+    sort_value: 0.205
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: D&D-Node +vn
-    model_key: ecfp-4 + rf
-    model_plain: D&D-Node +vn
-    value: 0.56
-    std: 0.066
-    metric: RMSE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: random_forest
-    architecture_label: RF
-    architecture_title: Random forest
-    arxiv_id: '2312.07633'
-    title: SE(3)-Invariant Multiparameter Persistent Homology for Chiral-Sensitive
-      Molecular Property Prediction
-    date: Dec 12, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-12'
-    venue: NeurIPS 2023 AI for Science Workshop
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: trained on ECFP-4 fingerprints
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.56
-    sort_std: 0.066
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: D&D-Node +vn
-    model_key: geomgcl
-    model_plain: D&D-Node +vn
-    value: 0.866
+  - model: MoLFormer-XL
+    model_key: molformer-xl
+    model_plain: MoLFormer-XL
+    value: 0.2308
     std: null
     metric: RMSE
     higher_is_better: false
@@ -154,25 +119,126 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2109.11730'
-    title: 'GeomGCL: Geometric Graph Contrastive Learning for Molecular Property Prediction'
-    date: Sep 24, 2021
-    date_display: Sep 2021
-    date_iso: '2021-09-24'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: ''
-    uses_external_data: true
-    input_feature_source: mixed
-    feature_source_evidence: The model uses a 2D-3D geometric contrastive scheme to
-      bridge knowledge between 2D chemical semantics and 3D spatial information.
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.866
+    global_rank: 2
+    sort_value: 0.2308
     sort_std: null
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MoLFormer-Base
+    model_key: molformer-base
+    model_plain: MoLFormer-Base
+    value: 0.2596
+    std: null
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2106.09553'
+    title: How Much Structural Information Large Scale Molecular Language Representations
+      Can Capture?
+    date: Jun 17, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-17'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/IBM/molformer
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.2596
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphPAE
+    model_key: graphpae
+    model_plain: GraphPAE
+    value: 2.058
+    std: 0.19
+    paper_value: 2.058
+    paper_std: 0.19
+    metric: RMSE
+    higher_is_better: false
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: May 29, 2025
+    date_display: May 2025
+    date_iso: '2025-05-29'
+    published_venue: KDD 2025
+    published_conference: KDD 2025
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 2.058
+    true_std: 0.19
+    value_gap_source_arxiv: '2505.23345'
+    value_gap_source_title: Graph Positional Autoencoders as Self-supervised Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 2.058
+    sort_std: 0.19
+    global_rank: 56
+    paper_rank: 56
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -235,10 +301,10 @@ results:
     value_note: ''
     sort_value: 2.104
     sort_std: null
-    global_rank: 44
-    paper_rank: 118
-    rank_delta: 74
-    rank_delta_abs: 74
+    global_rank: 60
+    paper_rank: 132
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -246,69 +312,36 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: true
-  - model: GraphPAE
-    model_key: graphpae
-    model_plain: GraphPAE
-    value: 2.058
-    std: 0.19
-    paper_value: 2.058
-    paper_std: 0.19
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 2.346
+    std: 0.122
     metric: RMSE
     higher_is_better: false
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.06130'
+    title: 'ChemRL-GEM: Geometry Enhanced Molecular Representation Learning for Property
+      Prediction'
+    date: Jun 11, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-11'
+    venue: Nature Machine Intelligence
+    codebase_url: https://github.com/PaddlePaddle/PaddleHelix
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: May 29, 2025
-    date_display: May 2025
-    date_iso: '2025-05-29'
-    published_venue: KDD 2025
-    published_conference: KDD 2025
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-17'
-    value_gap_source_date_label: WWW 2026
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 2.348
-    true_std: 0.215
-    value_gap_source_arxiv: '2604.15699'
-    value_gap_source_title: Frequency-Corrupt Based Graph Self-Supervised Learning
-    value_gap_source_is_current_paper: false
-    value_gap: 0.29000000000000004
-    has_value_note: false
-    value_note: ''
-    sort_value: 2.348
-    sort_std: 0.215
-    global_rank: 57
-    paper_rank: 41
-    rank_delta: -16
-    rank_delta_abs: 16
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: null
+    is_global_top: true
+    global_rank: 73
+    sort_value: 2.346
+    sort_std: 0.122
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -369,8 +402,8 @@ results:
     value_note: ''
     sort_value: 2.395
     sort_std: 0.158
-    global_rank: 58
-    paper_rank: 58
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -436,8 +469,8 @@ results:
     value_note: ''
     sort_value: 2.568
     sort_std: 0.262
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -503,8 +536,8 @@ results:
     value_note: ''
     sort_value: 2.74
     sort_std: 0.233
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 87
+    paper_rank: 87
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -550,8 +583,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: KDD 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -560,17 +593,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 2.755
+    true_std: 0.349
+    value_gap_source_arxiv: '2505.23345'
+    value_gap_source_title: Graph Positional Autoencoders as Self-supervised Learners
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 2.755
     sort_std: 0.349
-    global_rank: 73
+    global_rank: 88
+    paper_rank: 88
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -632,8 +670,8 @@ results:
     value_note: ''
     sort_value: 2.913
     sort_std: 0.293
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -680,8 +718,8 @@ results:
       Subgraph-Conditioned Graph Information Bottleneck
     at_pub_source_date_iso: '2024-12-20'
     at_pub_source_date_label: AAAI 2024
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 4.513
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -692,17 +730,17 @@ results:
     today_delta_significant: true
     true_value: 3.166
     true_std: 0.027
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
     value_gap_source_is_current_paper: false
     value_gap: 4.513
     has_value_note: false
     value_note: ''
     sort_value: 3.166
     sort_std: 0.027
-    global_rank: 91
-    paper_rank: 115
+    global_rank: 105
+    paper_rank: 129
     rank_delta: 24
     rank_delta_abs: 24
     rank_delta_direction: worse
@@ -750,8 +788,8 @@ results:
       Subgraph-Conditioned Graph Information Bottleneck
     at_pub_source_date_iso: '2024-12-20'
     at_pub_source_date_label: AAAI 2024
-    value_gap_source_date_iso: '2024-12-20'
-    value_gap_source_date_label: AAAI 2024
+    value_gap_source_date_iso: '2026-02-23'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 1.8490000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -762,17 +800,17 @@ results:
     today_delta_significant: true
     true_value: 3.282
     true_std: 0.002
-    value_gap_source_arxiv: '2412.15589'
-    value_gap_source_title: Pre-training Graph Neural Networks on Molecules by Using
-      Subgraph-Conditioned Graph Information Bottleneck
+    value_gap_source_arxiv: '2602.20344'
+    value_gap_source_title: Hierarchical Molecular Representation Learning via Fragment-Based
+      Self-Supervised Embedding Prediction
     value_gap_source_is_current_paper: false
     value_gap: 1.8490000000000002
     has_value_note: false
     value_note: ''
     sort_value: 3.282
     sort_std: 0.002
-    global_rank: 94
-    paper_rank: 113
+    global_rank: 108
+    paper_rank: 127
     rank_delta: 19
     rank_delta_abs: 19
     rank_delta_direction: worse
@@ -839,8 +877,8 @@ results:
     value_note: ''
     sort_value: 4.144
     sort_std: 0.573
-    global_rank: 107
-    paper_rank: 107
+    global_rank: 121
+    paper_rank: 121
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -906,8 +944,8 @@ results:
     value_note: ''
     sort_value: 9.024
     sort_std: 1.982
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 132
+    paper_rank: 132
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

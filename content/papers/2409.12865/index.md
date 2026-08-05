@@ -47,9 +47,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - KnowFormer
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0243
+adjusted_mrr: 0.0162
+mrr_dataset_count: 2
 benchmark_categories:
 - Knowledge Graphs
 benchmark_coverage:
@@ -65,44 +65,45 @@ results:
 - &id002
   dataset: FB15k-237
   rows:
-  - model: CompGCN
-    model_key: llms
-    model_plain: CompGCN
-    value: 0.815
-    std: 0.023
+  - model: sum, Msg_r^3, f(t)=0
+    model_key: sum, msg_r^3, f(t)=0
+    model_plain: sum, Msg_r^3, f(t)=0
+    value: 0.85
+    std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.815
-    sort_std: 0.023
+    sort_value: 0.85
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CompGCN
-    model_key: gcope
-    model_plain: CompGCN
-    value: 0.793
-    std: 0.022
+  - model: sum, Msg_r^3, f(t)=t
+    model_key: sum, msg_r^3, f(t)=t
+    model_plain: sum, Msg_r^3, f(t)=t
+    value: 0.844
+    std: null
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -112,30 +113,65 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2603.00618'
-    title: Multi-domain Riemannian Graph Gluing for Building Graph Foundation Models
-    date: Feb 28, 2026
-    date_display: Feb 2026
-    date_iso: '2026-02-28'
-    venue: Accepted by ICLR'26, 41 pages
-    codebase_url: https://github.com/RiemannGraph/GraphGlue
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.793
-    sort_std: 0.022
+    sort_value: 0.844
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: CompGCN
-    model_key: gft
-    model_plain: CompGCN
-    value: 0.791
-    std: 0.016
+  - model: relation-specific
+    model_key: relation-specific
+    model_plain: relation-specific
+    value: 0.835
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.835
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.637
+    std: 0.017
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -156,13 +192,83 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.791
-    sort_std: 0.016
+    global_rank: 28
+    sort_value: 0.637
+    sort_std: 0.017
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: DRUM
+    model_key: drum
+    model_plain: DRUM
+    value: 0.343
+    std: null
+    paper_value: 0.343
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Sadeghian et al. 2019
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 19, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-19'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.529
+    at_pub_std: null
+    at_pub_source_arxiv: '2302.02209'
+    at_pub_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    at_pub_source_date_iso: '2023-02-04'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.186
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.529
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.186
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.529
+    sort_std: null
+    global_rank: 31
+    paper_rank: 78
+    rank_delta: 47
+    rank_delta_abs: 47
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    comparison_source_arxiv: '2302.02209'
+    is_best: false
     is_std_outlier: false
   - model: KnowFormer
     model_key: knowformer
@@ -200,8 +306,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -210,17 +316,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.43
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.43
     sort_std: null
-    global_rank: 15
+    global_rank: 35
+    paper_rank: 35
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -262,8 +374,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -272,17 +384,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.417
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.417
     sort_std: null
-    global_rank: 16
+    global_rank: 37
+    paper_rank: 37
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -325,8 +443,8 @@ results:
       Framework for Link Prediction'
     at_pub_source_date_iso: '2021-06-13'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-02-25'
-    value_gap_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -337,16 +455,17 @@ results:
     today_delta_significant: false
     true_value: 0.415
     true_std: null
-    value_gap_source_arxiv: '2302.13083'
-    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.415
     sort_std: null
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -392,8 +511,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -402,17 +521,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.411
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.411
     sort_std: null
-    global_rank: 17
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -454,8 +579,8 @@ results:
     at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
     at_pub_source_date_iso: '2021-08-13'
     at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2022-12-12'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -466,17 +591,17 @@ results:
     today_delta_significant: false
     true_value: 0.374
     true_std: null
-    value_gap_source_arxiv: '2212.05767'
-    value_gap_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
-      Static, Dynamic, and Multi-Modal'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.374
     sort_std: null
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -522,8 +647,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -532,17 +657,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.373
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.373
     sort_std: null
-    global_rank: 18
+    global_rank: 43
+    paper_rank: 43
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -584,8 +715,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -594,17 +725,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.368
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.368
     sort_std: null
-    global_rank: 21
+    global_rank: 48
+    paper_rank: 48
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -647,8 +784,8 @@ results:
       Dynamic, and Multi-Modal'
     at_pub_source_date_iso: '2022-12-12'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-12-12'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -659,17 +796,17 @@ results:
     today_delta_significant: false
     true_value: 0.361
     true_std: null
-    value_gap_source_arxiv: '2212.05767'
-    value_gap_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
-      Static, Dynamic, and Multi-Modal'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.361
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -677,6 +814,74 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DistMult
+    model_key: distmult
+    model_plain: DistMult
+    value: 0.358
+    std: null
+    paper_value: 0.358
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Yang et al. 2014a
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 19, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-19'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.241
+    at_pub_std: null
+    at_pub_source_arxiv: '1707.01476'
+    at_pub_source_title: Knowledge Graphs
+    at_pub_source_date_iso: '2017-07-05'
+    at_pub_source_date_label: AAAI 2017
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.11699999999999999
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.358
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.358
+    sort_std: null
+    global_rank: 58
+    paper_rank: 58
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Knowledge Graphs
+    comparison_source_arxiv: '1707.01476'
     is_best: false
     is_std_outlier: false
   - model: CompGCN
@@ -715,8 +920,8 @@ results:
     at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
     at_pub_source_date_iso: '2019-11-08'
     at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -727,17 +932,17 @@ results:
     today_delta_significant: false
     true_value: 0.355
     true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.355
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -777,14 +982,14 @@ results:
     date_iso: '2024-09-19'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: null
+    at_pub_value: 0.344
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_source_arxiv: '2108.06040'
+    at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
+    at_pub_source_date_iso: '2021-08-13'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -793,89 +998,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.344
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.344
     sort_std: null
-    global_rank: 45
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DRUM
-    model_key: drum
-    model_plain: DRUM
-    value: 0.343
-    std: null
-    paper_value: 0.343
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Sadeghian et al. 2019
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 19, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-19'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.529
-    at_pub_std: null
-    at_pub_source_arxiv: '2302.02209'
-    at_pub_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
-      on Knowledge Graphs
-    at_pub_source_date_iso: '2023-02-04'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-02-25'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.186
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.343
-    true_std: null
-    value_gap_source_arxiv: '2302.13083'
-    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.343
-    sort_std: null
-    global_rank: 45
-    paper_rank: 45
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
-      on Knowledge Graphs
-    comparison_source_arxiv: '2302.02209'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: RotatE
@@ -915,8 +1057,8 @@ results:
       in Complex Space'
     at_pub_source_date_iso: '2018-09-27'
     at_pub_source_date_label: ICLR 2018
-    value_gap_source_date_iso: '2022-12-12'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2023-02-25'
+    value_gap_source_date_label: WWW 2023
     gap_vs_at_pub: 0.0010000000000000009
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -927,17 +1069,16 @@ results:
     today_delta_significant: true
     true_value: 0.338
     true_std: null
-    value_gap_source_arxiv: '2212.05767'
-    value_gap_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
-      Static, Dynamic, and Multi-Modal'
+    value_gap_source_arxiv: '2302.13083'
+    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
     value_gap_source_is_current_paper: false
     value_gap: 0.0010000000000000009
     has_value_note: false
     value_note: ''
     sort_value: 0.338
     sort_std: null
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -978,36 +1119,44 @@ results:
     date_iso: '2024-09-19'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: null
+    at_pub_value: 0.322
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
+    at_pub_source_arxiv: '2211.10738'
+    at_pub_source_title: Knowledge Graph Contrastive Learning based on Relation-Symmetrical
+      Structure
+    at_pub_source_date_iso: '2022-11-19'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.014000000000000012
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.336
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.336
     sort_std: null
-    global_rank: 50
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    global_rank: 84
+    paper_rank: 84
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Knowledge Graph Contrastive Learning based on Relation-Symmetrical
+      Structure
+    comparison_source_arxiv: '2211.10738'
     is_best: false
     is_std_outlier: false
   - model: TransE
@@ -1046,8 +1195,8 @@ results:
     at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
     at_pub_source_date_iso: '2019-11-08'
     at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.03600000000000003
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1055,23 +1204,23 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.294
+    today_delta_significant: false
+    true_value: 0.33
     true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03600000000000003
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.294
+    sort_value: 0.33
     sort_std: null
-    global_rank: 66
-    paper_rank: 57
-    rank_delta: -9
-    rank_delta_abs: 9
-    rank_delta_direction: better
+    global_rank: 91
+    paper_rank: 91
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Composition-based Multi-Relational Graph Convolutional
@@ -1115,8 +1264,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1125,88 +1274,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.276
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.276
     sort_std: null
-    global_rank: 70
+    global_rank: 109
+    paper_rank: 109
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DistMult
-    model_key: distmult
-    model_plain: DistMult
-    value: 0.358
-    std: null
-    paper_value: 0.358
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Yang et al. 2014a
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 19, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-19'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.241
-    at_pub_std: null
-    at_pub_source_arxiv: '1707.01476'
-    at_pub_source_title: Knowledge Graphs
-    at_pub_source_date_iso: '2017-07-05'
-    at_pub_source_date_label: AAAI 2017
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
-    gap_vs_at_pub: 0.11699999999999999
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.241
-    true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.11699999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.241
-    sort_std: null
-    global_rank: 76
-    paper_rank: 30
-    rank_delta: -46
-    rank_delta_abs: 46
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Knowledge Graphs
-    comparison_source_arxiv: '1707.01476'
     is_best: false
     is_std_outlier: false
   rank_metric: MRR
@@ -1221,77 +1308,113 @@ results:
 - &id001
   dataset: WN18RR
   rows:
-  - model: CompGCN
-    model_key: gft
-    model_plain: CompGCN
-    value: 0.9191
+  - model: PNA, Msg_r^2, f(t)=t
+    model_key: pna, msg_r^2, f(t)=t
+    model_plain: PNA, Msg_r^2, f(t)=t
+    value: 0.947
     std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2411.06070'
-    title: 'GFT: Graph Foundation Model with Transferable Tree Vocabulary'
-    date: Nov 9, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-09'
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
     venue: Neural Information Processing Systems
-    codebase_url: https://github.com/Zehong-Wang/GFT
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9191
+    sort_value: 0.947
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CompGCN
-    model_key: unigraph2
-    model_plain: CompGCN
-    value: 0.8786
-    std: 0.0006
+  - model: PNA, Msg_r^3, f(t)=0
+    model_key: pna, msg_r^3, f(t)=0
+    model_plain: PNA, Msg_r^3, f(t)=0
+    value: 0.947
+    std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2502.00806'
-    title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-    date: Feb 2, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-02'
-    venue: The Web Conference
-    codebase_url: https://github.com/yf-he/UniGraph2
-    uses_external_data: true
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8786
-    sort_std: 0.0006
+    sort_value: 0.947
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PNA, Msg_r^2, f(t)=0
+    model_key: pna, msg_r^2, f(t)=0
+    model_plain: PNA, Msg_r^2, f(t)=0
+    value: 0.946
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.946
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CompGCN
-    model_key: gat
-    model_plain: CompGCN
-    value: 0.8552
-    std: 0.0012
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8298
+    std: 0.0022
     metric: MRR
     higher_is_better: true
     is_baseline: true
@@ -1313,12 +1436,149 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.8552
-    sort_std: 0.0012
+    global_rank: 27
+    sort_value: 0.8298
+    sort_std: 0.0022
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DRUM
+    model_key: drum
+    model_plain: DRUM
+    value: 0.486
+    std: null
+    paper_value: 0.486
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Sadeghian et al. 2019
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 19, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-19'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.744
+    at_pub_std: null
+    at_pub_source_arxiv: '2302.02209'
+    at_pub_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    at_pub_source_date_iso: '2023-02-04'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-02-04'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.258
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.744
+    true_std: null
+    value_gap_source_arxiv: '2302.02209'
+    value_gap_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    value_gap_source_is_current_paper: false
+    value_gap: 0.258
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.744
+    sort_std: null
+    global_rank: 39
+    paper_rank: 78
+    rank_delta: 39
+    rank_delta_abs: 39
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
+      on Knowledge Graphs
+    comparison_source_arxiv: '2302.02209'
+    is_best: false
+    is_std_outlier: false
+  - model: RED-GNN
+    model_key: red-gnn
+    model_plain: RED-GNN
+    value: 0.533
+    std: null
+    paper_value: 0.533
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Zhang et al. 2022
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Sep 19, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-19'
+    published_venue: ICML 2024
+    published_conference: ICML 2024
+    at_pub_value: 0.701
+    at_pub_std: null
+    at_pub_source_arxiv: '2108.06040'
+    at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
+    at_pub_source_date_iso: '2021-08-13'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2021-08-13'
+    value_gap_source_date_label: WWW 2021
+    gap_vs_at_pub: 0.16799999999999993
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.701
+    true_std: null
+    value_gap_source_arxiv: '2108.06040'
+    value_gap_source_title: Knowledge Graph Reasoning with Relational Digraph
+    value_gap_source_is_current_paper: false
+    value_gap: 0.16799999999999993
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.701
+    sort_std: null
+    global_rank: 43
+    paper_rank: 64
+    rank_delta: 21
+    rank_delta_abs: 21
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Knowledge Graph Reasoning with Relational Digraph
+    comparison_source_arxiv: '2108.06040'
     is_best: false
     is_std_outlier: false
   - model: SimKGC
@@ -1351,36 +1611,44 @@ results:
     date_iso: '2024-09-19'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: null
+    at_pub_value: 0.652
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
+    at_pub_source_arxiv: '2211.10738'
+    at_pub_source_title: Knowledge Graph Contrastive Learning based on Relation-Symmetrical
+      Structure
+    at_pub_source_date_iso: '2022-11-19'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
+    gap_vs_at_pub: 0.014000000000000012
     worse_than_at_pub: false
     surpassed_since_pub: false
-    better_than_at_pub: false
+    better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.666
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.666
     sort_std: null
-    global_rank: 23
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    global_rank: 44
+    paper_rank: 44
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Knowledge Graph Contrastive Learning based on Relation-Symmetrical
+      Structure
+    comparison_source_arxiv: '2211.10738'
     is_best: false
     is_std_outlier: false
   - model: KnowFormer
@@ -1419,8 +1687,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1429,17 +1697,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.579
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.579
     sort_std: null
-    global_rank: 24
+    global_rank: 50
+    paper_rank: 50
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1481,8 +1755,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1491,17 +1765,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.562
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.562
     sort_std: null
-    global_rank: 24
+    global_rank: 58
+    paper_rank: 58
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1544,8 +1824,8 @@ results:
       Framework for Link Prediction'
     at_pub_source_date_iso: '2021-06-13'
     at_pub_source_date_label: NeurIPS 2021
-    value_gap_source_date_iso: '2023-02-25'
-    value_gap_source_date_label: WWW 2023
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1556,16 +1836,17 @@ results:
     today_delta_significant: false
     true_value: 0.551
     true_std: null
-    value_gap_source_arxiv: '2302.13083'
-    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.551
     sort_std: null
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1611,8 +1892,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1621,88 +1902,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.549
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.549
     sort_std: null
-    global_rank: 27
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: RED-GNN
-    model_key: red-gnn
-    model_plain: RED-GNN
-    value: 0.533
-    std: null
-    paper_value: 0.533
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Zhang et al. 2022
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 19, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-19'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.701
-    at_pub_std: null
-    at_pub_source_arxiv: '2108.06040'
-    at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
-    at_pub_source_date_iso: '2021-08-13'
-    at_pub_source_date_label: WWW 2021
-    value_gap_source_date_iso: '2022-12-12'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.16799999999999993
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.533
-    true_std: null
-    value_gap_source_arxiv: '2212.05767'
-    value_gap_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
-      Static, Dynamic, and Multi-Modal'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.533
-    sort_std: null
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 62
+    paper_rank: 62
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Knowledge Graph Reasoning with Relational Digraph
-    comparison_source_arxiv: '2108.06040'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: HousE
@@ -1742,8 +1961,8 @@ results:
       Dynamic, and Multi-Modal'
     at_pub_source_date_iso: '2022-12-12'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-12-12'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1754,17 +1973,17 @@ results:
     today_delta_significant: false
     true_value: 0.511
     true_std: null
-    value_gap_source_arxiv: '2212.05767'
-    value_gap_source_title: 'A Survey of Knowledge Graph Reasoning on Graph Types:
-      Static, Dynamic, and Multi-Modal'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.511
     sort_std: null
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1810,8 +2029,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1820,17 +2039,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.508
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.508
     sort_std: null
-    global_rank: 30
+    global_rank: 66
+    paper_rank: 66
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1872,8 +2097,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1882,89 +2107,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.503
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.503
     sort_std: null
-    global_rank: 30
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DRUM
-    model_key: drum
-    model_plain: DRUM
-    value: 0.486
-    std: null
-    paper_value: 0.486
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Sadeghian et al. 2019
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Sep 19, 2024
-    date_display: Sep 2024
-    date_iso: '2024-09-19'
-    published_venue: ICML 2024
-    published_conference: ICML 2024
-    at_pub_value: 0.744
-    at_pub_std: null
-    at_pub_source_arxiv: '2302.02209'
-    at_pub_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
-      on Knowledge Graphs
-    at_pub_source_date_iso: '2023-02-04'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-02-25'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.258
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.486
-    true_std: null
-    value_gap_source_arxiv: '2302.13083'
-    value_gap_source_title: Knowledge Graph Completion with Counterfactual Augmentation
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.486
-    sort_std: null
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: A Theory of Link Prediction via Relational Weisfeiler-Leman
-      on Knowledge Graphs
-    comparison_source_arxiv: '2302.02209'
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: RNNLogic
@@ -1997,14 +2159,14 @@ results:
     date_iso: '2024-09-19'
     published_venue: ICML 2024
     published_conference: ICML 2024
-    at_pub_value: null
+    at_pub_value: 0.483
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    at_pub_source_arxiv: '2108.06040'
+    at_pub_source_title: Knowledge Graph Reasoning with Relational Digraph
+    at_pub_source_date_iso: '2021-08-13'
+    at_pub_source_date_label: WWW 2021
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2013,17 +2175,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.483
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.483
     sort_std: null
-    global_rank: 39
+    global_rank: 80
+    paper_rank: 80
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2065,8 +2233,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2075,17 +2243,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.48
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.48
     sort_std: null
-    global_rank: 46
+    global_rank: 86
+    paper_rank: 86
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2127,8 +2301,8 @@ results:
     at_pub_source_title: Composition-based Multi-Relational Graph Convolutional Networks
     at_pub_source_date_iso: '2019-11-08'
     at_pub_source_date_label: ICLR 2019
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2139,17 +2313,17 @@ results:
     today_delta_significant: false
     true_value: 0.479
     true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.479
     sort_std: null
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2196,8 +2370,8 @@ results:
       in Complex Space'
     at_pub_source_date_iso: '2018-09-27'
     at_pub_source_date_label: ICLR 2018
-    value_gap_source_date_iso: '2018-09-27'
-    value_gap_source_date_label: ICLR 2018
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2207,18 +2381,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.477
-    true_std: 0.001
-    value_gap_source_arxiv: '1902.10197'
-    value_gap_source_title: 'RotatE: Knowledge Graph Embedding by Relational Rotation
-      in Complex Space'
-    value_gap_source_is_current_paper: false
+    true_std: null
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.477
-    sort_std: 0.001
-    global_rank: 47
-    paper_rank: 47
+    sort_std: null
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2264,8 +2438,8 @@ results:
     at_pub_source_title: Knowledge Graphs
     at_pub_source_date_iso: '2017-07-05'
     at_pub_source_date_label: AAAI 2017
-    value_gap_source_date_iso: '2019-11-08'
-    value_gap_source_date_label: ICLR 2019
+    value_gap_source_date_iso: '2024-09-19'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.025000000000000022
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2273,23 +2447,23 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.43
+    today_delta_significant: false
+    true_value: 0.455
     true_std: null
-    value_gap_source_arxiv: '1911.03082'
-    value_gap_source_title: Composition-based Multi-Relational Graph Convolutional
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.025000000000000022
+    value_gap_source_arxiv: '2409.12865'
+    value_gap_source_title: 'KnowFormer: Revisiting Transformers for Knowledge Graph
+      Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.43
+    sort_value: 0.455
     sort_std: null
-    global_rank: 70
-    paper_rank: 64
-    rank_delta: -6
-    rank_delta_abs: 6
-    rank_delta_direction: better
+    global_rank: 109
+    paper_rank: 109
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Knowledge Graphs
@@ -2354,8 +2528,8 @@ results:
     value_note: ''
     sort_value: 0.231
     sort_std: null
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

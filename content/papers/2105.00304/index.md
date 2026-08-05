@@ -58,8 +58,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SpookyNet
-mrr: 0.0312
-adjusted_mrr: 0.0104
+mrr: 0.0196
+adjusted_mrr: 0.0065
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -76,9 +76,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -110,9 +110,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -144,9 +144,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -176,6 +176,216 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PaiNN
+    model_key: painn
+    model_plain: PaiNN
+    value: 0.159
+    std: null
+    paper_value: 0.159
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: schutt2021equivariant
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Aspirin energy prediction
+    date: May 1, 2021
+    date_display: May 2021
+    date_iso: '2021-05-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 2.7
+    at_pub_std: null
+    at_pub_source_arxiv: '2101.03164'
+    at_pub_source_title: E(3)-Equivariant Graph Neural Networks for Data-Efficient
+      and Accurate Interatomic Potentials
+    at_pub_source_date_iso: '2021-01-08'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 2.5410000000000004
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.01
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 0.149
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.01
+    sort_std: null
+    global_rank: 22
+    paper_rank: 98
+    rank_delta: 76
+    rank_delta_abs: 76
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: E(3)-Equivariant Graph Neural Networks for Data-Efficient
+      and Accurate Interatomic Potentials
+    comparison_source_arxiv: '2101.03164'
+    is_best: false
+    is_std_outlier: false
+  - model: PhysNet
+    model_key: physnet
+    model_plain: PhysNet
+    value: 0.23
+    std: null
+    paper_value: 0.23
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: unke2019physnet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Aspirin energy prediction
+    date: May 1, 2021
+    date_display: May 2021
+    date_iso: '2021-05-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.03
+    at_pub_std: null
+    at_pub_source_arxiv: '1902.08408'
+    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    at_pub_source_date_iso: '2019-02-22'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.2
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.03
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.03
+    sort_std: null
+    global_rank: 29
+    paper_rank: 101
+    rank_delta: 72
+    rank_delta_abs: 72
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    comparison_source_arxiv: '1902.08408'
+    is_best: false
+    is_std_outlier: false
+  - model: SchNet
+    model_key: schnet
+    model_plain: SchNet
+    value: 0.37
+    std: null
+    paper_value: 0.37
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: schutt2018schnet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Aspirin energy prediction
+    date: May 1, 2021
+    date_display: May 2021
+    date_iso: '2021-05-01'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.05
+    at_pub_std: null
+    at_pub_source_arxiv: '1902.08408'
+    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    at_pub_source_date_iso: '2019-02-22'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.32
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.05
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.32
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.05
+    sort_std: null
+    global_rank: 46
+    paper_rank: 109
+    rank_delta: 63
+    rank_delta_abs: 63
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   - model: SpookyNet
@@ -215,8 +425,8 @@ results:
       and Accurate Interatomic Potentials
     at_pub_source_date_iso: '2021-01-08'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-05-01'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-05-28'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: 2.2479999999999998
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -226,18 +436,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.052
-    true_std: 0.001
-    value_gap_source_arxiv: '2105.00304'
-    value_gap_source_title: 'SpookyNet: Learning force fields with electronic degrees
-      of freedom and nonlocal effects'
-    value_gap_source_is_current_paper: true
+    true_std: null
+    value_gap_source_arxiv: '2205.14276'
+    value_gap_source_title: 'So3krates: Equivariant attention for interactions on
+      arbitrary length-scales in molecular systems'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.052
-    sort_std: 0.001
-    global_rank: 32
-    paper_rank: 32
+    sort_std: null
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -304,154 +514,15 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 40
-    paper_rank: 70
-    rank_delta: 30
-    rank_delta_abs: 30
+    global_rank: 62
+    paper_rank: 100
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Directional Message Passing for Molecular Graphs
     comparison_source_arxiv: '2003.03123'
-    is_best: false
-    is_std_outlier: false
-  - model: PaiNN
-    model_key: painn
-    model_plain: PaiNN
-    value: 0.159
-    std: null
-    paper_value: 0.159
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schutt2021equivariant
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Aspirin energy prediction
-    date: May 1, 2021
-    date_display: May 2021
-    date_iso: '2021-05-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 2.7
-    at_pub_std: null
-    at_pub_source_arxiv: '2101.03164'
-    at_pub_source_title: E(3)-Equivariant Graph Neural Networks for Data-Efficient
-      and Accurate Interatomic Potentials
-    at_pub_source_date_iso: '2021-01-08'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-11-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 2.5410000000000004
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: true
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.077
-    true_std: null
-    value_gap_source_arxiv: '2311.02124'
-    value_gap_source_title: 'Sliced Denoising: A Physics-Informed Molecular Pre-Training
-      Method'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.082
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.077
-    sort_std: null
-    global_rank: 45
-    paper_rank: 69
-    rank_delta: 24
-    rank_delta_abs: 24
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: E(3)-Equivariant Graph Neural Networks for Data-Efficient
-      and Accurate Interatomic Potentials
-    comparison_source_arxiv: '2101.03164'
-    is_best: false
-    is_std_outlier: false
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    value: 0.37
-    std: null
-    paper_value: 0.37
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schutt2018schnet
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Aspirin energy prediction
-    date: May 1, 2021
-    date_display: May 2021
-    date_iso: '2021-05-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.05
-    at_pub_std: null
-    at_pub_source_arxiv: '1902.08408'
-    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    at_pub_source_date_iso: '2019-02-22'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.32
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.08
-    true_std: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 0.29
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.08
-    sort_std: null
-    global_rank: 46
-    paper_rank: 79
-    rank_delta: 33
-    rank_delta_abs: 33
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   - model: FCHL19
@@ -511,8 +582,8 @@ results:
     value_note: ''
     sort_value: 0.182
     sort_std: null
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -520,76 +591,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PhysNet
-    model_key: physnet
-    model_plain: PhysNet
-    value: 0.23
-    std: null
-    paper_value: 0.23
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: unke2019physnet
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Aspirin energy prediction
-    date: May 1, 2021
-    date_display: May 2021
-    date_iso: '2021-05-01'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.03
-    at_pub_std: null
-    at_pub_source_arxiv: '1902.08408'
-    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    at_pub_source_date_iso: '2019-02-22'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2022-01-01'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.2
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.23
-    true_std: null
-    value_gap_source_arxiv: '2202.02541'
-    value_gap_source_title: 'TorchMD-NET: Equivariant Transformers for Neural Network
-      based Molecular Potentials'
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.23
-    sort_std: null
-    global_rank: 72
-    paper_rank: 72
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   rank_metric: MAE

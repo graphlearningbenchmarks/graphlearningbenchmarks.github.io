@@ -724,9 +724,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: G-Heyna
+  - model: G-Transformer
     model_key: g-transformer
-    model_plain: G-Heyna
+    model_plain: G-Transformer
     value: 0.537
     std: 0.007
     metric: RMSE
@@ -1272,9 +1272,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: G-Heyna
+  - model: Equiformer
     model_key: equiformer
-    model_plain: G-Heyna
+    model_plain: Equiformer
     value: 0.55
     std: 0.009
     metric: RMSE
@@ -1305,9 +1305,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: G-Heyna
+  - model: Transformer
     model_key: transformer
-    model_plain: G-Heyna
+    model_plain: Transformer
     value: 0.553
     std: 0.002
     metric: RMSE

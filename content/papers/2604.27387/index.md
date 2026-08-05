@@ -41,9 +41,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - HGUL
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0392
+adjusted_mrr: 0.0261
+mrr_dataset_count: 2
 benchmark_categories:
 - OGB
 - LINKX Benchmarks
@@ -64,9 +64,9 @@ results:
 - &id002
   dataset: Pokec
   rows:
-  - model: FMP
+  - model: Polynormer-r
     model_key: polynormer-r
-    model_plain: FMP
+    model_plain: Polynormer-r
     value: 0.861
     std: 0.0005
     metric: Accuracy
@@ -97,9 +97,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: FMP
+  - model: Polynormer
     model_key: polynormer
-    model_plain: FMP
+    model_plain: Polynormer
     value: 0.8595
     std: 0.0007
     metric: Accuracy
@@ -130,9 +130,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: FMP
+  - model: MoE-H2GCN
     model_key: moe-h2gcn
-    model_plain: FMP
+    model_plain: MoE-H2GCN
     value: 0.8302
     std: 0.003
     metric: Accuracy
@@ -200,8 +200,8 @@ results:
       Revisited
     at_pub_source_date_iso: '2022-02-04'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2022-02-04'
-    value_gap_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-06-03'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: 0.5062
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -211,26 +211,96 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.8204
-    true_std: 0.0007
-    value_gap_source_arxiv: '2202.03580'
-    value_gap_source_title: Convolutional Neural Networks on Graphs with Chebyshev
-      Approximation, Revisited
+    true_std: 0.001
+    value_gap_source_arxiv: '2406.01249'
+    value_gap_source_title: Equivariant Machine Learning on Graphs with Nonlinear
+      Spectral Filters
     value_gap_source_is_current_paper: false
     value_gap: 0.5062
     has_value_note: false
     value_note: ''
     sort_value: 0.8204
-    sort_std: 0.0007
+    sort_std: 0.001
     global_rank: 7
-    paper_rank: 49
-    rank_delta: 42
-    rank_delta_abs: 42
+    paper_rank: 53
+    rank_delta: 46
+    rank_delta_abs: 46
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Convolutional Neural Networks on Graphs with Chebyshev
       Approximation, Revisited
     comparison_source_arxiv: '2202.03580'
+    is_best: false
+    is_std_outlier: false
+  - model: MixHop
+    model_key: mixhop
+    model_plain: MixHop
+    value: 0.3013
+    std: 0.0086
+    paper_value: 0.3013
+    paper_std: 0.0086
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to pokec (score=83)'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.8107
+    at_pub_std: 0.0016
+    at_pub_source_arxiv: '2302.12432'
+    at_pub_source_title: Graph Neural Networks with Learnable and Optimal Polynomial
+      Bases
+    at_pub_source_date_iso: '2023-02-24'
+    at_pub_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2023-02-24'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: 0.5094
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8107
+    true_std: 0.0016
+    value_gap_source_arxiv: '2302.12432'
+    value_gap_source_title: Graph Neural Networks with Learnable and Optimal Polynomial
+      Bases
+    value_gap_source_is_current_paper: false
+    value_gap: 0.5094
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8107
+    sort_std: 0.0016
+    global_rank: 10
+    paper_rank: 56
+    rank_delta: 46
+    rank_delta_abs: 46
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Graph Neural Networks with Learnable and Optimal Polynomial
+      Bases
+    comparison_source_arxiv: '2302.12432'
     is_best: false
     is_std_outlier: false
   - model: NAGphormer
@@ -291,10 +361,10 @@ results:
     value_note: ''
     sort_value: 0.7659
     sort_std: 0.0025
-    global_rank: 22
-    paper_rank: 49
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 23
+    paper_rank: 61
+    rank_delta: 38
+    rank_delta_abs: 38
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -359,10 +429,10 @@ results:
     value_note: ''
     sort_value: 0.7601
     sort_std: 0.0049
-    global_rank: 25
-    paper_rank: 49
-    rank_delta: 24
-    rank_delta_abs: 24
+    global_rank: 26
+    paper_rank: 58
+    rank_delta: 32
+    rank_delta_abs: 32
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -426,10 +496,10 @@ results:
     value_note: ''
     sort_value: 0.7576
     sort_std: 0.0004
-    global_rank: 26
-    paper_rank: 49
-    rank_delta: 23
-    rank_delta_abs: 23
+    global_rank: 27
+    paper_rank: 52
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -495,16 +565,49 @@ results:
     value_note: ''
     sort_value: 0.7223
     sort_std: 0.0018
-    global_rank: 31
-    paper_rank: 49
-    rank_delta: 18
-    rank_delta_abs: 18
+    global_rank: 32
+    paper_rank: 59
+    rank_delta: 27
+    rank_delta_abs: 27
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer
       in Linear Time'
     comparison_source_arxiv: '2403.01232'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7048
+    std: 0.0077
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2202.04187'
+    title: 'FMP: Toward Fair Graph Message Passing against Topology Bias'
+    date: Feb 8, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 36
+    sort_value: 0.7048
+    sort_std: 0.0077
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: APPNP
@@ -565,10 +668,10 @@ results:
     value_note: ''
     sort_value: 0.6691
     sort_std: 0.0146
-    global_rank: 37
-    paper_rank: 49
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 38
+    paper_rank: 59
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -633,10 +736,10 @@ results:
     value_note: ''
     sort_value: 0.5337
     sort_std: 0.0215
-    global_rank: 48
-    paper_rank: 49
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 49
+    paper_rank: 59
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -680,8 +783,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -690,17 +793,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3305
+    true_std: 0.0057
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3305
     sort_std: 0.0057
-    global_rank: 50
+    global_rank: 51
+    paper_rank: 51
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -742,8 +851,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -752,17 +861,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3166
+    true_std: 0.0086
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3166
     sort_std: 0.0086
-    global_rank: 50
+    global_rank: 52
+    paper_rank: 52
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -804,8 +919,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -814,17 +929,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3144
+    true_std: 0.0096
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3144
     sort_std: 0.0096
-    global_rank: 50
+    global_rank: 53
+    paper_rank: 53
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -866,8 +987,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -876,17 +997,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3114
+    true_std: 0.0059
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3114
     sort_std: 0.0059
-    global_rank: 50
+    global_rank: 54
+    paper_rank: 54
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -928,8 +1055,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -938,17 +1065,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3101
+    true_std: 0.0026
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3101
     sort_std: 0.0026
-    global_rank: 50
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -990,8 +1123,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1000,79 +1133,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.3089
+    true_std: 0.008
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.3089
     sort_std: 0.008
-    global_rank: 50
+    global_rank: 56
+    paper_rank: 56
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MixHop
-    model_key: mixhop
-    model_plain: MixHop
-    value: 0.3013
-    std: 0.0086
-    paper_value: 0.3013
-    paper_std: 0.0086
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to pokec (score=83)'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.3013
-    sort_std: 0.0086
-    global_rank: 50
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1114,8 +1191,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1124,17 +1201,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2985
+    true_std: 0.0047
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2985
     sort_std: 0.0047
-    global_rank: 50
+    global_rank: 57
+    paper_rank: 57
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1176,8 +1259,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1186,17 +1269,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2909
+    true_std: 0.0033
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2909
     sort_std: 0.0033
-    global_rank: 50
+    global_rank: 58
+    paper_rank: 58
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1238,8 +1327,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1248,17 +1337,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2867
+    true_std: 0.0019
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2867
     sort_std: 0.0019
-    global_rank: 50
+    global_rank: 59
+    paper_rank: 59
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1300,8 +1395,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1310,17 +1405,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2315
+    true_std: 0.0043
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2315
     sort_std: 0.0043
-    global_rank: 50
+    global_rank: 60
+    paper_rank: 60
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1362,8 +1463,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1372,17 +1473,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.2209
+    true_std: 0.0094
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.2209
     sort_std: 0.0094
-    global_rank: 50
+    global_rank: 61
+    paper_rank: 61
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1400,9 +1507,9 @@ results:
 - &id001
   dataset: ogbn-mag
   rows:
-  - model: ALS (GraphSAINT)
+  - model: LMSPS+LP+MS
     model_key: lmsps+lp+ms
-    model_plain: ALS (GraphSAINT)
+    model_plain: LMSPS+LP+MS
     value: 0.5784
     std: 0.0022
     metric: Accuracy
@@ -1433,27 +1540,27 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ALS (GraphSAINT)
+  - model: SeHGNN+emb+ms
     model_key: sehgnn+emb+ms
-    model_plain: ALS (GraphSAINT)
+    model_plain: SeHGNN+emb+ms
     value: 0.5719
     std: 0.0012
     metric: Accuracy
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: hybrid
     architecture_label: Hyb
     architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2207.02547'
-    title: Simple and Efficient Heterogeneous Graph Neural Network
-    date: Jul 6, 2022
-    date_display: Jul 2022
-    date_iso: '2022-07-06'
-    venue: AAAI Conference on Artificial Intelligence
-    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
+    arxiv_id: '2307.08430'
+    title: Long-range Meta-path Search on Large-scale Heterogeneous Graphs
+    date: Jul 17, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-17'
+    venue: Neural Information Processing Systems
+    codebase_url: ''
     uses_external_data: true
     input_feature_source: null
     feature_source_evidence: ''
@@ -1466,9 +1573,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: ALS (GraphSAINT)
+  - model: SeHGNN+ms
     model_key: sehgnn+ms
-    model_plain: ALS (GraphSAINT)
+    model_plain: SeHGNN+ms
     value: 0.5671
     std: 0.0014
     metric: Accuracy
@@ -1535,8 +1642,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1545,17 +1652,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5421
+    true_std: 0.0027
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5421
     sort_std: 0.0027
-    global_rank: 12
+    global_rank: 17
+    paper_rank: 17
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1597,8 +1710,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1607,17 +1720,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5312
+    true_std: 0.0032
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5312
     sort_std: 0.0032
-    global_rank: 19
+    global_rank: 26
+    paper_rank: 26
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1659,8 +1778,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1669,17 +1788,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.516
+    true_std: 0.0033
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.516
     sort_std: 0.0033
-    global_rank: 27
+    global_rank: 36
+    paper_rank: 36
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1721,8 +1846,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1731,17 +1856,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5094
+    true_std: 0.0044
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5094
     sort_std: 0.0044
-    global_rank: 29
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1783,8 +1914,8 @@ results:
     at_pub_source_title: Graph Attention MLP with Reliable Label Utilization
     at_pub_source_date_iso: '2021-08-23'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2022-05-31'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.009599999999999942
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1792,23 +1923,23 @@ results:
     insignificant_improvement_at_pub: true
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4927
-    true_std: 0.0061
-    value_gap_source_arxiv: '2205.15653'
-    value_gap_source_title: Label-Enhanced Graph Neural Network for Semi-supervised
-      Node Classification
-    value_gap_source_is_current_paper: false
-    value_gap: 0.009599999999999942
+    today_delta_significant: false
+    true_value: 0.5023
+    true_std: 0.0048
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.4927
-    sort_std: 0.0061
-    global_rank: 34
-    paper_rank: 31
-    rank_delta: -3
-    rank_delta_abs: 3
-    rank_delta_direction: better
+    sort_value: 0.5023
+    sort_std: 0.0048
+    global_rank: 42
+    paper_rank: 42
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -1851,8 +1982,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1861,20 +1992,96 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4921
+    true_std: 0.0038
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4921
     sort_std: 0.0038
-    global_rank: 35
+    global_rank: 46
+    paper_rank: 46
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.486
+    std: 0.0029
+    paper_value: 0.486
+    paper_std: 0.0029
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3767
+    at_pub_std: null
+    at_pub_source_arxiv: '2105.11122'
+    at_pub_source_title: Heterogeneous Graph Representation Learning with Relation
+      Awareness
+    at_pub_source_date_iso: '2021-05-24'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.10930000000000001
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.486
+    true_std: 0.0029
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.486
+    sort_std: 0.0029
+    global_rank: 47
+    paper_rank: 47
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Heterogeneous Graph Representation Learning with Relation
+      Awareness
+    comparison_source_arxiv: '2105.11122'
     is_best: false
     is_std_outlier: false
   - model: MixHop
@@ -1913,8 +2120,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1923,20 +2130,94 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4699
+    true_std: 0.0041
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4699
     sort_std: 0.0041
-    global_rank: 40
+    global_rank: 55
+    paper_rank: 55
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: R-GCN
+    model_key: r-gcn
+    model_plain: R-GCN
+    value: 0.4693
+    std: 0.0046
+    paper_value: 0.4693
+    paper_std: 0.0046
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3977
+    at_pub_std: 0.0046
+    at_pub_source_arxiv: '2108.10097'
+    at_pub_source_title: Graph Attention MLP with Reliable Label Utilization
+    at_pub_source_date_iso: '2021-08-23'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: 0.0716
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4693
+    true_std: 0.0046
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4693
+    sort_std: 0.0046
+    global_rank: 56
+    paper_rank: 56
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Graph Attention MLP with Reliable Label Utilization
+    comparison_source_arxiv: '2108.10097'
     is_best: false
     is_std_outlier: false
   - model: GraphSAGE
@@ -1997,11 +2278,11 @@ results:
     value_note: ''
     sort_value: 0.4678
     sort_std: 0.0067
-    global_rank: 40
-    paper_rank: 40
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    global_rank: 57
+    paper_rank: 63
+    rank_delta: 6
+    rank_delta_abs: 6
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Long-range Meta-path Search on Large-scale Heterogeneous
@@ -2045,8 +2326,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2055,17 +2336,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4607
+    true_std: 0.004
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4607
     sort_std: 0.004
-    global_rank: 41
+    global_rank: 58
+    paper_rank: 58
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2107,8 +2394,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2117,526 +2404,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4339
+    true_std: 0.0028
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4339
     sort_std: 0.0028
-    global_rank: 41
+    global_rank: 59
+    paper_rank: 59
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: NAGphormer
-    model_key: nagphormer
-    model_plain: NAGphormer
-    value: 0.4247
-    std: 0.0074
-    paper_value: 0.4247
-    paper_std: 0.0074
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.4247
-    sort_std: 0.0074
-    global_rank: 41
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: R-GAT
-    model_key: r-gat
-    model_plain: R-GAT
-    value: 0.4151
-    std: 0.0047
-    paper_value: 0.4151
-    paper_std: 0.0047
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.4151
-    sort_std: 0.0047
-    global_rank: 41
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LINKX
-    model_key: linkx
-    model_plain: LINKX
-    value: 0.4083
-    std: 0.0018
-    paper_value: 0.4083
-    paper_std: 0.0018
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.4083
-    sort_std: 0.0018
-    global_rank: 41
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: R-GCN
-    model_key: r-gcn
-    model_plain: R-GCN
-    value: 0.4693
-    std: 0.0046
-    paper_value: 0.4693
-    paper_std: 0.0046
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3977
-    at_pub_std: 0.0046
-    at_pub_source_arxiv: '2108.10097'
-    at_pub_source_title: Graph Attention MLP with Reliable Label Utilization
-    at_pub_source_date_iso: '2021-08-23'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: KDD 2022
-    gap_vs_at_pub: 0.0716
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3977
-    true_std: 0.0046
-    value_gap_source_arxiv: '2206.04355'
-    value_gap_source_title: Graph Attention Multi-Layer Perceptron
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0716
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3977
-    sort_std: 0.0046
-    global_rank: 41
-    paper_rank: 40
-    rank_delta: -1
-    rank_delta_abs: 1
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Graph Attention MLP with Reliable Label Utilization
-    comparison_source_arxiv: '2108.10097'
-    is_best: false
-    is_std_outlier: false
-  - model: HAN
-    model_key: han
-    model_plain: HAN
-    value: 0.39
-    std: 0.0022
-    paper_value: 0.39
-    paper_std: 0.0022
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.39
-    sort_std: 0.0022
-    global_rank: 42
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAT
-    model_key: gat
-    model_plain: GAT
-    value: 0.486
-    std: 0.0029
-    paper_value: 0.486
-    paper_std: 0.0029
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3767
-    at_pub_std: null
-    at_pub_source_arxiv: '2105.11122'
-    at_pub_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    at_pub_source_date_iso: '2021-05-24'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
-    gap_vs_at_pub: 0.10930000000000001
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3767
-    true_std: null
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.10930000000000001
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3767
-    sort_std: null
-    global_rank: 42
-    paper_rank: 35
-    rank_delta: -7
-    rank_delta_abs: 7
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Heterogeneous Graph Representation Learning with Relation
-      Awareness
-    comparison_source_arxiv: '2105.11122'
-    is_best: false
-    is_std_outlier: false
-  - model: APPNP
-    model_key: appnp
-    model_plain: APPNP
-    value: 0.3764
-    std: 0.0031
-    paper_value: 0.3764
-    paper_std: 0.0031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.3764
-    sort_std: 0.0031
-    global_rank: 43
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GIN
-    model_key: gin
-    model_plain: GIN
-    value: 0.3732
-    std: 0.0033
-    paper_value: 0.3732
-    paper_std: 0.0033
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 30, 2026
-    date_display: Apr 2026
-    date_iso: '2026-04-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.3732
-    sort_std: 0.0033
-    global_rank: 43
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2679,8 +2463,8 @@ results:
       Awareness
     at_pub_source_date_iso: '2021-05-24'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-10-03'
-    value_gap_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.08029999999999998
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2688,28 +2472,469 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3487
-    true_std: null
-    value_gap_source_arxiv: '2410.02158'
-    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
-      Representation Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.08029999999999998
+    today_delta_significant: false
+    true_value: 0.429
+    true_std: 0.005
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.3487
-    sort_std: null
-    global_rank: 46
-    paper_rank: 41
-    rank_delta: -5
-    rank_delta_abs: 5
-    rank_delta_direction: better
+    sort_value: 0.429
+    sort_std: 0.005
+    global_rank: 60
+    paper_rank: 60
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: Heterogeneous Graph Representation Learning with Relation
       Awareness
     comparison_source_arxiv: '2105.11122'
+    is_best: false
+    is_std_outlier: false
+  - model: NAGphormer
+    model_key: nagphormer
+    model_plain: NAGphormer
+    value: 0.4247
+    std: 0.0074
+    paper_value: 0.4247
+    paper_std: 0.0074
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4247
+    true_std: 0.0074
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4247
+    sort_std: 0.0074
+    global_rank: 61
+    paper_rank: 61
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: R-GAT
+    model_key: r-gat
+    model_plain: R-GAT
+    value: 0.4151
+    std: 0.0047
+    paper_value: 0.4151
+    paper_std: 0.0047
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4151
+    true_std: 0.0047
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4151
+    sort_std: 0.0047
+    global_rank: 62
+    paper_rank: 62
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LINKX
+    model_key: linkx
+    model_plain: LINKX
+    value: 0.4083
+    std: 0.0018
+    paper_value: 0.4083
+    paper_std: 0.0018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.4083
+    true_std: 0.0018
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4083
+    sort_std: 0.0018
+    global_rank: 63
+    paper_rank: 63
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HAN
+    model_key: han
+    model_plain: HAN
+    value: 0.39
+    std: 0.0022
+    paper_value: 0.39
+    paper_std: 0.0022
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.39
+    true_std: 0.0022
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.39
+    sort_std: 0.0022
+    global_rank: 64
+    paper_rank: 64
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: APPNP
+    model_key: appnp
+    model_plain: APPNP
+    value: 0.3764
+    std: 0.0031
+    paper_value: 0.3764
+    paper_std: 0.0031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3764
+    true_std: 0.0031
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3764
+    sort_std: 0.0031
+    global_rank: 65
+    paper_rank: 65
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.3732
+    std: 0.0033
+    paper_value: 0.3732
+    paper_std: 0.0033
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 30, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2026-04-30'
+    value_gap_source_date_label: '2026'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.3732
+    true_std: 0.0033
+    value_gap_source_arxiv: '2604.27387'
+    value_gap_source_title: 'Robust Learning on Heterogeneous Graphs with Heterophily:
+      A Graph Structure Learning Approach'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.3732
+    sort_std: 0.0033
+    global_rank: 66
+    paper_rank: 66
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.3243
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2105.11122'
+    title: Heterogeneous Graph Representation Learning with Relation Awareness
+    date: May 24, 2021
+    date_display: May 2021
+    date_iso: '2021-05-24'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/yule-BUAA/R-HGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 72
+    sort_value: 0.3243
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: Accuracy

@@ -41,8 +41,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - tNodeEmbed
-mrr: 0.0085
-adjusted_mrr: 0.0028
+mrr: 0.0078
+adjusted_mrr: 0.0026
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -59,9 +59,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: SlotGAT
+  - model: HERec
     model_key: herec
-    model_plain: SlotGAT
+    model_plain: HERec
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -92,9 +92,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: HetSANN
     model_key: hetsann
-    model_plain: SlotGAT
+    model_plain: HetSANN
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -125,9 +125,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SlotGAT
+  - model: DeepWalk
     model_key: deepwalk
-    model_plain: SlotGAT
+    model_plain: DeepWalk
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -154,6 +154,107 @@ results:
     sort_value: 0.9941
     sort_std: null
     comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.946
+    std: 0.0031
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.16401'
+    title: Graph Neural Networks with a Distribution of Parametrized Graphs
+    date: Oct 25, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-25'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.946
+    sort_std: 0.0031
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Node2Vec
+    model_key: node2vec
+    model_plain: Node2Vec
+    value: 0.752
+    std: null
+    paper_value: 0.752
+    paper_std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Multi-label node classification on DBLP with CC=0.002
+    date: Mar 1, 2019
+    date_display: Mar 2019
+    date_iso: '2019-03-01'
+    published_venue: IJCAI 2019
+    published_conference: IJCAI 2019
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2020-12-18'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9282
+    true_std: null
+    value_gap_source_arxiv: '2012.10024'
+    value_gap_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.17620000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9282
+    sort_std: null
+    global_rank: 62
+    paper_rank: 161
+    rank_delta: 99
+    rank_delta_abs: 99
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -214,8 +315,8 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: null
-    global_rank: 117
-    paper_rank: 117
+    global_rank: 128
+    paper_rank: 128
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -281,80 +382,12 @@ results:
     value_note: ''
     sort_value: 0.822
     sort_std: null
-    global_rank: 118
-    paper_rank: 118
+    global_rank: 129
+    paper_rank: 129
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Node2Vec
-    model_key: node2vec
-    model_plain: Node2Vec
-    value: 0.752
-    std: null
-    paper_value: 0.752
-    paper_std: null
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Multi-label node classification on DBLP with CC=0.002
-    date: Mar 1, 2019
-    date_display: Mar 2019
-    date_iso: '2019-03-01'
-    published_venue: IJCAI 2019
-    published_conference: IJCAI 2019
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-10-11'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7752
-    true_std: 0.0038
-    value_gap_source_arxiv: '2310.07365'
-    value_gap_source_title: 'GraphControl: Adding Conditional Control to Universal
-      Graph Pre-trained Models for Graph Domain Transfer Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0232
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7752
-    sort_std: 0.0038
-    global_rank: 139
-    paper_rank: 142
-    rank_delta: 3
-    rank_delta_abs: 3
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -416,8 +449,8 @@ results:
     value_note: ''
     sort_value: 0.749
     sort_std: null
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 162
+    paper_rank: 162
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -483,8 +516,8 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: null
-    global_rank: 146
-    paper_rank: 146
+    global_rank: 165
+    paper_rank: 165
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -550,8 +583,8 @@ results:
     value_note: ''
     sort_value: 0.717
     sort_std: null
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 170
+    paper_rank: 170
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -617,8 +650,8 @@ results:
     value_note: ''
     sort_value: 0.714
     sort_std: null
-    global_rank: 154
-    paper_rank: 154
+    global_rank: 173
+    paper_rank: 173
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -684,13 +717,47 @@ results:
     value_note: ''
     sort_value: 0.711
     sort_std: null
-    global_rank: 156
-    paper_rank: 156
+    global_rank: 175
+    paper_rank: 175
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6447
+    std: 0.0136
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.07365'
+    title: 'GraphControl: Adding Conditional Control to Universal Graph Pre-trained
+      Models for Graph Domain Transfer Learning'
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: The Web Conference
+    codebase_url: https://github.com/wykk00/GraphControl
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 185
+    sort_value: 0.6447
+    sort_std: 0.0136
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

@@ -46,8 +46,8 @@ paper_type: method
 proposed_models:
 - PhysNet
 - PhysNet-ens5
-mrr: 0.0139
-adjusted_mrr: 0.0046
+mrr: 0.0345
+adjusted_mrr: 0.0115
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -64,9 +64,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -98,9 +98,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -132,9 +132,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -202,8 +202,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -212,148 +212,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.02
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.02
     sort_std: null
-    global_rank: 14
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: DTNN
-    model_key: dtnn
-    model_plain: DTNN
-    value: 0.04
-    std: null
-    paper_value: 0.04
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schutt2017quantum
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 22, 2019
-    date_display: Feb 2019
-    date_iso: '2019-02-22'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.04
-    at_pub_std: null
-    at_pub_source_arxiv: '1712.06113'
-    at_pub_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
-    at_pub_source_date_iso: '2017-12-17'
-    at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.04
-    true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
-    value_gap_source_is_current_paper: false
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.04
-    sort_std: null
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: HIP-NN
-    model_key: hip-nn
-    model_plain: HIP-NN
-    value: 0.06
-    std: null
-    paper_value: 0.06
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: lubbers2018hierarchical
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 22, 2019
-    date_display: Feb 2019
-    date_iso: '2019-02-22'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.06
-    sort_std: null
-    global_rank: 41
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -396,8 +271,8 @@ results:
       materials
     at_pub_source_date_iso: '2017-12-17'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2017-12-17'
-    value_gap_source_date_label: '2017'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
     gap_vs_at_pub: 0.05
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -405,92 +280,23 @@ results:
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.07
+    today_delta_significant: false
+    true_value: 0.02
     true_std: null
-    value_gap_source_arxiv: '1712.06113'
-    value_gap_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
-    value_gap_source_is_current_paper: false
-    value_gap: 0.05
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.07
+    sort_value: 0.02
     sort_std: null
-    global_rank: 43
-    paper_rank: 14
-    rank_delta: -29
-    rank_delta_abs: 29
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: SchNet -- a deep learning architecture for molecules
-      and materials
-    comparison_source_arxiv: '1712.06113'
-    is_best: false
-    is_std_outlier: false
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    value: 0.05
-    std: null
-    paper_value: 0.05
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schutt2017schnet
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Feb 22, 2019
-    date_display: Feb 2019
-    date_iso: '2019-02-22'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.08
-    at_pub_std: null
-    at_pub_source_arxiv: '1712.06113'
-    at_pub_source_title: SchNet -- a deep learning architecture for molecules and
-      materials
-    at_pub_source_date_iso: '2017-12-17'
-    at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.03
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.08
-    true_std: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.08
-    sort_std: null
-    global_rank: 46
-    paper_rank: 28
-    rank_delta: -18
-    rank_delta_abs: 18
-    rank_delta_direction: better
+    global_rank: 24
+    paper_rank: 24
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: improved
     comparison_source_title: SchNet -- a deep learning architecture for molecules
@@ -534,33 +340,240 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-01-01'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.23
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.03
     true_std: null
-    value_gap_source_arxiv: '2202.02541'
-    value_gap_source_title: 'TorchMD-NET: Equivariant Transformers for Neural Network
-      based Molecular Potentials'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.2
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.23
+    sort_value: 0.03
     sort_std: null
-    global_rank: 72
-    paper_rank: 15
-    rank_delta: -57
-    rank_delta_abs: 57
-    rank_delta_direction: better
+    global_rank: 29
+    paper_rank: 29
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: DTNN
+    model_key: dtnn
+    model_plain: DTNN
+    value: 0.04
+    std: null
+    paper_value: 0.04
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: schutt2017quantum
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 22, 2019
+    date_display: Feb 2019
+    date_iso: '2019-02-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.04
+    at_pub_std: null
+    at_pub_source_arxiv: '1712.06113'
+    at_pub_source_title: SchNet -- a deep learning architecture for molecules and
+      materials
+    at_pub_source_date_iso: '2017-12-17'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.04
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.04
+    sort_std: null
+    global_rank: 39
+    paper_rank: 39
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SchNet
+    model_key: schnet
+    model_plain: SchNet
+    value: 0.05
+    std: null
+    paper_value: 0.05
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: schutt2017schnet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 22, 2019
+    date_display: Feb 2019
+    date_iso: '2019-02-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.08
+    at_pub_std: null
+    at_pub_source_arxiv: '1712.06113'
+    at_pub_source_title: SchNet -- a deep learning architecture for molecules and
+      materials
+    at_pub_source_date_iso: '2017-12-17'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.03
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.05
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.05
+    sort_std: null
+    global_rank: 46
+    paper_rank: 46
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: SchNet -- a deep learning architecture for molecules
+      and materials
+    comparison_source_arxiv: '1712.06113'
+    is_best: false
+    is_std_outlier: false
+  - model: HIP-NN
+    model_key: hip-nn
+    model_plain: HIP-NN
+    value: 0.06
+    std: null
+    paper_value: 0.06
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: lubbers2018hierarchical
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Feb 22, 2019
+    date_display: Feb 2019
+    date_iso: '2019-02-22'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.06
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.06
+    sort_std: null
+    global_rank: 63
+    paper_rank: 63
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

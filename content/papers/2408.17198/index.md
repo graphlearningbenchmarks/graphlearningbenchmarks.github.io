@@ -186,9 +186,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: TAGs (70b)
+  - model: UniMP
     model_key: unimp
-    model_plain: TAGs (70b)
+    model_plain: UniMP
     value: 0.6998
     std: 0.0058
     metric: Accuracy
@@ -216,6 +216,41 @@ results:
     global_rank: 3
     sort_value: 0.6998
     sort_std: 0.0058
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.6759
+    std: 0.0041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2405.18581'
+    title: 'Unleashing the Potential of Text-attributed Graphs: Automatic Relation
+      Decomposition via Large Language Models'
+    date: May 28, 2024
+    date_display: May 2024
+    date_iso: '2024-05-28'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: nodes are characterized by a feature matrix X... text
+      attributes are encoded using a PLM
+    is_global_top: true
+    global_rank: 4
+    sort_value: 0.6759
+    sort_std: 0.0041
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''

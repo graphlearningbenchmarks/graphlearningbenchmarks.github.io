@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - REMUL-GNN
-mrr: 0.0833
-adjusted_mrr: 0.0278
+mrr: 0.0556
+adjusted_mrr: 0.0185
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -66,9 +66,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -100,9 +100,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -134,9 +134,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -224,8 +224,8 @@ results:
     value_note: ''
     sort_value: 0.0037
     sort_std: 0.0001
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -291,8 +291,8 @@ results:
     value_note: ''
     sort_value: 0.0037
     sort_std: 0.0002
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -359,8 +359,8 @@ results:
     value_note: ''
     sort_value: 0.004
     sort_std: 0.0001
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -427,8 +427,8 @@ results:
     value_note: ''
     sort_value: 0.0047
     sort_std: 0.0002
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -494,8 +494,8 @@ results:
     value_note: ''
     sort_value: 0.0054
     sort_std: 1.0e-05
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -561,8 +561,8 @@ results:
     value_note: ''
     sort_value: 0.0054
     sort_std: 1.0e-05
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -628,8 +628,8 @@ results:
     value_note: ''
     sort_value: 0.0069
     sort_std: 1.0e-05
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

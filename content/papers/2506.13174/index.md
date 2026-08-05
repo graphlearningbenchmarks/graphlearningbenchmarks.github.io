@@ -44,8 +44,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GeoRecon
-mrr: 0.0256
-adjusted_mrr: 0.0085
+mrr: 0.0167
+adjusted_mrr: 0.0056
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -62,9 +62,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -96,9 +96,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -130,9 +130,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -224,10 +224,10 @@ results:
     value_note: ''
     sort_value: 0.0529
     sort_std: null
-    global_rank: 33
-    paper_rank: 41
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 58
+    paper_rank: 64
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -295,8 +295,8 @@ results:
     value_note: ''
     sort_value: 0.05755
     sort_std: null
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

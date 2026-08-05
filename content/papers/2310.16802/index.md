@@ -68,9 +68,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -102,9 +102,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -136,9 +136,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -168,6 +168,76 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Allegro
+    model_key: allegro
+    model_plain: Allegro
+    value: 0.2
+    std: null
+    paper_value: 0.2
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: test split of the rMD17 dataset
+    date: Oct 25, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-25'
+    published_venue: ICLR 2023
+    published_conference: ICLR 2023
+    at_pub_value: 0.029
+    at_pub_std: null
+    at_pub_source_arxiv: '2306.09375'
+    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    at_pub_source_date_iso: '2023-06-15'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2024-07-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.171
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.0046
+    true_std: null
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.19540000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.0046
+    sort_std: null
+    global_rank: 14
+    paper_rank: 100
+    rank_delta: 86
+    rank_delta_abs: 86
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    comparison_source_arxiv: '2306.09375'
     is_best: false
     is_std_outlier: false
   - model: MACE
@@ -228,86 +298,16 @@ results:
     value_note: ''
     sort_value: 0.0507
     sort_std: null
-    global_rank: 29
-    paper_rank: 77
-    rank_delta: 48
-    rank_delta_abs: 48
+    global_rank: 48
+    paper_rank: 106
+    rank_delta: 58
+    rank_delta_abs: 58
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
       network with vector-scalar interactive message passing for molecules'
     comparison_source_arxiv: '2210.16518'
-    is_best: false
-    is_std_outlier: false
-  - model: Allegro
-    model_key: allegro
-    model_plain: Allegro
-    value: 0.2
-    std: null
-    paper_value: 0.2
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to md17 (score=89)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: test split of the rMD17 dataset
-    date: Oct 25, 2023
-    date_display: Oct 2023
-    date_iso: '2023-10-25'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: 0.029
-    at_pub_std: null
-    at_pub_source_arxiv: '2306.09375'
-    at_pub_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    at_pub_source_date_iso: '2023-06-15'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.171
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.053
-    true_std: null
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.14700000000000002
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.053
-    sort_std: null
-    global_rank: 35
-    paper_rank: 70
-    rank_delta: 35
-    rank_delta_abs: 35
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Symmetry-Informed Geometric Representation for Molecules,
-      Proteins, and Crystalline Materials
-    comparison_source_arxiv: '2306.09375'
     is_best: false
     is_std_outlier: false
   - model: JMP-L
@@ -367,8 +367,8 @@ results:
     value_note: ''
     sort_value: 0.3
     sort_std: null
-    global_rank: 78
-    paper_rank: 78
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -435,8 +435,8 @@ results:
     value_note: ''
     sort_value: 0.7
     sort_std: null
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 112
+    paper_rank: 112
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -503,8 +503,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 82
-    paper_rank: 82
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -571,8 +571,8 @@ results:
     value_note: ''
     sort_value: 1.0
     sort_std: null
-    global_rank: 83
-    paper_rank: 83
+    global_rank: 114
+    paper_rank: 114
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

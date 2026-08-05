@@ -65,9 +65,9 @@ results:
 - &id002
   dataset: Amazon-Computers
   rows:
-  - model: gCooL_e
+  - model: gCooL_c
     model_key: gcool_c
-    model_plain: gCooL_e
+    model_plain: gCooL_c
     value: 0.8885
     std: 0.14
     metric: Micro-F1
@@ -131,9 +131,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: gCooL_e
+  - model: GCA
     model_key: gca
-    model_plain: gCooL_e
+    model_plain: GCA
     value: 0.8767
     std: 0.49
     metric: Micro-F1
@@ -159,6 +159,39 @@ results:
     global_rank: 3
     sort_value: 0.8767
     sort_std: 0.49
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8643
+    std: 0.56
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.14863'
+    title: Graph Communal Contrastive Learning
+    date: Oct 28, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-28'
+    venue: The Web Conference
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 6
+    sort_value: 0.8643
+    sort_std: 0.56
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''

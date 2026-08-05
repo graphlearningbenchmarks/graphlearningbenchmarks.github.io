@@ -62,8 +62,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SubG-Con
-mrr: 0.0058
-adjusted_mrr: 0.0058
+mrr: 0.0055
+adjusted_mrr: 0.0055
 mrr_dataset_count: 5
 benchmark_categories:
 - Classic
@@ -80,9 +80,9 @@ results:
 - &id002
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -113,9 +113,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -146,9 +146,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -235,10 +235,10 @@ results:
     value_note: ''
     sort_value: 0.985
     sort_std: null
-    global_rank: 19
-    paper_rank: 155
-    rank_delta: 136
-    rank_delta_abs: 136
+    global_rank: 21
+    paper_rank: 166
+    rank_delta: 145
+    rank_delta_abs: 145
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -304,8 +304,8 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -373,16 +373,49 @@ results:
     value_note: ''
     sort_value: 0.958
     sort_std: 0.001
-    global_rank: 70
-    paper_rank: 156
-    rank_delta: 86
-    rank_delta_abs: 86
+    global_rank: 78
+    paper_rank: 167
+    rank_delta: 89
+    rank_delta_abs: 89
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'L$^2$-GCN: Layer-Wise and Learned Efficient Training
       of Graph Convolutional Networks'
     comparison_source_arxiv: '2003.13606'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.911
+    std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.13410'
+    title: 'Weisfeiler and Leman Go Infinite: Spectral and Combinatorial Pre-Colorings'
+    date: Jan 31, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-31'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/TPFI22/Spectral-and-Combinatorial
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 92
+    sort_value: 0.911
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SubG-Con
@@ -422,8 +455,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -434,17 +467,17 @@ results:
     today_delta_significant: false
     true_value: 0.669
     true_std: 0.002
-    value_gap_source_arxiv: '2202.08333'
-    value_gap_source_title: Self-Supervised Representation Learning via Latent Graph
-      Prediction
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
+      Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.669
     sort_std: 0.002
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 136
+    paper_rank: 136
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -491,8 +524,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-06-04'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -502,18 +535,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.65
-    true_std: 0.0002
-    value_gap_source_arxiv: '2106.02466'
-    value_gap_source_title: 'Graph Barlow Twins: A self-supervised representation
-      learning framework for graphs'
+    true_std: 0.0
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
+      Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.65
-    sort_std: 0.0002
-    global_rank: 130
-    paper_rank: 130
+    sort_std: 0.0
+    global_rank: 141
+    paper_rank: 141
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -560,8 +593,8 @@ results:
     at_pub_source_title: 'Deep Learning on Graphs: A Survey'
     at_pub_source_date_iso: '2018-12-11'
     at_pub_source_date_label: '2018'
-    value_gap_source_date_iso: '2021-06-04'
-    value_gap_source_date_label: '2021'
+    value_gap_source_date_iso: '2024-08-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -572,17 +605,16 @@ results:
     today_delta_significant: false
     true_value: 0.638
     true_std: 0.002
-    value_gap_source_arxiv: '2106.02466'
-    value_gap_source_title: 'Graph Barlow Twins: A self-supervised representation
-      learning framework for graphs'
+    value_gap_source_arxiv: '2408.13471'
+    value_gap_source_title: Disentangled Generative Graph Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.638
     sort_std: 0.002
-    global_rank: 137
-    paper_rank: 137
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -649,8 +681,8 @@ results:
     value_note: ''
     sort_value: 0.637
     sort_std: 0.006
-    global_rank: 138
-    paper_rank: 138
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -697,8 +729,8 @@ results:
     at_pub_source_title: Learning Graph Representations with Embedding Propagation
     at_pub_source_date_iso: '2017-10-09'
     at_pub_source_date_label: NeurIPS 2017
-    value_gap_source_date_iso: '2020-09-22'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.27880000000000005
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -709,17 +741,17 @@ results:
     today_delta_significant: false
     true_value: 0.529
     true_std: null
-    value_gap_source_arxiv: '2009.10273'
-    value_gap_source_title: Sub-graph Contrast for Scalable Self-Supervised Graph
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
       Representation Learning
-    value_gap_source_is_current_paper: true
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.529
     sort_std: null
-    global_rank: 155
-    paper_rank: 155
+    global_rank: 166
+    paper_rank: 166
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -787,8 +819,8 @@ results:
     value_note: ''
     sort_value: 0.465
     sort_std: 0.007
-    global_rank: 163
-    paper_rank: 163
+    global_rank: 174
+    paper_rank: 174
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -835,8 +867,8 @@ results:
     at_pub_source_title: Inductive Representation Learning on Large Graphs
     at_pub_source_date_iso: '2017-06-07'
     at_pub_source_date_label: NeurIPS 2017
-    value_gap_source_date_iso: '2020-09-22'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.0030000000000000027
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -847,17 +879,17 @@ results:
     today_delta_significant: false
     true_value: 0.425
     true_std: 0.003
-    value_gap_source_arxiv: '2009.10273'
-    value_gap_source_title: Sub-graph Contrast for Scalable Self-Supervised Graph
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
       Representation Learning
-    value_gap_source_is_current_paper: true
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.425
     sort_std: 0.003
-    global_rank: 166
-    paper_rank: 166
+    global_rank: 177
+    paper_rank: 177
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -879,9 +911,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: Cluster-GCN (2019)
+  - model: Node Sampled Soup
     model_key: node sampled soup
-    model_plain: Cluster-GCN (2019)
+    model_plain: Node Sampled Soup
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -913,9 +945,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: EnGCN
     model_key: engcn
-    model_plain: Cluster-GCN (2019)
+    model_plain: EnGCN
     value: 0.9714
     std: 0.0003
     metric: F1
@@ -947,9 +979,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: SAGN+SLE
     model_key: sagn+sle
-    model_plain: Cluster-GCN (2019)
+    model_plain: SAGN+SLE
     value: 0.971
     std: 0.0
     metric: F1
@@ -1041,9 +1073,9 @@ results:
     sort_value: 0.966
     sort_std: null
     global_rank: 19
-    paper_rank: 136
-    rank_delta: 117
-    rank_delta_abs: 117
+    paper_rank: 144
+    rank_delta: 125
+    rank_delta_abs: 125
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1109,10 +1141,10 @@ results:
     value_note: ''
     sort_value: 0.953
     sort_std: 0.001
-    global_rank: 69
-    paper_rank: 122
-    rank_delta: 53
-    rank_delta_abs: 53
+    global_rank: 71
+    paper_rank: 128
+    rank_delta: 57
+    rank_delta_abs: 57
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1157,8 +1189,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1169,17 +1201,17 @@ results:
     today_delta_significant: false
     true_value: 0.952
     true_std: 0.0
-    value_gap_source_arxiv: '2202.08333'
-    value_gap_source_title: Self-Supervised Representation Learning via Latent Graph
-      Prediction
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
+      Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.952
     sort_std: 0.0
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1226,8 +1258,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-16'
-    value_gap_source_date_label: ICML 2022
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1238,17 +1270,17 @@ results:
     today_delta_significant: false
     true_value: 0.95
     true_std: 0.0
-    value_gap_source_arxiv: '2202.08333'
-    value_gap_source_title: Self-Supervised Representation Learning via Latent Graph
-      Prediction
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
+      Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.95
     sort_std: 0.0
-    global_rank: 81
-    paper_rank: 81
+    global_rank: 86
+    paper_rank: 86
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1315,8 +1347,8 @@ results:
     value_note: ''
     sort_value: 0.9414
     sort_std: 0.0003
-    global_rank: 100
-    paper_rank: 103
+    global_rank: 105
+    paper_rank: 108
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -1385,10 +1417,10 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 113
-    paper_rank: 145
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 118
+    paper_rank: 157
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1455,8 +1487,8 @@ results:
     value_note: ''
     sort_value: 0.908
     sort_std: 0.011
-    global_rank: 144
-    paper_rank: 144
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1466,6 +1498,40 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: true
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7435
+    std: 0.0016
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2512.14908'
+    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
+      Graphs'
+    date: Dec 16, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/atlaspaper16/ATLAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 165
+    sort_value: 0.7435
+    sort_std: 0.0016
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: Raw features
     model_key: raw features
     model_plain: Raw features
@@ -1503,8 +1569,8 @@ results:
     at_pub_source_title: Inductive Representation Learning on Large Graphs
     at_pub_source_date_iso: '2017-06-07'
     at_pub_source_date_label: NeurIPS 2017
-    value_gap_source_date_iso: '2017-06-07'
-    value_gap_source_date_label: NeurIPS 2017
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1514,17 +1580,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.585
-    true_std: null
-    value_gap_source_arxiv: '1706.02216'
-    value_gap_source_title: Inductive Representation Learning on Large Graphs
+    true_std: 0.001
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
+      Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.585
-    sort_std: null
-    global_rank: 175
-    paper_rank: 175
+    sort_std: 0.001
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1571,8 +1638,8 @@ results:
     at_pub_source_title: Inductive Representation Learning on Large Graphs
     at_pub_source_date_iso: '2017-06-07'
     at_pub_source_date_label: NeurIPS 2017
-    value_gap_source_date_iso: '2017-06-07'
-    value_gap_source_date_label: NeurIPS 2017
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1583,16 +1650,17 @@ results:
     today_delta_significant: false
     true_value: 0.324
     true_std: null
-    value_gap_source_arxiv: '1706.02216'
-    value_gap_source_title: Inductive Representation Learning on Large Graphs
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
+      Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.324
     sort_std: null
-    global_rank: 190
-    paper_rank: 190
+    global_rank: 203
+    paper_rank: 203
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

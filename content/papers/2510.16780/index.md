@@ -62,8 +62,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - 3D-GSRD
-mrr: 0.0714
-adjusted_mrr: 0.0238
+mrr: 0.037
+adjusted_mrr: 0.0123
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -80,9 +80,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -114,9 +114,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -148,9 +148,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -239,8 +239,8 @@ results:
     value_note: ''
     sort_value: 0.0266
     sort_std: null
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -307,8 +307,8 @@ results:
     value_note: ''
     sort_value: 0.0352
     sort_std: null
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -376,8 +376,8 @@ results:
     value_note: ''
     sort_value: 0.039
     sort_std: null
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 35
+    paper_rank: 35
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -445,8 +445,8 @@ results:
     value_note: ''
     sort_value: 0.0417
     sort_std: null
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -514,8 +514,8 @@ results:
     value_note: ''
     sort_value: 0.0431
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

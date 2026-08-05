@@ -40,8 +40,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MOLTOP
-mrr: 0.0078
-adjusted_mrr: 0.0078
+mrr: 0.0077
+adjusted_mrr: 0.0077
 mrr_dataset_count: 4
 benchmark_categories:
 - MoleculeNet
@@ -63,9 +63,9 @@ results:
 - &id001
   dataset: BACE
   rows:
-  - model: MAGPrompt+
+  - model: ProtoMol
     model_key: protomol
-    model_plain: MAGPrompt+
+    model_plain: ProtoMol
     value: 0.914
     std: 0.003
     metric: ROC-AUC
@@ -97,9 +97,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MMSG
     model_key: mmsg
-    model_plain: MAGPrompt+
+    model_plain: MMSG
     value: 0.908
     std: 0.005
     metric: ROC-AUC
@@ -131,9 +131,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: MemGNN
     model_key: memgnn
-    model_plain: MAGPrompt+
+    model_plain: MemGNN
     value: 0.907
     std: 0.0
     metric: ROC-AUC
@@ -223,9 +223,9 @@ results:
     sort_value: 0.878
     sort_std: 0.032
     global_rank: 19
-    paper_rank: 154
-    rank_delta: 135
-    rank_delta_abs: 135
+    paper_rank: 157
+    rank_delta: 138
+    rank_delta_abs: 138
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -339,8 +339,8 @@ results:
       Graphs'
     at_pub_source_date_iso: '2021-10-04'
     at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2022-02-18'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.07899999999999996
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -350,20 +350,20 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.863
-    true_std: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
+    true_std: 0.015
+    value_gap_source_arxiv: '2202.09346'
+    value_gap_source_title: Improving Molecular Contrastive Learning via Faulty Negative
+      Mitigation and Decomposed Fragment Contrast
     value_gap_source_is_current_paper: false
     value_gap: 0.07899999999999996
     has_value_note: false
     value_note: ''
     sort_value: 0.863
-    sort_std: null
+    sort_std: 0.015
     global_rank: 43
-    paper_rank: 203
-    rank_delta: 160
-    rank_delta_abs: 160
+    paper_rank: 207
+    rank_delta: 164
+    rank_delta_abs: 164
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -408,7 +408,7 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-17'
+    value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -420,9 +420,8 @@ results:
     today_delta_significant: false
     true_value: 0.856
     true_std: 0.011
-    value_gap_source_arxiv: '2604.16586'
-    value_gap_source_title: A Systematic Survey and Benchmark of Deep Learning for
-      Molecular Property Prediction in the Foundation Model Era
+    value_gap_source_arxiv: '2605.06462'
+    value_gap_source_title: Invariant-Based Diagnostics for Graph Benchmarks
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -499,9 +498,9 @@ results:
     sort_value: 0.854
     sort_std: 0.011
     global_rank: 60
-    paper_rank: 117
-    rank_delta: 57
-    rank_delta_abs: 57
+    paper_rank: 119
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -568,9 +567,9 @@ results:
     sort_value: 0.8451
     sort_std: null
     global_rank: 78
-    paper_rank: 156
-    rank_delta: 78
-    rank_delta_abs: 78
+    paper_rank: 159
+    rank_delta: 81
+    rank_delta_abs: 81
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -706,9 +705,9 @@ results:
     sort_value: 0.834
     sort_std: 0.033
     global_rank: 97
-    paper_rank: 252
-    rank_delta: 155
-    rank_delta_abs: 155
+    paper_rank: 257
+    rank_delta: 160
+    rank_delta_abs: 160
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -823,8 +822,8 @@ results:
       Molecular Representation Learning'
     at_pub_source_date_iso: '2024-05-15'
     at_pub_source_date_label: ICML 2024
-    value_gap_source_date_iso: '2024-05-15'
-    value_gap_source_date_label: ICML 2024
+    value_gap_source_date_iso: '2025-03-06'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.015999999999999903
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -835,19 +834,19 @@ results:
     today_delta_significant: true
     true_value: 0.826
     true_std: 0.007
-    value_gap_source_arxiv: '2405.10343'
-    value_gap_source_title: 'UniCorn: A Unified Contrastive Learning Approach for
-      Multi-view Molecular Representation Learning'
+    value_gap_source_arxiv: '2503.04362'
+    value_gap_source_title: A Generalist Cross-Domain Molecular Learning Framework
+      for Structure-Based Drug Discovery
     value_gap_source_is_current_paper: false
     value_gap: 0.015999999999999903
     has_value_note: false
     value_note: ''
     sort_value: 0.826
     sort_std: 0.007
-    global_rank: 112
-    paper_rank: 148
-    rank_delta: 36
-    rank_delta_abs: 36
+    global_rank: 114
+    paper_rank: 151
+    rank_delta: 37
+    rank_delta_abs: 37
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -891,8 +890,8 @@ results:
     at_pub_source_title: Unified 2D and 3D Pre-Training of Molecular Representations
     at_pub_source_date_iso: '2022-07-14'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2024-04-17'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2026-05-07'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.04400000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -902,19 +901,19 @@ results:
     insignificant_value_gap: false
     today_delta_significant: true
     true_value: 0.812
-    true_std: null
-    value_gap_source_arxiv: '2404.11568'
-    value_gap_source_title: On the Scalability of GNNs for Molecular Graphs
+    true_std: 0.009
+    value_gap_source_arxiv: '2605.06462'
+    value_gap_source_title: Invariant-Based Diagnostics for Graph Benchmarks
     value_gap_source_is_current_paper: false
     value_gap: 0.04400000000000004
     has_value_note: false
     value_note: ''
     sort_value: 0.812
-    sort_std: null
-    global_rank: 141
-    paper_rank: 224
-    rank_delta: 83
-    rank_delta_abs: 83
+    sort_std: 0.009
+    global_rank: 144
+    paper_rank: 228
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -958,8 +957,8 @@ results:
     at_pub_source_title: 16 Pre-training Molecular Graph Representation with 3D Geometry
     at_pub_source_date_iso: '2021-10-07'
     at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2021-10-07'
-    value_gap_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2024-07-16'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -970,17 +969,17 @@ results:
     today_delta_significant: false
     true_value: 0.812
     true_std: 0.009
-    value_gap_source_arxiv: '2110.07728'
-    value_gap_source_title: 16 Pre-training Molecular Graph Representation with 3D
-      Geometry
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2407.12136'
+    value_gap_source_title: Molecular Topological Profile (MOLTOP) - Simple and Strong
+      Baseline for Molecular Graph Classification
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.812
     sort_std: 0.009
-    global_rank: 142
-    paper_rank: 142
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1047,8 +1046,8 @@ results:
     value_note: ''
     sort_value: 0.807
     sort_std: 0.003
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 161
+    paper_rank: 161
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1116,8 +1115,8 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: 0.003
-    global_rank: 161
-    paper_rank: 161
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1186,10 +1185,10 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.012
-    global_rank: 205
-    paper_rank: 278
-    rank_delta: 73
-    rank_delta_abs: 73
+    global_rank: 209
+    paper_rank: 283
+    rank_delta: 74
+    rank_delta_abs: 74
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1255,8 +1254,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.002
-    global_rank: 265
-    paper_rank: 265
+    global_rank: 270
+    paper_rank: 270
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1311,9 +1310,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: CamS-LLaMA
     model_key: cams-llama
-    model_plain: MAGPrompt+
+    model_plain: CamS-LLaMA
     value: 0.942
     std: null
     metric: ROC-AUC
@@ -1345,9 +1344,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MAGPrompt+
+  - model: SE(3)-I MPPH
     model_key: se(3)-i mpph
-    model_plain: MAGPrompt+
+    model_plain: SE(3)-I MPPH
     value: 0.94
     std: 0.021
     metric: ROC-AUC
@@ -1439,9 +1438,9 @@ results:
     sort_value: 0.8875
     sort_std: 0.0049
     global_rank: 32
-    paper_rank: 177
-    rank_delta: 145
-    rank_delta_abs: 145
+    paper_rank: 182
+    rank_delta: 150
+    rank_delta_abs: 150
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1509,9 +1508,9 @@ results:
     sort_value: 0.887
     sort_std: 0.019
     global_rank: 34
-    paper_rank: 209
-    rank_delta: 175
-    rank_delta_abs: 175
+    paper_rank: 215
+    rank_delta: 181
+    rank_delta_abs: 181
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1579,9 +1578,9 @@ results:
     sort_value: 0.887
     sort_std: 0.006
     global_rank: 35
-    paper_rank: 159
-    rank_delta: 124
-    rank_delta_abs: 124
+    paper_rank: 163
+    rank_delta: 128
+    rank_delta_abs: 128
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1649,9 +1648,9 @@ results:
     sort_value: 0.881
     sort_std: 0.036
     global_rank: 36
-    paper_rank: 119
-    rank_delta: 83
-    rank_delta_abs: 83
+    paper_rank: 123
+    rank_delta: 87
+    rank_delta_abs: 87
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1719,9 +1718,9 @@ results:
     sort_value: 0.879
     sort_std: 0.02
     global_rank: 37
-    paper_rank: 243
-    rank_delta: 206
-    rank_delta_abs: 206
+    paper_rank: 249
+    rank_delta: 212
+    rank_delta_abs: 212
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1789,9 +1788,9 @@ results:
     sort_value: 0.86
     sort_std: 0.034
     global_rank: 47
-    paper_rank: 181
-    rank_delta: 134
-    rank_delta_abs: 134
+    paper_rank: 186
+    rank_delta: 139
+    rank_delta_abs: 139
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1858,9 +1857,9 @@ results:
     sort_value: 0.8304
     sort_std: 0.0038
     global_rank: 55
-    paper_rank: 157
-    rank_delta: 102
-    rank_delta_abs: 102
+    paper_rank: 161
+    rank_delta: 106
+    rank_delta_abs: 106
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -1904,8 +1903,8 @@ results:
     at_pub_source_title: 16 Pre-training Molecular Graph Representation with 3D Geometry
     at_pub_source_date_iso: '2021-10-07'
     at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2021-10-07'
-    value_gap_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2024-07-16'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1916,17 +1915,17 @@ results:
     today_delta_significant: false
     true_value: 0.724
     true_std: 0.016
-    value_gap_source_arxiv: '2110.07728'
-    value_gap_source_title: 16 Pre-training Molecular Graph Representation with 3D
-      Geometry
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2407.12136'
+    value_gap_source_title: Molecular Topological Profile (MOLTOP) - Simple and Strong
+      Baseline for Molecular Graph Classification
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.724
     sort_std: 0.016
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1972,7 +1971,7 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2026-04-17'
+    value_gap_source_date_iso: '2026-05-07'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -1984,17 +1983,16 @@ results:
     today_delta_significant: false
     true_value: 0.724
     true_std: 0.004
-    value_gap_source_arxiv: '2604.16586'
-    value_gap_source_title: A Systematic Survey and Benchmark of Deep Learning for
-      Molecular Property Prediction in the Foundation Model Era
+    value_gap_source_arxiv: '2605.06462'
+    value_gap_source_title: Invariant-Based Diagnostics for Graph Benchmarks
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.724
     sort_std: 0.004
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 89
+    paper_rank: 89
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2062,8 +2060,8 @@ results:
     value_note: ''
     sort_value: 0.689
     sort_std: 0.002
-    global_rank: 176
-    paper_rank: 176
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2130,8 +2128,8 @@ results:
     value_note: ''
     sort_value: 0.686
     sort_std: 0.005
-    global_rank: 180
-    paper_rank: 180
+    global_rank: 185
+    paper_rank: 185
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2198,8 +2196,8 @@ results:
     value_note: ''
     sort_value: 0.684
     sort_std: 0.006
-    global_rank: 185
-    paper_rank: 185
+    global_rank: 190
+    paper_rank: 190
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2266,8 +2264,8 @@ results:
     value_note: ''
     sort_value: 0.656
     sort_std: 0.003
-    global_rank: 253
-    paper_rank: 253
+    global_rank: 259
+    paper_rank: 259
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2334,8 +2332,8 @@ results:
     value_note: ''
     sort_value: 0.65
     sort_std: 0.005
-    global_rank: 264
-    paper_rank: 264
+    global_rank: 270
+    paper_rank: 270
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2403,8 +2401,8 @@ results:
     value_note: ''
     sort_value: 0.633
     sort_std: 0.004
-    global_rank: 280
-    paper_rank: 280
+    global_rank: 286
+    paper_rank: 286
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2472,8 +2470,8 @@ results:
     value_note: ''
     sort_value: 0.633
     sort_std: 0.004
-    global_rank: 281
-    paper_rank: 281
+    global_rank: 287
+    paper_rank: 287
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2495,9 +2493,9 @@ results:
 - &id004
   dataset: Peptides-func
   rows:
-  - model: GINE / GIN
+  - model: S^2GCN
     model_key: s^2gcn
-    model_plain: GINE / GIN
+    model_plain: S^2GCN
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -2528,9 +2526,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GINE / GIN
+  - model: S^2 GCN + PE
     model_key: s^2 gcn + pe
-    model_plain: GINE / GIN
+    model_plain: S^2 GCN + PE
     value: 0.7311
     std: 0.0066
     metric: AP
@@ -2562,9 +2560,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GINE / GIN
+  - model: S4G
     model_key: s4g
-    model_plain: GINE / GIN
+    model_plain: S4G
     value: 0.7293
     std: 0.0004
     metric: AP
@@ -2652,9 +2650,9 @@ results:
     sort_value: 0.7261
     sort_std: 0.0011
     global_rank: 5
-    paper_rank: 157
-    rank_delta: 152
-    rank_delta_abs: 152
+    paper_rank: 156
+    rank_delta: 151
+    rank_delta_abs: 151
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2662,6 +2660,39 @@ results:
       Benchmark
     comparison_source_arxiv: '2309.00367'
     is_best: true
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7059
+    std: 0.0089
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.12358'
+    title: From Message-Passing to Linearized Graph Sequence Models
+    date: May 12, 2026
+    date_display: May 2026
+    date_iso: '2026-05-12'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 31
+    sort_value: 0.7059
+    sort_std: 0.0089
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GatedGCN
     model_key: gatedgcn
@@ -2719,10 +2750,10 @@ results:
     value_note: ''
     sort_value: 0.7006
     sort_std: 0.0033
-    global_rank: 40
-    paper_rank: 164
-    rank_delta: 124
-    rank_delta_abs: 124
+    global_rank: 41
+    paper_rank: 163
+    rank_delta: 122
+    rank_delta_abs: 122
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2788,10 +2819,10 @@ results:
     value_note: ''
     sort_value: 0.699
     sort_std: 0.003
-    global_rank: 41
-    paper_rank: 175
-    rank_delta: 134
-    rank_delta_abs: 134
+    global_rank: 42
+    paper_rank: 174
+    rank_delta: 132
+    rank_delta_abs: 132
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -2856,9 +2887,9 @@ results:
     sort_value: 0.6685
     sort_std: 0.0062
     global_rank: 87
-    paper_rank: 149
-    rank_delta: 62
-    rank_delta_abs: 62
+    paper_rank: 148
+    rank_delta: 61
+    rank_delta_abs: 61
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2902,7 +2933,7 @@ results:
     at_pub_source_title: Where Did the Gap Go? Reassessing the Long-Range Graph Benchmark
     at_pub_source_date_iso: '2023-09-01'
     at_pub_source_date_label: TMLR 2023
-    value_gap_source_date_iso: '2026-05-12'
+    value_gap_source_date_iso: '2026-05-13'
     value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.11230000000000007
     worse_than_at_pub: true
@@ -2914,8 +2945,9 @@ results:
     today_delta_significant: true
     true_value: 0.6621
     true_std: 0.0067
-    value_gap_source_arxiv: '2605.12358'
-    value_gap_source_title: From Message-Passing to Linearized Graph Sequence Models
+    value_gap_source_arxiv: '2605.13383'
+    value_gap_source_title: 'Beyond Oversquashing: Understanding Signal Propagation
+      in GNNs Via Observables'
     value_gap_source_is_current_paper: false
     value_gap: 0.11230000000000007
     has_value_note: false
@@ -2923,9 +2955,9 @@ results:
     sort_value: 0.6621
     sort_std: 0.0067
     global_rank: 92
-    paper_rank: 178
-    rank_delta: 86
-    rank_delta_abs: 86
+    paper_rank: 177
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2992,8 +3024,8 @@ results:
     value_note: ''
     sort_value: 0.6562
     sort_std: 0.0075
-    global_rank: 103
-    paper_rank: 126
+    global_rank: 102
+    paper_rank: 125
     rank_delta: 23
     rank_delta_abs: 23
     rank_delta_direction: worse
@@ -3060,8 +3092,8 @@ results:
     value_note: ''
     sort_value: 0.6459
     sort_std: 0.0005
-    global_rank: 124
-    paper_rank: 124
+    global_rank: 123
+    paper_rank: 123
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3127,8 +3159,8 @@ results:
     value_note: ''
     sort_value: 0.6384
     sort_std: 0.0121
-    global_rank: 132
-    paper_rank: 132
+    global_rank: 131
+    paper_rank: 131
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3194,13 +3226,47 @@ results:
     value_note: ''
     sort_value: 0.6326
     sort_std: 0.0126
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 133
+    paper_rank: 133
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.406
+    std: 0.0021
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2306.03561'
+    title: 'CIN++: Enhancing Topological Message Passing'
+    date: Jun 6, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-06'
+    venue: arXiv.org
+    codebase_url: https://github.com/twitter-research/cwn
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: For both datasets, we did not employ any feature augmentation
+      such as positional encoding.
+    is_global_top: true
+    global_rank: 196
+    sort_value: 0.406
+    sort_std: 0.0021
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -3217,9 +3283,9 @@ results:
 - &id003
   dataset: ToxCast
   rows:
-  - model: GIN (Supervised EdgePred)
+  - model: GeomGCL
     model_key: geomgcl
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: GeomGCL
     value: 0.763
     std: null
     metric: ROC-AUC
@@ -3251,9 +3317,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN (Supervised EdgePred)
+  - model: LiGhT DeepGPT
     model_key: light deepgpt
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: LiGhT DeepGPT
     value: 0.757
     std: 0.011
     metric: ROC-AUC
@@ -3284,9 +3350,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GIN (Supervised EdgePred)
+  - model: D&D-Node +vn
     model_key: d&d-node +vn
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: D&D-Node +vn
     value: 0.7556
     std: 0.0068
     metric: ROC-AUC
@@ -3377,9 +3443,9 @@ results:
     sort_value: 0.743
     sort_std: null
     global_rank: 12
-    paper_rank: 139
-    rank_delta: 127
-    rank_delta_abs: 127
+    paper_rank: 141
+    rank_delta: 129
+    rank_delta_abs: 129
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3445,9 +3511,9 @@ results:
     sort_value: 0.735
     sort_std: 0.002
     global_rank: 18
-    paper_rank: 108
-    rank_delta: 90
-    rank_delta_abs: 90
+    paper_rank: 109
+    rank_delta: 91
+    rank_delta_abs: 91
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3514,9 +3580,9 @@ results:
     sort_value: 0.711
     sort_std: 0.014
     global_rank: 37
-    paper_rank: 170
-    rank_delta: 133
-    rank_delta_abs: 133
+    paper_rank: 172
+    rank_delta: 135
+    rank_delta_abs: 135
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3583,9 +3649,9 @@ results:
     sort_value: 0.7095
     sort_std: 0.0027
     global_rank: 38
-    paper_rank: 101
-    rank_delta: 63
-    rank_delta_abs: 63
+    paper_rank: 102
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -3653,9 +3719,9 @@ results:
     sort_value: 0.708
     sort_std: 0.015
     global_rank: 40
-    paper_rank: 108
-    rank_delta: 68
-    rank_delta_abs: 68
+    paper_rank: 109
+    rank_delta: 69
+    rank_delta_abs: 69
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3723,9 +3789,9 @@ results:
     sort_value: 0.696
     sort_std: 0.023
     global_rank: 49
-    paper_rank: 170
-    rank_delta: 121
-    rank_delta_abs: 121
+    paper_rank: 172
+    rank_delta: 123
+    rank_delta_abs: 123
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3861,9 +3927,9 @@ results:
     sort_value: 0.689
     sort_std: 0.01
     global_rank: 58
-    paper_rank: 170
-    rank_delta: 112
-    rank_delta_abs: 112
+    paper_rank: 172
+    rank_delta: 114
+    rank_delta_abs: 114
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3930,9 +3996,9 @@ results:
     sort_value: 0.6775
     sort_std: 0.0041
     global_rank: 70
-    paper_rank: 116
-    rank_delta: 46
-    rank_delta_abs: 46
+    paper_rank: 117
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -3997,8 +4063,8 @@ results:
     value_note: ''
     sort_value: 0.655
     sort_std: 0.003
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4066,8 +4132,8 @@ results:
     value_note: ''
     sort_value: 0.644
     sort_std: 0.003
-    global_rank: 126
-    paper_rank: 126
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4134,8 +4200,8 @@ results:
     value_note: ''
     sort_value: 0.635
     sort_std: 0.003
-    global_rank: 143
-    paper_rank: 143
+    global_rank: 145
+    paper_rank: 145
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4181,8 +4247,8 @@ results:
     at_pub_source_title: 16 Pre-training Molecular Graph Representation with 3D Geometry
     at_pub_source_date_iso: '2021-10-07'
     at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2021-10-07'
-    value_gap_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2024-07-16'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -4193,17 +4259,17 @@ results:
     today_delta_significant: false
     true_value: 0.631
     true_std: 0.004
-    value_gap_source_arxiv: '2110.07728'
-    value_gap_source_title: 16 Pre-training Molecular Graph Representation with 3D
-      Geometry
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2407.12136'
+    value_gap_source_title: Molecular Topological Profile (MOLTOP) - Simple and Strong
+      Baseline for Molecular Graph Classification
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.631
     sort_std: 0.004
-    global_rank: 163
-    paper_rank: 163
+    global_rank: 166
+    paper_rank: 166
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4270,8 +4336,8 @@ results:
     value_note: ''
     sort_value: 0.604
     sort_std: 0.004
-    global_rank: 198
-    paper_rank: 198
+    global_rank: 202
+    paper_rank: 202
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4338,8 +4404,8 @@ results:
     value_note: ''
     sort_value: 0.603
     sort_std: 0.005
-    global_rank: 199
-    paper_rank: 199
+    global_rank: 203
+    paper_rank: 203
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4406,8 +4472,8 @@ results:
     value_note: ''
     sort_value: 0.6
     sort_std: 0.004
-    global_rank: 200
-    paper_rank: 200
+    global_rank: 204
+    paper_rank: 204
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4474,8 +4540,8 @@ results:
     value_note: ''
     sort_value: 0.595
     sort_std: 0.004
-    global_rank: 201
-    paper_rank: 201
+    global_rank: 205
+    paper_rank: 205
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4542,8 +4608,8 @@ results:
     value_note: ''
     sort_value: 0.595
     sort_std: 0.004
-    global_rank: 202
-    paper_rank: 202
+    global_rank: 206
+    paper_rank: 206
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4610,8 +4676,8 @@ results:
     value_note: ''
     sort_value: 0.575
     sort_std: 0.001
-    global_rank: 207
-    paper_rank: 207
+    global_rank: 211
+    paper_rank: 211
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

@@ -409,8 +409,8 @@ results:
     value_note: ''
     sort_value: 0.3362
     sort_std: 0.0055
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -477,8 +477,8 @@ results:
     value_note: ''
     sort_value: 0.2909
     sort_std: 0.0019
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -545,8 +545,8 @@ results:
     value_note: ''
     sort_value: 0.2889
     sort_std: 0.0016
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -613,8 +613,8 @@ results:
     value_note: ''
     sort_value: 0.2818
     sort_std: 0.0055
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -681,8 +681,8 @@ results:
     value_note: ''
     sort_value: 0.2743
     sort_std: 0.0023
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -749,8 +749,8 @@ results:
     value_note: ''
     sort_value: 0.2714
     sort_std: 0.0046
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -817,8 +817,8 @@ results:
     value_note: ''
     sort_value: 0.2709
     sort_std: 0.0036
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 17
+    paper_rank: 17
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -840,9 +840,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: SGCONV
+  - model: MixHop
     model_key: mixhop
-    model_plain: SGCONV
+    model_plain: MixHop
     value: 0.78
     std: 0.001
     metric: F1
@@ -906,9 +906,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SGCONV
+  - model: APPNP
     model_key: appnp
-    model_plain: SGCONV
+    model_plain: APPNP
     value: 0.754
     std: 0.001
     metric: F1
@@ -933,6 +933,39 @@ results:
     is_global_top: true
     global_rank: 3
     sort_value: 0.754
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.747
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: GraphSAGE is a graph convolutional neural network.
+    is_global_top: true
+    global_rank: 4
+    sort_value: 0.747
     sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
@@ -1696,9 +1729,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGCONV
+  - model: ACM-GCN
     model_key: acm-gcn
-    model_plain: SGCONV
+    model_plain: ACM-GCN
     value: 0.8894
     std: 0.0054
     metric: F1
@@ -1729,9 +1762,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGCONV
+  - model: APPNP
     model_key: appnp
-    model_plain: SGCONV
+    model_plain: APPNP
     value: 0.888
     std: 0.001
     metric: F1
@@ -1762,9 +1795,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGCONV
+  - model: GraphSAGE
     model_key: graphsage
-    model_plain: SGCONV
+    model_plain: GraphSAGE
     value: 0.881
     std: 0.001
     metric: F1
@@ -1927,6 +1960,39 @@ results:
     comparison_type: behind
     comparison_source_title: Multi-Scale Attributed Node Embedding
     comparison_source_arxiv: '1909.13021'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.8537
+    std: 0.0074
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.05894'
+    title: Large Language Model Meets Graph Neural Network in Knowledge Distillation
+    date: Feb 8, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-08'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 14
+    sort_value: 0.8537
+    sort_std: 0.0074
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SAGE
@@ -3314,9 +3380,9 @@ results:
 - &id003
   dataset: PubMed
   rows:
-  - model: SGCONV
+  - model: MixHop
     model_key: mixhop
-    model_plain: SGCONV
+    model_plain: MixHop
     value: 0.891
     std: 0.001
     metric: F1
@@ -3347,9 +3413,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGCONV
+  - model: APPNP
     model_key: appnp
-    model_plain: SGCONV
+    model_plain: APPNP
     value: 0.884
     std: 0.001
     metric: F1
@@ -3512,6 +3578,39 @@ results:
     comparison_type: behind
     comparison_source_title: Multi-Scale Attributed Node Embedding
     comparison_source_arxiv: '1909.13021'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.864
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 6
+    sort_value: 0.864
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: TokenGT
@@ -4535,8 +4634,8 @@ results:
     value_note: ''
     sort_value: 0.5946
     sort_std: 0.0112
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4603,8 +4702,8 @@ results:
     value_note: ''
     sort_value: 0.5784
     sort_std: 0.0162
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4671,8 +4770,8 @@ results:
     value_note: ''
     sort_value: 0.5757
     sort_std: 0.0296
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4739,8 +4838,8 @@ results:
     value_note: ''
     sort_value: 0.5459
     sort_std: 0.0393
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4807,8 +4906,8 @@ results:
     value_note: ''
     sort_value: 0.5135
     sort_std: 0.0344
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -4875,8 +4974,8 @@ results:
     value_note: ''
     sort_value: 0.5081
     sort_std: 0.036
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

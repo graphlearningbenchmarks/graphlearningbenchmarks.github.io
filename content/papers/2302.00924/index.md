@@ -63,9 +63,9 @@ results:
 - &id002
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -96,9 +96,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -129,9 +129,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -198,8 +198,8 @@ results:
     at_pub_source_title: Graph Attention Multi-Layer Perceptron
     at_pub_source_date_iso: '2022-06-09'
     at_pub_source_date_label: KDD 2022
-    value_gap_source_date_iso: '2023-02-02'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2026-03-17'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.0010000000000000009
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -209,16 +209,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.995
-    true_std: null
-    value_gap_source_arxiv: '2302.00924'
-    value_gap_source_title: 'LMC: Fast Training of GNNs via subgraph-wise sampling
-      with Provable Convergence'
-    value_gap_source_is_current_paper: true
+    true_std: 0.0
+    value_gap_source_arxiv: '2603.16849'
+    value_gap_source_title: 'GIST: Gauge-Invariant Spectral Transformers for Scalable
+      Graph Neural Operators'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.995
-    sort_std: null
+    sort_std: 0.0
     global_rank: 4
     paper_rank: 4
     rank_delta: 0
@@ -286,8 +286,8 @@ results:
     value_note: ''
     sort_value: 0.994
     sort_std: null
-    global_rank: 8
-    paper_rank: 9
+    global_rank: 10
+    paper_rank: 11
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -354,8 +354,8 @@ results:
     value_note: ''
     sort_value: 0.9936
     sort_std: 0.02
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -364,6 +364,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.985
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.985
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: VR-GCN
     model_key: vr-gcn
@@ -402,8 +435,8 @@ results:
       Large Graph Convolutional Networks'
     at_pub_source_date_iso: '2019-05-20'
     at_pub_source_date_label: KDD 2019
-    value_gap_source_date_iso: '2020-07-04'
-    value_gap_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2025-05-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.122
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -414,18 +447,18 @@ results:
     today_delta_significant: true
     true_value: 0.978
     true_std: null
-    value_gap_source_arxiv: '2007.02133'
-    value_gap_source_title: Simple and Deep Graph Convolutional Networks
+    value_gap_source_arxiv: '2505.02020'
+    value_gap_source_title: Wide & Deep Learning for Node Classification
     value_gap_source_is_current_paper: false
     value_gap: 0.122
     has_value_note: false
     value_note: ''
     sort_value: 0.978
     sort_std: null
-    global_rank: 39
-    paper_rank: 87
-    rank_delta: 48
-    rank_delta_abs: 48
+    global_rank: 42
+    paper_rank: 95
+    rank_delta: 53
+    rank_delta_abs: 53
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -491,8 +524,8 @@ results:
     value_note: ''
     sort_value: 0.97
     sort_std: null
-    global_rank: 60
-    paper_rank: 60
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -560,10 +593,10 @@ results:
     value_note: ''
     sort_value: 0.958
     sort_std: 0.001
-    global_rank: 70
-    paper_rank: 144
-    rank_delta: 74
-    rank_delta_abs: 74
+    global_rank: 78
+    paper_rank: 155
+    rank_delta: 77
+    rank_delta_abs: 77
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -629,8 +662,8 @@ results:
     value_note: ''
     sort_value: 0.9544
     sort_std: 0.02
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 81
+    paper_rank: 81
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -652,9 +685,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: Cluster-GCN (2019)
+  - model: Node Sampled Soup
     model_key: node sampled soup
-    model_plain: Cluster-GCN (2019)
+    model_plain: Node Sampled Soup
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -686,9 +719,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: EnGCN
     model_key: engcn
-    model_plain: Cluster-GCN (2019)
+    model_plain: EnGCN
     value: 0.9714
     std: 0.0003
     metric: F1
@@ -720,9 +753,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: SAGN+SLE
     model_key: sagn+sle
-    model_plain: Cluster-GCN (2019)
+    model_plain: SAGN+SLE
     value: 0.971
     std: 0.0
     metric: F1
@@ -1017,9 +1050,9 @@ results:
     sort_value: 0.966
     sort_std: null
     global_rank: 19
-    paper_rank: 61
-    rank_delta: 42
-    rank_delta_abs: 42
+    paper_rank: 64
+    rank_delta: 45
+    rank_delta_abs: 45
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1086,8 +1119,8 @@ results:
     value_note: ''
     sort_value: 0.966
     sort_std: null
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1155,10 +1188,10 @@ results:
     value_note: ''
     sort_value: 0.964
     sort_std: 0.001
-    global_rank: 28
-    paper_rank: 89
-    rank_delta: 61
-    rank_delta_abs: 61
+    global_rank: 31
+    paper_rank: 95
+    rank_delta: 64
+    rank_delta_abs: 64
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1224,8 +1257,8 @@ results:
     value_note: ''
     sort_value: 0.9544
     sort_std: 0.02
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1235,6 +1268,39 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: true
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.953
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.10803'
+    title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    date: May 22, 2022
+    date_display: May 2022
+    date_iso: '2022-05-22'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/THUDM/GraphMAE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 71
+    sort_value: 0.953
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: FastGCN
     model_key: fastgcn
     model_plain: FastGCN
@@ -1293,8 +1359,8 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 113
-    paper_rank: 113
+    global_rank: 118
+    paper_rank: 118
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1362,16 +1428,50 @@ results:
     value_note: ''
     sort_value: 0.932
     sort_std: 0.001
-    global_rank: 125
-    paper_rank: 130
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 132
+    paper_rank: 138
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Sampling methods for efficient training of graph convolutional
       networks: A survey'
     comparison_source_arxiv: '2103.05872'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7435
+    std: 0.0016
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2512.14908'
+    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
+      Graphs'
+    date: Dec 16, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/atlaspaper16/ATLAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 165
+    sort_value: 0.7435
+    sort_std: 0.0016
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: F1

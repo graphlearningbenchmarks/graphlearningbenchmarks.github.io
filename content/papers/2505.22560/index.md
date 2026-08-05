@@ -72,9 +72,9 @@ results:
 - &id001
   dataset: Ribonanza
   rows:
-  - model: G-Heyna
+  - model: DualEquiNet
     model_key: dualequinet
-    model_plain: G-Heyna
+    model_plain: DualEquiNet
     value: 0.505
     std: 0.024
     metric: RMSE

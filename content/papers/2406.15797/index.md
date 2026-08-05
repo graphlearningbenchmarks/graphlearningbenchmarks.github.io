@@ -83,6 +83,72 @@ results:
 - &id003
   dataset: ACM
   rows:
+  - model: SPGRL
+    model_key: spgrl
+    model_plain: SPGRL
+    value: 0.9398
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2209.00793'
+    title: Structure-Preserving Graph Representation Learning
+    date: Sep 2, 2022
+    date_display: Sep 2022
+    date_iso: '2022-09-02'
+    venue: Industrial Conference on Data Mining
+    codebase_url: https://github.com/uestc-lese/SPGRL
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9398
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: CDC
+    model_key: cdc
+    model_plain: CDC
+    value: 0.936
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2403.03670'
+    title: 'CDC: A Simple Framework for Complex Data Clustering'
+    date: Mar 6, 2024
+    date_display: Mar 2024
+    date_iso: '2024-03-06'
+    venue: IEEE Transactions on Neural Networks and Learning Systems
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.936
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: SynC SSL
     model_key: sync ssl
     model_plain: SynC SSL
@@ -140,8 +206,8 @@ results:
     value_note: ''
     sort_value: 0.9274
     sort_std: 0.0004
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -149,7 +215,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: IDCRN
     model_key: idcrn
@@ -208,8 +274,8 @@ results:
     value_note: ''
     sort_value: 0.926
     sort_std: 0.0008
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -276,8 +342,8 @@ results:
     value_note: ''
     sort_value: 0.9255
     sort_std: 0.0009
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -344,8 +410,8 @@ results:
     value_note: ''
     sort_value: 0.9247
     sort_std: 0.0026
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -353,7 +419,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: R^2FGC
     model_key: r^2fgc
@@ -412,8 +478,8 @@ results:
     value_note: ''
     sort_value: 0.9245
     sort_std: 0.0018
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -480,8 +546,8 @@ results:
     value_note: ''
     sort_value: 0.9194
     sort_std: 0.002
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -548,8 +614,8 @@ results:
     value_note: ''
     sort_value: 0.9149
     sort_std: 0.0012
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -616,13 +682,46 @@ results:
     value_note: ''
     sort_value: 0.908
     sort_std: 0.002
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9049
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2007.02265'
+    title: 'AM-GCN: Adaptive Multi-channel Graph Convolutional Networks'
+    date: Jul 5, 2020
+    date_display: Jul 2020
+    date_iso: '2020-07-05'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/thunlp/OpenNE
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 17
+    sort_value: 0.9049
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -684,8 +783,8 @@ results:
     value_note: ''
     sort_value: 0.9042
     sort_std: 0.0019
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -752,8 +851,8 @@ results:
     value_note: ''
     sort_value: 0.8974
     sort_std: 0.0045
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -820,8 +919,8 @@ results:
     value_note: ''
     sort_value: 0.8917
     sort_std: 0.0093
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -888,8 +987,8 @@ results:
     value_note: ''
     sort_value: 0.8881
     sort_std: 0.0073
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -956,8 +1055,8 @@ results:
     value_note: ''
     sort_value: 0.8871
     sort_std: 0.0091
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1024,8 +1123,8 @@ results:
     value_note: ''
     sort_value: 0.8465
     sort_std: 0.0133
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1092,8 +1191,8 @@ results:
     value_note: ''
     sort_value: 0.8243
     sort_std: 0.0251
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1115,6 +1214,108 @@ results:
 - &id002
   dataset: DBLP
   rows:
+  - model: AUG_bal
+    model_key: aug_bal
+    model_plain: AUG_bal
+    value: 0.9454
+    std: 0.0123
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2302.14061'
+    title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+      Networks
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9454
+    sort_std: 0.0123
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AUG_min
+    model_key: aug_min
+    model_plain: AUG_min
+    value: 0.9375
+    std: 0.0115
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2302.14061'
+    title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+      Networks
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9375
+    sort_std: 0.0115
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AUG_ran
+    model_key: aug_ran
+    model_plain: AUG_ran
+    value: 0.9368
+    std: 0.0108
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2302.14061'
+    title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+      Networks
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9368
+    sort_std: 0.0108
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: SynC SSL
     model_key: sync ssl
     model_plain: SynC SSL
@@ -1172,8 +1373,8 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: 0.0017
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1181,7 +1382,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: IDCRN
     model_key: idcrn
@@ -1219,8 +1420,8 @@ results:
     at_pub_source_title: Improved Dual Correlation Reduction Network
     at_pub_source_date_iso: '2022-02-25'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-02-25'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-06-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1231,16 +1432,17 @@ results:
     today_delta_significant: false
     true_value: 0.8147
     true_std: 0.002
-    value_gap_source_arxiv: '2202.12533'
-    value_gap_source_title: Improved Dual Correlation Reduction Network
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2406.15797'
+    value_gap_source_title: 'SynC: Synergistic Boosting of Structure and Representation
+      for Deep Graph Clustering'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8147
     sort_std: 0.002
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1307,8 +1509,8 @@ results:
     value_note: ''
     sort_value: 0.8071
     sort_std: 0.0012
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1375,8 +1577,8 @@ results:
     value_note: ''
     sort_value: 0.8054
     sort_std: 0.0019
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1443,8 +1645,8 @@ results:
     value_note: ''
     sort_value: 0.799
     sort_std: 0.0045
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1511,8 +1713,8 @@ results:
     value_note: ''
     sort_value: 0.7928
     sort_std: 0.0026
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1579,8 +1781,8 @@ results:
     value_note: ''
     sort_value: 0.7877
     sort_std: 0.004
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1647,8 +1849,8 @@ results:
     value_note: ''
     sort_value: 0.7719
     sort_std: 0.0054
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1715,8 +1917,8 @@ results:
     value_note: ''
     sort_value: 0.757
     sort_std: 0.008
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1724,6 +1926,39 @@ results:
     comparison_type: improved
     comparison_source_title: Deep Temporal Graph Clustering
     comparison_source_arxiv: '2305.10738'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.732
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.10866'
+    title: Unsupervised Network Embedding Beyond Homophily
+    date: Mar 21, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-21'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/zhiqiangzhongddu/SELENE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 39
+    sort_value: 0.732
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: HSAN
@@ -1783,8 +2018,8 @@ results:
     value_note: ''
     sort_value: 0.7113
     sort_std: 0.0123
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1851,8 +2086,8 @@ results:
     value_note: ''
     sort_value: 0.6771
     sort_std: 0.0151
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1919,8 +2154,8 @@ results:
     value_note: ''
     sort_value: 0.6706
     sort_std: 0.0173
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1987,8 +2222,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: 0.0429
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2055,8 +2290,8 @@ results:
     value_note: ''
     sort_value: 0.6141
     sort_std: 0.0223
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2078,9 +2313,9 @@ results:
 - &id001
   dataset: Texas
   rows:
-  - model: R-SoftGraphAIN
+  - model: P^2GNN
     model_key: p^2gnn
-    model_plain: R-SoftGraphAIN
+    model_plain: P^2GNN
     value: 0.9672
     std: 0.0147
     metric: Accuracy
@@ -2111,9 +2346,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: DoG
     model_key: dog
-    model_plain: R-SoftGraphAIN
+    model_plain: DoG
     value: 0.966
     std: 0.021
     metric: Accuracy
@@ -2145,9 +2380,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: GPF-plus
     model_key: gpf-plus
-    model_plain: R-SoftGraphAIN
+    model_plain: GPF-plus
     value: 0.9583
     std: 0.0419
     metric: Accuracy
@@ -2177,6 +2412,72 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.923
+    std: 0.007
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 47
+    sort_value: 0.923
+    sort_std: 0.007
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9001
+    std: 0.023
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11762'
+    title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    date: Oct 18, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-18'
+    venue: The Web Conference
+    codebase_url: https://github.com/SDS-Lab/QW_Loss
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 76
+    sort_value: 0.9001
+    sort_std: 0.023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: SynC
     model_key: sync
@@ -2235,8 +2536,8 @@ results:
     value_note: ''
     sort_value: 0.6437
     sort_std: 0.008
-    global_rank: 484
-    paper_rank: 484
+    global_rank: 571
+    paper_rank: 571
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2303,8 +2604,8 @@ results:
     value_note: ''
     sort_value: 0.6126
     sort_std: 0.0045
-    global_rank: 521
-    paper_rank: 521
+    global_rank: 615
+    paper_rank: 615
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2371,8 +2672,8 @@ results:
     value_note: ''
     sort_value: 0.606
     sort_std: 0.0079
-    global_rank: 527
-    paper_rank: 527
+    global_rank: 622
+    paper_rank: 622
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2439,8 +2740,8 @@ results:
     value_note: ''
     sort_value: 0.5978
     sort_std: 0.0036
-    global_rank: 535
-    paper_rank: 535
+    global_rank: 634
+    paper_rank: 634
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2507,8 +2808,8 @@ results:
     value_note: ''
     sort_value: 0.594
     sort_std: 0.0171
-    global_rank: 542
-    paper_rank: 542
+    global_rank: 642
+    paper_rank: 642
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2530,9 +2831,9 @@ results:
 - &id004
   dataset: UAT
   rows:
-  - model: K-means
+  - model: SCAGC
     model_key: scagc
-    model_plain: K-means
+    model_plain: SCAGC
     value: 0.7277
     std: 0.0016
     metric: F1
@@ -2630,9 +2931,9 @@ results:
     comparison_source_arxiv: '2205.07865'
     is_best: true
     is_std_outlier: false
-  - model: K-means
+  - model: AGE
     model_key: age
-    model_plain: K-means
+    model_plain: AGE
     value: 0.7174
     std: 0.0093
     metric: F1
@@ -3448,8 +3749,8 @@ results:
       Augmentation'
     at_pub_source_date_iso: '2022-12-07'
     at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-12-07'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-06-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3460,10 +3761,10 @@ results:
     today_delta_significant: false
     true_value: 0.4481
     true_std: 0.0087
-    value_gap_source_arxiv: '2212.03559'
-    value_gap_source_title: 'GraphLearner: Graph Node Clustering with Fully Learnable
-      Augmentation'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2406.15797'
+    value_gap_source_title: 'SynC: Synergistic Boosting of Structure and Representation
+      for Deep Graph Clustering'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''

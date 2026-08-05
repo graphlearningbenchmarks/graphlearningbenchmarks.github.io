@@ -77,42 +77,42 @@ results:
 - &id001
   dataset: PCQM-Contact
   rows:
-  - model: differential encoding
-    model_key: exphormer
-    model_plain: differential encoding
-    value: 0.4737
-    std: 0.0024
+  - model: FloydNet
+    model_key: floydnet
+    model_plain: FloydNet
+    value: 0.6143
+    std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: true
+    is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2411.12732'
-    title: Benchmarking Positional Encodings for GNNs and Graph Transformers
-    date: Nov 19, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-19'
-    venue: Knowledge Discovery and Data Mining
-    codebase_url: https://github.com/ETH-DISCO/Benchmarking-PEs
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.4737
-    sort_std: 0.0024
+    sort_value: 0.6143
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: differential encoding
-    model_key: exphormer + lappe
-    model_plain: differential encoding
+  - model: Exphormer
+    model_key: exphormer
+    model_plain: Exphormer
     value: 0.4737
     std: 0.0024
     metric: MRR
@@ -141,22 +141,22 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: differential encoding
-    model_key: graphgps + rwse
-    model_plain: differential encoding
-    value: 0.4685
-    std: 0.0009
+  - model: Exphormer + LapPE
+    model_key: exphormer + lappe
+    model_plain: Exphormer + LapPE
+    value: 0.4737
+    std: 0.0024
     metric: MRR
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
     arxiv_id: '2411.12732'
     title: Benchmarking Positional Encodings for GNNs and Graph Transformers
     date: Nov 19, 2024
@@ -169,11 +169,80 @@ results:
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.4685
-    sort_std: 0.0009
+    sort_value: 0.4737
+    sort_std: 0.0024
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GPS
+    model_key: gps
+    model_plain: GPS
+    value: 0.3543
+    std: 0.0004
+    paper_value: 0.3543
+    paper_std: 0.0004
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: PE is 'OGE-Aug (ours)'
+    table_ref: Table LRGB
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Standard split for PCQM-Contact link prediction task
+    date: Oct 13, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-13'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4703
+    at_pub_std: 0.0014
+    at_pub_source_arxiv: '2406.03386'
+    at_pub_source_title: Learning Long Range Dependencies on Graphs via Random Walks
+    at_pub_source_date_iso: '2024-06-05'
+    at_pub_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2024-06-05'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.11599999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4703
+    true_std: 0.0014
+    value_gap_source_arxiv: '2406.03386'
+    value_gap_source_title: Learning Long Range Dependencies on Graphs via Random
+      Walks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.11599999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4703
+    sort_std: 0.0014
+    global_rank: 5
+    paper_rank: 36
+    rank_delta: 31
+    rank_delta_abs: 31
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Learning Long Range Dependencies on Graphs via Random
+      Walks
+    comparison_source_arxiv: '2406.03386'
     is_best: false
     is_std_outlier: false
   - model: GatedGCN
@@ -232,10 +301,10 @@ results:
     value_note: ''
     sort_value: 0.467
     sort_std: 0.0004
-    global_rank: 5
-    paper_rank: 47
-    rank_delta: 42
-    rank_delta_abs: 42
+    global_rank: 8
+    paper_rank: 77
+    rank_delta: 69
+    rank_delta_abs: 69
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -300,13 +369,46 @@ results:
     value_note: ''
     sort_value: 0.4617
     sort_std: 0.0005
-    global_rank: 12
-    paper_rank: 47
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 15
+    paper_rank: 78
+    rank_delta: 63
+    rank_delta_abs: 63
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.4617
+    std: 0.0005
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.03386'
+    title: Learning Long Range Dependencies on Graphs via Random Walks
+    date: Jun 5, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-05'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/BorgwardtLab/NeuralWalker
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.4617
+    sort_std: 0.0005
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -367,80 +469,11 @@ results:
     value_note: ''
     sort_value: 0.4526
     sort_std: 0.0006
-    global_rank: 24
-    paper_rank: 46
-    rank_delta: 22
-    rank_delta_abs: 22
+    global_rank: 28
+    paper_rank: 76
+    rank_delta: 48
+    rank_delta_abs: 48
     rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Learning Long Range Dependencies on Graphs via Random
-      Walks
-    comparison_source_arxiv: '2406.03386'
-    is_best: false
-    is_std_outlier: false
-  - model: GPS
-    model_key: gps
-    model_plain: GPS
-    value: 0.3543
-    std: 0.0004
-    paper_value: 0.3543
-    paper_std: 0.0004
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: PE is 'OGE-Aug (ours)'
-    table_ref: Table LRGB
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: link_prediction
-    protocol_decision: standard
-    protocol_note: Standard split for PCQM-Contact link prediction task
-    date: Oct 13, 2024
-    date_display: Oct 2024
-    date_iso: '2024-10-13'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.4703
-    at_pub_std: 0.0014
-    at_pub_source_arxiv: '2406.03386'
-    at_pub_source_title: Learning Long Range Dependencies on Graphs via Random Walks
-    at_pub_source_date_iso: '2024-06-05'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-10-13'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.11599999999999999
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3543
-    true_std: 0.0004
-    value_gap_source_arxiv: '2410.09737'
-    value_gap_source_title: Towards Stable, Globally Expressive Graph Representations
-      with Laplacian Eigenvectors
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3543
-    sort_std: 0.0004
-    global_rank: 33
-    paper_rank: 33
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Learning Long Range Dependencies on Graphs via Random
@@ -505,8 +538,8 @@ results:
     value_note: ''
     sort_value: 0.335
     sort_std: 0.0003
-    global_rank: 41
-    paper_rank: 41
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -573,8 +606,8 @@ results:
     value_note: ''
     sort_value: 0.3174
     sort_std: 0.002
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

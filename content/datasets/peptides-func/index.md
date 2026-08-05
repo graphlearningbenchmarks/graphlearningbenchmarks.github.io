@@ -12,7 +12,7 @@ stats:
   avg_nodes: null
   avg_edges: null
   num_classes: 10
-result_count: 255
+result_count: 254
 best_model:
   model: S^2 GCN + PE
   value: 0.7311
@@ -1727,18 +1727,18 @@ variants:
     - 0.0043
     - null
     - null
-  row_count: 255
+  row_count: 254
   rows_json: /data/datasets/peptides-func/standard-split-rows.json
   chart_json: /data/datasets/peptides-func/standard-split-chart.json
   arch_counts:
-    gnn: 125
+    gnn: 124
     hybrid: 45
     graph_transformer: 47
     llm: 0
     walk: 1
     traditional: 26
   metric_counts:
-  - 230
+  - 229
   - 17
   - 8
   milestones: &id001

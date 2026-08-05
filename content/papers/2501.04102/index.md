@@ -79,9 +79,9 @@ results:
 - &id001
   dataset: ogbg-molhiv
   rows:
-  - model: SigGate-GT
+  - model: Multi-RF Fusion with Multi-GNN Blending
     model_key: multi-rf fusion with multi-gnn blending
-    model_plain: SigGate-GT
+    model_plain: Multi-RF Fusion with Multi-GNN Blending
     value: 0.8476
     std: 0.0002
     metric: ROC-AUC
@@ -113,9 +113,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: HyperFusion
     model_key: hyperfusion
-    model_plain: SigGate-GT
+    model_plain: HyperFusion
     value: 0.8475
     std: 0.0003
     metric: ROC-AUC
@@ -146,9 +146,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: PAS+FPs
     model_key: pas+fps
-    model_plain: SigGate-GT
+    model_plain: PAS+FPs
     value: 0.842
     std: 0.0015
     metric: ROC-AUC
@@ -174,6 +174,39 @@ results:
     global_rank: 3
     sort_value: 0.842
     sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.809
+    std: 0.016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.809
+    sort_std: 0.016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -216,8 +249,8 @@ results:
       with I$^2$-GNNs
     at_pub_source_date_iso: '2022-10-22'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-10-22'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-04-20'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: 0.058599999999999985
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -228,9 +261,8 @@ results:
     today_delta_significant: true
     true_value: 0.8039
     true_std: 0.009
-    value_gap_source_arxiv: '2210.13978'
-    value_gap_source_title: Boosting the Cycle Counting Power of Graph Neural Networks
-      with I$^2$-GNNs
+    value_gap_source_arxiv: '2404.13344'
+    value_gap_source_title: 'GRANOLA: Adaptive Normalization for Graph Neural Networks'
     value_gap_source_is_current_paper: false
     value_gap: 0.058599999999999985
     has_value_note: false
@@ -489,8 +521,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-12-09'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2025-02-11'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -500,16 +532,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.7908
-    true_std: 0.0247
-    value_gap_source_arxiv: '2501.04102'
-    value_gap_source_title: Enhancing Distribution and Label Consistency for Graph
-      Out-of-Distribution Generalization
-    value_gap_source_is_current_paper: true
+    true_std: null
+    value_gap_source_arxiv: '2502.07968'
+    value_gap_source_title: Generative Risk Minimization for Out-of-Distribution Generalization
+      on Graphs
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7908
-    sort_std: 0.0247
+    sort_std: null
     global_rank: 65
     paper_rank: 65
     rank_delta: 0
@@ -517,6 +549,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.778
+    std: 0.0182
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 510.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.12787'
+    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    date: Jan 30, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-30'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 120
+    sort_value: 0.778
+    sort_std: 0.0182
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -624,8 +689,8 @@ results:
     at_pub_source_title: Discovering Invariant Rationales for Graph Neural Networks
     at_pub_source_date_iso: '2022-01-30'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2025-02-11'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -635,15 +700,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.7705
-    true_std: 0.0057
-    value_gap_source_arxiv: '2201.12872'
-    value_gap_source_title: Discovering Invariant Rationales for Graph Neural Networks
+    true_std: null
+    value_gap_source_arxiv: '2502.07968'
+    value_gap_source_title: Generative Risk Minimization for Out-of-Distribution Generalization
+      on Graphs
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7705
-    sort_std: 0.0057
+    sort_std: null
     global_rank: 164
     paper_rank: 164
     rank_delta: 0
@@ -691,8 +757,8 @@ results:
     at_pub_source_title: Discovering Invariant Rationales for Graph Neural Networks
     at_pub_source_date_iso: '2022-01-30'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-12-09'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -702,15 +768,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.762
-    true_std: 0.0114
-    value_gap_source_arxiv: '2201.12872'
-    value_gap_source_title: Discovering Invariant Rationales for Graph Neural Networks
-    value_gap_source_is_current_paper: false
+    true_std: 0.0254
+    value_gap_source_arxiv: '2501.04102'
+    value_gap_source_title: Enhancing Distribution and Label Consistency for Graph
+      Out-of-Distribution Generalization
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.762
-    sort_std: 0.0114
+    sort_std: 0.0254
     global_rank: 206
     paper_rank: 206
     rank_delta: 0
@@ -758,8 +825,8 @@ results:
     at_pub_source_title: Discovering Invariant Rationales for Graph Neural Networks
     at_pub_source_date_iso: '2022-01-30'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-12-09'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -769,15 +836,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.7562
-    true_std: 0.0079
-    value_gap_source_arxiv: '2201.12872'
-    value_gap_source_title: Discovering Invariant Rationales for Graph Neural Networks
-    value_gap_source_is_current_paper: false
+    true_std: 0.0331
+    value_gap_source_arxiv: '2501.04102'
+    value_gap_source_title: Enhancing Distribution and Label Consistency for Graph
+      Out-of-Distribution Generalization
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7562
-    sort_std: 0.0079
+    sort_std: 0.0331
     global_rank: 235
     paper_rank: 235
     rank_delta: 0
@@ -825,8 +893,8 @@ results:
     at_pub_source_title: Discovering Invariant Rationales for Graph Neural Networks
     at_pub_source_date_iso: '2022-01-30'
     at_pub_source_date_label: ICLR 2022
-    value_gap_source_date_iso: '2022-01-30'
-    value_gap_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2024-12-09'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -836,15 +904,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.7446
-    true_std: 0.0274
-    value_gap_source_arxiv: '2201.12872'
-    value_gap_source_title: Discovering Invariant Rationales for Graph Neural Networks
-    value_gap_source_is_current_paper: false
+    true_std: 0.0105
+    value_gap_source_arxiv: '2501.04102'
+    value_gap_source_title: Enhancing Distribution and Label Consistency for Graph
+      Out-of-Distribution Generalization
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7446
-    sort_std: 0.0274
+    sort_std: 0.0105
     global_rank: 264
     paper_rank: 264
     rank_delta: 0

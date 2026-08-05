@@ -54,8 +54,8 @@ proposed_models:
 - Student_AT
 - Student_FitNet
 - Student_LSP
-mrr: 0.0141
-adjusted_mrr: 0.0047
+mrr: 0.0127
+adjusted_mrr: 0.0042
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -72,9 +72,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -105,9 +105,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -138,9 +138,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -207,33 +207,67 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-03-23'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.976
+    today_delta_significant: true
+    true_value: 0.9941
     true_std: null
-    value_gap_source_arxiv: '2003.10477'
-    value_gap_source_title: Distilling Knowledge from Graph Convolutional Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.018100000000000005
     has_value_note: false
     value_note: ''
-    sort_value: 0.976
+    sort_value: 0.9941
     sort_std: null
-    global_rank: 45
-    paper_rank: 45
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    global_rank: 8
+    paper_rank: 49
+    rank_delta: 41
+    rank_delta_abs: 41
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.985
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.985
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -294,8 +328,8 @@ results:
     value_note: ''
     sort_value: 0.961
     sort_std: null
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -361,8 +395,8 @@ results:
     value_note: ''
     sort_value: 0.957
     sort_std: null
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -428,8 +462,8 @@ results:
     value_note: ''
     sort_value: 0.956
     sort_std: null
-    global_rank: 72
-    paper_rank: 72
+    global_rank: 80
+    paper_rank: 80
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -495,8 +529,8 @@ results:
     value_note: ''
     sort_value: 0.954
     sort_std: null
-    global_rank: 74
-    paper_rank: 74
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

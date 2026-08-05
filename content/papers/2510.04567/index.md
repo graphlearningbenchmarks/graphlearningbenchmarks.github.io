@@ -72,9 +72,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -106,9 +106,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -140,9 +140,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -230,15 +230,49 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 33
-    paper_rank: 945
-    rank_delta: 912
-    rank_delta_abs: 912
+    global_rank: 42
+    paper_rank: 961
+    rank_delta: 919
+    rank_delta_abs: 919
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Understanding Heterophily for Graph Neural Networks
     comparison_source_arxiv: '2401.09125'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8911
+    std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 75
+    sort_value: 0.8911
+    sort_std: 0.0012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -299,10 +333,10 @@ results:
     value_note: ''
     sort_value: 0.8897
     sort_std: null
-    global_rank: 72
-    paper_rank: 935
-    rank_delta: 863
-    rank_delta_abs: 863
+    global_rank: 81
+    paper_rank: 951
+    rank_delta: 870
+    rank_delta_abs: 870
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -368,10 +402,10 @@ results:
     value_note: ''
     sort_value: 0.8653
     sort_std: null
-    global_rank: 231
-    paper_rank: 981
-    rank_delta: 750
-    rank_delta_abs: 750
+    global_rank: 242
+    paper_rank: 998
+    rank_delta: 756
+    rank_delta_abs: 756
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -436,10 +470,10 @@ results:
     value_note: ''
     sort_value: 0.863
     sort_std: 0.002
-    global_rank: 245
-    paper_rank: 985
-    rank_delta: 740
-    rank_delta_abs: 740
+    global_rank: 256
+    paper_rank: 1002
+    rank_delta: 746
+    rank_delta_abs: 746
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -505,10 +539,10 @@ results:
     value_note: ''
     sort_value: 0.7941
     sort_std: null
-    global_rank: 795
-    paper_rank: 1048
-    rank_delta: 253
-    rank_delta_abs: 253
+    global_rank: 808
+    paper_rank: 1065
+    rank_delta: 257
+    rank_delta_abs: 257
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -575,10 +609,10 @@ results:
     value_note: ''
     sort_value: 0.7938
     sort_std: 0.0016
-    global_rank: 800
-    paper_rank: 906
-    rank_delta: 106
-    rank_delta_abs: 106
+    global_rank: 813
+    paper_rank: 922
+    rank_delta: 109
+    rank_delta_abs: 109
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -643,10 +677,10 @@ results:
     value_note: ''
     sort_value: 0.7768
     sort_std: null
-    global_rank: 840
-    paper_rank: 1047
-    rank_delta: 207
-    rank_delta_abs: 207
+    global_rank: 853
+    paper_rank: 1064
+    rank_delta: 211
+    rank_delta_abs: 211
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -711,8 +745,8 @@ results:
     value_note: ''
     sort_value: 0.7322
     sort_std: 0.038
-    global_rank: 903
-    paper_rank: 903
+    global_rank: 919
+    paper_rank: 919
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -779,8 +813,8 @@ results:
     value_note: ''
     sort_value: 0.6706
     sort_std: 0.0141
-    global_rank: 962
-    paper_rank: 962
+    global_rank: 979
+    paper_rank: 979
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -847,8 +881,8 @@ results:
     value_note: ''
     sort_value: 0.6094
     sort_std: 0.0296
-    global_rank: 987
-    paper_rank: 987
+    global_rank: 1004
+    paper_rank: 1004
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -915,8 +949,8 @@ results:
     value_note: ''
     sort_value: 0.4682
     sort_std: 0.1573
-    global_rank: 1035
-    paper_rank: 1035
+    global_rank: 1052
+    paper_rank: 1052
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

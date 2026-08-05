@@ -189,8 +189,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-06-06'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2025-02-03'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -201,10 +201,10 @@ results:
     today_delta_significant: false
     true_value: 1.079e-05
     true_std: null
-    value_gap_source_arxiv: '2406.03794'
-    value_gap_source_title: Infusing Self-Consistency into Density Functional Theory
-      Hamiltonian Prediction via Deep Equilibrium Models
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2502.01171'
+    value_gap_source_title: Efficient and Scalable Density Functional Theory Hamiltonian
+      Prediction through Adaptive Sparsity
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -396,8 +396,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2024-06-06'
-    value_gap_source_date_label: NeurIPS 2024
+    value_gap_source_date_iso: '2025-02-03'
+    value_gap_source_date_label: ICML 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -408,10 +408,10 @@ results:
     today_delta_significant: false
     true_value: 0.0001654
     true_std: null
-    value_gap_source_arxiv: '2406.03794'
-    value_gap_source_title: Infusing Self-Consistency into Density Functional Theory
-      Hamiltonian Prediction via Deep Equilibrium Models
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2502.01171'
+    value_gap_source_title: Efficient and Scalable Density Functional Theory Hamiltonian
+      Prediction through Adaptive Sparsity
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''

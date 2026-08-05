@@ -67,9 +67,9 @@ results:
   dataset: Amazon-ratings
   is_multi_metric: true
   rows:
-  - model: H2GCN
+  - model: H2GCN + UniGAP
     model_key: h2gcn + unigap
-    model_plain: H2GCN
+    model_plain: H2GCN + UniGAP
     metric_values:
     - 0.6375
     - null
@@ -109,9 +109,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: H2GCN
+  - model: GraphSAGE + UniGAP
     model_key: graphsage + unigap
-    model_plain: H2GCN
+    model_plain: GraphSAGE + UniGAP
     metric_values:
     - 0.6283
     - null
@@ -151,9 +151,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: H2GCN
+  - model: GCN + UniGAP
     model_key: gcn + unigap
-    model_plain: H2GCN
+    model_plain: GCN + UniGAP
     metric_values:
     - 0.5976
     - null
@@ -183,6 +183,48 @@ results:
     is_best: false
     sort_value: 0.5976
     sort_std: 0.008
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    metric_values:
+    - 0.5569
+    - null
+    - null
+    metric_stds:
+    - 0.0023
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.20248'
+    title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions in Node
+      Classification'
+    published_venue: ''
+    date: May 18, 2026
+    date_display: May 2026
+    date_iso: '2026-05-18'
+    codebase_url: https://github.com/transductive-sharpening/tunedGNN
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 14
+    is_best: false
+    sort_value: 0.5569
+    sort_std: 0.0023
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -541,9 +583,8 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.07640000000000002
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
     value_note: ''
     at_pub_value: 0.5351
     at_pub_std: 0.0046
@@ -552,8 +593,8 @@ results:
       Models'
     at_pub_source_date_iso: '2024-02-13'
     at_pub_source_date_label: KDD 2024
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2025-10-24'
+    value_gap_source_date_label: NeurIPS 2025
     gap_vs_at_pub: 0.07640000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -833,7 +874,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 71
+    global_rank: 72
   - model: VCR-TAS
     model_key: vcr-tas
     model_plain: VCR-TAS
@@ -896,7 +937,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 76
+    global_rank: 78
   - model: GT
     model_key: gt
     model_plain: GT
@@ -924,9 +965,9 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.026700000000000057
-    value_gap_source_arxiv: '2507.14484'
-    value_gap_source_title: 'ReDiSC: A Reparameterized Masked Diffusion Model for
-      Scalable Node Classification with Structured Predictions'
+    value_gap_source_arxiv: '2508.05070'
+    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
     value_note: ''
     at_pub_value: 0.5117
     at_pub_std: 0.0066
@@ -934,7 +975,7 @@ results:
     at_pub_source_title: Bundle Neural Networks for message diffusion on graphs
     at_pub_source_date_iso: '2024-05-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2025-07-19'
+    value_gap_source_date_iso: '2025-08-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.026700000000000057
     worse_than_at_pub: false
@@ -959,7 +1000,48 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 79
+    global_rank: 81
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    metric_values:
+    - 0.5058
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    published_venue: ''
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 95
+    is_best: false
+    sort_value: 0.5058
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: SAN
     model_key: san
     model_plain: SAN
@@ -1022,7 +1104,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 95
+    global_rank: 97
   - model: CR-TAS
     model_key: cr-tas
     model_plain: CR-TAS
@@ -1085,7 +1167,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 123
+    global_rank: 137
   - model: NAG
     model_key: nag
     model_plain: NAG
@@ -1148,7 +1230,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 127
+    global_rank: 142
   - model: VCR-MAS
     model_key: vcr-mas
     model_plain: VCR-MAS
@@ -1211,7 +1293,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 132
+    global_rank: 147
   - model: NAG-TAS
     model_key: nag-tas
     model_plain: NAG-TAS
@@ -1274,7 +1356,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 134
+    global_rank: 149
   - model: NAG-MAS
     model_key: nag-mas
     model_plain: NAG-MAS
@@ -1337,7 +1419,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 137
+    global_rank: 153
   - model: CR-MAS
     model_key: cr-mas
     model_plain: CR-MAS
@@ -1400,7 +1482,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 138
+    global_rank: 154
   - model: GPS-TAS
     model_key: gps-tas
     model_plain: GPS-TAS
@@ -1463,7 +1545,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 146
+    global_rank: 162
   - model: GPS-MAS
     model_key: gps-mas
     model_plain: GPS-MAS
@@ -1526,7 +1608,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 147
+    global_rank: 163
   - model: Gophormer
     model_key: gophormer
     model_plain: Gophormer
@@ -1589,7 +1671,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 165
+    global_rank: 181
   metrics:
   - Accuracy
   - macro-F1
@@ -1609,9 +1691,9 @@ results:
 - &id002
   dataset: COCO-SP
   rows:
-  - model: Exphormer
+  - model: CRaWl
     model_key: crawl
-    model_plain: Exphormer
+    model_plain: CRaWl
     value: 0.4588
     std: 0.0079
     metric: F1
@@ -1642,9 +1724,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Exphormer
+  - model: GPS
     model_key: gps
-    model_plain: Exphormer
+    model_plain: GPS
     value: 0.444
     std: 0.0065
     metric: F1
@@ -1675,9 +1757,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Exphormer
+  - model: NeuralWalker
     model_key: neuralwalker
-    model_plain: Exphormer
+    model_plain: NeuralWalker
     value: 0.4398
     std: 0.0033
     metric: F1
@@ -1703,6 +1785,39 @@ results:
     global_rank: 3
     sort_value: 0.4398
     sort_std: 0.0033
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.388
+    std: 0.004
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.13383'
+    title: 'Beyond Oversquashing: Understanding Signal Propagation in GNNs Via Observables'
+    date: May 13, 2026
+    date_display: May 2026
+    date_iso: '2026-05-13'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 14
+    sort_value: 0.388
+    sort_std: 0.004
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1767,9 +1882,9 @@ results:
     sort_value: 0.2078
     sort_std: 0.0031
     global_rank: 46
-    paper_rank: 65
-    rank_delta: 19
-    rank_delta_abs: 19
+    paper_rank: 71
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1910,6 +2025,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.1339
+    std: 0.0044
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-13'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 54
+    sort_value: 0.1339
+    sort_std: 0.0044
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2175,8 +2323,8 @@ results:
     value_note: ''
     sort_value: 0.074
     sort_std: null
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 67
+    paper_rank: 67
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2243,8 +2391,8 @@ results:
     value_note: ''
     sort_value: 0.07
     sort_std: null
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2311,8 +2459,8 @@ results:
     value_note: ''
     sort_value: 0.07
     sort_std: null
-    global_rank: 63
-    paper_rank: 63
+    global_rank: 69
+    paper_rank: 69
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2379,8 +2527,8 @@ results:
     value_note: ''
     sort_value: 0.069
     sort_std: null
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 70
+    paper_rank: 70
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2447,8 +2595,8 @@ results:
     value_note: ''
     sort_value: 0.068
     sort_std: null
-    global_rank: 65
-    paper_rank: 65
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2515,8 +2663,8 @@ results:
     value_note: ''
     sort_value: 0.063
     sort_std: null
-    global_rank: 66
-    paper_rank: 66
+    global_rank: 72
+    paper_rank: 72
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2583,8 +2731,8 @@ results:
     value_note: ''
     sort_value: 0.063
     sort_std: null
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2651,13 +2799,46 @@ results:
     value_note: ''
     sort_value: 0.063
     sort_std: null
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.031
+    std: 0.016
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 77
+    sort_value: 0.031
+    sort_std: 0.016
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2731,9 +2912,9 @@ results:
     sort_value: 0.78
     sort_std: 0.31
     global_rank: 1
-    paper_rank: 108
-    rank_delta: 107
-    rank_delta_abs: 107
+    paper_rank: 109
+    rank_delta: 108
+    rank_delta_abs: 108
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2741,10 +2922,10 @@ results:
       Transformers
     comparison_source_arxiv: '2411.12732'
     is_best: true
-    is_std_outlier: false
-  - model: Exphormer
+    is_std_outlier: true
+  - model: NeuralWalker
     model_key: neuralwalker
-    model_plain: Exphormer
+    model_plain: NeuralWalker
     value: 0.4912
     std: 0.0042
     metric: F1
@@ -2775,9 +2956,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Exphormer
+  - model: PPGT
     model_key: ppgt
-    model_plain: Exphormer
+    model_plain: PPGT
     value: 0.4641
     std: 0.0033
     metric: F1
@@ -2865,8 +3046,8 @@ results:
     value_note: ''
     sort_value: 0.4538
     sort_std: 0.83
-    global_rank: 5
-    paper_rank: 114
+    global_rank: 6
+    paper_rank: 115
     rank_delta: 109
     rank_delta_abs: 109
     rank_delta_direction: worse
@@ -2875,7 +3056,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
+    is_std_outlier: true
   - model: NAG-TAS
     model_key: nag-tas
     model_plain: NAG-TAS
@@ -2933,8 +3114,8 @@ results:
     value_note: ''
     sort_value: 0.254
     sort_std: null
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 90
+    paper_rank: 90
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3001,8 +3182,8 @@ results:
     value_note: ''
     sort_value: 0.254
     sort_std: null
-    global_rank: 90
-    paper_rank: 90
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3069,8 +3250,8 @@ results:
     value_note: ''
     sort_value: 0.24
     sort_std: null
-    global_rank: 95
-    paper_rank: 95
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3137,8 +3318,8 @@ results:
     value_note: ''
     sort_value: 0.222
     sort_std: null
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 97
+    paper_rank: 97
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3205,8 +3386,8 @@ results:
     value_note: ''
     sort_value: 0.196
     sort_std: null
-    global_rank: 100
-    paper_rank: 100
+    global_rank: 101
+    paper_rank: 101
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3273,8 +3454,8 @@ results:
     value_note: ''
     sort_value: 0.172
     sort_std: null
-    global_rank: 103
-    paper_rank: 103
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3341,8 +3522,8 @@ results:
     value_note: ''
     sort_value: 0.171
     sort_std: null
-    global_rank: 104
-    paper_rank: 104
+    global_rank: 105
+    paper_rank: 105
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3409,8 +3590,8 @@ results:
     value_note: ''
     sort_value: 0.152
     sort_std: null
-    global_rank: 108
-    paper_rank: 108
+    global_rank: 109
+    paper_rank: 109
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3477,8 +3658,8 @@ results:
     value_note: ''
     sort_value: 0.138
     sort_std: null
-    global_rank: 109
-    paper_rank: 109
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3545,13 +3726,79 @@ results:
     value_note: ''
     sort_value: 0.13
     sort_std: null
-    global_rank: 112
-    paper_rank: 112
+    global_rank: 113
+    paper_rank: 113
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.1265
+    std: 0.0076
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2402.08678'
+    title: 'Graph Mamba: Towards Learning on Graphs with State Space Models'
+    date: Feb 13, 2024
+    date_display: Feb 2024
+    date_iso: '2024-02-13'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 114
+    sort_value: 0.1265
+    sort_std: 0.0076
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.114
+    std: 0.023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2410.05593'
+    title: When Graph Neural Networks Meet Dynamic Mode Decomposition
+    date: Oct 8, 2024
+    date_display: Oct 2024
+    date_iso: '2024-10-08'
+    venue: International Conference on Learning Representations
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 115
+    sort_value: 0.114
+    sort_std: 0.023
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -3613,8 +3860,8 @@ results:
     value_note: ''
     sort_value: 0.092
     sort_std: null
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 116
+    paper_rank: 116
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3681,8 +3928,8 @@ results:
     value_note: ''
     sort_value: 0.092
     sort_std: null
-    global_rank: 116
-    paper_rank: 116
+    global_rank: 117
+    paper_rank: 117
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3767,10 +4014,10 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-    global_rank: 76
-  - model: Tango GPS
+    global_rank: 77
+  - model: GraphSAGE + UniGAP
     model_key: graphsage + unigap
-    model_plain: Tango GPS
+    model_plain: GraphSAGE + UniGAP
     metric_values:
     - 0.8421
     - null
@@ -3810,9 +4057,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Tango GPS
+  - model: H2GCN + UniGAP
     model_key: h2gcn + unigap
-    model_plain: Tango GPS
+    model_plain: H2GCN + UniGAP
     metric_values:
     - 0.8359
     - null
@@ -3852,9 +4099,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Tango GPS
+  - model: GCN + UniGAP
     model_key: gcn + unigap
-    model_plain: Tango GPS
+    model_plain: GCN + UniGAP
     metric_values:
     - 0.8273
     - null
@@ -3958,6 +4205,48 @@ results:
     is_best: false
     is_std_outlier: false
     global_rank: 17
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    metric_values:
+    - 0.7721
+    - null
+    - null
+    metric_stds:
+    - 0.013
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2407.19420'
+    title: 'UniGAP: A Universal and Adaptive Graph Upsampling Approach to Mitigate
+      Over-Smoothing in Node Classification Tasks'
+    published_venue: ''
+    date: Jul 28, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-28'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 48
+    is_best: false
+    sort_value: 0.7721
+    sort_std: 0.013
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: NAG-MAS
     model_key: nag-mas
     model_plain: NAG-MAS
@@ -4020,7 +4309,48 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 94
+    global_rank: 98
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    metric_values:
+    - 0.7082
+    - null
+    - null
+    metric_stds:
+    - 0.001
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2508.17531'
+    title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    published_venue: ''
+    date: Aug 24, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-24'
+    codebase_url: https://github.com/Bobowner/Gumbel-Softmax-MPNN
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 104
+    is_best: false
+    sort_value: 0.7082
+    sort_std: 0.001
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: CR-MAS
     model_key: cr-mas
     model_plain: CR-MAS
@@ -4083,7 +4413,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 103
+    global_rank: 110
   - model: NAG
     model_key: nag
     model_plain: NAG
@@ -4146,7 +4476,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 107
+    global_rank: 114
   - model: CR-TAS
     model_key: cr-tas
     model_plain: CR-TAS
@@ -4209,7 +4539,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 112
+    global_rank: 119
   - model: NAG-TAS
     model_key: nag-tas
     model_plain: NAG-TAS
@@ -4272,7 +4602,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 116
+    global_rank: 124
   - model: GPS
     model_key: gps
     model_plain: GPS
@@ -4335,7 +4665,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 120
+    global_rank: 129
   - model: GPS-MAS
     model_key: gps-mas
     model_plain: GPS-MAS
@@ -4398,7 +4728,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 125
+    global_rank: 135
   - model: GPS-TAS
     model_key: gps-tas
     model_plain: GPS-TAS
@@ -4461,7 +4791,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 129
+    global_rank: 138
   - model: GCN-MAS
     model_key: gcn-mas
     model_plain: GCN-MAS
@@ -4524,7 +4854,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 130
+    global_rank: 139
   - model: VCR-TAS
     model_key: vcr-tas
     model_plain: VCR-TAS
@@ -4587,7 +4917,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 134
+    global_rank: 143
   - model: GCN-TAS
     model_key: gcn-tas
     model_plain: GCN-TAS
@@ -4650,7 +4980,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 135
+    global_rank: 144
   - model: VCR-MAS
     model_key: vcr-mas
     model_plain: VCR-MAS
@@ -4713,7 +5043,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 139
+    global_rank: 148
   - model: VCR
     model_key: vcr
     model_plain: VCR
@@ -4776,7 +5106,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 143
+    global_rank: 152
   metrics:
   - ROC-AUC
   - Accuracy
@@ -4859,10 +5189,10 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-    global_rank: 86
-  - model: GPS + Mamba
+    global_rank: 91
+  - model: Dir-NT
     model_key: dir-nt
-    model_plain: GPS + Mamba
+    model_plain: Dir-NT
     metric_values:
     - 0.9477
     - null
@@ -4902,9 +5232,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: GPS + Mamba
+  - model: Dir-Poly
     model_key: dir-poly
-    model_plain: GPS + Mamba
+    model_plain: Dir-Poly
     metric_values:
     - 0.9451
     - null
@@ -4944,37 +5274,37 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: GPS + Mamba
-    model_key: largescalenet
-    model_plain: GPS + Mamba
+  - model: D-CDE
+    model_key: d-cde
+    model_plain: D-CDE
     metric_values:
-    - 0.9358
+    - 0.9387
     - null
     - null
     metric_stds:
-    - 0.0024
+    - 0.0041
     - null
     - null
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.19392'
-    title: Scale-aware Message Passing For Graph Node Classification
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.05274'
+    title: Distributed-Order Fractional Graph Operating Network
     published_venue: ''
-    date: Nov 28, 2024
+    date: Nov 8, 2024
     date_display: Nov 2024
-    date_iso: '2024-11-28'
-    codebase_url: https://github.com/Qin87/ScaleNet
+    date_iso: '2024-11-08'
+    codebase_url: https://github.com/zknus/NeurIPS-2024-DRAGON
     uses_external_data: false
     is_global_top: true
     global_rank: 3
     is_best: false
-    sort_value: 0.9358
-    sort_std: 0.0024
+    sort_value: 0.9387
+    sort_std: 0.0041
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -5049,7 +5379,7 @@ results:
     comparison_source_arxiv: '2505.17939'
     is_best: false
     is_std_outlier: false
-    global_rank: 27
+    global_rank: 29
   - model: Exphormer
     model_key: exphormer
     model_plain: Exphormer
@@ -5077,9 +5407,8 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.22460000000000002
-    value_gap_source_arxiv: '2403.01232'
-    value_gap_source_title: 'Polynormer: Polynomial-Expressive Graph Transformer in
-      Linear Time'
+    value_gap_source_arxiv: '2510.21267'
+    value_gap_source_title: Relieving the Over-Aggregating Effect in Graph Transformers
     value_note: ''
     at_pub_value: 0.8903
     at_pub_std: 0.0037
@@ -5088,8 +5417,8 @@ results:
       Models'
     at_pub_source_date_iso: '2024-02-13'
     at_pub_source_date_label: KDD 2024
-    value_gap_source_date_iso: '2024-03-02'
-    value_gap_source_date_label: ICLR 2024
+    value_gap_source_date_iso: '2025-10-24'
+    value_gap_source_date_label: NeurIPS 2025
     gap_vs_at_pub: 0.22460000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -5114,7 +5443,7 @@ results:
     comparison_source_arxiv: '2402.08678'
     is_best: false
     is_std_outlier: false
-    global_rank: 40
+    global_rank: 42
   - model: GAT
     model_key: gat
     model_plain: GAT
@@ -5176,7 +5505,7 @@ results:
     comparison_source_arxiv: '2510.21267'
     is_best: false
     is_std_outlier: false
-    global_rank: 43
+    global_rank: 45
   - model: GT
     model_key: gt
     model_plain: GT
@@ -5204,9 +5533,9 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.20619999999999994
-    value_gap_source_arxiv: '2507.14484'
-    value_gap_source_title: 'ReDiSC: A Reparameterized Masked Diffusion Model for
-      Scalable Node Classification with Structured Predictions'
+    value_gap_source_arxiv: '2508.05070'
+    value_gap_source_title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential
+      Flows'
     value_note: ''
     at_pub_value: 0.8651
     at_pub_std: 0.0073
@@ -5214,7 +5543,7 @@ results:
     at_pub_source_title: Bundle Neural Networks for message diffusion on graphs
     at_pub_source_date_iso: '2024-05-24'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2025-07-19'
+    value_gap_source_date_iso: '2025-08-07'
     value_gap_source_date_label: '2025'
     gap_vs_at_pub: 0.20619999999999994
     worse_than_at_pub: true
@@ -5239,7 +5568,48 @@ results:
     comparison_source_arxiv: '2405.15540'
     is_best: false
     is_std_outlier: false
-    global_rank: 64
+    global_rank: 67
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    metric_values:
+    - 0.8574
+    - null
+    - null
+    metric_stds:
+    - 0.0067
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2508.05070'
+    title: 'TANGO: Graph Neural Dynamics via Learned Energy and Tangential Flows'
+    published_venue: ''
+    date: Aug 7, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-07'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 72
+    is_best: false
+    sort_value: 0.8574
+    sort_std: 0.0067
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: CMGNN
     model_key: cmgnn
     model_plain: CMGNN
@@ -5304,7 +5674,70 @@ results:
     comparison_source_arxiv: '2512.14908'
     is_best: false
     is_std_outlier: false
-    global_rank: 75
+    global_rank: 78
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    metric_values:
+    - 0.3681
+    - 0.29
+    - 0.855
+    metric_stds:
+    - 0.0055
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.8272
+    sort_std: 0.0082
+    true_value: 0.8272
+    true_std: 0.0082
+    paper_value: 0.3681
+    paper_std: 0.0055
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.45910000000000006
+    value_gap_source_arxiv: '2407.11596'
+    value_gap_source_title: 'HyperAggregation: Aggregating over Graph Edges with Hypernetworks'
+    value_note: ''
+    at_pub_value: 0.8272
+    at_pub_std: 0.0082
+    at_pub_source_arxiv: '2407.11596'
+    at_pub_source_title: 'HyperAggregation: Aggregating over Graph Edges with Hypernetworks'
+    at_pub_source_date_iso: '2024-06-30'
+    at_pub_source_date_label: '2024'
+    value_gap_source_date_iso: '2024-06-30'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: 0.45910000000000006
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: ''
+    date: Jun 3, 2026
+    date_display: Jun 2026
+    date_iso: '2026-06-03'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    comparison_type: behind
+    comparison_source_title: 'HyperAggregation: Aggregating over Graph Edges with
+      Hypernetworks'
+    comparison_source_arxiv: '2407.11596'
+    is_best: false
+    is_std_outlier: false
+    global_rank: 85
   - model: GraphGPS
     model_key: graphgps
     model_plain: GraphGPS
@@ -5332,8 +5765,9 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.15910000000000002
-    value_gap_source_arxiv: '2411.19392'
-    value_gap_source_title: Scale-aware Message Passing For Graph Node Classification
+    value_gap_source_arxiv: '2605.20248'
+    value_gap_source_title: 'Graph Transductive Sharpening: Leveraging Unlabeled Predictions
+      in Node Classification'
     value_note: ''
     at_pub_value: 0.8272
     at_pub_std: 0.0068
@@ -5341,8 +5775,8 @@ results:
     at_pub_source_title: Scale-aware Message Passing For Graph Node Classification
     at_pub_source_date_iso: '2024-11-28'
     at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2024-11-28'
-    value_gap_source_date_label: '2024'
+    value_gap_source_date_iso: '2026-05-18'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.15910000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -5366,70 +5800,7 @@ results:
     comparison_source_arxiv: '2411.19392'
     is_best: false
     is_std_outlier: false
-    global_rank: 81
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    metric_values:
-    - 0.3681
-    - 0.29
-    - 0.855
-    metric_stds:
-    - 0.0055
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.7882
-    sort_std: 0.0009
-    true_value: 0.7882
-    true_std: 0.0009
-    paper_value: 0.3681
-    paper_std: 0.0055
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.42010000000000003
-    value_gap_source_arxiv: '2508.17531'
-    value_gap_source_title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
-    value_note: ''
-    at_pub_value: 0.8272
-    at_pub_std: 0.0082
-    at_pub_source_arxiv: '2407.11596'
-    at_pub_source_title: 'HyperAggregation: Aggregating over Graph Edges with Hypernetworks'
-    at_pub_source_date_iso: '2024-06-30'
-    at_pub_source_date_label: '2024'
-    value_gap_source_date_iso: '2025-08-24'
-    value_gap_source_date_label: '2025'
-    gap_vs_at_pub: 0.45910000000000006
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Jun 3, 2026
-    date_display: Jun 2026
-    date_iso: '2026-06-03'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    comparison_type: behind
-    comparison_source_title: 'HyperAggregation: Aggregating over Graph Edges with
-      Hypernetworks'
-    comparison_source_arxiv: '2407.11596'
-    is_best: false
-    is_std_outlier: false
-    global_rank: 99
+    global_rank: 86
   - model: SAN
     model_key: san
     model_plain: SAN
@@ -5492,7 +5863,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 137
+    global_rank: 147
   - model: Gophormer
     model_key: gophormer
     model_plain: Gophormer
@@ -5555,7 +5926,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 139
+    global_rank: 149
   - model: ACMGCN
     model_key: acmgcn
     model_plain: ACMGCN
@@ -5618,7 +5989,48 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 140
+    global_rank: 150
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    metric_values:
+    - 0.6665
+    - null
+    - null
+    metric_stds:
+    - 0.0047
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.11596'
+    title: 'HyperAggregation: Aggregating over Graph Edges with Hypernetworks'
+    published_venue: ''
+    date: Jun 30, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-30'
+    codebase_url: https://github.com/Foisunt/HyperAggregation
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 151
+    is_best: false
+    sort_value: 0.6665
+    sort_std: 0.0047
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: GPS-TAS
     model_key: gps-tas
     model_plain: GPS-TAS
@@ -5681,7 +6093,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 151
+    global_rank: 162
   - model: NAG-TAS
     model_key: nag-tas
     model_plain: NAG-TAS
@@ -5744,7 +6156,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 161
+    global_rank: 177
   - model: CR-TAS
     model_key: cr-tas
     model_plain: CR-TAS
@@ -5807,7 +6219,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 166
+    global_rank: 183
   - model: NAG-MAS
     model_key: nag-mas
     model_plain: NAG-MAS
@@ -5870,7 +6282,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 167
+    global_rank: 185
   - model: NAG
     model_key: nag
     model_plain: NAG
@@ -5933,7 +6345,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 169
+    global_rank: 188
   - model: VCR-MAS
     model_key: vcr-mas
     model_plain: VCR-MAS
@@ -5996,7 +6408,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 170
+    global_rank: 189
   - model: VCR-TAS
     model_key: vcr-tas
     model_plain: VCR-TAS
@@ -6059,7 +6471,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 172
+    global_rank: 191
   - model: GPS-MAS
     model_key: gps-mas
     model_plain: GPS-MAS
@@ -6122,7 +6534,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 173
+    global_rank: 192
   - model: CR-MAS
     model_key: cr-mas
     model_plain: CR-MAS
@@ -6185,7 +6597,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 176
+    global_rank: 196
   - model: GCN-MAS
     model_key: gcn-mas
     model_plain: GCN-MAS
@@ -6248,7 +6660,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 189
+    global_rank: 219
   - model: GCN-TAS
     model_key: gcn-tas
     model_plain: GCN-TAS
@@ -6311,7 +6723,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 194
+    global_rank: 224
   - model: VCR
     model_key: vcr
     model_plain: VCR
@@ -6374,7 +6786,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 211
+    global_rank: 241
   metrics:
   - Accuracy
   - macro-F1

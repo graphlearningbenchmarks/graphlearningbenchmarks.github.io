@@ -56,8 +56,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - NIGCN
-mrr: 0.005
-adjusted_mrr: 0.0033
+mrr: 0.0048
+adjusted_mrr: 0.0032
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -84,9 +84,9 @@ results:
 - &id005
   dataset: Amazon2M
   rows:
-  - model: NIGCN
+  - model: Cluster-GCN
     model_key: cluster-gcn
-    model_plain: NIGCN
+    model_plain: Cluster-GCN
     value: 0.9041
     std: null
     metric: F1
@@ -118,9 +118,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: NIGCN
+  - model: VRGCN
     model_key: vrgcn
-    model_plain: NIGCN
+    model_plain: VRGCN
     value: 0.9021
     std: null
     metric: F1
@@ -633,9 +633,9 @@ results:
 - &id001
   dataset: CiteSeer
   rows:
-  - model: SGC+TSC
+  - model: CNA
     model_key: cna
-    model_plain: SGC+TSC
+    model_plain: CNA
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -666,9 +666,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: IS-GIB
     model_key: is-gib
-    model_plain: SGC+TSC
+    model_plain: IS-GIB
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -700,9 +700,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: EERM
     model_key: eerm
-    model_plain: SGC+TSC
+    model_plain: EERM
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -1078,6 +1078,39 @@ results:
     comparison_source_arxiv: '2203.12265'
     is_best: false
     is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7639
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2010.00238'
+    title: Multi-grained Semantics-aware Graph Neural Networks
+    date: Oct 1, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-01'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 155
+    sort_value: 0.7639
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: NDLS
     model_key: ndls
     model_plain: NDLS
@@ -1251,8 +1284,8 @@ results:
     at_pub_source_title: Scalable Graph Neural Networks via Bidirectional Propagation
     at_pub_source_date_iso: '2020-10-29'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2020-10-29'
-    value_gap_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2022-03-01'
+    value_gap_source_date_label: WWW 2022
     gap_vs_at_pub: 0.027200000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1263,8 +1296,9 @@ results:
     today_delta_significant: true
     true_value: 0.729
     true_std: 0.005
-    value_gap_source_arxiv: '2010.15421'
-    value_gap_source_title: Scalable Graph Neural Networks via Bidirectional Propagation
+    value_gap_source_arxiv: '2203.00638'
+    value_gap_source_title: 'PaSca: a Graph Neural Architecture Search System under
+      the Scalable Paradigm'
     value_gap_source_is_current_paper: false
     value_gap: 0.027200000000000002
     has_value_note: false
@@ -1280,6 +1314,39 @@ results:
     comparison_type: behind
     comparison_source_title: Scalable Graph Neural Networks via Bidirectional Propagation
     comparison_source_arxiv: '2010.15421'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7289
+    std: 0.001
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2508.17531'
+    title: 'Gumbel-MPNN: Graph Rewiring with Gumbel-Softmax'
+    date: Aug 24, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-24'
+    venue: European Conference on Artificial Intelligence
+    codebase_url: https://github.com/Bobowner/Gumbel-Softmax-MPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 401
+    sort_value: 0.7289
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GRAND(+)
@@ -1702,9 +1769,9 @@ results:
 - &id002
   dataset: PubMed
   rows:
-  - model: SGCONV
+  - model: MixHop
     model_key: mixhop
-    model_plain: SGCONV
+    model_plain: MixHop
     value: 0.891
     std: 0.001
     metric: F1
@@ -2551,6 +2618,40 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.7731
+    std: 0.0059
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.04082'
+    title: 'Curve Your Attention: Mixed-Curvature Transformers for Graph Representation
+      Learning'
+    date: Sep 8, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-08'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 33
+    sort_value: 0.7731
+    sort_std: 0.0059
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: SGC
     model_key: sgc
     model_plain: SGC
@@ -2688,6 +2789,40 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6717
+    std: 0.0091
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2309.04082'
+    title: 'Curve Your Attention: Mixed-Curvature Transformers for Graph Representation
+      Learning'
+    date: Sep 8, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-08'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 41
+    sort_value: 0.6717
+    sort_std: 0.0091
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   rank_metric: F1
   higher_is_better: true
   experiment_scope: node-level
@@ -2700,9 +2835,9 @@ results:
 - &id003
   dataset: Reddit
   rows:
-  - model: Cluster-GCN (2019)
+  - model: Node Sampled Soup
     model_key: node sampled soup
-    model_plain: Cluster-GCN (2019)
+    model_plain: Node Sampled Soup
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -2734,9 +2869,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: EnGCN
     model_key: engcn
-    model_plain: Cluster-GCN (2019)
+    model_plain: EnGCN
     value: 0.9714
     std: 0.0003
     metric: F1
@@ -2768,9 +2903,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: SAGN+SLE
     model_key: sagn+sle
-    model_plain: Cluster-GCN (2019)
+    model_plain: SAGN+SLE
     value: 0.971
     std: 0.0
     metric: F1
@@ -2862,9 +2997,9 @@ results:
     sort_value: 0.966
     sort_std: null
     global_rank: 19
-    paper_rank: 146
-    rank_delta: 127
-    rank_delta_abs: 127
+    paper_rank: 158
+    rank_delta: 139
+    rank_delta_abs: 139
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2872,6 +3007,39 @@ results:
       Channel Pruning
     comparison_source_arxiv: '2105.04528'
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.953
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.10803'
+    title: 'GraphMAE: Self-Supervised Masked Graph Autoencoders'
+    date: May 22, 2022
+    date_display: May 2022
+    date_iso: '2022-05-22'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/THUDM/GraphMAE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 71
+    sort_value: 0.953
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: SGC
     model_key: sgc
@@ -2910,8 +3078,8 @@ results:
     at_pub_source_title: 'Deep Learning on Graphs: A Survey'
     at_pub_source_date_iso: '2018-12-11'
     at_pub_source_date_label: '2018'
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: KDD 2022
+    value_gap_source_date_iso: '2022-11-21'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.022599999999999953
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2922,18 +3090,19 @@ results:
     today_delta_significant: true
     true_value: 0.949
     true_std: 0.0
-    value_gap_source_arxiv: '2206.04355'
-    value_gap_source_title: Graph Attention Multi-Layer Perceptron
+    value_gap_source_arxiv: '2211.11761'
+    value_gap_source_title: 'From Node Interaction to Hop Interaction: New Effective
+      and Scalable Graph Learning Paradigm'
     value_gap_source_is_current_paper: false
     value_gap: 0.022599999999999953
     has_value_note: false
     value_note: ''
     sort_value: 0.949
     sort_std: 0.0
-    global_rank: 85
-    paper_rank: 132
-    rank_delta: 47
-    rank_delta_abs: 47
+    global_rank: 90
+    paper_rank: 140
+    rank_delta: 50
+    rank_delta_abs: 50
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3000,10 +3169,10 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 113
-    paper_rank: 133
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 118
+    paper_rank: 141
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3071,10 +3240,10 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 114
-    paper_rank: 151
-    rank_delta: 37
-    rank_delta_abs: 37
+    global_rank: 119
+    paper_rank: 163
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -3140,8 +3309,8 @@ results:
     value_note: ''
     sort_value: 0.9342
     sort_std: 0.0048
-    global_rank: 121
-    paper_rank: 121
+    global_rank: 127
+    paper_rank: 127
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3208,8 +3377,8 @@ results:
     value_note: ''
     sort_value: 0.9218
     sort_std: 0.0088
-    global_rank: 136
-    paper_rank: 136
+    global_rank: 144
+    paper_rank: 144
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3276,8 +3445,8 @@ results:
     value_note: ''
     sort_value: 0.8525
     sort_std: 0.0124
-    global_rank: 148
-    paper_rank: 148
+    global_rank: 160
+    paper_rank: 160
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3345,8 +3514,8 @@ results:
     value_note: ''
     sort_value: 0.7609
     sort_std: 0.0175
-    global_rank: 152
-    paper_rank: 152
+    global_rank: 164
+    paper_rank: 164
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3355,6 +3524,40 @@ results:
     comparison_source_title: 'SCARA: Scalable Graph Neural Networks with Feature-Oriented
       Optimization'
     comparison_source_arxiv: '2207.09179'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7435
+    std: 0.0016
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2512.14908'
+    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
+      Graphs'
+    date: Dec 16, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/atlaspaper16/ATLAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 165
+    sort_value: 0.7435
+    sort_std: 0.0016
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   rank_metric: F1

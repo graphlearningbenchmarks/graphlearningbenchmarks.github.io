@@ -40,8 +40,8 @@ proposed_models:
 - GINE w/ VN
 - NaiveGINe+ K=3 w/ VN
 - GINe+ K=1 w/ VN
-mrr: 0.0699
-adjusted_mrr: 0.0699
+mrr: 0.0889
+adjusted_mrr: 0.0889
 mrr_dataset_count: 3
 benchmark_categories:
 - OGB
@@ -304,6 +304,67 @@ results:
     is_best: true
     is_std_outlier: false
     global_rank: 4
+  - model: GINE
+    model_key: gine
+    model_plain: GINE
+    metric_values:
+    - 0.85
+    - 0.85
+    metric_stds:
+    - 0.009
+    - 0.009
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.8668
+    sort_std: 0.0077
+    true_value: 0.8668
+    true_std: 0.0077
+    paper_value: 0.85
+    paper_std: 0.009
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.016800000000000037
+    value_gap_source_arxiv: '2306.10767'
+    value_gap_source_title: 'P-tensors: a General Framework for Higher Order Message
+      Passing in Subgraph Neural Networks'
+    value_note: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-19'
+    value_gap_source_date_label: '2023'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: ''
+    date: Nov 30, 2020
+    date_display: Nov 2020
+    date_iso: '2020-11-30'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+    global_rank: 5
   - model: GCN w/ VN
     model_key: gcn w/ vn
     model_plain: GCN w/ VN
@@ -363,67 +424,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 5
-  - model: GINE
-    model_key: gine
-    model_plain: GINE
-    metric_values:
-    - 0.85
-    - 0.85
-    metric_stds:
-    - 0.009
-    - 0.009
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.85
-    sort_std: 0.009
-    true_value: 0.85
-    true_std: 0.009
-    paper_value: 0.85
-    paper_std: 0.009
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_gap_source_arxiv: '2011.15069'
-    value_gap_source_title: Graph convolutions that can finally model local structure
-    value_note: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-11-30'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    arxiv_id: ''
-    title: ''
-    published_venue: ''
-    date: Nov 30, 2020
-    date_display: Nov 2020
-    date_iso: '2020-11-30'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 7
+    global_rank: 6
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -483,7 +484,7 @@ results:
     comparison_source_arxiv: '2002.09518'
     is_best: false
     is_std_outlier: false
-    global_rank: 15
+    global_rank: 16
   - model: DeeperGCN
     model_key: deepergcn
     model_plain: DeeperGCN
@@ -543,7 +544,47 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 24
+    global_rank: 25
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    metric_values:
+    - 0.829
+    - null
+    metric_stds:
+    - 0.0069
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1905.11577'
+    title: Towards Interpretable Sparse Graph Representation Learning with Laplacian
+      Pooling
+    published_venue: ''
+    date: May 28, 2019
+    date_display: May 2019
+    date_iso: '2019-05-28'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 26
+    is_best: false
+    sort_value: 0.829
+    sort_std: 0.0069
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   metrics:
   - ROC-AUC
   - Accuracy
@@ -562,9 +603,9 @@ results:
   dataset: ToxCast
   is_multi_metric: true
   rows:
-  - model: GIN (Supervised EdgePred)
+  - model: GeomGCL
     model_key: geomgcl
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: GeomGCL
     metric_values:
     - 0.763
     - null
@@ -601,9 +642,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: GIN (Supervised EdgePred)
+  - model: LiGhT DeepGPT
     model_key: light deepgpt
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: LiGhT DeepGPT
     metric_values:
     - 0.757
     - null
@@ -640,9 +681,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: GIN (Supervised EdgePred)
+  - model: D&D-Node +vn
     model_key: d&d-node +vn
-    model_plain: GIN (Supervised EdgePred)
+    model_plain: D&D-Node +vn
     metric_values:
     - 0.7556
     - null
@@ -1160,6 +1201,46 @@ results:
     is_best: false
     is_std_outlier: false
     global_rank: 35
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    metric_values:
+    - 0.7095
+    - null
+    metric_stds:
+    - 0.0027
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2412.15589'
+    title: Pre-training Graph Neural Networks on Molecules by Using Subgraph-Conditioned
+      Graph Information Bottleneck
+    published_venue: ''
+    date: Dec 20, 2024
+    date_display: Dec 2024
+    date_iso: '2024-12-20'
+    codebase_url: https://github.com/NSLab-CUK/S-CGIB
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 38
+    is_best: false
+    sort_value: 0.7095
+    sort_std: 0.0027
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   metrics:
   - ROC-AUC
   - Accuracy
@@ -1177,9 +1258,9 @@ results:
 - &id001
   dataset: ogbg-molhiv
   rows:
-  - model: SigGate-GT
+  - model: Multi-RF Fusion with Multi-GNN Blending
     model_key: multi-rf fusion with multi-gnn blending
-    model_plain: SigGate-GT
+    model_plain: Multi-RF Fusion with Multi-GNN Blending
     value: 0.8476
     std: 0.0002
     metric: ROC-AUC
@@ -1211,9 +1292,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: HyperFusion
     model_key: hyperfusion
-    model_plain: SigGate-GT
+    model_plain: HyperFusion
     value: 0.8475
     std: 0.0003
     metric: ROC-AUC
@@ -1244,9 +1325,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: PAS+FPs
     model_key: pas+fps
-    model_plain: SigGate-GT
+    model_plain: PAS+FPs
     value: 0.842
     std: 0.0015
     metric: ROC-AUC
@@ -1272,6 +1353,39 @@ results:
     global_rank: 3
     sort_value: 0.842
     sort_std: 0.0015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.809
+    std: 0.016
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 2.8
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2309.10131'
+    title: Deep Prompt Tuning for Graph Transformers
+    date: Sep 18, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-18'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.809
+    sort_std: 0.016
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1381,8 +1495,8 @@ results:
     at_pub_source_title: Wasserstein Embedding for Graph Learning
     at_pub_source_date_iso: '2020-06-16'
     at_pub_source_date_label: ICLR 2020
-    value_gap_source_date_iso: '2020-06-16'
-    value_gap_source_date_label: ICLR 2020
+    value_gap_source_date_iso: '2020-11-30'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1393,9 +1507,9 @@ results:
     today_delta_significant: false
     true_value: 0.786
     true_std: 0.012
-    value_gap_source_arxiv: '2006.09430'
-    value_gap_source_title: Wasserstein Embedding for Graph Learning
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2011.15069'
+    value_gap_source_title: Graph convolutions that can finally model local structure
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -1408,6 +1522,39 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.778
+    std: 0.0182
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 510.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2201.12787'
+    title: 'GRPE: Relative Positional Encoding for Graph Transformer'
+    date: Jan 30, 2022
+    date_display: Jan 2022
+    date_iso: '2022-01-30'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 120
+    sort_value: 0.778
+    sort_std: 0.0182
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

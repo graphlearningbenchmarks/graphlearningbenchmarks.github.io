@@ -41,8 +41,8 @@ paper_type: method
 proposed_models:
 - NLSF
 - A-NLSF
-mrr: 0.2307
-adjusted_mrr: 0.2307
+mrr: 0.2328
+adjusted_mrr: 0.2328
 mrr_dataset_count: 5
 benchmark_categories:
 - TU Dortmund
@@ -71,9 +71,9 @@ results:
 - &id002
   dataset: ENZYMES
   rows:
-  - model: WL
+  - model: BGNN(m)-CS
     model_key: bgnn(m)-cs
-    model_plain: WL
+    model_plain: BGNN(m)-CS
     value: 0.8068
     std: 0.0149
     metric: Accuracy
@@ -104,9 +104,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: WL
+  - model: BGNN
     model_key: bgnn
-    model_plain: WL
+    model_plain: BGNN
     value: 0.7936
     std: 0.0281
     metric: Accuracy
@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: WL
+  - model: BGNN(m)-SC
     model_key: bgnn(m)-sc
-    model_plain: WL
+    model_plain: BGNN(m)-SC
     value: 0.7889
     std: 0.0079
     metric: Accuracy
@@ -229,9 +229,9 @@ results:
     sort_value: 0.762
     sort_std: 0.028
     global_rank: 8
-    paper_rank: 198
-    rank_delta: 190
-    rank_delta_abs: 190
+    paper_rank: 199
+    rank_delta: 191
+    rank_delta_abs: 191
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -365,14 +365,47 @@ results:
     sort_value: 0.685
     sort_std: 0.05241
     global_rank: 32
-    paper_rank: 224
-    rank_delta: 192
-    rank_delta_abs: 192
+    paper_rank: 226
+    rank_delta: 194
+    rank_delta_abs: 194
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: GNNBenchmark
     comparison_source_arxiv: '2003.00982'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.68167
+    std: 0.05449
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2003.00982'
+    title: GNNBenchmark
+    date: Jan 1, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-01'
+    venue: Journal of machine learning research
+    codebase_url: https://github.com/graphdeeplearning/benchmarking-gnns
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 38
+    sort_value: 0.68167
+    sort_std: 0.05449
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GCN
@@ -432,9 +465,9 @@ results:
     sort_value: 0.665
     sort_std: 0.0691
     global_rank: 48
-    paper_rank: 207
-    rank_delta: 159
-    rank_delta_abs: 159
+    paper_rank: 208
+    rank_delta: 160
+    rank_delta_abs: 160
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -567,9 +600,9 @@ results:
     sort_value: 0.638
     sort_std: 0.0792
     global_rank: 75
-    paper_rank: 176
-    rank_delta: 101
-    rank_delta_abs: 101
+    paper_rank: 177
+    rank_delta: 102
+    rank_delta_abs: 102
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -770,9 +803,9 @@ results:
     sort_value: 0.55833
     sort_std: 0.03516
     global_rank: 145
-    paper_rank: 215
-    rank_delta: 70
-    rank_delta_abs: 70
+    paper_rank: 216
+    rank_delta: 71
+    rank_delta_abs: 71
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -860,9 +893,9 @@ results:
 - &id001
   dataset: MUTAG
   rows:
-  - model: ECC
+  - model: MSH-GNN
     model_key: msh-gnn
-    model_plain: ECC
+    model_plain: MSH-GNN
     value: 0.991
     std: 0.003
     metric: Accuracy
@@ -893,9 +926,42 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ECC
+  - model: ID-GNN+BEC
+    model_key: id-gnn+bec
+    model_plain: ID-GNN+BEC
+    value: 0.983
+    std: 0.036
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2503.01079'
+    title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery Curvature
+    date: Mar 3, 2025
+    date_display: Mar 2025
+    date_iso: '2025-03-03'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.983
+    sort_std: 0.036
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: SupCosine
     model_key: supcosine
-    model_plain: ECC
+    model_plain: SupCosine
     value: 0.983
     std: 0.025
     metric: Accuracy
@@ -918,47 +984,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.983
     sort_std: 0.025
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ECC
-    model_key: cauemo
-    model_plain: ECC
-    value: 0.9692
-    std: 0.0136
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2505.06283'
-    title: 'Soft causal learning for generalized molecule property prediction: An
-      environment modeling perspective'
-    date: May 7, 2025
-    date_display: May 2025
-    date_iso: '2025-05-07'
-    venue: Knowledge and Information Systems
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9692
-    sort_std: 0.0136
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: GIN
     model_key: gin
@@ -1016,15 +1048,118 @@ results:
     value_note: ''
     sort_value: 0.933
     sort_std: 0.029
-    global_rank: 34
-    paper_rank: 516
-    rank_delta: 482
-    rank_delta_abs: 482
+    global_rank: 43
+    paper_rank: 568
+    rank_delta: 525
+    rank_delta_abs: 525
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'ProtGNN: Towards Self-Explaining Graph Neural Networks'
     comparison_source_arxiv: '2112.00911'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8163
+    std: 0.031
+    paper_value: 0.8163
+    paper_std: 0.031
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: 10-fold CV via 10 random splits (80/10/10 split)
+    date: Sep 29, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-29'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.922
+    at_pub_std: 0.044
+    at_pub_source_arxiv: '2503.01079'
+    at_pub_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    at_pub_source_date_iso: '2025-03-03'
+    at_pub_source_date_label: KDD 2025
+    value_gap_source_date_iso: '2025-03-03'
+    value_gap_source_date_label: KDD 2025
+    gap_vs_at_pub: 0.10570000000000002
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.922
+    true_std: 0.044
+    value_gap_source_arxiv: '2503.01079'
+    value_gap_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10570000000000002
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.922
+    sort_std: 0.044
+    global_rank: 71
+    paper_rank: 639
+    rank_delta: 568
+    rank_delta_abs: 568
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
+      Curvature
+    comparison_source_arxiv: '2503.01079'
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.904
+    std: 0.078
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.12245'
+    title: Asynchronous Neural Networks for Learning in Graphs
+    date: May 24, 2022
+    date_display: May 2022
+    date_iso: '2022-05-24'
+    venue: arXiv.org
+    codebase_url: https://github.com/beabevi/ESAN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 170
+    sort_value: 0.904
+    sort_std: 0.078
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -1083,10 +1218,10 @@ results:
     value_note: ''
     sort_value: 0.901
     sort_std: 0.058
-    global_rank: 164
-    paper_rank: 518
-    rank_delta: 354
-    rank_delta_abs: 354
+    global_rank: 196
+    paper_rank: 570
+    rank_delta: 374
+    rank_delta_abs: 374
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1150,84 +1285,15 @@ results:
     value_note: ''
     sort_value: 0.897
     sort_std: 0.0641
-    global_rank: 199
-    paper_rank: 568
-    rank_delta: 369
-    rank_delta_abs: 369
+    global_rank: 234
+    paper_rank: 623
+    rank_delta: 389
+    rank_delta_abs: 389
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.8163
-    std: 0.031
-    paper_value: 0.8163
-    paper_std: 0.031
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: 10-fold CV via 10 random splits (80/10/10 split)
-    date: Sep 29, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.922
-    at_pub_std: 0.044
-    at_pub_source_arxiv: '2503.01079'
-    at_pub_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
-      Curvature
-    at_pub_source_date_iso: '2025-03-03'
-    at_pub_source_date_label: KDD 2025
-    value_gap_source_date_iso: '2023-08-16'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.10570000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.891
-    true_std: 0.058
-    value_gap_source_arxiv: '2308.08235'
-    value_gap_source_title: 'The Expressive Power of Graph Neural Networks: A Survey'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.07469999999999999
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.891
-    sort_std: 0.058
-    global_rank: 250
-    paper_rank: 583
-    rank_delta: 333
-    rank_delta_abs: 333
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Depth-Adaptive Graph Neural Networks via Learnable Bakry-Émery
-      Curvature
-    comparison_source_arxiv: '2503.01079'
     is_best: false
     is_std_outlier: false
   - model: A-NLSF
@@ -1287,8 +1353,8 @@ results:
     value_note: ''
     sort_value: 0.8794
     sort_std: 0.009
-    global_rank: 310
-    paper_rank: 310
+    global_rank: 352
+    paper_rank: 352
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1354,10 +1420,10 @@ results:
     value_note: ''
     sort_value: 0.866
     sort_std: 0.0495
-    global_rank: 385
-    paper_rank: 646
-    rank_delta: 261
-    rank_delta_abs: 261
+    global_rank: 429
+    paper_rank: 707
+    rank_delta: 278
+    rank_delta_abs: 278
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1422,8 +1488,8 @@ results:
     value_note: ''
     sort_value: 0.8495
     sort_std: 0.02
-    global_rank: 442
-    paper_rank: 442
+    global_rank: 490
+    paper_rank: 490
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1490,8 +1556,8 @@ results:
     value_note: ''
     sort_value: 0.8413
     sort_std: 0.015
-    global_rank: 481
-    paper_rank: 481
+    global_rank: 529
+    paper_rank: 529
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1558,8 +1624,8 @@ results:
     value_note: ''
     sort_value: 0.8407
     sort_std: 0.024
-    global_rank: 483
-    paper_rank: 483
+    global_rank: 531
+    paper_rank: 531
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1626,8 +1692,8 @@ results:
     value_note: ''
     sort_value: 0.827
     sort_std: 0.021
-    global_rank: 535
-    paper_rank: 535
+    global_rank: 589
+    paper_rank: 589
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1649,6 +1715,76 @@ results:
 - &id006
   dataset: ShapeNet-Part
   rows:
+  - model: GPS + k-MIP
+    model_key: gps + k-mip
+    model_plain: GPS + k-MIP
+    value: 0.8268
+    std: 0.0064
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    venue: Accepted at the ICLR 2026 GRaM Workshop. 9 pages, 9 figures, 16 tables;
+      30 pages of supplementary material
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.8268
+    sort_std: 0.0064
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Exphormer
+    model_key: exphormer
+    model_plain: Exphormer
+    value: 0.8262
+    std: 0.0031
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    venue: Accepted at the ICLR 2026 GRaM Workshop. 9 pages, 9 figures, 16 tables;
+      30 pages of supplementary material
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8262
+    sort_std: 0.0031
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
   - model: VN-DGCNN
     model_key: vn-dgcnn
     model_plain: VN-DGCNN
@@ -1707,8 +1843,8 @@ results:
     value_note: ''
     sort_value: 0.814
     sort_std: null
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1716,7 +1852,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: AC-DGCNN
     model_key: ac-dgcnn
@@ -1776,8 +1912,8 @@ results:
     value_note: ''
     sort_value: 0.809
     sort_std: 0.007
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1785,7 +1921,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: DGCNN
     model_key: dgcnn
@@ -1845,8 +1981,8 @@ results:
     value_note: ''
     sort_value: 0.786
     sort_std: null
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1914,13 +2050,48 @@ results:
     value_note: ''
     sort_value: 0.785
     sort_std: 0.009
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.762
+    std: 0.0032
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    venue: Accepted at the ICLR 2026 GRaM Workshop. 9 pages, 9 figures, 16 tables;
+      30 pages of supplementary material
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.762
+    sort_std: 0.0032
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1983,8 +2154,8 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: 0.006
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2052,8 +2223,8 @@ results:
     value_note: ''
     sort_value: 0.736
     sort_std: 0.011
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2121,8 +2292,8 @@ results:
     value_note: ''
     sort_value: 0.728
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2190,13 +2361,48 @@ results:
     value_note: ''
     sort_value: 0.623
     sort_std: null
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6018
+    std: 0.0004
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2604.03815'
+    title: k-Maximum Inner Product Attention for Graph Transformers and the Expressive
+      Power of GraphGPS
+    date: Apr 4, 2026
+    date_display: Apr 2026
+    date_iso: '2026-04-04'
+    venue: Accepted at the ICLR 2026 GRaM Workshop. 9 pages, 9 figures, 16 tables;
+      30 pages of supplementary material
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.6018
+    sort_std: 0.0004
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2213,9 +2419,9 @@ results:
 - &id003
   dataset: ogbg-molhiv
   rows:
-  - model: SigGate-GT
+  - model: Multi-RF Fusion with Multi-GNN Blending
     model_key: multi-rf fusion with multi-gnn blending
-    model_plain: SigGate-GT
+    model_plain: Multi-RF Fusion with Multi-GNN Blending
     value: 0.8476
     std: 0.0002
     metric: ROC-AUC
@@ -2247,9 +2453,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: HyperFusion
     model_key: hyperfusion
-    model_plain: SigGate-GT
+    model_plain: HyperFusion
     value: 0.8475
     std: 0.0003
     metric: ROC-AUC
@@ -2280,9 +2486,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SigGate-GT
+  - model: PAS+FPs
     model_key: pas+fps
-    model_plain: SigGate-GT
+    model_plain: PAS+FPs
     value: 0.842
     std: 0.0015
     metric: ROC-AUC
@@ -2485,8 +2691,8 @@ results:
       Classification
     at_pub_source_date_iso: '2021-03-30'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2024-03-19'
-    value_gap_source_date_label: TMLR 2024
+    value_gap_source_date_iso: '2026-04-19'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2497,8 +2703,9 @@ results:
     today_delta_significant: false
     true_value: 0.7905
     true_std: 0.0132
-    value_gap_source_arxiv: '2403.12529'
-    value_gap_source_title: Contextualized Messages Boost Graph Representations
+    value_gap_source_arxiv: '2604.17324'
+    value_gap_source_title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers
+      via Sigmoid-Gated Attention'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -2787,6 +2994,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.769
+    std: 0.0136
+    metric: ROC-AUC
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.07141'
+    title: 'SoGCN: Second-Order Graph Convolutional Networks'
+    date: Oct 14, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-14'
+    venue: null
+    codebase_url: https://github.com/yuehaowang/SoGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 171
+    sort_value: 0.769
+    sort_std: 0.0136
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: GCN
     model_key: gcn
     model_plain: GCN
@@ -2868,9 +3108,9 @@ results:
 - &id004
   dataset: ogbg-molpcba
   rows:
-  - model: GatedGCN-VN
+  - model: HIG with Graphormer
     model_key: hig with graphormer
-    model_plain: GatedGCN-VN
+    model_plain: HIG with Graphormer
     value: 0.3167
     std: 0.0034
     metric: AP
@@ -2901,9 +3141,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-VN
+  - model: GRPE-Large
     model_key: grpe-large
-    model_plain: GatedGCN-VN
+    model_plain: GRPE-Large
     value: 0.315
     std: 0.001
     metric: AP
@@ -2934,108 +3174,38 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-VN
-    model_key: gatedgcn-vn
-    model_plain: GatedGCN-VN
-    value: 0.3141
-    std: 0.0019
-    metric: AP
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 57.0
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_display: May 2024
-    date_iso: '2024-05-20'
-    venue: International Conference on Learning Representations
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: Table 2 lists RWSE for ogbg-molpcba, which are positional
-      encodings computed on the graph.
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.3141
-    sort_std: 0.0019
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GatedGCN
-    model_key: gatedgcn
-    model_plain: GatedGCN
-    value: 0.267
-    std: 0.002
-    paper_value: 0.267
-    paper_std: 0.002
+  - model: Graphormer
+    model_key: graphormer
+    model_plain: Graphormer
+    value: 0.314
+    std: null
     metric: AP
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
+    architecture_type: graph_transformer
+    architecture_label: GT
+    architecture_title: Graph transformer
+    arxiv_id: '2207.08806'
+    title: Unified 2D and 3D Pre-Training of Molecular Representations
+    date: Jul 14, 2022
+    date_display: Jul 2022
+    date_iso: '2022-07-14'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: https://github.com/teslacool/UnifiedMolPretrain
+    uses_external_data: false
+    input_feature_source: raw_features
     feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_classification
-    protocol_decision: standard
-    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
-    date: Sep 29, 2025
-    date_display: Sep 2025
-    date_iso: '2025-09-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3066
-    at_pub_std: 0.0013
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
-    value_gap_source_date_iso: '2024-05-20'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.03959999999999997
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.3066
-    true_std: 0.0013
-    value_gap_source_arxiv: '2405.11951'
-    value_gap_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
-      Nodes'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.03959999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3066
-    sort_std: 0.0013
-    global_rank: 9
-    paper_rank: 63
-    rank_delta: 54
-    rank_delta_abs: 54
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual
-      Nodes'
-    comparison_source_arxiv: '2405.11951'
-    is_best: false
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.314
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
     is_std_outlier: false
   - model: A-NLSF
     model_key: a-nlsf
@@ -3094,8 +3264,8 @@ results:
     value_note: ''
     sort_value: 0.2968
     sort_std: 0.0022
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3162,8 +3332,8 @@ results:
     value_note: ''
     sort_value: 0.2907
     sort_std: 0.0028
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3229,8 +3399,8 @@ results:
     value_note: ''
     sort_value: 0.2902
     sort_std: 0.0017
-    global_rank: 35
-    paper_rank: 57
+    global_rank: 32
+    paper_rank: 54
     rank_delta: 22
     rank_delta_abs: 22
     rank_delta_direction: worse
@@ -3277,8 +3447,8 @@ results:
       Classification
     at_pub_source_date_iso: '2021-03-30'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2025-09-29'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-04-19'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -3289,17 +3459,17 @@ results:
     today_delta_significant: false
     true_value: 0.2838
     true_std: 0.0035
-    value_gap_source_arxiv: '2509.24886'
-    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
-      Anisotropic Geometric Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2604.17324'
+    value_gap_source_title: 'SigGate-GT: Taming Over-Smoothing in Graph Transformers
+      via Sigmoid-Gated Attention'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.2838
     sort_std: 0.0035
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3366,8 +3536,8 @@ results:
     value_note: ''
     sort_value: 0.2783
     sort_std: 0.0024
-    global_rank: 48
-    paper_rank: 48
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3434,8 +3604,8 @@ results:
     value_note: ''
     sort_value: 0.2765
     sort_std: 0.0042
-    global_rank: 54
-    paper_rank: 54
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3502,8 +3672,8 @@ results:
     value_note: ''
     sort_value: 0.2761
     sort_std: 0.0029
-    global_rank: 55
-    paper_rank: 55
+    global_rank: 52
+    paper_rank: 52
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -3543,15 +3713,16 @@ results:
     date_iso: '2025-09-29'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.2483
-    at_pub_std: 0.0037
-    at_pub_source_arxiv: '2405.11951'
-    at_pub_source_title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    at_pub_source_date_iso: '2024-05-20'
-    at_pub_source_date_label: ICLR 2024
+    at_pub_value: 0.2424
+    at_pub_std: 0.0034
+    at_pub_source_arxiv: '2103.16584'
+    at_pub_source_title: Parameterized Hypercomplex Graph Neural Networks for Graph
+      Classification
+    at_pub_source_date_iso: '2021-03-30'
+    at_pub_source_date_label: '2021'
     value_gap_source_date_iso: '2026-04-27'
     value_gap_source_date_label: '2026'
-    gap_vs_at_pub: 0.005899999999999989
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
     better_than_at_pub: false
@@ -3570,11 +3741,79 @@ results:
     value_note: ''
     sort_value: 0.269
     sort_std: 0.002
-    global_rank: 63
-    paper_rank: 88
-    rank_delta: 25
-    rank_delta_abs: 25
+    global_rank: 59
+    paper_rank: 85
+    rank_delta: 26
+    rank_delta_abs: 26
     rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GatedGCN
+    model_key: gatedgcn
+    model_plain: GatedGCN
+    value: 0.267
+    std: 0.002
+    paper_value: 0.267
+    paper_std: 0.002
+    metric: AP
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_classification
+    protocol_decision: standard
+    protocol_note: OGB scaffold split; AP is averaged across all 128 tasks.
+    date: Sep 29, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-29'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.264
+    at_pub_std: 0.021
+    at_pub_source_arxiv: '2309.10131'
+    at_pub_source_title: Deep Prompt Tuning for Graph Transformers
+    at_pub_source_date_iso: '2023-09-18'
+    at_pub_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-09-29'
+    value_gap_source_date_label: '2025'
+    gap_vs_at_pub: 0.0030000000000000027
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: true
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.267
+    true_std: 0.002
+    value_gap_source_arxiv: '2509.24886'
+    value_gap_source_title: Adaptive Canonicalization with Application to Invariant
+      Anisotropic Geometric Networks
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.267
+    sort_std: 0.002
+    global_rank: 60
+    paper_rank: 60
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -3694,9 +3933,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: differential encoding
+  - model: MPNN + VN + NoPE
     model_key: mpnn + vn + nope
-    model_plain: differential encoding
+    model_plain: MPNN + VN + NoPE
     value: 0.8055
     std: 0.0038
     metric: Accuracy

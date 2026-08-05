@@ -42,8 +42,8 @@ proposed_models:
 - TriCL-N
 - TriCL-NG
 - TriCL
-mrr: 0.2
-adjusted_mrr: 0.0667
+mrr: 0.0909
+adjusted_mrr: 0.0303
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -65,11 +65,11 @@ results:
 - &id002
   dataset: Cora-CA
   rows:
-  - model: A6
-    model_key: edgnn
-    model_plain: A6
-    value: 0.8236
-    std: 0.0072
+  - model: HAN (full batch)
+    model_key: han (full batch)
+    model_plain: HAN (full batch)
+    value: 0.8404
+    std: 0.0102
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -79,30 +79,30 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2406.06642'
-    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
-    date: Jun 9, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-09'
-    venue: J. Data-centric Mach. Learn. Res.
-    codebase_url: https://github.com/geometric-intelligence/topobench
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-24'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/jianhao2016/AllSet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8236
-    sort_std: 0.0072
+    sort_value: 0.8404
+    sort_std: 0.0102
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: A6
+  - model: AllSetTransformer
     model_key: allsettransformer
-    model_plain: A6
-    value: 0.8219
-    std: 0.0261
+    model_plain: AllSetTransformer
+    value: 0.8363
+    std: 0.0147
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -112,23 +112,123 @@ results:
     architecture_type: graph_transformer
     architecture_label: GT
     architecture_title: Graph transformer
-    arxiv_id: '2406.06642'
-    title: 'TopoBench: A Framework for Benchmarking Topological Deep Learning'
-    date: Jun 9, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-09'
-    venue: J. Data-centric Mach. Learn. Res.
-    codebase_url: https://github.com/geometric-intelligence/topobench
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-24'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/jianhao2016/AllSet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8219
-    sort_std: 0.0261
+    sort_value: 0.8363
+    sort_std: 0.0147
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: UniGCNII
+    model_key: unigcnii
+    model_plain: UniGCNII
+    value: 0.836
+    std: 0.0114
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.13264'
+    title: Hypergraph Benchmarks
+    date: Jun 24, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-24'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/jianhao2016/AllSet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.836
+    sort_std: 0.0114
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: HGNN
+    model_key: hgnn
+    model_plain: HGNN
+    value: 0.7438
+    std: 0.012
+    paper_value: 0.7438
+    paper_std: 0.012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to cora-ca (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification task
+    date: Jun 9, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-09'
+    published_venue: AAAI 2022
+    published_conference: AAAI 2022
+    at_pub_value: 0.8264
+    at_pub_std: 0.0165
+    at_pub_source_arxiv: '2106.13264'
+    at_pub_source_title: Hypergraph Benchmarks
+    at_pub_source_date_iso: '2021-06-24'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2021-06-24'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.0826
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.8264
+    true_std: 0.0165
+    value_gap_source_arxiv: '2106.13264'
+    value_gap_source_title: Hypergraph Benchmarks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.0826
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.8264
+    sort_std: 0.0165
+    global_rank: 4
+    paper_rank: 29
+    rank_delta: 25
+    rank_delta_abs: 25
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hypergraph Benchmarks
+    comparison_source_arxiv: '2106.13264'
     is_best: true
     is_std_outlier: false
   - model: TriCL
@@ -188,8 +288,8 @@ results:
     value_note: ''
     sort_value: 0.8215
     sort_std: 0.009
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -256,8 +356,8 @@ results:
     value_note: ''
     sort_value: 0.82
     sort_std: 0.01
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -265,7 +365,7 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: TriCL-N
     model_key: tricl-n
@@ -324,8 +424,8 @@ results:
     value_note: ''
     sort_value: 0.8194
     sort_std: 0.011
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -334,6 +434,73 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: HyperGCN
+    model_key: hypergcn
+    model_plain: HyperGCN
+    value: 0.6065
+    std: 0.092
+    paper_value: 0.6065
+    paper_std: 0.092
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to cora-ca (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification task
+    date: Jun 9, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-09'
+    published_venue: AAAI 2022
+    published_conference: AAAI 2022
+    at_pub_value: 0.7948
+    at_pub_std: 0.0208
+    at_pub_source_arxiv: '2106.13264'
+    at_pub_source_title: Hypergraph Benchmarks
+    at_pub_source_date_iso: '2021-06-24'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2021-06-24'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.1882999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7948
+    true_std: 0.0208
+    value_gap_source_arxiv: '2106.13264'
+    value_gap_source_title: Hypergraph Benchmarks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.1882999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7948
+    sort_std: 0.0208
+    global_rank: 13
+    paper_rank: 38
+    rank_delta: 25
+    rank_delta_abs: 25
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hypergraph Benchmarks
+    comparison_source_arxiv: '2106.13264'
+    is_best: false
     is_std_outlier: false
   - model: S2-HHGR
     model_key: s2-hhgr
@@ -392,8 +559,8 @@ results:
     value_note: ''
     sort_value: 0.7815
     sort_std: 0.011
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -460,12 +627,79 @@ results:
     value_note: ''
     sort_value: 0.773
     sort_std: 0.014
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: HNHN
+    model_key: hnhn
+    model_plain: HNHN
+    value: 0.7488
+    std: 0.016
+    paper_value: 0.7488
+    paper_std: 0.016
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: fuzzy match to cora-ca (score=92)'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification task
+    date: Jun 9, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-09'
+    published_venue: AAAI 2022
+    published_conference: AAAI 2022
+    at_pub_value: 0.7719
+    at_pub_std: 0.0149
+    at_pub_source_arxiv: '2106.13264'
+    at_pub_source_title: Hypergraph Benchmarks
+    at_pub_source_date_iso: '2021-06-24'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2021-06-24'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.02310000000000001
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: true
+    today_delta_significant: true
+    true_value: 0.7719
+    true_std: 0.0149
+    value_gap_source_arxiv: '2106.13264'
+    value_gap_source_title: Hypergraph Benchmarks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.02310000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7719
+    sort_std: 0.0149
+    global_rank: 17
+    paper_rank: 28
+    rank_delta: 11
+    rank_delta_abs: 11
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -528,8 +762,8 @@ results:
     value_note: ''
     sort_value: 0.7694
     sort_std: 0.013
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -596,8 +830,8 @@ results:
     value_note: ''
     sort_value: 0.7694
     sort_std: 0.011
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -664,8 +898,8 @@ results:
     value_note: ''
     sort_value: 0.7659
     sort_std: 0.01
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 21
+    paper_rank: 21
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -675,13 +909,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: HNHN
-    model_key: hnhn
-    model_plain: HNHN
-    value: 0.7488
-    std: 0.016
-    paper_value: 0.7488
-    paper_std: 0.016
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7366
+    std: 0.013
+    paper_value: 0.7366
+    paper_std: 0.013
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -705,38 +939,38 @@ results:
     date_iso: '2022-06-09'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: 0.7719
-    at_pub_std: 0.0149
-    at_pub_source_arxiv: '2106.13264'
-    at_pub_source_title: Hypergraph Benchmarks
-    at_pub_source_date_iso: '2021-06-24'
-    at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.02310000000000001
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2023-05-30'
+    value_gap_source_date_label: ICML 2023
+    gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: true
-    today_delta_significant: false
-    true_value: 0.7488
-    true_std: 0.016
-    value_gap_source_arxiv: '2206.04739'
-    value_gap_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
-      Learning on Hypergraphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    today_delta_significant: true
+    true_value: 0.7516
+    true_std: 0.0065
+    value_gap_source_arxiv: '2305.18965'
+    value_gap_source_title: Node Embedding from Neural Hamiltonian Orbits in Graph
+      Neural Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.015000000000000013
     has_value_note: false
     value_note: ''
-    sort_value: 0.7488
-    sort_std: 0.016
-    global_rank: 17
-    paper_rank: 17
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.7516
+    sort_std: 0.0065
+    global_rank: 28
+    paper_rank: 30
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
@@ -800,8 +1034,8 @@ results:
     value_note: ''
     sort_value: 0.7452
     sort_std: 0.013
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -811,22 +1045,22 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: HGNN
-    model_key: hgnn
-    model_plain: HGNN
-    value: 0.7438
-    std: 0.012
-    paper_value: 0.7438
-    paper_std: 0.012
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6405
+    std: 0.014
+    paper_value: 0.6405
+    paper_std: 0.014
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
     uses_external_data: 0
     input_feature_source: null
     feature_source_evidence: ''
@@ -841,110 +1075,41 @@ results:
     date_iso: '2022-06-09'
     published_venue: AAAI 2022
     published_conference: AAAI 2022
-    at_pub_value: 0.8264
-    at_pub_std: 0.0165
+    at_pub_value: 0.7431
+    at_pub_std: 0.0189
     at_pub_source_arxiv: '2106.13264'
     at_pub_source_title: Hypergraph Benchmarks
     at_pub_source_date_iso: '2021-06-24'
     at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.0826
+    value_gap_source_date_iso: '2021-06-24'
+    value_gap_source_date_label: ICLR 2021
+    gap_vs_at_pub: 0.10260000000000002
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7438
-    true_std: 0.012
-    value_gap_source_arxiv: '2206.04739'
-    value_gap_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
-      Learning on Hypergraphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    today_delta_significant: true
+    true_value: 0.7431
+    true_std: 0.0189
+    value_gap_source_arxiv: '2106.13264'
+    value_gap_source_title: Hypergraph Benchmarks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.10260000000000002
     has_value_note: false
     value_note: ''
-    sort_value: 0.7438
-    sort_std: 0.012
-    global_rank: 19
-    paper_rank: 19
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.7431
+    sort_std: 0.0189
+    global_rank: 30
+    paper_rank: 38
+    rank_delta: 8
+    rank_delta_abs: 8
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Hypergraph Benchmarks
     comparison_source_arxiv: '2106.13264'
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.7366
-    std: 0.013
-    paper_value: 0.7366
-    paper_std: 0.013
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to cora-ca (score=92)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification task
-    date: Jun 9, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-09'
-    published_venue: AAAI 2022
-    published_conference: AAAI 2022
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.7366
-    true_std: 0.013
-    value_gap_source_arxiv: '2206.04739'
-    value_gap_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
-      Learning on Hypergraphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7366
-    sort_std: 0.013
-    global_rank: 20
-    paper_rank: 20
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: HyperConv
@@ -1004,8 +1169,8 @@ results:
     value_note: ''
     sort_value: 0.7352
     sort_std: 0.01
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1072,8 +1237,8 @@ results:
     value_note: ''
     sort_value: 0.6627
     sort_std: 0.022
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1140,8 +1305,8 @@ results:
     value_note: ''
     sort_value: 0.6459
     sort_std: 0.043
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1149,142 +1314,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MLP
-    model_key: mlp
-    model_plain: MLP
-    value: 0.6405
-    std: 0.014
-    paper_value: 0.6405
-    paper_std: 0.014
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to cora-ca (score=92)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification task
-    date: Jun 9, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-09'
-    published_venue: AAAI 2022
-    published_conference: AAAI 2022
-    at_pub_value: 0.7431
-    at_pub_std: 0.0189
-    at_pub_source_arxiv: '2106.13264'
-    at_pub_source_title: Hypergraph Benchmarks
-    at_pub_source_date_iso: '2021-06-24'
-    at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.10260000000000002
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6405
-    true_std: 0.014
-    value_gap_source_arxiv: '2206.04739'
-    value_gap_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
-      Learning on Hypergraphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6405
-    sort_std: 0.014
-    global_rank: 29
-    paper_rank: 29
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Hypergraph Benchmarks
-    comparison_source_arxiv: '2106.13264'
-    is_best: false
-    is_std_outlier: false
-  - model: HyperGCN
-    model_key: hypergcn
-    model_plain: HyperGCN
-    value: 0.6065
-    std: 0.092
-    paper_value: 0.6065
-    paper_std: 0.092
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: fuzzy match to cora-ca (score=92)'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification task
-    date: Jun 9, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-09'
-    published_venue: AAAI 2022
-    published_conference: AAAI 2022
-    at_pub_value: 0.7948
-    at_pub_std: 0.0208
-    at_pub_source_arxiv: '2106.13264'
-    at_pub_source_title: Hypergraph Benchmarks
-    at_pub_source_date_iso: '2021-06-24'
-    at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2022-06-09'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.1882999999999999
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.6065
-    true_std: 0.092
-    value_gap_source_arxiv: '2206.04739'
-    value_gap_source_title: 'I''m Me, We''re Us, and I''m Us: Tri-directional Contrastive
-      Learning on Hypergraphs'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.6065
-    sort_std: 0.092
-    global_rank: 30
-    paper_rank: 30
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Hypergraph Benchmarks
-    comparison_source_arxiv: '2106.13264'
     is_best: false
     is_std_outlier: false
   - model: Node2Vec
@@ -1344,8 +1373,8 @@ results:
     value_note: ''
     sort_value: 0.585
     sort_std: 0.021
-    global_rank: 31
-    paper_rank: 31
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1367,9 +1396,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: ACGCL
+  - model: HG-SCM
     model_key: hg-scm
-    model_plain: ACGCL
+    model_plain: HG-SCM
     value: 0.949
     std: 0.0015
     metric: Accuracy
@@ -1401,9 +1430,43 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: ACGCL
+  - model: SeHGNN
+    model_key: sehgnn
+    model_plain: SeHGNN
+    value: 0.9489
+    std: 0.0018
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2312.05757'
+    title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
+      Graph'
+    date: Dec 10, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-10'
+    venue: Information Processing & Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9489
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AdvSynGNN
     model_key: advsyngnn
-    model_plain: ACGCL
+    model_plain: AdvSynGNN
     value: 0.9486
     std: 0.0012
     metric: Accuracy
@@ -1427,47 +1490,13 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.9486
     sort_std: 0.0012
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: ACGCL
-    model_key: simplehgn
-    model_plain: ACGCL
-    value: 0.9446
-    std: 0.0022
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2312.05757'
-    title: 'Towards Human-like Perception: Learning Structural Causal Model in Heterogeneous
-      Graph'
-    date: Dec 10, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-10'
-    venue: Information Processing & Management
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.9446
-    sort_std: 0.0022
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
     is_std_outlier: false
   - model: TriCL
     model_key: tricl
@@ -1526,8 +1555,8 @@ results:
     value_note: ''
     sort_value: 0.9112
     sort_std: 0.001
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1594,8 +1623,8 @@ results:
     value_note: ''
     sort_value: 0.9094
     sort_std: 0.001
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1662,8 +1691,8 @@ results:
     value_note: ''
     sort_value: 0.9088
     sort_std: 0.001
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1730,8 +1759,8 @@ results:
     value_note: ''
     sort_value: 0.9031
     sort_std: 0.002
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1798,8 +1827,8 @@ results:
     value_note: ''
     sort_value: 0.9007
     sort_std: 0.003
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1866,8 +1895,8 @@ results:
     value_note: ''
     sort_value: 0.8883
     sort_std: 0.002
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1934,8 +1963,8 @@ results:
     value_note: ''
     sort_value: 0.8869
     sort_std: 0.002
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 30
+    paper_rank: 30
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2002,8 +2031,8 @@ results:
     value_note: ''
     sort_value: 0.8859
     sort_std: 0.001
-    global_rank: 23
-    paper_rank: 23
+    global_rank: 31
+    paper_rank: 31
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2071,8 +2100,8 @@ results:
     value_note: ''
     sort_value: 0.8832
     sort_std: 0.003
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2139,8 +2168,8 @@ results:
     value_note: ''
     sort_value: 0.88
     sort_std: 0.002
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2207,8 +2236,8 @@ results:
     value_note: ''
     sort_value: 0.8758
     sort_std: 0.002
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2216,6 +2245,39 @@ results:
     comparison_type: improved
     comparison_source_title: Deep Graph Contrastive Representation Learning
     comparison_source_arxiv: '2006.04131'
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.872
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.08331'
+    title: Model Stealing Attacks Against Inductive Graph Neural Networks
+    date: Dec 15, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-15'
+    venue: IEEE Symposium on Security and Privacy
+    codebase_url: https://github.com/xinleihe/GNNStealing
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 38
+    sort_value: 0.872
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: HNHN
@@ -2275,8 +2337,8 @@ results:
     value_note: ''
     sort_value: 0.8671
     sort_std: 0.012
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2342,10 +2404,10 @@ results:
     value_note: ''
     sort_value: 0.842
     sort_std: 0.001
-    global_rank: 52
-    paper_rank: 134
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 61
+    paper_rank: 153
+    rank_delta: 92
+    rank_delta_abs: 92
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2410,8 +2472,8 @@ results:
     value_note: ''
     sort_value: 0.8118
     sort_std: 0.002
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 82
+    paper_rank: 82
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2478,8 +2540,8 @@ results:
     value_note: ''
     sort_value: 0.7963
     sort_std: 0.086
-    global_rank: 77
-    paper_rank: 77
+    global_rank: 91
+    paper_rank: 91
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2545,10 +2607,10 @@ results:
     value_note: ''
     sort_value: 0.788
     sort_std: null
-    global_rank: 79
-    paper_rank: 108
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 96
+    paper_rank: 127
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2613,8 +2675,8 @@ results:
     value_note: ''
     sort_value: 0.7659
     sort_std: 0.076
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 106
+    paper_rank: 106
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2681,8 +2743,8 @@ results:
     value_note: ''
     sort_value: 0.7657
     sort_std: 0.006
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 107
+    paper_rank: 107
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

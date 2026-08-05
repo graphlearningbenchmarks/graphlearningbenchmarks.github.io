@@ -43,8 +43,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - HANet
-mrr: 0.0845
-adjusted_mrr: 0.0845
+mrr: 0.0512
+adjusted_mrr: 0.0512
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -68,9 +68,9 @@ results:
 - &id002
   dataset: CiteSeer
   rows:
-  - model: SGC+TSC
+  - model: CNA
     model_key: cna
-    model_plain: SGC+TSC
+    model_plain: CNA
     value: 0.9575
     std: 0.0058
     metric: Accuracy
@@ -101,9 +101,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: IS-GIB
     model_key: is-gib
-    model_plain: SGC+TSC
+    model_plain: IS-GIB
     value: 0.939
     std: 0.0187
     metric: Accuracy
@@ -135,9 +135,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: EERM
     model_key: eerm
-    model_plain: SGC+TSC
+    model_plain: EERM
     value: 0.9112
     std: 0.0145
     metric: Accuracy
@@ -164,6 +164,39 @@ results:
     global_rank: 3
     sort_value: 0.9112
     sort_std: 0.0145
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.8774
+    std: 0.0041
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.06142'
+    title: Feature Expansion for Graph Neural Networks
+    date: May 10, 2023
+    date_display: May 2023
+    date_iso: '2023-05-10'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/sajqavril/Feature-Extension-Graph-Neural-Networks
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 20
+    sort_value: 0.8774
+    sort_std: 0.0041
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -474,8 +507,8 @@ results:
     at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
     at_pub_source_date_iso: '2016-09-09'
     at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-01-15'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -486,9 +519,10 @@ results:
     today_delta_significant: false
     true_value: 0.691
     true_std: null
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2001.05140'
+    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
+      Representations'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -854,9 +888,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -888,9 +922,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -922,9 +956,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -1013,16 +1047,50 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 33
-    paper_rank: 695
-    rank_delta: 662
-    rank_delta_abs: 662
+    global_rank: 42
+    paper_rank: 709
+    rank_delta: 667
+    rank_delta_abs: 667
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'SplineCNN: Fast Geometric Deep Learning with Continuous
       B-Spline Kernels'
     comparison_source_arxiv: '1711.08920'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8911
+    std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 75
+    sort_value: 0.8911
+    sort_std: 0.0012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: ChebNet
@@ -1082,10 +1150,10 @@ results:
     value_note: ''
     sort_value: 0.8832
     sort_std: 0.02
-    global_rank: 112
-    paper_rank: 713
-    rank_delta: 601
-    rank_delta_abs: 601
+    global_rank: 121
+    paper_rank: 727
+    rank_delta: 606
+    rank_delta_abs: 606
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1150,10 +1218,10 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: null
-    global_rank: 547
-    paper_rank: 958
-    rank_delta: 411
-    rank_delta_abs: 411
+    global_rank: 560
+    paper_rank: 975
+    rank_delta: 415
+    rank_delta_abs: 415
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1217,8 +1285,8 @@ results:
     value_note: ''
     sort_value: 0.819
     sort_std: null
-    global_rank: 661
-    paper_rank: 661
+    global_rank: 675
+    paper_rank: 675
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1284,10 +1352,10 @@ results:
     value_note: ''
     sort_value: 0.7768
     sort_std: null
-    global_rank: 840
-    paper_rank: 1035
-    rank_delta: 195
-    rank_delta_abs: 195
+    global_rank: 853
+    paper_rank: 1052
+    rank_delta: 199
+    rank_delta_abs: 199
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1351,8 +1419,8 @@ results:
     value_note: ''
     sort_value: 0.757
     sort_std: null
-    global_rank: 872
-    paper_rank: 872
+    global_rank: 886
+    paper_rank: 886
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1398,8 +1466,8 @@ results:
     at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
     at_pub_source_date_iso: '2016-09-09'
     at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-01-15'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1410,16 +1478,17 @@ results:
     today_delta_significant: false
     true_value: 0.751
     true_std: null
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2001.05140'
+    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
+      Representations'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.751
     sort_std: null
-    global_rank: 883
-    paper_rank: 883
+    global_rank: 897
+    paper_rank: 897
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1486,8 +1555,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.0
-    global_rank: 925
-    paper_rank: 951
+    global_rank: 941
+    paper_rank: 967
     rank_delta: 26
     rank_delta_abs: 26
     rank_delta_direction: worse
@@ -1533,8 +1602,8 @@ results:
     at_pub_source_title: Revisiting Semi-Supervised Learning with Graph Embeddings
     at_pub_source_date_iso: '2016-03-29'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -1545,16 +1614,17 @@ results:
     today_delta_significant: true
     true_value: 0.604
     true_std: 0.008
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
     value_gap_source_is_current_paper: false
     value_gap: 0.009000000000000008
     has_value_note: false
     value_note: ''
     sort_value: 0.604
     sort_std: 0.008
-    global_rank: 990
-    paper_rank: 993
+    global_rank: 1007
+    paper_rank: 1010
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -1600,8 +1670,8 @@ results:
     at_pub_source_title: Revisiting Semi-Supervised Learning with Graph Embeddings
     at_pub_source_date_iso: '2016-03-29'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-01-15'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1612,16 +1682,17 @@ results:
     today_delta_significant: false
     true_value: 0.59
     true_std: null
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2001.05140'
+    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
+      Representations'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.59
     sort_std: null
-    global_rank: 999
-    paper_rank: 999
+    global_rank: 1016
+    paper_rank: 1016
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1643,9 +1714,9 @@ results:
 - &id003
   dataset: PubMed
   rows:
-  - model: R-SoftGraphAIN
+  - model: LGTL
     model_key: lgtl
-    model_plain: R-SoftGraphAIN
+    model_plain: LGTL
     value: 0.9518
     std: 0.0011
     metric: Accuracy
@@ -1677,9 +1748,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: SAGN
     model_key: sagn
-    model_plain: R-SoftGraphAIN
+    model_plain: SAGN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -1711,9 +1782,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: MixHop (LO)
     model_key: mixhop (lo)
-    model_plain: R-SoftGraphAIN
+    model_plain: MixHop (LO)
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -1744,6 +1815,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9487
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.9487
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: GCN
     model_key: gcn
@@ -2186,8 +2291,8 @@ results:
     at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
     at_pub_source_date_iso: '2016-09-09'
     at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-01-15'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2198,9 +2303,10 @@ results:
     today_delta_significant: false
     true_value: 0.739
     true_std: null
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2001.05140'
+    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
+      Representations'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -2388,8 +2494,8 @@ results:
     at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
     at_pub_source_date_iso: '2016-09-09'
     at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-01-15'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2400,9 +2506,10 @@ results:
     today_delta_significant: false
     true_value: 0.711
     true_std: null
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2001.05140'
+    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
+      Representations'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
@@ -2431,6 +2538,207 @@ results:
 - &id004
   dataset: QM7b
   rows:
+  - model: DTNN
+    model_key: dtnn
+    model_plain: DTNN
+    value: 8.8
+    std: 3.5
+    paper_value: 8.8
+    paper_std: 3.5
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Schutt_etal2017
+    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE on QM7
+    date: Jul 10, 2019
+    date_display: Jul 2019
+    date_iso: '2019-07-10'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.074
+    at_pub_std: null
+    at_pub_source_arxiv: '1703.00564'
+    at_pub_source_title: MoleculeNet
+    at_pub_source_date_iso: '2017-03-02'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2017-03-02'
+    value_gap_source_date_label: '2017'
+    gap_vs_at_pub: 8.726
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.074
+    true_std: null
+    value_gap_source_arxiv: '1703.00564'
+    value_gap_source_title: MoleculeNet
+    value_gap_source_is_current_paper: false
+    value_gap: 8.726
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.074
+    sort_std: null
+    global_rank: 1
+    paper_rank: 4
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: MoleculeNet
+    comparison_source_arxiv: '1703.00564'
+    is_best: true
+    is_std_outlier: false
+  - model: Multitask(CM)
+    model_key: multitask(cm)
+    model_plain: Multitask(CM)
+    value: 10.8
+    std: 1.3
+    paper_value: 10.8
+    paper_std: 1.3
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Wu_etal2018
+    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE on QM7
+    date: Jul 10, 2019
+    date_display: Jul 2019
+    date_iso: '2019-07-10'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.086
+    at_pub_std: null
+    at_pub_source_arxiv: '1703.00564'
+    at_pub_source_title: MoleculeNet
+    at_pub_source_date_iso: '2017-03-02'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2017-03-02'
+    value_gap_source_date_label: '2017'
+    gap_vs_at_pub: 10.714
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.086
+    true_std: null
+    value_gap_source_arxiv: '1703.00564'
+    value_gap_source_title: MoleculeNet
+    value_gap_source_is_current_paper: false
+    value_gap: 10.714
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.086
+    sort_std: null
+    global_rank: 2
+    paper_rank: 5
+    rank_delta: 3
+    rank_delta_abs: 3
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: MoleculeNet
+    comparison_source_arxiv: '1703.00564'
+    is_best: true
+    is_std_outlier: false
+  - model: KRR(CM)
+    model_key: krr(cm)
+    model_plain: KRR(CM)
+    value: 10.2
+    std: 0.3
+    paper_value: 10.2
+    paper_std: 0.3
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: Wu_etal2018
+    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test MAE on QM7
+    date: Jul 10, 2019
+    date_display: Jul 2019
+    date_iso: '2019-07-10'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.098
+    at_pub_std: null
+    at_pub_source_arxiv: '1703.00564'
+    at_pub_source_title: MoleculeNet
+    at_pub_source_date_iso: '2017-03-02'
+    at_pub_source_date_label: '2017'
+    value_gap_source_date_iso: '2017-03-02'
+    value_gap_source_date_label: '2017'
+    gap_vs_at_pub: 10.101999999999999
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.098
+    true_std: null
+    value_gap_source_arxiv: '1703.00564'
+    value_gap_source_title: MoleculeNet
+    value_gap_source_is_current_paper: false
+    value_gap: 10.101999999999999
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.098
+    sort_std: null
+    global_rank: 3
+    paper_rank: 5
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: MoleculeNet
+    comparison_source_arxiv: '1703.00564'
+    is_best: true
+    is_std_outlier: false
   - model: ANI-1
     model_key: ani-1
     model_plain: ANI-1
@@ -2487,8 +2795,8 @@ results:
     value_note: ''
     sort_value: 2.86
     sort_std: 0.25
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2497,73 +2805,6 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
-    is_std_outlier: false
-  - model: DTNN
-    model_key: dtnn
-    model_plain: DTNN
-    value: 8.8
-    std: 3.5
-    paper_value: 8.8
-    paper_std: 3.5
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Schutt_etal2017
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE on QM7
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.074
-    at_pub_std: null
-    at_pub_source_arxiv: '1703.00564'
-    at_pub_source_title: MoleculeNet
-    at_pub_source_date_iso: '2017-03-02'
-    at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
-    gap_vs_at_pub: 8.726
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 8.8
-    true_std: 3.5
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 8.8
-    sort_std: 3.5
-    global_rank: 2
-    paper_rank: 2
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: MoleculeNet
-    comparison_source_arxiv: '1703.00564'
-    is_best: false
     is_std_outlier: false
   - model: HANet
     model_key: hanet
@@ -2621,8 +2862,8 @@ results:
     value_note: ''
     sort_value: 9.5
     sort_std: 0.71
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2630,140 +2871,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: KRR(CM)
-    model_key: krr(cm)
-    model_plain: KRR(CM)
-    value: 10.2
-    std: 0.3
-    paper_value: 10.2
-    paper_std: 0.3
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Wu_etal2018
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE on QM7
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.098
-    at_pub_std: null
-    at_pub_source_arxiv: '1703.00564'
-    at_pub_source_title: MoleculeNet
-    at_pub_source_date_iso: '2017-03-02'
-    at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
-    gap_vs_at_pub: 10.101999999999999
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 10.2
-    true_std: 0.3
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 10.2
-    sort_std: 0.3
-    global_rank: 4
-    paper_rank: 4
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: MoleculeNet
-    comparison_source_arxiv: '1703.00564'
-    is_best: false
-    is_std_outlier: false
-  - model: Multitask(CM)
-    model_key: multitask(cm)
-    model_plain: Multitask(CM)
-    value: 10.8
-    std: 1.3
-    paper_value: 10.8
-    paper_std: 1.3
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: Wu_etal2018
-    variant_inference_reason: 'dataset: fuzzy match to qm7b (score=86)'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test MAE on QM7
-    date: Jul 10, 2019
-    date_display: Jul 2019
-    date_iso: '2019-07-10'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.086
-    at_pub_std: null
-    at_pub_source_arxiv: '1703.00564'
-    at_pub_source_title: MoleculeNet
-    at_pub_source_date_iso: '2017-03-02'
-    at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
-    gap_vs_at_pub: 10.714
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 10.8
-    true_std: 1.3
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 10.8
-    sort_std: 1.3
-    global_rank: 5
-    paper_rank: 5
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: MoleculeNet
-    comparison_source_arxiv: '1703.00564'
     is_best: false
     is_std_outlier: false
   - model: GC
@@ -2802,8 +2909,8 @@ results:
     at_pub_source_title: MoleculeNet
     at_pub_source_date_iso: '2017-03-02'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-07-22'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2814,16 +2921,17 @@ results:
     today_delta_significant: false
     true_value: 77.9
     true_std: 2.1
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2007.11202'
+    value_gap_source_title: 'MathNet: Haar-Like Wavelet Multiresolution-Analysis for
+      Graph Representation and Learning'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 77.9
     sort_std: 2.1
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2869,8 +2977,8 @@ results:
     at_pub_source_title: MoleculeNet
     at_pub_source_date_iso: '2017-03-02'
     at_pub_source_date_label: '2017'
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2025-02-18'
+    value_gap_source_date_label: ICLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2881,21 +2989,55 @@ results:
     today_delta_significant: false
     true_value: 122.7
     true_std: 4.2
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2502.12638'
+    value_gap_source_title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for
+      3D Molecule Generation'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 122.7
     sort_std: 4.2
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 122.9
+    std: 2.2
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2502.12638'
+    title: 'NExT-Mol: 3D Diffusion Meets 1D Language Modeling for 3D Molecule Generation'
+    date: Feb 18, 2025
+    date_display: Feb 2025
+    date_iso: '2025-02-18'
+    venue: International Conference on Learning Representations
+    codebase_url: https://github.com/acharkq/NExT-Mol
+    uses_external_data: false
+    input_feature_source: unknown
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 60
+    sort_value: 122.9
+    sort_std: 2.2
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

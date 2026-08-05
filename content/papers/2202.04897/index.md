@@ -56,8 +56,8 @@ paper_type: method
 proposed_models:
 - InterHT + NodePiece
 - InterHT + DigPiece
-mrr: 0.2
-adjusted_mrr: 0.0667
+mrr: 0.125
+adjusted_mrr: 0.0417
 mrr_dataset_count: 1
 benchmark_categories:
 - OGB
@@ -110,8 +110,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-10'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -120,25 +120,31 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7293
+    true_std: 0.0018
+    value_gap_source_arxiv: '2202.04897'
+    value_gap_source_title: 'InterHT: Knowledge Graph Embeddings by Interaction between
+      Head and Tail Entities'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7293
     sort_std: 0.0018
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Information-Flow (IF) framework
+  - model: StarGraph + TripleRE'
     model_key: stargraph + triplere'
-    model_plain: Information-Flow (IF) framework
+    model_plain: StarGraph + TripleRE'
     value: 0.729
     std: null
     metric: MRR
@@ -162,7 +168,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.729
     sort_std: null
     comparison_type: global_top
@@ -206,8 +212,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-10'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -216,86 +222,24 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7201
+    true_std: 0.0011
+    value_gap_source_arxiv: '2202.04897'
+    value_gap_source_title: 'InterHT: Knowledge Graph Embeddings by Interaction between
+      Head and Tail Entities'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7201
     sort_std: 0.0011
-    global_rank: 2
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Information-Flow (IF) framework
-    model_key: trans(large) + nodepiece
-    model_plain: Information-Flow (IF) framework
-    value: 0.6939
-    std: 0.0011
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 38.430804
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2205.14209'
-    title: 'StarGraph: Knowledge Representation Learning based on Incomplete Two-hop
-      Subgraph'
-    date: May 27, 2022
-    date_display: May 2022
-    date_iso: '2022-05-27'
-    venue: Under review in ICLR 2023 (https://openreview.net/forum?id=mTOB_VK_BWk)
-    codebase_url: https://github.com/hzli-ucas/StarGraph
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6939
-    sort_std: 0.0011
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Information-Flow (IF) framework
-    model_key: trans + nodepiece
-    model_plain: Information-Flow (IF) framework
-    value: 0.6882
-    std: 0.0019
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 19.215402
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2205.14209'
-    title: 'StarGraph: Knowledge Representation Learning based on Incomplete Two-hop
-      Subgraph'
-    date: May 27, 2022
-    date_display: May 2022
-    date_iso: '2022-05-27'
-    venue: Under review in ICLR 2023 (https://openreview.net/forum?id=mTOB_VK_BWk)
-    codebase_url: https://github.com/hzli-ucas/StarGraph
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
     global_rank: 3
-    sort_value: 0.6882
-    sort_std: 0.0019
-    comparison_type: global_top
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: false
+    comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -357,8 +301,8 @@ results:
     value_note: ''
     sort_value: 0.6779
     sort_std: 0.0018
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -425,8 +369,8 @@ results:
     value_note: ''
     sort_value: 0.6582
     sort_std: 0.002
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -472,8 +416,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-10'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -482,17 +426,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6392
+    true_std: 0.0045
+    value_gap_source_arxiv: '2202.04897'
+    value_gap_source_title: 'InterHT: Knowledge Graph Embeddings by Interaction between
+      Head and Tail Entities'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6392
     sort_std: 0.0045
-    global_rank: 9
+    global_rank: 15
+    paper_rank: 15
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -555,8 +505,8 @@ results:
     value_note: ''
     sort_value: 0.5794
     sort_std: 0.002
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -623,8 +573,8 @@ results:
     value_note: ''
     sort_value: 0.5703
     sort_std: 0.0035
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -691,8 +641,8 @@ results:
     value_note: ''
     sort_value: 0.5458
     sort_std: 0.0052
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -738,8 +688,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-10'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -748,17 +698,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5208
+    true_std: 0.0027
+    value_gap_source_arxiv: '2202.04897'
+    value_gap_source_title: 'InterHT: Knowledge Graph Embeddings by Interaction between
+      Head and Tail Entities'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5208
     sort_std: 0.0027
-    global_rank: 17
+    global_rank: 30
+    paper_rank: 30
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -800,8 +756,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-10'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -810,17 +766,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.5027
+    true_std: 0.0027
+    value_gap_source_arxiv: '2202.04897'
+    value_gap_source_title: 'InterHT: Knowledge Graph Embeddings by Interaction between
+      Head and Tail Entities'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.5027
     sort_std: 0.0027
-    global_rank: 18
+    global_rank: 32
+    paper_rank: 32
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -862,8 +824,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-10'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -872,17 +834,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4332
+    true_std: 0.0025
+    value_gap_source_arxiv: '2202.04897'
+    value_gap_source_title: 'InterHT: Knowledge Graph Embeddings by Interaction between
+      Head and Tail Entities'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4332
     sort_std: 0.0025
-    global_rank: 19
+    global_rank: 36
+    paper_rank: 36
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -924,8 +892,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-02-10'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -934,17 +902,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.4256
+    true_std: 0.003
+    value_gap_source_arxiv: '2202.04897'
+    value_gap_source_title: 'InterHT: Knowledge Graph Embeddings by Interaction between
+      Head and Tail Entities'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.4256
     sort_std: 0.003
-    global_rank: 20
+    global_rank: 38
+    paper_rank: 38
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

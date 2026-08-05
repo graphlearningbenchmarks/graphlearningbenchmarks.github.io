@@ -72,27 +72,27 @@ results:
 - &id003
   dataset: ogbl-citation2
   rows:
-  - model: Classification
+  - model: MPLP
     model_key: mplp
-    model_plain: Classification
+    model_plain: MPLP
     value: 0.9072
     std: 0.0012
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2309.00976'
-    title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
-    date: Sep 2, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-02'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/Barcavin/efficient-node-labelling
+    arxiv_id: '2411.03845'
+    title: Reconsidering the Performance of GAE in Link Prediction
+    date: Nov 6, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-06'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/GraphPKU/Refined-GAE
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
@@ -105,9 +105,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Classification
+  - model: CFG
     model_key: cfg
-    model_plain: Classification
+    model_plain: CFG
     value: 0.8997
     std: 0.0015
     metric: MRR
@@ -138,9 +138,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Classification
+  - model: SIEG
     model_key: sieg
-    model_plain: Classification
+    model_plain: SIEG
     value: 0.8987
     std: 0.0018
     metric: MRR
@@ -208,8 +208,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2023-03-01'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-11-06'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -220,17 +220,16 @@ results:
     today_delta_significant: false
     true_value: 0.8767
     true_std: 0.0032
-    value_gap_source_arxiv: '2303.00170'
-    value_gap_source_title: Asymmetric Learning for Graph Neural Network based Link
-      Prediction
+    value_gap_source_arxiv: '2411.03845'
+    value_gap_source_title: Reconsidering the Performance of GAE in Link Prediction
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8767
     sort_std: 0.0032
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -297,8 +296,8 @@ results:
     value_note: ''
     sort_value: 0.8705
     sort_std: 0.0004
-    global_rank: 14
-    paper_rank: 23
+    global_rank: 17
+    paper_rank: 26
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -364,8 +363,8 @@ results:
     value_note: ''
     sort_value: 0.8549
     sort_std: 0.0029
-    global_rank: 20
-    paper_rank: 20
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -411,8 +410,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-09-11'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -423,21 +422,56 @@ results:
     today_delta_significant: false
     true_value: 0.8492
     true_std: 0.0029
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2309.06574'
+    value_gap_source_title: 'Circle Feature Graphormer: Can Circle Features Stimulate
+      Graph Transformer?'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8492
     sort_std: 0.0029
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8367
+    std: 0.0007
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2409.17475'
+    title: On the Impact of Feature Heterophily on Link Prediction with Graph Neural
+      Networks
+    date: Sep 26, 2024
+    date_display: Sep 2024
+    date_iso: '2024-09-26'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/tensor-gales/HeteLinkPred
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 33
+    sort_value: 0.8367
+    sort_std: 0.0007
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -499,8 +533,8 @@ results:
     value_note: ''
     sort_value: 0.8264
     sort_std: 0.0001
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -567,8 +601,8 @@ results:
     value_note: ''
     sort_value: 0.762
     sort_std: 0.0
-    global_rank: 50
-    paper_rank: 62
+    global_rank: 56
+    paper_rank: 68
     rank_delta: 12
     rank_delta_abs: 12
     rank_delta_direction: worse
@@ -635,8 +669,8 @@ results:
     value_note: ''
     sort_value: 0.7612
     sort_std: 0.0
-    global_rank: 51
-    paper_rank: 62
+    global_rank: 57
+    paper_rank: 68
     rank_delta: 11
     rank_delta_abs: 11
     rank_delta_direction: worse
@@ -703,8 +737,8 @@ results:
     value_note: ''
     sort_value: 0.5308
     sort_std: 0.0419
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -770,13 +804,47 @@ results:
     value_note: ''
     sort_value: 0.5147
     sort_std: 0.0
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 71
+    paper_rank: 71
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.3917
+    std: 0.0044
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2504.06193'
+    title: 'Weak Models Can be Good Teachers: A Case Study on Link Prediction with
+      MLPs'
+    date: Apr 8, 2025
+    date_display: Apr 2025
+    date_iso: '2025-04-08'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 78
+    sort_value: 0.3917
+    sort_std: 0.0044
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -793,9 +861,9 @@ results:
 - &id004
   dataset: ogbl-ddi
   rows:
-  - model: MPNNs
+  - model: ELGNN
     model_key: elgnn
-    model_plain: MPNNs
+    model_plain: ELGNN
     value: 0.9777
     std: 0.0037
     metric: Hits@20
@@ -827,9 +895,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: MPNNs
+  - model: GIDN
     model_key: gidn
-    model_plain: MPNNs
+    model_plain: GIDN
     value: 0.9542
     std: 0.0
     metric: Hits@20
@@ -927,9 +995,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: MPNNs
+  - model: AGDN
     model_key: agdn
-    model_plain: MPNNs
+    model_plain: AGDN
     value: 0.9538
     std: 0.0094
     metric: Hits@20
@@ -996,8 +1064,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2023-10-22'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1008,20 +1076,120 @@ results:
     today_delta_significant: false
     true_value: 0.9088
     true_std: 0.0313
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2310.14166'
+    value_gap_source_title: Ensemble Learning for Graph Neural Networks
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.9088
     sort_std: 0.0313
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.6719
+    std: 0.0118
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2406.16687'
+    title: Link Prediction with Untrained Message Passing Layers
+    date: Jun 24, 2024
+    date_display: Jun 2024
+    date_iso: '2024-06-24'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 22
+    sort_value: 0.6719
+    sort_std: 0.0118
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.3707
+    std: 0.0507
+    paper_value: 0.3707
+    paper_std: 0.0507
+    metric: Hits@20
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.11
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: link_prediction
+    protocol_decision: standard
+    protocol_note: Official OGB link prediction split
+    date: Dec 30, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-30'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.3707
+    at_pub_std: 0.0507
+    at_pub_source_arxiv: '2005.00687'
+    at_pub_source_title: OGB
+    at_pub_source_date_iso: '2020-05-02'
+    at_pub_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6476
+    true_std: 0.0145
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2769
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6476
+    sort_std: 0.0145
+    global_rank: 26
+    paper_rank: 56
+    rank_delta: 30
+    rank_delta_abs: 30
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1063,8 +1231,8 @@ results:
     at_pub_source_title: OGB
     at_pub_source_date_iso: '2020-05-02'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2020-10-30'
-    value_gap_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2023-10-22'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1075,88 +1243,20 @@ results:
     today_delta_significant: false
     true_value: 0.539
     true_std: 0.0474
-    value_gap_source_arxiv: '2010.16103'
-    value_gap_source_title: 'Labeling Trick: A Theory of Using Graph Neural Networks
-      for Multi-Node Representation Learning'
+    value_gap_source_arxiv: '2310.14166'
+    value_gap_source_title: Ensemble Learning for Graph Neural Networks
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.539
     sort_std: 0.0474
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GCN
-    model_key: gcn
-    model_plain: GCN
-    value: 0.3707
-    std: 0.0507
-    paper_value: 0.3707
-    paper_std: 0.0507
-    metric: Hits@20
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 0.11
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: link_prediction
-    protocol_decision: standard
-    protocol_note: Official OGB link prediction split
-    date: Dec 30, 2020
-    date_display: Dec 2020
-    date_iso: '2020-12-30'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.3707
-    at_pub_std: 0.0507
-    at_pub_source_arxiv: '2005.00687'
-    at_pub_source_title: OGB
-    at_pub_source_date_iso: '2020-05-02'
-    at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2023-10-01'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: true
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.499
-    true_std: 0.0723
-    value_gap_source_arxiv: '2310.00793'
-    value_gap_source_title: 'Revisiting Link Prediction: a data perspective'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.12830000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.499
-    sort_std: 0.0723
-    global_rank: 28
-    paper_rank: 32
-    rank_delta: 4
-    rank_delta_abs: 4
-    rank_delta_direction: worse
-    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1199,33 +1299,32 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2023-10-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
-    surpassed_since_pub: false
+    surpassed_since_pub: true
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3056
-    true_std: 0.0386
-    value_gap_source_arxiv: '2310.09516'
-    value_gap_source_title: Efficient Link Prediction via GNN Layers Induced by Negative
-      Sampling
+    today_delta_significant: true
+    true_value: 0.4974
+    true_std: 0.0239
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: null
+    value_gap: 0.19180000000000003
     has_value_note: false
     value_note: ''
-    sort_value: 0.3056
-    sort_std: 0.0386
-    global_rank: 37
-    paper_rank: 37
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
+    sort_value: 0.4974
+    sort_std: 0.0239
+    global_rank: 46
+    paper_rank: 62
+    rank_delta: 16
+    rank_delta_abs: 16
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1287,10 +1386,10 @@ results:
     value_note: ''
     sort_value: 0.264
     sort_std: 0.061
-    global_rank: 44
-    paper_rank: 48
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 68
+    paper_rank: 73
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1355,8 +1454,8 @@ results:
     value_note: ''
     sort_value: 0.1861
     sort_std: 0.0
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1423,10 +1522,10 @@ results:
     value_note: ''
     sort_value: 0.1792
     sort_std: 0.0357
-    global_rank: 53
-    paper_rank: 58
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 81
+    paper_rank: 84
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1490,8 +1589,8 @@ results:
     value_note: ''
     sort_value: 0.1773
     sort_std: 0.0
-    global_rank: 56
-    paper_rank: 56
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1558,8 +1657,8 @@ results:
     value_note: ''
     sort_value: 0.0623
     sort_std: 0.0
-    global_rank: 64
-    paper_rank: 64
+    global_rank: 95
+    paper_rank: 95
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1581,42 +1680,75 @@ results:
 - &id002
   dataset: ogbl-ppa
   rows:
-  - model: Classification
-    model_key: mplp
-    model_plain: Classification
-    value: 0.6524
-    std: 0.015
+  - model: Optimized GAE
+    model_key: optimized gae
+    model_plain: Optimized GAE
+    value: 0.7841
+    std: 0.0083
     metric: Hits@100
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2309.00976'
-    title: Pure Message Passing Can Estimate Common Neighbor for Link Prediction
-    date: Sep 2, 2023
-    date_display: Sep 2023
-    date_iso: '2023-09-02'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/Barcavin/efficient-node-labelling
+    arxiv_id: '2411.03845'
+    title: Reconsidering the Performance of GAE in Link Prediction
+    date: Nov 6, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-06'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/GraphPKU/Refined-GAE
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.6524
-    sort_std: 0.015
+    sort_value: 0.7841
+    sort_std: 0.0083
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Classification
+  - model: MPLP
+    model_key: mplp
+    model_plain: MPLP
+    value: 0.6524
+    std: 0.015
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2411.03845'
+    title: Reconsidering the Performance of GAE in Link Prediction
+    date: Nov 6, 2024
+    date_display: Nov 2024
+    date_iso: '2024-11-06'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: https://github.com/GraphPKU/Refined-GAE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.6524
+    sort_std: 0.015
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: OGB Leader
     model_key: ogb leader
-    model_plain: Classification
+    model_plain: OGB Leader
     value: 0.6524
     std: 0.015
     metric: Hits@100
@@ -1639,46 +1771,46 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 2
+    global_rank: 3
     sort_value: 0.6524
     sort_std: 0.015
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
-  - model: Classification
-    model_key: prb
-    model_plain: Classification
-    value: 0.6347
-    std: 0.0175
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.5013
+    std: 0.0055
     metric: Hits@100
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2411.01410'
-    title: PageRank Bandits for Link Prediction
-    date: Nov 3, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-03'
-    venue: Neural Information Processing Systems
-    codebase_url: https://github.com/jiaruzouu/PRB
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.00170'
+    title: Asymmetric Learning for Graph Neural Network based Link Prediction
+    date: Mar 1, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-01'
+    venue: ACM Transactions on Knowledge Discovery from Data
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.6347
-    sort_std: 0.0175
+    global_rank: 16
+    sort_value: 0.5013
+    sort_std: 0.0055
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: Resource Allocation
     model_key: resource allocation
@@ -1716,8 +1848,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-06-09'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1728,16 +1860,17 @@ results:
     today_delta_significant: false
     true_value: 0.4933
     true_std: 0.0
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2206.04216'
+    value_gap_source_title: 'Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks
+      for Link Prediction'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.4933
     sort_std: 0.0
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1784,8 +1917,8 @@ results:
       for Multi-Node Representation Learning'
     at_pub_source_date_iso: '2020-10-30'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2023-03-01'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-02-04'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1796,22 +1929,55 @@ results:
     today_delta_significant: false
     true_value: 0.488
     true_std: 0.0316
-    value_gap_source_arxiv: '2303.00170'
-    value_gap_source_title: Asymmetric Learning for Graph Neural Network based Link
-      Prediction
+    value_gap_source_arxiv: '2502.02479'
+    value_gap_source_title: Using Random Noise Equivariantly to Boost Graph Neural
+      Networks Universally
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.488
     sort_std: 0.0316
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 22
+    paper_rank: 22
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.46
+    std: 0.0
+    metric: Hits@100
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.09516'
+    title: Efficient Link Prediction via GNN Layers Induced by Negative Sampling
+    date: Oct 14, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-14'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/yxzwang/SubmissionverOfYinYanGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 26
+    sort_value: 0.46
+    sort_std: 0.0
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1872,8 +2038,8 @@ results:
     value_note: ''
     sort_value: 0.4123
     sort_std: 0.0159
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1919,8 +2085,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-06-09'
+    value_gap_source_date_label: NeurIPS 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1931,16 +2097,17 @@ results:
     today_delta_significant: false
     true_value: 0.3245
     true_std: 0.0
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2206.04216'
+    value_gap_source_title: 'Neo-GNNs: Neighborhood Overlap-aware Graph Neural Networks
+      for Link Prediction'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.3245
     sort_std: 0.0
-    global_rank: 37
-    paper_rank: 37
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1986,8 +2153,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2021-12-06'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1998,16 +2165,16 @@ results:
     today_delta_significant: false
     true_value: 0.3238
     true_std: 0.0258
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2112.02936'
+    value_gap_source_title: Pairwise Learning for Neural Link Prediction
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.3238
     sort_std: 0.0258
-    global_rank: 38
-    paper_rank: 38
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2073,8 +2240,8 @@ results:
     value_note: ''
     sort_value: 0.3229
     sort_std: 0.0094
-    global_rank: 40
-    paper_rank: 40
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2120,8 +2287,8 @@ results:
     at_pub_source_title: Formatting Instructions for ICLR 2021 Conference Submissions
     at_pub_source_date_iso: '2020-06-14'
     at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-10-01'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-06-24'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: 0.0002999999999999947
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -2130,18 +2297,18 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.2957
-    true_std: 0.029
-    value_gap_source_arxiv: '2310.00793'
-    value_gap_source_title: 'Revisiting Link Prediction: a data perspective'
+    true_value: 0.3084
+    true_std: 0.0178
+    value_gap_source_arxiv: '2406.16687'
+    value_gap_source_title: Link Prediction with Untrained Message Passing Layers
     value_gap_source_is_current_paper: false
-    value_gap: 0.10900000000000001
+    value_gap: 0.1217
     has_value_note: false
     value_note: ''
-    sort_value: 0.2957
-    sort_std: 0.029
-    global_rank: 41
-    paper_rank: 55
+    sort_value: 0.3084
+    sort_std: 0.0178
+    global_rank: 49
+    paper_rank: 63
     rank_delta: 14
     rank_delta_abs: 14
     rank_delta_direction: worse
@@ -2207,8 +2374,8 @@ results:
     value_note: ''
     sort_value: 0.289
     sort_std: 0.015
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2274,8 +2441,8 @@ results:
     value_note: ''
     sort_value: 0.2765
     sort_std: 0.0
-    global_rank: 46
-    paper_rank: 46
+    global_rank: 54
+    paper_rank: 54
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2321,8 +2488,8 @@ results:
     at_pub_source_title: OGB
     at_pub_source_date_iso: '2020-05-02'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2020-10-30'
-    value_gap_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2023-01-29'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2333,17 +2500,17 @@ results:
     today_delta_significant: false
     true_value: 0.1655
     true_std: 0.024
-    value_gap_source_arxiv: '2010.16103'
-    value_gap_source_title: 'Labeling Trick: A Theory of Using Graph Neural Networks
-      for Multi-Node Representation Learning'
+    value_gap_source_arxiv: '2301.12562'
+    value_gap_source_title: Simplifying Subgraph Representation Learning for Scalable
+      Link Prediction
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.1655
     sort_std: 0.024
-    global_rank: 59
-    paper_rank: 59
+    global_rank: 68
+    paper_rank: 68
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2365,9 +2532,9 @@ results:
 - &id001
   dataset: ogbn-arxiv
   rows:
-  - model: EGP (GCN)
+  - model: OFA
     model_key: ofa
-    model_plain: EGP (GCN)
+    model_plain: OFA
     value: 0.7764
     std: null
     metric: Accuracy
@@ -2399,9 +2566,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: EGP (GCN)
+  - model: GIANT-XRT
     model_key: giant-xrt
-    model_plain: EGP (GCN)
+    model_plain: GIANT-XRT
     value: 0.7612
     std: 0.0016
     metric: Accuracy
@@ -2432,9 +2599,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: EGP (GCN)
+  - model: GEGCN
     model_key: gegcn
-    model_plain: EGP (GCN)
+    model_plain: GEGCN
     value: 0.7576
     std: 0.0064
     metric: Accuracy
@@ -2908,8 +3075,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2024-10-03'
+    value_gap_source_date_label: TMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2919,15 +3086,16 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.7209
-    true_std: 0.0025
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
+    true_std: null
+    value_gap_source_arxiv: '2410.02158'
+    value_gap_source_title: 'SCNode: Spatial and Contextual Coordinates for Graph
+      Representation Learning'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7209
-    sort_std: 0.0025
+    sort_std: null
     global_rank: 46
     paper_rank: 46
     rank_delta: 0
@@ -2975,8 +3143,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-12-30'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2021-02-13'
+    value_gap_source_date_label: ICML 2021
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2986,15 +3154,15 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.7192
-    true_std: 0.0016
-    value_gap_source_arxiv: '2012.15024'
-    value_gap_source_title: Adaptive Graph Diffusion Networks
-    value_gap_source_is_current_paper: true
+    true_std: 0.0017
+    value_gap_source_arxiv: '2102.06986'
+    value_gap_source_title: How Framelets Enhance Graph Neural Networks
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.7192
-    sort_std: 0.0016
+    sort_std: 0.0017
     global_rank: 56
     paper_rank: 56
     rank_delta: 0
@@ -3002,6 +3170,73 @@ results:
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GIN
+    model_key: gin
+    model_plain: GIN
+    value: 0.7176
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2010.00238'
+    title: Multi-grained Semantics-aware Graph Neural Networks
+    date: Oct 1, 2020
+    date_display: Oct 2020
+    date_iso: '2020-10-01'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/zhiqiangzhongddu/AdamGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 62
+    sort_value: 0.7176
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6831
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2407.19941'
+    title: Boosting Cross-Domain and Cross-Task Generalization for Text-Attributed
+      Graphs from Structural Perspective
+    date: Jul 29, 2024
+    date_display: Jul 2024
+    date_iso: '2024-07-29'
+    venue: null
+    codebase_url: https://github.com/cy623/BooG
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 104
+    sort_value: 0.6831
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

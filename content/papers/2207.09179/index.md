@@ -52,8 +52,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SCARA
-mrr: 0.0074
-adjusted_mrr: 0.0025
+mrr: 0.007
+adjusted_mrr: 0.0023
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -75,9 +75,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: Cluster-GCN (2019)
+  - model: Node Sampled Soup
     model_key: node sampled soup
-    model_plain: Cluster-GCN (2019)
+    model_plain: Node Sampled Soup
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -109,9 +109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: EnGCN
     model_key: engcn
-    model_plain: Cluster-GCN (2019)
+    model_plain: EnGCN
     value: 0.9714
     std: 0.0003
     metric: F1
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: SAGN+SLE
     model_key: sagn+sle
-    model_plain: Cluster-GCN (2019)
+    model_plain: SAGN+SLE
     value: 0.971
     std: 0.0
     metric: F1
@@ -235,15 +235,48 @@ results:
     sort_value: 0.97
     sort_std: null
     global_rank: 5
-    paper_rank: 190
-    rank_delta: 185
-    rank_delta_abs: 185
+    paper_rank: 203
+    rank_delta: 198
+    rank_delta_abs: 198
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'SIGN: Scalable Inception Graph Neural Networks'
     comparison_source_arxiv: '2004.11198'
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.966
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.04528'
+    title: Accelerating Large Scale Real-Time GNN Inference using Channel Pruning
+    date: May 10, 2021
+    date_display: May 2021
+    date_iso: '2021-05-10'
+    venue: Proceedings of the VLDB Endowment
+    codebase_url: https://github.com/tedzhouhk/GCNP
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.966
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: PPRGo
     model_key: pprgo
@@ -303,10 +336,10 @@ results:
     value_note: ''
     sort_value: 0.937
     sort_std: null
-    global_rank: 114
-    paper_rank: 190
-    rank_delta: 76
-    rank_delta_abs: 76
+    global_rank: 119
+    paper_rank: 203
+    rank_delta: 84
+    rank_delta_abs: 84
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -372,10 +405,10 @@ results:
     value_note: ''
     sort_value: 0.9229
     sort_std: 0.005
-    global_rank: 135
-    paper_rank: 187
-    rank_delta: 52
-    rank_delta_abs: 52
+    global_rank: 143
+    paper_rank: 200
+    rank_delta: 57
+    rank_delta_abs: 57
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -439,13 +472,47 @@ results:
     value_note: ''
     sort_value: 0.7609
     sort_std: 0.0175
-    global_rank: 152
-    paper_rank: 187
-    rank_delta: 35
-    rank_delta_abs: 35
+    global_rank: 164
+    paper_rank: 200
+    rank_delta: 36
+    rank_delta_abs: 36
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7435
+    std: 0.0016
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2512.14908'
+    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
+      Graphs'
+    date: Dec 16, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/atlaspaper16/ATLAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 165
+    sort_value: 0.7435
+    sort_std: 0.0016
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -507,8 +574,8 @@ results:
     value_note: ''
     sort_value: 0.38
     sort_std: 0.002
-    global_rank: 188
-    paper_rank: 188
+    global_rank: 201
+    paper_rank: 201
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -530,9 +597,9 @@ results:
 - &id002
   dataset: ogbn-papers100M
   rows:
-  - model: AGP
+  - model: NIGCN
     model_key: nigcn
-    model_plain: AGP
+    model_plain: NIGCN
     value: 0.4981
     std: 0.011
     metric: F1
@@ -563,9 +630,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: AGP
+  - model: SGC
     model_key: sgc
-    model_plain: AGP
+    model_plain: SGC
     value: 0.4859
     std: 0.0177
     metric: F1

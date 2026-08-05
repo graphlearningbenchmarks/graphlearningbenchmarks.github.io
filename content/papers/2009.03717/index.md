@@ -66,9 +66,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -99,9 +99,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -190,9 +190,9 @@ results:
     sort_value: 0.9956
     sort_std: 0.02
     global_rank: 3
-    paper_rank: 158
-    rank_delta: 155
-    rank_delta_abs: 155
+    paper_rank: 169
+    rank_delta: 166
+    rank_delta_abs: 166
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -257,10 +257,10 @@ results:
     value_note: ''
     sort_value: 0.985
     sort_std: null
-    global_rank: 19
-    paper_rank: 164
-    rank_delta: 145
-    rank_delta_abs: 145
+    global_rank: 21
+    paper_rank: 175
+    rank_delta: 154
+    rank_delta_abs: 154
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -327,10 +327,10 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 51
-    paper_rank: 162
-    rank_delta: 111
-    rank_delta_abs: 111
+    global_rank: 55
+    paper_rank: 173
+    rank_delta: 118
+    rank_delta_abs: 118
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -398,10 +398,10 @@ results:
     value_note: ''
     sort_value: 0.958
     sort_std: 0.001
-    global_rank: 70
-    paper_rank: 168
-    rank_delta: 98
-    rank_delta_abs: 98
+    global_rank: 78
+    paper_rank: 179
+    rank_delta: 101
+    rank_delta_abs: 101
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -468,13 +468,47 @@ results:
     value_note: ''
     sort_value: 0.911
     sort_std: 0.002
-    global_rank: 83
-    paper_rank: 153
-    rank_delta: 70
-    rank_delta_abs: 70
+    global_rank: 92
+    paper_rank: 164
+    rank_delta: 72
+    rank_delta_abs: 72
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.6928
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2307.00534'
+    title: Shared Growth of Graph Neural Networks via Prompted Free-direction Knowledge
+      Distillation
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 131
+    sort_value: 0.6928
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -536,8 +570,8 @@ results:
     value_note: ''
     sort_value: 0.584
     sort_std: 0.087
-    global_rank: 151
-    paper_rank: 151
+    global_rank: 162
+    paper_rank: 162
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -604,8 +638,8 @@ results:
     value_note: ''
     sort_value: 0.584
     sort_std: 0.002
-    global_rank: 152
-    paper_rank: 152
+    global_rank: 163
+    paper_rank: 163
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -672,8 +706,8 @@ results:
     value_note: ''
     sort_value: 0.51
     sort_std: 0.094
-    global_rank: 158
-    paper_rank: 158
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -740,8 +774,8 @@ results:
     value_note: ''
     sort_value: 0.48
     sort_std: 0.091
-    global_rank: 160
-    paper_rank: 160
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -808,8 +842,8 @@ results:
     value_note: ''
     sort_value: 0.433
     sort_std: 0.012
-    global_rank: 165
-    paper_rank: 165
+    global_rank: 176
+    paper_rank: 176
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

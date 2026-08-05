@@ -41,8 +41,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - VPN
-mrr: 0.0017
-adjusted_mrr: 0.0006
+mrr: 0.0016
+adjusted_mrr: 0.0005
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -59,9 +59,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -93,9 +93,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -127,9 +127,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -156,6 +156,39 @@ results:
     global_rank: 3
     sort_value: 0.9574
     sort_std: 0.0039
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.9004
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 42
+    sort_value: 0.9004
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -219,10 +252,10 @@ results:
     value_note: ''
     sort_value: 0.8801
     sort_std: 0.0047
-    global_rank: 132
-    paper_rank: 552
-    rank_delta: 420
-    rank_delta_abs: 420
+    global_rank: 142
+    paper_rank: 565
+    rank_delta: 423
+    rank_delta_abs: 423
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -288,10 +321,10 @@ results:
     value_note: ''
     sort_value: 0.8797
     sort_std: null
-    global_rank: 138
-    paper_rank: 735
-    rank_delta: 597
-    rank_delta_abs: 597
+    global_rank: 148
+    paper_rank: 749
+    rank_delta: 601
+    rank_delta_abs: 601
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -356,10 +389,10 @@ results:
     value_note: ''
     sort_value: 0.8781
     sort_std: 0.017
-    global_rank: 153
-    paper_rank: 655
-    rank_delta: 502
-    rank_delta_abs: 502
+    global_rank: 163
+    paper_rank: 669
+    rank_delta: 506
+    rank_delta_abs: 506
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -424,10 +457,10 @@ results:
     value_note: ''
     sort_value: 0.829
     sort_std: null
-    global_rank: 547
-    paper_rank: 958
-    rank_delta: 411
-    rank_delta_abs: 411
+    global_rank: 560
+    paper_rank: 975
+    rank_delta: 415
+    rank_delta_abs: 415
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -493,8 +526,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: 0.003
-    global_rank: 605
-    paper_rank: 605
+    global_rank: 619
+    paper_rank: 619
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -561,8 +594,8 @@ results:
     value_note: ''
     sort_value: 0.815
     sort_std: null
-    global_rank: 697
-    paper_rank: 697
+    global_rank: 711
+    paper_rank: 711
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -630,8 +663,8 @@ results:
     value_note: ''
     sort_value: 0.811
     sort_std: null
-    global_rank: 726
-    paper_rank: 726
+    global_rank: 740
+    paper_rank: 740
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -699,8 +732,8 @@ results:
     value_note: ''
     sort_value: 0.805
     sort_std: null
-    global_rank: 755
-    paper_rank: 755
+    global_rank: 768
+    paper_rank: 768
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -768,13 +801,46 @@ results:
     value_note: ''
     sort_value: 0.795
     sort_std: null
-    global_rank: 792
-    paper_rank: 792
+    global_rank: 805
+    paper_rank: 805
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7768
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 853
+    sort_value: 0.7768
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -836,8 +902,8 @@ results:
     value_note: ''
     sort_value: 0.757
     sort_std: null
-    global_rank: 872
-    paper_rank: 872
+    global_rank: 886
+    paper_rank: 886
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -884,8 +950,8 @@ results:
     at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
     at_pub_source_date_iso: '2016-09-09'
     at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-01-15'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -896,16 +962,17 @@ results:
     today_delta_significant: false
     true_value: 0.751
     true_std: null
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
+    value_gap_source_arxiv: '2001.05140'
+    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
+      Representations'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.751
     sort_std: null
-    global_rank: 883
-    paper_rank: 883
+    global_rank: 897
+    paper_rank: 897
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -973,8 +1040,8 @@ results:
     value_note: ''
     sort_value: 0.71
     sort_std: 0.0
-    global_rank: 925
-    paper_rank: 951
+    global_rank: 941
+    paper_rank: 967
     rank_delta: 26
     rank_delta_abs: 26
     rank_delta_direction: worse
@@ -1021,8 +1088,8 @@ results:
     at_pub_source_title: Revisiting Semi-Supervised Learning with Graph Embeddings
     at_pub_source_date_iso: '2016-03-29'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2023-01-23'
-    value_gap_source_date_label: ICLR 2023
+    value_gap_source_date_iso: '2024-09-13'
+    value_gap_source_date_label: JMLR 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -1033,16 +1100,17 @@ results:
     today_delta_significant: true
     true_value: 0.604
     true_std: 0.008
-    value_gap_source_arxiv: '2301.09474'
-    value_gap_source_title: 'Discovering Data Geometry: Energy-Driven Neural Diffusion'
+    value_gap_source_arxiv: '2409.09111'
+    value_gap_source_title: 'Transformers from Diffusion: A Unified Framework for
+      Neural Message Passing'
     value_gap_source_is_current_paper: false
     value_gap: 0.009000000000000008
     has_value_note: false
     value_note: ''
     sort_value: 0.604
     sort_std: 0.008
-    global_rank: 990
-    paper_rank: 993
+    global_rank: 1007
+    paper_rank: 1010
     rank_delta: 3
     rank_delta_abs: 3
     rank_delta_direction: worse
@@ -1089,8 +1157,8 @@ results:
     at_pub_source_title: Revisiting Semi-Supervised Learning with Graph Embeddings
     at_pub_source_date_iso: '2016-03-29'
     at_pub_source_date_label: ICML 2016
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-01-15'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1101,16 +1169,17 @@ results:
     today_delta_significant: false
     true_value: 0.59
     true_std: null
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
+    value_gap_source_arxiv: '2001.05140'
+    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
+      Representations'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.59
     sort_std: null
-    global_rank: 999
-    paper_rank: 999
+    global_rank: 1016
+    paper_rank: 1016
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1132,9 +1201,9 @@ results:
 - &id002
   dataset: PubMed
   rows:
-  - model: R-SoftGraphAIN
+  - model: LGTL
     model_key: lgtl
-    model_plain: R-SoftGraphAIN
+    model_plain: LGTL
     value: 0.9518
     std: 0.0011
     metric: Accuracy
@@ -1166,9 +1235,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: SAGN
     model_key: sagn
-    model_plain: R-SoftGraphAIN
+    model_plain: SAGN
     value: 0.9517
     std: null
     metric: Accuracy
@@ -1200,9 +1269,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: MixHop (LO)
     model_key: mixhop (lo)
-    model_plain: R-SoftGraphAIN
+    model_plain: MixHop (LO)
     value: 0.9513
     std: 0.0038
     metric: Accuracy
@@ -1233,6 +1302,40 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.9487
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2605.24867'
+    title: 'Clustering as Reasoning: A $k$-Means Interpretation of Chain-of-Thought
+      Graph Learning'
+    date: May 24, 2026
+    date_display: May 2026
+    date_iso: '2026-05-24'
+    venue: Accepted by ICML 2026
+    codebase_url: https://github.com/Uncnbb/KCoT
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.9487
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: MixHop
     model_key: mixhop
@@ -1367,6 +1470,39 @@ results:
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.869
+    std: 0.0074
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.00183'
+    title: On the Equivalence of Graph Convolution and Mixup
+    date: Sep 29, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-29'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/ahxt/GraphConv_is_Mixup
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 233
+    sort_value: 0.869
+    sort_std: 0.0074
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1958,8 +2094,8 @@ results:
     at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
     at_pub_source_date_iso: '2016-09-09'
     at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-01-15'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1970,8 +2106,9 @@ results:
     today_delta_significant: false
     true_value: 0.739
     true_std: null
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
+    value_gap_source_arxiv: '2001.05140'
+    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
+      Representations'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
@@ -2163,8 +2300,8 @@ results:
     at_pub_source_title: Semi-Supervised Classification with Graph Convolutional Networks
     at_pub_source_date_iso: '2016-09-09'
     at_pub_source_date_label: ICLR 2016
-    value_gap_source_date_iso: '2019-07-10'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2020-01-15'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2175,8 +2312,9 @@ results:
     today_delta_significant: false
     true_value: 0.711
     true_std: null
-    value_gap_source_arxiv: '1907.04786'
-    value_gap_source_title: Fast Haar Transforms for Graph Neural Networks
+    value_gap_source_arxiv: '2001.05140'
+    value_gap_source_title: 'Graph-Bert: Only Attention is Needed for Learning Graph
+      Representations'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false

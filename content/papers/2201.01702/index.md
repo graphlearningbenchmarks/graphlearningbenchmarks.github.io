@@ -71,9 +71,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: LP
+  - model: ProNet-All-Atom
     model_key: pronet-all-atom
-    model_plain: LP
+    model_plain: ProNet-All-Atom
     value: 0.871
     std: null
     metric: AUROC
@@ -104,9 +104,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LP
+  - model: GVP-GNN
     model_key: gvp-gnn
-    model_plain: LP
+    model_plain: GVP-GNN
     value: 0.866
     std: null
     metric: AUROC
@@ -137,9 +137,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LP
+  - model: ProNet-Backbone
     model_key: pronet-backbone
-    model_plain: LP
+    model_plain: ProNet-Backbone
     value: 0.858
     std: null
     metric: AUROC

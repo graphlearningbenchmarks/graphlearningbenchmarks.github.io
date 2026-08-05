@@ -43,8 +43,8 @@ proposed_models:
 - GraphSAGE-mean
 - GraphSAGE-LSTM
 - GraphSAGE-pool
-mrr: 0.0073
-adjusted_mrr: 0.0048
+mrr: 0.0068
+adjusted_mrr: 0.0046
 mrr_dataset_count: 2
 benchmark_categories:
 - Classic
@@ -61,9 +61,9 @@ results:
 - &id002
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -94,9 +94,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -127,9 +127,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -159,6 +159,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.985
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.985
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: Random
     model_key: random
@@ -216,10 +249,10 @@ results:
     value_note: ''
     sort_value: 0.9517
     sort_std: 0.0032
-    global_rank: 75
-    paper_rank: 169
-    rank_delta: 94
-    rank_delta_abs: 94
+    global_rank: 83
+    paper_rank: 180
+    rank_delta: 97
+    rank_delta_abs: 97
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -284,8 +317,8 @@ results:
     value_note: ''
     sort_value: 0.612
     sort_std: null
-    global_rank: 145
-    paper_rank: 145
+    global_rank: 156
+    paper_rank: 156
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -352,8 +385,8 @@ results:
     value_note: ''
     sort_value: 0.602
     sort_std: null
-    global_rank: 148
-    paper_rank: 149
+    global_rank: 159
+    paper_rank: 160
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -420,8 +453,8 @@ results:
     value_note: ''
     sort_value: 0.601
     sort_std: null
-    global_rank: 149
-    paper_rank: 158
+    global_rank: 160
+    paper_rank: 169
     rank_delta: 9
     rank_delta_abs: 9
     rank_delta_direction: worse
@@ -467,8 +500,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2019-09-07'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-10-06'
+    value_gap_source_date_label: ICLR 2019
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -479,17 +512,17 @@ results:
     today_delta_significant: false
     true_value: 0.598
     true_std: null
-    value_gap_source_arxiv: '1909.03184'
-    value_gap_source_title: 'Auto-GNN: Neural Architecture Search of Graph Neural
-      Networks'
+    value_gap_source_arxiv: '1910.02370'
+    value_gap_source_title: 'GraphZoom: A Multi-level Spectral Approach for Accurate
+      and Scalable Graph Embedding'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.598
     sort_std: null
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 161
+    paper_rank: 161
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -535,8 +568,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2020-09-22'
-    value_gap_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -547,8 +580,8 @@ results:
     today_delta_significant: true
     true_value: 0.425
     true_std: 0.003
-    value_gap_source_arxiv: '2009.10273'
-    value_gap_source_title: Sub-graph Contrast for Scalable Self-Supervised Graph
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
       Representation Learning
     value_gap_source_is_current_paper: false
     value_gap: 0.0030000000000000027
@@ -556,8 +589,8 @@ results:
     value_note: ''
     sort_value: 0.425
     sort_std: 0.003
-    global_rank: 166
-    paper_rank: 167
+    global_rank: 177
+    paper_rank: 178
     rank_delta: 1
     rank_delta_abs: 1
     rank_delta_direction: worse
@@ -579,9 +612,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: Cluster-GCN (2019)
+  - model: Node Sampled Soup
     model_key: node sampled soup
-    model_plain: Cluster-GCN (2019)
+    model_plain: Node Sampled Soup
     value: 0.9728
     std: 0.0008
     metric: F1
@@ -613,9 +646,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: EnGCN
     model_key: engcn
-    model_plain: Cluster-GCN (2019)
+    model_plain: EnGCN
     value: 0.9714
     std: 0.0003
     metric: F1
@@ -647,9 +680,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Cluster-GCN (2019)
+  - model: SAGN+SLE
     model_key: sagn+sle
-    model_plain: Cluster-GCN (2019)
+    model_plain: SAGN+SLE
     value: 0.971
     std: 0.0
     metric: F1
@@ -676,6 +709,39 @@ results:
     global_rank: 3
     sort_value: 0.971
     sort_std: 0.0
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.966
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2105.04528'
+    title: Accelerating Large Scale Real-Time GNN Inference using Channel Pruning
+    date: May 10, 2021
+    date_display: May 2021
+    date_iso: '2021-05-10'
+    venue: Proceedings of the VLDB Endowment
+    codebase_url: https://github.com/tedzhouhk/GCNP
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 19
+    sort_value: 0.966
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -737,8 +803,8 @@ results:
     value_note: ''
     sort_value: 0.954
     sort_std: null
-    global_rank: 62
-    paper_rank: 62
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -804,8 +870,8 @@ results:
     value_note: ''
     sort_value: 0.95
     sort_std: null
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -871,8 +937,8 @@ results:
     value_note: ''
     sort_value: 0.948
     sort_std: null
-    global_rank: 88
-    paper_rank: 88
+    global_rank: 94
+    paper_rank: 94
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -938,13 +1004,47 @@ results:
     value_note: ''
     sort_value: 0.93
     sort_std: null
-    global_rank: 128
-    paper_rank: 128
+    global_rank: 135
+    paper_rank: 135
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7435
+    std: 0.0016
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2512.14908'
+    title: 'ATLAS: Adaptive Topology-based Learning at Scale for Homophilic and Heterophilic
+      Graphs'
+    date: Dec 16, 2025
+    date_display: Dec 2025
+    date_iso: '2025-12-16'
+    venue: arXiv.org
+    codebase_url: https://github.com/atlaspaper16/ATLAS
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 165
+    sort_value: 0.7435
+    sort_std: 0.0016
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -1006,10 +1106,10 @@ results:
     value_note: ''
     sort_value: 0.6992
     sort_std: 0.0232
-    global_rank: 158
-    paper_rank: 191
-    rank_delta: 33
-    rank_delta_abs: 33
+    global_rank: 170
+    paper_rank: 204
+    rank_delta: 34
+    rank_delta_abs: 34
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1053,8 +1153,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2017-06-07'
-    value_gap_source_date_label: NeurIPS 2017
+    value_gap_source_date_iso: '2020-06-07'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1065,16 +1165,16 @@ results:
     today_delta_significant: false
     true_value: 0.691
     true_std: null
-    value_gap_source_arxiv: '1706.02216'
-    value_gap_source_title: Inductive Representation Learning on Large Graphs
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2006.04131'
+    value_gap_source_title: Deep Graph Contrastive Representation Learning
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.691
     sort_std: null
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 171
+    paper_rank: 171
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1120,8 +1220,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2017-06-07'
-    value_gap_source_date_label: NeurIPS 2017
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1131,17 +1231,18 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.585
-    true_std: null
-    value_gap_source_arxiv: '1706.02216'
-    value_gap_source_title: Inductive Representation Learning on Large Graphs
-    value_gap_source_is_current_paper: true
+    true_std: 0.001
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
+      Representation Learning
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.585
-    sort_std: null
-    global_rank: 175
-    paper_rank: 175
+    sort_std: 0.001
+    global_rank: 187
+    paper_rank: 187
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1187,8 +1288,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2017-06-07'
-    value_gap_source_date_label: NeurIPS 2017
+    value_gap_source_date_iso: '2022-07-25'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1199,16 +1300,17 @@ results:
     today_delta_significant: false
     true_value: 0.324
     true_std: null
-    value_gap_source_arxiv: '1706.02216'
-    value_gap_source_title: Inductive Representation Learning on Large Graphs
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2207.11996'
+    value_gap_source_title: Generative Subgraph Contrast for Self-Supervised Graph
+      Representation Learning
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.324
     sort_std: null
-    global_rank: 190
-    paper_rank: 190
+    global_rank: 203
+    paper_rank: 203
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

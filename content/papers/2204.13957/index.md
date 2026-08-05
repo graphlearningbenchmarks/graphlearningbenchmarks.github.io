@@ -100,8 +100,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-04-29'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -110,21 +110,61 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.836
+    true_std: null
+    value_gap_source_arxiv: '2204.13957'
+    value_gap_source_title: 'PIE: a Parameter and Inference Efficient Solution for
+      Large Scale Knowledge Graph Embedding Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.836
     sort_std: null
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: NBFnet
+    model_key: nbfnet
+    model_plain: NBFnet
+    value: 0.8317
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: 3.0
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2106.06935'
+    title: 'Neural Bellman-Ford Networks: A General Graph Neural Network Framework
+      for Link Prediction'
+    date: Jun 13, 2021
+    date_display: Jun 2021
+    date_iso: '2021-06-13'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/DeepGraphLearning/NBFNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.8317
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: AutoSF
     model_key: autosf
@@ -184,79 +224,13 @@ results:
     value_note: ''
     sort_value: 0.8309
     sort_std: 0.0008
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TripleREv2
-    model_key: triplerev2
-    model_plain: TripleREv2
-    value: 0.8272
-    std: 0.0007
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: 500.0
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2209.08271'
-    title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation Vectors'
-    date: Sep 17, 2022
-    date_display: Sep 2022
-    date_iso: '2022-09-17'
-    venue: null
-    codebase_url: https://github.com/DeepGraphLearning/KnowledgeGraph-
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8272
-    sort_std: 0.0007
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: TripleREv2
-    model_key: triplere
-    model_plain: TripleREv2
-    value: 0.8191
-    std: 0.0014
-    metric: MRR
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2209.08271'
-    title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation Vectors'
-    date: Sep 17, 2022
-    date_display: Sep 2022
-    date_iso: '2022-09-17'
-    venue: null
-    codebase_url: https://github.com/DeepGraphLearning/KnowledgeGraph-
-    uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 3
-    sort_value: 0.8191
-    sort_std: 0.0014
-    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -318,8 +292,8 @@ results:
     value_note: ''
     sort_value: 0.8164
     sort_std: 0.0005
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -341,9 +315,43 @@ results:
 - &id001
   dataset: ogbl-wikikg2
   rows:
-  - model: Information-Flow (IF) framework
+  - model: InterHT + DigPiece
+    model_key: interht + digpiece
+    model_plain: InterHT + DigPiece
+    value: 0.7293
+    std: 0.0018
+    metric: MRR
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04897'
+    title: 'InterHT: Knowledge Graph Embeddings by Interaction between Head and Tail
+      Entities'
+    date: Feb 10, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-10'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.7293
+    sort_std: 0.0018
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: StarGraph + TripleRE'
     model_key: stargraph + triplere'
-    model_plain: Information-Flow (IF) framework
+    model_plain: StarGraph + TripleRE'
     value: 0.729
     std: null
     metric: MRR
@@ -367,7 +375,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 1
+    global_rank: 2
     sort_value: 0.729
     sort_std: null
     comparison_type: global_top
@@ -375,69 +383,35 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Information-Flow (IF) framework
-    model_key: trans(large) + nodepiece
-    model_plain: Information-Flow (IF) framework
-    value: 0.6939
+  - model: TripleRE + StarGraph
+    model_key: triplere + stargraph
+    model_plain: TripleRE + StarGraph
+    value: 0.7201
     std: 0.0011
     metric: MRR
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
-    params_millions: 38.430804
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2205.14209'
-    title: 'StarGraph: Knowledge Representation Learning based on Incomplete Two-hop
-      Subgraph'
-    date: May 27, 2022
-    date_display: May 2022
-    date_iso: '2022-05-27'
-    venue: Under review in ICLR 2023 (https://openreview.net/forum?id=mTOB_VK_BWk)
-    codebase_url: https://github.com/hzli-ucas/StarGraph
+    params_millions: 86.7
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.04897'
+    title: 'InterHT: Knowledge Graph Embeddings by Interaction between Head and Tail
+      Entities'
+    date: Feb 10, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-10'
+    venue: null
+    codebase_url: ''
     uses_external_data: false
-    input_feature_source: raw_features
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.6939
-    sort_std: 0.0011
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Information-Flow (IF) framework
-    model_key: trans + nodepiece
-    model_plain: Information-Flow (IF) framework
-    value: 0.6882
-    std: 0.0019
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 19.215402
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2205.14209'
-    title: 'StarGraph: Knowledge Representation Learning based on Incomplete Two-hop
-      Subgraph'
-    date: May 27, 2022
-    date_display: May 2022
-    date_iso: '2022-05-27'
-    venue: Under review in ICLR 2023 (https://openreview.net/forum?id=mTOB_VK_BWk)
-    codebase_url: https://github.com/hzli-ucas/StarGraph
-    uses_external_data: false
-    input_feature_source: raw_features
+    input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.6882
-    sort_std: 0.0019
+    sort_value: 0.7201
+    sort_std: 0.0011
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -479,8 +453,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-04-29'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -489,20 +463,95 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.597
+    true_std: null
+    value_gap_source_arxiv: '2204.13957'
+    value_gap_source_title: 'PIE: a Parameter and Inference Efficient Solution for
+      Large Scale Knowledge Graph Embedding Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.597
     sort_std: null
-    global_rank: 11
+    global_rank: 23
+    paper_rank: 23
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: PairRE
+    model_key: pairre
+    model_plain: PairRE
+    value: 0.5805
+    std: null
+    paper_value: 0.5805
+    paper_std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 500.3
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: chao-etal-2021-pairre
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Apr 29, 2022
+    date_display: Apr 2022
+    date_iso: '2022-04-29'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5289
+    at_pub_std: 0.003
+    at_pub_source_arxiv: '2011.03798'
+    at_pub_source_title: 'PairRE: Knowledge Graph Embeddings via Paired Relation Vectors'
+    at_pub_source_date_iso: '2020-11-07'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-04-29'
+    value_gap_source_date_label: '2022'
+    gap_vs_at_pub: 0.05159999999999998
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.5805
+    true_std: null
+    value_gap_source_arxiv: '2204.13957'
+    value_gap_source_title: 'PIE: a Parameter and Inference Efficient Solution for
+      Large Scale Knowledge Graph Embedding Reasoning'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5805
+    sort_std: null
+    global_rank: 24
+    paper_rank: 24
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: 'PairRE: Knowledge Graph Embeddings via Paired Relation
+      Vectors'
+    comparison_source_arxiv: '2011.03798'
     is_best: false
     is_std_outlier: false
   - model: AutoSF + NodePiece
@@ -563,8 +612,8 @@ results:
     value_note: ''
     sort_value: 0.5703
     sort_std: 0.0035
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -632,8 +681,8 @@ results:
     value_note: ''
     sort_value: 0.5458
     sort_std: 0.0052
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 29
+    paper_rank: 29
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -641,75 +690,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: PairRE
-    model_key: pairre
-    model_plain: PairRE
-    value: 0.5805
-    std: null
-    paper_value: 0.5805
-    paper_std: null
-    metric: MRR
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 500.3
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: chao-etal-2021-pairre
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Apr 29, 2022
-    date_display: Apr 2022
-    date_iso: '2022-04-29'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.5289
-    at_pub_std: 0.003
-    at_pub_source_arxiv: '2011.03798'
-    at_pub_source_title: 'PairRE: Knowledge Graph Embeddings via Paired Relation Vectors'
-    at_pub_source_date_iso: '2020-11-07'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2022-09-17'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.05159999999999998
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.5208
-    true_std: 0.0027
-    value_gap_source_arxiv: '2209.08271'
-    value_gap_source_title: 'TripleRE: Knowledge Graph Embeddings via Tripled Relation
-      Vectors'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.059699999999999975
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5208
-    sort_std: 0.0027
-    global_rank: 16
-    paper_rank: 11
-    rank_delta: -5
-    rank_delta_abs: 5
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: 'PairRE: Knowledge Graph Embeddings via Paired Relation
-      Vectors'
-    comparison_source_arxiv: '2011.03798'
     is_best: false
     is_std_outlier: false
   rank_metric: MRR

@@ -52,8 +52,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - FreeKD
-mrr: 0.0714
-adjusted_mrr: 0.0238
+mrr: 0.0625
+adjusted_mrr: 0.0208
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -75,9 +75,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -108,9 +108,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -141,9 +141,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -172,6 +172,74 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: Teacher
+    model_key: teacher
+    model_plain: Teacher
+    value: 0.9941
+    std: null
+    paper_value: 0.9941
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: "Table \ref{kd}"
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jun 14, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-14'
+    published_venue: KDD 2022
+    published_conference: KDD 2022
+    at_pub_value: 0.976
+    at_pub_std: null
+    at_pub_source_arxiv: '2003.10477'
+    at_pub_source_title: Distilling Knowledge from Graph Convolutional Networks
+    at_pub_source_date_iso: '2020-03-23'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
+    gap_vs_at_pub: 0.018100000000000005
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9941
+    true_std: null
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9941
+    sort_std: null
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: Distilling Knowledge from Graph Convolutional Networks
+    comparison_source_arxiv: '2003.10477'
     is_best: true
     is_std_outlier: false
   - model: FreeKD
@@ -231,8 +299,8 @@ results:
     value_note: ''
     sort_value: 0.9879
     sort_std: null
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -240,6 +308,109 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.985
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2202.02296'
+    title: Graph-Coupled Oscillator Networks
+    date: Feb 4, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-04'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/tk-rusch/GraphCON
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 21
+    sort_value: 0.985
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: LSP
+    model_key: lsp
+    model_plain: LSP
+    value: 0.9825
+    std: null
+    paper_value: 0.9825
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: "Table \ref{kd}"
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Jun 14, 2022
+    date_display: Jun 2022
+    date_iso: '2022-06-14'
+    published_venue: KDD 2022
+    published_conference: KDD 2022
+    at_pub_value: 0.9781
+    at_pub_std: 0.0031
+    at_pub_source_arxiv: '2111.04964'
+    at_pub_source_title: On Representation Knowledge Distillation for Graph Neural
+      Networks
+    at_pub_source_date_iso: '2021-11-09'
+    at_pub_source_date_label: '2021'
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
+    gap_vs_at_pub: 0.0044000000000000705
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.9825
+    true_std: null
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9825
+    sort_std: null
+    global_rank: 29
+    paper_rank: 29
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
+    has_value_gap: true
+    comparison_type: improved
+    comparison_source_title: On Representation Knowledge Distillation for Graph Neural
+      Networks
+    comparison_source_arxiv: '2111.04964'
     is_best: false
     is_std_outlier: false
   - model: KD
@@ -300,8 +471,8 @@ results:
     value_note: ''
     sort_value: 0.9793
     sort_std: 0.0026
-    global_rank: 33
-    paper_rank: 37
+    global_rank: 37
+    paper_rank: 41
     rank_delta: 4
     rank_delta_abs: 4
     rank_delta_direction: worse
@@ -309,76 +480,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: LSP
-    model_key: lsp
-    model_plain: LSP
-    value: 0.9825
-    std: null
-    paper_value: 0.9825
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: "Table \ref{kd}"
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 14, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-14'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: 0.9781
-    at_pub_std: 0.0031
-    at_pub_source_arxiv: '2111.04964'
-    at_pub_source_title: On Representation Knowledge Distillation for Graph Neural
-      Networks
-    at_pub_source_date_iso: '2021-11-09'
-    at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2021-11-09'
-    value_gap_source_date_label: '2021'
-    gap_vs_at_pub: 0.0044000000000000705
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9781
-    true_std: 0.0031
-    value_gap_source_arxiv: '2111.04964'
-    value_gap_source_title: On Representation Knowledge Distillation for Graph Neural
-      Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.0044000000000000705
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9781
-    sort_std: 0.0031
-    global_rank: 38
-    paper_rank: 27
-    rank_delta: -11
-    rank_delta_abs: 11
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: On Representation Knowledge Distillation for Graph Neural
-      Networks
-    comparison_source_arxiv: '2111.04964'
     is_best: false
     is_std_outlier: false
   - model: GNN-SD
@@ -417,8 +518,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -427,17 +528,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9773
+    true_std: null
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9773
     sort_std: null
-    global_rank: 43
+    global_rank: 46
+    paper_rank: 46
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -479,8 +586,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -489,87 +596,26 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.9766
+    true_std: null
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.9766
     sort_std: null
-    global_rank: 45
+    global_rank: 49
+    paper_rank: 49
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Teacher
-    model_key: teacher
-    model_plain: Teacher
-    value: 0.9941
-    std: null
-    paper_value: 0.9941
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: "Table \ref{kd}"
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Jun 14, 2022
-    date_display: Jun 2022
-    date_iso: '2022-06-14'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: 0.976
-    at_pub_std: null
-    at_pub_source_arxiv: '2003.10477'
-    at_pub_source_title: Distilling Knowledge from Graph Convolutional Networks
-    at_pub_source_date_iso: '2020-03-23'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2020-03-23'
-    value_gap_source_date_label: '2020'
-    gap_vs_at_pub: 0.018100000000000005
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.976
-    true_std: null
-    value_gap_source_arxiv: '2003.10477'
-    value_gap_source_title: Distilling Knowledge from Graph Convolutional Networks
-    value_gap_source_is_current_paper: false
-    value_gap: 0.018100000000000005
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.976
-    sort_std: null
-    global_rank: 45
-    paper_rank: 8
-    rank_delta: -37
-    rank_delta_abs: 37
-    rank_delta_direction: better
-    has_value_gap: true
-    comparison_type: improved
-    comparison_source_title: Distilling Knowledge from Graph Convolutional Networks
-    comparison_source_arxiv: '2003.10477'
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -630,8 +676,8 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 51
-    paper_rank: 51
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -677,8 +723,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -687,17 +733,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6928
+    true_std: null
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6928
     sort_std: null
-    global_rank: 123
+    global_rank: 130
+    paper_rank: 130
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -715,9 +767,9 @@ results:
 - &id002
   dataset: Texas
   rows:
-  - model: RDD
+  - model: FreeKD-Prompt (SAGE-SAGE)
     model_key: freekd-prompt (sage-sage)
-    model_plain: RDD
+    model_plain: FreeKD-Prompt (SAGE-SAGE)
     value: 0.8108
     std: null
     metric: F1 Score
@@ -785,33 +837,33 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-02'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
-    insignificant_value_gap: true
-    today_delta_significant: true
-    true_value: 0.7784
+    insignificant_value_gap: false
+    today_delta_significant: false
+    true_value: 0.7876
     true_std: null
-    value_gap_source_arxiv: '2307.00534'
-    value_gap_source_title: Shared Growth of Graph Neural Networks via Prompted Free-direction
-      Knowledge Distillation
-    value_gap_source_is_current_paper: false
-    value_gap: 0.009199999999999986
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
     has_value_note: false
     value_note: ''
-    sort_value: 0.7784
+    sort_value: 0.7876
     sort_std: null
     global_rank: 2
     paper_rank: 2
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
-    has_value_gap: true
+    has_value_gap: false
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -853,8 +905,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -863,25 +915,31 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.7622
+    true_std: null
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.7622
     sort_std: null
-    global_rank: 4
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: RDD
+  - model: SAGE
     model_key: sage
-    model_plain: RDD
+    model_plain: SAGE
     value: 0.7622
     std: null
     metric: F1 Score
@@ -905,7 +963,7 @@ results:
     input_feature_source: raw_features
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
+    global_rank: 4
     sort_value: 0.7622
     sort_std: null
     comparison_type: global_top
@@ -949,8 +1007,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-06-14'
+    value_gap_source_date_label: KDD 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -959,17 +1017,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.6514
+    true_std: null
+    value_gap_source_arxiv: '2206.06561'
+    value_gap_source_title: 'FreeKD: Free-direction Knowledge Distillation for Graph
+      Neural Networks'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.6514
     sort_std: null
-    global_rank: 4
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1032,8 +1096,8 @@ results:
     value_note: ''
     sort_value: 0.6081
     sort_std: null
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1100,8 +1164,8 @@ results:
     value_note: ''
     sort_value: 0.5973
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 8
+    paper_rank: 8
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1168,8 +1232,8 @@ results:
     value_note: ''
     sort_value: 0.5946
     sort_std: null
-    global_rank: 7
-    paper_rank: 7
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1236,8 +1300,8 @@ results:
     value_note: ''
     sort_value: 0.5892
     sort_std: null
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 10
+    paper_rank: 10
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1304,8 +1368,8 @@ results:
     value_note: ''
     sort_value: 0.5865
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1372,8 +1436,8 @@ results:
     value_note: ''
     sort_value: 0.5784
     sort_std: null
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1440,8 +1504,8 @@ results:
     value_note: ''
     sort_value: 0.5757
     sort_std: null
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

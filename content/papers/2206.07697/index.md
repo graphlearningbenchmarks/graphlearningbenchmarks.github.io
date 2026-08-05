@@ -131,6 +131,88 @@ results:
     is_best: true
     is_std_outlier: false
     global_rank: 1
+  - model: BOTNet
+    model_key: botnet
+    model_plain: BOTNet
+    metric_values:
+    - 2.3
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.06643'
+    title: The design space of E(3)-equivariant atom-centred interatomic potentials
+    published_venue: ''
+    date: May 13, 2022
+    date_display: May 2022
+    date_iso: '2022-05-13'
+    codebase_url: https://github.com/gncs/botnet
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 2
+    is_best: false
+    sort_value: 2.3
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: NequIP
+    model_key: nequip
+    model_plain: NequIP
+    metric_values:
+    - 2.3
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2205.06643'
+    title: The design space of E(3)-equivariant atom-centred interatomic potentials
+    published_venue: ''
+    date: May 13, 2022
+    date_display: May 2022
+    date_iso: '2022-05-13'
+    codebase_url: https://github.com/gncs/botnet
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 3
+    is_best: false
+    sort_value: 2.3
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   metrics:
   - MAE
   - E

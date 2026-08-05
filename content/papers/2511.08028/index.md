@@ -425,9 +425,9 @@ results:
 - &id001
   dataset: Code
   rows:
-  - model: GatedGCN-VN
+  - model: GMN
     model_key: gmn
-    model_plain: GatedGCN-VN
+    model_plain: GMN
     value: 0.206
     std: 0.002
     metric: F1
@@ -458,9 +458,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-VN
+  - model: DirGraphSSM
     model_key: dirgraphssm
-    model_plain: GatedGCN-VN
+    model_plain: DirGraphSSM
     value: 0.205
     std: 0.0023
     metric: F1
@@ -491,9 +491,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GatedGCN-VN
+  - model: Graph-Mamba
     model_key: graph-mamba
-    model_plain: GatedGCN-VN
+    model_plain: Graph-Mamba
     value: 0.203
     std: 0.0023
     metric: F1
@@ -649,8 +649,8 @@ results:
     value_note: ''
     sort_value: 0.1942
     sort_std: 0.001
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -717,8 +717,8 @@ results:
     value_note: ''
     sort_value: 0.1939
     sort_std: 0.0047
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 9
+    paper_rank: 9
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -785,8 +785,8 @@ results:
     value_note: ''
     sort_value: 0.1935
     sort_std: 0.0021
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 11
+    paper_rank: 11
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -853,13 +853,46 @@ results:
     value_note: ''
     sort_value: 0.1927
     sort_std: 0.002
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.151
+    std: 0.002
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2509.13735'
+    title: State Space Models over Directed Graphs
+    date: Sep 17, 2025
+    date_display: Sep 2025
+    date_iso: '2025-09-17'
+    venue: null
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 34
+    sort_value: 0.151
+    sort_std: 0.002
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

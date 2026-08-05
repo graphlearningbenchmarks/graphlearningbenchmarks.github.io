@@ -73,9 +73,9 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: SlotGAT
+  - model: HERec
     model_key: herec
-    model_plain: SlotGAT
+    model_plain: HERec
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -106,9 +106,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: HetSANN
     model_key: hetsann
-    model_plain: SlotGAT
+    model_plain: HetSANN
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -139,9 +139,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SlotGAT
+  - model: DeepWalk
     model_key: deepwalk
-    model_plain: SlotGAT
+    model_plain: DeepWalk
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -275,8 +275,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-17'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -287,24 +287,126 @@ results:
     today_delta_significant: true
     true_value: 0.9461
     true_std: 0.0042
-    value_gap_source_arxiv: '2307.08430'
-    value_gap_source_title: Long-range Meta-path Search on Large-scale Heterogeneous
-      Graphs
+    value_gap_source_arxiv: '2310.14481'
+    value_gap_source_title: Efficient Heterogeneous Graph Learning via Random Projection
     value_gap_source_is_current_paper: false
     value_gap: 0.1421
     has_value_note: false
     value_note: ''
     sort_value: 0.9461
     sort_std: 0.0042
-    global_rank: 27
-    paper_rank: 127
-    rank_delta: 100
-    rank_delta_abs: 100
+    global_rank: 28
+    paper_rank: 140
+    rank_delta: 112
+    rank_delta_abs: 112
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.946
+    std: 0.0031
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.16401'
+    title: Graph Neural Networks with a Distribution of Parametrized Graphs
+    date: Oct 25, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-25'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.946
+    sort_std: 0.0031
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MAGNN
+    model_key: magnn
+    model_plain: MAGNN
+    value: 0.895
+    std: 0.0396
+    paper_value: 0.895
+    paper_std: 0.0396
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on DBLP
+    date: Aug 12, 2022
+    date_display: Aug 2022
+    date_iso: '2022-08-12'
+    published_venue: KDD 2022
+    published_conference: KDD 2022
+    at_pub_value: 0.9456
+    at_pub_std: null
+    at_pub_source_arxiv: '2012.10024'
+    at_pub_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    at_pub_source_date_iso: '2020-12-18'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-12-18'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.05059999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9456
+    true_std: null
+    value_gap_source_arxiv: '2012.10024'
+    value_gap_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05059999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9456
+    sort_std: null
+    global_rank: 30
+    paper_rank: 90
+    rank_delta: 60
+    rank_delta_abs: 60
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    comparison_source_arxiv: '2012.10024'
     is_best: false
     is_std_outlier: false
   - model: GTN
@@ -364,84 +466,15 @@ results:
     value_note: ''
     sort_value: 0.9417
     sort_std: 0.0026
-    global_rank: 39
-    paper_rank: 86
-    rank_delta: 47
-    rank_delta_abs: 47
+    global_rank: 41
+    paper_rank: 95
+    rank_delta: 54
+    rank_delta_abs: 54
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Heterogeneous Graph Benchmarks
     comparison_source_arxiv: '2112.14936'
-    is_best: false
-    is_std_outlier: false
-  - model: MAGNN
-    model_key: magnn
-    model_plain: MAGNN
-    value: 0.895
-    std: 0.0396
-    paper_value: 0.895
-    paper_std: 0.0396
-    metric: Micro-F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification on DBLP
-    date: Aug 12, 2022
-    date_display: Aug 2022
-    date_iso: '2022-08-12'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: 0.9456
-    at_pub_std: null
-    at_pub_source_arxiv: '2012.10024'
-    at_pub_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
-      Information Networks
-    at_pub_source_date_iso: '2020-12-18'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2022-07-06'
-    value_gap_source_date_label: AAAI 2022
-    gap_vs_at_pub: 0.05059999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.9376
-    true_std: 0.0045
-    value_gap_source_arxiv: '2207.02547'
-    value_gap_source_title: Simple and Efficient Heterogeneous Graph Neural Network
-    value_gap_source_is_current_paper: false
-    value_gap: 0.04259999999999997
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.9376
-    sort_std: 0.0045
-    global_rank: 45
-    paper_rank: 82
-    rank_delta: 37
-    rank_delta_abs: 37
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
-      Information Networks
-    comparison_source_arxiv: '2012.10024'
     is_best: false
     is_std_outlier: false
   - model: HAN
@@ -502,10 +535,10 @@ results:
     value_note: ''
     sort_value: 0.9369
     sort_std: null
-    global_rank: 46
-    paper_rank: 120
-    rank_delta: 74
-    rank_delta_abs: 74
+    global_rank: 47
+    paper_rank: 132
+    rank_delta: 85
+    rank_delta_abs: 85
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -571,15 +604,85 @@ results:
     value_note: ''
     sort_value: 0.9331
     sort_std: null
-    global_rank: 52
-    paper_rank: 134
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 54
+    paper_rank: 148
+    rank_delta: 94
+    rank_delta_abs: 94
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: Node2Vec
+    model_key: node2vec
+    model_plain: Node2Vec
+    value: 0.351
+    std: 0.0112
+    paper_value: 0.351
+    paper_std: 0.0112
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 2
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node classification on DBLP
+    date: Aug 12, 2022
+    date_display: Aug 2022
+    date_iso: '2022-08-12'
+    published_venue: KDD 2022
+    published_conference: KDD 2022
+    at_pub_value: 0.9282
+    at_pub_std: null
+    at_pub_source_arxiv: '2012.10024'
+    at_pub_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    at_pub_source_date_iso: '2020-12-18'
+    at_pub_source_date_label: '2020'
+    value_gap_source_date_iso: '2020-12-18'
+    value_gap_source_date_label: '2020'
+    gap_vs_at_pub: 0.5772
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.9282
+    true_std: null
+    value_gap_source_arxiv: '2012.10024'
+    value_gap_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    value_gap_source_is_current_paper: false
+    value_gap: 0.5772
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.9282
+    sort_std: null
+    global_rank: 62
+    paper_rank: 200
+    rank_delta: 138
+    rank_delta_abs: 138
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
+      Information Networks
+    comparison_source_arxiv: '2012.10024'
     is_best: false
     is_std_outlier: false
   - model: HGSL
@@ -639,10 +742,10 @@ results:
     value_note: ''
     sort_value: 0.9253
     sort_std: null
-    global_rank: 64
-    paper_rank: 81
-    rank_delta: 17
-    rank_delta_abs: 17
+    global_rank: 68
+    paper_rank: 86
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -706,8 +809,8 @@ results:
     value_note: ''
     sort_value: 0.878
     sort_std: 0.0112
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 93
+    paper_rank: 93
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -775,11 +878,11 @@ results:
     value_note: ''
     sort_value: 0.877
     sort_std: null
-    global_rank: 86
-    paper_rank: 86
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    global_rank: 94
+    paper_rank: 95
+    rank_delta: 1
+    rank_delta_abs: 1
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: An Attention-based Graph Neural Network for Heterogeneous
@@ -843,8 +946,8 @@ results:
     value_note: ''
     sort_value: 0.868
     sort_std: 0.0127
-    global_rank: 87
-    paper_rank: 87
+    global_rank: 96
+    paper_rank: 96
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -910,8 +1013,8 @@ results:
     value_note: ''
     sort_value: 0.83
     sort_std: 0.0201
-    global_rank: 115
-    paper_rank: 115
+    global_rank: 125
+    paper_rank: 125
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -921,74 +1024,38 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: Node2Vec
-    model_key: node2vec
-    model_plain: Node2Vec
-    value: 0.351
-    std: 0.0112
-    paper_value: 0.351
-    paper_std: 0.0112
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6447
+    std: 0.0136
     metric: Micro-F1
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    uses_external_data: 0
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.07365'
+    title: 'GraphControl: Adding Conditional Control to Universal Graph Pre-trained
+      Models for Graph Domain Transfer Learning'
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: The Web Conference
+    codebase_url: https://github.com/wykk00/GraphControl
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
-    table_ref: Table 2
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node classification on DBLP
-    date: Aug 12, 2022
-    date_display: Aug 2022
-    date_iso: '2022-08-12'
-    published_venue: KDD 2022
-    published_conference: KDD 2022
-    at_pub_value: 0.9282
-    at_pub_std: null
-    at_pub_source_arxiv: '2012.10024'
-    at_pub_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
-      Information Networks
-    at_pub_source_date_iso: '2020-12-18'
-    at_pub_source_date_label: '2020'
-    value_gap_source_date_iso: '2023-10-11'
-    value_gap_source_date_label: WWW 2023
-    gap_vs_at_pub: 0.5772
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.7752
-    true_std: 0.0038
-    value_gap_source_arxiv: '2310.07365'
-    value_gap_source_title: 'GraphControl: Adding Conditional Control to Universal
-      Graph Pre-trained Models for Graph Domain Transfer Learning'
-    value_gap_source_is_current_paper: false
-    value_gap: 0.4242
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.7752
-    sort_std: 0.0038
-    global_rank: 139
-    paper_rank: 182
-    rank_delta: 43
-    rank_delta_abs: 43
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Leveraging Meta-path Contexts for Classification in Heterogeneous
-      Information Networks
-    comparison_source_arxiv: '2012.10024'
+    is_global_top: true
+    global_rank: 185
+    sort_value: 0.6447
+    sort_std: 0.0136
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: SGC
@@ -1048,8 +1115,8 @@ results:
     value_note: ''
     sort_value: 0.623
     sort_std: 0.0009
-    global_rank: 168
-    paper_rank: 168
+    global_rank: 186
+    paper_rank: 186
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1116,8 +1183,8 @@ results:
     value_note: ''
     sort_value: 0.384
     sort_std: 0.0109
-    global_rank: 180
-    paper_rank: 180
+    global_rank: 198
+    paper_rank: 198
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1183,8 +1250,8 @@ results:
     value_note: ''
     sort_value: 0.375
     sort_std: 0.0199
-    global_rank: 181
-    paper_rank: 181
+    global_rank: 199
+    paper_rank: 199
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1250,8 +1317,8 @@ results:
     value_note: ''
     sort_value: 0.372
     sort_std: 0.015
-    global_rank: 182
-    paper_rank: 182
+    global_rank: 200
+    paper_rank: 200
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1273,9 +1340,9 @@ results:
 - &id002
   dataset: IMDB
   rows:
-  - model: SlotGAT
+  - model: GAT BGNN(m)-SC
     model_key: gat bgnn(m)-sc
-    model_plain: SlotGAT
+    model_plain: GAT BGNN(m)-SC
     value: 0.8133
     std: 0.0179
     metric: Micro-F1
@@ -1306,9 +1373,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: SAGE BAN
     model_key: sage ban
-    model_plain: SlotGAT
+    model_plain: SAGE BAN
     value: 0.8073
     std: 0.002
     metric: Micro-F1
@@ -1339,9 +1406,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: GAT BGNN(m)-CS
     model_key: gat bgnn(m)-cs
-    model_plain: SlotGAT
+    model_plain: GAT BGNN(m)-CS
     value: 0.8033
     std: 0.0094
     metric: Micro-F1
@@ -1497,14 +1564,47 @@ results:
     sort_value: 0.6827
     sort_std: 0.0065
     global_rank: 43
-    paper_rank: 83
-    rank_delta: 40
-    rank_delta_abs: 40
+    paper_rank: 87
+    rank_delta: 44
+    rank_delta_abs: 44
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Heterogeneous Graph Benchmarks
     comparison_source_arxiv: '2112.14936'
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6813
+    std: 0.0083
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2305.19872'
+    title: Spectral Heterogeneous Graph Convolutions via Positive Noncommutative Polynomials
+    date: May 31, 2023
+    date_display: May 2023
+    date_iso: '2023-05-31'
+    venue: The Web Conference
+    codebase_url: https://github.com/ivam-he/PSHGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 45
+    sort_value: 0.6813
+    sort_std: 0.0083
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: MAGNN
@@ -1565,9 +1665,9 @@ results:
     sort_value: 0.6782
     sort_std: 0.0154
     global_rank: 48
-    paper_rank: 83
-    rank_delta: 35
-    rank_delta_abs: 35
+    paper_rank: 87
+    rank_delta: 39
+    rank_delta_abs: 39
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1633,9 +1733,9 @@ results:
     sort_value: 0.6769
     sort_std: 0.0064
     global_rank: 49
-    paper_rank: 103
-    rank_delta: 54
-    rank_delta_abs: 54
+    paper_rank: 108
+    rank_delta: 59
+    rank_delta_abs: 59
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1702,9 +1802,9 @@ results:
     sort_value: 0.6713
     sort_std: null
     global_rank: 56
-    paper_rank: 100
-    rank_delta: 44
-    rank_delta_abs: 44
+    paper_rank: 105
+    rank_delta: 49
+    rank_delta_abs: 49
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1749,8 +1849,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-07-17'
-    value_gap_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-10-23'
+    value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: true
@@ -1761,9 +1861,8 @@ results:
     today_delta_significant: true
     true_value: 0.6618
     true_std: 0.007
-    value_gap_source_arxiv: '2307.08430'
-    value_gap_source_title: Long-range Meta-path Search on Large-scale Heterogeneous
-      Graphs
+    value_gap_source_arxiv: '2310.14481'
+    value_gap_source_title: Efficient Heterogeneous Graph Learning via Random Projection
     value_gap_source_is_current_paper: false
     value_gap: 0.0878000000000001
     has_value_note: false
@@ -1771,9 +1870,9 @@ results:
     sort_value: 0.6618
     sort_std: 0.007
     global_rank: 63
-    paper_rank: 100
-    rank_delta: 37
-    rank_delta_abs: 37
+    paper_rank: 105
+    rank_delta: 42
+    rank_delta_abs: 42
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1817,8 +1916,8 @@ results:
     at_pub_source_title: Implicit Graph Neural Networks
     at_pub_source_date_iso: '2020-09-14'
     at_pub_source_date_label: NeurIPS 2020
-    value_gap_source_date_iso: '2020-09-14'
-    value_gap_source_date_label: NeurIPS 2020
+    value_gap_source_date_iso: '2022-08-21'
+    value_gap_source_date_label: '2022'
     gap_vs_at_pub: 0.10399999999999998
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -1829,18 +1928,18 @@ results:
     today_delta_significant: true
     true_value: 0.648
     true_std: null
-    value_gap_source_arxiv: '2009.06211'
-    value_gap_source_title: Implicit Graph Neural Networks
+    value_gap_source_arxiv: '2208.10493'
+    value_gap_source_title: Relational Self-Supervised Learning on Graphs
     value_gap_source_is_current_paper: false
     value_gap: 0.10399999999999998
     has_value_note: false
     value_note: ''
     sort_value: 0.648
     sort_std: null
-    global_rank: 69
-    paper_rank: 112
-    rank_delta: 43
-    rank_delta_abs: 43
+    global_rank: 71
+    paper_rank: 118
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1904,8 +2003,8 @@ results:
     value_note: ''
     sort_value: 0.64
     sort_std: 0.0013
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1971,8 +2070,8 @@ results:
     value_note: ''
     sort_value: 0.638
     sort_std: 0.003
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 78
+    paper_rank: 78
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2038,8 +2137,8 @@ results:
     value_note: ''
     sort_value: 0.594
     sort_std: 0.0143
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2105,8 +2204,8 @@ results:
     value_note: ''
     sort_value: 0.584
     sort_std: 0.0021
-    global_rank: 98
-    paper_rank: 98
+    global_rank: 103
+    paper_rank: 103
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2172,13 +2271,46 @@ results:
     value_note: ''
     sort_value: 0.563
     sort_std: 0.0133
-    global_rank: 106
-    paper_rank: 106
+    global_rank: 111
+    paper_rank: 111
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.5514
+    std: null
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2105.11122'
+    title: Heterogeneous Graph Representation Learning with Relation Awareness
+    date: May 24, 2021
+    date_display: May 2021
+    date_iso: '2021-05-24'
+    venue: IEEE Transactions on Knowledge and Data Engineering
+    codebase_url: https://github.com/yule-BUAA/R-HGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 117
+    sort_value: 0.5514
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -2239,10 +2371,10 @@ results:
     value_note: ''
     sort_value: 0.5476
     sort_std: 0.0063
-    global_rank: 112
-    paper_rank: 139
-    rank_delta: 27
-    rank_delta_abs: 27
+    global_rank: 118
+    paper_rank: 147
+    rank_delta: 29
+    rank_delta_abs: 29
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2306,8 +2438,8 @@ results:
     value_note: ''
     sort_value: 0.392
     sort_std: 0.0185
-    global_rank: 139
-    paper_rank: 139
+    global_rank: 146
+    paper_rank: 146
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2373,8 +2505,8 @@ results:
     value_note: ''
     sort_value: 0.382
     sort_std: 0.068
-    global_rank: 140
-    paper_rank: 140
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2440,8 +2572,8 @@ results:
     value_note: ''
     sort_value: 0.381
     sort_std: 0.014
-    global_rank: 141
-    paper_rank: 141
+    global_rank: 149
+    paper_rank: 149
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2507,8 +2639,8 @@ results:
     value_note: ''
     sort_value: 0.333
     sort_std: 0.0005
-    global_rank: 145
-    paper_rank: 145
+    global_rank: 153
+    paper_rank: 153
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

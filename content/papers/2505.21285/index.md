@@ -202,9 +202,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GOODAT
+  - model: GOOD-D
     model_key: good-d
-    model_plain: GOODAT
+    model_plain: GOOD-D
     value: 0.6934
     std: null
     metric: AUROC

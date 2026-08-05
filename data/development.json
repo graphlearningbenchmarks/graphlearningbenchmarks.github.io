@@ -2,8 +2,8 @@
   "paper_status": {
     "total": 2740,
     "by_status": {
-      "extracted": 1636,
-      "quarantined_extraction_quality": 770,
+      "extracted": 1635,
+      "quarantined_extraction_quality": 771,
       "quarantined_method_name": 284,
       "downloaded": 33,
       "quarantined_yaml_parse": 11,

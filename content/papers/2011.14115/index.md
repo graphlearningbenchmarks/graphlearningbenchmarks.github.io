@@ -62,9 +62,9 @@ results:
   dataset: QM9
   is_multi_metric: true
   rows:
-  - model: Graphormer-SPIS
+  - model: Equiformer v2
     model_key: equiformer v2
-    model_plain: Graphormer-SPIS
+    model_plain: Equiformer v2
     metric_values:
     - 0.01
     - null
@@ -119,9 +119,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: EQGAT
     model_key: eqgat
-    model_plain: Graphormer-SPIS
+    model_plain: EQGAT
     metric_values:
     - 0.011
     - null
@@ -176,9 +176,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: Graphormer-SPIS
+  - model: Equiformer
     model_key: equiformer
-    model_plain: Graphormer-SPIS
+    model_plain: Equiformer
     metric_values:
     - 0.011
     - null
@@ -434,9 +434,9 @@ results:
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2110.01191'
-    value_gap_source_title: 'Molformer: Motif-based Transformer on 3D Heterogeneous
-      Molecular Graphs'
+    value_gap_source_arxiv: '2505.23086'
+    value_gap_source_title: Equivariant Spherical Transformer for Efficient Molecular
+      Modeling
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -444,8 +444,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2021-10-04'
-    value_gap_source_date_label: AAAI 2021
+    value_gap_source_date_iso: '2025-05-29'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false

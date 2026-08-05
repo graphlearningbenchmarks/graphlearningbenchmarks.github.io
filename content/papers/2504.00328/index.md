@@ -135,9 +135,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CPDG
+  - model: Backbone (TGAT)
     model_key: backbone (tgat)
-    model_plain: CPDG
+    model_plain: Backbone (TGAT)
     value: 0.6822
     std: 0.0052
     metric: AUC
@@ -168,9 +168,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CPDG
+  - model: PINT
     model_key: pint
-    model_plain: CPDG
+    model_plain: PINT
     value: 0.6731
     std: 0.002
     metric: AUC

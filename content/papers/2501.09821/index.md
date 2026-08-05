@@ -102,9 +102,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: DANE-O
+  - model: DANE
     model_key: dane
-    model_plain: DANE-O
+    model_plain: DANE
     metric_values:
     - 0.7664
     - null
@@ -143,6 +143,47 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
+  - model: NE
+    model_key: ne
+    model_plain: NE
+    metric_values:
+    - 0.7574
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2203.10866'
+    title: Unsupervised Network Embedding Beyond Homophily
+    published_venue: ''
+    date: Mar 21, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-21'
+    codebase_url: https://github.com/zhiqiangzhongddu/SELENE
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 3
+    is_best: false
+    sort_value: 0.7574
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: BN-Pool
     model_key: bn-pool
     model_plain: BN-Pool
@@ -163,15 +204,15 @@ results:
     architecture_title: Hybrid MPNN + transformer
     sort_value: 0.752
     sort_std: 0.007
-    true_value: null
-    true_std: null
+    true_value: 0.752
+    true_std: 0.007
     paper_value: 0.752
     paper_std: 0.007
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -179,8 +220,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -204,48 +245,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 3
-  - model: DANE-O
-    model_key: deepwalk
-    model_plain: DANE-O
-    metric_values:
-    - 0.7438
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1706.01860'
-    title: Attributed Network Embedding for Learning in a Dynamic Environment
-    published_venue: ''
-    date: Jun 6, 2017
-    date_display: Jun 2017
-    date_iso: '2017-06-06'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: false
-    sort_value: 0.7438
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
+    global_rank: 4
   - model: MinCut
     model_key: mincut
     model_plain: MinCut
@@ -266,15 +266,15 @@ results:
     architecture_title: Traditional / classical method
     sort_value: 0.692
     sort_std: 0.034
-    true_value: null
-    true_std: null
+    true_value: 0.692
+    true_std: 0.034
     paper_value: 0.692
     paper_std: 0.034
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -282,8 +282,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -307,7 +307,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 8
+    global_rank: 11
   - model: jbgnn
     model_key: jbgnn
     model_plain: jbgnn
@@ -328,15 +328,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.686
     sort_std: 0.018
-    true_value: null
-    true_std: null
+    true_value: 0.686
+    true_std: 0.018
     paper_value: 0.686
     paper_std: 0.018
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -344,8 +344,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -369,7 +369,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 8
+    global_rank: 12
   - model: DMoN
     model_key: dmon
     model_plain: DMoN
@@ -390,15 +390,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.637
     sort_std: 0.032
-    true_value: null
-    true_std: null
+    true_value: 0.637
+    true_std: 0.032
     paper_value: 0.637
     paper_std: 0.032
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -406,8 +406,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -431,7 +431,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 14
   - model: DiffPool
     model_key: diffpool
     model_plain: DiffPool
@@ -452,15 +452,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.495
     sort_std: 0.049
-    true_value: null
-    true_std: null
+    true_value: 0.495
+    true_std: 0.049
     paper_value: 0.495
     paper_std: 0.049
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -468,8 +468,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -493,7 +493,48 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 19
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    metric_values:
+    - 0.4868
+    - null
+    - null
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.10866'
+    title: Unsupervised Network Embedding Beyond Homophily
+    published_venue: ''
+    date: Mar 21, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-21'
+    codebase_url: https://github.com/zhiqiangzhongddu/SELENE
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 20
+    is_best: false
+    sort_value: 0.4868
+    sort_std: null
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   metrics:
   - Micro-F1
   - ACC
@@ -548,8 +589,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -558,17 +599,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 620.0
+    true_std: 151.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 620.0
     sort_std: 151.0
     global_rank: 1
+    paper_rank: 1
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -610,8 +656,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -620,17 +666,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 690.0
+    true_std: 236.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 690.0
     sort_std: 236.0
-    global_rank: 1
+    global_rank: 2
+    paper_rank: 2
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -672,8 +723,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -682,17 +733,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 733.0
+    true_std: 306.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 733.0
     sort_std: 306.0
-    global_rank: 1
+    global_rank: 3
+    paper_rank: 3
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -734,8 +790,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -744,17 +800,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 760.0
+    true_std: 323.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 760.0
     sort_std: 323.0
-    global_rank: 1
+    global_rank: 4
+    paper_rank: 4
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -796,8 +857,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -806,17 +867,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 771.0
+    true_std: 117.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 771.0
     sort_std: 117.0
-    global_rank: 1
+    global_rank: 5
+    paper_rank: 5
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -858,8 +924,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -868,17 +934,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 788.0
+    true_std: 206.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 788.0
     sort_std: 206.0
-    global_rank: 1
+    global_rank: 6
+    paper_rank: 6
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -920,8 +991,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -930,17 +1001,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 791.0
+    true_std: 193.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 791.0
     sort_std: 193.0
-    global_rank: 1
+    global_rank: 7
+    paper_rank: 7
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -982,8 +1058,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -992,17 +1068,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 830.0
+    true_std: 493.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 830.0
     sort_std: 493.0
-    global_rank: 1
+    global_rank: 8
+    paper_rank: 8
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1044,8 +1125,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1054,17 +1135,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 880.0
+    true_std: 242.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 880.0
     sort_std: 242.0
-    global_rank: 1
+    global_rank: 9
+    paper_rank: 9
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1106,8 +1192,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2025-01-16'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1116,17 +1202,22 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 958.0
+    true_std: 133.0
+    value_gap_source_arxiv: '2501.09821'
+    value_gap_source_title: 'BN-Pool: Bayesian Nonparametric Pooling for Graphs'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 958.0
     sort_std: 133.0
-    global_rank: 1
+    global_rank: 10
+    paper_rank: 10
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

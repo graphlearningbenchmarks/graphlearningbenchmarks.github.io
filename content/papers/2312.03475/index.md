@@ -48,8 +48,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - MoleculeJAE
-mrr: 0.0127
-adjusted_mrr: 0.0042
+mrr: 0.0093
+adjusted_mrr: 0.0031
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -66,9 +66,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -100,9 +100,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -134,9 +134,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -166,6 +166,496 @@ results:
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GeoSSL-DDM
+    model_key: geossl-ddm
+    model_plain: GeoSSL-DDM
+    value: 0.357
+    std: null
+    paper_value: 0.357
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 6, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-06'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.051
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.13602'
+    at_pub_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    at_pub_source_date_iso: '2022-06-27'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-27'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.306
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.051
+    true_std: null
+    value_gap_source_arxiv: '2206.13602'
+    value_gap_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.306
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.051
+    sort_std: null
+    global_rank: 50
+    paper_rank: 109
+    rank_delta: 59
+    rank_delta_abs: 59
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    comparison_source_arxiv: '2206.13602'
+    is_best: false
+    is_std_outlier: false
+  - model: GeoSSL-RR
+    model_key: geossl-rr
+    model_plain: GeoSSL-RR
+    value: 0.393
+    std: null
+    paper_value: 0.393
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 6, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-06'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.052
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.13602'
+    at_pub_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    at_pub_source_date_iso: '2022-06-27'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-27'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.341
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.052
+    true_std: null
+    value_gap_source_arxiv: '2206.13602'
+    value_gap_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.341
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.052
+    sort_std: null
+    global_rank: 57
+    paper_rank: 111
+    rank_delta: 54
+    rank_delta_abs: 54
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    comparison_source_arxiv: '2206.13602'
+    is_best: false
+    is_std_outlier: false
+  - model: GeoSSL-InfoNCE
+    model_key: geossl-infonce
+    model_plain: GeoSSL-InfoNCE
+    value: 0.395
+    std: null
+    paper_value: 0.395
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 6, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-06'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.066
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.13602'
+    at_pub_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    at_pub_source_date_iso: '2022-06-27'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-27'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.329
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.066
+    true_std: null
+    value_gap_source_arxiv: '2206.13602'
+    value_gap_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.329
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.066
+    sort_std: null
+    global_rank: 66
+    paper_rank: 111
+    rank_delta: 45
+    rank_delta_abs: 45
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    comparison_source_arxiv: '2206.13602'
+    is_best: false
+    is_std_outlier: false
+  - model: GeoSSL-EBM-NCE
+    model_key: geossl-ebm-nce
+    model_plain: GeoSSL-EBM-NCE
+    value: 0.373
+    std: null
+    paper_value: 0.373
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 6, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-06'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.073
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.13602'
+    at_pub_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    at_pub_source_date_iso: '2022-06-27'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-27'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.3
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.073
+    true_std: null
+    value_gap_source_arxiv: '2206.13602'
+    value_gap_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.073
+    sort_std: null
+    global_rank: 67
+    paper_rank: 109
+    rank_delta: 42
+    rank_delta_abs: 42
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    comparison_source_arxiv: '2206.13602'
+    is_best: false
+    is_std_outlier: false
+  - model: Distance Prediction
+    model_key: distance prediction
+    model_plain: Distance Prediction
+    value: 0.396
+    std: null
+    paper_value: 0.396
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 6, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-06'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.09
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.13602'
+    at_pub_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    at_pub_source_date_iso: '2022-06-27'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-27'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.30600000000000005
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.09
+    true_std: null
+    value_gap_source_arxiv: '2206.13602'
+    value_gap_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.30600000000000005
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.09
+    sort_std: null
+    global_rank: 72
+    paper_rank: 111
+    rank_delta: 39
+    rank_delta_abs: 39
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    comparison_source_arxiv: '2206.13602'
+    is_best: false
+    is_std_outlier: false
+  - model: Angle Prediction
+    model_key: angle prediction
+    model_plain: Angle Prediction
+    value: 0.447
+    std: null
+    paper_value: 0.447
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 6, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-06'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.105
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.13602'
+    at_pub_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    at_pub_source_date_iso: '2022-06-27'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-27'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.342
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.105
+    true_std: null
+    value_gap_source_arxiv: '2206.13602'
+    value_gap_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.342
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.105
+    sort_std: null
+    global_rank: 79
+    paper_rank: 111
+    rank_delta: 32
+    rank_delta_abs: 32
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    comparison_source_arxiv: '2206.13602'
+    is_best: false
+    is_std_outlier: false
+  - model: 3D InfoGraph
+    model_key: 3d infograph
+    model_plain: 3D InfoGraph
+    value: 0.415
+    std: null
+    paper_value: 0.415
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: ''
+    protocol_decision: uncertain
+    protocol_note: ''
+    date: Dec 6, 2023
+    date_display: Dec 2023
+    date_iso: '2023-12-06'
+    published_venue: NeurIPS 2023
+    published_conference: NeurIPS 2023
+    at_pub_value: 0.114
+    at_pub_std: null
+    at_pub_source_arxiv: '2206.13602'
+    at_pub_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    at_pub_source_date_iso: '2022-06-27'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-27'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.301
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.114
+    true_std: null
+    value_gap_source_arxiv: '2206.13602'
+    value_gap_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.301
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.114
+    sort_std: null
+    global_rank: 83
+    paper_rank: 111
+    rank_delta: 28
+    rank_delta_abs: 28
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    comparison_source_arxiv: '2206.13602'
     is_best: false
     is_std_outlier: false
   - model: GraphMVP
@@ -226,10 +716,10 @@ results:
     value_note: ''
     sort_value: 0.1166
     sort_std: null
-    global_rank: 60
-    paper_rank: 79
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 84
+    paper_rank: 109
+    rank_delta: 25
+    rank_delta_abs: 25
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -296,10 +786,10 @@ results:
     value_note: ''
     sort_value: 0.1296
     sort_std: null
-    global_rank: 64
-    paper_rank: 80
-    rank_delta: 16
-    rank_delta_abs: 16
+    global_rank: 89
+    paper_rank: 110
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -365,8 +855,8 @@ results:
     value_note: ''
     sort_value: 0.345
     sort_std: null
-    global_rank: 79
-    paper_rank: 79
+    global_rank: 108
+    paper_rank: 108
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -376,74 +866,12 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: GeoSSL-DDM
-    model_key: geossl-ddm
-    model_plain: GeoSSL-DDM
-    value: 0.357
+  - model: Type Prediction
+    model_key: type prediction
+    model_plain: Type Prediction
+    value: 0.402
     std: null
-    paper_value: 0.357
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 6, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-06'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.357
-    sort_std: null
-    global_rank: 80
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GeoSSL-EBM-NCE
-    model_key: geossl-ebm-nce
-    model_plain: GeoSSL-EBM-NCE
-    value: 0.373
-    std: null
-    paper_value: 0.373
+    paper_value: 0.402
     paper_std: null
     metric: MAE
     higher_is_better: false
@@ -468,36 +896,44 @@ results:
     date_iso: '2023-12-06'
     published_venue: NeurIPS 2023
     published_conference: NeurIPS 2023
-    at_pub_value: null
+    at_pub_value: 0.349
     at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
+    at_pub_source_arxiv: '2206.13602'
+    at_pub_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    at_pub_source_date_iso: '2022-06-27'
+    at_pub_source_date_label: ICLR 2022
+    value_gap_source_date_iso: '2022-06-27'
+    value_gap_source_date_label: ICLR 2022
+    gap_vs_at_pub: 0.05300000000000005
+    worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.373
-    sort_std: null
-    global_rank: 80
-    has_value_gap: false
+    today_delta_significant: true
+    true_value: 0.349
+    true_std: null
+    value_gap_source_arxiv: '2206.13602'
+    value_gap_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    value_gap_source_is_current_paper: false
+    value_gap: 0.05300000000000005
     has_value_note: false
-    value_gap: null
     value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
+    sort_value: 0.349
+    sort_std: null
+    global_rank: 109
+    paper_rank: 111
+    rank_delta: 2
+    rank_delta_abs: 2
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Molecular Geometry Pretraining with SE(3)-Invariant Denoising
+      Distance Matching
+    comparison_source_arxiv: '2206.13602'
     is_best: false
     is_std_outlier: false
   - model: random init
@@ -537,8 +973,8 @@ results:
       for Molecule Multi-modal Pretraining
     at_pub_source_date_iso: '2023-05-28'
     at_pub_source_date_label: ICML 2023
-    value_gap_source_date_iso: '2023-05-28'
-    value_gap_source_date_label: ICML 2023
+    value_gap_source_date_iso: '2024-05-09'
+    value_gap_source_date_label: NeurIPS 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -549,17 +985,17 @@ results:
     today_delta_significant: false
     true_value: 0.38
     true_std: null
-    value_gap_source_arxiv: '2305.18407'
-    value_gap_source_title: A Group Symmetric Stochastic Differential Equation Model
-      for Molecule Multi-modal Pretraining
+    value_gap_source_arxiv: '2405.05665'
+    value_gap_source_title: 'SubGDiff: A Subgraph Diffusion Model to Improve Molecular
+      Representation Learning'
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.38
     sort_std: null
-    global_rank: 80
-    paper_rank: 80
+    global_rank: 110
+    paper_rank: 110
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -605,8 +1041,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-12-06'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -615,389 +1051,23 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: false
+    true_value: 0.391
+    true_std: null
+    value_gap_source_arxiv: '2312.03475'
+    value_gap_source_title: 'Molecule Joint Auto-Encoding: Trajectory Pretraining
+      with 2D and 3D Diffusion'
+    value_gap_source_is_current_paper: true
+    value_gap: null
+    has_value_note: false
+    value_note: ''
     sort_value: 0.391
     sort_std: null
-    global_rank: 81
+    global_rank: 111
+    paper_rank: 111
+    rank_delta: 0
+    rank_delta_abs: 0
+    rank_delta_direction: same
     has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GeoSSL-RR
-    model_key: geossl-rr
-    model_plain: GeoSSL-RR
-    value: 0.393
-    std: null
-    paper_value: 0.393
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 6, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-06'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.393
-    sort_std: null
-    global_rank: 81
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GeoSSL-InfoNCE
-    model_key: geossl-infonce
-    model_plain: GeoSSL-InfoNCE
-    value: 0.395
-    std: null
-    paper_value: 0.395
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 6, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-06'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.395
-    sort_std: null
-    global_rank: 81
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Distance Prediction
-    model_key: distance prediction
-    model_plain: Distance Prediction
-    value: 0.396
-    std: null
-    paper_value: 0.396
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 6, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-06'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.396
-    sort_std: null
-    global_rank: 81
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Type Prediction
-    model_key: type prediction
-    model_plain: Type Prediction
-    value: 0.402
-    std: null
-    paper_value: 0.402
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 6, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-06'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.402
-    sort_std: null
-    global_rank: 81
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: 3D InfoGraph
-    model_key: 3d infograph
-    model_plain: 3D InfoGraph
-    value: 0.415
-    std: null
-    paper_value: 0.415
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 6, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-06'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.415
-    sort_std: null
-    global_rank: 81
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: Angle Prediction
-    model_key: angle prediction
-    model_plain: Angle Prediction
-    value: 0.447
-    std: null
-    paper_value: 0.447
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: ''
-    protocol_decision: uncertain
-    protocol_note: ''
-    date: Dec 6, 2023
-    date_display: Dec 2023
-    date_iso: '2023-12-06'
-    published_venue: NeurIPS 2023
-    published_conference: NeurIPS 2023
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    sort_value: 0.447
-    sort_std: null
-    global_rank: 81
-    has_value_gap: false
-    has_value_note: false
-    value_gap: null
-    value_note: ''
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    rank_delta_direction: null
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''

@@ -73,8 +73,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - CONVERT
-mrr: 0.4417
-adjusted_mrr: 0.4417
+mrr: 0.3775
+adjusted_mrr: 0.3775
 mrr_dataset_count: 3
 benchmark_categories:
 - Hypergraph Benchmarks
@@ -91,44 +91,44 @@ results:
 - &id001
   dataset: AMAP
   rows:
-  - model: SCGDN
-    model_key: idcrn
-    model_plain: SCGDN
-    value: 0.8208
-    std: 0.0018
+  - model: GANN
+    model_key: gann
+    model_plain: GANN
+    value: 0.9405
+    std: 0.0037
     metric: F1
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2202.12533'
-    title: Improved Dual Correlation Reduction Network
-    date: Feb 25, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-25'
-    venue: arXiv.org
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.07778'
+    title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+    date: Mar 14, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-14'
+    venue: Pattern Recognition
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.8208
-    sort_std: 0.0018
+    sort_value: 0.9405
+    sort_std: 0.0037
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SCGDN
-    model_key: dcrn
-    model_plain: SCGDN
-    value: 0.7966
-    std: 0.0025
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.9308
+    std: 0.0026
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -138,30 +138,30 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2202.12533'
-    title: Improved Dual Correlation Reduction Network
-    date: Feb 25, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-25'
-    venue: arXiv.org
+    arxiv_id: '2303.07778'
+    title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+    date: Mar 14, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-14'
+    venue: Pattern Recognition
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.7966
-    sort_std: 0.0025
+    sort_value: 0.9308
+    sort_std: 0.0026
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SCGDN
-    model_key: dfcn
-    model_plain: SCGDN
-    value: 0.76
-    std: 0.008
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.9238
+    std: 0.0014
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -171,20 +171,53 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2202.12533'
-    title: Improved Dual Correlation Reduction Network
-    date: Feb 25, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-25'
-    venue: arXiv.org
+    arxiv_id: '2303.07778'
+    title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+    date: Mar 14, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-14'
+    venue: Pattern Recognition
     codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.76
-    sort_std: 0.008
+    sort_value: 0.9238
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8115
+    std: 0.0105
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.07778'
+    title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+    date: Mar 14, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-14'
+    venue: Pattern Recognition
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 14
+    sort_value: 0.8115
+    sort_std: 0.0105
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -246,8 +279,8 @@ results:
     value_note: ''
     sort_value: 0.7403
     sort_std: 0.01
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 18
+    paper_rank: 18
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -313,8 +346,8 @@ results:
     value_note: ''
     sort_value: 0.7304
     sort_std: 0.0108
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 19
+    paper_rank: 19
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -380,8 +413,8 @@ results:
     value_note: ''
     sort_value: 0.7174
     sort_std: 0.0093
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -448,8 +481,8 @@ results:
     value_note: ''
     sort_value: 0.7103
     sort_std: 0.0064
-    global_rank: 11
-    paper_rank: 11
+    global_rank: 26
+    paper_rank: 26
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -516,8 +549,8 @@ results:
     value_note: ''
     sort_value: 0.6999
     sort_std: 0.0034
-    global_rank: 12
-    paper_rank: 12
+    global_rank: 27
+    paper_rank: 27
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -583,8 +616,8 @@ results:
     value_note: ''
     sort_value: 0.6987
     sort_std: 0.0054
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 28
+    paper_rank: 28
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -650,15 +683,85 @@ results:
     value_note: ''
     sort_value: 0.6805
     sort_std: 0.0181
-    global_rank: 17
-    paper_rank: 32
-    rank_delta: 15
-    rank_delta_abs: 15
+    global_rank: 33
+    paper_rank: 51
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Improved Dual Correlation Reduction Network
     comparison_source_arxiv: '2202.12533'
+    is_best: false
+    is_std_outlier: false
+  - model: AutoSSL
+    model_key: autossl
+    model_plain: AutoSSL
+    value: 0.5447
+    std: 0.0083
+    paper_value: 0.5447
+    paper_std: 0.0083
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: ICLR 22
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Clustering performance evaluated on AMAP dataset
+    date: Aug 17, 2023
+    date_display: Aug 2023
+    date_iso: '2023-08-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.6676
+    at_pub_std: 0.0067
+    at_pub_source_arxiv: '2212.08665'
+    at_pub_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    at_pub_source_date_iso: '2022-12-16'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.12290000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6676
+    true_std: 0.0067
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    value_gap_source_is_current_paper: false
+    value_gap: 0.12290000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6676
+    sort_std: 0.0067
+    global_rank: 35
+    paper_rank: 46
+    rank_delta: 11
+    rank_delta_abs: 11
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
+      Clustering [5]
+    comparison_source_arxiv: '2212.08665'
     is_best: false
     is_std_outlier: false
   - model: SUBLIME
@@ -719,17 +822,17 @@ results:
     value_note: ''
     sort_value: 0.65
     sort_std: 0.07
-    global_rank: 20
-    paper_rank: 39
-    rank_delta: 19
-    rank_delta_abs: 19
+    global_rank: 39
+    paper_rank: 57
+    rank_delta: 18
+    rank_delta_abs: 18
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: false
+    is_std_outlier: true
   - model: ARGA
     model_key: arga
     model_plain: ARGA
@@ -786,8 +889,8 @@ results:
     value_note: ''
     sort_value: 0.6483
     sort_std: 0.0059
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -797,13 +900,13 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: AutoSSL
-    model_key: autossl
-    model_plain: AutoSSL
-    value: 0.5447
-    std: 0.0083
-    paper_value: 0.5447
-    paper_std: 0.0083
+  - model: MVGRL
+    model_key: mvgrl
+    model_plain: MVGRL
+    value: 0.3288
+    std: 0.055
+    paper_value: 0.3288
+    paper_std: 0.055
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -817,7 +920,7 @@ results:
     input_feature_source: null
     feature_source_evidence: ''
     table_ref: Table 1
-    source_ref: ICLR 22
+    source_ref: ICML 20
     variant_inference_reason: 'dataset: exact match'
     evaluation_task: node_classification
     protocol_decision: standard
@@ -827,38 +930,39 @@ results:
     date_iso: '2023-08-17'
     published_venue: ''
     published_conference: ''
-    at_pub_value: 0.6676
-    at_pub_std: 0.0067
+    at_pub_value: 0.6283
+    at_pub_std: 0.0159
     at_pub_source_arxiv: '2212.08665'
     at_pub_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
       [5]
     at_pub_source_date_iso: '2022-12-16'
     at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2023-08-17'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.12290000000000001
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.2995
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5447
-    true_std: 0.0083
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    value_gap_source_is_current_paper: true
-    value_gap: null
+    today_delta_significant: true
+    true_value: 0.6283
+    true_std: 0.0159
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    value_gap_source_is_current_paper: false
+    value_gap: 0.2995
     has_value_note: false
     value_note: ''
-    sort_value: 0.5447
-    sort_std: 0.0083
-    global_rank: 27
-    paper_rank: 27
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
+    sort_value: 0.6283
+    sort_std: 0.0159
+    global_rank: 42
+    paper_rank: 55
+    rank_delta: 13
+    rank_delta_abs: 13
+    rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
@@ -923,8 +1027,8 @@ results:
     value_note: ''
     sort_value: 0.5359
     sort_std: 0.0057
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 48
+    paper_rank: 48
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -932,75 +1036,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MVGRL
-    model_key: mvgrl
-    model_plain: MVGRL
-    value: 0.3288
-    std: 0.055
-    paper_value: 0.3288
-    paper_std: 0.055
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: ICML 20
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Clustering performance evaluated on AMAP dataset
-    date: Aug 17, 2023
-    date_display: Aug 2023
-    date_iso: '2023-08-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.6283
-    at_pub_std: 0.0159
-    at_pub_source_arxiv: '2212.08665'
-    at_pub_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
-      [5]
-    at_pub_source_date_iso: '2022-12-16'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2022-02-25'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.2995
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.4273
-    true_std: 0.0102
-    value_gap_source_arxiv: '2202.12533'
-    value_gap_source_title: Improved Dual Correlation Reduction Network
-    value_gap_source_is_current_paper: false
-    value_gap: 0.09850000000000003
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4273
-    sort_std: 0.0102
-    global_rank: 35
-    paper_rank: 37
-    rank_delta: 2
-    rank_delta_abs: 2
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
-      Clustering [5]
-    comparison_source_arxiv: '2212.08665'
     is_best: false
     is_std_outlier: false
   rank_metric: F1
@@ -1082,9 +1117,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: K-means
+  - model: GraphLearner
     model_key: graphlearner
-    model_plain: K-means
+    model_plain: GraphLearner
     value: 0.754
     std: 0.0088
     metric: F1
@@ -1115,9 +1150,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: K-means
+  - model: SCGDN
     model_key: scgdn
-    model_plain: K-means
+    model_plain: SCGDN
     value: 0.7449
     std: 0.0026
     metric: F1
@@ -1902,11 +1937,11 @@ results:
 - &id003
   dataset: EAT
   rows:
-  - model: DFCN
-    model_key: scagc
-    model_plain: DFCN
-    value: 0.7277
-    std: 0.0016
+  - model: ProGCL
+    model_key: progcl
+    model_plain: ProGCL
+    value: 0.7702
+    std: 0.0033
     metric: F1
     higher_is_better: true
     is_baseline: true
@@ -1916,56 +1951,159 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2205.07865'
-    title: Simple Contrastive Graph Clustering
-    date: May 11, 2022
-    date_display: May 2022
-    date_iso: '2022-05-11'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: ''
+    arxiv_id: '2212.08665'
+    title: Hard Sample Aware Network for Contrastive Deep Graph Clustering [5]
+    date: Dec 16, 2022
+    date_display: Dec 2022
+    date_iso: '2022-12-16'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/yueliu1999/HSAN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.7277
-    sort_std: 0.0016
+    sort_value: 0.7702
+    sort_std: 0.0033
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: DFCN
-    model_key: scgc
-    model_plain: DFCN
-    value: 0.7222
-    std: 0.0097
+  - model: HSAN
+    model_key: hsan
+    model_plain: HSAN
+    value: 0.7702
+    std: 0.0033
     metric: F1
     higher_is_better: true
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: other_traditional
-    architecture_label: Trad
-    architecture_title: Traditional / classical method
-    arxiv_id: '2205.07865'
-    title: Simple Contrastive Graph Clustering
-    date: May 11, 2022
-    date_display: May 2022
-    date_iso: '2022-05-11'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: ''
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.08665'
+    title: Hard Sample Aware Network for Contrastive Deep Graph Clustering [5]
+    date: Dec 16, 2022
+    date_display: Dec 2022
+    date_iso: '2022-12-16'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/yueliu1999/HSAN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.7222
-    sort_std: 0.0097
+    sort_value: 0.7702
+    sort_std: 0.0033
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: DFCN
+    model_key: dfcn
+    model_plain: DFCN
+    value: 0.7682
+    std: 0.0023
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2212.08665'
+    title: Hard Sample Aware Network for Contrastive Deep Graph Clustering [5]
+    date: Dec 16, 2022
+    date_display: Dec 2022
+    date_iso: '2022-12-16'
+    venue: AAAI Conference on Artificial Intelligence
+    codebase_url: https://github.com/yueliu1999/HSAN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.7682
+    sort_std: 0.0023
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AGC-DRR
+    model_key: agc-drr
+    model_plain: AGC-DRR
+    value: 0.352
+    std: 0.0017
+    paper_value: 0.352
+    paper_std: 0.0017
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: IJCAI 22
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Clustering performance evaluated via 10 runs
+    date: Aug 17, 2023
+    date_display: Aug 2023
+    date_iso: '2023-08-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.7681
+    at_pub_std: 0.0145
+    at_pub_source_arxiv: '2212.08665'
+    at_pub_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    at_pub_source_date_iso: '2022-12-16'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.4161
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.7681
+    true_std: 0.0145
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    value_gap_source_is_current_paper: false
+    value_gap: 0.4161
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.7681
+    sort_std: 0.0145
+    global_rank: 4
+    paper_rank: 28
+    rank_delta: 24
+    rank_delta_abs: 24
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
+      Clustering [5]
+    comparison_source_arxiv: '2212.08665'
     is_best: true
     is_std_outlier: false
   - model: AGE
@@ -2005,8 +2143,8 @@ results:
       [5]
     at_pub_source_date_iso: '2022-12-16'
     at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2022-05-11'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: 0.3044
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2015,27 +2153,28 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.7174
-    true_std: 0.0093
-    value_gap_source_arxiv: '2205.07865'
-    value_gap_source_title: Simple Contrastive Graph Clustering
+    true_value: 0.7598
+    true_std: 0.0068
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
     value_gap_source_is_current_paper: false
-    value_gap: 0.262
+    value_gap: 0.3044
     has_value_note: false
     value_note: ''
-    sort_value: 0.7174
-    sort_std: 0.0093
-    global_rank: 3
-    paper_rank: 20
-    rank_delta: 17
-    rank_delta_abs: 17
+    sort_value: 0.7598
+    sort_std: 0.0068
+    global_rank: 5
+    paper_rank: 26
+    rank_delta: 21
+    rank_delta_abs: 21
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
       Clustering [5]
     comparison_source_arxiv: '2212.08665'
-    is_best: true
+    is_best: false
     is_std_outlier: false
   - model: DAEGC
     model_key: daegc
@@ -2074,8 +2213,8 @@ results:
       [5]
     at_pub_source_date_iso: '2022-12-16'
     at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2022-05-11'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: 0.41240000000000004
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2084,20 +2223,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.6987
-    true_std: 0.0054
-    value_gap_source_arxiv: '2205.07865'
-    value_gap_source_title: Simple Contrastive Graph Clustering
+    true_value: 0.7596
+    true_std: 0.0023
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
     value_gap_source_is_current_paper: false
-    value_gap: 0.3515
+    value_gap: 0.41240000000000004
     has_value_note: false
     value_note: ''
-    sort_value: 0.6987
-    sort_std: 0.0054
-    global_rank: 5
-    paper_rank: 25
-    rank_delta: 20
-    rank_delta_abs: 20
+    sort_value: 0.7596
+    sort_std: 0.0023
+    global_rank: 6
+    paper_rank: 29
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2143,8 +2283,8 @@ results:
       [5]
     at_pub_source_date_iso: '2022-12-16'
     at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2022-05-11'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: 0.1653
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2153,20 +2293,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.643
-    true_std: 0.0195
-    value_gap_source_arxiv: '2205.07865'
-    value_gap_source_title: Simple Contrastive Graph Clustering
+    true_value: 0.6928
+    true_std: 0.023
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
     value_gap_source_is_current_paper: false
-    value_gap: 0.11550000000000005
+    value_gap: 0.1653
     has_value_note: false
     value_note: ''
-    sort_value: 0.643
-    sort_std: 0.0195
-    global_rank: 7
-    paper_rank: 11
-    rank_delta: 4
-    rank_delta_abs: 4
+    sort_value: 0.6928
+    sort_std: 0.023
+    global_rank: 11
+    paper_rank: 18
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2231,8 +2372,8 @@ results:
     value_note: ''
     sort_value: 0.5842
     sort_std: 0.0022
-    global_rank: 8
-    paper_rank: 8
+    global_rank: 13
+    paper_rank: 13
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2240,6 +2381,76 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AutoSSL
+    model_key: autossl
+    model_plain: AutoSSL
+    value: 0.2182
+    std: 0.0098
+    paper_value: 0.2182
+    paper_std: 0.0098
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: ICLR 22
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Clustering performance evaluated via 10 runs
+    date: Aug 17, 2023
+    date_display: Aug 2023
+    date_iso: '2023-08-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.5455
+    at_pub_std: 0.0097
+    at_pub_source_arxiv: '2212.08665'
+    at_pub_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    at_pub_source_date_iso: '2022-12-16'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.3273
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.5455
+    true_std: 0.0097
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3273
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.5455
+    sort_std: 0.0097
+    global_rank: 16
+    paper_rank: 33
+    rank_delta: 17
+    rank_delta_abs: 17
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
+      Clustering [5]
+    comparison_source_arxiv: '2212.08665'
     is_best: false
     is_std_outlier: false
   - model: SDCN
@@ -2279,8 +2490,8 @@ results:
       [5]
     at_pub_source_date_iso: '2022-12-16'
     at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2022-05-11'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
     gap_vs_at_pub: 0.2002
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -2289,20 +2500,21 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.5066
-    true_std: 0.0149
-    value_gap_source_arxiv: '2205.07865'
-    value_gap_source_title: Simple Contrastive Graph Clustering
+    true_value: 0.5344
+    true_std: 0.0081
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
     value_gap_source_is_current_paper: false
-    value_gap: 0.17240000000000005
+    value_gap: 0.2002
     has_value_note: false
     value_note: ''
-    sort_value: 0.5066
-    sort_std: 0.0149
-    global_rank: 12
-    paper_rank: 27
-    rank_delta: 15
-    rank_delta_abs: 15
+    sort_value: 0.5344
+    sort_std: 0.0081
+    global_rank: 17
+    paper_rank: 31
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2368,8 +2580,8 @@ results:
     value_note: ''
     sort_value: 0.4822
     sort_std: 0.0033
-    global_rank: 13
-    paper_rank: 13
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2437,10 +2649,80 @@ results:
     value_note: ''
     sort_value: 0.47
     sort_std: 0.06
-    global_rank: 17
-    paper_rank: 29
-    rank_delta: 12
-    rank_delta_abs: 12
+    global_rank: 23
+    paper_rank: 32
+    rank_delta: 9
+    rank_delta_abs: 9
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
+      Clustering [5]
+    comparison_source_arxiv: '2212.08665'
+    is_best: false
+    is_std_outlier: false
+  - model: AFGRL
+    model_key: afgrl
+    model_plain: AFGRL
+    value: 0.3053
+    std: 0.0147
+    paper_value: 0.3053
+    paper_std: 0.0147
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: AAAI 22
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Clustering performance evaluated via 10 runs
+    date: Aug 17, 2023
+    date_display: Aug 2023
+    date_iso: '2023-08-17'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: 0.4375
+    at_pub_std: 0.0078
+    at_pub_source_arxiv: '2212.08665'
+    at_pub_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    at_pub_source_date_iso: '2022-12-16'
+    at_pub_source_date_label: AAAI 2022
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: 0.13219999999999998
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.4375
+    true_std: 0.0078
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    value_gap_source_is_current_paper: false
+    value_gap: 0.13219999999999998
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.4375
+    sort_std: 0.0078
+    global_rank: 27
+    paper_rank: 32
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -2507,84 +2789,15 @@ results:
     value_note: ''
     sort_value: 0.42
     sort_std: 0.06
-    global_rank: 23
-    paper_rank: 27
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 28
+    paper_rank: 31
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AGC-DRR
-    model_key: agc-drr
-    model_plain: AGC-DRR
-    value: 0.352
-    std: 0.0017
-    paper_value: 0.352
-    paper_std: 0.0017
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: IJCAI 22
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Clustering performance evaluated via 10 runs
-    date: Aug 17, 2023
-    date_display: Aug 2023
-    date_iso: '2023-08-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.7681
-    at_pub_std: 0.0145
-    at_pub_source_arxiv: '2212.08665'
-    at_pub_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
-      [5]
-    at_pub_source_date_iso: '2022-12-16'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2023-08-17'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.4161
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.352
-    true_std: 0.0017
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.352
-    sort_std: 0.0017
-    global_rank: 24
-    paper_rank: 24
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
-      Clustering [5]
-    comparison_source_arxiv: '2212.08665'
     is_best: false
     is_std_outlier: false
   - model: NACL
@@ -2643,8 +2856,8 @@ results:
     value_note: ''
     sort_value: 0.3125
     sort_std: 0.0096
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2652,144 +2865,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AFGRL
-    model_key: afgrl
-    model_plain: AFGRL
-    value: 0.3053
-    std: 0.0147
-    paper_value: 0.3053
-    paper_std: 0.0147
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: AAAI 22
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Clustering performance evaluated via 10 runs
-    date: Aug 17, 2023
-    date_display: Aug 2023
-    date_iso: '2023-08-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.4375
-    at_pub_std: 0.0078
-    at_pub_source_arxiv: '2212.08665'
-    at_pub_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
-      [5]
-    at_pub_source_date_iso: '2022-12-16'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2023-08-17'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.13219999999999998
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3053
-    true_std: 0.0147
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3053
-    sort_std: 0.0147
-    global_rank: 29
-    paper_rank: 29
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
-      Clustering [5]
-    comparison_source_arxiv: '2212.08665'
-    is_best: false
-    is_std_outlier: false
-  - model: AutoSSL
-    model_key: autossl
-    model_plain: AutoSSL
-    value: 0.2182
-    std: 0.0098
-    paper_value: 0.2182
-    paper_std: 0.0098
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: ICLR 22
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Clustering performance evaluated via 10 runs
-    date: Aug 17, 2023
-    date_display: Aug 2023
-    date_iso: '2023-08-17'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: 0.5455
-    at_pub_std: 0.0097
-    at_pub_source_arxiv: '2212.08665'
-    at_pub_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
-      [5]
-    at_pub_source_date_iso: '2022-12-16'
-    at_pub_source_date_label: AAAI 2022
-    value_gap_source_date_iso: '2023-08-17'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.3273
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.2182
-    true_std: 0.0098
-    value_gap_source_arxiv: '2308.08963'
-    value_gap_source_title: 'CONVERT: Contrastive Graph Clustering with Reliable Augmentation'
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.2182
-    sort_std: 0.0098
-    global_rank: 32
-    paper_rank: 32
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Hard Sample Aware Network for Contrastive Deep Graph
-      Clustering [5]
-    comparison_source_arxiv: '2212.08665'
     is_best: false
     is_std_outlier: false
   rank_metric: F1

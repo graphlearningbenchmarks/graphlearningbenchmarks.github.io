@@ -50,9 +50,9 @@ results:
 - &id001
   dataset: MD17
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     value: 1.036e-05
     std: null
     metric: MAE
@@ -84,9 +84,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     value: 1.038e-05
     std: null
     metric: MAE
@@ -118,9 +118,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     value: 1.759e-05
     std: null
     metric: MAE
@@ -189,7 +189,7 @@ results:
       length-scales in molecular systems'
     at_pub_source_date_iso: '2022-05-28'
     at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-02-07'
+    value_gap_source_date_iso: '2024-07-02'
     value_gap_source_date_label: ICLR 2024
     gap_vs_at_pub: 5.26
     worse_than_at_pub: true
@@ -199,27 +199,167 @@ results:
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
     today_delta_significant: true
-    true_value: 0.053
+    true_value: 0.0009
     true_std: null
-    value_gap_source_arxiv: '2402.04836'
-    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
     value_gap_source_is_current_paper: false
-    value_gap: 5.247
+    value_gap: 5.2991
     has_value_note: false
     value_note: ''
-    sort_value: 0.053
+    sort_value: 0.0009
     sort_std: null
-    global_rank: 34
-    paper_rank: 87
-    rank_delta: 53
-    rank_delta_abs: 53
+    global_rank: 7
+    paper_rank: 122
+    rank_delta: 115
+    rank_delta_abs: 115
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'So3krates: Equivariant attention for interactions on
       arbitrary length-scales in molecular systems'
     comparison_source_arxiv: '2205.14276'
+    is_best: false
+    is_std_outlier: false
+  - model: PaiNN
+    model_key: painn
+    model_plain: PaiNN
+    value: 6.9
+    std: null
+    paper_value: 6.9
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: schutt2021equivariant
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test set energy (E) MAE for Aspirin
+    date: Jan 21, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-21'
+    published_venue: ICLR 2023
+    published_conference: ICLR 2023
+    at_pub_value: 0.063
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.14276'
+    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
+      length-scales in molecular systems'
+    at_pub_source_date_iso: '2022-05-28'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 6.837000000000001
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.01
+    true_std: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_gap_source_is_current_paper: false
+    value_gap: 6.890000000000001
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.01
+    sort_std: null
+    global_rank: 22
+    paper_rank: 122
+    rank_delta: 100
+    rank_delta_abs: 100
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'So3krates: Equivariant attention for interactions on
+      arbitrary length-scales in molecular systems'
+    comparison_source_arxiv: '2205.14276'
+    is_best: false
+    is_std_outlier: false
+  - model: SchNet
+    model_key: schnet
+    model_plain: SchNet
+    value: 16.0
+    std: null
+    paper_value: 16.0
+    paper_std: null
+    metric: MAE
+    higher_is_better: false
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: schutt2017schnet
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: graph_regression
+    protocol_decision: standard
+    protocol_note: Test set energy (E) MAE for Aspirin
+    date: Jan 21, 2023
+    date_display: Jan 2023
+    date_iso: '2023-01-21'
+    published_venue: ICLR 2023
+    published_conference: ICLR 2023
+    at_pub_value: 0.05
+    at_pub_std: null
+    at_pub_source_arxiv: '1902.08408'
+    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    at_pub_source_date_iso: '2019-02-22'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 15.95
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.05
+    true_std: null
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    value_gap_source_is_current_paper: false
+    value_gap: 15.95
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.05
+    sort_std: null
+    global_rank: 46
+    paper_rank: 125
+    rank_delta: 79
+    rank_delta_abs: 79
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   - model: sGDML
@@ -278,10 +418,10 @@ results:
     value_note: ''
     sort_value: 0.06
     sort_std: null
-    global_rank: 40
-    paper_rank: 88
-    rank_delta: 48
-    rank_delta_abs: 48
+    global_rank: 62
+    paper_rank: 122
+    rank_delta: 60
+    rank_delta_abs: 60
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -345,154 +485,15 @@ results:
     value_note: ''
     sort_value: 0.064
     sort_std: null
-    global_rank: 42
-    paper_rank: 88
-    rank_delta: 46
-    rank_delta_abs: 46
+    global_rank: 65
+    paper_rank: 122
+    rank_delta: 57
+    rank_delta_abs: 57
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Directional Message Passing for Molecular Graphs
     comparison_source_arxiv: '2003.03123'
-    is_best: false
-    is_std_outlier: false
-  - model: PaiNN
-    model_key: painn
-    model_plain: PaiNN
-    value: 6.9
-    std: null
-    paper_value: 6.9
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schutt2021equivariant
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test set energy (E) MAE for Aspirin
-    date: Jan 21, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-21'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: 0.063
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.14276'
-    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
-      length-scales in molecular systems'
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-11-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 6.837000000000001
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.077
-    true_std: null
-    value_gap_source_arxiv: '2311.02124'
-    value_gap_source_title: 'Sliced Denoising: A Physics-Informed Molecular Pre-Training
-      Method'
-    value_gap_source_is_current_paper: false
-    value_gap: 6.823
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.077
-    sort_std: null
-    global_rank: 45
-    paper_rank: 88
-    rank_delta: 43
-    rank_delta_abs: 43
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'So3krates: Equivariant attention for interactions on
-      arbitrary length-scales in molecular systems'
-    comparison_source_arxiv: '2205.14276'
-    is_best: false
-    is_std_outlier: false
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    value: 16.0
-    std: null
-    paper_value: 16.0
-    paper_std: null
-    metric: MAE
-    higher_is_better: false
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: schutt2017schnet
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: graph_regression
-    protocol_decision: standard
-    protocol_note: Test set energy (E) MAE for Aspirin
-    date: Jan 21, 2023
-    date_display: Jan 2023
-    date_iso: '2023-01-21'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: 0.05
-    at_pub_std: null
-    at_pub_source_arxiv: '1902.08408'
-    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    at_pub_source_date_iso: '2019-02-22'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 15.95
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    true_value: 0.08
-    true_std: null
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_gap_source_is_current_paper: false
-    value_gap: 15.92
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.08
-    sort_std: null
-    global_rank: 46
-    paper_rank: 89
-    rank_delta: 43
-    rank_delta_abs: 43
-    rank_delta_direction: worse
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    comparison_source_arxiv: '1902.08408'
     is_best: false
     is_std_outlier: false
   - model: SAKE
@@ -551,8 +552,8 @@ results:
     value_note: ''
     sort_value: 2.1
     sort_std: 0.0
-    global_rank: 85
-    paper_rank: 85
+    global_rank: 120
+    paper_rank: 120
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -618,8 +619,8 @@ results:
     value_note: ''
     sort_value: 9.4
     sort_std: null
-    global_rank: 89
-    paper_rank: 89
+    global_rank: 124
+    paper_rank: 124
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

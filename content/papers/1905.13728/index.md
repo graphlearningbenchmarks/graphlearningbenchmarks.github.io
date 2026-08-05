@@ -66,9 +66,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGCONV
+  - model: ACM-GCN
     model_key: acm-gcn
-    model_plain: SGCONV
+    model_plain: ACM-GCN
     value: 0.8894
     std: 0.0054
     metric: F1
@@ -99,9 +99,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGCONV
+  - model: APPNP
     model_key: appnp
-    model_plain: SGCONV
+    model_plain: APPNP
     value: 0.888
     std: 0.001
     metric: F1
@@ -132,9 +132,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGCONV
+  - model: GraphSAGE
     model_key: graphsage
-    model_plain: SGCONV
+    model_plain: GraphSAGE
     value: 0.881
     std: 0.001
     metric: F1
@@ -159,6 +159,39 @@ results:
     is_global_top: true
     global_rank: 3
     sort_value: 0.881
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.879
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: GCN is a standard GNN that pools node attributes.
+    is_global_top: true
+    global_rank: 6
+    sort_value: 0.879
     sort_std: 0.001
     comparison_type: global_top
     comparison_source_title: ''
@@ -234,6 +267,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.657
+    std: 0.019
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2103.14991'
+    title: Graph Unlearning
+    date: Mar 27, 2021
+    date_display: Mar 2021
+    date_iso: '2021-03-27'
+    venue: Conference on Computer and Communications Security
+    codebase_url: https://github.com/MinChen00/Graph-Unlearning
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 43
+    sort_value: 0.657
+    sort_std: 0.019
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   rank_metric: F1
   higher_is_better: true
   experiment_scope: node-level
@@ -246,9 +312,9 @@ results:
 - &id002
   dataset: PubMed
   rows:
-  - model: SGCONV
+  - model: MixHop
     model_key: mixhop
-    model_plain: SGCONV
+    model_plain: MixHop
     value: 0.891
     std: 0.001
     metric: F1
@@ -279,9 +345,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGCONV
+  - model: APPNP
     model_key: appnp
-    model_plain: SGCONV
+    model_plain: APPNP
     value: 0.884
     std: 0.001
     metric: F1
@@ -312,9 +378,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SGCONV
+  - model: GCN
     model_key: gcn
-    model_plain: SGCONV
+    model_plain: GCN
     value: 0.875
     std: 0.001
     metric: F1
@@ -340,6 +406,73 @@ results:
     global_rank: 3
     sort_value: 0.875
     sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.864
+    std: 0.001
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1909.13021'
+    title: Multi-Scale Attributed Node Embedding
+    date: Sep 25, 2019
+    date_display: Sep 2019
+    date_iso: '2019-09-25'
+    venue: J. Complex Networks
+    codebase_url: https://github.com/benedekrozemberczki/MUSAE
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 6
+    sort_value: 0.864
+    sort_std: 0.001
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6717
+    std: 0.0091
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2309.04082'
+    title: 'Curve Your Attention: Mixed-Curvature Transformers for Graph Representation
+      Learning'
+    date: Sep 8, 2023
+    date_display: Sep 2023
+    date_iso: '2023-09-08'
+    venue: arXiv.org
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 41
+    sort_value: 0.6717
+    sort_std: 0.0091
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''

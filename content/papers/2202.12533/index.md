@@ -55,8 +55,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - IDCRN
-mrr: 1.0
-adjusted_mrr: 0.3333
+mrr: 0.0833
+adjusted_mrr: 0.0278
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -124,9 +124,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: AM-GCN
+  - model: GCN
     model_key: gcn
-    model_plain: AM-GCN
+    model_plain: GCN
     metric_values:
     - 0.9054
     - null
@@ -169,9 +169,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: AM-GCN
+  - model: GAT
     model_key: gat
-    model_plain: AM-GCN
+    model_plain: GAT
     metric_values:
     - 0.904
     - null
@@ -1292,6 +1292,105 @@ results:
 - &id003
   dataset: AMAP
   rows:
+  - model: GANN
+    model_key: gann
+    model_plain: GANN
+    value: 0.9405
+    std: 0.0037
+    metric: F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.07778'
+    title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+    date: Mar 14, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-14'
+    venue: Pattern Recognition
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9405
+    sort_std: 0.0037
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GPRGNN
+    model_key: gprgnn
+    model_plain: GPRGNN
+    value: 0.9308
+    std: 0.0026
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.07778'
+    title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+    date: Mar 14, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-14'
+    venue: Pattern Recognition
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9308
+    sort_std: 0.0026
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GAT
+    model_key: gat
+    model_plain: GAT
+    value: 0.9238
+    std: 0.0014
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.07778'
+    title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+    date: Mar 14, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-14'
+    venue: Pattern Recognition
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9238
+    sort_std: 0.0014
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: IDCRN
     model_key: idcrn
     model_plain: IDCRN
@@ -1348,8 +1447,8 @@ results:
     value_note: ''
     sort_value: 0.8208
     sort_std: 0.0018
-    global_rank: 1
-    paper_rank: 1
+    global_rank: 12
+    paper_rank: 12
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1357,7 +1456,40 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.8115
+    std: 0.0105
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2303.07778'
+    title: 'GANN: Graph Alignment Neural Network for Semi-Supervised Learning'
+    date: Mar 14, 2023
+    date_display: Mar 2023
+    date_iso: '2023-03-14'
+    venue: Pattern Recognition
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 14
+    sort_value: 0.8115
+    sort_std: 0.0105
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: DCRN
     model_key: dcrn
@@ -1415,8 +1547,8 @@ results:
     value_note: ''
     sort_value: 0.7966
     sort_std: 0.0025
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1482,8 +1614,8 @@ results:
     value_note: ''
     sort_value: 0.76
     sort_std: 0.008
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 16
+    paper_rank: 16
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1549,10 +1681,77 @@ results:
     value_note: ''
     sort_value: 0.6987
     sort_std: 0.0054
-    global_rank: 13
-    paper_rank: 21
-    rank_delta: 8
-    rank_delta_abs: 8
+    global_rank: 28
+    paper_rank: 42
+    rank_delta: 14
+    rank_delta_abs: 14
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MCGC
+    model_key: mcgc
+    model_plain: MCGC
+    value: 0.5892
+    std: 0.0005
+    paper_value: 0.5892
+    paper_std: 0.0005
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: MCGC
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Clustering performance reported as F1 score.
+    date: Feb 25, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2024-03-06'
+    value_gap_source_date_label: '2024'
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.686
+    true_std: null
+    value_gap_source_arxiv: '2403.03670'
+    value_gap_source_title: 'CDC: A Simple Framework for Complex Data Clustering'
+    value_gap_source_is_current_paper: false
+    value_gap: 0.09680000000000011
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.686
+    sort_std: null
+    global_rank: 30
+    paper_rank: 44
+    rank_delta: 14
+    rank_delta_abs: 14
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1616,10 +1815,10 @@ results:
     value_note: ''
     sort_value: 0.6808
     sort_std: 0.0176
-    global_rank: 15
-    paper_rank: 21
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 31
+    paper_rank: 42
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1683,8 +1882,8 @@ results:
     value_note: ''
     sort_value: 0.6805
     sort_std: 0.0181
-    global_rank: 17
-    paper_rank: 17
+    global_rank: 33
+    paper_rank: 33
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1750,8 +1949,8 @@ results:
     value_note: ''
     sort_value: 0.6574
     sort_std: 0.0134
-    global_rank: 19
-    paper_rank: 19
+    global_rank: 38
+    paper_rank: 38
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1817,12 +2016,80 @@ results:
     value_note: ''
     sort_value: 0.6483
     sort_std: 0.0059
-    global_rank: 21
-    paper_rank: 21
+    global_rank: 40
+    paper_rank: 40
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MVGRL
+    model_key: mvgrl
+    model_plain: MVGRL
+    value: 0.4273
+    std: 0.0102
+    paper_value: 0.4273
+    paper_std: 0.0102
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: MVGRL
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Clustering performance reported as F1 score.
+    date: Feb 25, 2022
+    date_display: Feb 2022
+    date_iso: '2022-02-25'
+    published_venue: ''
+    published_conference: ''
+    at_pub_value: null
+    at_pub_std: null
+    at_pub_source_arxiv: ''
+    at_pub_source_title: ''
+    at_pub_source_date_iso: ''
+    at_pub_source_date_label: ''
+    value_gap_source_date_iso: '2022-12-16'
+    value_gap_source_date_label: AAAI 2022
+    gap_vs_at_pub: null
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.6283
+    true_std: 0.0159
+    value_gap_source_arxiv: '2212.08665'
+    value_gap_source_title: Hard Sample Aware Network for Contrastive Deep Graph Clustering
+      [5]
+    value_gap_source_is_current_paper: false
+    value_gap: 0.20099999999999996
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.6283
+    sort_std: 0.0159
+    global_rank: 42
+    paper_rank: 54
+    rank_delta: 12
+    rank_delta_abs: 12
+    rank_delta_direction: worse
+    has_value_gap: true
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1884,75 +2151,8 @@ results:
     value_note: ''
     sort_value: 0.6031
     sort_std: 0.0062
-    global_rank: 23
-    paper_rank: 23
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MCGC
-    model_key: mcgc
-    model_plain: MCGC
-    value: 0.5892
-    std: 0.0005
-    paper_value: 0.5892
-    paper_std: 0.0005
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: MCGC
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Clustering performance reported as F1 score.
-    date: Feb 25, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-25'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-25'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.5892
-    true_std: 0.0005
-    value_gap_source_arxiv: '2202.12533'
-    value_gap_source_title: Improved Dual Correlation Reduction Network
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.5892
-    sort_std: 0.0005
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 44
+    paper_rank: 44
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2018,8 +2218,8 @@ results:
     value_note: ''
     sort_value: 0.5859
     sort_std: 0.0006
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 45
+    paper_rank: 45
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2085,8 +2285,8 @@ results:
     value_note: ''
     sort_value: 0.5816
     sort_std: 0.0056
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 46
+    paper_rank: 46
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2152,8 +2352,8 @@ results:
     value_note: ''
     sort_value: 0.5441
     sort_std: 0.0042
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 47
+    paper_rank: 47
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2219,75 +2419,8 @@ results:
     value_note: ''
     sort_value: 0.5143
     sort_std: 0.0035
-    global_rank: 31
-    paper_rank: 31
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: false
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: MVGRL
-    model_key: mvgrl
-    model_plain: MVGRL
-    value: 0.4273
-    std: 0.0102
-    paper_value: 0.4273
-    paper_std: 0.0102
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: MVGRL
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Clustering performance reported as F1 score.
-    date: Feb 25, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-25'
-    published_venue: ''
-    published_conference: ''
-    at_pub_value: null
-    at_pub_std: null
-    at_pub_source_arxiv: ''
-    at_pub_source_title: ''
-    at_pub_source_date_iso: ''
-    at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-25'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: null
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.4273
-    true_std: 0.0102
-    value_gap_source_arxiv: '2202.12533'
-    value_gap_source_title: Improved Dual Correlation Reduction Network
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.4273
-    sort_std: 0.0102
-    global_rank: 35
-    paper_rank: 35
+    global_rank: 50
+    paper_rank: 50
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2353,8 +2486,8 @@ results:
     value_note: ''
     sort_value: 0.3192
     sort_std: 0.0027
-    global_rank: 39
-    paper_rank: 39
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2376,35 +2509,103 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: SynC KMeans
-    model_key: sync ssl
-    model_plain: SynC KMeans
-    value: 0.829
-    std: 0.0017
+  - model: AUG_bal
+    model_key: aug_bal
+    model_plain: AUG_bal
+    value: 0.9454
+    std: 0.0123
     metric: F1
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2302.14061'
+    title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+      Networks
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.829
-    sort_std: 0.0017
+    sort_value: 0.9454
+    sort_std: 0.0123
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AUG_min
+    model_key: aug_min
+    model_plain: AUG_min
+    value: 0.9375
+    std: 0.0115
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2302.14061'
+    title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+      Networks
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9375
+    sort_std: 0.0115
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AUG_ran
+    model_key: aug_ran
+    model_plain: AUG_ran
+    value: 0.9368
+    std: 0.0108
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2302.14061'
+    title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+      Networks
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.9368
+    sort_std: 0.0108
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -2446,8 +2647,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2022-02-25'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-06-22'
+    value_gap_source_date_label: '2024'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2458,16 +2659,17 @@ results:
     today_delta_significant: false
     true_value: 0.8147
     true_std: 0.002
-    value_gap_source_arxiv: '2202.12533'
-    value_gap_source_title: Improved Dual Correlation Reduction Network
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2406.15797'
+    value_gap_source_title: 'SynC: Synergistic Boosting of Structure and Representation
+      for Deep Graph Clustering'
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8147
     sort_std: 0.002
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 25
+    paper_rank: 25
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -2477,35 +2679,34 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SynC KMeans
-    model_key: neucgc
-    model_plain: SynC KMeans
-    value: 0.8071
-    std: 0.0012
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.732
+    std: null
     metric: F1
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.10866'
+    title: Unsupervised Network Embedding Beyond Homophily
+    date: Mar 21, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-21'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/zhiqiangzhongddu/SELENE
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.8071
-    sort_std: 0.0012
+    global_rank: 39
+    sort_value: 0.732
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''

@@ -12,7 +12,7 @@ stats:
   avg_nodes: 26.0
   avg_edges: 28.1
   num_classes: 128
-result_count: 188
+result_count: 184
 best_model:
   model: HIG with Graphormer
   value: 0.3167
@@ -56,10 +56,6 @@ papers:
   title: Automatic Graph Topology-Aware Transformer
   date_iso: '2024-05-30'
   venue: ''
-- arxiv_id: '2405.11951'
-  title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-  date_iso: '2024-05-20'
-  venue: ICLR 2024
 - arxiv_id: '2402.14393'
   title: Graph Parsing Networks
   date_iso: '2024-02-22'
@@ -242,36 +238,6 @@ variants:
     - 0.001
     - null
     - null
-  - model: GatedGCN-VN
-    model_plain: GatedGCN-VN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: 57.0
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_iso: '2024-05-20'
-    date_display: May 2024
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: true
-    is_std_outlier: false
-    metric_values:
-    - 0.3141
-    - null
-    - null
-    metric_stds:
-    - 0.0019
-    - null
-    - null
   - model: Graphormer
     model_plain: Graphormer
     is_baseline: true
@@ -420,66 +386,6 @@ variants:
     - null
     metric_stds:
     - 0.0007
-    - null
-    - null
-  - model: GatedGCN
-    model_plain: GatedGCN
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_iso: '2024-05-20'
-    date_display: May 2024
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: false
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.3066
-    - null
-    - null
-    metric_stds:
-    - 0.0013
-    - null
-    - null
-  - model: LGI-GT
-    model_plain: LGI-GT
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2405.11951'
-    title: 'Distinguished In Uniform: Self Attention Vs. Virtual Nodes'
-    date: May 20, 2024
-    date_iso: '2024-05-20'
-    date_display: May 2024
-    codebase_url: https://github.com/toenshoff/VN-vs-GT
-    published_conference: ICLR 2024
-    published_conference_short: ICLR
-    published_conference_slug: iclr
-    published_venue: ICLR 2024
-    uses_external_data: null
-    is_best: false
-    is_std_outlier: false
-    metric_values:
-    - 0.304
-    - null
-    - null
-    metric_stds:
-    - 0.0029
     - null
     - null
   - model: GSO
@@ -1695,18 +1601,109 @@ variants:
     - 0.0043
     - null
     - null
-  row_count: 188
+  - model: DeeperGCN
+    model_plain: DeeperGCN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: 0.532
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2103.16584'
+    title: Parameterized Hypercomplex Graph Neural Networks for Graph Classification
+    date: Mar 30, 2021
+    date_iso: '2021-03-30'
+    date_display: Mar 2021
+    codebase_url: https://github.com/bayer-science-for-a-better-life/phc-gnn
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2781
+    - null
+    - null
+    metric_stds:
+    - 0.0038
+    - null
+    - null
+  - model: DeeperGCN-VN
+    model_plain: DeeperGCN-VN
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.07875'
+    title: Graph Neural Networks with Learnable Structural and Positional Representations
+    date: Oct 15, 2021
+    date_iso: '2021-10-15'
+    date_display: Oct 2021
+    codebase_url: https://github.com/vijaydwivedi75/gnn-lspe
+    published_conference: ICLR 2021
+    published_conference_short: ICLR
+    published_conference_slug: iclr
+    published_venue: ICLR 2021
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.2781
+    - null
+    - null
+    metric_stds:
+    - 0.0038
+    - null
+    - null
+  - model: HGODE
+    model_plain: HGODE
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2604.24293'
+    title: 'Latent-Hysteresis Graph ODEs: Modeling Coupled Topology-Feature Evolution
+      via Continuous Phase Transitions'
+    date: Apr 27, 2026
+    date_iso: '2026-04-27'
+    date_display: Apr 2026
+    codebase_url: ''
+    published_conference: ''
+    published_conference_short: ''
+    published_conference_slug: ''
+    published_venue: ''
+    uses_external_data: false
+    is_best: false
+    is_std_outlier: false
+    metric_values:
+    - 0.278
+    - null
+    - null
+    metric_stds:
+    - 0.003
+    - null
+    - null
+  row_count: 184
   rows_json: /data/datasets/ogbg-molpcba/standard-split-rows.json
   chart_json: /data/datasets/ogbg-molpcba/standard-split-chart.json
   arch_counts:
-    gnn: 98
+    gnn: 95
     hybrid: 32
-    graph_transformer: 25
+    graph_transformer: 24
     llm: 0
     walk: 0
     traditional: 16
   metric_counts:
-  - 126
+  - 122
   - 10
   - 52
   milestones: &id001

@@ -72,105 +72,173 @@ results:
 - &id001
   dataset: DBLP
   rows:
-  - model: SynC KMeans
-    model_key: sync ssl
-    model_plain: SynC KMeans
-    value: 0.829
-    std: 0.0017
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.829
-    sort_std: 0.0017
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: SynC KMeans
-    model_key: idcrn
-    model_plain: SynC KMeans
-    value: 0.8147
-    std: 0.002
-    metric: F1
-    higher_is_better: true
-    is_baseline: false
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2202.12533'
-    title: Improved Dual Correlation Reduction Network
-    date: Feb 25, 2022
-    date_display: Feb 2022
-    date_iso: '2022-02-25'
-    venue: arXiv.org
-    codebase_url: ''
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.8147
-    sort_std: 0.002
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: SynC KMeans
-    model_key: neucgc
-    model_plain: SynC KMeans
-    value: 0.8071
-    std: 0.0012
+  - model: AUG_bal
+    model_key: aug_bal
+    model_plain: AUG_bal
+    value: 0.9454
+    std: 0.0123
     metric: F1
     higher_is_better: true
     is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: hybrid
-    architecture_label: Hyb
-    architecture_title: Hybrid MPNN + transformer
-    arxiv_id: '2406.15797'
-    title: 'SynC: Synergistic Boosting of Structure and Representation for Deep Graph
-      Clustering'
-    date: Jun 22, 2024
-    date_display: Jun 2024
-    date_iso: '2024-06-22'
-    venue: IEEE Transactions on Neural Networks and Learning Systems
-    codebase_url: https://github.com/Marigoldwu/SynC
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2302.14061'
+    title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+      Networks
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.9454
+    sort_std: 0.0123
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AUG_min
+    model_key: aug_min
+    model_plain: AUG_min
+    value: 0.9375
+    std: 0.0115
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2302.14061'
+    title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+      Networks
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.9375
+    sort_std: 0.0115
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: AUG_ran
+    model_key: aug_ran
+    model_plain: AUG_ran
+    value: 0.9368
+    std: 0.0108
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2302.14061'
+    title: Semantic-aware Node Synthesis for Imbalanced Heterogeneous Information
+      Networks
+    date: Feb 27, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-27'
+    venue: International Conference on Information and Knowledge Management
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.8071
-    sort_std: 0.0012
+    sort_value: 0.9368
+    sort_std: 0.0108
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: GAE
+    model_key: gae
+    model_plain: GAE
+    value: 0.3504
+    std: null
+    paper_value: 0.3504
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node clustering task on DBLP
+    date: May 18, 2023
+    date_display: May 2023
+    date_iso: '2023-05-18'
+    published_venue: ICLR 2023
+    published_conference: ICLR 2023
+    at_pub_value: 0.768
+    at_pub_std: null
+    at_pub_source_arxiv: '2203.10866'
+    at_pub_source_title: Unsupervised Network Embedding Beyond Homophily
+    at_pub_source_date_iso: '2022-03-21'
+    at_pub_source_date_label: TMLR 2022
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
+    gap_vs_at_pub: 0.4176
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.768
+    true_std: null
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
+    value_gap_source_is_current_paper: false
+    value_gap: 0.4176
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.768
+    sort_std: null
+    global_rank: 35
+    paper_rank: 60
+    rank_delta: 25
+    rank_delta_abs: 25
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Unsupervised Network Embedding Beyond Homophily
+    comparison_source_arxiv: '2203.10866'
     is_best: false
     is_std_outlier: false
   - model: DFCN
@@ -230,13 +298,113 @@ results:
     value_note: ''
     sort_value: 0.757
     sort_std: 0.008
-    global_rank: 9
-    paper_rank: 29
-    rank_delta: 20
-    rank_delta_abs: 20
+    global_rank: 36
+    paper_rank: 59
+    rank_delta: 23
+    rank_delta_abs: 23
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: AE
+    model_key: ae
+    model_plain: AE
+    value: 0.3784
+    std: null
+    paper_value: 0.3784
+    paper_std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: walk
+    architecture_label: Walk
+    architecture_title: Random-walk graph embedding
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    table_ref: Table 1
+    source_ref: this paper
+    variant_inference_reason: 'dataset: exact match'
+    evaluation_task: node_classification
+    protocol_decision: standard
+    protocol_note: Node clustering task on DBLP
+    date: May 18, 2023
+    date_display: May 2023
+    date_iso: '2023-05-18'
+    published_venue: ICLR 2023
+    published_conference: ICLR 2023
+    at_pub_value: 0.746
+    at_pub_std: null
+    at_pub_source_arxiv: '2203.10866'
+    at_pub_source_title: Unsupervised Network Embedding Beyond Homophily
+    at_pub_source_date_iso: '2022-03-21'
+    at_pub_source_date_label: TMLR 2022
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
+    gap_vs_at_pub: 0.3676
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    true_value: 0.746
+    true_std: null
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
+    value_gap_source_is_current_paper: false
+    value_gap: 0.3676
+    has_value_note: false
+    value_note: ''
+    sort_value: 0.746
+    sort_std: null
+    global_rank: 37
+    paper_rank: 59
+    rank_delta: 22
+    rank_delta_abs: 22
+    rank_delta_direction: worse
+    has_value_gap: true
+    comparison_type: behind
+    comparison_source_title: Unsupervised Network Embedding Beyond Homophily
+    comparison_source_arxiv: '2203.10866'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.732
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2203.10866'
+    title: Unsupervised Network Embedding Beyond Homophily
+    date: Mar 21, 2022
+    date_display: Mar 2022
+    date_iso: '2022-03-21'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: https://github.com/zhiqiangzhongddu/SELENE
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 39
+    sort_value: 0.732
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -298,10 +466,10 @@ results:
     value_note: ''
     sort_value: 0.6771
     sort_std: 0.0151
-    global_rank: 13
-    paper_rank: 27
-    rank_delta: 14
-    rank_delta_abs: 14
+    global_rank: 42
+    paper_rank: 58
+    rank_delta: 16
+    rank_delta_abs: 16
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -366,8 +534,8 @@ results:
     value_note: ''
     sort_value: 0.55
     sort_std: 0.07
-    global_rank: 19
-    paper_rank: 32
+    global_rank: 50
+    paper_rank: 63
     rank_delta: 13
     rank_delta_abs: 13
     rank_delta_direction: worse
@@ -376,7 +544,7 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
-    is_std_outlier: true
+    is_std_outlier: false
   - model: TGC
     model_key: tgc
     model_plain: TGC
@@ -433,8 +601,8 @@ results:
     value_note: ''
     sort_value: 0.4503
     sort_std: null
-    global_rank: 22
-    paper_rank: 22
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -500,8 +668,8 @@ results:
     value_note: ''
     sort_value: 0.4454
     sort_std: null
-    global_rank: 24
-    paper_rank: 24
+    global_rank: 55
+    paper_rank: 55
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -567,8 +735,8 @@ results:
     value_note: ''
     sort_value: 0.4398
     sort_std: null
-    global_rank: 25
-    paper_rank: 25
+    global_rank: 56
+    paper_rank: 56
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -634,8 +802,8 @@ results:
     value_note: ''
     sort_value: 0.4335
     sort_std: null
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 57
+    paper_rank: 57
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -701,8 +869,8 @@ results:
     value_note: ''
     sort_value: 0.3856
     sort_std: null
-    global_rank: 28
-    paper_rank: 28
+    global_rank: 59
+    paper_rank: 59
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -710,73 +878,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: AE
-    model_key: ae
-    model_plain: AE
-    value: 0.3784
-    std: null
-    paper_value: 0.3784
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node clustering task on DBLP
-    date: May 18, 2023
-    date_display: May 2023
-    date_iso: '2023-05-18'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: 0.746
-    at_pub_std: null
-    at_pub_source_arxiv: '2203.10866'
-    at_pub_source_title: Unsupervised Network Embedding Beyond Homophily
-    at_pub_source_date_iso: '2022-03-21'
-    at_pub_source_date_label: TMLR 2022
-    value_gap_source_date_iso: '2023-05-18'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 0.3676
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3784
-    true_std: null
-    value_gap_source_arxiv: '2305.10738'
-    value_gap_source_title: Deep Temporal Graph Clustering
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3784
-    sort_std: null
-    global_rank: 29
-    paper_rank: 29
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Unsupervised Network Embedding Beyond Homophily
-    comparison_source_arxiv: '2203.10866'
     is_best: false
     is_std_outlier: false
   - model: SDCNQ
@@ -835,8 +936,8 @@ results:
     value_note: ''
     sort_value: 0.3518
     sort_std: null
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 60
+    paper_rank: 60
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -844,73 +945,6 @@ results:
     comparison_type: null
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-  - model: GAE
-    model_key: gae
-    model_plain: GAE
-    value: 0.3504
-    std: null
-    paper_value: 0.3504
-    paper_std: null
-    metric: F1
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    table_ref: Table 1
-    source_ref: this paper
-    variant_inference_reason: 'dataset: exact match'
-    evaluation_task: node_classification
-    protocol_decision: standard
-    protocol_note: Node clustering task on DBLP
-    date: May 18, 2023
-    date_display: May 2023
-    date_iso: '2023-05-18'
-    published_venue: ICLR 2023
-    published_conference: ICLR 2023
-    at_pub_value: 0.768
-    at_pub_std: null
-    at_pub_source_arxiv: '2203.10866'
-    at_pub_source_title: Unsupervised Network Embedding Beyond Homophily
-    at_pub_source_date_iso: '2022-03-21'
-    at_pub_source_date_label: TMLR 2022
-    value_gap_source_date_iso: '2023-05-18'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 0.4176
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: false
-    true_value: 0.3504
-    true_std: null
-    value_gap_source_arxiv: '2305.10738'
-    value_gap_source_title: Deep Temporal Graph Clustering
-    value_gap_source_is_current_paper: true
-    value_gap: null
-    has_value_note: false
-    value_note: ''
-    sort_value: 0.3504
-    sort_std: null
-    global_rank: 31
-    paper_rank: 31
-    rank_delta: 0
-    rank_delta_abs: 0
-    rank_delta_direction: same
-    has_value_gap: true
-    comparison_type: behind
-    comparison_source_title: Unsupervised Network Embedding Beyond Homophily
-    comparison_source_arxiv: '2203.10866'
     is_best: false
     is_std_outlier: false
   - model: TGAT
@@ -969,8 +1003,8 @@ results:
     value_note: ''
     sort_value: 0.3422
     sort_std: null
-    global_rank: 32
-    paper_rank: 32
+    global_rank: 61
+    paper_rank: 61
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1036,8 +1070,8 @@ results:
     value_note: ''
     sort_value: 0.1323
     sort_std: null
-    global_rank: 33
-    paper_rank: 33
+    global_rank: 64
+    paper_rank: 64
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1103,8 +1137,8 @@ results:
     value_note: ''
     sort_value: 0.1066
     sort_std: null
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 65
+    paper_rank: 65
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

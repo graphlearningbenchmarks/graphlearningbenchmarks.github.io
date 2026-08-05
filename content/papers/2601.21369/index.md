@@ -88,9 +88,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -122,9 +122,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -156,9 +156,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -247,15 +247,49 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 33
-    paper_rank: 879
-    rank_delta: 846
-    rank_delta_abs: 846
+    global_rank: 42
+    paper_rank: 893
+    rank_delta: 851
+    rank_delta_abs: 851
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: Understanding Heterophily for Graph Neural Networks
     comparison_source_arxiv: '2401.09125'
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8911
+    std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 75
+    sort_value: 0.8911
+    sort_std: 0.0012
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: GAT
@@ -317,10 +351,10 @@ results:
     value_note: ''
     sort_value: 0.8897
     sort_std: null
-    global_rank: 72
-    paper_rank: 867
-    rank_delta: 795
-    rank_delta_abs: 795
+    global_rank: 81
+    paper_rank: 881
+    rank_delta: 800
+    rank_delta_abs: 800
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -388,10 +422,10 @@ results:
     value_note: ''
     sort_value: 0.8889
     sort_std: null
-    global_rank: 79
-    paper_rank: 889
-    rank_delta: 810
-    rank_delta_abs: 810
+    global_rank: 88
+    paper_rank: 903
+    rank_delta: 815
+    rank_delta_abs: 815
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -459,10 +493,10 @@ results:
     value_note: ''
     sort_value: 0.866
     sort_std: 0.0091
-    global_rank: 227
-    paper_rank: 888
-    rank_delta: 661
-    rank_delta_abs: 661
+    global_rank: 238
+    paper_rank: 902
+    rank_delta: 664
+    rank_delta_abs: 664
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -530,16 +564,49 @@ results:
     value_note: ''
     sort_value: 0.7941
     sort_std: null
-    global_rank: 795
-    paper_rank: 877
-    rank_delta: 82
-    rank_delta_abs: 82
+    global_rank: 808
+    paper_rank: 891
+    rank_delta: 83
+    rank_delta_abs: 83
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
     comparison_source_title: 'Text-space Graph Foundation Models: Comprehensive Benchmarks
       and New Insights'
     comparison_source_arxiv: '2406.10727'
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7768
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 853
+    sort_value: 0.7768
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
   - model: FedTAD
@@ -600,8 +667,8 @@ results:
     value_note: ''
     sort_value: 0.7655
     sort_std: 0.0023
-    global_rank: 860
-    paper_rank: 860
+    global_rank: 874
+    paper_rank: 874
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -669,8 +736,8 @@ results:
     value_note: ''
     sort_value: 0.7643
     sort_std: 0.0026
-    global_rank: 861
-    paper_rank: 861
+    global_rank: 875
+    paper_rank: 875
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -738,8 +805,8 @@ results:
     value_note: ''
     sort_value: 0.7643
     sort_std: 0.0026
-    global_rank: 862
-    paper_rank: 862
+    global_rank: 876
+    paper_rank: 876
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -807,8 +874,8 @@ results:
     value_note: ''
     sort_value: 0.7633
     sort_std: 0.0035
-    global_rank: 865
-    paper_rank: 865
+    global_rank: 879
+    paper_rank: 879
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -876,8 +943,8 @@ results:
     value_note: ''
     sort_value: 0.7632
     sort_std: 0.0016
-    global_rank: 866
-    paper_rank: 866
+    global_rank: 880
+    paper_rank: 880
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -945,8 +1012,8 @@ results:
     value_note: ''
     sort_value: 0.7576
     sort_std: 0.0019
-    global_rank: 871
-    paper_rank: 871
+    global_rank: 885
+    paper_rank: 885
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1014,8 +1081,8 @@ results:
     value_note: ''
     sort_value: 0.7473
     sort_std: 0.0017
-    global_rank: 888
-    paper_rank: 888
+    global_rank: 902
+    paper_rank: 902
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1083,8 +1150,8 @@ results:
     value_note: ''
     sort_value: 0.7441
     sort_std: 0.0026
-    global_rank: 893
-    paper_rank: 893
+    global_rank: 907
+    paper_rank: 907
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1152,8 +1219,8 @@ results:
     value_note: ''
     sort_value: 0.7237
     sort_std: 0.0033
-    global_rank: 914
-    paper_rank: 914
+    global_rank: 930
+    paper_rank: 930
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1175,67 +1242,103 @@ results:
 - &id002
   dataset: WN18RR
   rows:
-  - model: CompGCN
-    model_key: gft
-    model_plain: CompGCN
-    value: 0.9191
+  - model: PNA, Msg_r^2, f(t)=t
+    model_key: pna, msg_r^2, f(t)=t
+    model_plain: PNA, Msg_r^2, f(t)=t
+    value: 0.947
     std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2411.06070'
-    title: 'GFT: Graph Foundation Model with Transferable Tree Vocabulary'
-    date: Nov 9, 2024
-    date_display: Nov 2024
-    date_iso: '2024-11-09'
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
     venue: Neural Information Processing Systems
-    codebase_url: https://github.com/Zehong-Wang/GFT
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 1
-    sort_value: 0.9191
+    sort_value: 0.947
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: CompGCN
-    model_key: unigraph2
-    model_plain: CompGCN
-    value: 0.8786
-    std: 0.0006
+  - model: PNA, Msg_r^3, f(t)=0
+    model_key: pna, msg_r^3, f(t)=0
+    model_plain: PNA, Msg_r^3, f(t)=0
+    value: 0.947
+    std: null
     metric: MRR
     higher_is_better: true
-    is_baseline: false
+    is_baseline: true
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: graph_transformer
-    architecture_label: GT
-    architecture_title: Graph transformer
-    arxiv_id: '2502.00806'
-    title: 'UniGraph2: Learning a Unified Embedding Space to Bind Multimodal Graphs'
-    date: Feb 2, 2025
-    date_display: Feb 2025
-    date_iso: '2025-02-02'
-    venue: The Web Conference
-    codebase_url: https://github.com/yf-he/UniGraph2
-    uses_external_data: true
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 2
-    sort_value: 0.8786
-    sort_std: 0.0006
+    sort_value: 0.947
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PNA, Msg_r^2, f(t)=0
+    model_key: pna, msg_r^2, f(t)=0
+    model_plain: PNA, Msg_r^2, f(t)=0
+    value: 0.946
+    std: null
+    metric: MRR
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2302.02209'
+    title: A Theory of Link Prediction via Relational Weisfeiler-Leman on Knowledge
+      Graphs
+    date: Feb 4, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-04'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/HxyScotthuang/CMPNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.946
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -1299,10 +1402,10 @@ results:
     value_note: ''
     sort_value: 0.8552
     sort_std: 0.0012
-    global_rank: 3
-    paper_rank: 12
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 19
+    paper_rank: 29
+    rank_delta: 10
+    rank_delta_abs: 10
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1369,10 +1472,10 @@ results:
     value_note: ''
     sort_value: 0.8433
     sort_std: 0.002
-    global_rank: 5
-    paper_rank: 14
-    rank_delta: 9
-    rank_delta_abs: 9
+    global_rank: 21
+    paper_rank: 32
+    rank_delta: 11
+    rank_delta_abs: 11
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1439,10 +1542,10 @@ results:
     value_note: ''
     sort_value: 0.8426
     sort_std: 0.0026
-    global_rank: 6
-    paper_rank: 12
-    rank_delta: 6
-    rank_delta_abs: 6
+    global_rank: 22
+    paper_rank: 29
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1509,10 +1612,10 @@ results:
     value_note: ''
     sort_value: 0.8379
     sort_std: 0.0025
-    global_rank: 8
-    paper_rank: 13
-    rank_delta: 5
-    rank_delta_abs: 5
+    global_rank: 24
+    paper_rank: 31
+    rank_delta: 7
+    rank_delta_abs: 7
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1579,10 +1682,10 @@ results:
     value_note: ''
     sort_value: 0.8364
     sort_std: 0.0045
-    global_rank: 9
-    paper_rank: 13
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 25
+    paper_rank: 31
+    rank_delta: 6
+    rank_delta_abs: 6
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1649,10 +1752,10 @@ results:
     value_note: ''
     sort_value: 0.8355
     sort_std: 0.002
-    global_rank: 10
-    paper_rank: 13
-    rank_delta: 3
-    rank_delta_abs: 3
+    global_rank: 26
+    paper_rank: 31
+    rank_delta: 5
+    rank_delta_abs: 5
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1719,10 +1822,10 @@ results:
     value_note: ''
     sort_value: 0.8298
     sort_std: 0.0022
-    global_rank: 11
-    paper_rank: 13
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 27
+    paper_rank: 31
+    rank_delta: 4
+    rank_delta_abs: 4
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1789,10 +1892,10 @@ results:
     value_note: ''
     sort_value: 0.8227
     sort_std: 0.0018
-    global_rank: 12
-    paper_rank: 14
-    rank_delta: 2
-    rank_delta_abs: 2
+    global_rank: 29
+    paper_rank: 32
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1859,10 +1962,10 @@ results:
     value_note: ''
     sort_value: 0.8124
     sort_std: 0.0055
-    global_rank: 13
-    paper_rank: 14
-    rank_delta: 1
-    rank_delta_abs: 1
+    global_rank: 30
+    paper_rank: 32
+    rank_delta: 2
+    rank_delta_abs: 2
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -1930,8 +2033,8 @@ results:
     value_note: ''
     sort_value: 0.8
     sort_std: null
-    global_rank: 14
-    paper_rank: 14
+    global_rank: 32
+    paper_rank: 32
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

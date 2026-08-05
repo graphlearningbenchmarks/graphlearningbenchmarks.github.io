@@ -46,9 +46,9 @@ has_results: true
 paper_type: method
 proposed_models:
 - NE
-mrr: 0.0
-adjusted_mrr: 0.0
-mrr_dataset_count: 0
+mrr: 0.0023
+adjusted_mrr: 0.0008
+mrr_dataset_count: 1
 benchmark_categories:
 - Heterophilic Graphs
 - Heterogeneous Graph Benchmarks
@@ -70,9 +70,9 @@ results:
   dataset: Actor
   is_multi_metric: true
   rows:
-  - model: R-SoftGraphAIN
+  - model: NodeFormer
     model_key: nodeformer
-    model_plain: R-SoftGraphAIN
+    model_plain: NodeFormer
     metric_values:
     - 0.7623
     - null
@@ -112,9 +112,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: R-SoftGraphAIN
+  - model: DiGGR
     model_key: diggr
-    model_plain: R-SoftGraphAIN
+    model_plain: DiGGR
     metric_values:
     - 0.4535
     - null
@@ -153,37 +153,78 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: R-SoftGraphAIN
-    model_key: dog
-    model_plain: R-SoftGraphAIN
+  - model: TRIGON
+    model_key: trigon
+    model_plain: TRIGON
     metric_values:
-    - 0.432
+    - 0.4402
     - null
     - null
     metric_stds:
-    - 0.012
+    - 0.0028
     - null
     - null
     is_baseline: false
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2503.12563'
-    title: 'Diffusion on Graph: Augmentation of Graph Structure for Node Classification'
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2508.19071'
+    title: Dynamic Triangulation-Based Graph Rewiring for Graph Neural Networks
     published_venue: ''
-    date: Mar 16, 2025
-    date_display: Mar 2025
-    date_iso: '2025-03-16'
-    codebase_url: https://github.com/Statistical-Deep-Learning/DoG
-    uses_external_data: true
+    date: Aug 26, 2025
+    date_display: Aug 2025
+    date_iso: '2025-08-26'
+    codebase_url: https://github.com/Hugo-Attali/TRIGON-CIKM-2025
+    uses_external_data: false
     is_global_top: true
     global_rank: 3
     is_best: false
-    sort_value: 0.432
-    sort_std: 0.012
+    sort_value: 0.4402
+    sort_std: 0.0028
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    metric_values:
+    - 0.4026
+    - null
+    - null
+    metric_stds:
+    - 0.0108
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2302.03228'
+    title: Heterophily-Aware Graph Attention Network
+    published_venue: ''
+    date: Feb 7, 2023
+    date_display: Feb 2023
+    date_iso: '2023-02-07'
+    codebase_url: ''
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 56
+    is_best: false
+    sort_value: 0.4026
+    sort_std: 0.0108
     has_value_gap: false
     has_value_note: false
     paper_rank: null
@@ -221,8 +262,8 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.1412
-    value_gap_source_arxiv: '2303.13750'
-    value_gap_source_title: 'LON-GNN: Spectral GNNs with Learnable Orthonormal Basis'
+    value_gap_source_arxiv: '2411.17296'
+    value_gap_source_title: 'GrokFormer: Graph Fourier Kolmogorov-Arnold Transformers'
     value_note: ''
     at_pub_value: 0.3604
     at_pub_std: 0.0096
@@ -231,8 +272,8 @@ results:
       Networks
     at_pub_source_date_iso: '2021-11-12'
     at_pub_source_date_label: '2021'
-    value_gap_source_date_iso: '2023-03-24'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-11-26'
+    value_gap_source_date_label: ICML 2024
     gap_vs_at_pub: 0.10239999999999999
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -257,7 +298,7 @@ results:
     comparison_source_arxiv: '2111.06748'
     is_best: false
     is_std_outlier: false
-    global_rank: 54
+    global_rank: 67
   - model: FAGCN
     model_key: fagcn
     model_plain: FAGCN
@@ -276,17 +317,18 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.3908
-    sort_std: 0.0065
-    true_value: 0.3908
-    true_std: 0.0065
+    sort_value: 0.397
+    sort_std: null
+    true_value: 0.397
+    true_std: null
     paper_value: 0.2561
     paper_std: null
     has_value_gap: true
     has_value_note: false
-    value_gap: 0.1347
-    value_gap_source_arxiv: '2212.03654'
-    value_gap_source_title: Node-oriented Spectral Filtering for Graph Neural Networks
+    value_gap: 0.14090000000000003
+    value_gap_source_arxiv: '2101.00797'
+    value_gap_source_title: Beyond Low-frequency Information in Graph Convolutional
+      Networks
     value_note: ''
     at_pub_value: 0.397
     at_pub_std: null
@@ -294,8 +336,8 @@ results:
     at_pub_source_title: Beyond Low-frequency Information in Graph Convolutional Networks
     at_pub_source_date_iso: '2021-01-04'
     at_pub_source_date_label: AAAI 2021
-    value_gap_source_date_iso: '2022-12-07'
-    value_gap_source_date_label: '2022'
+    value_gap_source_date_iso: '2021-01-04'
+    value_gap_source_date_label: AAAI 2021
     gap_vs_at_pub: 0.14090000000000003
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -320,7 +362,48 @@ results:
     comparison_source_arxiv: '2101.00797'
     is_best: false
     is_std_outlier: false
-    global_rank: 68
+    global_rank: 72
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    metric_values:
+    - 0.3899
+    - null
+    - null
+    metric_stds:
+    - 0.0085
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.11762'
+    title: A Quasi-Wasserstein Loss for Learning Graph Neural Networks
+    published_venue: ''
+    date: Oct 18, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-18'
+    codebase_url: https://github.com/SDS-Lab/QW_Loss
+    uses_external_data: false
+    is_global_top: true
+    global_rank: 88
+    is_best: false
+    sort_value: 0.3899
+    sort_std: 0.0085
+    has_value_gap: false
+    has_value_note: false
+    paper_rank: null
+    rank_delta: null
+    rank_delta_abs: null
+    value_note: ''
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_std_outlier: false
   - model: H2GCN
     model_key: h2gcn
     model_plain: H2GCN
@@ -348,9 +431,8 @@ results:
     has_value_gap: true
     has_value_note: false
     value_gap: 0.133
-    value_gap_source_arxiv: '2512.14908'
-    value_gap_source_title: 'ATLAS: Adaptive Topology-based Learning at Scale for
-      Homophilic and Heterophilic Graphs'
+    value_gap_source_arxiv: '2603.09195'
+    value_gap_source_title: '$P^2$GNN: Two Prototype Sets to boost GNN Performance'
     value_note: ''
     at_pub_value: 0.3586
     at_pub_std: 0.0103
@@ -358,8 +440,8 @@ results:
     at_pub_source_title: Graph Neural Networks Inspired by Classical Iterative Algorithms
     at_pub_source_date_iso: '2021-03-10'
     at_pub_source_date_label: ICML 2021
-    value_gap_source_date_iso: '2025-12-16'
-    value_gap_source_date_label: '2025'
+    value_gap_source_date_iso: '2026-03-10'
+    value_gap_source_date_label: '2026'
     gap_vs_at_pub: 0.10309999999999997
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -384,7 +466,7 @@ results:
     comparison_source_arxiv: '2103.06064'
     is_best: false
     is_std_outlier: false
-    global_rank: 73
+    global_rank: 91
   - model: SAGE
     model_key: sage
     model_plain: SAGE
@@ -447,7 +529,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 283
+    global_rank: 321
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -510,7 +592,7 @@ results:
     comparison_source_arxiv: '2201.12843'
     is_best: false
     is_std_outlier: false
-    global_rank: 319
+    global_rank: 359
   - model: GMI
     model_key: gmi
     model_plain: GMI
@@ -573,7 +655,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 364
+    global_rank: 410
   - model: NE
     model_key: ne
     model_plain: NE
@@ -594,15 +676,15 @@ results:
     architecture_title: Hybrid MPNN + transformer
     sort_value: 0.2903
     sort_std: null
-    true_value: null
+    true_value: 0.2903
     true_std: null
     paper_value: 0.2903
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -610,8 +692,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -635,7 +717,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 388
+    global_rank: 436
   - model: GAE
     model_key: gae
     model_plain: GAE
@@ -698,7 +780,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 397
+    global_rank: 447
   - model: N2V
     model_key: n2v
     model_plain: N2V
@@ -719,15 +801,15 @@ results:
     architecture_title: Random-walk graph embedding
     sort_value: 0.2502
     sort_std: null
-    true_value: null
+    true_value: 0.2502
     true_std: null
     paper_value: 0.2502
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -735,8 +817,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -760,7 +842,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 448
+    global_rank: 496
   - model: GBT
     model_key: gbt
     model_plain: GBT
@@ -781,15 +863,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.2468
     sort_std: null
-    true_value: null
+    true_value: 0.2468
     true_std: null
     paper_value: 0.2468
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -797,8 +879,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -822,7 +904,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 451
+    global_rank: 500
   - model: AE
     model_key: ae
     model_plain: AE
@@ -843,15 +925,15 @@ results:
     architecture_title: Random-walk graph embedding
     sort_value: 0.2419
     sort_std: null
-    true_value: null
+    true_value: 0.2419
     true_std: null
     paper_value: 0.2419
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -859,8 +941,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -884,7 +966,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 453
+    global_rank: 503
   - model: SDCN
     model_key: sdcn
     model_plain: SDCN
@@ -905,15 +987,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.2367
     sort_std: null
-    true_value: null
+    true_value: 0.2367
     true_std: null
     paper_value: 0.2367
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -921,8 +1003,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -946,7 +1028,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 462
+    global_rank: 513
   - model: S2V
     model_key: s2v
     model_plain: S2V
@@ -967,15 +1049,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.2249
     sort_std: null
-    true_value: null
+    true_value: 0.2249
     true_std: null
     paper_value: 0.2249
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -983,8 +1065,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1008,7 +1090,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 475
+    global_rank: 527
   metrics:
   - Accuracy
   - F1
@@ -1076,9 +1158,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: DANE-O
+  - model: DANE
     model_key: dane
-    model_plain: DANE-O
+    model_plain: DANE
     metric_values:
     - 0.7664
     - null
@@ -1149,15 +1231,15 @@ results:
     architecture_title: Hybrid MPNN + transformer
     sort_value: 0.7574
     sort_std: null
-    true_value: null
+    true_value: 0.7574
     true_std: null
     paper_value: 0.7574
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1165,8 +1247,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1191,53 +1273,6 @@ results:
     is_best: false
     is_std_outlier: false
     global_rank: 3
-  - model: DANE-O
-    model_key: deepwalk
-    model_plain: DANE-O
-    metric_values:
-    - 0.7438
-    - null
-    - null
-    - null
-    - null
-    - null
-    metric_stds:
-    - null
-    - null
-    - null
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: walk
-    architecture_label: Walk
-    architecture_title: Random-walk graph embedding
-    arxiv_id: '1706.01860'
-    title: Attributed Network Embedding for Learning in a Dynamic Environment
-    published_venue: ''
-    date: Jun 6, 2017
-    date_display: Jun 2017
-    date_iso: '2017-06-06'
-    codebase_url: ''
-    uses_external_data: false
-    is_global_top: true
-    global_rank: 3
-    is_best: false
-    sort_value: 0.7438
-    sort_std: null
-    has_value_gap: false
-    has_value_note: false
-    paper_rank: null
-    rank_delta: null
-    rank_delta_abs: null
-    value_note: ''
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_std_outlier: false
   - model: GBT
     model_key: gbt
     model_plain: GBT
@@ -1264,15 +1299,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.731
     sort_std: null
-    true_value: null
+    true_value: 0.731
     true_std: null
     paper_value: 0.731
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1280,8 +1315,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1305,7 +1340,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 4
+    global_rank: 6
   - model: GMI
     model_key: gmi
     model_plain: GMI
@@ -1332,15 +1367,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.6328
     sort_std: null
-    true_value: null
+    true_value: 0.6328
     true_std: null
     paper_value: 0.6328
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1348,8 +1383,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1373,7 +1408,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 15
   - model: SDCN
     model_key: sdcn
     model_plain: SDCN
@@ -1400,15 +1435,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.6194
     sort_std: null
-    true_value: null
+    true_value: 0.6194
     true_std: null
     paper_value: 0.6194
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1416,8 +1451,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1441,7 +1476,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 16
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -1468,15 +1503,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.5822
     sort_std: null
-    true_value: null
+    true_value: 0.5822
     true_std: null
     paper_value: 0.5822
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1484,8 +1519,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1509,7 +1544,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 17
   - model: GAE
     model_key: gae
     model_plain: GAE
@@ -1536,15 +1571,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.5781
     sort_std: null
-    true_value: null
+    true_value: 0.5781
     true_std: null
     paper_value: 0.5781
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1552,8 +1587,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1577,7 +1612,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 18
   - model: SAGE
     model_key: sage
     model_plain: SAGE
@@ -1604,15 +1639,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.4868
     sort_std: null
-    true_value: null
+    true_value: 0.4868
     true_std: null
     paper_value: 0.4868
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1620,8 +1655,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1645,7 +1680,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 20
   - model: AE
     model_key: ae
     model_plain: AE
@@ -1672,15 +1707,15 @@ results:
     architecture_title: Random-walk graph embedding
     sort_value: 0.485
     sort_std: null
-    true_value: null
+    true_value: 0.485
     true_std: null
     paper_value: 0.485
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1688,8 +1723,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1713,7 +1748,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 9
+    global_rank: 21
   - model: GPRGNN*
     model_key: gprgnn
     model_plain: GPRGNN*
@@ -1740,15 +1775,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.4396
     sort_std: null
-    true_value: null
+    true_value: 0.4396
     true_std: null
     paper_value: 0.4396
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1756,8 +1791,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1781,7 +1816,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 10
+    global_rank: 23
   - model: H2GCN*
     model_key: h2gcn
     model_plain: H2GCN*
@@ -1808,15 +1843,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.4187
     sort_std: null
-    true_value: null
+    true_value: 0.4187
     true_std: null
     paper_value: 0.4187
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1824,8 +1859,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1849,7 +1884,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 10
+    global_rank: 24
   - model: FAGCN*
     model_key: fagcn
     model_plain: FAGCN*
@@ -1876,15 +1911,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.4125
     sort_std: null
-    true_value: null
+    true_value: 0.4125
     true_std: null
     paper_value: 0.4125
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1892,8 +1927,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1917,7 +1952,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 10
+    global_rank: 25
   - model: S2V
     model_key: s2v
     model_plain: S2V
@@ -1944,15 +1979,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.3165
     sort_std: null
-    true_value: null
+    true_value: 0.3165
     true_std: null
     paper_value: 0.3165
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -1960,8 +1995,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1985,7 +2020,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 10
+    global_rank: 26
   - model: N2V
     model_key: n2v
     model_plain: N2V
@@ -2012,15 +2047,15 @@ results:
     architecture_title: Random-walk graph embedding
     sort_value: 0.2919
     sort_std: null
-    true_value: null
+    true_value: 0.2919
     true_std: null
     paper_value: 0.2919
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2028,8 +2063,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2053,7 +2088,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 10
+    global_rank: 27
   metrics:
   - Micro-F1
   - ACC
@@ -2101,15 +2136,15 @@ results:
     architecture_title: Hybrid MPNN + transformer
     sort_value: 0.6523
     sort_std: null
-    true_value: null
+    true_value: 0.6523
     true_std: null
     paper_value: 0.6523
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2117,8 +2152,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2165,15 +2200,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.588
     sort_std: null
-    true_value: null
+    true_value: 0.588
     true_std: null
     paper_value: 0.588
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2181,8 +2216,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2206,7 +2241,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 2
   - model: FAGCN
     model_key: fagcn
     model_plain: FAGCN
@@ -2229,15 +2264,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.5792
     sort_std: null
-    true_value: null
+    true_value: 0.5792
     true_std: null
     paper_value: 0.5792
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2245,8 +2280,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2270,7 +2305,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 3
   - model: GPRGNN
     model_key: gprgnn
     model_plain: GPRGNN
@@ -2293,15 +2328,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.575
     sort_std: null
-    true_value: null
+    true_value: 0.575
     true_std: null
     paper_value: 0.575
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2309,8 +2344,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2334,7 +2369,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 4
   - model: SAGE
     model_key: sage
     model_plain: SAGE
@@ -2357,15 +2392,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.5683
     sort_std: null
-    true_value: null
+    true_value: 0.5683
     true_std: null
     paper_value: 0.5683
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2373,8 +2408,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2398,7 +2433,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 5
   - model: DGI
     model_key: dgi
     model_plain: DGI
@@ -2421,15 +2456,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.5574
     sort_std: null
-    true_value: null
+    true_value: 0.5574
     true_std: null
     paper_value: 0.5574
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2437,8 +2472,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2462,7 +2497,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 6
   - model: GBT
     model_key: gbt
     model_plain: GBT
@@ -2485,15 +2520,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.5546
     sort_std: null
-    true_value: null
+    true_value: 0.5546
     true_std: null
     paper_value: 0.5546
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2501,8 +2536,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2526,7 +2561,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 7
   - model: AE
     model_key: ae
     model_plain: AE
@@ -2549,15 +2584,15 @@ results:
     architecture_title: Random-walk graph embedding
     sort_value: 0.5049
     sort_std: null
-    true_value: null
+    true_value: 0.5049
     true_std: null
     paper_value: 0.5049
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2565,8 +2600,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2590,7 +2625,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 8
   - model: S2V
     model_key: s2v
     model_plain: S2V
@@ -2613,15 +2648,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.4973
     sort_std: null
-    true_value: null
+    true_value: 0.4973
     true_std: null
     paper_value: 0.4973
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2629,8 +2664,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2654,7 +2689,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 9
   - model: N2V
     model_key: n2v
     model_plain: N2V
@@ -2677,15 +2712,15 @@ results:
     architecture_title: Random-walk graph embedding
     sort_value: 0.488
     sort_std: null
-    true_value: null
+    true_value: 0.488
     true_std: null
     paper_value: 0.488
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2693,8 +2728,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2718,7 +2753,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 10
   - model: SDCN
     model_key: sdcn
     model_plain: SDCN
@@ -2741,15 +2776,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.4404
     sort_std: null
-    true_value: null
+    true_value: 0.4404
     true_std: null
     paper_value: 0.4404
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2757,8 +2792,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2782,7 +2817,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 11
   - model: GAE
     model_key: gae
     model_plain: GAE
@@ -2805,15 +2840,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.4202
     sort_std: null
-    true_value: null
+    true_value: 0.4202
     true_std: null
     paper_value: 0.4202
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2821,8 +2856,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2846,7 +2881,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 12
   - model: GMI
     model_key: gmi
     model_plain: GMI
@@ -2869,15 +2904,15 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.3519
     sort_std: null
-    true_value: null
+    true_value: 0.3519
     true_std: null
     paper_value: 0.3519
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2203.10866'
+    value_gap_source_title: Unsupervised Network Embedding Beyond Homophily
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -2885,8 +2920,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2022-03-21'
+    value_gap_source_date_label: TMLR 2022
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -2910,7 +2945,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 1
+    global_rank: 13
   metrics:
   - Accuracy
   - ACC

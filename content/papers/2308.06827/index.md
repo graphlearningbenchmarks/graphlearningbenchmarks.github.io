@@ -86,9 +86,9 @@ results:
   dataset: AMAP
   is_multi_metric: true
   rows:
-  - model: uAGNN
+  - model: DCRN
     model_key: dcrn
-    model_plain: uAGNN
+    model_plain: DCRN
     metric_values:
     - 0.737
     - null
@@ -127,9 +127,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: uAGNN
+  - model: two unsupervised strategies
     model_key: two unsupervised strategies
-    model_plain: uAGNN
+    model_plain: two unsupervised strategies
     metric_values:
     - 0.7081
     - null
@@ -168,9 +168,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: uAGNN
+  - model: AMLP
     model_key: amlp
-    model_plain: uAGNN
+    model_plain: AMLP
     metric_values:
     - 0.6977
     - null
@@ -974,16 +974,17 @@ results:
     architecture_label: GNN
     architecture_title: Message-passing GNN
     sort_value: 0.4485
-    sort_std: 0.0083
+    sort_std: null
     true_value: 0.4485
-    true_std: 0.0083
+    true_std: null
     paper_value: 0.4485
     paper_std: 0.0083
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: '2308.06827'
-    value_gap_source_title: Reinforcement Graph Clustering with Unknown Cluster Number
+    value_gap_source_arxiv: '2507.20127'
+    value_gap_source_title: 'Aggregation-aware MLP: An Unsupervised Approach for Graph
+      Message-passing'
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -991,8 +992,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2023-08-13'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-07-27'
+    value_gap_source_date_label: '2025'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false

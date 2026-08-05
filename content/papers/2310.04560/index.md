@@ -57,9 +57,9 @@ results:
 - &id002
   dataset: BA graph
   rows:
-  - model: GraphWiz
+  - model: F4-MPNN
     model_key: f4-mpnn
-    model_plain: GraphWiz
+    model_plain: F4-MPNN
     value: 0.9793
     std: 0.0068
     metric: Accuracy
@@ -90,9 +90,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphWiz
+  - model: F7-MPNN
     model_key: f7-mpnn
-    model_plain: GraphWiz
+    model_plain: F7-MPNN
     value: 0.966
     std: 0.0065
     metric: Accuracy
@@ -123,11 +123,44 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GraphWiz
-    model_key: f3-mpnn
-    model_plain: GraphWiz
-    value: 0.8657
-    std: 0.0085
+  - model: Diffusion Wavelets
+    model_key: diffusion wavelets
+    model_plain: Diffusion Wavelets
+    value: 0.94
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: Oct 27, 2017
+    date_display: Oct 2017
+    date_iso: '2017-10-27'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 3
+    sort_value: 0.94
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.85
+    std: null
     metric: Accuracy
     higher_is_better: true
     is_baseline: true
@@ -137,20 +170,20 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    arxiv_id: '2505.11298'
-    title: 'Graph Representational Learning: When Does More Expressivity Hurt Generalization?'
-    date: May 16, 2025
-    date_display: May 2025
-    date_iso: '2025-05-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/RPaolino/GenVsExp
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: Oct 27, 2017
+    date_display: Oct 2017
+    date_iso: '2017-10-27'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
-    global_rank: 3
-    sort_value: 0.8657
-    sort_std: 0.0085
+    global_rank: 7
+    sort_value: 0.85
+    sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -213,8 +246,8 @@ results:
     value_note: ''
     sort_value: 0.502
     sort_std: null
-    global_rank: 9
-    paper_rank: 9
+    global_rank: 14
+    paper_rank: 14
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -281,8 +314,8 @@ results:
     value_note: ''
     sort_value: 0.4
     sort_std: null
-    global_rank: 10
-    paper_rank: 10
+    global_rank: 15
+    paper_rank: 15
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -304,76 +337,10 @@ results:
 - &id001
   dataset: ER graph
   rows:
-  - model: GraphWiz-DPO (LLaMA 2-7B)
-    model_key: f_4-mpnn
-    model_plain: GraphWiz-DPO (LLaMA 2-7B)
-    value: 0.9793
-    std: 0.0068
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.11298'
-    title: 'Graph Representational Learning: When Does More Expressivity Hurt Generalization?'
-    date: May 16, 2025
-    date_display: May 2025
-    date_iso: '2025-05-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/RPaolino/GenVsExp
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 1
-    sort_value: 0.9793
-    sort_std: 0.0068
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GraphWiz-DPO (LLaMA 2-7B)
-    model_key: f_7-mpnn
-    model_plain: GraphWiz-DPO (LLaMA 2-7B)
-    value: 0.966
-    std: 0.0065
-    metric: Accuracy
-    higher_is_better: true
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    arxiv_id: '2505.11298'
-    title: 'Graph Representational Learning: When Does More Expressivity Hurt Generalization?'
-    date: May 16, 2025
-    date_display: May 2025
-    date_iso: '2025-05-16'
-    venue: arXiv.org
-    codebase_url: https://github.com/RPaolino/GenVsExp
-    uses_external_data: false
-    input_feature_source: null
-    feature_source_evidence: ''
-    is_global_top: true
-    global_rank: 2
-    sort_value: 0.966
-    sort_std: 0.0065
-    comparison_type: global_top
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: true
-    is_std_outlier: false
-  - model: GraphWiz-DPO (LLaMA 2-7B)
-    model_key: graphwiz (llama 2-13b)
-    model_plain: GraphWiz-DPO (LLaMA 2-7B)
-    value: 0.9475
+  - model: FloydNet
+    model_key: floydnet
+    model_plain: FloydNet
+    value: 1.0
     std: null
     metric: Accuracy
     higher_is_better: true
@@ -381,23 +348,121 @@ results:
     is_overridden: false
     override_reason: ''
     params_millions: null
-    architecture_type: llm
-    architecture_label: LLM
-    architecture_title: LLM applied to graphs
-    arxiv_id: '2402.16029'
-    title: 'GraphWiz: An Instruction-Following Language Model for Graph Computational
-      Problems'
-    date: Feb 25, 2024
-    date_display: Feb 2024
-    date_iso: '2024-02-25'
-    venue: null
-    codebase_url: https://github.com/nuochenpku/Graph-Reasoning-LLM
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 1.0
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: PGN
+    model_key: pgn
+    model_plain: PGN
+    value: 0.995
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.995
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: RecGNN
+    model_key: recgnn
+    model_plain: RecGNN
+    value: 0.995
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2601.19094'
+    title: 'FloydNet: A Learning Paradigm for Global Relational Reasoning'
+    date: Jan 27, 2026
+    date_display: Jan 2026
+    date_iso: '2026-01-27'
+    venue: arXiv.org
+    codebase_url: https://github.com/ocx-lab/FloydNet
     uses_external_data: false
     input_feature_source: null
     feature_source_evidence: ''
     is_global_top: true
     global_rank: 3
-    sort_value: 0.9475
+    sort_value: 0.995
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GraphSAGE
+    model_key: graphsage
+    model_plain: GraphSAGE
+    value: 0.88
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1710.10321'
+    title: Learning Structural Node Embeddings via Diffusion Wavelets
+    date: Oct 27, 2017
+    date_display: Oct 2017
+    date_iso: '2017-10-27'
+    venue: Knowledge Discovery and Data Mining
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 10
+    sort_value: 0.88
     sort_std: null
     comparison_type: global_top
     comparison_source_title: ''
@@ -461,8 +526,8 @@ results:
     value_note: ''
     sort_value: 0.451
     sort_std: null
-    global_rank: 15
-    paper_rank: 15
+    global_rank: 23
+    paper_rank: 23
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -529,8 +594,8 @@ results:
     value_note: ''
     sort_value: 0.412
     sort_std: null
-    global_rank: 16
-    paper_rank: 16
+    global_rank: 24
+    paper_rank: 24
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

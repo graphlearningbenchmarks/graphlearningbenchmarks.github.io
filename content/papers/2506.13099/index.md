@@ -61,8 +61,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - DyGC
-mrr: 0.0074
-adjusted_mrr: 0.0025
+mrr: 0.0067
+adjusted_mrr: 0.0022
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -84,9 +84,9 @@ results:
 - &id002
   dataset: DBLP
   rows:
-  - model: SlotGAT
+  - model: HERec
     model_key: herec
-    model_plain: SlotGAT
+    model_plain: HERec
     value: 0.9993
     std: null
     metric: Micro-F1
@@ -117,9 +117,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SlotGAT
+  - model: HetSANN
     model_key: hetsann
-    model_plain: SlotGAT
+    model_plain: HetSANN
     value: 0.9972
     std: null
     metric: Micro-F1
@@ -150,9 +150,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: SlotGAT
+  - model: DeepWalk
     model_key: deepwalk
-    model_plain: SlotGAT
+    model_plain: DeepWalk
     value: 0.9941
     std: null
     metric: Micro-F1
@@ -178,6 +178,39 @@ results:
     global_rank: 3
     sort_value: 0.9941
     sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.946
+    std: 0.0031
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2310.16401'
+    title: Graph Neural Networks with a Distribution of Parametrized Graphs
+    date: Oct 25, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-25'
+    venue: International Conference on Machine Learning
+    codebase_url: https://github.com/ICT-GIMLab/SeHGNN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 29
+    sort_value: 0.946
+    sort_std: 0.0031
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
@@ -241,10 +274,10 @@ results:
     value_note: ''
     sort_value: 0.9384
     sort_std: 0.0053
-    global_rank: 42
-    paper_rank: 145
-    rank_delta: 103
-    rank_delta_abs: 103
+    global_rank: 44
+    paper_rank: 164
+    rank_delta: 120
+    rank_delta_abs: 120
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -309,8 +342,8 @@ results:
     value_note: ''
     sort_value: 0.792
     sort_std: 0.003
-    global_rank: 134
-    paper_rank: 134
+    global_rank: 148
+    paper_rank: 148
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -376,8 +409,8 @@ results:
     value_note: ''
     sort_value: 0.782
     sort_std: 0.003
-    global_rank: 135
-    paper_rank: 135
+    global_rank: 150
+    paper_rank: 150
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -443,8 +476,8 @@ results:
     value_note: ''
     sort_value: 0.74
     sort_std: 0.008
-    global_rank: 147
-    paper_rank: 147
+    global_rank: 166
+    paper_rank: 166
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -510,8 +543,8 @@ results:
     value_note: ''
     sort_value: 0.729
     sort_std: 0.01
-    global_rank: 150
-    paper_rank: 150
+    global_rank: 169
+    paper_rank: 169
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -577,8 +610,8 @@ results:
     value_note: ''
     sort_value: 0.715
     sort_std: 0.023
-    global_rank: 153
-    paper_rank: 153
+    global_rank: 172
+    paper_rank: 172
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -644,8 +677,8 @@ results:
     value_note: ''
     sort_value: 0.697
     sort_std: 0.017
-    global_rank: 159
-    paper_rank: 159
+    global_rank: 178
+    paper_rank: 178
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -711,8 +744,8 @@ results:
     value_note: ''
     sort_value: 0.689
     sort_std: 0.024
-    global_rank: 160
-    paper_rank: 160
+    global_rank: 179
+    paper_rank: 179
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -778,13 +811,47 @@ results:
     value_note: ''
     sort_value: 0.689
     sort_std: 0.014
-    global_rank: 161
-    paper_rank: 161
+    global_rank: 180
+    paper_rank: 180
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.6447
+    std: 0.0136
+    metric: Micro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2310.07365'
+    title: 'GraphControl: Adding Conditional Control to Universal Graph Pre-trained
+      Models for Graph Domain Transfer Learning'
+    date: Oct 11, 2023
+    date_display: Oct 2023
+    date_iso: '2023-10-11'
+    venue: The Web Conference
+    codebase_url: https://github.com/wykk00/GraphControl
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 185
+    sort_value: 0.6447
+    sort_std: 0.0136
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

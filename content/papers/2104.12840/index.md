@@ -75,9 +75,9 @@ results:
 - &id001
   dataset: ACM
   rows:
-  - model: GCN+P+D
+  - model: SignGT
     model_key: signgt
-    model_plain: GCN+P+D
+    model_plain: SignGT
     value: 0.9545
     std: 0.0049
     metric: Accuracy
@@ -109,9 +109,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: NodeFormer
     model_key: nodeformer
-    model_plain: GCN+P+D
+    model_plain: NodeFormer
     value: 0.9493
     std: 0.0035
     metric: Accuracy
@@ -143,9 +143,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: GCN+P+D
+  - model: FAGCN
     model_key: fagcn
-    model_plain: GCN+P+D
+    model_plain: FAGCN
     value: 0.9487
     std: 0.0059
     metric: Accuracy
@@ -176,6 +176,39 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: true
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.937
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2112.08331'
+    title: Model Stealing Attacks Against Inductive Graph Neural Networks
+    date: Dec 15, 2021
+    date_display: Dec 2021
+    date_iso: '2021-12-15'
+    venue: IEEE Symposium on Security and Privacy
+    codebase_url: https://github.com/xinleihe/GNNStealing
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 16
+    sort_value: 0.937
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: SGC
     model_key: sgc
@@ -235,9 +268,9 @@ results:
     sort_value: 0.9324
     sort_std: 0.0049
     global_rank: 29
-    paper_rank: 70
-    rank_delta: 41
-    rank_delta_abs: 41
+    paper_rank: 76
+    rank_delta: 47
+    rank_delta_abs: 47
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -302,10 +335,10 @@ results:
     value_note: ''
     sort_value: 0.9233
     sort_std: 0.0038
-    global_rank: 41
-    paper_rank: 67
-    rank_delta: 26
-    rank_delta_abs: 26
+    global_rank: 42
+    paper_rank: 73
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -370,8 +403,8 @@ results:
     value_note: ''
     sort_value: 0.7583
     sort_std: 0.004
-    global_rank: 67
-    paper_rank: 67
+    global_rank: 73
+    paper_rank: 73
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -438,8 +471,8 @@ results:
     value_note: ''
     sort_value: 0.7544
     sort_std: 0.001
-    global_rank: 68
-    paper_rank: 68
+    global_rank: 74
+    paper_rank: 74
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -506,8 +539,8 @@ results:
     value_note: ''
     sort_value: 0.7529
     sort_std: 0.002
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 75
+    paper_rank: 75
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -574,8 +607,8 @@ results:
     value_note: ''
     sort_value: 0.7527
     sort_std: 0.001
-    global_rank: 70
-    paper_rank: 70
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -642,8 +675,8 @@ results:
     value_note: ''
     sort_value: 0.7487
     sort_std: 0.003
-    global_rank: 71
-    paper_rank: 71
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -710,8 +743,8 @@ results:
     value_note: ''
     sort_value: 0.7305
     sort_std: 0.006
-    global_rank: 73
-    paper_rank: 73
+    global_rank: 79
+    paper_rank: 79
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

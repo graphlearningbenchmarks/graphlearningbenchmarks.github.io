@@ -60,9 +60,9 @@ results:
 - &id001
   dataset: 20News
   rows:
-  - model: LDS
+  - model: ARMA
     model_key: arma
-    model_plain: LDS
+    model_plain: ARMA
     value: 0.7002
     std: 0.001
     metric: Accuracy
@@ -93,9 +93,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: LDS
+  - model: CayleyNet
     model_key: cayleynet
-    model_plain: LDS
+    model_plain: CayleyNet
     value: 0.6884
     std: 0.003
     metric: Accuracy
@@ -126,9 +126,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: LDS
+  - model: Chebyshev
     model_key: chebyshev
-    model_plain: LDS
+    model_plain: Chebyshev
     value: 0.6824
     std: 0.002
     metric: Accuracy
@@ -153,6 +153,39 @@ results:
     is_global_top: true
     global_rank: 3
     sort_value: 0.6824
+    sort_std: 0.002
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.6545
+    std: 0.002
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '1901.01343'
+    title: Graph Neural Networks With Convolutional ARMA Filters
+    date: Jan 5, 2019
+    date_display: Jan 2019
+    date_iso: '2019-01-05'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 4
+    sort_value: 0.6545
     sort_std: 0.002
     comparison_type: global_top
     comparison_source_title: ''

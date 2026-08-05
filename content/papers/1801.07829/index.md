@@ -141,6 +141,39 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
+  - model: dDGM
+    model_key: ddgm
+    model_plain: dDGM
+    value: 0.856
+    std: null
+    metric: mIoU
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: null
+    architecture_label: null
+    architecture_title: ''
+    arxiv_id: '2002.04999'
+    title: Differentiable Graph Module (DGM) for Graph Convolutional Networks
+    date: Feb 11, 2020
+    date_display: Feb 2020
+    date_iso: '2020-02-11'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: https://github.com/lcosmo/DGM_pytorch
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.856
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: DGCNN
     model_key: dgcnn
     model_plain: DGCNN
@@ -177,8 +210,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: '2018-01-24'
-    value_gap_source_date_label: '2018'
+    value_gap_source_date_iso: '2020-02-11'
+    value_gap_source_date_label: '2020'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -189,16 +222,17 @@ results:
     today_delta_significant: false
     true_value: 0.852
     true_std: null
-    value_gap_source_arxiv: '1801.07829'
-    value_gap_source_title: Dynamic Graph CNN for Learning on Point Clouds
-    value_gap_source_is_current_paper: true
+    value_gap_source_arxiv: '2002.04999'
+    value_gap_source_title: Differentiable Graph Module (DGM) for Graph Convolutional
+      Networks
+    value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.852
     sort_std: null
-    global_rank: 2
-    paper_rank: 2
+    global_rank: 3
+    paper_rank: 3
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -264,8 +298,8 @@ results:
     value_note: ''
     sort_value: 0.851
     sort_std: null
-    global_rank: 3
-    paper_rank: 3
+    global_rank: 4
+    paper_rank: 4
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -331,8 +365,8 @@ results:
     value_note: ''
     sort_value: 0.851
     sort_std: null
-    global_rank: 4
-    paper_rank: 4
+    global_rank: 5
+    paper_rank: 5
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -398,8 +432,8 @@ results:
     value_note: ''
     sort_value: 0.843
     sort_std: null
-    global_rank: 5
-    paper_rank: 5
+    global_rank: 6
+    paper_rank: 6
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -465,8 +499,8 @@ results:
     value_note: ''
     sort_value: 0.823
     sort_std: null
-    global_rank: 6
-    paper_rank: 6
+    global_rank: 7
+    paper_rank: 7
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

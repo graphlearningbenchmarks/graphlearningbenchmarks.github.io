@@ -41,8 +41,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - SANE
-mrr: 0.0169
-adjusted_mrr: 0.0169
+mrr: 0.0155
+adjusted_mrr: 0.0155
 mrr_dataset_count: 4
 benchmark_categories:
 - Classic
@@ -59,9 +59,9 @@ results:
 - &id001
   dataset: PPI
   rows:
-  - model: Cluster-GCN
+  - model: GAMLP(JK)
     model_key: gamlp(jk)
-    model_plain: Cluster-GCN
+    model_plain: GAMLP(JK)
     value: 0.9982
     std: 0.01
     metric: F1
@@ -92,9 +92,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GraphCON-GCN
     model_key: graphcon-gcn
-    model_plain: Cluster-GCN
+    model_plain: GraphCON-GCN
     value: 0.996
     std: null
     metric: F1
@@ -125,9 +125,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: Cluster-GCN
+  - model: GCNII
     model_key: gcnii
-    model_plain: Cluster-GCN
+    model_plain: GCNII
     value: 0.9956
     std: 0.02
     metric: F1
@@ -214,8 +214,8 @@ results:
     value_note: ''
     sort_value: 0.9856
     sort_std: 0.012
-    global_rank: 18
-    paper_rank: 18
+    global_rank: 20
+    paper_rank: 20
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -281,10 +281,10 @@ results:
     value_note: ''
     sort_value: 0.985
     sort_std: null
-    global_rank: 19
-    paper_rank: 129
-    rank_delta: 110
-    rank_delta_abs: 110
+    global_rank: 21
+    paper_rank: 140
+    rank_delta: 119
+    rank_delta_abs: 119
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -329,8 +329,8 @@ results:
       Large Graph Convolutional Networks'
     at_pub_source_date_iso: '2019-05-20'
     at_pub_source_date_label: KDD 2019
-    value_gap_source_date_iso: '2020-07-04'
-    value_gap_source_date_label: ICML 2020
+    value_gap_source_date_iso: '2022-02-04'
+    value_gap_source_date_label: ICML 2022
     gap_vs_at_pub: 0.2712
     worse_than_at_pub: true
     surpassed_since_pub: false
@@ -341,18 +341,18 @@ results:
     today_delta_significant: true
     true_value: 0.985
     true_std: null
-    value_gap_source_arxiv: '2007.02133'
-    value_gap_source_title: Simple and Deep Graph Convolutional Networks
+    value_gap_source_arxiv: '2202.02296'
+    value_gap_source_title: Graph-Coupled Oscillator Networks
     value_gap_source_is_current_paper: false
     value_gap: 0.2712
     has_value_note: false
     value_note: ''
     sort_value: 0.985
     sort_std: null
-    global_rank: 20
-    paper_rank: 112
-    rank_delta: 92
-    rank_delta_abs: 92
+    global_rank: 22
+    paper_rank: 120
+    rank_delta: 98
+    rank_delta_abs: 98
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -417,8 +417,8 @@ results:
     value_note: ''
     sort_value: 0.9749
     sort_std: 0.0
-    global_rank: 49
-    paper_rank: 49
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -486,10 +486,10 @@ results:
     value_note: ''
     sort_value: 0.9732
     sort_std: 0.0032
-    global_rank: 51
-    paper_rank: 76
-    rank_delta: 25
-    rank_delta_abs: 25
+    global_rank: 55
+    paper_rank: 85
+    rank_delta: 30
+    rank_delta_abs: 30
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -554,8 +554,8 @@ results:
     value_note: ''
     sort_value: 0.9694
     sort_std: 0.0
-    global_rank: 61
-    paper_rank: 61
+    global_rank: 66
+    paper_rank: 66
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -621,8 +621,8 @@ results:
     value_note: ''
     sort_value: 0.9583
     sort_std: 0.0082
-    global_rank: 69
-    paper_rank: 69
+    global_rank: 77
+    paper_rank: 77
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -690,10 +690,10 @@ results:
     value_note: ''
     sort_value: 0.958
     sort_std: 0.001
-    global_rank: 70
-    paper_rank: 129
-    rank_delta: 59
-    rank_delta_abs: 59
+    global_rank: 78
+    paper_rank: 140
+    rank_delta: 62
+    rank_delta_abs: 62
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -758,8 +758,8 @@ results:
     value_note: ''
     sort_value: 0.9517
     sort_std: 0.0032
-    global_rank: 75
-    paper_rank: 75
+    global_rank: 83
+    paper_rank: 83
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -825,8 +825,8 @@ results:
     value_note: ''
     sort_value: 0.9467
     sort_std: 0.0
-    global_rank: 76
-    paper_rank: 76
+    global_rank: 85
+    paper_rank: 85
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -893,10 +893,10 @@ results:
     value_note: ''
     sort_value: 0.911
     sort_std: 0.002
-    global_rank: 83
-    paper_rank: 87
-    rank_delta: 4
-    rank_delta_abs: 4
+    global_rank: 92
+    paper_rank: 95
+    rank_delta: 3
+    rank_delta_abs: 3
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: improved
@@ -960,8 +960,8 @@ results:
     value_note: ''
     sort_value: 0.8078
     sort_std: 0.0
-    global_rank: 91
-    paper_rank: 91
+    global_rank: 99
+    paper_rank: 99
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1027,8 +1027,8 @@ results:
     value_note: ''
     sort_value: 0.8019
     sort_std: 0.0
-    global_rank: 94
-    paper_rank: 94
+    global_rank: 102
+    paper_rank: 102
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -1074,8 +1074,8 @@ results:
     at_pub_source_title: 'Deep Learning on Graphs: A Survey'
     at_pub_source_date_iso: '2018-12-11'
     at_pub_source_date_label: '2018'
-    value_gap_source_date_iso: '2019-09-07'
-    value_gap_source_date_label: '2019'
+    value_gap_source_date_iso: '2021-04-01'
+    value_gap_source_date_label: '2021'
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1086,22 +1086,55 @@ results:
     today_delta_significant: false
     true_value: 0.772
     true_std: 0.002
-    value_gap_source_arxiv: '1909.03184'
-    value_gap_source_title: 'Auto-GNN: Neural Architecture Search of Graph Neural
-      Networks'
-    value_gap_source_is_current_paper: false
+    value_gap_source_arxiv: '2104.06608'
+    value_gap_source_title: Search to aggregate neighborhood for graph neural network
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.772
     sort_std: 0.002
-    global_rank: 96
-    paper_rank: 96
+    global_rank: 104
+    paper_rank: 104
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.6928
+    std: null
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2307.00534'
+    title: Shared Growth of Graph Neural Networks via Prompted Free-direction Knowledge
+      Distillation
+    date: Jul 2, 2023
+    date_display: Jul 2023
+    date_iso: '2023-07-02'
+    venue: IEEE Transactions on Pattern Analysis and Machine Intelligence
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 131
+    sort_value: 0.6928
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

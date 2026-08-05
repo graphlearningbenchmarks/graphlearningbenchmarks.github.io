@@ -972,6 +972,39 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.7539
+    std: 0.0021
+    metric: F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2110.15174'
+    title: On Provable Benefits of Depth in Training Graph Convolutional Networks
+    date: Oct 28, 2021
+    date_display: Oct 2021
+    date_iso: '2021-10-28'
+    venue: Neural Information Processing Systems
+    codebase_url: https://github.com/CongWeilin/DGCN
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 9
+    sort_value: 0.7539
+    sort_std: 0.0021
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
   - model: NOSMOG
     model_key: nosmog
     model_plain: NOSMOG

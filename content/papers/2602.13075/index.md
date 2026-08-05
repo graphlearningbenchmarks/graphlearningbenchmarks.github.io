@@ -64,8 +64,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GPH^2
-mrr: 0.037
-adjusted_mrr: 0.0123
+mrr: 0.0278
+adjusted_mrr: 0.0093
 mrr_dataset_count: 1
 benchmark_categories:
 - Heterogeneous Graph Benchmarks
@@ -82,9 +82,77 @@ results:
 - &id001
   dataset: Freebase
   rows:
-  - model: SlotGAT
+  - model: ConCH
+    model_key: conch
+    model_plain: ConCH
+    value: 0.6475
+    std: null
+    metric: Macro-F1
+    higher_is_better: true
+    is_baseline: false
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: hybrid
+    architecture_label: Hyb
+    architecture_title: Hybrid MPNN + transformer
+    arxiv_id: '2012.10024'
+    title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
+      Networks
+    date: Dec 18, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-18'
+    venue: IEEE International Conference on Data Engineering
+    codebase_url: https://github.com/dingdanhao110/Conch
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 1
+    sort_value: 0.6475
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: true
+    is_std_outlier: false
+  - model: HetGNN
+    model_key: hetgnn
+    model_plain: HetGNN
+    value: 0.6292
+    std: null
+    metric: Macro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2012.10024'
+    title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
+      Networks
+    date: Dec 18, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-18'
+    venue: IEEE International Conference on Data Engineering
+    codebase_url: https://github.com/dingdanhao110/Conch
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 2
+    sort_value: 0.6292
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: GC-HGNN
     model_key: gc-hgnn
-    model_plain: SlotGAT
+    model_plain: GC-HGNN
     value: 0.6247
     std: 0.0042
     metric: Macro-F1
@@ -107,13 +175,47 @@ results:
     input_feature_source: mixed
     feature_source_evidence: Uses X and A (features and structure)
     is_global_top: true
-    global_rank: 1
+    global_rank: 3
     sort_value: 0.6247
     sort_std: 0.0042
     comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
-    is_best: true
+    is_best: false
+    is_std_outlier: false
+  - model: GCN
+    model_key: gcn
+    model_plain: GCN
+    value: 0.609
+    std: null
+    metric: Macro-F1
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2012.10024'
+    title: Leveraging Meta-path Contexts for Classification in Heterogeneous Information
+      Networks
+    date: Dec 18, 2020
+    date_display: Dec 2020
+    date_iso: '2020-12-18'
+    venue: IEEE International Conference on Data Engineering
+    codebase_url: https://github.com/dingdanhao110/Conch
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 7
+    sort_value: 0.609
+    sort_std: null
+    comparison_type: global_top
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
     is_std_outlier: false
   - model: HGMAE
     model_key: hgmae
@@ -171,10 +273,10 @@ results:
     value_note: ''
     sort_value: 0.6082
     sort_std: 0.0051
-    global_rank: 2
-    paper_rank: 31
-    rank_delta: 29
-    rank_delta_abs: 29
+    global_rank: 8
+    paper_rank: 39
+    rank_delta: 31
+    rank_delta_abs: 31
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -238,8 +340,8 @@ results:
     value_note: ''
     sort_value: 0.5987
     sort_std: 0.0033
-    global_rank: 3
-    paper_rank: 31
+    global_rank: 11
+    paper_rank: 39
     rank_delta: 28
     rank_delta_abs: 28
     rank_delta_direction: worse
@@ -305,8 +407,8 @@ results:
     value_note: ''
     sort_value: 0.5599
     sort_std: 0.0059
-    global_rank: 11
-    paper_rank: 32
+    global_rank: 19
+    paper_rank: 40
     rank_delta: 21
     rank_delta_abs: 21
     rank_delta_direction: worse
@@ -373,8 +475,8 @@ results:
     value_note: ''
     sort_value: 0.4478
     sort_std: 0.0547
-    global_rank: 27
-    paper_rank: 27
+    global_rank: 36
+    paper_rank: 36
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -441,8 +543,8 @@ results:
     value_note: ''
     sort_value: 0.4078
     sort_std: 0.0323
-    global_rank: 30
-    paper_rank: 30
+    global_rank: 39
+    paper_rank: 39
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -509,8 +611,8 @@ results:
     value_note: ''
     sort_value: 0.3139
     sort_std: 0.078
-    global_rank: 34
-    paper_rank: 34
+    global_rank: 42
+    paper_rank: 42
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -577,8 +679,8 @@ results:
     value_note: ''
     sort_value: 0.2903
     sort_std: 0.0654
-    global_rank: 36
-    paper_rank: 36
+    global_rank: 43
+    paper_rank: 43
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same

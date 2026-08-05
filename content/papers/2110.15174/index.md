@@ -447,9 +447,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SDGNN
+  - model: GLNN
     model_key: glnn
-    model_plain: SDGNN
+    model_plain: GLNN
     value: 0.8279
     std: 0.0025
     metric: F1
@@ -480,9 +480,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SDGNN
+  - model: SDGNN-Equal
     model_key: sdgnn-equal
-    model_plain: SDGNN
+    model_plain: SDGNN-Equal
     value: 0.8264
     std: 0.0022
     metric: F1

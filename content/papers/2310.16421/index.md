@@ -40,8 +40,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - GA
-mrr: 0.0345
-adjusted_mrr: 0.0115
+mrr: 0.027
+adjusted_mrr: 0.009
 mrr_dataset_count: 1
 benchmark_categories:
 - Classic
@@ -58,9 +58,9 @@ results:
 - &id001
   dataset: Cora
   rows:
-  - model: SGC+TSC
+  - model: Exphormer
     model_key: exphormer
-    model_plain: SGC+TSC
+    model_plain: Exphormer
     value: 0.9635
     std: 0.0019
     metric: Accuracy
@@ -92,9 +92,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: SGFormer
     model_key: sgformer
-    model_plain: SGC+TSC
+    model_plain: SGFormer
     value: 0.9629
     std: 0.0015
     metric: Accuracy
@@ -126,9 +126,9 @@ results:
     comparison_source_arxiv: ''
     is_best: true
     is_std_outlier: false
-  - model: SGC+TSC
+  - model: Coral
     model_key: coral
-    model_plain: SGC+TSC
+    model_plain: Coral
     value: 0.9574
     std: 0.0039
     metric: Accuracy
@@ -219,10 +219,10 @@ results:
     value_note: ''
     sort_value: 0.9119
     sort_std: 0.0012
-    global_rank: 25
-    paper_rank: 57
-    rank_delta: 32
-    rank_delta_abs: 32
+    global_rank: 33
+    paper_rank: 66
+    rank_delta: 33
+    rank_delta_abs: 33
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -288,8 +288,8 @@ results:
     value_note: ''
     sort_value: 0.9077
     sort_std: null
-    global_rank: 26
-    paper_rank: 26
+    global_rank: 34
+    paper_rank: 34
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -357,8 +357,8 @@ results:
     value_note: ''
     sort_value: 0.9065
     sort_std: null
-    global_rank: 29
-    paper_rank: 29
+    global_rank: 37
+    paper_rank: 37
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -425,10 +425,10 @@ results:
     value_note: ''
     sort_value: 0.9004
     sort_std: null
-    global_rank: 33
-    paper_rank: 154
-    rank_delta: 121
-    rank_delta_abs: 121
+    global_rank: 42
+    paper_rank: 164
+    rank_delta: 122
+    rank_delta_abs: 122
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -473,8 +473,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2024-02-08'
+    value_gap_source_date_label: AAAI 2024
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -485,16 +485,17 @@ results:
     today_delta_significant: false
     true_value: 0.8975
     true_std: 0.0116
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
+    value_gap_source_arxiv: '2402.05894'
+    value_gap_source_title: Large Language Model Meets Graph Neural Network in Knowledge
+      Distillation
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8975
     sort_std: 0.0116
-    global_rank: 42
-    paper_rank: 42
+    global_rank: 51
+    paper_rank: 51
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -562,8 +563,8 @@ results:
     value_note: ''
     sort_value: 0.896
     sort_std: 0.016
-    global_rank: 44
-    paper_rank: 44
+    global_rank: 53
+    paper_rank: 53
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -610,8 +611,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-08'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -621,22 +622,57 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8911
-    true_std: 0.0
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
+    true_std: 0.001
+    value_gap_source_arxiv: '2506.07168'
+    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
+      Annotation and Graph Alignment
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8911
-    sort_std: 0.0
-    global_rank: 66
-    paper_rank: 66
+    sort_std: 0.001
+    global_rank: 76
+    paper_rank: 76
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: SAGE
+    model_key: sage
+    model_plain: SAGE
+    value: 0.8911
+    std: 0.0012
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    arxiv_id: '2506.07168'
+    title: Efficient Text-Attributed Graph Learning through Selective Annotation and
+      Graph Alignment
+    date: Jun 8, 2025
+    date_display: Jun 2025
+    date_iso: '2025-06-08'
+    venue: Trans. Mach. Learn. Res.
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: null
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 75
+    sort_value: 0.8911
+    sort_std: 0.0012
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false
@@ -699,10 +735,10 @@ results:
     value_note: ''
     sort_value: 0.8897
     sort_std: null
-    global_rank: 72
-    paper_rank: 853
-    rank_delta: 781
-    rank_delta_abs: 781
+    global_rank: 81
+    paper_rank: 867
+    rank_delta: 786
+    rank_delta_abs: 786
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: behind
@@ -769,10 +805,10 @@ results:
     value_note: ''
     sort_value: 0.8889
     sort_std: null
-    global_rank: 79
-    paper_rank: 229
-    rank_delta: 150
-    rank_delta_abs: 150
+    global_rank: 88
+    paper_rank: 240
+    rank_delta: 152
+    rank_delta_abs: 152
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -817,7 +853,7 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
+    value_gap_source_date_iso: '2023-10-25'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -828,17 +864,17 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8869
-    true_std: 0.0082
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
-    value_gap_source_is_current_paper: false
+    true_std: null
+    value_gap_source_arxiv: '2310.16421'
+    value_gap_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8869
-    sort_std: 0.0082
-    global_rank: 91
-    paper_rank: 91
+    sort_std: null
+    global_rank: 100
+    paper_rank: 100
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -885,7 +921,7 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
+    value_gap_source_date_iso: '2023-10-25'
     value_gap_source_date_label: '2023'
     gap_vs_at_pub: null
     worse_than_at_pub: false
@@ -896,17 +932,17 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8642
-    true_std: 0.0082
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
-    value_gap_source_is_current_paper: false
+    true_std: null
+    value_gap_source_arxiv: '2310.16421'
+    value_gap_source_title: 'Graph Agent: Explicit Reasoning Agent for Graphs'
+    value_gap_source_is_current_paper: true
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8642
-    sort_std: 0.0082
-    global_rank: 238
-    paper_rank: 238
+    sort_std: null
+    global_rank: 249
+    paper_rank: 249
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
@@ -975,10 +1011,10 @@ results:
     value_note: ''
     sort_value: 0.8229
     sort_std: null
-    global_rank: 615
-    paper_rank: 949
-    rank_delta: 334
-    rank_delta_abs: 334
+    global_rank: 629
+    paper_rank: 965
+    rank_delta: 336
+    rank_delta_abs: 336
     rank_delta_direction: worse
     has_value_gap: true
     comparison_type: null
@@ -1023,8 +1059,8 @@ results:
     at_pub_source_title: Language is All a Graph Needs
     at_pub_source_date_iso: '2023-08-14'
     at_pub_source_date_label: '2023'
-    value_gap_source_date_iso: '2023-08-14'
-    value_gap_source_date_label: '2023'
+    value_gap_source_date_iso: '2025-06-08'
+    value_gap_source_date_label: TMLR 2025
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -1034,22 +1070,56 @@ results:
     insignificant_value_gap: false
     today_delta_significant: false
     true_value: 0.8041
-    true_std: 0.003
-    value_gap_source_arxiv: '2308.07134'
-    value_gap_source_title: Language is All a Graph Needs
+    true_std: 0.002
+    value_gap_source_arxiv: '2506.07168'
+    value_gap_source_title: Efficient Text-Attributed Graph Learning through Selective
+      Annotation and Graph Alignment
     value_gap_source_is_current_paper: false
     value_gap: null
     has_value_note: false
     value_note: ''
     sort_value: 0.8041
-    sort_std: 0.003
-    global_rank: 759
-    paper_rank: 759
+    sort_std: 0.002
+    global_rank: 772
+    paper_rank: 772
     rank_delta: 0
     rank_delta_abs: 0
     rank_delta_direction: same
     has_value_gap: false
     comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+  - model: MLP
+    model_key: mlp
+    model_plain: MLP
+    value: 0.7768
+    std: null
+    metric: Accuracy
+    higher_is_better: true
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: other_traditional
+    architecture_label: Trad
+    architecture_title: Traditional / classical method
+    arxiv_id: '2401.09125'
+    title: Understanding Heterophily for Graph Neural Networks
+    date: Jan 17, 2024
+    date_display: Jan 2024
+    date_iso: '2024-01-17'
+    venue: International Conference on Machine Learning
+    codebase_url: ''
+    uses_external_data: false
+    input_feature_source: raw_features
+    feature_source_evidence: ''
+    is_global_top: true
+    global_rank: 853
+    sort_value: 0.7768
+    sort_std: null
+    comparison_type: global_top
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_best: false

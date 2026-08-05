@@ -107,9 +107,9 @@ results:
   dataset: MD17
   is_multi_metric: true
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     metric_values:
     - 1.036e-05
     - null
@@ -149,9 +149,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     metric_values:
     - 1.038e-05
     - null
@@ -191,9 +191,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     metric_values:
     - 1.759e-05
     - null
@@ -233,6 +233,134 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
+  - model: NequIP
+    model_key: nequip
+    model_plain: NequIP
+    metric_values:
+    - 0.936
+    - 8.333
+    - 23.769
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.0009
+    sort_std: null
+    true_value: 0.0009
+    true_std: null
+    paper_value: 0.936
+    paper_std: null
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.9351
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
+    value_note: ''
+    at_pub_value: 0.04
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.14276'
+    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
+      length-scales in molecular systems'
+    at_pub_source_date_iso: '2022-05-28'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2024-07-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.896
+    worse_than_at_pub: true
+    surpassed_since_pub: false
+    better_than_at_pub: false
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: NeurIPS 2023
+    date: Jun 15, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-15'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 7
+  - model: Allegro
+    model_key: allegro
+    model_plain: Allegro
+    metric_values:
+    - 0.029
+    - 1.138
+    - 3.405
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.0046
+    sort_std: null
+    true_value: 0.0046
+    true_std: null
+    paper_value: 0.029
+    paper_std: null
+    has_value_gap: true
+    has_value_note: false
+    value_gap: 0.0244
+    value_gap_source_arxiv: '2407.02263'
+    value_gap_source_title: 'FreeCG: Free the Design Space of Clebsch–Gordan Transform
+      for Machine Learning Force Fields'
+    value_note: ''
+    at_pub_value: 0.053
+    at_pub_std: null
+    at_pub_source_arxiv: '2210.16518'
+    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
+      with vector-scalar interactive message passing for molecules'
+    at_pub_source_date_iso: '2022-10-29'
+    at_pub_source_date_label: '2022'
+    value_gap_source_date_iso: '2024-07-02'
+    value_gap_source_date_label: ICLR 2024
+    gap_vs_at_pub: 0.023999999999999997
+    worse_than_at_pub: false
+    surpassed_since_pub: true
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: true
+    insignificant_value_gap: false
+    today_delta_significant: true
+    arxiv_id: ''
+    title: ''
+    published_venue: NeurIPS 2023
+    date: Jun 15, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-15'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 14
   - model: EGNN
     model_key: egnn
     model_plain: EGNN
@@ -294,7 +422,134 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 10
+    global_rank: 15
+  - model: GemNet-T
+    model_key: gemnet-t
+    model_plain: GemNet-T
+    metric_values:
+    - 0.007
+    - 0.684
+    - 0.558
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.007
+    sort_std: null
+    true_value: 0.007
+    true_std: null
+    paper_value: 0.007
+    paper_std: null
+    has_value_gap: true
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_note: ''
+    at_pub_value: 0.22
+    at_pub_std: null
+    at_pub_source_arxiv: '2102.05013'
+    at_pub_source_title: Spherical Message Passing for 3D Molecular Graphs
+    at_pub_source_date_iso: '2021-02-09'
+    at_pub_source_date_label: ICLR 2021
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.213
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    arxiv_id: ''
+    title: ''
+    published_venue: NeurIPS 2023
+    date: Jun 15, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-15'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 21
+  - model: PaiNN
+    model_key: painn
+    model_plain: PaiNN
+    metric_values:
+    - 0.01
+    - 27.626
+    - 0.572
+    metric_stds:
+    - null
+    - null
+    - null
+    is_baseline: true
+    is_overridden: false
+    override_reason: ''
+    params_millions: null
+    architecture_type: gnn
+    architecture_label: GNN
+    architecture_title: Message-passing GNN
+    sort_value: 0.01
+    sort_std: null
+    true_value: 0.01
+    true_std: null
+    paper_value: 0.01
+    paper_std: null
+    has_value_gap: true
+    has_value_note: false
+    value_gap: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
+    value_note: ''
+    at_pub_value: 0.063
+    at_pub_std: null
+    at_pub_source_arxiv: '2205.14276'
+    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
+      length-scales in molecular systems'
+    at_pub_source_date_iso: '2022-05-28'
+    at_pub_source_date_label: NeurIPS 2022
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.053
+    worse_than_at_pub: false
+    surpassed_since_pub: false
+    better_than_at_pub: true
+    insignificant_improvement_at_pub: false
+    improvement_surpassed_since_pub: false
+    insignificant_value_gap: false
+    today_delta_significant: false
+    arxiv_id: ''
+    title: ''
+    published_venue: NeurIPS 2023
+    date: Jun 15, 2023
+    date_display: Jun 2023
+    date_iso: '2023-06-15'
+    codebase_url: ''
+    uses_external_data: 0
+    input_feature_source: null
+    feature_source_evidence: ''
+    comparison_type: null
+    comparison_source_title: ''
+    comparison_source_arxiv: ''
+    is_best: false
+    is_std_outlier: false
+    global_rank: 22
   - model: Equiformer
     model_key: equiformer
     model_plain: Equiformer
@@ -315,15 +570,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.02
     sort_std: null
-    true_value: null
+    true_value: 0.02
     true_std: null
     paper_value: 0.02
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -331,8 +587,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -356,14 +612,14 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 14
-  - model: NequIP
-    model_key: nequip
-    model_plain: NequIP
+    global_rank: 26
+  - model: SchNet
+    model_key: schnet
+    model_plain: SchNet
     metric_values:
-    - 0.936
-    - 8.333
-    - 23.769
+    - 0.111
+    - 0.475
+    - 1.203
     metric_stds:
     - null
     - null
@@ -375,29 +631,29 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.053
+    sort_value: 0.05
     sort_std: null
-    true_value: 0.053
+    true_value: 0.05
     true_std: null
-    paper_value: 0.936
+    paper_value: 0.111
     paper_std: null
     has_value_gap: true
     has_value_note: false
-    value_gap: 0.883
-    value_gap_source_arxiv: '2402.04836'
-    value_gap_source_title: On the Completeness of Invariant Geometric Deep Learning
-      Models
+    value_gap: 0.061
+    value_gap_source_arxiv: '1902.08408'
+    value_gap_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
     value_note: ''
-    at_pub_value: 0.04
+    at_pub_value: 0.05
     at_pub_std: null
-    at_pub_source_arxiv: '2205.14276'
-    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
-      length-scales in molecular systems'
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2024-02-07'
-    value_gap_source_date_label: ICLR 2024
-    gap_vs_at_pub: 0.896
+    at_pub_source_arxiv: '1902.08408'
+    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
+      Dipole Moments and Partial Charges'
+    at_pub_source_date_iso: '2019-02-22'
+    at_pub_source_date_label: '2019'
+    value_gap_source_date_iso: '2019-02-22'
+    value_gap_source_date_label: '2019'
+    gap_vs_at_pub: 0.061
     worse_than_at_pub: true
     surpassed_since_pub: false
     better_than_at_pub: false
@@ -420,14 +676,14 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 34
-  - model: Allegro
-    model_key: allegro
-    model_plain: Allegro
+    global_rank: 46
+  - model: SphereNet
+    model_key: spherenet
+    model_plain: SphereNet
     metric_values:
-    - 0.029
-    - 1.138
-    - 3.405
+    - 0.052
+    - 0.244
+    - 0.546
     metric_stds:
     - null
     - null
@@ -439,36 +695,36 @@ results:
     architecture_type: gnn
     architecture_label: GNN
     architecture_title: Message-passing GNN
-    sort_value: 0.053
+    sort_value: 0.052
     sort_std: null
-    true_value: 0.053
+    true_value: 0.052
     true_std: null
-    paper_value: 0.029
+    paper_value: 0.052
     paper_std: null
     has_value_gap: true
     has_value_note: false
-    value_gap: 0.023999999999999997
-    value_gap_source_arxiv: '2210.16518'
-    value_gap_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural
-      network with vector-scalar interactive message passing for molecules'
+    value_gap: null
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
     value_note: ''
-    at_pub_value: 0.053
+    at_pub_value: 0.147
     at_pub_std: null
-    at_pub_source_arxiv: '2210.16518'
-    at_pub_source_title: 'ViSNet: an equivariant geometry-enhanced graph neural network
-      with vector-scalar interactive message passing for molecules'
-    at_pub_source_date_iso: '2022-10-29'
-    at_pub_source_date_label: '2022'
-    value_gap_source_date_iso: '2022-10-29'
-    value_gap_source_date_label: '2022'
-    gap_vs_at_pub: 0.023999999999999997
+    at_pub_source_arxiv: '2304.04757'
+    at_pub_source_title: A new perspective on building efficient and expressive 3D
+      equivariant graph neural networks
+    at_pub_source_date_iso: '2023-04-07'
+    at_pub_source_date_label: NeurIPS 2023
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
+    gap_vs_at_pub: 0.095
     worse_than_at_pub: false
     surpassed_since_pub: false
     better_than_at_pub: true
     insignificant_improvement_at_pub: false
     improvement_surpassed_since_pub: false
     insignificant_value_gap: false
-    today_delta_significant: true
+    today_delta_significant: false
     arxiv_id: ''
     title: ''
     published_venue: NeurIPS 2023
@@ -484,7 +740,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 35
+    global_rank: 52
   - model: DimeNet++
     model_key: dimenet++
     model_plain: DimeNet++
@@ -546,196 +802,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 42
-  - model: PaiNN
-    model_key: painn
-    model_plain: PaiNN
-    metric_values:
-    - 0.01
-    - 27.626
-    - 0.572
-    metric_stds:
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.077
-    sort_std: null
-    true_value: 0.077
-    true_std: null
-    paper_value: 0.01
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.067
-    value_gap_source_arxiv: '2311.02124'
-    value_gap_source_title: 'Sliced Denoising: A Physics-Informed Molecular Pre-Training
-      Method'
-    value_note: ''
-    at_pub_value: 0.063
-    at_pub_std: null
-    at_pub_source_arxiv: '2205.14276'
-    at_pub_source_title: 'So3krates: Equivariant attention for interactions on arbitrary
-      length-scales in molecular systems'
-    at_pub_source_date_iso: '2022-05-28'
-    at_pub_source_date_label: NeurIPS 2022
-    value_gap_source_date_iso: '2023-11-03'
-    value_gap_source_date_label: ICLR 2023
-    gap_vs_at_pub: 0.053
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Jun 15, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-15'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 45
-  - model: SchNet
-    model_key: schnet
-    model_plain: SchNet
-    metric_values:
-    - 0.111
-    - 0.475
-    - 1.203
-    metric_stds:
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.08
-    sort_std: null
-    true_value: 0.08
-    true_std: null
-    paper_value: 0.111
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.031
-    value_gap_source_arxiv: '2406.13265'
-    value_gap_source_title: Molecule Graph Networks with Many-body Equivariant Interactions
-    value_note: ''
-    at_pub_value: 0.05
-    at_pub_std: null
-    at_pub_source_arxiv: '1902.08408'
-    at_pub_source_title: 'PhysNet: A Neural Network for Predicting Energies, Forces,
-      Dipole Moments and Partial Charges'
-    at_pub_source_date_iso: '2019-02-22'
-    at_pub_source_date_label: '2019'
-    value_gap_source_date_iso: '2024-06-19'
-    value_gap_source_date_label: '2024'
-    gap_vs_at_pub: 0.061
-    worse_than_at_pub: true
-    surpassed_since_pub: false
-    better_than_at_pub: false
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Jun 15, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-15'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 46
-  - model: GemNet-T
-    model_key: gemnet-t
-    model_plain: GemNet-T
-    metric_values:
-    - 0.007
-    - 0.684
-    - 0.558
-    metric_stds:
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.101
-    sort_std: null
-    true_value: 0.101
-    true_std: null
-    paper_value: 0.007
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.094
-    value_gap_source_arxiv: '2309.15718'
-    value_gap_source_title: Geometry-enhanced pretraining on interatomic potentials
-    value_note: ''
-    at_pub_value: 0.22
-    at_pub_std: null
-    at_pub_source_arxiv: '2102.05013'
-    at_pub_source_title: Spherical Message Passing for 3D Molecular Graphs
-    at_pub_source_date_iso: '2021-02-09'
-    at_pub_source_date_label: ICLR 2021
-    value_gap_source_date_iso: '2023-09-27'
-    value_gap_source_date_label: '2023'
-    gap_vs_at_pub: 0.213
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Jun 15, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-15'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 54
+    global_rank: 65
   - model: SEGNN
     model_key: segnn
     model_plain: SEGNN
@@ -756,15 +823,16 @@ results:
     architecture_title: Message-passing GNN
     sort_value: 0.13
     sort_std: null
-    true_value: null
+    true_value: 0.13
     true_std: null
     paper_value: 0.13
     paper_std: null
     has_value_gap: false
     has_value_note: false
     value_gap: null
-    value_gap_source_arxiv: ''
-    value_gap_source_title: ''
+    value_gap_source_arxiv: '2306.09375'
+    value_gap_source_title: Symmetry-Informed Geometric Representation for Molecules,
+      Proteins, and Crystalline Materials
     value_note: ''
     at_pub_value: null
     at_pub_std: null
@@ -772,8 +840,8 @@ results:
     at_pub_source_title: ''
     at_pub_source_date_iso: ''
     at_pub_source_date_label: ''
-    value_gap_source_date_iso: ''
-    value_gap_source_date_label: ''
+    value_gap_source_date_iso: '2023-06-15'
+    value_gap_source_date_label: NeurIPS 2023
     gap_vs_at_pub: null
     worse_than_at_pub: false
     surpassed_since_pub: false
@@ -797,71 +865,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 65
-  - model: SphereNet
-    model_key: spherenet
-    model_plain: SphereNet
-    metric_values:
-    - 0.052
-    - 0.244
-    - 0.546
-    metric_stds:
-    - null
-    - null
-    - null
-    is_baseline: true
-    is_overridden: false
-    override_reason: ''
-    params_millions: null
-    architecture_type: gnn
-    architecture_label: GNN
-    architecture_title: Message-passing GNN
-    sort_value: 0.147
-    sort_std: null
-    true_value: 0.147
-    true_std: null
-    paper_value: 0.052
-    paper_std: null
-    has_value_gap: true
-    has_value_note: false
-    value_gap: 0.095
-    value_gap_source_arxiv: '2304.04757'
-    value_gap_source_title: A new perspective on building efficient and expressive
-      3D equivariant graph neural networks
-    value_note: ''
-    at_pub_value: 0.147
-    at_pub_std: null
-    at_pub_source_arxiv: '2304.04757'
-    at_pub_source_title: A new perspective on building efficient and expressive 3D
-      equivariant graph neural networks
-    at_pub_source_date_iso: '2023-04-07'
-    at_pub_source_date_label: NeurIPS 2023
-    value_gap_source_date_iso: '2023-04-07'
-    value_gap_source_date_label: NeurIPS 2023
-    gap_vs_at_pub: 0.095
-    worse_than_at_pub: false
-    surpassed_since_pub: false
-    better_than_at_pub: true
-    insignificant_improvement_at_pub: false
-    improvement_surpassed_since_pub: false
-    insignificant_value_gap: false
-    today_delta_significant: true
-    arxiv_id: ''
-    title: ''
-    published_venue: NeurIPS 2023
-    date: Jun 15, 2023
-    date_display: Jun 2023
-    date_iso: '2023-06-15'
-    codebase_url: ''
-    uses_external_data: 0
-    input_feature_source: null
-    feature_source_evidence: ''
-    comparison_type: null
-    comparison_source_title: ''
-    comparison_source_arxiv: ''
-    is_best: false
-    is_std_outlier: false
-    global_rank: 68
+    global_rank: 90
   metrics:
   - MAE
   - Energy

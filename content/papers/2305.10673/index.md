@@ -84,9 +84,9 @@ results:
 - &id001
   dataset: Reddit
   rows:
-  - model: CPDG
+  - model: SPLASH
     model_key: splash
-    model_plain: CPDG
+    model_plain: SPLASH
     value: 0.7358
     std: 0.0028
     metric: AUC
@@ -187,9 +187,9 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-  - model: CPDG
+  - model: PINT
     model_key: pint
-    model_plain: CPDG
+    model_plain: PINT
     value: 0.6731
     std: 0.002
     metric: AUC

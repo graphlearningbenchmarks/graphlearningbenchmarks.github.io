@@ -49,8 +49,8 @@ has_results: true
 paper_type: method
 proposed_models:
 - PAINET
-mrr: 0.1667
-adjusted_mrr: 0.0556
+mrr: 0.1
+adjusted_mrr: 0.0333
 mrr_dataset_count: 1
 benchmark_categories:
 - Quantum Chemistry
@@ -68,9 +68,9 @@ results:
   dataset: MD17
   is_multi_metric: true
   rows:
-  - model: SliDe
+  - model: QHNet
     model_key: qhnet
-    model_plain: SliDe
+    model_plain: QHNet
     metric_values:
     - 1.036e-05
     - null
@@ -108,9 +108,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SliDe
+  - model: QHNetV2
     model_key: qhnetv2
-    model_plain: SliDe
+    model_plain: QHNetV2
     metric_values:
     - 1.038e-05
     - null
@@ -148,9 +148,9 @@ results:
     comparison_source_title: ''
     comparison_source_arxiv: ''
     is_std_outlier: false
-  - model: SliDe
+  - model: PhiSNet
     model_key: phisnet
-    model_plain: SliDe
+    model_plain: PhiSNet
     metric_values:
     - 1.759e-05
     - null
@@ -248,7 +248,7 @@ results:
     comparison_source_arxiv: ''
     is_best: false
     is_std_outlier: false
-    global_rank: 6
+    global_rank: 10
   metrics:
   - MAE
   - RMSD
